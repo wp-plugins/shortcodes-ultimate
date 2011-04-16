@@ -9,7 +9,7 @@
 	 */
 
 	// Make plugin available for tramslation
-	load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 	/**
 	 * Shortcode: heading
