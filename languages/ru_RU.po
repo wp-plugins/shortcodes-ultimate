@@ -1,0 +1,391 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gn_themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-06 16:10+0300\n"
+"PO-Revision-Date: 2011-04-06 16:11+0300\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: shortcodes-ultimate.php:87
+msgid "Spoiler title"
+msgstr "Скрытый текст"
+
+#: shortcodes-ultimate.php:105
+msgid "Top"
+msgstr "Вверх"
+
+#: shortcodes-ultimate.php:274
+msgid "Service name"
+msgstr "Название услуги"
+
+#: shortcodes-ultimate.php:292
+msgid "This is box title"
+msgstr "Заголовок блока"
+
+#~ msgid ""
+#~ "The page you've requested can not be displayed. It appears you've missed "
+#~ "your intended destination, either through a bad or outdated link, or a "
+#~ "typo in the page you were hoping to reach."
+#~ msgstr "Страница, которую Вы запросили, не может быть отображена."
+
+#~ msgid "Use the search box in the header to search for what you want."
+#~ msgstr "Вы можете воспользоваться формой поиска вверху страницы."
+
+#~ msgid "You can also <a href=\"%s\">return home</a>"
+#~ msgstr "Также Вы можете <a href=\"%s\">вернуться на главную страницу</a>"
+
+#~ msgid ""
+#~ "And if you think this is our mistake, you can also contact us. We'll be "
+#~ "thankful."
+#~ msgstr ""
+#~ "Если Вы считаете, что это наша ошибка, пожалуйста напишите нам. Мы будем "
+#~ "благодарны."
+
+#~ msgid "Leave comment"
+#~ msgstr "Оставить комментарий"
+
+#~ msgid "1 comment"
+#~ msgstr "1 комментарий"
+
+#~ msgid "comments"
+#~ msgstr "комментариев"
+
+#~ msgid "Previous page"
+#~ msgstr "« Назад"
+
+#~ msgid "Next page"
+#~ msgstr "Вперед »"
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view comments."
+#~ msgstr "Эта запись защищена паролем!"
+
+#~ msgid "No comments yet"
+#~ msgstr "Пока нет комментариев"
+
+#~ msgid "on"
+#~ msgstr "на"
+
+#~ msgid "Leave comment for %s"
+#~ msgstr "Оставить комментарий для %s"
+
+#~ msgid "Logged in as %s. %s Log out %s"
+#~ msgstr "Вы вошли как %s. %s Выйти? %s"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "(required)"
+#~ msgstr "*обязательно"
+
+#~ msgid "Mail (will not be published)"
+#~ msgstr "Эл. почта"
+
+#~ msgid "Website"
+#~ msgstr "Веб сайт"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Оставить комментрий"
+
+#~ msgid "Footer 1"
+#~ msgstr "Подвал 1"
+
+#~ msgid "No widgets"
+#~ msgstr "Нет виджетов"
+
+#~ msgid "Add widget"
+#~ msgstr "Добавьте виджет"
+
+#~ msgid "Footer 2"
+#~ msgstr "Подвал 2"
+
+#~ msgid "Footer 3"
+#~ msgstr "Подвал 3"
+
+#~ msgid "Footer 4"
+#~ msgstr "Подвал 4"
+
+#~ msgid "Sidebar"
+#~ msgstr "Сайдбар"
+
+#~ msgid "Blog sidebar"
+#~ msgstr "Сайдбар блога"
+
+#~ msgid "Footer widgetized area 1"
+#~ msgstr "Виджет-зона подвала 1"
+
+#~ msgid "Footer widgetized area 2"
+#~ msgstr "Виджет-зона подвала 2"
+
+#~ msgid "Footer widgetized area 3"
+#~ msgstr "Виджет-зона подвала 3"
+
+#~ msgid "Footer widgetized area 4"
+#~ msgstr "Виджет-зона подвала 4"
+
+#~ msgid "Page not found"
+#~ msgstr "Страница не найдена"
+
+#~ msgid "Search results"
+#~ msgstr "Результаты поиска"
+
+#~ msgid "Nothing found"
+#~ msgstr "Ничего не найдено"
+
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
+
+#~ msgid "Find"
+#~ msgstr "Найти"
+
+#~ msgid "Entire site"
+#~ msgstr "По всему сайту"
+
+#~ msgid "Blog"
+#~ msgstr "Блог"
+
+#~ msgid "Portfolio"
+#~ msgstr "Портфолио"
+
+#~ msgid "<strong>Thanks!</strong> Your email was successfully sent."
+#~ msgstr "<strong>Спасибо!</strong> Ваше сообщение успешно отправлено."
+
+#~ msgid "There was an error submitting the form."
+#~ msgstr "Произошла ошибка при отправке."
+
+#~ msgid "Name *"
+#~ msgstr "Имя *"
+
+#~ msgid "Email *"
+#~ msgstr "Эл. почта *"
+
+#~ msgid "Send"
+#~ msgstr "Отправить"
+
+#~ msgid "You forgot to enter your name."
+#~ msgstr "Вы забыли указать своё имя."
+
+#~ msgid "You forgot to enter your email address."
+#~ msgstr "Вы забыли указать адрес эл. почты."
+
+#~ msgid "You entered an invalid email address."
+#~ msgstr "Вы ввели неверный адрес эл. почты."
+
+#~ msgid "You forgot to enter your comments."
+#~ msgstr "Вы забыли добавить комментарии."
+
+#~ msgid "Add entry"
+#~ msgstr "Добавить запись"
+
+#~ msgid "Search posts"
+#~ msgstr "Искать записи"
+
+#~ msgid "Add new post"
+#~ msgstr "Добавить новую запись"
+
+#~ msgid "Edit post"
+#~ msgstr "Редактировать запись"
+
+#~ msgid "New post"
+#~ msgstr "Новая запись"
+
+#~ msgid "View post"
+#~ msgstr "Просмотр записи"
+
+#~ msgid "Add new item"
+#~ msgstr "Добавить запись"
+
+#~ msgid "Search portfolio items"
+#~ msgstr "Искать записи портфолио"
+
+#~ msgid "Add new portfolio item"
+#~ msgstr "Новая запись в портфолио"
+
+#~ msgid "Edit portfolio item"
+#~ msgstr "Редактировать запись в портфолио"
+
+#~ msgid "New portfolio item"
+#~ msgstr "Новая запись в портфолио"
+
+#~ msgid "View portfolio item"
+#~ msgstr "Просмотр записи портфолио"
+
+#~ msgid "Slider"
+#~ msgstr "Слайдер"
+
+#~ msgid "Slide"
+#~ msgstr "Слайд"
+
+#~ msgid "Add slide"
+#~ msgstr "Добавить слайд"
+
+#~ msgid "Search slides"
+#~ msgstr "Искать слайды"
+
+#~ msgid "Add new slide"
+#~ msgstr "Добавить новый слайд"
+
+#~ msgid "Edit slide"
+#~ msgstr "Редактировать слайд"
+
+#~ msgid "New slide"
+#~ msgstr "Новый слайд"
+
+#~ msgid "View slide"
+#~ msgstr "Просмотр слайда"
+
+#~ msgid "Slide settings (Anything slider)"
+#~ msgstr "Настройки слайда (Anything slider)"
+
+#~ msgid "Slide view"
+#~ msgstr "Тип слайда"
+
+#~ msgid ""
+#~ "Slide type. Full size - full sized image/video. Mixed - post title + post "
+#~ "content + image/video. Content only - only post content."
+#~ msgstr ""
+#~ "Full size - полноразмерное видео или изображение. Mixed - заголовок "
+#~ "слайда + контент + видео или изображение. Content only - только контент "
+#~ "из редактора"
+
+#~ msgid "Media url"
+#~ msgstr "Ссылка на медиа"
+
+#~ msgid ""
+#~ "Paste full link to your media (image, Youtube video, Vimeo video). Not "
+#~ "required with Content only slides"
+#~ msgstr ""
+#~ "Вставьте полную ссылку на медиа для этого слайда. Вы можете вставить "
+#~ "ссылку на youtube, vimeo или изображение. Также поддерживаются обычные "
+#~ "видеофайлы и аудиофайлы. Подробности смотрите в документации"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Enter description"
+#~ msgstr "Введите описание"
+
+#~ msgid "Page description for text teaser (top of page)"
+#~ msgstr "Описание страницы для небольшого заголовка вверху страницы"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Миниатюра"
+
+#~ msgid "Choose image for thumbnail"
+#~ msgstr "Выберите изображение для миниатюры"
+
+#~ msgid "Main menu"
+#~ msgstr "Главное меню"
+
+#~ msgid "Share"
+#~ msgstr "Поделиться"
+
+#~ msgid "year"
+#~ msgstr "г."
+
+#~ msgid "month"
+#~ msgstr "мес."
+
+#~ msgid "week"
+#~ msgstr "нед."
+
+#~ msgid "day"
+#~ msgstr "дн."
+
+#~ msgid "hour"
+#~ msgstr "ч."
+
+#~ msgid "minute"
+#~ msgstr "мин."
+
+#~ msgid "s"
+#~ msgstr " "
+
+#~ msgid "ago"
+#~ msgstr "назад"
+
+#~ msgid "Blog recent"
+#~ msgstr "Из блога"
+
+#~ msgid "Recent blog posts"
+#~ msgstr "Последние записи из блога"
+
+#~ msgid "Number posts"
+#~ msgstr "Количество записей"
+
+#~ msgid "Show thumbnails"
+#~ msgstr "Показывать миниатюры"
+
+#~ msgid "Contacts"
+#~ msgstr "Контакты"
+
+#~ msgid "Your contact information"
+#~ msgstr "Ваша контактная информация"
+
+#~ msgid "Show on map"
+#~ msgstr "Показать на карте"
+
+#~ msgid "Address"
+#~ msgstr "Адрес"
+
+#~ msgid "Google maps url"
+#~ msgstr "Ссылка на гугл-карту"
+
+#~ msgid "Phone"
+#~ msgstr "Телефон"
+
+#~ msgid "Fax"
+#~ msgstr "Факс"
+
+#~ msgid "E-mail"
+#~ msgstr "Эл. почта"
+
+#~ msgid "Custom info 1"
+#~ msgstr "Доп. инфо 1"
+
+#~ msgid "Custom info 2"
+#~ msgstr "Доп. инфо 2"
+
+#~ msgid "Custom info 3"
+#~ msgstr "Доп. инфо 3"
+
+#~ msgid "Porfolio recent"
+#~ msgstr "Из портфолио"
+
+#~ msgid "Recent portfolio entries"
+#~ msgstr "Последние записи из портфолио"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Показывать всплывающие подсказки при наведении"
+
+#~ msgid "Recent tweets"
+#~ msgstr "Последние твиты"
+
+#~ msgid "Twitter username"
+#~ msgstr "Имя пользователя в твиттере"
+
+#~ msgid "Number tweets"
+#~ msgstr "Количество твитов"
+
+#~ msgid "Left"
+#~ msgstr "Left"
+
+#~ msgid "Right"
+#~ msgstr "Right"
+
+#~ msgid "Show"
+#~ msgstr "Show"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "Static image"
+#~ msgstr "Static image"
