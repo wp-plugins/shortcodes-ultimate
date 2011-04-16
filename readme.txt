@@ -55,6 +55,9 @@ http://ilovecode.ru/?p=122
 
 == Changelog ==
 
+= 1.1.1 =
+* Foxed options saving
+
 = 1.1.0 =
 * Added options page
 
