@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.1.1
+Stable tag: 1.2.0
 
 Provides support for multiple useful shortcodes
 
@@ -28,6 +28,9 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Note
 * List
 * Column
+
+See: http://ilovecode.ru/?p=122
+
 
 == Installation ==
 
@@ -55,8 +58,11 @@ http://ilovecode.ru/?p=122
 
 == Changelog ==
 
+= 1.2.0 =
+* Localization support
+
 = 1.1.1 =
-* Foxed options saving
+* Fixed options saving
 
 = 1.1.0 =
 * Added options page
