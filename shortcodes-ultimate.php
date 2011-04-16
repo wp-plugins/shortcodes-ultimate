@@ -8,6 +8,9 @@
 	  Description: Provides support for many easy to use shortcodes. Visit plugin site to see the complete list of shortcodes
 	 */
 
+	// Make plugin available for tramslation
+	load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
 	/**
 	 * Shortcode: heading
 	 *
@@ -326,9 +329,6 @@
 	 * Plugin initialization
 	 */
 	function su_plugin_init() {
-
-		// Make plugin available for tramslation
-		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		/**
 		 * Returns current plugin version.
