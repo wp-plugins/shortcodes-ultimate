@@ -29,8 +29,6 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * List
 * Column
 
-For more information see http://ilovecode.ru/?p=122
-
 == Installation ==
 
 1. Unzip plugin files and upload them under your '/wp-content/plugins/' directory. Resulted names will be:
@@ -56,6 +54,9 @@ http://ilovecode.ru/?p=122
 
 
 == Changelog ==
+
+= 1.1.0 =
+* Added options page
 
 = 1.0.0 =
 * Initial release
