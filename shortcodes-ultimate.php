@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.1.1
+	  Version: 1.2.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes. Visit plugin site to see the complete list of shortcodes
@@ -530,12 +530,25 @@
 		 */
 		function shortcodes_ultimate_admin_page() {
 
+			echo '
+				<div class="updated">
+					<p><strong>' . __( 'Want to support author? Just share this link!', 'shortcodes-ultimate' ) . '</strong></p>
+					<p>
+						<input type="text" value="http://ilovecode.ru/?p=122" size="27" onclick="this.select();" />
+						<a href="http://facebook.com/sharer.php?u=http://ilovecode.ru/?p=122" title="' . __( 'Share on Facebook', 'shortcodes-ultimate' ) . '" target="_blank"><img src="' . su_plugin_url() . '/images/social/facebook_16.png' . '" title="' . __( 'Share on Facebook', 'shortcodes-ultimate' ) . '" style="margin-bottom:-3px" /></a>
+						<a href="http://twitter.com/home?status=Shortcodes%20Ultimate%20http://ilovecode.ru/?p=122" title="' . __( 'Share on Twitter', 'shortcodes-ultimate' ) . '" target="_blank"><img src="' . su_plugin_url() . '/images/social/twitter_16.png' . '" title="' . __( 'Share on Twitter', 'shortcodes-ultimate' ) . '" style="margin-bottom:-3px" /></a>
+					</p>
+				</div>
+			';
+
 			if ( $_POST['save'] ) {
 				update_option( 'su_disable_custom_formatting', $_POST['su_disable_custom_formatting'] );
 				echo '<div class="updated"><p><strong>' . __( 'Settings saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
 			}
 
 			$checked = ( get_option( 'su_disable_custom_formatting' ) == 'on' ) ? ' checked="checked"' : '';
+
+
 			?>
 			<!-- .wrap -->
 			<div class="wrap">
@@ -548,13 +561,14 @@
 				<h2><?php _e( 'Available shortcodes', 'shortcodes-ultimate' ); ?></h2>
 				<p><?php _e( 'Coming soon', 'shortcodes-ultimate' ); ?>&hellip;</p>
 				<p><?php _e( 'Visit', 'shortcodes-ultimate' ); ?>: <a href="http://ilovecode.ru/?p=122" target="_blank">http://ilovecode.ru/?p=122</a></p>
+				<?php  ?>
 			</div>
 			<!-- /.wrap -->
 			<?php
 		}
 
 	}
-	
+
 	add_action( 'admin_menu', 'shortcodes_ultimate_add_admin' );
 	add_action( 'init', 'su_plugin_init' );
 ?>
