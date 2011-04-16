@@ -29,7 +29,6 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * List
 * Column
 
-See: http://ilovecode.ru/?p=122 for more information
 
 == Installation ==
 
