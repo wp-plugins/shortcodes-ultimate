@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 
 Provides support for multiple useful shortcodes
 
