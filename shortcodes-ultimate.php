@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.3.0
+	  Version: 1.4.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -264,20 +264,18 @@
 	}
 
 	/**
-	 * Shortcode: service
+	 * Shortcode: fancy-link
 	 *
-	 * @param array $atts Shortcode attributes
 	 * @param string $content
 	 * @return string Output html
 	 */
-	function su_service_shortcode( $atts, $content = null ) {
+	function su_fancy_link_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-				'title' => __( 'Service name', 'shortcodes-ultimate' ),
-				'icon' => su_plugin_url() . '/images/service.png',
-				'size' => 32
+				'link' => '#',
+				'color' => 'black'
 				), $atts ) );
 
-		return '<div class="su-service"><div class="su-service-title" style="padding:' . round( ( $size - 16 ) / 2 ) . 'px 0 ' . round( ( $size - 16 ) / 2 ) . 'px ' . ( $size + 15 ) . 'px"><img src="' . $icon . '" width="' . $size . '" height="' . $size . '" alt="' . $title . '" /> ' . $title . '</div><div class="su-service-content" style="padding:0 0 0 ' . ( $size + 15 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
+		return '<a class="su-fancy-link su-fancy-link-' . $color . '" href="' . $link . '">' . $content . '</a>';
 	}
 
 	/**
@@ -514,6 +512,7 @@
 		add_shortcode( 'pullquote', 'su_pullquote_shortcode' );
 		add_shortcode( 'highlight', 'su_highlight_shortcode' );
 		add_shortcode( 'button', 'su_button_shortcode' );
+		add_shortcode( 'fancy_link', 'su_fancy_link_shortcode' );
 		add_shortcode( 'service', 'su_service_shortcode' );
 		add_shortcode( 'box', 'su_box_shortcode' );
 		add_shortcode( 'note', 'su_note_shortcode' );
@@ -541,6 +540,9 @@
 					background: #FFFFE0;
 					border-radius: 3px;
 				}
+				.su-new-shortcode td {
+					background: #ffd;
+				}
 			</style>
 
 			<div id="su-top-message">
@@ -556,8 +558,8 @@
 				</p>
 				<p>
 					<a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a> |
-					<a href="http://ilovecode.ru/" target="_blank"><?php _e( 'Contact author', 'shortcodes-ultimate' ); ?></a> |
-					<a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a>
+					<a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a> |
+					<a href="http://ilovecode.ru/?p=122#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a>
 				</p>
 			</div>
 
@@ -633,6 +635,11 @@
 						<td>button</td>
 						<td>link<br/>color="#HEX"<br/>size="1-10"<br/>style="1|2"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 						<td>[button link="#" color="#b00" size="3" style="2" dark="1" square="1"] <?php _e( 'Button text', 'shortcodes-ultimate' ); ?> [/button]</td>
+					</tr>
+					<tr class="su-new-shortcode">
+						<td>fancy_link</td>
+						<td>color="black|white"<br/>link</td>
+						<td>[fancy_link color="black" link="http://example.com/"] <?php _e( 'Read more', 'shortcodes-ultimate' ); ?> [/fancy_link]</td>
 					</tr>
 					<tr>
 						<td>service</td>

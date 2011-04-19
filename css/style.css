@@ -1,3 +1,7 @@
+/**
+ * Shortcodes Ultimate stylesheet
+ */
+
 /* Spacer */
 .su-spacer {
 	display: block;
@@ -265,6 +269,29 @@
 }
 .su-button-style-2:hover span {
 	background: 100% 50% url(../images/button-style-2.png) repeat-x;
+}
+
+/* Fancy link */
+
+.su-fancy-link {
+	display: inline-block;
+	padding: 0 10px 0 0;
+	height: 1em !important;
+	line-height: 1em !important;
+	margin: 0 !important;
+	text-decoration: none;
+}
+.su-fancy-link:hover {
+	padding: 0 14px 0 0;
+	text-decoration: none;
+}
+.su-fancy-link-white {
+	color: #fff !important;
+	background: 100% 100% url(../images/fancy-link-white.png) no-repeat;
+}
+.su-fancy-link-black {
+	color: #000 !important;
+	background: 100% 100% url(../images/fancy-link-black.png) no-repeat;
 }
 
 /* Services */

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-16 22:46+0300\n"
-"PO-Revision-Date: 2011-04-16 22:46+0300\n"
+"POT-Creation-Date: 2011-04-19 14:42+0300\n"
+"PO-Revision-Date: 2011-04-19 14:42+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: shortcodes-ultimate.php:88
-#: shortcodes-ultimate.php:605
+#: shortcodes-ultimate.php:604
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
@@ -23,143 +23,149 @@ msgstr "Скрытый текст"
 msgid "Top"
 msgstr "Вверх"
 
-#: shortcodes-ultimate.php:275
-#: shortcodes-ultimate.php:640
-msgid "Service name"
-msgstr "Название услуги"
-
-#: shortcodes-ultimate.php:293
+#: shortcodes-ultimate.php:291
 msgid "This is box title"
 msgstr "Заголовок блока"
 
-#: shortcodes-ultimate.php:527
+#: shortcodes-ultimate.php:526
 msgid "Shortcodes"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:547
+#: shortcodes-ultimate.php:546
 msgid "Want to support author? Just share this link!"
 msgstr "Хотите поддержать автора? Просто опубликйте ссылку!"
 
+#: shortcodes-ultimate.php:549
 #: shortcodes-ultimate.php:550
-#: shortcodes-ultimate.php:551
 msgid "Share on Facebook"
 msgstr "Опубликовать на Facebook"
 
+#: shortcodes-ultimate.php:552
 #: shortcodes-ultimate.php:553
-#: shortcodes-ultimate.php:554
 msgid "Share on Twitter"
 msgstr "Опубликовать на Twitter"
 
-#: shortcodes-ultimate.php:558
+#: shortcodes-ultimate.php:557
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: shortcodes-ultimate.php:559
-msgid "Contact author"
-msgstr "Связаться с разработчиком"
-
-#: shortcodes-ultimate.php:560
+#: shortcodes-ultimate.php:558
 msgid "Twitter"
 msgstr "Твиттер разработчика"
 
-#: shortcodes-ultimate.php:567
+#: shortcodes-ultimate.php:559
+msgid "Bug report"
+msgstr "Сообщить об ошибке"
+
+#: shortcodes-ultimate.php:566
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:574
+#: shortcodes-ultimate.php:573
 msgid "Shortcodes ultimate settings"
 msgstr "Настройки Shortcodes Ultimate"
 
-#: shortcodes-ultimate.php:576
+#: shortcodes-ultimate.php:575
 msgid "Disable custom formatting"
 msgstr "Отключить специальное форматирование"
 
-#: shortcodes-ultimate.php:577
+#: shortcodes-ultimate.php:576
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
-#: shortcodes-ultimate.php:580
+#: shortcodes-ultimate.php:579
 msgid "Available shortcodes"
 msgstr "Доступные шорткоды"
 
-#: shortcodes-ultimate.php:583
+#: shortcodes-ultimate.php:582
 msgid "Shortcode"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:584
+#: shortcodes-ultimate.php:583
 msgid "Parameters"
 msgstr "Параметры"
 
-#: shortcodes-ultimate.php:585
+#: shortcodes-ultimate.php:584
 msgid "Usage"
 msgstr "Пример использования"
 
-#: shortcodes-ultimate.php:590
-#: shortcodes-ultimate.php:620
-#: shortcodes-ultimate.php:625
-#: shortcodes-ultimate.php:630
-#: shortcodes-ultimate.php:645
-#: shortcodes-ultimate.php:650
-#: shortcodes-ultimate.php:660
+#: shortcodes-ultimate.php:589
+#: shortcodes-ultimate.php:619
+#: shortcodes-ultimate.php:624
+#: shortcodes-ultimate.php:629
+#: shortcodes-ultimate.php:649
+#: shortcodes-ultimate.php:654
+#: shortcodes-ultimate.php:664
 msgid "Content"
 msgstr "Содержимое"
 
-#: shortcodes-ultimate.php:600
+#: shortcodes-ultimate.php:599
 msgid "Tab name"
 msgstr "Имя вкладки"
 
-#: shortcodes-ultimate.php:600
+#: shortcodes-ultimate.php:599
 msgid "Tab content"
 msgstr "Содержимое вкладки"
 
-#: shortcodes-ultimate.php:605
+#: shortcodes-ultimate.php:604
 msgid "Hidden text"
 msgstr "Скрытый текст"
 
-#: shortcodes-ultimate.php:609
-#: shortcodes-ultimate.php:634
+#: shortcodes-ultimate.php:608
+#: shortcodes-ultimate.php:633
 msgid "optional"
 msgstr "необяз."
 
-#: shortcodes-ultimate.php:635
+#: shortcodes-ultimate.php:634
 msgid "Button text"
 msgstr "Текст кнопки"
 
 #: shortcodes-ultimate.php:639
+msgid "Read more"
+msgstr "Подробнее"
+
+#: shortcodes-ultimate.php:643
 msgid "image url"
 msgstr "ссылка на изображение"
 
-#: shortcodes-ultimate.php:639
+#: shortcodes-ultimate.php:643
 msgid "icon size"
 msgstr "размер иконки"
 
-#: shortcodes-ultimate.php:640
+#: shortcodes-ultimate.php:644
+msgid "Service name"
+msgstr "Название услуги"
+
+#: shortcodes-ultimate.php:644
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: shortcodes-ultimate.php:645
+#: shortcodes-ultimate.php:649
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: shortcodes-ultimate.php:655
+#: shortcodes-ultimate.php:659
 msgid "List item"
 msgstr "Элемент списка"
 
-#: shortcodes-ultimate.php:659
+#: shortcodes-ultimate.php:663
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: shortcodes-ultimate.php:672
+#: shortcodes-ultimate.php:676
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:672
+#: shortcodes-ultimate.php:676
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:672
+#: shortcodes-ultimate.php:676
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
+
+#~ msgid "Contact author"
+#~ msgstr "Связаться с разработчиком"
 
 #~ msgid "Coming soon"
 #~ msgstr "Появится в ближайшее время"
