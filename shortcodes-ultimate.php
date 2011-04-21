@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.4.0
+	  Version: 1.4.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -276,6 +276,23 @@
 				), $atts ) );
 
 		return '<a class="su-fancy-link su-fancy-link-' . $color . '" href="' . $link . '">' . $content . '</a>';
+	}
+
+	/**
+	 * Shortcode: service
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_service_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'title' => __( 'Service name', 'shortcodes-ultimate' ),
+				'icon' => su_plugin_url() . '/images/service.png',
+				'size' => 32
+				), $atts ) );
+
+		return '<div class="su-service"><div class="su-service-title" style="padding:' . round( ( $size - 16 ) / 2 ) . 'px 0 ' . round( ( $size - 16 ) / 2 ) . 'px ' . ( $size + 15 ) . 'px"><img src="' . $icon . '" width="' . $size . '" height="' . $size . '" alt="' . $title . '" /> ' . $title . '</div><div class="su-service-content" style="padding:0 0 0 ' . ( $size + 15 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	/**
