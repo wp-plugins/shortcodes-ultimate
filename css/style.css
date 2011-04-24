@@ -1,6 +1,6 @@
 /**
  * Shortcodes Ultimate stylesheet
- */
+*/
 
 /* Spacer */
 .su-spacer {
@@ -214,6 +214,17 @@
 .su-list-style-arrow li { background: 0 50% url(../images/list-style-arrow.png) no-repeat }
 .su-list-style-check li { background: 0 50% url(../images/list-style-check.png) no-repeat }
 .su-list-style-cross li { background: 0 50% url(../images/list-style-cross.png) no-repeat }
+.su-list-style-thumbs li { background: 0 50% url(../images/list-style-thumbs.png) no-repeat }
+.su-list-style-link li { background: 0 50% url(../images/list-style-link.png) no-repeat }
+.su-list-style-gear li { background: 0 50% url(../images/list-style-gear.png) no-repeat }
+.su-list-style-time li { background: 0 50% url(../images/list-style-time.png) no-repeat }
+.su-list-style-note li { background: 0 50% url(../images/list-style-note.png) no-repeat }
+.su-list-style-plus li { background: 0 50% url(../images/list-style-plus.png) no-repeat }
+.su-list-style-guard li { background: 0 50% url(../images/list-style-guard.png) no-repeat }
+.su-list-style-event li { background: 0 50% url(../images/list-style-event.png) no-repeat }
+.su-list-style-idea li { background: 0 50% url(../images/list-style-idea.png) no-repeat }
+.su-list-style-settings li { background: 0 50% url(../images/list-style-settings.png) no-repeat }
+.su-list-style-twitter li { background: 0 50% url(../images/list-style-twitter.png) no-repeat }
 
 /* Box */
 .su-box {
@@ -253,8 +264,13 @@
 	text-decoration: none !important;
 }
 .su-button span {
-	display: block;
+	display: block !important;
 	text-decoration: none !important;
+}
+
+.su-button img {
+	display: inline !important;
+	padding: 0 !important;
 }
 
 .su-button-style-1 span {
@@ -269,6 +285,20 @@
 }
 .su-button-style-2:hover span {
 	background: 100% 50% url(../images/button-style-2.png) repeat-x;
+}
+
+.su-button-style-3 span {
+	background: 0 50% url(../images/button-style-3.png) no-repeat;
+}
+.su-button-style-3:hover span {
+	background: -710px 50% url(../images/button-style-3.png) no-repeat;
+}
+
+.su-button-style-4 span {
+	background: 0 0 url(../images/button-style-4.png) repeat-x;
+}
+.su-button-style-4:hover span {
+	background: 0 0 url(../images/button-style-1.png) repeat-x;
 }
 
 /* Fancy link */
@@ -318,3 +348,73 @@
 	padding: 0 !important;
 }
 .su-service-content { line-height: 1.4 }
+
+/* Media */
+.su-media {
+	margin: 0 0 1.5em 0;
+}
+
+/* Table */
+.su-table {
+	width: 100% !important;
+	margin: 0 0 1.5em 0 !important;
+	border-collapse: collapse !important;
+	font-size: 1em !important;
+}
+.su-table th {
+	text-align: center !important;
+	padding: 10px !important;
+	font-size: 1em !important;
+	font-weight: normal !important;
+	color: #333 !important;
+}
+.su-table td {
+	padding: 10px 15px !important;
+}
+.su-table .su-even td {}
+
+.su-table-style-1 table {
+	border: 1px solid #ccc !important;
+}
+.su-table-style-1 th {
+	border: 1px solid #ccc !important;
+	background: #f0f0f0 !important;
+}
+.su-table-style-1 td {
+	border: 1px solid #ccc !important;
+	background: #fff !important;
+}
+.su-table-style-1 .su-even td {
+	background: #f7f7f7 !important;
+}
+
+.su-table-style-2 table {
+	border: none !important;
+}
+.su-table-style-2 th {
+	border: none !important;
+	background: #f0f0f0 !important;
+}
+.su-table-style-2 td {
+	border: none !important;
+	background: #fff !important;
+}
+.su-table-style-2 .su-even td {
+	background: #f7f7f7 !important;
+}
+
+.su-table-style-3 table {
+	border: none !important;
+}
+.su-table-style-3 th {
+	border: none !important;
+	border-bottom: 2px solid #666 !important;
+	background: #fff !important;
+}
+.su-table-style-3 td {
+	border: none !important;
+	background: #fff !important;
+}
+.su-table-style-3 .su-even td {
+	background: #fff !important;
+}

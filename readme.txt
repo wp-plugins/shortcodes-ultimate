@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.4.1
+Stable tag: 1.5.0
 
 Provides support for multiple useful shortcodes
 
@@ -51,6 +51,7 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 1. Heading, spoiler, tabs, quote, button.
 2. Box, note, divider (top), list.
+3. List styles.
 
 == Frequently Asked Questions ==
 
@@ -59,6 +60,13 @@ In your dashboard
 
 
 == Changelog ==
+
+= 1.5.0 =
+* Added option "Compatibility mode"
+* Added new button styles
+* Added new list styles
+* Added new shortcode media
+* Added new shortcode table
 
 = 1.4.1 =
 * Service shortcode returned

@@ -18,4 +18,8 @@ jQuery(document).ready(function($) {
 	$('.su-tabs-nav').delegate('span:not(.su-tabs-current)', 'click', function() {
 		$(this).addClass('su-tabs-current').siblings().removeClass('su-tabs-current').parents('.su-tabs').find('.su-tabs-pane').hide().eq($(this).index()).show();
 	});
+
+	// Tables
+	$('.su-table tr:even').addClass('su-even');
+
 });
