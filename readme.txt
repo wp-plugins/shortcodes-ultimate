@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 
 Provides support for multiple useful shortcodes
 
@@ -29,9 +29,13 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Note
 * List
 * Column
+* Table
+* Media
 
 Bug report / contact author: http://ilovecode.ru/?p=122
 My twitter: http://twitter.com/gn_themes
+
+Have a translation? Contact me - ano.vladimir@gmail.com
 
 
 == Installation ==
@@ -51,7 +55,6 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 1. Heading, spoiler, tabs, quote, button.
 2. Box, note, divider (top), list.
-3. List styles.
 
 == Frequently Asked Questions ==
 
@@ -60,6 +63,10 @@ In your dashboard
 
 
 == Changelog ==
+
+= 1.6.0 =
+* New admin panel
+* Custom CSS editor with syntax hughlight
 
 = 1.5.0 =
 * Added option "Compatibility mode"

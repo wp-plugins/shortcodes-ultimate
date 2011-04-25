@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.5.0
+	  Version: 1.6.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -45,19 +45,44 @@
 		// Fix for large posts, http://core.trac.wordpress.org/ticket/8553
 		@ini_set( 'pcre.backtrack_limit', 500000 );
 
-		// Register and enqueue styles and scripts
+		// Register styles
+		wp_register_style( 'shortcodes-ultimate', su_plugin_url() . '/css/style.css', false, su_get_version(), 'all' );
+		wp_register_style( 'shortcodes-ultimate-admin', su_plugin_url() . '/css/admin.css', false, su_get_version(), 'all' );
+		wp_register_style( 'codemirror', su_plugin_url() . '/css/codemirror.css', false, su_get_version(), 'all' );
+		wp_register_style( 'codemirror-css', su_plugin_url() . '/css/codemirror-css.css', false, su_get_version(), 'all' );
+
+		// Register scripts
+		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
+		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
+		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
+		wp_register_script( 'codemirror-css', su_plugin_url() . '/js/codemirror-css.js', false, su_get_version(), false );
+		wp_register_script( 'jwplayer', su_plugin_url() . '/js/jwplayer.js', false, su_get_version(), false );
+
+		// Front-end scripts and styles
 		if ( !is_admin() ) {
 
-			// Register
-			wp_register_style( 'shortcodes-ultimate', su_plugin_url() . '/css/style.css', false, su_get_version(), 'all' );
-			wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
-			wp_register_script( 'jwplayer', su_plugin_url() . '/js/jwplayer.js', false, su_get_version(), false );
-
-			// Enqueue
+			// Enqueue styles
 			wp_enqueue_style( 'shortcodes-ultimate' );
+
+			// Enqueue scripts
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jwplayer' );
 			wp_enqueue_script( 'shortcodes-ultimate' );
+		}
+
+		// Back-end scripts and styles
+		elseif ( $_GET['page'] == 'shortcodes-ultimate' ) {
+
+			// Enqueue styles
+			wp_enqueue_style( 'codemirror' );
+			wp_enqueue_style( 'codemirror-css' );
+			wp_enqueue_style( 'shortcodes-ultimate-admin' );
+
+			// Enqueue scripts
+			wp_enqueue_script( 'jquery' );
+			wp_enqueue_script( 'codemirror' );
+			wp_enqueue_script( 'codemirror-css' );
+			wp_enqueue_script( 'shortcodes-ultimate-admin' );
 		}
 
 		// Register shortcodes
@@ -158,5 +183,59 @@
 		}
 
 		return $new_content;
+	}
+
+	/**
+	 * Print custom CSS styles in wp_head
+	 *
+	 * @return string Custom CSS
+	 */
+	function su_print_custom_css() {
+		if ( get_option( 'su_custom_css' ) ) {
+			echo "\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . get_option( "su_custom_css" ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
+		}
+	}
+
+	add_action( 'wp_head', 'su_print_custom_css' );
+
+	/**
+	 * Manage settings
+	 */
+	function su_manage_settings() {
+
+		// Insert defaults
+		if ( !get_option( 'su_custom_css' ) ) {
+			$default_css = "/* Custom CSS */\n\n";
+			update_option( 'su_custom_css', $default_css );
+		}
+
+		// Save main settings
+		if ( $_POST['save'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+			update_option( 'su_disable_custom_formatting', $_POST['su_disable_custom_formatting'] );
+			update_option( 'su_compatibility_mode', $_POST['su_compatibility_mode'] );
+		}
+
+		// Save custom css
+		if ( $_POST['save-css'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+			update_option( 'su_custom_css', $_POST['su_custom_css'] );
+		}
+	}
+
+	add_action( 'admin_init', 'su_manage_settings' );
+
+	/**
+	 * Print notification if options saved
+	 */
+	function su_save_notification() {
+
+		// Save main settings
+		if ( $_POST['save'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+			echo '<div class="updated"><p><strong>' . __( 'Settings saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
+		}
+
+		// Save custom css
+		if ( $_POST['save-css'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+			echo '<div class="updated"><p><strong>' . __( 'Custom CSS saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
+		}
 	}
 ?>
