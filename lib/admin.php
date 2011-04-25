@@ -23,24 +23,50 @@
 			<h2><?php _e( 'Shortcodes Ultimate', 'shortcodes-ultimate' ); ?></h2>
 
 			<div class="updated">
-				<p><strong><?php _e( 'Want to support author? Just share this link!', 'shortcodes-ultimate' ); ?></strong></p>
+
+				<p><strong><?php _e( 'You can support this project by buying the author a cup of coffee!', 'shortcodes-ultimate' ); ?></strong></p>
+
+				<p><strong><?php _e( 'Donate with MoneyBookers.com', 'shortcodes-ultimate' ); ?></strong></p>
+				<form action="https://www.moneybookers.com/app/payment.pl" method="post" target="_blank">
+					<fieldset>
+						<input type="hidden" name="pay_to_email" value="ano.vladimir@gmail.com" />
+						<input type="hidden" name="return_url" value="http://ilovecode.ru/thanks" />
+						<input type="hidden" name="language" value="EN" />
+						<input type="text" name="amount" value="5.00" size="10" />
+						<select name="currency" size="1">
+							<option value="USD" selected="selected">US dollar</option>
+							<option value="GBP">GB pound</option>
+							<option value="EUR">Euro</option>
+							<option value="JPY">Yen</option>
+							<option value="CAD">Canadian $</option>
+							<option value="AUD">Australian $</option>
+						</select>
+						<input type="hidden" name="detail1_description" value="<?php _e( 'Donation to help support Shortcodes Ultimate plugin', 'shortcodes-ultimate' ); ?>" />
+						<input type="hidden" name="detail1_text" value="<?php _e( 'Donation to help support Shortcodes Ultimate plugin', 'shortcodes-ultimate' ); ?>" />
+						<input type="submit" alt="<?php _e( 'Click to make a donation', 'shortcodes-ultimate' ); ?>" class="button-primary" value="<?php _e( 'Donate', 'shortcodes-ultimate' ); ?>" />
+					</fieldset>
+				</form>
+
+				<p><strong><?php _e( 'Donate with Money.Yandex.ru', 'shortcodes-ultimate' ); ?></strong></p>
+				<form action="https://money.yandex.ru/charity.xml" method="post" name="yandex_pay" target="_blank">
+					<input type="text" size="10" value="150" name="CompanySum" /> <?php _e( 'RUR', 'shortcodes-ultimate' ); ?>
+					<input type="hidden" value="41001358358276" name="to" />
+					<input type="hidden" value="<?php _e( 'Donation to help support Shortcodes Ultimate plugin', 'shortcodes-ultimate' ); ?>" name="CompanyName" />
+					<input type="hidden" value="http://ilovecode.ru/thanks" name="CompanyLink" />
+					<input type="submit" value="<?php _e( 'Donate', 'shortcodes-ultimate' ); ?>" class="button-primary" />
+				</form>
+
+				<p><strong><?php _e( 'Donate with WebMoney.ru', 'shortcodes-ultimate' ); ?></strong></p>
+				<p>R297004467669<br/>Z147863587938</p>
+
 				<p>
-					<input type="text" value="http://ilovecode.ru/?p=163" size="27" onclick="this.select();" />
-					<a href="http://facebook.com/sharer.php?u=http://ilovecode.ru/?p=163" title="<?php _e( 'Share on Facebook', 'shortcodes-ultimate' ); ?>" target="_blank">
-						<img src="<?php echo su_plugin_url(); ?>/images/social/facebook_16.png" title="<?php _e( 'Share on Facebook', 'shortcodes-ultimate' ); ?>" style="margin-bottom:-3px" />
-					</a>
-					<a href="http://twitter.com/home?status=Shortcodes%20Ultimate%20http://ilovecode.ru/?p=163" title="<?php _e( 'Share on Twitter', 'shortcodes-ultimate' ); ?>" target="_blank">
-						<img src="<?php echo su_plugin_url(); ?>/images/social/twitter_16.png" title="<?php _e( 'Share on Twitter', 'shortcodes-ultimate' ); ?>" style="margin-bottom:-3px" />
-					</a>
-				</p>
-				<p>
-					<a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a> |
-					<a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a> |
-					<a href="http://ilovecode.ru/?p=163#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a>
+					<strong><?php _e( 'Support links', 'shortcodes-ultimate' ); ?></strong>:
+					<a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a>, <a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a>, <a href="http://ilovecode.ru/?p=163#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a>
 				</p>
 			</div>
 
 			<?php su_save_notification(); ?>
+
 			<ul id="su-tabs">
 				<li class="su-current"><span><?php _e( 'General settings', 'shortcodes-ultimate' ); ?></span></li>
 				<li><span><?php _e( 'Custom CSS', 'shortcodes-ultimate' ); ?></span></li>
@@ -76,6 +102,8 @@
 			</div>
 			<div class="su-pane">
 				<form action="" method="post">
+					<p><?php _e( 'You can add custom styles, that will override defaults', 'shortcodes-ultimate' ); ?></p>
+					<p><a href="<?php echo su_plugin_url(); ?>/css/style.css" target="_blank"><?php _e( 'See original styles', 'shortcodes-ultimate' ); ?></a></p>
 					<p><textarea id="su-custom-css" name="su_custom_css"><?php echo get_option( 'su_custom_css' ); ?></textarea></p>
 					<p>
 						<input type="submit" value="<?php _e( 'Save styles', 'shortcodes-ultimate' ); ?>" class="button-primary" />

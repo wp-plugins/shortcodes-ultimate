@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 
 Provides support for multiple useful shortcodes
 
@@ -63,6 +63,10 @@ In your dashboard
 
 
 == Changelog ==
+
+= 1.6.1 =
+* Small fixes
+* Added donation forms
 
 = 1.6.0 =
 * New admin panel

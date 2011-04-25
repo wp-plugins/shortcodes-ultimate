@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.6.0
+	  Version: 1.6.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -238,4 +238,5 @@
 			echo '<div class="updated"><p><strong>' . __( 'Custom CSS saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
 		}
 	}
+
 ?>

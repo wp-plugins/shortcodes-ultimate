@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-25 18:09+0300\n"
-"PO-Revision-Date: 2011-04-25 18:12+0300\n"
+"POT-Creation-Date: 2011-04-25 21:38+0300\n"
+"PO-Revision-Date: 2011-04-25 21:39+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -39,155 +39,188 @@ msgstr "Произвольные стили сохранены"
 msgid "Shortcodes"
 msgstr "Шорткоды"
 
-#: lib/admin.php:26
-msgid "Want to support author? Just share this link!"
-msgstr "Хотите поддержать автора? Просто опубликйте ссылку!"
+#: lib/admin.php:27
+msgid "You can support this project by buying the author a cup of coffee!"
+msgstr "Вы можете поддержать этот проект, купив автору чашечку кофе!"
 
 #: lib/admin.php:29
-#: lib/admin.php:30
-msgid "Share on Facebook"
-msgstr "Опубликовать на Facebook"
+msgid "Donate with MoneyBookers.com"
+msgstr "Сделать пожертвование через MoneyBookers.com"
 
-#: lib/admin.php:32
-#: lib/admin.php:33
-msgid "Share on Twitter"
-msgstr "Опубликовать на Twitter"
+#: lib/admin.php:44
+#: lib/admin.php:45
+#: lib/admin.php:54
+msgid "Donation to help support Shortcodes Ultimate plugin"
+msgstr "Пожертвование автору плагина Shortcodes Ultimate"
 
-#: lib/admin.php:37
+#: lib/admin.php:46
+msgid "Click to make a donation"
+msgstr "Кликните, чтобы сделать пожертвование"
+
+#: lib/admin.php:46
+#: lib/admin.php:56
+msgid "Donate"
+msgstr "Пожертвовать"
+
+#: lib/admin.php:50
+msgid "Donate with Money.Yandex.ru"
+msgstr "Сделать пожертвование через Money.Yandex.ru"
+
+#: lib/admin.php:52
+msgid "RUR"
+msgstr "Руб."
+
+#: lib/admin.php:59
+msgid "Donate with WebMoney.ru"
+msgstr "Сделать пожертвование через WebMoney.ru"
+
+#: lib/admin.php:63
+msgid "Support links"
+msgstr "Полезные ссылки"
+
+#: lib/admin.php:64
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: lib/admin.php:38
+#: lib/admin.php:64
 msgid "Twitter"
 msgstr "Твиттер разработчика"
 
-#: lib/admin.php:39
+#: lib/admin.php:64
 msgid "Bug report"
 msgstr "Сообщить об ошибке"
 
-#: lib/admin.php:45
+#: lib/admin.php:71
 msgid "General settings"
 msgstr "Основные настройки"
 
-#: lib/admin.php:46
+#: lib/admin.php:72
 msgid "Custom CSS"
 msgstr "Произвольные стили"
 
-#: lib/admin.php:47
+#: lib/admin.php:73
 msgid "Available shortcodes"
 msgstr "Список шорткодов"
 
-#: lib/admin.php:54
+#: lib/admin.php:80
 msgid "Disable custom formatting"
 msgstr "Отключить специальное форматирование"
 
-#: lib/admin.php:57
+#: lib/admin.php:83
 msgid "Enable this option if you have some problems with other plugins or content formatting"
 msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
 
-#: lib/admin.php:62
+#: lib/admin.php:88
 msgid "Compatibility mode"
 msgstr "Режим совместимости"
 
-#: lib/admin.php:65
+#: lib/admin.php:91
 msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
 msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
 
-#: lib/admin.php:70
+#: lib/admin.php:96
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
-#: lib/admin.php:81
+#: lib/admin.php:105
+msgid "You can add custom styles, that will override defaults"
+msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
+
+#: lib/admin.php:106
+msgid "See original styles"
+msgstr "Смотреть оригинальные стили"
+
+#: lib/admin.php:109
 msgid "Save styles"
 msgstr "Сохранить стили"
 
-#: lib/admin.php:89
+#: lib/admin.php:117
 msgid "Shortcode"
 msgstr "Шорткоды"
 
-#: lib/admin.php:90
+#: lib/admin.php:118
 msgid "Parameters"
 msgstr "Параметры"
 
-#: lib/admin.php:91
+#: lib/admin.php:119
 msgid "Usage"
 msgstr "Пример использования"
 
-#: lib/admin.php:96
-#: lib/admin.php:126
-#: lib/admin.php:131
-#: lib/admin.php:136
-#: lib/admin.php:156
-#: lib/admin.php:161
-#: lib/admin.php:171
+#: lib/admin.php:124
+#: lib/admin.php:154
+#: lib/admin.php:159
+#: lib/admin.php:164
+#: lib/admin.php:184
+#: lib/admin.php:189
+#: lib/admin.php:199
 msgid "Content"
 msgstr "Содержимое"
 
-#: lib/admin.php:106
+#: lib/admin.php:134
 msgid "Tab name"
 msgstr "Имя вкладки"
 
-#: lib/admin.php:106
+#: lib/admin.php:134
 msgid "Tab content"
 msgstr "Содержимое вкладки"
 
-#: lib/admin.php:111
+#: lib/admin.php:139
 #: lib/shortcodes.php:78
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:111
+#: lib/admin.php:139
 msgid "Hidden text"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:115
-#: lib/admin.php:140
-#: lib/admin.php:175
+#: lib/admin.php:143
+#: lib/admin.php:168
+#: lib/admin.php:203
 msgid "optional"
 msgstr "необяз."
 
-#: lib/admin.php:141
+#: lib/admin.php:169
 msgid "Button text"
 msgstr "Текст кнопки"
 
-#: lib/admin.php:146
+#: lib/admin.php:174
 msgid "Read more"
 msgstr "Подробнее"
 
-#: lib/admin.php:150
+#: lib/admin.php:178
 msgid "image url"
 msgstr "ссылка на изображение"
 
-#: lib/admin.php:150
+#: lib/admin.php:178
 msgid "icon size"
 msgstr "размер иконки"
 
-#: lib/admin.php:151
+#: lib/admin.php:179
 #: lib/shortcodes.php:292
 msgid "Service name"
 msgstr "Название услуги"
 
-#: lib/admin.php:151
+#: lib/admin.php:179
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: lib/admin.php:156
+#: lib/admin.php:184
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/admin.php:166
+#: lib/admin.php:194
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:170
+#: lib/admin.php:198
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:176
+#: lib/admin.php:204
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:176
+#: lib/admin.php:204
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
@@ -202,6 +235,15 @@ msgstr "Заголовок блока"
 #: lib/shortcodes.php:359
 msgid "Please specify media url"
 msgstr "Укажите ссылку на медиа"
+
+#~ msgid "Want to support author? Just share this link!"
+#~ msgstr "Хотите поддержать автора? Просто опубликйте ссылку!"
+
+#~ msgid "Share on Facebook"
+#~ msgstr "Опубликовать на Facebook"
+
+#~ msgid "Share on Twitter"
+#~ msgstr "Опубликовать на Twitter"
 
 #~ msgid "Shortcodes ultimate settings"
 #~ msgstr "Настройки Shortcodes Ultimate"
