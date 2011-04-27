@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.6.1
+	  Version: 1.7.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -48,12 +48,14 @@
 		// Register styles
 		wp_register_style( 'shortcodes-ultimate', su_plugin_url() . '/css/style.css', false, su_get_version(), 'all' );
 		wp_register_style( 'shortcodes-ultimate-admin', su_plugin_url() . '/css/admin.css', false, su_get_version(), 'all' );
+		wp_register_style( 'nivo-slider', su_plugin_url() . '/css/nivo-slider.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror', su_plugin_url() . '/css/codemirror.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror-css', su_plugin_url() . '/css/codemirror-css.css', false, su_get_version(), 'all' );
 
 		// Register scripts
 		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
 		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
+		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/jquery.nivo.slider.pack.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror-css', su_plugin_url() . '/js/codemirror-css.js', false, su_get_version(), false );
 		wp_register_script( 'jwplayer', su_plugin_url() . '/js/jwplayer.js', false, su_get_version(), false );
@@ -62,11 +64,13 @@
 		if ( !is_admin() ) {
 
 			// Enqueue styles
+			wp_enqueue_style( 'nivo-slider' );
 			wp_enqueue_style( 'shortcodes-ultimate' );
 
 			// Enqueue scripts
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'jwplayer' );
+			wp_enqueue_script( 'nivo-slider' );
 			wp_enqueue_script( 'shortcodes-ultimate' );
 		}
 
@@ -105,6 +109,8 @@
 		add_shortcode( su_compatibility_mode_prefix() . 'column', 'su_column_shortcode' );
 		add_shortcode( su_compatibility_mode_prefix() . 'media', 'su_media_shortcode' );
 		add_shortcode( su_compatibility_mode_prefix() . 'table', 'su_table_shortcode' );
+		add_shortcode( su_compatibility_mode_prefix() . 'photoshop', 'su_photoshop_shortcode' );
+		add_shortcode( su_compatibility_mode_prefix() . 'nivo_slider', 'su_nivo_slider_shortcode' );
 	}
 
 	add_action( 'init', 'su_plugin_init' );

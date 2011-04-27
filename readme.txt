@@ -1,15 +1,20 @@
 === Plugin Name ===
 Contributors: gn_themes
 Donate link: http://ilovecode.ru/
-Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon
+Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.6.1
+Stable tag: 1.7.0
 
 Provides support for multiple useful shortcodes
 
 
 == Description ==
+
+= In this version =
+* Improved settings page
+* Added shortcode nivo_slider
+* Added shortcode photoshop
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 = Complete list of available shortcodes =
@@ -31,6 +36,8 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Column
 * Table
 * Media
+* Nivo slider
+* Photoshop
 
 Bug report / contact author: http://ilovecode.ru/?p=122
 My twitter: http://twitter.com/gn_themes
@@ -63,6 +70,11 @@ In your dashboard
 
 
 == Changelog ==
+
+= 1.7.0 =
+* Improved settings page design
+* Added shortcode nivo_slider
+* Added shortcode photoshop
 
 = 1.6.1 =
 * Small fixes

@@ -382,4 +382,105 @@
 		return $return;
 	}
 
+	/**
+	 * Shortcode: photoshop
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_photoshop_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'image' => false,
+				'width' => 200,
+				'height' => 100,
+				'crop' => 1,
+				'quality' => 100,
+				'filter' => 1,
+				'sharpen' => 0
+				), $atts ) );
+
+		return '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;zc=' . $crop . '&amp;q=' . $quality . '&amp;f=' . $filter . '&amp;s=' . $sharpen . '" width="' . $width . '" height="' . $height . '" alt="" />';
+	}
+
+	/**
+	 * Shortcode: nivo_slider
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_nivo_slider_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'width' => 600,
+				'height' => 300,
+				'link' => false,
+				'effect' => 'random',
+				'speed' => 600,
+				'delay' => 3000,
+				'p' => false
+				), $atts ) );
+
+		global $post;
+		$post_id = ( $p ) ? $p : $post->ID;
+
+		$args = array(
+			'post_type' => 'attachment',
+			'numberposts' => -1,
+			'order' => 'ASC',
+			'post_status' => null,
+			'post_parent' => $post_id
+		);
+
+		// Get attachments
+		$attachments = get_posts( $args );
+
+		// If has attachments
+		if ( count( $attachments ) > 1 ) {
+
+			$return = '
+				<script type="text/javascript">
+					jQuery(window).load(function() {
+						jQuery("#su-nivo-slider").nivoSlider({
+							effect: "' . $effect . '",
+							animSpeed: ' . $speed . ',
+							pauseTime: ' . $delay . '
+						});
+					});
+				</script>
+				<style type="text/css">
+				#su-nivo-slider {width:' . $width . 'px;height:' . $height . 'px}
+				</style>
+			';
+
+			$return .= '<div id="su-nivo-slider">';
+			foreach ( $attachments as $attachment ) {
+				$title = apply_filters( 'the_title', $attachment->post_title );
+				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
+
+				// Link to file
+				if ( $link == 'file' ) {
+					$return .= '<a href="' . $image[0] . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>' . "\n";
+				}
+
+				// Link to attachment page
+				elseif ( $link == 'attachment' ) {
+					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>' . "\n";
+				}
+
+				// No link
+				else {
+					$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />' . "\n";
+				}
+			}
+			$return .= '</div>';
+		}
+
+		// No attachments
+		else {
+			$return = '<p class="su-error"><strong>Nivo slider:</strong> ' . __( 'no attached images, or only one attached image', 'shortcodes-ultimate' ) . '&hellip;</p>';
+		}
+
+		return $return;
+	}
 ?>

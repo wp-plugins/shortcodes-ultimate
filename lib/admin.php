@@ -67,11 +67,11 @@
 
 			<?php su_save_notification(); ?>
 
-			<ul id="su-tabs">
-				<li class="su-current"><span><?php _e( 'General settings', 'shortcodes-ultimate' ); ?></span></li>
-				<li><span><?php _e( 'Custom CSS', 'shortcodes-ultimate' ); ?></span></li>
-				<li><span><?php _e( 'Available shortcodes', 'shortcodes-ultimate' ); ?></span></li>
-			</ul>
+			<div id="su-tabs">
+				<a class="su-current"><span><?php _e( 'General settings', 'shortcodes-ultimate' ); ?></span></a>
+				<a><span><?php _e( 'Custom CSS', 'shortcodes-ultimate' ); ?></span></a>
+				<a><span><?php _e( 'Available shortcodes', 'shortcodes-ultimate' ); ?></span></a>
+			</div>
 			<div class="su-pane">
 				<form action="" method="post">
 					<table class="fixed">
@@ -163,7 +163,7 @@
 						<td>bg="#HEX"<br/>color="#HEX"</td>
 						<td>[highlight bg="#fc0" color="#000"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/highlight]</td>
 					</tr>
-					<tr class="su-new-shortcode">
+					<tr>
 						<td>button</td>
 						<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 						<td>[button link="#" color="#b00" size="3" style="3" dark="1" square="1" icon="image.png"] <?php _e( 'Button text', 'shortcodes-ultimate' ); ?> [/button]</td>
@@ -188,7 +188,7 @@
 						<td>color="#HEX"</td>
 						<td>[note color="#D1F26D"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/note]</td>
 					</tr>
-					<tr class="su-new-shortcode">
+					<tr>
 						<td>list</td>
 						<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
 						<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
@@ -198,15 +198,25 @@
 						<td>size="1-2|1-3|1-4|1-5|1-6|2-3|3-4|2-5|3-5|4-5|5-6"<br/>last (<?php _e( 'add this to last columns', 'shortcodes-ultimate' ); ?>)</td>
 						<td>[column size="1-2"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]<br/>[column size="1-2" last="1"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]</td>
 					</tr>
-					<tr class="su-new-shortcode">
+					<tr>
 						<td>table</td>
 						<td>style="1|2|3"<br/>file (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 						<td><p><strong><?php _e( 'Plain table', 'shortcodes-ultimate' ); ?></strong><br/>[table style="1"] &lt;table&gt; &hellip; &lt;table&gt; [/table]</p><p><strong><?php _e( 'From CSV', 'shortcodes-ultimate' ); ?></strong><br/>[table style="1" file="http://example.com/file.csv"]  [/table]</p></td>
 					</tr>
-					<tr class="su-new-shortcode">
+					<tr>
 						<td>media</td>
 						<td>url<br/>width<br/>height</td>
 						<td>[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]</td>
+					</tr>
+					<tr class="su-new-shortcode">
+						<td>nivo_slider</td>
+						<td>width<br/>height<br/>link="file|attachment" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>speed (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>delay (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>p - post ID (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>effect="random|boxRandom|fold|fade"</td>
+						<td>[nivo_slider]<br/>[nivo_slider width="640" height="400" link="file" effect="boxRandom"]</td>
+					</tr>
+					<tr class="su-new-shortcode">
+						<td>photoshop</td>
+						<td>image (url)<br/>width<br/>height<br/>crop="0|1"<br/>quality="0-100"<br/>sharpen="0|1"<br/>filter="%filter_id%"<br/><a href="http://www.binarymoon.co.uk/demo/timthumb-filters/" target="_blank"><?php _e( 'See filter IDs', 'shortcodes-ultimate' ); ?></a></td>
+						<td>[photoshop image="image.jpg" width="400" height="300" filter="2"]</td>
 					</tr>
 				</table>
 			</div>
