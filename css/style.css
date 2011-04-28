@@ -421,18 +421,18 @@
 }
 
 /* Nivo slider */
-#su-nivo-slider {
+.su-nivo-slider {
 	position: relative;
 	margin: 0 0 1.5em 0;
 	background: #f8f8f8 url(../images/nivo-slider/loading.gif) no-repeat 50% 50%;
 }
-#su-nivo-slider img {
+.su-nivo-slider img {
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: none;
 }
-#su-nivo-slider a {
+.su-nivo-slider a {
 	border: 0;
 	display: block;
 }

@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.7.0
+	  Version: 1.8.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -58,6 +58,7 @@
 		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/jquery.nivo.slider.pack.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror-css', su_plugin_url() . '/js/codemirror-css.js', false, su_get_version(), false );
+		wp_register_script( 'ajax-form', su_plugin_url() . '/js/jquery.form.js', false, su_get_version(), false );
 		wp_register_script( 'jwplayer', su_plugin_url() . '/js/jwplayer.js', false, su_get_version(), false );
 
 		// Front-end scripts and styles
@@ -86,6 +87,7 @@
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'codemirror' );
 			wp_enqueue_script( 'codemirror-css' );
+			wp_enqueue_script( 'ajax-form' );
 			wp_enqueue_script( 'shortcodes-ultimate-admin' );
 		}
 
@@ -228,6 +230,19 @@
 	}
 
 	add_action( 'admin_init', 'su_manage_settings' );
+
+	/**
+	 * Add settings link to plugins dashboard
+	 *
+	 * @param array $links Links
+	 * @return array Links
+	 */
+	function su_add_settings_link( $links ) {
+		$links[] = '<a href="' . admin_url( 'options-general.php?page=shortcodes-ultimate' ) . '">' . __( 'Settings', 'shortcodes-ultimate' ) . '</a>';
+		return $links;
+	}
+
+	add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'su_add_settings_link', -10 );
 
 	/**
 	 * Print notification if options saved

@@ -438,10 +438,12 @@
 		// If has attachments
 		if ( count( $attachments ) > 1 ) {
 
+			$slider_id = uniqid( 'su-nivo-slider_' );
+
 			$return = '
 				<script type="text/javascript">
 					jQuery(window).load(function() {
-						jQuery("#su-nivo-slider").nivoSlider({
+						jQuery("#' . $slider_id . '").nivoSlider({
 							effect: "' . $effect . '",
 							animSpeed: ' . $speed . ',
 							pauseTime: ' . $delay . '
@@ -449,11 +451,11 @@
 					});
 				</script>
 				<style type="text/css">
-				#su-nivo-slider {width:' . $width . 'px;height:' . $height . 'px}
+				#' . $slider_id . ' {width:' . $width . 'px;height:' . $height . 'px}
 				</style>
 			';
 
-			$return .= '<div id="su-nivo-slider">';
+			$return .= '<div id="' . $slider_id . '" class="su-nivo-slider">';
 			foreach ( $attachments as $attachment ) {
 				$title = apply_filters( 'the_title', $attachment->post_title );
 				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
@@ -483,4 +485,5 @@
 
 		return $return;
 	}
+
 ?>
