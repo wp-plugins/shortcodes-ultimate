@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.8.0
+	  Version: 1.8.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -218,13 +218,13 @@
 		}
 
 		// Save main settings
-		if ( $_POST['save'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+		if ( isset( $_POST['save'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 			update_option( 'su_disable_custom_formatting', $_POST['su_disable_custom_formatting'] );
 			update_option( 'su_compatibility_mode', $_POST['su_compatibility_mode'] );
 		}
 
 		// Save custom css
-		if ( $_POST['save-css'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+		if ( isset( $_POST['save-css'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 			update_option( 'su_custom_css', $_POST['su_custom_css'] );
 		}
 	}
@@ -250,12 +250,12 @@
 	function su_save_notification() {
 
 		// Save main settings
-		if ( $_POST['save'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+		if ( isset( $_POST['save'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 			echo '<div class="updated"><p><strong>' . __( 'Settings saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
 		}
 
 		// Save custom css
-		if ( $_POST['save-css'] && $_GET['page'] == 'shortcodes-ultimate' ) {
+		if ( isset( $_POST['save-css'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 			echo '<div class="updated"><p><strong>' . __( 'Custom CSS saved', 'shortcodes-ultimate' ) . '</strong></p></div>';
 		}
 	}
