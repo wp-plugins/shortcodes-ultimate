@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 1.8.1
+	  Version: 1.8.2
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -76,7 +76,7 @@
 		}
 
 		// Back-end scripts and styles
-		elseif ( $_GET['page'] == 'shortcodes-ultimate' ) {
+		elseif ( isset( $_GET['page'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 
 			// Enqueue styles
 			wp_enqueue_style( 'codemirror' );

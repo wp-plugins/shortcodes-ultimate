@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.8.1
+Stable tag: 1.8.2
 
 Provides support for multiple useful shortcodes
 
