@@ -34,7 +34,7 @@
 					<a><span><?php _e( 'Available shortcodes', 'shortcodes-ultimate' ); ?></span></a>
 				</div>
 				<div class="su-pane">
-
+					<p class="su-message su-message-error"><?php _e( 'For full functionality of this page it is recommended to enable JavaScript.', 'shortcodes-ultimate' ); ?> <a href="http://www.enable-javascript.com/" target="_blank"><?php _e( 'Instructions', 'shortcodes-ultimate' ); ?></a></p>
 					<div class="su-onethird-column">
 						<h3><?php _e( 'FREE Support', 'shortcodes-ultimate' ); ?></h3>
 						<p><a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a></p>
@@ -87,7 +87,7 @@
 						<p class="su-message su-message-success"><?php _e( 'Custom CSS saved', 'shortcodes-ultimate' ); ?></p>
 						<p><?php _e( 'You can add custom styles, that will override defaults', 'shortcodes-ultimate' ); ?></p>
 						<p><a href="<?php echo su_plugin_url(); ?>/css/style.css" target="_blank"><?php _e( 'See original styles', 'shortcodes-ultimate' ); ?></a></p>
-						<p><textarea id="su-custom-css" name="su_custom_css"><?php echo get_option( 'su_custom_css' ); ?></textarea></p>
+						<p><textarea id="su-custom-css" name="su_custom_css" rows="14" cols="90"><?php echo get_option( 'su_custom_css' ); ?></textarea></p>
 						<p>
 							<input type="submit" value="<?php _e( 'Save styles', 'shortcodes-ultimate' ); ?>" class="button-primary" />
 							<input type="hidden" name="save-css" value="true" />

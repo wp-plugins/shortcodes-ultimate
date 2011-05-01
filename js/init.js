@@ -13,11 +13,13 @@ jQuery(document).ready(function($) {
 	});
 
 	// Tabs
-	$('.su-tabs .su-tabs-pane').hide().filter(':first').show();
-	$('.su-tabs-nav span').filter(':first').addClass('su-tabs-current');
 	$('.su-tabs-nav').delegate('span:not(.su-tabs-current)', 'click', function() {
-		$(this).addClass('su-tabs-current').siblings().removeClass('su-tabs-current').parents('.su-tabs').find('.su-tabs-pane').hide().eq($(this).index()).show();
+		$(this).addClass('su-tabs-current').siblings().removeClass('su-tabs-current')
+		.parents('.su-tabs').find('.su-tabs-pane').hide().eq($(this).index()).show();
 	});
+	$('.su-tabs-pane').hide();
+	$('.su-tabs-nav span:first-child').addClass('su-tabs-current');
+	$('.su-tabs-panes .su-tabs-pane:first-child').show();
 
 	// Tables
 	$('.su-table tr:even').addClass('su-even');

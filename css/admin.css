@@ -1,5 +1,6 @@
 #su-wrapper {
 	padding-top: 20px;
+	margin-bottom: 30px;
 }
 .su-clear {
 	clear: both;
@@ -39,6 +40,12 @@
 	height: 33px;
 	background: url(../images/admin/tabs.png) no-repeat;
 }
+.no-js #su-tabs {
+	width: 700px;
+	height: 0;
+	overflow: hidden;
+	border-bottom: 1px solid #DFDFDF;
+}
 #su-tabs a {
 	display: block;
 	float: left;
@@ -76,10 +83,13 @@
 	width: 668px;
 	background: #fff;
 	padding: 15px;
-	margin-bottom: 30px;
 	border-right: 1px solid #DFDFDF;
 	border-bottom: 1px solid #DFDFDF;
 	border-left: 1px solid #DFDFDF;
+}
+
+.no-js .su-pane {
+	display: block;
 }
 
 /* Messages (notifications) */
@@ -93,6 +103,12 @@
 	font-size: 11px;
 	font-weight: bold;
 }
+.su-message a,
+.su-message a:hover,
+.su-message a:active,
+.su-message a:visited {
+	color: #000;
+}
 .su-message-loading {
 	background: #ff9;
 	color: #000;
@@ -102,4 +118,12 @@
 	background: #8EF59C;
 	color: #000;
 	border: 1px solid #66B070;
+}
+.su-message-error {
+	background: #FF4D70;
+	color: #000;
+	border: 1px solid #9E0020;
+}
+.no-js .su-message-error {
+	display: block;
 }

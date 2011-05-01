@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-28 04:56+0300\n"
-"PO-Revision-Date: 2011-04-28 04:57+0300\n"
+"POT-Creation-Date: 2011-04-29 17:54+0300\n"
+"PO-Revision-Date: 2011-04-29 17:54+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,12 +32,12 @@ msgid "Settings"
 msgstr "Настройки"
 
 #: shortcodes-ultimate.php:254
-#: lib/admin.php:61
+#: lib/admin.php:57
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
 #: shortcodes-ultimate.php:259
-#: lib/admin.php:91
+#: lib/admin.php:87
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
 
@@ -61,179 +61,187 @@ msgstr "Произвольные стили"
 msgid "Available shortcodes"
 msgstr "Список шорткодов"
 
-#: lib/admin.php:40
+#: lib/admin.php:37
+msgid "For full functionality of this page it is recommended to enable JavaScript."
+msgstr "На этой странице рекомендуется включить Javascript."
+
+#: lib/admin.php:37
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: lib/admin.php:39
 msgid "FREE Support"
 msgstr "БЕСПЛАТНАЯ поддержка"
 
-#: lib/admin.php:41
+#: lib/admin.php:40
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: lib/admin.php:42
+#: lib/admin.php:41
 msgid "Twitter"
 msgstr "Твиттер разработчика"
 
-#: lib/admin.php:43
+#: lib/admin.php:42
 msgid "Bug report"
 msgstr "Сообщить об ошибке"
 
-#: lib/admin.php:49
+#: lib/admin.php:46
 msgid "Do you love this plugin?"
 msgstr "Вам нравится этот плагин?"
 
-#: lib/admin.php:50
+#: lib/admin.php:47
 msgid "Buy author a beer"
 msgstr "Купите автору пива"
 
-#: lib/admin.php:50
+#: lib/admin.php:47
 msgid "Donate"
 msgstr "Сделать пожертвование"
 
-#: lib/admin.php:51
+#: lib/admin.php:48
 msgid "Rate this plugin at wordpress.org"
 msgstr "Оцените плагин на wordpress.org"
 
-#: lib/admin.php:51
+#: lib/admin.php:48
 msgid "5 stars"
 msgstr "5 звезд"
 
-#: lib/admin.php:52
+#: lib/admin.php:49
 msgid "Review this plugin in your blog"
 msgstr "Сделайте обзор этого плагина в своем блоге"
 
-#: lib/admin.php:60
-#: lib/admin.php:90
+#: lib/admin.php:56
+#: lib/admin.php:86
 msgid "Saving..."
 msgstr "Сохранение..."
 
-#: lib/admin.php:65
+#: lib/admin.php:61
 msgid "Disable custom formatting"
 msgstr "Отключить специальное форматирование"
 
-#: lib/admin.php:68
+#: lib/admin.php:64
 msgid "Enable this option if you have some problems with other plugins or content formatting"
 msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
 
-#: lib/admin.php:73
+#: lib/admin.php:69
 msgid "Compatibility mode"
 msgstr "Режим совместимости"
 
-#: lib/admin.php:76
+#: lib/admin.php:72
 msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
 msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
 
-#: lib/admin.php:81
+#: lib/admin.php:77
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
-#: lib/admin.php:92
+#: lib/admin.php:88
 msgid "You can add custom styles, that will override defaults"
 msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
 
-#: lib/admin.php:93
+#: lib/admin.php:89
 msgid "See original styles"
 msgstr "Смотреть оригинальные стили"
 
-#: lib/admin.php:96
+#: lib/admin.php:92
 msgid "Save styles"
 msgstr "Сохранить стили"
 
-#: lib/admin.php:104
+#: lib/admin.php:100
 msgid "Shortcode"
 msgstr "Шорткоды"
 
-#: lib/admin.php:105
+#: lib/admin.php:101
 msgid "Parameters"
 msgstr "Параметры"
 
-#: lib/admin.php:106
+#: lib/admin.php:102
 msgid "Usage"
 msgstr "Пример использования"
 
-#: lib/admin.php:111
-#: lib/admin.php:141
-#: lib/admin.php:146
-#: lib/admin.php:151
-#: lib/admin.php:171
-#: lib/admin.php:176
-#: lib/admin.php:186
+#: lib/admin.php:107
+#: lib/admin.php:137
+#: lib/admin.php:142
+#: lib/admin.php:147
+#: lib/admin.php:167
+#: lib/admin.php:172
+#: lib/admin.php:182
 msgid "Content"
 msgstr "Содержимое"
 
-#: lib/admin.php:121
+#: lib/admin.php:117
 msgid "Tab name"
 msgstr "Имя вкладки"
 
-#: lib/admin.php:121
+#: lib/admin.php:117
 msgid "Tab content"
 msgstr "Содержимое вкладки"
 
-#: lib/admin.php:126
+#: lib/admin.php:122
 #: lib/shortcodes.php:78
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:126
+#: lib/admin.php:122
 msgid "Hidden text"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:130
-#: lib/admin.php:155
-#: lib/admin.php:190
-#: lib/admin.php:200
+#: lib/admin.php:126
+#: lib/admin.php:151
+#: lib/admin.php:186
+#: lib/admin.php:196
 msgid "optional"
 msgstr "необяз."
 
-#: lib/admin.php:156
+#: lib/admin.php:152
 msgid "Button text"
 msgstr "Текст кнопки"
 
-#: lib/admin.php:161
+#: lib/admin.php:157
 msgid "Read more"
 msgstr "Подробнее"
 
-#: lib/admin.php:165
+#: lib/admin.php:161
 msgid "image url"
 msgstr "ссылка на изображение"
 
-#: lib/admin.php:165
+#: lib/admin.php:161
 msgid "icon size"
 msgstr "размер иконки"
 
-#: lib/admin.php:166
+#: lib/admin.php:162
 #: lib/shortcodes.php:292
 msgid "Service name"
 msgstr "Название услуги"
 
-#: lib/admin.php:166
+#: lib/admin.php:162
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: lib/admin.php:171
+#: lib/admin.php:167
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/admin.php:181
+#: lib/admin.php:177
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:185
+#: lib/admin.php:181
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:191
+#: lib/admin.php:187
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:191
+#: lib/admin.php:187
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
-#: lib/admin.php:200
+#: lib/admin.php:196
 msgid "1 second"
 msgstr "1 секунда"
 
-#: lib/admin.php:205
+#: lib/admin.php:201
 msgid "See filter IDs"
 msgstr "Смотреть ID фильтров"
 

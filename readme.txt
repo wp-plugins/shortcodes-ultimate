@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery
 Requires at least: 3.0
 Tested up to: 3.1
-Stable tag: 1.8.2
+Stable tag: 1.8.3
 
 Provides support for multiple useful shortcodes
 
@@ -12,10 +12,8 @@ Provides support for multiple useful shortcodes
 == Description ==
 
 = In this version =
-* Improved settings page
-* Added shortcode nivo_slider
-* Added shortcode photoshop
-* Ajax admin!
+* Multiple tabs
+* No-js compatibility
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 = Complete list of available shortcodes =
@@ -75,19 +73,19 @@ In your dashboard
 = 1.8.0 =
 * Some small additions
 * Ajax admin page
+* No-js compatibility
+* Multiple tabs support
 
 = 1.7.0 =
 * Improved settings page design
 * Added shortcode nivo_slider
 * Added shortcode photoshop
 
-= 1.6.1 =
-* Small fixes
-* Added donation forms
-
 = 1.6.0 =
 * New admin panel
 * Custom CSS editor with syntax hughlight
+* Small fixes
+* Added donation forms
 
 = 1.5.0 =
 * Added option "Compatibility mode"
@@ -95,9 +93,6 @@ In your dashboard
 * Added new list styles
 * Added new shortcode media
 * Added new shortcode table
-
-= 1.4.1 =
-* Service shortcode returned
 
 = 1.4.0 =
 * Added shortcode "Fancy link"
@@ -108,11 +103,9 @@ In your dashboard
 = 1.2.0 =
 * Localization support
 
-= 1.1.1 =
-* Fixed options saving
-
 = 1.1.0 =
 * Added options page
+* Fixed options saving
 
 = 1.0.0 =
 * Initial release
