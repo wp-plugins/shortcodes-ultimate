@@ -1,0 +1,652 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gn_themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-04-29 17:54+0300\n"
+"PO-Revision-Date: 2011-04-29 17:54+0300\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: shortcodes-ultimate.php:157
+#: lib/admin.php:23
+msgid "Shortcodes Ultimate"
+msgstr "Шорткоды"
+
+#: shortcodes-ultimate.php:157
+msgid "Vladimir Anokhin"
+msgstr "Владимир Анохин"
+
+#: shortcodes-ultimate.php:157
+msgid "Provides support for many easy to use shortcodes"
+msgstr "Предоставляет поддержку множества полезных шорткодов"
+
+#: shortcodes-ultimate.php:241
+msgid "Settings"
+msgstr "Настройки"
+
+#: shortcodes-ultimate.php:254
+#: lib/admin.php:57
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: shortcodes-ultimate.php:259
+#: lib/admin.php:87
+msgid "Custom CSS saved"
+msgstr "Произвольные стили сохранены"
+
+#: lib/admin.php:7
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+#: lib/admin.php:31
+msgid "About"
+msgstr "О плагине"
+
+#: lib/admin.php:32
+msgid "General settings"
+msgstr "Основные настройки"
+
+#: lib/admin.php:33
+msgid "Custom CSS"
+msgstr "Произвольные стили"
+
+#: lib/admin.php:34
+msgid "Available shortcodes"
+msgstr "Список шорткодов"
+
+#: lib/admin.php:37
+msgid "For full functionality of this page it is recommended to enable JavaScript."
+msgstr "На этой странице рекомендуется включить Javascript."
+
+#: lib/admin.php:37
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: lib/admin.php:39
+msgid "FREE Support"
+msgstr "БЕСПЛАТНАЯ поддержка"
+
+#: lib/admin.php:40
+msgid "Support forum"
+msgstr "Форум поддержки"
+
+#: lib/admin.php:41
+msgid "Twitter"
+msgstr "Твиттер разработчика"
+
+#: lib/admin.php:42
+msgid "Bug report"
+msgstr "Сообщить об ошибке"
+
+#: lib/admin.php:46
+msgid "Do you love this plugin?"
+msgstr "Вам нравится этот плагин?"
+
+#: lib/admin.php:47
+msgid "Buy author a beer"
+msgstr "Купите автору пива"
+
+#: lib/admin.php:47
+msgid "Donate"
+msgstr "Сделать пожертвование"
+
+#: lib/admin.php:48
+msgid "Rate this plugin at wordpress.org"
+msgstr "Оцените плагин на wordpress.org"
+
+#: lib/admin.php:48
+msgid "5 stars"
+msgstr "5 звезд"
+
+#: lib/admin.php:49
+msgid "Review this plugin in your blog"
+msgstr "Сделайте обзор этого плагина в своем блоге"
+
+#: lib/admin.php:56
+#: lib/admin.php:86
+msgid "Saving..."
+msgstr "Сохранение..."
+
+#: lib/admin.php:61
+msgid "Disable custom formatting"
+msgstr "Отключить специальное форматирование"
+
+#: lib/admin.php:64
+msgid "Enable this option if you have some problems with other plugins or content formatting"
+msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
+
+#: lib/admin.php:69
+msgid "Compatibility mode"
+msgstr "Режим совместимости"
+
+#: lib/admin.php:72
+msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
+msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
+
+#: lib/admin.php:77
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+#: lib/admin.php:88
+msgid "You can add custom styles, that will override defaults"
+msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
+
+#: lib/admin.php:89
+msgid "See original styles"
+msgstr "Смотреть оригинальные стили"
+
+#: lib/admin.php:92
+msgid "Save styles"
+msgstr "Сохранить стили"
+
+#: lib/admin.php:100
+msgid "Shortcode"
+msgstr "Шорткоды"
+
+#: lib/admin.php:101
+msgid "Parameters"
+msgstr "Параметры"
+
+#: lib/admin.php:102
+msgid "Usage"
+msgstr "Пример использования"
+
+#: lib/admin.php:107
+#: lib/admin.php:137
+#: lib/admin.php:142
+#: lib/admin.php:147
+#: lib/admin.php:167
+#: lib/admin.php:172
+#: lib/admin.php:182
+msgid "Content"
+msgstr "Содержимое"
+
+#: lib/admin.php:117
+msgid "Tab name"
+msgstr "Имя вкладки"
+
+#: lib/admin.php:117
+msgid "Tab content"
+msgstr "Содержимое вкладки"
+
+#: lib/admin.php:122
+#: lib/shortcodes.php:78
+msgid "Spoiler title"
+msgstr "Скрытый текст"
+
+#: lib/admin.php:122
+msgid "Hidden text"
+msgstr "Скрытый текст"
+
+#: lib/admin.php:126
+#: lib/admin.php:151
+#: lib/admin.php:186
+#: lib/admin.php:196
+msgid "optional"
+msgstr "необяз."
+
+#: lib/admin.php:152
+msgid "Button text"
+msgstr "Текст кнопки"
+
+#: lib/admin.php:157
+msgid "Read more"
+msgstr "Подробнее"
+
+#: lib/admin.php:161
+msgid "image url"
+msgstr "ссылка на изображение"
+
+#: lib/admin.php:161
+msgid "icon size"
+msgstr "размер иконки"
+
+#: lib/admin.php:162
+#: lib/shortcodes.php:292
+msgid "Service name"
+msgstr "Название услуги"
+
+#: lib/admin.php:162
+msgid "Service description"
+msgstr "Описание услуги"
+
+#: lib/admin.php:167
+msgid "Box title"
+msgstr "Заголовок блока"
+
+#: lib/admin.php:177
+msgid "List item"
+msgstr "Элемент списка"
+
+#: lib/admin.php:181
+msgid "add this to last columns"
+msgstr "добавьте к каждой последней колонке"
+
+#: lib/admin.php:187
+msgid "Plain table"
+msgstr "Простая таблица"
+
+#: lib/admin.php:187
+msgid "From CSV"
+msgstr "Из CSV-файла"
+
+#: lib/admin.php:196
+msgid "1 second"
+msgstr "1 секунда"
+
+#: lib/admin.php:201
+msgid "See filter IDs"
+msgstr "Смотреть ID фильтров"
+
+#: lib/shortcodes.php:96
+msgid "Top"
+msgstr "Вверх"
+
+#: lib/shortcodes.php:310
+msgid "This is box title"
+msgstr "Заголовок блока"
+
+#: lib/shortcodes.php:359
+msgid "Please specify media url"
+msgstr "Укажите ссылку на медиа"
+
+#: lib/shortcodes.php:483
+msgid "no attached images, or only one attached image"
+msgstr "не найдены загруженные изображения, или изображение всего одно"
+
+#~ msgid "Support links"
+#~ msgstr "Полезные ссылки"
+
+#~ msgid "You can support this project by buying the author a cup of coffee!"
+#~ msgstr "Вы можете поддержать этот проект, купив автору чашечку кофе!"
+
+#~ msgid "Donate with MoneyBookers.com"
+#~ msgstr "Сделать пожертвование через MoneyBookers.com"
+
+#~ msgid "Donation to help support Shortcodes Ultimate plugin"
+#~ msgstr "Пожертвование автору плагина Shortcodes Ultimate"
+
+#~ msgid "Click to make a donation"
+#~ msgstr "Кликните, чтобы сделать пожертвование"
+
+#~ msgid "Donate with Money.Yandex.ru"
+#~ msgstr "Сделать пожертвование через Money.Yandex.ru"
+
+#~ msgid "RUR"
+#~ msgstr "Руб."
+
+#~ msgid "Donate with WebMoney.ru"
+#~ msgstr "Сделать пожертвование через WebMoney.ru"
+
+#~ msgid "Want to support author? Just share this link!"
+#~ msgstr "Хотите поддержать автора? Просто опубликйте ссылку!"
+
+#~ msgid "Share on Facebook"
+#~ msgstr "Опубликовать на Facebook"
+
+#~ msgid "Share on Twitter"
+#~ msgstr "Опубликовать на Twitter"
+
+#~ msgid "Shortcodes ultimate settings"
+#~ msgstr "Настройки Shortcodes Ultimate"
+
+#~ msgid "Contact author"
+#~ msgstr "Связаться с разработчиком"
+
+#~ msgid "Coming soon"
+#~ msgstr "Появится в ближайшее время"
+
+#~ msgid "Visit"
+#~ msgstr "Посетите"
+
+#~ msgid ""
+#~ "The page you've requested can not be displayed. It appears you've missed "
+#~ "your intended destination, either through a bad or outdated link, or a "
+#~ "typo in the page you were hoping to reach."
+#~ msgstr "Страница, которую Вы запросили, не может быть отображена."
+
+#~ msgid "Use the search box in the header to search for what you want."
+#~ msgstr "Вы можете воспользоваться формой поиска вверху страницы."
+
+#~ msgid "You can also <a href=\"%s\">return home</a>"
+#~ msgstr "Также Вы можете <a href=\"%s\">вернуться на главную страницу</a>"
+
+#~ msgid ""
+#~ "And if you think this is our mistake, you can also contact us. We'll be "
+#~ "thankful."
+#~ msgstr ""
+#~ "Если Вы считаете, что это наша ошибка, пожалуйста напишите нам. Мы будем "
+#~ "благодарны."
+
+#~ msgid "Leave comment"
+#~ msgstr "Оставить комментарий"
+
+#~ msgid "comments"
+#~ msgstr "комментариев"
+
+#~ msgid "Previous page"
+#~ msgstr "« Назад"
+
+#~ msgid "Next page"
+#~ msgstr "Вперед »"
+
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view comments."
+#~ msgstr "Эта запись защищена паролем!"
+
+#~ msgid "No comments yet"
+#~ msgstr "Пока нет комментариев"
+
+#~ msgid "on"
+#~ msgstr "на"
+
+#~ msgid "Leave comment for %s"
+#~ msgstr "Оставить комментарий для %s"
+
+#~ msgid "Logged in as %s. %s Log out %s"
+#~ msgstr "Вы вошли как %s. %s Выйти? %s"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "(required)"
+#~ msgstr "*обязательно"
+
+#~ msgid "Mail (will not be published)"
+#~ msgstr "Эл. почта"
+
+#~ msgid "Website"
+#~ msgstr "Веб сайт"
+
+#~ msgid "Submit Comment"
+#~ msgstr "Оставить комментрий"
+
+#~ msgid "Footer 1"
+#~ msgstr "Подвал 1"
+
+#~ msgid "No widgets"
+#~ msgstr "Нет виджетов"
+
+#~ msgid "Add widget"
+#~ msgstr "Добавьте виджет"
+
+#~ msgid "Footer 2"
+#~ msgstr "Подвал 2"
+
+#~ msgid "Footer 3"
+#~ msgstr "Подвал 3"
+
+#~ msgid "Footer 4"
+#~ msgstr "Подвал 4"
+
+#~ msgid "Sidebar"
+#~ msgstr "Сайдбар"
+
+#~ msgid "Blog sidebar"
+#~ msgstr "Сайдбар блога"
+
+#~ msgid "Footer widgetized area 1"
+#~ msgstr "Виджет-зона подвала 1"
+
+#~ msgid "Footer widgetized area 2"
+#~ msgstr "Виджет-зона подвала 2"
+
+#~ msgid "Footer widgetized area 3"
+#~ msgstr "Виджет-зона подвала 3"
+
+#~ msgid "Footer widgetized area 4"
+#~ msgstr "Виджет-зона подвала 4"
+
+#~ msgid "Page not found"
+#~ msgstr "Страница не найдена"
+
+#~ msgid "Search results"
+#~ msgstr "Результаты поиска"
+
+#~ msgid "Nothing found"
+#~ msgstr "Ничего не найдено"
+
+#~ msgid "Search..."
+#~ msgstr "Поиск..."
+
+#~ msgid "Find"
+#~ msgstr "Найти"
+
+#~ msgid "Entire site"
+#~ msgstr "По всему сайту"
+
+#~ msgid "Blog"
+#~ msgstr "Блог"
+
+#~ msgid "Portfolio"
+#~ msgstr "Портфолио"
+
+#~ msgid "<strong>Thanks!</strong> Your email was successfully sent."
+#~ msgstr "<strong>Спасибо!</strong> Ваше сообщение успешно отправлено."
+
+#~ msgid "There was an error submitting the form."
+#~ msgstr "Произошла ошибка при отправке."
+
+#~ msgid "Name *"
+#~ msgstr "Имя *"
+
+#~ msgid "Email *"
+#~ msgstr "Эл. почта *"
+
+#~ msgid "Send"
+#~ msgstr "Отправить"
+
+#~ msgid "You forgot to enter your name."
+#~ msgstr "Вы забыли указать своё имя."
+
+#~ msgid "You forgot to enter your email address."
+#~ msgstr "Вы забыли указать адрес эл. почты."
+
+#~ msgid "You entered an invalid email address."
+#~ msgstr "Вы ввели неверный адрес эл. почты."
+
+#~ msgid "You forgot to enter your comments."
+#~ msgstr "Вы забыли добавить комментарии."
+
+#~ msgid "Add entry"
+#~ msgstr "Добавить запись"
+
+#~ msgid "Search posts"
+#~ msgstr "Искать записи"
+
+#~ msgid "Add new post"
+#~ msgstr "Добавить новую запись"
+
+#~ msgid "Edit post"
+#~ msgstr "Редактировать запись"
+
+#~ msgid "New post"
+#~ msgstr "Новая запись"
+
+#~ msgid "View post"
+#~ msgstr "Просмотр записи"
+
+#~ msgid "Add new item"
+#~ msgstr "Добавить запись"
+
+#~ msgid "Search portfolio items"
+#~ msgstr "Искать записи портфолио"
+
+#~ msgid "Add new portfolio item"
+#~ msgstr "Новая запись в портфолио"
+
+#~ msgid "Edit portfolio item"
+#~ msgstr "Редактировать запись в портфолио"
+
+#~ msgid "New portfolio item"
+#~ msgstr "Новая запись в портфолио"
+
+#~ msgid "View portfolio item"
+#~ msgstr "Просмотр записи портфолио"
+
+#~ msgid "Slider"
+#~ msgstr "Слайдер"
+
+#~ msgid "Slide"
+#~ msgstr "Слайд"
+
+#~ msgid "Add slide"
+#~ msgstr "Добавить слайд"
+
+#~ msgid "Search slides"
+#~ msgstr "Искать слайды"
+
+#~ msgid "Add new slide"
+#~ msgstr "Добавить новый слайд"
+
+#~ msgid "Edit slide"
+#~ msgstr "Редактировать слайд"
+
+#~ msgid "New slide"
+#~ msgstr "Новый слайд"
+
+#~ msgid "View slide"
+#~ msgstr "Просмотр слайда"
+
+#~ msgid "Slide settings (Anything slider)"
+#~ msgstr "Настройки слайда (Anything slider)"
+
+#~ msgid "Slide view"
+#~ msgstr "Тип слайда"
+
+#~ msgid ""
+#~ "Slide type. Full size - full sized image/video. Mixed - post title + post "
+#~ "content + image/video. Content only - only post content."
+#~ msgstr ""
+#~ "Full size - полноразмерное видео или изображение. Mixed - заголовок "
+#~ "слайда + контент + видео или изображение. Content only - только контент "
+#~ "из редактора"
+
+#~ msgid ""
+#~ "Paste full link to your media (image, Youtube video, Vimeo video). Not "
+#~ "required with Content only slides"
+#~ msgstr ""
+#~ "Вставьте полную ссылку на медиа для этого слайда. Вы можете вставить "
+#~ "ссылку на youtube, vimeo или изображение. Также поддерживаются обычные "
+#~ "видеофайлы и аудиофайлы. Подробности смотрите в документации"
+
+#~ msgid "Description"
+#~ msgstr "Описание"
+
+#~ msgid "Page description for text teaser (top of page)"
+#~ msgstr "Описание страницы для небольшого заголовка вверху страницы"
+
+#~ msgid "Thumbnail"
+#~ msgstr "Миниатюра"
+
+#~ msgid "Choose image for thumbnail"
+#~ msgstr "Выберите изображение для миниатюры"
+
+#~ msgid "Main menu"
+#~ msgstr "Главное меню"
+
+#~ msgid "Share"
+#~ msgstr "Поделиться"
+
+#~ msgid "year"
+#~ msgstr "г."
+
+#~ msgid "month"
+#~ msgstr "мес."
+
+#~ msgid "week"
+#~ msgstr "нед."
+
+#~ msgid "day"
+#~ msgstr "дн."
+
+#~ msgid "hour"
+#~ msgstr "ч."
+
+#~ msgid "minute"
+#~ msgstr "мин."
+
+#~ msgid "s"
+#~ msgstr " "
+
+#~ msgid "ago"
+#~ msgstr "назад"
+
+#~ msgid "Blog recent"
+#~ msgstr "Из блога"
+
+#~ msgid "Recent blog posts"
+#~ msgstr "Последние записи из блога"
+
+#~ msgid "Number posts"
+#~ msgstr "Количество записей"
+
+#~ msgid "Show thumbnails"
+#~ msgstr "Показывать миниатюры"
+
+#~ msgid "Your contact information"
+#~ msgstr "Ваша контактная информация"
+
+#~ msgid "Show on map"
+#~ msgstr "Показать на карте"
+
+#~ msgid "Address"
+#~ msgstr "Адрес"
+
+#~ msgid "Google maps url"
+#~ msgstr "Ссылка на гугл-карту"
+
+#~ msgid "Phone"
+#~ msgstr "Телефон"
+
+#~ msgid "Fax"
+#~ msgstr "Факс"
+
+#~ msgid "E-mail"
+#~ msgstr "Эл. почта"
+
+#~ msgid "Custom info 2"
+#~ msgstr "Доп. инфо 2"
+
+#~ msgid "Custom info 3"
+#~ msgstr "Доп. инфо 3"
+
+#~ msgid "Porfolio recent"
+#~ msgstr "Из портфолио"
+
+#~ msgid "Recent portfolio entries"
+#~ msgstr "Последние записи из портфолио"
+
+#~ msgid "Show tooltips"
+#~ msgstr "Показывать всплывающие подсказки при наведении"
+
+#~ msgid "Recent tweets"
+#~ msgstr "Последние твиты"
+
+#~ msgid "Twitter username"
+#~ msgstr "Имя пользователя в твиттере"
+
+#~ msgid "Number tweets"
+#~ msgstr "Количество твитов"
+
+#~ msgid "Left"
+#~ msgstr "Left"
+
+#~ msgid "Right"
+#~ msgstr "Right"
+
+#~ msgid "Show"
+#~ msgstr "Show"
+
+#~ msgid "Yes"
+#~ msgstr "Yes"
+
+#~ msgid "Static image"
+#~ msgstr "Static image"
