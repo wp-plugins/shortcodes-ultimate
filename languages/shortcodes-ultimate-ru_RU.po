@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-29 17:54+0300\n"
-"PO-Revision-Date: 2011-04-29 17:54+0300\n"
+"POT-Creation-Date: 2011-05-09 14:46+0300\n"
+"PO-Revision-Date: 2011-05-09 14:46+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,29 +14,29 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:157
+#: shortcodes-ultimate.php:158
 #: lib/admin.php:23
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:157
+#: shortcodes-ultimate.php:158
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:157
+#: shortcodes-ultimate.php:158
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:241
+#: shortcodes-ultimate.php:242
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:254
+#: shortcodes-ultimate.php:255
 #: lib/admin.php:57
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:259
+#: shortcodes-ultimate.php:260
 #: lib/admin.php:87
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
@@ -162,9 +162,11 @@ msgstr "Пример использования"
 #: lib/admin.php:137
 #: lib/admin.php:142
 #: lib/admin.php:147
-#: lib/admin.php:167
-#: lib/admin.php:172
+#: lib/admin.php:152
+#: lib/admin.php:157
+#: lib/admin.php:177
 #: lib/admin.php:182
+#: lib/admin.php:192
 msgid "Content"
 msgstr "Содержимое"
 
@@ -186,62 +188,67 @@ msgid "Hidden text"
 msgstr "Скрытый текст"
 
 #: lib/admin.php:126
-#: lib/admin.php:151
-#: lib/admin.php:186
+#: lib/admin.php:156
+#: lib/admin.php:161
 #: lib/admin.php:196
+#: lib/admin.php:206
 msgid "optional"
 msgstr "необяз."
 
-#: lib/admin.php:152
+#: lib/admin.php:151
+msgid "See available values"
+msgstr "Возможные значения (англ.)"
+
+#: lib/admin.php:162
 msgid "Button text"
 msgstr "Текст кнопки"
 
-#: lib/admin.php:157
+#: lib/admin.php:167
 msgid "Read more"
 msgstr "Подробнее"
 
-#: lib/admin.php:161
+#: lib/admin.php:171
 msgid "image url"
 msgstr "ссылка на изображение"
 
-#: lib/admin.php:161
+#: lib/admin.php:171
 msgid "icon size"
 msgstr "размер иконки"
 
-#: lib/admin.php:162
+#: lib/admin.php:172
 #: lib/shortcodes.php:292
 msgid "Service name"
 msgstr "Название услуги"
 
-#: lib/admin.php:162
+#: lib/admin.php:172
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: lib/admin.php:167
+#: lib/admin.php:177
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/admin.php:177
+#: lib/admin.php:187
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:181
+#: lib/admin.php:191
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:187
+#: lib/admin.php:197
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:187
+#: lib/admin.php:197
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
-#: lib/admin.php:196
+#: lib/admin.php:206
 msgid "1 second"
 msgstr "1 секунда"
 
-#: lib/admin.php:201
+#: lib/admin.php:211
 msgid "See filter IDs"
 msgstr "Смотреть ID фильтров"
 

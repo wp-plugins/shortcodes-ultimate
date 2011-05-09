@@ -146,6 +146,16 @@
 							<td>bg="#HEX"<br/>color="#HEX"</td>
 							<td>[highlight bg="#fc0" color="#000"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/highlight]</td>
 						</tr>
+						<tr class="su-new-shortcode">
+							<td>bloginfo</td>
+							<td>option<br/><a href="http://codex.wordpress.org/Function_Reference/get_bloginfo#Parameters" target="_blank"><?php _e( 'See available values', 'shortcodes-ultimate' ); ?></a></td>
+							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>permalink</td>
+							<td>p - post/page ID<br/>width<br/>target="self|blank" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/></td>
+							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
+						</tr>
 						<tr>
 							<td>button</td>
 							<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
@@ -191,12 +201,12 @@
 							<td>url<br/>width<br/>height</td>
 							<td>[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>nivo_slider</td>
 							<td>width<br/>height<br/>link="file|attachment" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>speed (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>delay (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>p - post ID (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>effect="random|boxRandom|fold|fade"</td>
 							<td>[nivo_slider]<br/>[nivo_slider width="640" height="400" link="file" effect="boxRandom"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>photoshop</td>
 							<td>image (url)<br/>width<br/>height<br/>crop="0|1"<br/>quality="0-100"<br/>sharpen="0|1"<br/>filter="%filter_id%"<br/><a href="http://www.binarymoon.co.uk/demo/timthumb-filters/" target="_blank"><?php _e( 'See filter IDs', 'shortcodes-ultimate' ); ?></a></td>
 							<td>[photoshop image="image.jpg" width="400" height="300" filter="2"]</td>

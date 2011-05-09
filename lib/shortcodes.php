@@ -486,4 +486,36 @@
 		return $return;
 	}
 
+	/**
+	 * Shortcode: permalink
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_permalink_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'p' => 1,
+				'target' => ''
+				), $atts ) );
+
+		$text = ( $content ) ? $content : get_the_title( $p );
+		$tgt = ( $target ) ? ' target="_' . $target . '"' : '';
+
+		return '<a href="' . get_permalink( $p ) . '" title="' . $text . '"' . $tgt . '>' . $text . '</a>';
+	}
+
+	/**
+	 * Shortcode: permalink
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_bloginfo_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'option' => 'name'
+				), $atts ) );
+
+		return get_bloginfo( $option );
+	}
+
 ?>
