@@ -159,7 +159,7 @@
 				'style' => 'star'
 				), $atts ) );
 
-		return '<div class="su-list su-list-style-' . $style . '">' . $content . '</div>';
+		return '<div class="su-list su-list-style-' . $style . '">' . do_shortcode( $content ) . '</div>';
 	}
 
 	/**
