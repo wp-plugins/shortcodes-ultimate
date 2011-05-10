@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-09 14:46+0300\n"
-"PO-Revision-Date: 2011-05-09 14:46+0300\n"
+"POT-Creation-Date: 2011-05-11 02:23+0300\n"
+"PO-Revision-Date: 2011-05-11 02:24+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,29 +14,29 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:158
+#: shortcodes-ultimate.php:162
 #: lib/admin.php:23
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:158
+#: shortcodes-ultimate.php:162
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:158
+#: shortcodes-ultimate.php:162
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:242
+#: shortcodes-ultimate.php:246
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:255
+#: shortcodes-ultimate.php:259
 #: lib/admin.php:57
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:260
+#: shortcodes-ultimate.php:264
 #: lib/admin.php:87
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
@@ -162,11 +162,10 @@ msgstr "Пример использования"
 #: lib/admin.php:137
 #: lib/admin.php:142
 #: lib/admin.php:147
-#: lib/admin.php:152
 #: lib/admin.php:157
 #: lib/admin.php:177
 #: lib/admin.php:182
-#: lib/admin.php:192
+#: lib/admin.php:202
 msgid "Content"
 msgstr "Содержимое"
 
@@ -179,7 +178,7 @@ msgid "Tab content"
 msgstr "Содержимое вкладки"
 
 #: lib/admin.php:122
-#: lib/shortcodes.php:78
+#: lib/shortcodes.php:82
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
@@ -190,8 +189,10 @@ msgstr "Скрытый текст"
 #: lib/admin.php:126
 #: lib/admin.php:156
 #: lib/admin.php:161
+#: lib/admin.php:191
 #: lib/admin.php:196
 #: lib/admin.php:206
+#: lib/admin.php:216
 msgid "optional"
 msgstr "необяз."
 
@@ -216,7 +217,7 @@ msgid "icon size"
 msgstr "размер иконки"
 
 #: lib/admin.php:172
-#: lib/shortcodes.php:292
+#: lib/shortcodes.php:300
 msgid "Service name"
 msgstr "Название услуги"
 
@@ -232,41 +233,48 @@ msgstr "Заголовок блока"
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:191
+#: lib/admin.php:201
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:197
+#: lib/admin.php:207
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:197
+#: lib/admin.php:207
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
-#: lib/admin.php:206
+#: lib/admin.php:216
 msgid "1 second"
 msgstr "1 секунда"
 
-#: lib/admin.php:211
+#: lib/admin.php:221
 msgid "See filter IDs"
 msgstr "Смотреть ID фильтров"
 
-#: lib/shortcodes.php:96
+#: lib/shortcodes.php:100
 msgid "Top"
 msgstr "Вверх"
 
-#: lib/shortcodes.php:310
+#: lib/shortcodes.php:318
 msgid "This is box title"
 msgstr "Заголовок блока"
 
-#: lib/shortcodes.php:359
+#: lib/shortcodes.php:367
 msgid "Please specify media url"
 msgstr "Укажите ссылку на медиа"
 
-#: lib/shortcodes.php:483
+#: lib/shortcodes.php:491
 msgid "no attached images, or only one attached image"
 msgstr "не найдены загруженные изображения, или изображение всего одно"
+
+#: lib/shortcodes.php:602
+msgid "This menu doesn't exists, or has no elements"
+msgstr "Такое меню не существует, или в нем нет ни одного элемента"
+
+#~ msgid "Specify menu name and add elements to menu"
+#~ msgstr "Укажите имя меню, или добавьте элементы в укзанное меню"
 
 #~ msgid "Support links"
 #~ msgstr "Полезные ссылки"

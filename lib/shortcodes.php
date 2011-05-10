@@ -38,6 +38,10 @@
 	 * @return string Output html
 	 */
 	function su_tabs( $atts, $content ) {
+		extract( shortcode_atts( array(
+				'style' => 1
+				), $atts ) );
+
 		$GLOBALS['tab_count'] = 0;
 
 		do_shortcode( $content );
@@ -47,7 +51,7 @@
 				$tabs[] = '<span>' . $tab['title'] . '</span>';
 				$panes[] = '<div class="su-tabs-pane">' . $tab['content'] . '</div>';
 			}
-			$return = '<div class="su-tabs"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div></div>';
+			$return = '<div class="su-tabs su-tabs-style-' . $style . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div></div>';
 		}
 		return $return;
 	}
@@ -205,6 +209,8 @@
 				'style' => 1,
 				'size' => 3,
 				'icon' => false,
+				'class' => 'su-button-class',
+				'target' => false
 				), $atts ) );
 
 		$styles = array(
@@ -262,7 +268,9 @@
 
 		$icon_image = ( $icon ) ? '<img src="' . $icon . '" alt="' . htmlspecialchars( $content ) . '" style="' . $img_style . '" /> ' : '';
 
-		return '<a href="' . $link . '" class="su-button su-button-style-' . $style . '" style="' . $link_style . '"><span style="' . $span_style . '">' . $icon_image . $content . '</span></a>';
+		$target = ( $target ) ? ' target="_' . $target . '"' : '';
+
+		return '<a href="' . $link . '" class="su-button su-button-style-' . $style . ' ' . $class . '" style="' . $link_style . '"' . $target . '><span style="' . $span_style . '">' . $icon_image . $content . '</span></a>';
 	}
 
 	/**
@@ -505,7 +513,7 @@
 	}
 
 	/**
-	 * Shortcode: permalink
+	 * Shortcode: bloginfo
 	 *
 	 * @param string $content
 	 * @return string Output html
@@ -516,6 +524,83 @@
 				), $atts ) );
 
 		return get_bloginfo( $option );
+	}
+
+	/**
+	 * Shortcode: subpages
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_subpages_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'depth' => 1
+				), $atts ) );
+
+		global $post;
+
+		$return = wp_list_pages( array(
+			'title_li' => '',
+			'echo' => 0,
+			'child_of' => get_the_ID(),
+			'depth' => $depth
+			) );
+
+		return ( $return ) ? '<ul class="su-subpages">' . $return . '</ul>' : false;
+	}
+
+	/**
+	 * Shortcode: siblings pages
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_siblings_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'depth' => 1
+				), $atts ) );
+
+		global $post;
+
+		$return = wp_list_pages( array(
+			'title_li' => '',
+			'echo' => 0,
+			'child_of' => $post->post_parent,
+			'depth' => $depth,
+			'exclude' => $post->ID
+			) );
+
+		return ( $return ) ? '<ul class="su-siblings">' . $return . '</ul>' : false;
+	}
+
+	/**
+	 * Shortcode: menu
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_menu_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'name' => 1
+				), $atts ) );
+
+		$return = wp_nav_menu( array(
+			'echo' => false,
+			'menu' => $name,
+			'container' => false,
+			'fallback_cb' => 'su_menu_shortcode_fb_cb'
+			) );
+
+		return ( $name ) ? $return : false;
+	}
+
+	/**
+	 * Fallback callback function for menu shortcode
+	 *
+	 * @return string Text message
+	 */
+	function su_menu_shortcode_fb_cb() {
+		return __( 'This menu doesn\'t exists, or has no elements', 'shortcodes-ultimate' );
 	}
 
 ?>

@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: gn_themes
 Donate link: http://ilovecode.ru/
-Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery
+Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 1.9.0
+Stable tag: 2.0.0
 
 Provides support for multiple useful shortcodes
 
@@ -12,8 +12,13 @@ Provides support for multiple useful shortcodes
 == Description ==
 
 = In this version =
-* New shortcode: permalink
-* New shortcode: bloginfo
+* New shortcode: menu
+* New shortcode: subpages
+* New shortcode: siblings
+* Some admin fixes
+* New button attribute - class
+* New button attribute - target
+* Different tabs styles (1 old + 1 new)
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 = Complete list of available shortcodes =
@@ -26,11 +31,16 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Quote
 * Pullquote
 * Highlight
+* Permalink
+* Bloginfo
 * Button
 * Fancy link
 * Service
 * Box
 * Note
+* Menu
+* Subpages
+* Siblings
 * List
 * Column
 * Table
@@ -61,14 +71,24 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 1. Heading, spoiler, tabs, quote, button.
 2. Box, note, divider (top), list.
+3. List styles.
 
 == Frequently Asked Questions ==
 
 = Complete list of supported shortcodes =
-In your dashboard
+See your dashboard
 
 
 == Changelog ==
+
+= 2.0.0 =
+* New shortcode: menu
+* New shortcode: subpages
+* New shortcode: siblings
+* Some admin fixes
+* New button attribute - class
+* New button attribute - target
+* Different tabs styles (1 old + 1 new)
 
 = 1.9.0 =
 * New shortcode: permalink

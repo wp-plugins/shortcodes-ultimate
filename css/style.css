@@ -172,13 +172,14 @@
 
 /* Tabs */
 .su-tabs { margin: 0 0 1.5em 0 }
-.su-tabs-nav {
+
+.su-tabs-style-1 .su-tabs-nav {
 	padding: 5px 5px 0 5px;
 	margin: 0;
 	height: 40px;
 	background: #e5e5e5;
 }
-.su-tabs-nav span {
+.su-tabs-style-1 .su-tabs-nav span {
 	display: block;
 	float: left;
 	padding: 0 20px;
@@ -191,13 +192,41 @@
 	border-left: 1px solid #fff;
 	background: #f1f1f1;
 }
-.su-tabs-nav span:hover { background: #fff }
-.su-tabs-nav span.su-tabs-current { background: #fff }
-.su-tabs-pane {
+.su-tabs-style-1 .su-tabs-nav span:hover { background: #fff }
+.su-tabs-style-1 .su-tabs-nav span.su-tabs-current { background: #fff }
+.su-tabs-style-1 .su-tabs-pane {
 	padding: 15px;
 	border-right: 5px solid #e5e5e5;
 	border-bottom: 5px solid #e5e5e5;
 	border-left: 5px solid #e5e5e5;
+}
+
+.su-tabs-style-2 .su-tabs-nav {
+	padding: 5px 5px 0 5px;
+	margin: 0;
+	height: 40px;
+	background: #222;
+}
+.su-tabs-style-2 .su-tabs-nav span {
+	display: block;
+	float: left;
+	padding: 0 20px;
+	height: 39px;
+	line-height: 39px;
+	margin-right: 5px;
+	cursor: pointer;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	border-left: 1px solid #fff;
+	background: #f1f1f1;
+}
+.su-tabs-style-2 .su-tabs-nav span:hover { background: #fff }
+.su-tabs-style-2 .su-tabs-nav span.su-tabs-current { background: #fff }
+.su-tabs-style-2 .su-tabs-pane {
+	padding: 15px;
+	border-right: 5px solid #222;
+	border-bottom: 5px solid #222;
+	border-left: 5px solid #222;
 }
 
 /* Lists */

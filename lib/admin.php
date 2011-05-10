@@ -111,10 +111,10 @@
 							<td>align="left|center|none|right"</td>
 							<td>[frame align="center"] &lt;img src="image.jpg" alt="" /&gt; [/frame]</td>
 						</tr>
-						<tr>
+						<tr class="su-new-shortcode">
 							<td>tabs, tab</td>
-							<td>title</td>
-							<td>[tabs] [tab title="<?php _e( 'Tab name', 'shortcodes-ultimate' ); ?>"] <?php _e( 'Tab content', 'shortcodes-ultimate' ); ?> [/tab] [/tabs]</td>
+							<td>style="1|2" (tabs)<br/>title (tab)</td>
+							<td>[tabs style="1"] [tab title="<?php _e( 'Tab name', 'shortcodes-ultimate' ); ?>"] <?php _e( 'Tab content', 'shortcodes-ultimate' ); ?> [/tab] [/tabs]</td>
 						</tr>
 						<tr>
 							<td>spoiler</td>
@@ -146,19 +146,19 @@
 							<td>bg="#HEX"<br/>color="#HEX"</td>
 							<td>[highlight bg="#fc0" color="#000"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/highlight]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>bloginfo</td>
 							<td>option<br/><a href="http://codex.wordpress.org/Function_Reference/get_bloginfo#Parameters" target="_blank"><?php _e( 'See available values', 'shortcodes-ultimate' ); ?></a></td>
+							<td>[bloginfo option="name"]<br/>[bloginfo option="ver"]</td>
+						</tr>
+						<tr>
+							<td>permalink</td>
+							<td>p - post/page ID<br/>target="self|blank" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
 						</tr>
 						<tr class="su-new-shortcode">
-							<td>permalink</td>
-							<td>p - post/page ID<br/>width<br/>target="self|blank" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/></td>
-							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
-						</tr>
-						<tr>
 							<td>button</td>
-							<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
+							<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>class (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>target="self|blank"</td>
 							<td>[button link="#" color="#b00" size="3" style="3" dark="1" square="1" icon="image.png"] <?php _e( 'Button text', 'shortcodes-ultimate' ); ?> [/button]</td>
 						</tr>
 						<tr>
@@ -185,6 +185,21 @@
 							<td>list</td>
 							<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
 							<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>menu</td>
+							<td>name</td>
+							<td>[menu name="Main menu"]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>subpages</td>
+							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
+							<td>[subpages]<br/>[subpages depth="2"]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>siblings</td>
+							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
+							<td>[siblings]<br/>[siblings depth="2"]</td>
 						</tr>
 						<tr>
 							<td>column</td>
