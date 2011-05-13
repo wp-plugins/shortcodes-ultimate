@@ -6,6 +6,11 @@
 	clear: both;
 	height: 0;
 }
+
+.su-warning {
+	color: #f03;
+}
+
 .su-onethird-column {
 	width: 40%;
 	margin: 0;

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-11 02:23+0300\n"
-"PO-Revision-Date: 2011-05-11 02:24+0300\n"
+"POT-Creation-Date: 2011-05-13 17:33+0300\n"
+"PO-Revision-Date: 2011-05-13 17:34+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,264 +14,298 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:162
-#: lib/admin.php:23
+#: shortcodes-ultimate.php:177
+#: lib/admin.php:26
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:162
+#: shortcodes-ultimate.php:177
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:162
+#: shortcodes-ultimate.php:177
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:246
+#: shortcodes-ultimate.php:263
+#: lib/admin.php:35
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:259
-#: lib/admin.php:57
+#: shortcodes-ultimate.php:276
+#: lib/admin.php:60
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:264
-#: lib/admin.php:87
+#: shortcodes-ultimate.php:281
+#: lib/admin.php:117
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
 
 #: lib/admin.php:7
+#: lib/admin.php:37
 msgid "Shortcodes"
 msgstr "Шорткоды"
 
-#: lib/admin.php:31
+#: lib/admin.php:34
 msgid "About"
 msgstr "О плагине"
 
-#: lib/admin.php:32
-msgid "General settings"
-msgstr "Основные настройки"
-
-#: lib/admin.php:33
+#: lib/admin.php:36
 msgid "Custom CSS"
 msgstr "Произвольные стили"
 
-#: lib/admin.php:34
-msgid "Available shortcodes"
-msgstr "Список шорткодов"
-
-#: lib/admin.php:37
+#: lib/admin.php:40
 msgid "For full functionality of this page it is recommended to enable JavaScript."
 msgstr "На этой странице рекомендуется включить Javascript."
 
-#: lib/admin.php:37
+#: lib/admin.php:40
 msgid "Instructions"
 msgstr "Инструкции"
 
-#: lib/admin.php:39
+#: lib/admin.php:42
 msgid "FREE Support"
 msgstr "БЕСПЛАТНАЯ поддержка"
 
-#: lib/admin.php:40
+#: lib/admin.php:43
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: lib/admin.php:41
+#: lib/admin.php:44
 msgid "Twitter"
 msgstr "Твиттер разработчика"
 
-#: lib/admin.php:42
+#: lib/admin.php:45
 msgid "Bug report"
 msgstr "Сообщить об ошибке"
 
-#: lib/admin.php:46
+#: lib/admin.php:49
 msgid "Do you love this plugin?"
 msgstr "Вам нравится этот плагин?"
 
-#: lib/admin.php:47
+#: lib/admin.php:50
 msgid "Buy author a beer"
 msgstr "Купите автору пива"
 
-#: lib/admin.php:47
+#: lib/admin.php:50
 msgid "Donate"
 msgstr "Сделать пожертвование"
 
-#: lib/admin.php:48
+#: lib/admin.php:51
 msgid "Rate this plugin at wordpress.org"
 msgstr "Оцените плагин на wordpress.org"
 
-#: lib/admin.php:48
+#: lib/admin.php:51
 msgid "5 stars"
 msgstr "5 звезд"
 
-#: lib/admin.php:49
+#: lib/admin.php:52
 msgid "Review this plugin in your blog"
 msgstr "Сделайте обзор этого плагина в своем блоге"
 
-#: lib/admin.php:56
-#: lib/admin.php:86
+#: lib/admin.php:59
+#: lib/admin.php:116
 msgid "Saving..."
 msgstr "Сохранение..."
 
-#: lib/admin.php:61
+#: lib/admin.php:64
 msgid "Disable custom formatting"
 msgstr "Отключить специальное форматирование"
 
-#: lib/admin.php:64
+#: lib/admin.php:67
 msgid "Enable this option if you have some problems with other plugins or content formatting"
 msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
 
-#: lib/admin.php:69
+#: lib/admin.php:72
 msgid "Compatibility mode"
 msgstr "Режим совместимости"
 
-#: lib/admin.php:72
+#: lib/admin.php:75
 msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
 msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
 
-#: lib/admin.php:77
+#: lib/admin.php:75
+msgid "Forum topic"
+msgstr "Тема на форуме (англ.)"
+
+#: lib/admin.php:79
+msgid "Disable scripts"
+msgstr "Отключить скрипты"
+
+#: lib/admin.php:83
+#: lib/admin.php:84
+#: lib/admin.php:85
+#: lib/admin.php:86
+#: lib/admin.php:97
+#: lib/admin.php:98
+msgid "Disable"
+msgstr "Отключить"
+
+#: lib/admin.php:89
+msgid "Check scripts, that you want to exclude form wp_head section"
+msgstr "Отметьте скрипты, которые вы хотите исключить в wp_head"
+
+#: lib/admin.php:89
+#: lib/admin.php:101
+msgid "Be careful with this settings!"
+msgstr "Будьте осторожны с этими настройками!"
+
+#: lib/admin.php:93
+msgid "Disable styles"
+msgstr "Отключить файлы стилей"
+
+#: lib/admin.php:101
+msgid "Check stylesheets, that you want to exclude form wp_head section"
+msgstr "Отметьте файлы стилей, которые вы хотите исключить в wp_head"
+
+#: lib/admin.php:107
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
-#: lib/admin.php:88
+#: lib/admin.php:118
 msgid "You can add custom styles, that will override defaults"
 msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
 
-#: lib/admin.php:89
+#: lib/admin.php:119
 msgid "See original styles"
 msgstr "Смотреть оригинальные стили"
 
-#: lib/admin.php:92
+#: lib/admin.php:122
 msgid "Save styles"
 msgstr "Сохранить стили"
 
-#: lib/admin.php:100
+#: lib/admin.php:130
 msgid "Shortcode"
 msgstr "Шорткоды"
 
-#: lib/admin.php:101
+#: lib/admin.php:131
 msgid "Parameters"
 msgstr "Параметры"
 
-#: lib/admin.php:102
+#: lib/admin.php:132
 msgid "Usage"
 msgstr "Пример использования"
 
-#: lib/admin.php:107
 #: lib/admin.php:137
-#: lib/admin.php:142
-#: lib/admin.php:147
-#: lib/admin.php:157
+#: lib/admin.php:167
+#: lib/admin.php:172
 #: lib/admin.php:177
-#: lib/admin.php:182
-#: lib/admin.php:202
+#: lib/admin.php:187
+#: lib/admin.php:207
+#: lib/admin.php:212
+#: lib/admin.php:237
 msgid "Content"
 msgstr "Содержимое"
 
-#: lib/admin.php:117
+#: lib/admin.php:147
 msgid "Tab name"
 msgstr "Имя вкладки"
 
-#: lib/admin.php:117
+#: lib/admin.php:147
 msgid "Tab content"
 msgstr "Содержимое вкладки"
 
-#: lib/admin.php:122
+#: lib/admin.php:152
 #: lib/shortcodes.php:82
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:122
+#: lib/admin.php:152
 msgid "Hidden text"
 msgstr "Скрытый текст"
 
-#: lib/admin.php:126
 #: lib/admin.php:156
-#: lib/admin.php:161
+#: lib/admin.php:186
 #: lib/admin.php:191
-#: lib/admin.php:196
-#: lib/admin.php:206
-#: lib/admin.php:216
+#: lib/admin.php:226
+#: lib/admin.php:231
+#: lib/admin.php:241
+#: lib/admin.php:251
 msgid "optional"
 msgstr "необяз."
 
-#: lib/admin.php:151
+#: lib/admin.php:181
 msgid "See available values"
 msgstr "Возможные значения (англ.)"
 
-#: lib/admin.php:162
+#: lib/admin.php:192
 msgid "Button text"
 msgstr "Текст кнопки"
 
-#: lib/admin.php:167
+#: lib/admin.php:197
 msgid "Read more"
 msgstr "Подробнее"
 
-#: lib/admin.php:171
+#: lib/admin.php:201
 msgid "image url"
 msgstr "ссылка на изображение"
 
-#: lib/admin.php:171
+#: lib/admin.php:201
 msgid "icon size"
 msgstr "размер иконки"
 
-#: lib/admin.php:172
-#: lib/shortcodes.php:300
+#: lib/admin.php:202
+#: lib/shortcodes.php:302
 msgid "Service name"
 msgstr "Название услуги"
 
-#: lib/admin.php:172
+#: lib/admin.php:202
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: lib/admin.php:177
+#: lib/admin.php:207
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/admin.php:187
+#: lib/admin.php:217
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:201
+#: lib/admin.php:236
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:207
+#: lib/admin.php:242
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:207
+#: lib/admin.php:242
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
-#: lib/admin.php:216
+#: lib/admin.php:251
 msgid "1 second"
 msgstr "1 секунда"
 
-#: lib/admin.php:221
+#: lib/admin.php:256
 msgid "See filter IDs"
 msgstr "Смотреть ID фильтров"
 
-#: lib/shortcodes.php:100
+#: lib/shortcodes.php:101
 msgid "Top"
 msgstr "Вверх"
 
-#: lib/shortcodes.php:318
+#: lib/shortcodes.php:320
 msgid "This is box title"
 msgstr "Заголовок блока"
 
-#: lib/shortcodes.php:367
+#: lib/shortcodes.php:369
 msgid "Please specify media url"
 msgstr "Укажите ссылку на медиа"
 
-#: lib/shortcodes.php:491
+#: lib/shortcodes.php:493
 msgid "no attached images, or only one attached image"
 msgstr "не найдены загруженные изображения, или изображение всего одно"
 
-#: lib/shortcodes.php:602
+#: lib/shortcodes.php:605
 msgid "This menu doesn't exists, or has no elements"
 msgstr "Такое меню не существует, или в нем нет ни одного элемента"
+
+#~ msgid "General settings"
+#~ msgstr "Основные настройки"
+
+#~ msgid "Available shortcodes"
+#~ msgstr "Список шорткодов"
 
 #~ msgid "Specify menu name and add elements to menu"
 #~ msgstr "Укажите имя меню, или добавьте элементы в укзанное меню"
@@ -551,9 +585,6 @@ msgstr "Такое меню не существует, или в нем нет �
 #~ "Вставьте полную ссылку на медиа для этого слайда. Вы можете вставить "
 #~ "ссылку на youtube, vimeo или изображение. Также поддерживаются обычные "
 #~ "видеофайлы и аудиофайлы. Подробности смотрите в документации"
-
-#~ msgid "Description"
-#~ msgstr "Описание"
 
 #~ msgid "Page description for text teaser (top of page)"
 #~ msgstr "Описание страницы для небольшого заголовка вверху страницы"

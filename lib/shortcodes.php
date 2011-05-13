@@ -79,10 +79,11 @@
 	 */
 	function su_spoiler_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-				'title' => __( 'Spoiler title', 'shortcodes-ultimate' )
+				'title' => __( 'Spoiler title', 'shortcodes-ultimate' ),
+				'style' => 0
 				), $atts ) );
 
-		return '<div class="su-spoiler su-spoiler-open"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-open su-spoiler-style-' . $style . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	/**
@@ -141,10 +142,11 @@
 	function su_column_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 				'size' => '1-2',
-				'last' => false
+				'last' => false,
+				'style' => 0
 				), $atts ) );
 
-		return ( $last ) ? '<div class="su-column su-column-' . $size . ' su-column-last">' . do_shortcode( $content ) . '</div><div class="su-spacer su-spacer-20"></div>' : '<div class="su-column su-column-' . $size . '">' . do_shortcode( $content ) . '</div>';
+		return ( $last ) ? '<div class="su-column su-column-' . $size . ' su-column-last su-column-style-' . $style . '">' . do_shortcode( $content ) . '</div><div class="su-spacer"></div>' : '<div class="su-column su-column-' . $size . ' su-column-style-' . $style . '">' . do_shortcode( $content ) . '</div>';
 	}
 
 	/**

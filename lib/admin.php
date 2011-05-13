@@ -12,8 +12,11 @@
 	 */
 	function shortcodes_ultimate_admin_page() {
 
-		$checked_formatting = ( get_option( 'su_disable_custom_formatting' ) == 'on' ) ? ' checked="checked"' : '';
-		$checked_compatibility = ( get_option( 'su_compatibility_mode' ) == 'on' ) ? ' checked="checked"' : '';
+		$checked = ' checked="checked"';
+		$disabled_formatting = ( get_option( 'su_disable_custom_formatting' ) == 'on' ) ? $checked : '';
+		$disabled_compatibility = ( get_option( 'su_compatibility_mode' ) == 'on' ) ? $checked : '';
+		$disabled_scripts = get_option( 'su_disabled_scripts' );
+		$disabled_styles = get_option( 'su_disabled_styles' );
 		?>
 
 		<!-- .wrap -->
@@ -29,9 +32,9 @@
 
 				<div id="su-tabs">
 					<a class="su-current"><span><?php _e( 'About', 'shortcodes-ultimate' ); ?></span></a>
-					<a><span><?php _e( 'General settings', 'shortcodes-ultimate' ); ?></span></a>
+					<a><span><?php _e( 'Settings', 'shortcodes-ultimate' ); ?></span></a>
 					<a><span><?php _e( 'Custom CSS', 'shortcodes-ultimate' ); ?></span></a>
-					<a><span><?php _e( 'Available shortcodes', 'shortcodes-ultimate' ); ?></span></a>
+					<a><span><?php _e( 'Shortcodes', 'shortcodes-ultimate' ); ?></span></a>
 				</div>
 				<div class="su-pane">
 					<p class="su-message su-message-error"><?php _e( 'For full functionality of this page it is recommended to enable JavaScript.', 'shortcodes-ultimate' ); ?> <a href="http://www.enable-javascript.com/" target="_blank"><?php _e( 'Instructions', 'shortcodes-ultimate' ); ?></a></p>
@@ -58,7 +61,7 @@
 						<table class="fixed">
 							<tr>
 								<td>
-									<p><label><input type="checkbox" name="su_disable_custom_formatting" <?php echo $checked_formatting; ?> /> <?php _e( 'Disable custom formatting', 'shortcodes-ultimate' ); ?></label></p>
+									<p><label><input type="checkbox" name="su_disable_custom_formatting" <?php echo $disabled_formatting; ?> /> <?php _e( 'Disable custom formatting', 'shortcodes-ultimate' ); ?></label></p>
 								</td>
 								<td>
 									<p><small><?php _e( 'Enable this option if you have some problems with other plugins or content formatting', 'shortcodes-ultimate' ); ?></small></p>
@@ -66,12 +69,39 @@
 							</tr>
 							<tr>
 								<td>
-									<p><label><input type="checkbox" name="su_compatibility_mode" <?php echo $checked_compatibility; ?> /> <?php _e( 'Compatibility mode', 'shortcodes-ultimate' ); ?></label></p>
+									<p><label><input type="checkbox" name="su_compatibility_mode" <?php echo $disabled_compatibility; ?> /> <?php _e( 'Compatibility mode', 'shortcodes-ultimate' ); ?></label></p>
 								</td>
 								<td>
-									<p><small><?php _e( 'Enable this option if you have some problems with other plugins that uses similar shortcode names', 'shortcodes-ultimate' ); ?><br/><code>[button] => [gn_button]</code></small></p>
+									<p><small><?php _e( 'Enable this option if you have some problems with other plugins that uses similar shortcode names', 'shortcodes-ultimate' ); ?><br/><code>[button] => [gn_button]</code><br/><a href="http://wordpress.org/support/topic/plugin-shortcodes-ultimate-shortcode-within-a-shortcode?replies=8#post-2081166" target="_blank"><?php _e( 'Forum topic', 'shortcodes-ultimate' ); ?></a></small></p>
 								</td>
 							</tr>
+							<tr>
+								<td colspan="2"><h4><?php _e( 'Disable scripts', 'shortcodes-ultimate' ); ?></h4></td>
+							</tr>
+							<tr>
+								<td>
+									<p><label><input type="checkbox" name="su_disabled_scripts[jquery]" <?php echo ( isset( $disabled_scripts['jquery'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> jQuery</label></p>
+									<p><label><input type="checkbox" name="su_disabled_scripts[nivo-slider]" <?php echo ( isset( $disabled_scripts['nivo-slider'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> Nivo Slider</label></p>
+									<p><label><input type="checkbox" name="su_disabled_scripts[jwplayer]" <?php echo ( isset( $disabled_scripts['jwplayer'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> JW Player</label></p>
+									<p><label><input type="checkbox" name="su_disabled_scripts[init]" <?php echo ( isset( $disabled_scripts['init'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> Init</label></p>
+								</td>
+								<td>
+									<p><small><?php _e( 'Check scripts, that you want to exclude form wp_head section', 'shortcodes-ultimate' ); ?><br/><span class="su-warning"><?php _e( 'Be careful with this settings!', 'shortcodes-ultimate' ); ?></span></small></p>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2"><h4><?php _e( 'Disable styles', 'shortcodes-ultimate' ); ?></h4></td>
+							</tr>
+							<tr>
+								<td>
+									<p><label><input type="checkbox" name="su_disabled_styles[nivo-slider]" <?php echo ( isset( $disabled_styles['nivo-slider'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> <code>nivo-slider.css</code></label></p>
+									<p><label><input type="checkbox" name="su_disabled_styles[style]" <?php echo ( isset( $disabled_styles['style'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> <code>style.css</code></label></p>
+								</td>
+								<td>
+									<p><small><?php _e( 'Check stylesheets, that you want to exclude form wp_head section', 'shortcodes-ultimate' ); ?><br/><span class="su-warning"><?php _e( 'Be careful with this settings!', 'shortcodes-ultimate' ); ?></span></small></p>
+								</td>
+							</tr>
+							<tr><td><br/></td><td><br/></td></tr>
 							<tr>
 								<td colspan="2">
 									<input type="submit" value="<?php _e( 'Save settings', 'shortcodes-ultimate' ); ?>" class="button-primary" />
@@ -111,7 +141,7 @@
 							<td>align="left|center|none|right"</td>
 							<td>[frame align="center"] &lt;img src="image.jpg" alt="" /&gt; [/frame]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>tabs, tab</td>
 							<td>style="1|2" (tabs)<br/>title (tab)</td>
 							<td>[tabs style="1"] [tab title="<?php _e( 'Tab name', 'shortcodes-ultimate' ); ?>"] <?php _e( 'Tab content', 'shortcodes-ultimate' ); ?> [/tab] [/tabs]</td>
@@ -156,7 +186,7 @@
 							<td>p - post/page ID<br/>target="self|blank" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>button</td>
 							<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>class (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>target="self|blank"</td>
 							<td>[button link="#" color="#b00" size="3" style="3" dark="1" square="1" icon="image.png"] <?php _e( 'Button text', 'shortcodes-ultimate' ); ?> [/button]</td>
@@ -186,24 +216,24 @@
 							<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
 							<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>menu</td>
 							<td>name</td>
 							<td>[menu name="Main menu"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>subpages</td>
 							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[subpages]<br/>[subpages depth="2"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>siblings</td>
 							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[siblings]<br/>[siblings depth="2"]</td>
 						</tr>
-						<tr>
+						<tr class="su-new-shortcode">
 							<td>column</td>
-							<td>size="1-2|1-3|1-4|1-5|1-6|2-3|3-4|2-5|3-5|4-5|5-6"<br/>last (<?php _e( 'add this to last columns', 'shortcodes-ultimate' ); ?>)</td>
+							<td>size="1-2|1-3|1-4|1-5|1-6|2-3|3-4|2-5|3-5|4-5|5-6"<br/>last (<?php _e( 'add this to last columns', 'shortcodes-ultimate' ); ?>)<br/>style="0|1|2|...|n"</td>
 							<td>[column size="1-2"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]<br/>[column size="1-2" last="1"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]</td>
 						</tr>
 						<tr>

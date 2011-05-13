@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.0.1
+	  Version: 2.1.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -64,15 +64,30 @@
 		// Front-end scripts and styles
 		if ( !is_admin() ) {
 
+			$disabled_scripts = get_option( 'su_disabled_scripts' );
+			$disabled_styles = get_option( 'su_disabled_styles' );
+
 			// Enqueue styles
-			wp_enqueue_style( 'nivo-slider' );
-			wp_enqueue_style( 'shortcodes-ultimate' );
+			if ( !isset( $disabled_styles['nivo-slider'] ) ) {
+				wp_enqueue_style( 'nivo-slider' );
+			}
+			if ( !isset( $disabled_styles['style'] ) ) {
+				wp_enqueue_style( 'shortcodes-ultimate' );
+			}
 
 			// Enqueue scripts
-			wp_enqueue_script( 'jquery' );
-			wp_enqueue_script( 'jwplayer' );
-			wp_enqueue_script( 'nivo-slider' );
-			wp_enqueue_script( 'shortcodes-ultimate' );
+			if ( !isset( $disabled_scripts['jquery'] ) ) {
+				wp_enqueue_script( 'jquery' );
+			}
+			if ( !isset( $disabled_scripts['jwplayer'] ) ) {
+				wp_enqueue_script( 'jwplayer' );
+			}
+			if ( !isset( $disabled_scripts['nivo-slider'] ) ) {
+				wp_enqueue_script( 'nivo-slider' );
+			}
+			if ( !isset( $disabled_scripts['init'] ) ) {
+				wp_enqueue_script( 'shortcodes-ultimate' );
+			}
 		}
 
 		// Back-end scripts and styles
@@ -216,9 +231,9 @@
 	 */
 	function su_manage_settings() {
 
-		// Insert defaults
+		// Insert default CSS
 		if ( !get_option( 'su_custom_css' ) ) {
-			$default_css = "/* Custom CSS */\n\n";
+			$default_css = '';
 			update_option( 'su_custom_css', $default_css );
 		}
 
@@ -226,6 +241,8 @@
 		if ( isset( $_POST['save'] ) && $_GET['page'] == 'shortcodes-ultimate' ) {
 			update_option( 'su_disable_custom_formatting', $_POST['su_disable_custom_formatting'] );
 			update_option( 'su_compatibility_mode', $_POST['su_compatibility_mode'] );
+			update_option( 'su_disabled_scripts', $_POST['su_disabled_scripts'] );
+			update_option( 'su_disabled_styles', $_POST['su_disabled_styles'] );
 		}
 
 		// Save custom css
