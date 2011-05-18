@@ -605,4 +605,58 @@
 		return __( 'This menu doesn\'t exists, or has no elements', 'shortcodes-ultimate' );
 	}
 
+	/**
+	 * Shortcode: document
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_document_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'width' => 600,
+				'height' => 400,
+				'file' => ''
+				), $atts ) );
+
+		return '<iframe src="http://docs.google.com/viewer?embedded=true&url=' . $file . '" width="' . $width . '" height="' . $height . '" class="su-document"></iframe>';
+	}
+
+	/**
+	 * Shortcode: members
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_members_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'style' => 1
+				), $atts ) );
+
+		if ( is_user_logged_in() && !is_null( $content ) && !is_feed() ) {
+			return do_shortcode( $content );
+		} else {
+			return '<div class="su-members su-members-style-' . $style . '"><span class="su-members-shell">' . __( 'This content is for members only.', 'shortcodes-ultimate' ) . ' <a href="' . wp_login_url() . '">' . __( 'Please login', 'shortcodes-ultimate' ) . '</a>.' . '</span></div>';
+		}
+	}
+
+	/**
+	 * Shortcode: feed
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_feed_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'url' => get_bloginfo_rss( 'rss2_url' ),
+				'limit' => 3
+				), $atts ) );
+
+		include_once( ABSPATH . WPINC . '/rss.php' );
+
+		return '<div class="su-feed">' . wp_rss( $url, $limit ) . '</div>';
+	}
+
 ?>

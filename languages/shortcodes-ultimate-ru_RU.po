@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-05-13 17:33+0300\n"
-"PO-Revision-Date: 2011-05-13 17:34+0300\n"
+"POT-Creation-Date: 2011-05-18 20:41+0300\n"
+"PO-Revision-Date: 2011-05-18 20:45+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,30 +14,30 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:177
+#: shortcodes-ultimate.php:180
 #: lib/admin.php:26
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:177
+#: shortcodes-ultimate.php:180
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:177
+#: shortcodes-ultimate.php:180
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:263
+#: shortcodes-ultimate.php:266
 #: lib/admin.php:35
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:276
+#: shortcodes-ultimate.php:279
 #: lib/admin.php:60
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:281
+#: shortcodes-ultimate.php:284
 #: lib/admin.php:117
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
@@ -191,9 +191,9 @@ msgstr "Пример использования"
 #: lib/admin.php:172
 #: lib/admin.php:177
 #: lib/admin.php:187
-#: lib/admin.php:207
 #: lib/admin.php:212
-#: lib/admin.php:237
+#: lib/admin.php:217
+#: lib/admin.php:247
 msgid "Content"
 msgstr "Содержимое"
 
@@ -217,10 +217,10 @@ msgstr "Скрытый текст"
 #: lib/admin.php:156
 #: lib/admin.php:186
 #: lib/admin.php:191
-#: lib/admin.php:226
-#: lib/admin.php:231
+#: lib/admin.php:236
 #: lib/admin.php:241
 #: lib/admin.php:251
+#: lib/admin.php:266
 msgid "optional"
 msgstr "необяз."
 
@@ -254,30 +254,34 @@ msgid "Service description"
 msgstr "Описание услуги"
 
 #: lib/admin.php:207
+msgid "Content for registered users"
+msgstr "Содержимое для залогиненых посетителей"
+
+#: lib/admin.php:212
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/admin.php:217
+#: lib/admin.php:222
 msgid "List item"
 msgstr "Элемент списка"
 
-#: lib/admin.php:236
+#: lib/admin.php:246
 msgid "add this to last columns"
 msgstr "добавьте к каждой последней колонке"
 
-#: lib/admin.php:242
+#: lib/admin.php:252
 msgid "Plain table"
 msgstr "Простая таблица"
 
-#: lib/admin.php:242
+#: lib/admin.php:252
 msgid "From CSV"
 msgstr "Из CSV-файла"
 
-#: lib/admin.php:251
+#: lib/admin.php:266
 msgid "1 second"
 msgstr "1 секунда"
 
-#: lib/admin.php:256
+#: lib/admin.php:271
 msgid "See filter IDs"
 msgstr "Смотреть ID фильтров"
 
@@ -300,6 +304,14 @@ msgstr "не найдены загруженные изображения, ил�
 #: lib/shortcodes.php:605
 msgid "This menu doesn't exists, or has no elements"
 msgstr "Такое меню не существует, или в нем нет ни одного элемента"
+
+#: lib/shortcodes.php:640
+msgid "This content is for members only."
+msgstr "Это содержимое только для участников."
+
+#: lib/shortcodes.php:640
+msgid "Please login"
+msgstr "Пожалуйста войдите"
 
 #~ msgid "General settings"
 #~ msgstr "Основные настройки"

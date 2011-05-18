@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.1.0
+	  Version: 2.2.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -133,6 +133,9 @@
 		add_shortcode( su_compatibility_mode_prefix() . 'subpages', 'su_subpages_shortcode' );
 		add_shortcode( su_compatibility_mode_prefix() . 'siblings', 'su_siblings_shortcode' );
 		add_shortcode( su_compatibility_mode_prefix() . 'menu', 'su_menu_shortcode' );
+		add_shortcode( su_compatibility_mode_prefix() . 'document', 'su_document_shortcode' );
+		add_shortcode( su_compatibility_mode_prefix() . 'members', 'su_members_shortcode' );
+		add_shortcode( su_compatibility_mode_prefix() . 'feed', 'su_feed_shortcode' );
 	}
 
 	add_action( 'init', 'su_plugin_init' );

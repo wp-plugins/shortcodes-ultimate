@@ -201,6 +201,11 @@
 							<td>title<br/>icon (<?php _e( 'image url', 'shortcodes-ultimate' ); ?>)<br/>size (<?php _e( 'icon size', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[service title="<?php _e( 'Service name', 'shortcodes-ultimate' ); ?>" icon="images/service-1.png" size="32"] <?php _e( 'Service description', 'shortcodes-ultimate' ); ?> [/service]</td>
 						</tr>
+						<tr class="su-new-shortcode">
+							<td>members</td>
+							<td>style="0|1|2"</td>
+							<td>[members] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]<br/>[members style="2"] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]</td>
+						</tr>
 						<tr>
 							<td>box</td>
 							<td>title<br/>color="#HEX"</td>
@@ -215,6 +220,11 @@
 							<td>list</td>
 							<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
 							<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>feed</td>
+							<td>url<br/>limit</td>
+							<td>[feed url="http://rss1.smashingmagazine.com/feed/" limit="5"]</td>
 						</tr>
 						<tr>
 							<td>menu</td>
@@ -231,7 +241,7 @@
 							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[siblings]<br/>[siblings depth="2"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>column</td>
 							<td>size="1-2|1-3|1-4|1-5|1-6|2-3|3-4|2-5|3-5|4-5|5-6"<br/>last (<?php _e( 'add this to last columns', 'shortcodes-ultimate' ); ?>)<br/>style="0|1|2|...|n"</td>
 							<td>[column size="1-2"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]<br/>[column size="1-2" last="1"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]</td>
@@ -245,6 +255,11 @@
 							<td>media</td>
 							<td>url<br/>width<br/>height</td>
 							<td>[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]</td>
+						</tr>
+						<tr class="su-new-shortcode">
+							<td>document</td>
+							<td>file="*.doc|*.xls|*.pdf"<br/>width<br/>height</td>
+							<td>[document file="file.doc" width="600" height="400"]</td>
 						</tr>
 						<tr>
 							<td>nivo_slider</td>
