@@ -1,15 +1,16 @@
 jQuery(document).ready(function($) {
 
 	// Code editor
-	var editor = CodeMirror.fromTextArea(document.getElementById("su-custom-css"), {});
+	var gn_custom_editor = CodeMirror.fromTextArea(document.getElementById("su-custom-css"), {});
 
 	// Tabs
-	$('.wrap .su-pane:first').show();
-	$('#su-tabs').delegate('a:not(.su-current)', 'click', function() {
-		$(this).addClass('su-current').siblings().removeClass('su-current')
-		.parents('.wrap').find('.su-pane').hide().eq($(this).index()).show();
-		editor.refresh();
-		$('.su-message').hide();
+	$('#su-wrapper .su-pane:first').show();
+	$('#su-tabs a').click(function() {
+		$('#su-tabs a').removeClass('su-current');
+		$(this).addClass('su-current');
+		$('#su-wrapper .su-pane').hide();
+		$('#su-wrapper .su-pane').eq($(this).index()).show();
+		gn_custom_editor.refresh();
 	});
 
 	// Forms

@@ -60,7 +60,7 @@
 						<p class="su-message su-message-success"><?php _e( 'Settings saved', 'shortcodes-ultimate' ); ?></p>
 						<table class="fixed">
 							<tr>
-								<td>
+								<td width="250">
 									<p><label><input type="checkbox" name="su_disable_custom_formatting" <?php echo $disabled_formatting; ?> /> <?php _e( 'Disable custom formatting', 'shortcodes-ultimate' ); ?></label></p>
 								</td>
 								<td>

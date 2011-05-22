@@ -507,21 +507,19 @@ a.nivo-prevNav {
 }
 
 /* Members */
-.su-members-style-1 {
-	border-top: 1px solid #fc9;
-	border-bottom: 1px solid #fc9;
-	background: #ffc;
+.su-members {
 	padding: 1em;
 	text-align: center;
 	margin-bottom: 1.5em;
 	color: #000;
 }
+.su-members-style-1 {
+	border-top: 1px solid #fc9;
+	border-bottom: 1px solid #fc9;
+	background: #ffc;
+}
 .su-members-style-2 {
 	border-top: 1px solid #8DC3EB;
 	border-bottom: 1px solid #8DC3EB;
 	background: #D9EEFF;
-	padding: 1em;
-	text-align: center;
-	margin-bottom: 1.5em;
-	color: #000;
 }
