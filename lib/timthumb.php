@@ -2,7 +2,7 @@
 /**
  * TimThumb script created by Ben Gillbanks, originally created by Tim McDaniels and Darren Hoyt
  * http://code.google.com/p/timthumb/
- * 
+ *
  * GNU General Public License, version 2
  * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  *
@@ -17,7 +17,7 @@ define ('VERSION', '1.19');					// version number (to force a cache refresh)
 define ('DIRECTORY_CACHE', './cache');		// cache directory
 define ('MAX_WIDTH', 1000);					// maximum image width
 define ('MAX_HEIGHT', 1000);				// maximum image height
-define ('ALLOW_EXTERNAL', FALSE);			// allow external website (override security precaution)
+define ('ALLOW_EXTERNAL', TRUE);			// allow external website (override security precaution)
 
 // external domains that are allowed to be displayed on your website
 $allowedSites = array (
@@ -289,7 +289,7 @@ if (file_exists ($src)) {
  *
  * @global <type> $quality
  * @param <type> $mime_type
- * @param <type> $image_resized 
+ * @param <type> $image_resized
  */
 function show_image ($mime_type, $image_resized) {
 
@@ -313,7 +313,7 @@ function show_image ($mime_type, $image_resized) {
  *
  * @param <type> $property
  * @param <type> $default
- * @return <type> 
+ * @return <type>
  */
 function get_request ($property, $default = 0) {
 
@@ -377,7 +377,7 @@ function clean_cache () {
     $files = glob (DIRECTORY_CACHE . '/*', GLOB_BRACE);
 
 	if (count ($files) > CACHE_SIZE) {
-		
+
         $yesterday = time () - (24 * 60 * 60);
 
         usort ($files, 'filemtime_compare');
@@ -474,7 +474,7 @@ function check_cache ($mime_type) {
 /**
  *
  * @param <type> $mime_type
- * @return <type> 
+ * @return <type>
  */
 function show_cache_file ($mime_type) {
 
@@ -563,7 +563,7 @@ function check_external ($src) {
 
 		// convert youtube video urls
 		// need to tidy up the code
-		
+
 		if ($url_info['host'] == 'www.youtube.com' || $url_info['host'] == 'youtube.com') {
 			parse_str ($url_info['query']);
 
@@ -587,7 +587,7 @@ function check_external ($src) {
 					$isAllowedSite = true;
 				}
 			}
-			
+
 		}
 
 		// if allowed

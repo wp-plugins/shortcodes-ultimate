@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, rss
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 2.2.2
+Stable tag: 2.2.3
 
 Provides support for multiple useful shortcodes
 
@@ -15,6 +15,7 @@ Provides support for multiple useful shortcodes
 * New shortcode: document
 * New shortcode: members
 * New shortcode: feed
+* New nivo slider link option
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 = Complete list of available shortcodes =
@@ -73,6 +74,7 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 2. Box, note, divider (top), list.
 3. List styles.
 
+
 == Frequently Asked Questions ==
 
 = Complete list of supported shortcodes =
@@ -81,18 +83,18 @@ See your dashboard
 
 == Changelog ==
 
-= 2.2.0 =
+= 2.2 =
 * New shortcode: document
 * New shortcode: members
 * New shortcode: feed
 
-= 2.1.0 =
+= 2.1 =
 * New option: disable any script
 * New option: disable any stylesheet
 * New attribute for column shortcode - style
 * New attribute for spoiler shortcode - style
 
-= 2.0.0 =
+= 2.0 =
 * New shortcode: menu
 * New shortcode: subpages
 * New shortcode: siblings
@@ -101,47 +103,47 @@ See your dashboard
 * New button attribute - target
 * Different tabs styles (1 old + 1 new)
 
-= 1.9.0 =
+= 1.9 =
 * New shortcode: permalink
 * New shortcode: bloginfo
 
-= 1.8.0 =
+= 1.8 =
 * Some small additions
 * Ajax admin page
 * No-js compatibility
 * Multiple tabs support
 
-= 1.7.0 =
+= 1.7 =
 * Improved settings page design
 * Added shortcode nivo_slider
 * Added shortcode photoshop
 
-= 1.6.0 =
+= 1.6 =
 * New admin panel
 * Custom CSS editor with syntax hughlight
 * Small fixes
 * Added donation forms
 
-= 1.5.0 =
+= 1.5 =
 * Added option "Compatibility mode"
 * Added new button styles
 * Added new list styles
 * Added new shortcode media
 * Added new shortcode table
 
-= 1.4.0 =
+= 1.4 =
 * Added shortcode "Fancy link"
 
-= 1.3.0 =
+= 1.3 =
 * Some fixes
 
-= 1.2.0 =
+= 1.2 =
 * Localization support
 
-= 1.1.0 =
+= 1.1 =
 * Added options page
 * Fixed options saving
 
-= 1.0.0 =
+= 1.0 =
 * Initial release
 

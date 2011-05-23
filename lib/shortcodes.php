@@ -460,12 +460,9 @@
 						});
 					});
 				</script>
-				<style type="text/css">
-				#' . $slider_id . ' {width:' . $width . 'px;height:' . $height . 'px}
-				</style>
 			';
 
-			$return .= '<div id="' . $slider_id . '" class="su-nivo-slider">';
+			$return .= '<div id="' . $slider_id . '" class="su-nivo-slider" style="width:' . $width . 'px;height:' . $height . 'px">';
 			foreach ( $attachments as $attachment ) {
 				$title = apply_filters( 'the_title', $attachment->post_title );
 				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
@@ -478,6 +475,15 @@
 				// Link to attachment page
 				elseif ( $link == 'attachment' ) {
 					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>' . "\n";
+				}
+
+				// Custom link
+				elseif ( $link == 'caption' ) {
+					if ( $attachment->post_excerpt ) {
+						$return .= '<a href="' . $attachment->post_excerpt . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>' . "\n";
+					} else {
+						$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />' . "\n";
+					}
 				}
 
 				// No link
