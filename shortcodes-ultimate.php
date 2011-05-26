@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.2.3
+	  Version: 2.2.4
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -17,7 +17,7 @@
 	 */
 	function su_plugin_init() {
 
-		// Make plugin available for tramslation
+		// Make plugin available for translation
 		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		// Load libs

@@ -232,9 +232,9 @@
 							<td>[menu name="Main menu"]</td>
 						</tr>
 						<tr>
-							<td>subpages</td>
-							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[subpages]<br/>[subpages depth="2"]</td>
+							<td class="su-new-shortcode">subpages</td>
+							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>p (child_of) (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
+							<td>[subpages]<br/>[subpages depth="2" p="122"]</td>
 						</tr>
 						<tr>
 							<td>siblings</td>
