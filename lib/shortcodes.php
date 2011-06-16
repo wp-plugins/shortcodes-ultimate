@@ -51,7 +51,7 @@
 				$tabs[] = '<span>' . $tab['title'] . '</span>';
 				$panes[] = '<div class="su-tabs-pane">' . $tab['content'] . '</div>';
 			}
-			$return = '<div class="su-tabs su-tabs-style-' . $style . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div></div>';
+			$return = '<div class="su-tabs su-tabs-style-' . $style . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div><div class="su-spacer"></div></div>';
 		}
 		return $return;
 	}

@@ -201,7 +201,7 @@
 							<td>title<br/>icon (<?php _e( 'image url', 'shortcodes-ultimate' ); ?>)<br/>size (<?php _e( 'icon size', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[service title="<?php _e( 'Service name', 'shortcodes-ultimate' ); ?>" icon="images/service-1.png" size="32"] <?php _e( 'Service description', 'shortcodes-ultimate' ); ?> [/service]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>members</td>
 							<td>style="0|1|2"</td>
 							<td>[members] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]<br/>[members style="2"] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]</td>
@@ -221,7 +221,7 @@
 							<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
 							<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>feed</td>
 							<td>url<br/>limit</td>
 							<td>[feed url="http://rss1.smashingmagazine.com/feed/" limit="5"]</td>
@@ -232,7 +232,7 @@
 							<td>[menu name="Main menu"]</td>
 						</tr>
 						<tr>
-							<td class="su-new-shortcode">subpages</td>
+							<td>subpages</td>
 							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>p (child_of) (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
 							<td>[subpages]<br/>[subpages depth="2" p="122"]</td>
 						</tr>
@@ -256,12 +256,12 @@
 							<td>url<br/>width<br/>height</td>
 							<td>[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>document</td>
 							<td>file="*.doc|*.xls|*.pdf"<br/>width<br/>height</td>
 							<td>[document file="file.doc" width="600" height="400"]</td>
 						</tr>
-						<tr class="su-new-shortcode">
+						<tr>
 							<td>nivo_slider</td>
 							<td>width<br/>height<br/>link="file|attachment|caption" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>speed (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>delay (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>p - post ID (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>effect="random|boxRandom|fold|fade"</td>
 							<td>[nivo_slider]<br/>[nivo_slider width="640" height="400" link="file" effect="boxRandom"]</td>
