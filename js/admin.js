@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 	// Tabs
 	$('#su-wrapper .su-pane:first').show();
 	$('#su-tabs a').click(function() {
+		$('.su-message').hide();
 		$('#su-tabs a').removeClass('su-current');
 		$(this).addClass('su-current');
 		$('#su-wrapper .su-pane').hide();

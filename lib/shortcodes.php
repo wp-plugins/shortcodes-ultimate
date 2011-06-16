@@ -648,7 +648,7 @@
 		if ( is_user_logged_in() && !is_null( $content ) && !is_feed() ) {
 			return do_shortcode( $content );
 		} else {
-			return '<div class="su-members su-members-style-' . $style . '"><span class="su-members-shell">' . __( 'This content is for members only.', 'shortcodes-ultimate' ) . ' <a href="' . wp_login_url() . '">' . __( 'Please login', 'shortcodes-ultimate' ) . '</a>.' . '</span></div>';
+			return '<div class="su-members su-members-style-' . $style . '"><span class="su-members-shell">' . __( 'This content is for members only.', 'shortcodes-ultimate' ) . ' <a href="' . wp_login_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Please login', 'shortcodes-ultimate' ) . '</a>.' . '</span></div>';
 		}
 	}
 
