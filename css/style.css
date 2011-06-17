@@ -235,8 +235,8 @@
 }
 .su-tabs-style-3 .su-tabs-nav span:hover { background: #f7f7f7 }
 .su-tabs-style-3 .su-tabs-nav span.su-tabs-current { background: #fff }
-.su-tabs-style-3 .su-tabs-pane { padding: 15px }
-.su-tabs-panes {
+.su-tabs-style-3 .su-tabs-pane {
+	padding: 15px;
 	float: none;
 	margin-left: 200px;
 }
