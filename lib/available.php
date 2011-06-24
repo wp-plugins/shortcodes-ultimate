@@ -636,7 +636,7 @@
 					'height' => array(
 						'values' => false,
 						'default' => '300',
-						'desc' => __( 'Width', 'shortcodes-ultimate' )
+						'desc' => __( 'Slider height', 'shortcodes-ultimate' )
 					),
 					'link' => array(
 						'values' => array(
@@ -674,8 +674,61 @@
 						'desc' => __( 'Animation effect', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[nivo_slider]<br/>[nivo_slider width="640" height="400" link="file" effect="boxRandom"]',
+				'usage' => '[nivo_slider]<br/>[nivo_slider width="600" height="300" link="file" effect="boxRandom"]',
 				'desc' => __( 'Nivo slider by attached to post images', 'shortcodes-ultimate' )
+			),
+			# jcarousel
+			'jcarousel' => array(
+				'name' => 'jCarousel',
+				'type' => 'single',
+				'atts' => array(
+					'width' => array(
+						'values' => false,
+						'default' => '600',
+						'desc' => __( 'Carousel width', 'shortcodes-ultimate' )
+					),
+					'height' => array(
+						'values' => false,
+						'default' => '130',
+						'desc' => __( 'Carousel height', 'shortcodes-ultimate' )
+					),
+					'bg' => array(
+						'values' => false,
+						'default' => '#EEEEEE',
+						'desc' => __( 'Carousel background', 'shortcodes-ultimate' )
+					),
+					'items' => array(
+						'values' => array(
+							'3',
+							'4',
+							'5'
+						),
+						'default' => '3',
+						'desc' => __( 'Number of items to show', 'shortcodes-ultimate' )
+					),
+					'link' => array(
+						'values' => array(
+							'none',
+							'file',
+							'attachment',
+							'caption'
+						),
+						'default' => 'none',
+						'desc' => __( 'Items links', 'shortcodes-ultimate' )
+					),
+					'speed' => array(
+						'values' => false,
+						'default' => '400',
+						'desc' => __( 'Animation speed (1000 = 1 second)', 'shortcodes-ultimate' )
+					),
+					'p' => array(
+						'values' => false,
+						'default' => '',
+						'desc' => __( 'Post/page ID', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[jcarousel]<br/>[jcarousel width="600" height="130" link="file" items="5" bg="#EEEEEE" speed="400"]',
+				'desc' => __( 'jCarousel by attached to post images', 'shortcodes-ultimate' )
 			)
 		);
 

@@ -84,6 +84,7 @@
 								<td>
 									<p><label><input type="checkbox" name="su_disabled_scripts[jquery]" <?php echo ( isset( $disabled_scripts['jquery'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> jQuery</label></p>
 									<p><label><input type="checkbox" name="su_disabled_scripts[nivo-slider]" <?php echo ( isset( $disabled_scripts['nivo-slider'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> Nivo Slider</label></p>
+									<p><label><input type="checkbox" name="su_disabled_scripts[jcarousel]" <?php echo ( isset( $disabled_scripts['jcarousel'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> jCarousel</label></p>
 									<p><label><input type="checkbox" name="su_disabled_scripts[jwplayer]" <?php echo ( isset( $disabled_scripts['jwplayer'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> JW Player</label></p>
 									<p><label><input type="checkbox" name="su_disabled_scripts[init]" <?php echo ( isset( $disabled_scripts['init'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> Init</label></p>
 								</td>
@@ -97,6 +98,7 @@
 							<tr>
 								<td>
 									<p><label><input type="checkbox" name="su_disabled_styles[nivo-slider]" <?php echo ( isset( $disabled_styles['nivo-slider'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> <code>nivo-slider.css</code></label></p>
+									<p><label><input type="checkbox" name="su_disabled_styles[jcarousel]" <?php echo ( isset( $disabled_styles['jcarousel'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> <code>jcarousel.css</code></label></p>
 									<p><label><input type="checkbox" name="su_disabled_styles[style]" <?php echo ( isset( $disabled_styles['style'] ) ) ? $checked : ''; ?> /> <?php _e( 'Disable', 'shortcodes-ultimate' ); ?> <code>style.css</code></label></p>
 								</td>
 								<td>
@@ -152,9 +154,7 @@
 										echo $attr_name;
 										if ( $attr['values'] ) {
 											echo '="' . implode( '|', $attr['values'] ) . '"';
-										}
-
-										elseif ( $attr['default'] ) {
+										} elseif ( $attr['default'] ) {
 											echo '="' . $attr['default'] . '"';
 										}
 										echo '<br/>';
@@ -163,9 +163,9 @@
 								</td>
 								<td><?php echo str_replace( '&lt;br/&gt;', '<br/>', htmlspecialchars( $shortcode['usage'] ) ); ?></td>
 							</tr>
-							<?php
-						}
-						?>
+			<?php
+		}
+		?>
 					</table>
 				</div>
 				<div class="su-pane">
@@ -174,16 +174,19 @@
 							<th width="100"><?php _e( 'Shortcode', 'shortcodes-ultimate' ); ?></th>
 							<th><?php _e( 'Demo', 'shortcodes-ultimate' ); ?></th>
 						</tr>
-						<?php
-						foreach ( su_shortcodes() as $id => $shortcode ) {
-							?>
+		<?php
+		foreach ( su_shortcodes() as $id => $shortcode ) {
+			?>
 							<tr>
-								<td><strong><?php echo $shortcode['name']; ?></strong></td>
+								<td>
+									<strong><?php echo $shortcode['name']; ?></strong><br/>
+									<small><?php echo $shortcode['desc']; ?></small>
+								</td>
 								<td><img src="<?php echo su_plugin_url(); ?>/images/demo/<?php echo $id; ?>.png" width="530" alt="<?php echo $shortcode['name']; ?>" /></td>
 							</tr>
-							<?php
-						}
-						?>
+			<?php
+		}
+		?>
 					</table>
 				</div>
 			</div>

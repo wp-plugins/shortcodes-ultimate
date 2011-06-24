@@ -144,13 +144,14 @@
 	display: none;
 }
 
+.su-table-demos small,
 .su-table-shortcodes small {
 	color: #aaa;
 }
 
 .su-table-demos img {
 	border: 1px solid #aaa;
-	margin-bottom: 15px;
+	margin: 10px 0;
 }
 
 .su-table-shortcodes td,

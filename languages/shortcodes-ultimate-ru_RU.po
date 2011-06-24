@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-24 03:59+0300\n"
-"PO-Revision-Date: 2011-06-24 03:59+0300\n"
+"POT-Creation-Date: 2011-06-24 15:09+0300\n"
+"PO-Revision-Date: 2011-06-24 15:10+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,31 +14,31 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:181
+#: shortcodes-ultimate.php:163
 #: lib/admin.php:26
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:181
+#: shortcodes-ultimate.php:163
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:181
+#: shortcodes-ultimate.php:163
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:267
+#: shortcodes-ultimate.php:249
 #: lib/admin.php:35
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:280
-#: lib/admin.php:61
+#: shortcodes-ultimate.php:262
+#: lib/admin.php:62
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:285
-#: lib/admin.php:120
+#: shortcodes-ultimate.php:267
+#: lib/admin.php:123
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
 
@@ -56,7 +56,7 @@ msgid "Custom CSS"
 msgstr "Произвольные стили"
 
 #: lib/admin.php:38
-#: lib/admin.php:174
+#: lib/admin.php:175
 msgid "Demo"
 msgstr "Демо"
 
@@ -108,87 +108,89 @@ msgstr "5 звезд"
 msgid "Review this plugin in your blog"
 msgstr "Сделайте обзор этого плагина в своем блоге"
 
-#: lib/admin.php:60
-#: lib/admin.php:119
+#: lib/admin.php:61
+#: lib/admin.php:122
 msgid "Saving..."
 msgstr "Сохранение..."
 
-#: lib/admin.php:65
+#: lib/admin.php:66
 msgid "Disable custom formatting"
 msgstr "Отключить специальное форматирование"
 
-#: lib/admin.php:68
+#: lib/admin.php:69
 msgid "Enable this option if you have some problems with other plugins or content formatting"
 msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
 
-#: lib/admin.php:73
+#: lib/admin.php:74
 msgid "Compatibility mode"
 msgstr "Режим совместимости"
 
-#: lib/admin.php:76
+#: lib/admin.php:77
 msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
 msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
 
-#: lib/admin.php:76
+#: lib/admin.php:77
 msgid "Forum topic"
 msgstr "Тема на форуме (англ.)"
 
-#: lib/admin.php:80
+#: lib/admin.php:81
 msgid "Disable scripts"
 msgstr "Отключить скрипты"
 
-#: lib/admin.php:84
 #: lib/admin.php:85
 #: lib/admin.php:86
 #: lib/admin.php:87
-#: lib/admin.php:98
-#: lib/admin.php:99
+#: lib/admin.php:88
+#: lib/admin.php:89
+#: lib/admin.php:100
+#: lib/admin.php:101
+#: lib/admin.php:102
 msgid "Disable"
 msgstr "Отключить"
 
-#: lib/admin.php:90
+#: lib/admin.php:92
 msgid "Check scripts, that you want to exclude form wp_head section"
 msgstr "Отметьте скрипты, которые вы хотите исключить в wp_head"
 
-#: lib/admin.php:90
-#: lib/admin.php:102
+#: lib/admin.php:92
+#: lib/admin.php:105
 msgid "Be careful with this settings!"
 msgstr "Будьте осторожны с этими настройками!"
 
-#: lib/admin.php:94
+#: lib/admin.php:96
 msgid "Disable styles"
 msgstr "Отключить файлы стилей"
 
-#: lib/admin.php:102
+#: lib/admin.php:105
 msgid "Check stylesheets, that you want to exclude form wp_head section"
 msgstr "Отметьте файлы стилей, которые вы хотите исключить в wp_head"
 
-#: lib/admin.php:108
+#: lib/admin.php:111
 msgid "Save settings"
 msgstr "Сохранить настройки"
 
-#: lib/admin.php:121
+#: lib/admin.php:124
 msgid "You can add custom styles, that will override defaults"
 msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
 
-#: lib/admin.php:122
+#: lib/admin.php:125
 msgid "See original styles"
 msgstr "Смотреть оригинальные стили"
 
-#: lib/admin.php:125
+#: lib/admin.php:128
 msgid "Save styles"
 msgstr "Сохранить стили"
 
-#: lib/admin.php:135
-#: lib/admin.php:173
+#: lib/admin.php:138
+#: lib/admin.php:174
 msgid "Shortcode"
 msgstr "Шорткоды"
 
-#: lib/admin.php:136
+#: lib/admin.php:139
 msgid "Parameters"
 msgstr "Параметры"
 
-#: lib/admin.php:137
+#: lib/admin.php:140
 msgid "Usage"
 msgstr "Пример использования"
 
@@ -288,6 +290,7 @@ msgstr "Инфо блога"
 
 #: lib/available.php:206
 #: lib/available.php:664
+#: lib/available.php:727
 msgid "Post/page ID"
 msgstr "ID записи/страницы"
 
@@ -473,7 +476,6 @@ msgstr "Ссылка на медиа"
 
 #: lib/available.php:591
 #: lib/available.php:615
-#: lib/available.php:639
 msgid "Width"
 msgstr "Ширина"
 
@@ -498,11 +500,16 @@ msgstr ".doc, .xls, .pdf просмотрщик от Google"
 msgid "Slider width"
 msgstr "Ширина слайдера"
 
+#: lib/available.php:639
+msgid "Slider height"
+msgstr "Высота слайдера"
+
 #: lib/available.php:649
 msgid "Slides links"
 msgstr "Ссылки слайдов"
 
 #: lib/available.php:654
+#: lib/available.php:722
 msgid "Animation speed (1000 = 1 second)"
 msgstr "Скорость анимации (1000 = 1 секунда)"
 
@@ -517,6 +524,30 @@ msgstr "Эффект анимации"
 #: lib/available.php:678
 msgid "Nivo slider by attached to post images"
 msgstr "Nivo slider из изображений записи"
+
+#: lib/available.php:688
+msgid "Carousel width"
+msgstr "Ширина карусели"
+
+#: lib/available.php:693
+msgid "Carousel height"
+msgstr "Высота карусели"
+
+#: lib/available.php:698
+msgid "Carousel background"
+msgstr "Фон карусели"
+
+#: lib/available.php:707
+msgid "Number of items to show"
+msgstr "Количество элементов для показа"
+
+#: lib/available.php:717
+msgid "Items links"
+msgstr "Ссылки элементов"
+
+#: lib/available.php:731
+msgid "jCarousel by attached to post images"
+msgstr "jCarousel из изображений записи"
 
 #: lib/shortcodes.php:101
 msgid "Top"
@@ -535,6 +566,7 @@ msgid "Please specify media url"
 msgstr "Укажите ссылку на медиа"
 
 #: lib/shortcodes.php:501
+#: lib/shortcodes.php:769
 msgid "no attached images, or only one attached image"
 msgstr "не найдены загруженные изображения, или изображение всего одно"
 

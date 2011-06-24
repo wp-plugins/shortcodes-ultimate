@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, rss
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: 2.3.0
+Stable tag: 2.4.0
 
 Provides support for multiple useful shortcodes
 
@@ -12,12 +12,8 @@ Provides support for multiple useful shortcodes
 == Description ==
 
 = In this version =
-* New shortcode: document
-* New shortcode: members
-* New shortcode: feed
-* New attr: link="caption" for [nivo_slider]
-* New attr: p for [subpages]
-* New tabs style (style=3)
+* New shortcode: jcarousel
+* New admin page: Demo
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 
@@ -85,6 +81,10 @@ See your dashboard
 
 
 == Changelog ==
+
+= 2.3 =
+* New shortcode: jcarousel
+* New admin page: Demo
 
 = 2.2 =
 * New shortcode: document

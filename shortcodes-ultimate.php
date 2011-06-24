@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.3.0
+	  Version: 2.4.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -49,14 +49,16 @@
 		// Register styles
 		wp_register_style( 'shortcodes-ultimate', su_plugin_url() . '/css/style.css', false, su_get_version(), 'all' );
 		wp_register_style( 'shortcodes-ultimate-admin', su_plugin_url() . '/css/admin.css', false, su_get_version(), 'all' );
-		wp_register_style( 'nivo-slider', su_plugin_url() . '/css/nivo-slider.css', false, su_get_version(), 'all' );
+		wp_register_style( 'nivo-slider', su_plugin_url() . '/css/nivoslider.css', false, su_get_version(), 'all' );
+		wp_register_style( 'jcarousel', su_plugin_url() . '/css/jcarousel.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror', su_plugin_url() . '/css/codemirror.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror-css', su_plugin_url() . '/css/codemirror-css.css', false, su_get_version(), 'all' );
 
 		// Register scripts
 		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
 		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
-		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/jquery.nivo.slider.pack.js', false, su_get_version(), false );
+		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/nivoslider.js', false, su_get_version(), false );
+		wp_register_script( 'jcarousel', su_plugin_url() . '/js/jcarousel.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror-css', su_plugin_url() . '/js/codemirror-css.js', false, su_get_version(), false );
 		wp_register_script( 'ajax-form', su_plugin_url() . '/js/jquery.form.js', false, su_get_version(), false );
@@ -72,6 +74,9 @@
 			if ( !isset( $disabled_styles['nivo-slider'] ) ) {
 				wp_enqueue_style( 'nivo-slider' );
 			}
+			if ( !isset( $disabled_styles['jcarousel'] ) ) {
+				wp_enqueue_style( 'jcarousel' );
+			}
 			if ( !isset( $disabled_styles['style'] ) ) {
 				wp_enqueue_style( 'shortcodes-ultimate' );
 			}
@@ -85,6 +90,9 @@
 			}
 			if ( !isset( $disabled_scripts['nivo-slider'] ) ) {
 				wp_enqueue_script( 'nivo-slider' );
+			}
+			if ( !isset( $disabled_scripts['jcarousel'] ) ) {
+				wp_enqueue_script( 'jcarousel' );
 			}
 			if ( !isset( $disabled_scripts['init'] ) ) {
 				wp_enqueue_script( 'shortcodes-ultimate' );
@@ -108,35 +116,9 @@
 		}
 
 		// Register shortcodes
-		add_shortcode( su_compatibility_mode_prefix() . 'heading', 'su_heading_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'frame', 'su_frame_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'tabs', 'su_tabs' );
-		add_shortcode( su_compatibility_mode_prefix() . 'tab', 'su_tab' );
-		add_shortcode( su_compatibility_mode_prefix() . 'spoiler', 'su_spoiler_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'divider', 'su_divider_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'spacer', 'su_spacer_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'quote', 'su_quote_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'pullquote', 'su_pullquote_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'highlight', 'su_highlight_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'button', 'su_button_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'fancy_link', 'su_fancy_link_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'service', 'su_service_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'box', 'su_box_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'note', 'su_note_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'list', 'su_list_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'column', 'su_column_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'media', 'su_media_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'table', 'su_table_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'photoshop', 'su_photoshop_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'nivo_slider', 'su_nivo_slider_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'permalink', 'su_permalink_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'bloginfo', 'su_bloginfo_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'subpages', 'su_subpages_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'siblings', 'su_siblings_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'menu', 'su_menu_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'document', 'su_document_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'members', 'su_members_shortcode' );
-		add_shortcode( su_compatibility_mode_prefix() . 'feed', 'su_feed_shortcode' );
+		foreach ( su_shortcodes() as $shortcode => $params ) {
+			add_shortcode( su_compatibility_mode_prefix() . $shortcode, 'su_' . $shortcode . '_shortcode' );
+		}
 	}
 
 	add_action( 'init', 'su_plugin_init' );
