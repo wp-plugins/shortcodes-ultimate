@@ -3,6 +3,7 @@
 	margin-bottom: 30px;
 }
 .su-clear {
+	display: block;
 	clear: both;
 	height: 0;
 }
@@ -131,4 +132,32 @@
 }
 .no-js .su-message-error {
 	display: block;
+}
+
+/* Save button */
+.su-submit {
+	float: left;
+}
+.su-spin {
+	padding: 4px 0 0 10px;
+	float: left;
+	display: none;
+}
+
+.su-table-shortcodes small {
+	color: #aaa;
+}
+
+.su-table-demos img {
+	border: 1px solid #aaa;
+	margin-bottom: 15px;
+}
+
+.su-table-shortcodes td,
+.su-table-demos td {
+	background: #fff !important;
+}
+.su-table-shortcodes .even td,
+.su-table-demos .even td {
+	background: #f9f9f9 !important;
 }

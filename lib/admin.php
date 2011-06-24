@@ -35,6 +35,7 @@
 					<a><span><?php _e( 'Settings', 'shortcodes-ultimate' ); ?></span></a>
 					<a><span><?php _e( 'Custom CSS', 'shortcodes-ultimate' ); ?></span></a>
 					<a><span><?php _e( 'Shortcodes', 'shortcodes-ultimate' ); ?></span></a>
+					<a><span><?php _e( 'Demo', 'shortcodes-ultimate' ); ?></span></a>
 				</div>
 				<div class="su-pane">
 					<p class="su-message su-message-error"><?php _e( 'For full functionality of this page it is recommended to enable JavaScript.', 'shortcodes-ultimate' ); ?> <a href="http://www.enable-javascript.com/" target="_blank"><?php _e( 'Instructions', 'shortcodes-ultimate' ); ?></a></p>
@@ -42,14 +43,15 @@
 						<h3><?php _e( 'FREE Support', 'shortcodes-ultimate' ); ?></h3>
 						<p><a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a></p>
 						<p><a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a></p>
-						<p><a href="http://ilovecode.ru/?p=163#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a></p>
+						<p><a href="http://ilovecode.ru/?p=122#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a></p>
 					</div>
 
 					<div class="su-twothird-column">
 						<h3><?php _e( 'Do you love this plugin?', 'shortcodes-ultimate' ); ?></h3>
-						<p><?php _e( 'Buy author a beer', 'shortcodes-ultimate' ); ?> - <a href="http://ilovecode.ru/donate/" target="_blank"><?php _e( 'Donate', 'shortcodes-ultimate' ); ?></a></p>
+						<p><?php _e( 'Buy author a beer', 'shortcodes-ultimate' ); ?> - <a href="http://ilovecode.ru/donate/" target="_blank" style="color:red"><?php _e( 'Donate', 'shortcodes-ultimate' ); ?></a></p>
 						<p><a href="http://wordpress.org/extend/plugins/shortcodes-ultimate/" target="_blank"><?php _e( 'Rate this plugin at wordpress.org', 'shortcodes-ultimate' ); ?></a> (<?php _e( '5 stars', 'shortcodes-ultimate' ); ?>)</p>
 						<p><?php _e( 'Review this plugin in your blog', 'shortcodes-ultimate' ); ?></p>
+						<p><iframe src="http://www.facebook.com/plugins/like.php?href=http://wordpress.org/extend/plugins/shortcodes-ultimate/&amp;layout=button_count&amp;show_faces=false&amp;width=130&amp;action=like&amp;colorscheme=light&amp;height=24" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:24px;" allowTransparency="true"></iframe></p>
 					</div>
 
 					<div class="su-clear"></div>
@@ -104,7 +106,9 @@
 							<tr><td><br/></td><td><br/></td></tr>
 							<tr>
 								<td colspan="2">
-									<input type="submit" value="<?php _e( 'Save settings', 'shortcodes-ultimate' ); ?>" class="button-primary" />
+									<input type="submit" value="<?php _e( 'Save settings', 'shortcodes-ultimate' ); ?>" class="button-primary su-submit" />
+									<span class="su-spin"><img src="<?php echo su_plugin_url(); ?>/images/admin/spin.gif" alt="" /></span>
+									<div class="su-clear"></div>
 									<input type="hidden" name="save" value="true" />
 								</td>
 							</tr>
@@ -119,158 +123,67 @@
 						<p><a href="<?php echo su_plugin_url(); ?>/css/style.css" target="_blank"><?php _e( 'See original styles', 'shortcodes-ultimate' ); ?></a></p>
 						<p><textarea id="su-custom-css" name="su_custom_css" rows="14" cols="90"><?php echo get_option( 'su_custom_css' ); ?></textarea></p>
 						<p>
-							<input type="submit" value="<?php _e( 'Save styles', 'shortcodes-ultimate' ); ?>" class="button-primary" />
+							<input type="submit" value="<?php _e( 'Save styles', 'shortcodes-ultimate' ); ?>" class="button-primary su-submit" />
+							<span class="su-spin"><img src="<?php echo su_plugin_url(); ?>/images/admin/spin.gif" alt="" /></span>
+							<span class="su-clear"></span>
 							<input type="hidden" name="save-css" value="true" />
 						</p>
 					</form>
 				</div>
 				<div class="su-pane">
-					<table class="widefat fixed">
+					<table class="widefat fixed su-table-shortcodes">
 						<tr>
-							<th width="100"><?php _e( 'Shortcode', 'shortcodes-ultimate' ); ?></th>
+							<th width="150"><?php _e( 'Shortcode', 'shortcodes-ultimate' ); ?></th>
 							<th width="200"><?php _e( 'Parameters', 'shortcodes-ultimate' ); ?></th>
 							<th><?php _e( 'Usage', 'shortcodes-ultimate' ); ?></th>
 						</tr>
+						<?php
+						foreach ( su_shortcodes() as $id => $shortcode ) {
+							?>
+							<tr>
+								<td>
+									<strong><?php echo $id; ?></strong><br/>
+									<small><?php echo $shortcode['desc']; ?></small>
+								</td>
+								<td>
+									<?php
+									foreach ( $shortcode['atts'] as $attr_name => $attr ) {
+										echo '<strong>' . $attr['desc'] . '</strong><br/>';
+										echo $attr_name;
+										if ( $attr['values'] ) {
+											echo '="' . implode( '|', $attr['values'] ) . '"';
+										}
+
+										elseif ( $attr['default'] ) {
+											echo '="' . $attr['default'] . '"';
+										}
+										echo '<br/>';
+									}
+									?>
+								</td>
+								<td><?php echo str_replace( '&lt;br/&gt;', '<br/>', htmlspecialchars( $shortcode['usage'] ) ); ?></td>
+							</tr>
+							<?php
+						}
+						?>
+					</table>
+				</div>
+				<div class="su-pane">
+					<table class="widefat fixed su-table-demos">
 						<tr>
-							<td>heading</td>
-							<td>&mdash;</td>
-							<td>[heading] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/heading]</td>
+							<th width="100"><?php _e( 'Shortcode', 'shortcodes-ultimate' ); ?></th>
+							<th><?php _e( 'Demo', 'shortcodes-ultimate' ); ?></th>
 						</tr>
-						<tr>
-							<td>frame</td>
-							<td>align="left|center|none|right"</td>
-							<td>[frame align="center"] &lt;img src="image.jpg" alt="" /&gt; [/frame]</td>
-						</tr>
-						<tr>
-							<td>tabs, tab</td>
-							<td>style="1|2" (tabs)<br/>title (tab)</td>
-							<td>[tabs style="1"] [tab title="<?php _e( 'Tab name', 'shortcodes-ultimate' ); ?>"] <?php _e( 'Tab content', 'shortcodes-ultimate' ); ?> [/tab] [/tabs]</td>
-						</tr>
-						<tr>
-							<td>spoiler</td>
-							<td>title</td>
-							<td>[spoiler title="<?php _e( 'Spoiler title', 'shortcodes-ultimate' ); ?>"] <?php _e( 'Hidden text', 'shortcodes-ultimate' ); ?> [/spoiler]</td>
-						</tr>
-						<tr>
-							<td>divider</td>
-							<td>top (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[divider top="1"]</td>
-						</tr>
-						<tr>
-							<td>spacer</td>
-							<td>size</td>
-							<td>[spacer size="20"]</td>
-						</tr>
-						<tr>
-							<td>quote</td>
-							<td>&mdash;</td>
-							<td>[quote] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/quote]</td>
-						</tr>
-						<tr>
-							<td>pullquote</td>
-							<td>align="left|right"</td>
-							<td>[pullquote align="left"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/pullquote]</td>
-						</tr>
-						<tr>
-							<td>highlight</td>
-							<td>bg="#HEX"<br/>color="#HEX"</td>
-							<td>[highlight bg="#fc0" color="#000"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/highlight]</td>
-						</tr>
-						<tr>
-							<td>bloginfo</td>
-							<td>option<br/><a href="http://codex.wordpress.org/Function_Reference/get_bloginfo#Parameters" target="_blank"><?php _e( 'See available values', 'shortcodes-ultimate' ); ?></a></td>
-							<td>[bloginfo option="name"]<br/>[bloginfo option="ver"]</td>
-						</tr>
-						<tr>
-							<td>permalink</td>
-							<td>p - post/page ID<br/>target="self|blank" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[permalink p=52]<br/>[permalink p="52" target="blank"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/permalink]</td>
-						</tr>
-						<tr>
-							<td>button</td>
-							<td>link<br/>color="#HEX"<br/>size="1-12"<br/>style="1|2|3|4"<br/>dark (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>square (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>icon (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>class (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>target="self|blank"</td>
-							<td>[button link="#" color="#b00" size="3" style="3" dark="1" square="1" icon="image.png"] <?php _e( 'Button text', 'shortcodes-ultimate' ); ?> [/button]</td>
-						</tr>
-						<tr>
-							<td>fancy_link</td>
-							<td>color="black|white"<br/>link</td>
-							<td>[fancy_link color="black" link="http://example.com/"] <?php _e( 'Read more', 'shortcodes-ultimate' ); ?> [/fancy_link]</td>
-						</tr>
-						<tr>
-							<td>service</td>
-							<td>title<br/>icon (<?php _e( 'image url', 'shortcodes-ultimate' ); ?>)<br/>size (<?php _e( 'icon size', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[service title="<?php _e( 'Service name', 'shortcodes-ultimate' ); ?>" icon="images/service-1.png" size="32"] <?php _e( 'Service description', 'shortcodes-ultimate' ); ?> [/service]</td>
-						</tr>
-						<tr>
-							<td>members</td>
-							<td>style="0|1|2"</td>
-							<td>[members] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]<br/>[members style="2"] <?php _e( 'Content for registered users', 'shortcodes-ultimate' ); ?> [/members]</td>
-						</tr>
-						<tr>
-							<td>box</td>
-							<td>title<br/>color="#HEX"</td>
-							<td>[box title="<?php _e( 'Box title', 'shortcodes-ultimate' ); ?>" color="#f00"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/box]</td>
-						</tr>
-						<tr>
-							<td>note</td>
-							<td>color="#HEX"</td>
-							<td>[note color="#D1F26D"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/note]</td>
-						</tr>
-						<tr>
-							<td>list</td>
-							<td>style="star|arrow|check|cross|thumbs|link|gear|time|note|plus|guard|event|idea|settings|twitter"</td>
-							<td>[list style="check"] &lt;ul&gt; &lt;li&gt; <?php _e( 'List item', 'shortcodes-ultimate' ); ?> &lt;/li&gt; &lt;/ul&gt; [/list]</td>
-						</tr>
-						<tr>
-							<td>feed</td>
-							<td>url<br/>limit</td>
-							<td>[feed url="http://rss1.smashingmagazine.com/feed/" limit="5"]</td>
-						</tr>
-						<tr>
-							<td>menu</td>
-							<td>name</td>
-							<td>[menu name="Main menu"]</td>
-						</tr>
-						<tr>
-							<td>subpages</td>
-							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>p (child_of) (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[subpages]<br/>[subpages depth="2" p="122"]</td>
-						</tr>
-						<tr>
-							<td>siblings</td>
-							<td>depth (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td>[siblings]<br/>[siblings depth="2"]</td>
-						</tr>
-						<tr>
-							<td>column</td>
-							<td>size="1-2|1-3|1-4|1-5|1-6|2-3|3-4|2-5|3-5|4-5|5-6"<br/>last (<?php _e( 'add this to last columns', 'shortcodes-ultimate' ); ?>)<br/>style="0|1|2|...|n"</td>
-							<td>[column size="1-2"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]<br/>[column size="1-2" last="1"] <?php _e( 'Content', 'shortcodes-ultimate' ); ?> [/column]</td>
-						</tr>
-						<tr>
-							<td>table</td>
-							<td>style="1|2|3"<br/>file (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)</td>
-							<td><p><strong><?php _e( 'Plain table', 'shortcodes-ultimate' ); ?></strong><br/>[table style="1"] &lt;table&gt; &hellip; &lt;table&gt; [/table]</p><p><strong><?php _e( 'From CSV', 'shortcodes-ultimate' ); ?></strong><br/>[table style="1" file="http://example.com/file.csv"]  [/table]</p></td>
-						</tr>
-						<tr>
-							<td>media</td>
-							<td>url<br/>width<br/>height</td>
-							<td>[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]</td>
-						</tr>
-						<tr>
-							<td>document</td>
-							<td>file="*.doc|*.xls|*.pdf"<br/>width<br/>height</td>
-							<td>[document file="file.doc" width="600" height="400"]</td>
-						</tr>
-						<tr>
-							<td>nivo_slider</td>
-							<td>width<br/>height<br/>link="file|attachment|caption" (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>speed (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>delay (1000 = <?php _e( '1 second', 'shortcodes-ultimate' ); ?>)<br/>p - post ID (<?php _e( 'optional', 'shortcodes-ultimate' ); ?>)<br/>effect="random|boxRandom|fold|fade"</td>
-							<td>[nivo_slider]<br/>[nivo_slider width="640" height="400" link="file" effect="boxRandom"]</td>
-						</tr>
-						<tr>
-							<td>photoshop</td>
-							<td>image (url)<br/>width<br/>height<br/>crop="0|1"<br/>quality="0-100"<br/>sharpen="0|1"<br/>filter="%filter_id%"<br/><a href="http://www.binarymoon.co.uk/demo/timthumb-filters/" target="_blank"><?php _e( 'See filter IDs', 'shortcodes-ultimate' ); ?></a></td>
-							<td>[photoshop image="image.jpg" width="400" height="300" filter="2"]</td>
-						</tr>
+						<?php
+						foreach ( su_shortcodes() as $id => $shortcode ) {
+							?>
+							<tr>
+								<td><strong><?php echo $shortcode['name']; ?></strong></td>
+								<td><img src="<?php echo su_plugin_url(); ?>/images/demo/<?php echo $id; ?>.png" width="530" alt="<?php echo $shortcode['name']; ?>" /></td>
+							</tr>
+							<?php
+						}
+						?>
 					</table>
 				</div>
 			</div>

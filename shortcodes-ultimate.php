@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.2.7
+	  Version: 2.3.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -21,6 +21,7 @@
 		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		// Load libs
+		require_once( dirname( __FILE__ ) . '/lib/available.php' );
 		require_once( dirname( __FILE__ ) . '/lib/admin.php' );
 		require_once( dirname( __FILE__ ) . '/lib/color.php' );
 		require_once( dirname( __FILE__ ) . '/lib/csv.php' );
