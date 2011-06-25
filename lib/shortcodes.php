@@ -726,7 +726,7 @@
 				</script>
 			';
 
-			$return .= '<div class="su-carousel" style="width:' . $width . 'px;height:' . $height . 'px;background-color:' . $bg . '"><div class="su-carousel-shell"><ul id="' . $carousel_id . '">';
+			$return .= '<div class="su-jcarousel" style="width:' . $width . 'px;height:' . $height . 'px;background-color:' . $bg . '"><div class="su-jcarousel-shell"><ul id="' . $carousel_id . '">';
 
 			foreach ( $attachments as $attachment ) {
 
@@ -737,26 +737,26 @@
 
 				// Link to file
 				if ( $link == 'file' ) {
-					$return .= '<a href="' . $image[0] . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
+					$return .= '<a href="' . $image[0] . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
 				}
 
 				// Link to attachment page
 				elseif ( $link == 'attachment' ) {
-					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
+					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
 				}
 
 				// Custom link
 				elseif ( $link == 'caption' ) {
 					if ( $attachment->post_excerpt ) {
-						$return .= '<a href="' . $attachment->post_excerpt . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
+						$return .= '<a href="' . $attachment->post_excerpt . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
 					} else {
-						$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />';
+						$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" />';
 					}
 				}
 
 				// No link
 				else {
-					$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />';
+					$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" />';
 				}
 
 				$return .= '</li>';
