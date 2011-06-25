@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.5.1
+	  Version: 2.5.2
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
