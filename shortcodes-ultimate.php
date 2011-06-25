@@ -3,7 +3,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.5.0
+	  Version: 2.5.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -98,17 +98,17 @@
 				wp_enqueue_script( 'shortcodes-ultimate' );
 			}
 
-			// Custom theme CSS
-			$custom_theme_css_location[] = get_template_directory_uri() . '/shortcodes-ultimate.css';
-			$custom_theme_css_location[] = get_template_directory_uri() . '/css/shortcodes-ultimate.css';
-
-			if ( @fopen( $custom_theme_css_location['0'], 'r' ) ) {
-				wp_register_style( 'shortcodes-ultimate-theme-css', $custom_theme_css_location['0'], false, su_get_version(), 'all' );
-				wp_enqueue_style( 'shortcodes-ultimate-theme-css' );
-			} elseif ( @fopen( $custom_theme_css_location['1'], 'r' ) ) {
-				wp_register_style( 'shortcodes-ultimate-theme-css', $custom_theme_css_location['1'], false, su_get_version(), 'all' );
-				wp_enqueue_style( 'shortcodes-ultimate-theme-css' );
-			}
+//			// Custom theme CSS
+//			$custom_theme_css_location[] = get_template_directory_uri() . '/shortcodes-ultimate.css';
+//			$custom_theme_css_location[] = get_template_directory_uri() . '/css/shortcodes-ultimate.css';
+//
+//			if ( @fopen( $custom_theme_css_location['0'], 'r' ) ) {
+//				wp_register_style( 'shortcodes-ultimate-theme-css', $custom_theme_css_location['0'], false, su_get_version(), 'all' );
+//				wp_enqueue_style( 'shortcodes-ultimate-theme-css' );
+//			} elseif ( @fopen( $custom_theme_css_location['1'], 'r' ) ) {
+//				wp_register_style( 'shortcodes-ultimate-theme-css', $custom_theme_css_location['1'], false, su_get_version(), 'all' );
+//				wp_enqueue_style( 'shortcodes-ultimate-theme-css' );
+//			}
 		}
 
 		// Back-end scripts and styles
