@@ -683,6 +683,7 @@
 				'height' => 130,
 				'link' => false,
 				'items' => 3,
+				'margin' => 10,
 				'speed' => 400,
 				'bg' => '#eee',
 				'p' => false
@@ -710,7 +711,7 @@
 			$width = $width - 80;
 			$height = $height - 30;
 
-			$item_width = round( ( $width - ( ( $items - 1 ) * 10 ) ) / $items );
+			$item_width = round( ( $width - ( ( $items - 1 ) * $margin ) ) / $items );
 
 			$return = '
 				<script type="text/javascript">
@@ -718,7 +719,7 @@
 						jQuery("#' . $carousel_id . '").jcarousel({
 							auto: 2,
 							scroll: 1,
-							wrap: "circular",
+							wrap: "last",
 							animation: ' . $speed . ',
 							initCallback: mycarousel_initCallback
 						 });
@@ -733,7 +734,7 @@
 				$title = apply_filters( 'the_title', $attachment->post_title );
 				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
 
-				$return .= '<li style="width:' . $item_width . 'px;height:' . $height . 'px">';
+				$return .= '<li style="width:' . $item_width . 'px;height:' . $height . 'px;margin-right:' . $margin . 'px">';
 
 				// Link to file
 				if ( $link == 'file' ) {
@@ -756,7 +757,7 @@
 
 				// No link
 				else {
-					$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" />';
+					$return .= '<a><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
 				}
 
 				$return .= '</li>';

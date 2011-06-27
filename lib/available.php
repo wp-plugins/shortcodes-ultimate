@@ -706,6 +706,15 @@
 						'default' => '3',
 						'desc' => __( 'Number of items to show', 'shortcodes-ultimate' )
 					),
+					'margin' => array(
+						'values' => array(
+							'5',
+							'10',
+							'15'
+						),
+						'default' => '10',
+						'desc' => __( 'Space between items in pixels', 'shortcodes-ultimate' )
+					),
 					'link' => array(
 						'values' => array(
 							'none',
