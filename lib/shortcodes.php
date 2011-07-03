@@ -242,7 +242,6 @@
 			'height' => $styles['size'] . 'px',
 			'line-height' => $styles['size'] . 'px',
 			'border-top' => '1px solid ' . $styles['light_color'],
-			'text-transform' => 'uppercase',
 			'border-radius' => $styles['border_radius'] . 'px',
 			'text-shadow' => $styles['text_shadow_position'] . ' 0 ' . $styles['text_shadow'],
 			'-moz-border-radius' => $styles['border_radius'] . 'px',
