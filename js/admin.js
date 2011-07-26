@@ -21,47 +21,22 @@ jQuery(document).ready(function($) {
 	$('#su-form-save-settings').ajaxForm({
 		beforeSubmit: function() {
 			$('#su-form-save-settings .su-spin').show();
-			$('#su-form-save-settings .su-submit').attr('disabled', 'disabled');
+			$('#su-form-save-settings .su-submit').attr('disabled', true);
 		},
 		success: function() {
 			$('#su-form-save-settings .su-spin').hide();
-			$('#su-form-save-settings .su-submit').attr('disabled', '');
+			$('#su-form-save-settings .su-submit').attr('disabled', false);
 		}
 	});
 
 	$('#su-form-save-custom-css').ajaxForm({
 		beforeSubmit: function() {
 			$('#su-form-save-custom-css .su-spin').show();
-			$('#su-form-save-custom-css .su-submit').attr('disabled', 'disabled');
+			$('#su-form-save-custom-css .su-submit').attr('disabled', true);
 		},
 		success: function() {
 			$('#su-form-save-custom-css .su-spin').hide();
-			$('#su-form-save-custom-css .su-submit').attr('disabled', '');
+			$('#su-form-save-custom-css .su-submit').attr('disabled', false);
 		}
 	});
-
-	// Forms
-//	$('#su-form-save-settings').ajaxForm({
-//		beforeSubmit: function() {
-//			$('#su-form-save-settings .su-message-success').hide();
-//			$('#su-form-save-settings .su-message-loading').slideDown(200);
-//		},
-//		success: function() {
-//			$('#su-form-save-settings .su-message-success, #su-form-save-settings .su-message-loading').fadeOut(200);
-//			$('#su-form-save-settings .su-message-success').fadeIn(200);
-//			setTimeout('jQuery("#su-form-save-settings .su-message-success").slideUp(100)', 2000);
-//		}
-//	});
-
-//	$('#su-form-save-custom-css').ajaxForm({
-//		beforeSubmit: function() {
-//			$('#su-form-save-custom-css .su-message-success').hide();
-//			$('#su-form-save-custom-css .su-message-loading').slideDown(200);
-//		},
-//		success: function() {
-//			$('#su-form-save-custom-css .su-message-success, #su-form-save-custom-css .su-message-loading').fadeOut(200);
-//			$('#su-form-save-custom-css .su-message-success').fadeIn(200);
-//			setTimeout('jQuery("#su-form-save-custom-css .su-message-success").slideUp(100)', 2000);
-//		}
-//	});
 });

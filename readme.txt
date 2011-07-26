@@ -3,8 +3,8 @@ Contributors: gn_themes
 Donate link: http://ilovecode.ru/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
-Tested up to: 3.2
-Stable tag: 2.5.5
+Tested up to: 3.2.9
+Stable tag: 2.6.0
 
 Provides support for multiple useful shortcodes
 
@@ -44,9 +44,13 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Feed
 * Document
 
-Bug report / contact author: http://ilovecode.ru/?p=122
+= Have a bug? =
+Forum - http://wordpress.org/tags/shortcodes-ultimate?forum_id=10
+Author blog - http://ilovecode.ru/?p=122
+Twitter: http://twitter.com/gn_themes
 
-My twitter: http://twitter.com/gn_themes
+= Thanks for translations =
+French translation - Aurélien DENIS [ http://wpchannel.com/ ]
 
 Have a translation? Contact me - ano.vladimir@gmail.com
 
