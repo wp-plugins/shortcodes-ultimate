@@ -399,6 +399,14 @@
 				'usage' => '[note color="#FFCC00"] Content [/note]',
 				'desc' => __( 'Colored box', 'shortcodes-ultimate' )
 			),
+			# private
+			'private' => array(
+				'name' => 'Private',
+				'type' => 'wrap',
+				'atts' => array( ),
+				'usage' => '[private] Private content [/private]',
+				'desc' => __( 'Private note for post authors', 'shortcodes-ultimate' )
+			),
 			# list
 			'list' => array(
 				'name' => 'List',
@@ -622,6 +630,30 @@
 				),
 				'usage' => '[document file="file.doc" width="600" height="400"]',
 				'desc' => __( '.doc, .xls, .pdf viewer by Google', 'shortcodes-ultimate' )
+			),
+			# gmap
+			'gmap' => array(
+				'name' => 'Gmap',
+				'type' => 'single',
+				'atts' => array(
+					'width' => array(
+						'values' => false,
+						'default' => '600',
+						'desc' => __( 'Width', 'shortcodes-ultimate' )
+					),
+					'height' => array(
+						'values' => false,
+						'default' => '400',
+						'desc' => __( 'Height', 'shortcodes-ultimate' )
+					),
+					'address' => array(
+						'values' => false,
+						'default' => '',
+						'desc' => __( 'Marker address', 'shortcodes-ultimate' )
+					),
+				),
+				'usage' => '[gmap width="600" height="400" address="Russia, Moscow"]',
+				'desc' => __( 'Maps by Google', 'shortcodes-ultimate' )
 			),
 			# nivo_slider
 			'nivo_slider' => array(

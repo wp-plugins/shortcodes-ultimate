@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-24 15:09+0300\n"
-"PO-Revision-Date: 2011-06-24 15:10+0300\n"
+"POT-Creation-Date: 2011-08-03 01:33+0300\n"
+"PO-Revision-Date: 2011-08-03 01:34+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -289,8 +289,8 @@ msgid "Blog info"
 msgstr "Инфо блога"
 
 #: lib/available.php:206
-#: lib/available.php:664
-#: lib/available.php:727
+#: lib/available.php:696
+#: lib/available.php:768
 msgid "Post/page ID"
 msgstr "ID записи/страницы"
 
@@ -400,152 +400,170 @@ msgstr "Цвет блока"
 msgid "Colored box"
 msgstr "Цветной блок"
 
-#: lib/available.php:426
+#: lib/available.php:408
+msgid "Private note for post authors"
+msgstr "Приватный текст для других авторов"
+
+#: lib/available.php:434
 msgid "List style"
 msgstr "Стиль списка"
 
-#: lib/available.php:430
+#: lib/available.php:438
 msgid "Styled unordered list"
 msgstr "Стильный неупорядоченный список"
 
-#: lib/available.php:440
+#: lib/available.php:448
 msgid "Feed URL"
 msgstr "URL ленты"
 
-#: lib/available.php:451
+#: lib/available.php:459
 msgid "Number of item to show"
 msgstr "Количество элементов для показа"
 
-#: lib/available.php:455
+#: lib/available.php:463
 msgid "Feed grabber"
 msgstr "Граббер новостных лент"
 
-#: lib/available.php:465
+#: lib/available.php:473
 msgid "Custom menu name"
 msgstr "Имя произвольного меню"
 
-#: lib/available.php:469
+#: lib/available.php:477
 msgid "Custom menu by name"
 msgstr "Произвольное меню"
 
-#: lib/available.php:483
-#: lib/available.php:506
+#: lib/available.php:491
+#: lib/available.php:514
 msgid "Depth level"
 msgstr "Глубина"
 
-#: lib/available.php:488
+#: lib/available.php:496
 msgid "Parent page ID"
 msgstr "ID родительской страницы"
 
-#: lib/available.php:492
-#: lib/available.php:510
+#: lib/available.php:500
+#: lib/available.php:518
 msgid "Page childrens"
 msgstr "Потомки страницы"
 
-#: lib/available.php:532
+#: lib/available.php:540
 msgid "Column width"
 msgstr "Ширина колонки"
 
-#: lib/available.php:540
+#: lib/available.php:548
 msgid "For last columns"
 msgstr "Для последних колонок"
 
-#: lib/available.php:549
+#: lib/available.php:557
 msgid "You can define custom styles for each columns set"
 msgstr "Вы можете определить особые стили для каждого набора колонок"
 
-#: lib/available.php:553
+#: lib/available.php:561
 msgid "Flexible columns"
 msgstr "Резновые колонки"
 
-#: lib/available.php:567
+#: lib/available.php:575
 msgid "Table style"
 msgstr "Стиль таблицы"
 
-#: lib/available.php:572
+#: lib/available.php:580
 msgid "Create table from CSV"
 msgstr "Создание таблицы из CSV файла"
 
-#: lib/available.php:576
+#: lib/available.php:584
 msgid "Styled table from HTML or CSV file"
 msgstr "Стильная таблица из HTML или CSV файла"
 
-#: lib/available.php:586
+#: lib/available.php:594
 msgid "Media URL"
 msgstr "Ссылка на медиа"
 
-#: lib/available.php:591
-#: lib/available.php:615
+#: lib/available.php:599
+#: lib/available.php:623
+#: lib/available.php:642
 msgid "Width"
 msgstr "Ширина"
 
-#: lib/available.php:596
-#: lib/available.php:620
+#: lib/available.php:604
+#: lib/available.php:628
+#: lib/available.php:647
 msgid "Height"
 msgstr "Высота"
 
-#: lib/available.php:600
+#: lib/available.php:608
 msgid "YouTube video, Vimeo video, .mp4/.flv video, .mp3 file or images"
 msgstr "YouTube видео, Vimeo видео, .mp4/.flv видео, .mp3 файл или изображения"
 
-#: lib/available.php:610
+#: lib/available.php:618
 msgid "Document URL"
 msgstr "Ссылка на документ"
 
-#: lib/available.php:624
+#: lib/available.php:632
 msgid ".doc, .xls, .pdf viewer by Google"
 msgstr ".doc, .xls, .pdf просмотрщик от Google"
 
-#: lib/available.php:634
+#: lib/available.php:652
+msgid "Marker address"
+msgstr "Адрес маркера"
+
+#: lib/available.php:656
+msgid "Maps by Google"
+msgstr "Карты от Google"
+
+#: lib/available.php:666
 msgid "Slider width"
 msgstr "Ширина слайдера"
 
-#: lib/available.php:639
+#: lib/available.php:671
 msgid "Slider height"
 msgstr "Высота слайдера"
 
-#: lib/available.php:649
+#: lib/available.php:681
 msgid "Slides links"
 msgstr "Ссылки слайдов"
 
-#: lib/available.php:654
-#: lib/available.php:722
+#: lib/available.php:686
+#: lib/available.php:763
 msgid "Animation speed (1000 = 1 second)"
 msgstr "Скорость анимации (1000 = 1 секунда)"
 
-#: lib/available.php:659
+#: lib/available.php:691
 msgid "Animation delay (1000 = 1 second)"
 msgstr "Задержка анимации (1000 = 1 секунда)"
 
-#: lib/available.php:674
+#: lib/available.php:706
 msgid "Animation effect"
 msgstr "Эффект анимации"
 
-#: lib/available.php:678
+#: lib/available.php:710
 msgid "Nivo slider by attached to post images"
 msgstr "Nivo slider из изображений записи"
 
-#: lib/available.php:688
+#: lib/available.php:720
 msgid "Carousel width"
 msgstr "Ширина карусели"
 
-#: lib/available.php:693
+#: lib/available.php:725
 msgid "Carousel height"
 msgstr "Высота карусели"
 
-#: lib/available.php:698
+#: lib/available.php:730
 msgid "Carousel background"
 msgstr "Фон карусели"
 
-#: lib/available.php:707
+#: lib/available.php:739
 msgid "Number of items to show"
 msgstr "Количество элементов для показа"
 
-#: lib/available.php:717
+#: lib/available.php:748
+msgid "Space between items in pixels"
+msgstr "Расстояние между элементами в пикселях"
+
+#: lib/available.php:758
 msgid "Items links"
 msgstr "Ссылки элементов"
 
-#: lib/available.php:731
+#: lib/available.php:772
 msgid "jCarousel by attached to post images"
 msgstr "jCarousel из изображений записи"
 
@@ -553,32 +571,32 @@ msgstr "jCarousel из изображений записи"
 msgid "Top"
 msgstr "Вверх"
 
-#: lib/shortcodes.php:302
+#: lib/shortcodes.php:301
 msgid "Service name"
 msgstr "Название услуги"
 
-#: lib/shortcodes.php:320
+#: lib/shortcodes.php:319
 msgid "This is box title"
 msgstr "Заголовок блока"
 
-#: lib/shortcodes.php:369
+#: lib/shortcodes.php:381
 msgid "Please specify media url"
 msgstr "Укажите ссылку на медиа"
 
-#: lib/shortcodes.php:501
-#: lib/shortcodes.php:769
+#: lib/shortcodes.php:513
+#: lib/shortcodes.php:799
 msgid "no attached images, or only one attached image"
 msgstr "не найдены загруженные изображения, или изображение всего одно"
 
-#: lib/shortcodes.php:616
+#: lib/shortcodes.php:628
 msgid "This menu doesn't exists, or has no elements"
 msgstr "Такое меню не существует, или в нем нет ни одного элемента"
 
-#: lib/shortcodes.php:651
+#: lib/shortcodes.php:680
 msgid "This content is for members only."
 msgstr "Это содержимое только для участников."
 
-#: lib/shortcodes.php:651
+#: lib/shortcodes.php:680
 msgid "Please login"
 msgstr "Пожалуйста войдите"
 

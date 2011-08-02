@@ -351,6 +351,19 @@
 	}
 
 	/**
+	 * Shortcode: private
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_private_shortcode( $atts = null, $content = null ) {
+
+		if ( current_user_can( 'publish_posts' ) )
+			return '<div class="su-private"><div class="su-private-shell">' . do_shortcode( $content ) . '</div></div>';
+	}
+
+	/**
 	 * Shortcode: media
 	 *
 	 * @param array $atts Shortcode attributes
@@ -633,6 +646,23 @@
 	}
 
 	/**
+	 * Shortcode: gmap
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_gmap_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'width' => 600,
+				'height' => 400,
+				'address' => 'Russia, Moscow'
+				), $atts ) );
+
+		return '<iframe width="' . $width . '" height="' . $height . '" src="http://maps.google.com/maps?q=' . urlencode( $address ) . '&amp;output=embed" class="su-gmap"></iframe>';
+	}
+
+	/**
 	 * Shortcode: members
 	 *
 	 * @param array $atts Shortcode attributes
@@ -771,4 +801,5 @@
 
 		return $return;
 	}
+
 ?>

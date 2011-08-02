@@ -298,6 +298,17 @@
 	padding: 15px;
 }
 
+/* Private */
+.su-private {
+	margin: 0 0 1.5em 0;
+}
+
+/* Gmap */
+.su-gmap {
+	margin: 0 0 1.5em 0;
+	border: none;
+}
+
 /* Highlight */
 .su-highlight {
 	display: inline;
