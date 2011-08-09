@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.2.9
-Stable tag: 2.7.0
+Stable tag: 3.0.0
 
 Provides support for multiple useful shortcodes
 
@@ -13,44 +13,18 @@ Provides support for multiple useful shortcodes
 
 With this plugin you can easily add buttons, dividers, spacers, boxes, notes and much more
 
-= Complete list of available shortcodes =
-* Heading
-* Frame
-* Tabs
-* Spoiler
-* Divider
-* Spacer
-* Quote
-* Pullquote
-* Highlight
-* Permalink
-* Bloginfo
-* Button
-* Fancy link
-* Service
-* Box
-* Note
-* Menu
-* Subpages
-* Siblings
-* List
-* Column
-* Table
-* Media
-* Members
-* Nivo slider
-* jCarousel
-* Photoshop
-* Feed
-* Document
+= In new version (3.0) =
+* New shortcode: private - private notes for editors
+* Patched and secure timthumb.php
+* Long-awaited button for WYSIWIG editor (search it near Upload/Insert buttons) (beta feature)
 
-= Have a bug? =
+= Bug? =
 Forum - http://wordpress.org/tags/shortcodes-ultimate?forum_id=10
 Author blog - http://ilovecode.ru/?p=122
 Twitter: http://twitter.com/gn_themes
 
 = Thanks for translations =
-French translation - Aurélien DENIS [ http://wpchannel.com/ ]
+Fr - Aurélien DENIS [ http://wpchannel.com/ ]
 
 Have a translation? Contact me - ano.vladimir@gmail.com
 
@@ -77,11 +51,21 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Frequently Asked Questions ==
 
-= Complete list of supported shortcodes =
-See your dashboard
+= Compatibility mode =
+This mode adds a prefix to all plugin shortcodes
+[button] => [gn_button]
+[tabs] => [gn_tabs]
+[tab] => [gn_tab]
+
+= WYSIWYG button =
+Search it near Upload/Insert buttons
 
 
 == Changelog ==
+
+= 2.7 =
+* French translation
+* Fixed for work with new jQuery 1.6 in WP 3.2
 
 = 2.5 =
 * Theme integration

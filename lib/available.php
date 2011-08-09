@@ -11,6 +11,7 @@
 				'type' => 'wrap',
 				'atts' => array( ),
 				'usage' => '[heading] Content [/heading]',
+				'content' => __( 'Heading', 'shortcodes-ultimate' ),
 				'desc' => __( 'Styled heading', 'shortcodes-ultimate' )
 			),
 			# frame
@@ -29,6 +30,7 @@
 					)
 				),
 				'usage' => '[frame align="center"] <img src="image.jpg" alt="" /> [/frame]',
+				'content' => __( 'Image tag', 'shortcodes-ultimate' ),
 				'desc' => __( 'Styled image frame', 'shortcodes-ultimate' )
 			),
 			# tabs
@@ -61,6 +63,7 @@
 					)
 				),
 				'usage' => '[tabs style="1"] [tab title="Tab name"] Tab content [/tab] [/tabs]',
+				'content' => __( 'Tab content', 'shortcodes-ultimate' ),
 				'desc' => __( 'Single tab', 'shortcodes-ultimate' )
 			),
 			# spoiler
@@ -75,6 +78,7 @@
 					)
 				),
 				'usage' => '[spoiler title="Spoiler title"] Hidden text [/spoiler]',
+				'content' => __( 'Hidden content', 'shortcodes-ultimate' ),
 				'desc' => __( 'Hidden text', 'shortcodes-ultimate' )
 			),
 			# divider
@@ -107,7 +111,7 @@
 							'20',
 							'40'
 						),
-						'default' => '0',
+						'default' => '20',
 						'desc' => __( 'Spacer height in pixels', 'shortcodes-ultimate' )
 					)
 				),
@@ -130,6 +134,7 @@
 					)
 				),
 				'usage' => '[quote style="1"] Content [/quote]',
+				'content' => __( 'Quote', 'shortcodes-ultimate' ),
 				'desc' => __( 'Blockquote alternative', 'shortcodes-ultimate' )
 			),
 			# pullquote
@@ -147,6 +152,7 @@
 					)
 				),
 				'usage' => '[pullquote align="left"] Content [/pullquote]',
+				'content' => __( 'Pullquote', 'shortcodes-ultimate' ),
 				'desc' => __( 'Pullquote', 'shortcodes-ultimate' )
 			),
 			# highlight
@@ -166,6 +172,7 @@
 					)
 				),
 				'usage' => '[highlight bg="#fc0" color="#000"] Content [/highlight]',
+				'content' => __( 'Highlighted text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Highlighted text', 'shortcodes-ultimate' )
 			),
 			# bloginfo
@@ -215,6 +222,7 @@
 					),
 				),
 				'usage' => '[permalink p=52]<br/>[permalink p="52" target="blank"] Content [/permalink]',
+				'content' => __( 'Permalink text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Permalink to specified post/page', 'shortcodes-ultimate' )
 			),
 			# button
@@ -296,6 +304,7 @@
 					)
 				),
 				'usage' => '[button link="#" color="#b00" size="3" style="3" dark="1" square="1" icon="image.png"] Button text [/button]',
+				'content' => __( 'Button text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Styled button', 'shortcodes-ultimate' )
 			),
 			# fancy_link
@@ -318,6 +327,7 @@
 					)
 				),
 				'usage' => '[fancy_link color="black" link="http://example.com/"] Read more [/fancy_link]',
+				'content' => __( 'Link text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Fancy link', 'shortcodes-ultimate' )
 			),
 			# service
@@ -346,6 +356,7 @@
 					)
 				),
 				'usage' => '[service title="Service title" icon="service.png" size="32"] Service description [/service]',
+				'content' => __( 'Service description', 'shortcodes-ultimate' ),
 				'desc' => __( 'Service box with title', 'shortcodes-ultimate' )
 			),
 			# members
@@ -364,6 +375,7 @@
 					)
 				),
 				'usage' => '[members style="2"] Content for logged users [/members]',
+				'content' => __( 'Contnt for logged members', 'shortcodes-ultimate' ),
 				'desc' => __( 'Content for logged in members only', 'shortcodes-ultimate' )
 			),
 			# box
@@ -383,6 +395,7 @@
 					)
 				),
 				'usage' => '[box title="Box title" color="#f00"] Content [/box]',
+				'content' => __( 'Box content', 'shortcodes-ultimate' ),
 				'desc' => __( 'Colored box with caption', 'shortcodes-ultimate' )
 			),
 			# note
@@ -397,6 +410,7 @@
 					)
 				),
 				'usage' => '[note color="#FFCC00"] Content [/note]',
+				'content' => __( 'Note text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Colored box', 'shortcodes-ultimate' )
 			),
 			# private
@@ -405,6 +419,7 @@
 				'type' => 'wrap',
 				'atts' => array( ),
 				'usage' => '[private] Private content [/private]',
+				'content' => __( 'Private note text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Private note for post authors', 'shortcodes-ultimate' )
 			),
 			# list
@@ -435,6 +450,7 @@
 					)
 				),
 				'usage' => '[list style="check"] <ul> <li> List item </li> </ul> [/list]',
+				'content' => '<ul><li>' . __( 'List item ', 'shortcodes-ultimate' ) . '</li></ul>',
 				'desc' => __( 'Styled unordered list', 'shortcodes-ultimate' )
 			),
 			# feed
@@ -545,7 +561,7 @@
 							'1'
 						),
 						'default' => '0',
-						'desc' => __( 'For last columns', 'shortcodes-ultimate' )
+						'desc' => __( 'Last column', 'shortcodes-ultimate' )
 					),
 					'style' => array(
 						'values' => array(
@@ -554,10 +570,11 @@
 							'2'
 						),
 						'default' => '0',
-						'desc' => __( 'You can define custom styles for each columns set', 'shortcodes-ultimate' )
+						'desc' => __( 'Column style', 'shortcodes-ultimate' )
 					)
 				),
 				'usage' => '[column size="1-2"] Content [/column]<br/>[column size="1-2" last="1"] Content [/column]',
+				'content' => __( 'Column content', 'shortcodes-ultimate' ),
 				'desc' => __( 'Flexible columns', 'shortcodes-ultimate' )
 			),
 			# table
@@ -581,6 +598,7 @@
 					)
 				),
 				'usage' => '[table style="1"] <table> … <table> [/table]<br/>[table style="1" file="http://example.com/file.csv"] [/table]',
+				'content' => '<table><tr><td></td></tr></table>',
 				'desc' => __( 'Styled table from HTML or CSV file', 'shortcodes-ultimate' )
 			),
 			# media

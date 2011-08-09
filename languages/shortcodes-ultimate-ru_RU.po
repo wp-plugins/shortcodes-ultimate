@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-03 01:33+0300\n"
-"PO-Revision-Date: 2011-08-03 01:34+0300\n"
+"POT-Creation-Date: 2011-08-09 09:09+0300\n"
+"PO-Revision-Date: 2011-08-09 09:12+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,33 +14,41 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:163
+#: shortcodes-ultimate.php:179
 #: lib/admin.php:26
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:163
+#: shortcodes-ultimate.php:179
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:163
+#: shortcodes-ultimate.php:179
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:249
+#: shortcodes-ultimate.php:265
 #: lib/admin.php:35
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:262
+#: shortcodes-ultimate.php:278
 #: lib/admin.php:62
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:267
+#: shortcodes-ultimate.php:283
 #: lib/admin.php:123
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
+
+#: shortcodes-ultimate.php:291
+msgid "Insert shortcode"
+msgstr "Вставка шорткода"
+
+#: shortcodes-ultimate.php:305
+msgid "Select shortcode"
+msgstr "Выберите шорткод"
 
 #: lib/admin.php:7
 #: lib/admin.php:37
@@ -57,6 +65,7 @@ msgstr "Произвольные стили"
 
 #: lib/admin.php:38
 #: lib/admin.php:175
+#: lib/generator.php:41
 msgid "Demo"
 msgstr "Демо"
 
@@ -195,377 +204,443 @@ msgid "Usage"
 msgstr "Пример использования"
 
 #: lib/available.php:14
+msgid "Heading"
+msgstr "Заголовок"
+
+#: lib/available.php:15
 msgid "Styled heading"
 msgstr "Стильный заголовок"
 
-#: lib/available.php:28
+#: lib/available.php:29
 msgid "Frame align"
 msgstr "Выравнивание рамки"
 
-#: lib/available.php:32
+#: lib/available.php:33
+msgid "Image tag"
+msgstr "Тег изображения"
+
+#: lib/available.php:34
 msgid "Styled image frame"
 msgstr "Стиьная рамка изображения"
 
-#: lib/available.php:46
+#: lib/available.php:48
 msgid "Tabs style"
 msgstr "Стиль вкладок"
 
-#: lib/available.php:50
+#: lib/available.php:52
 msgid "Tabs container"
 msgstr "Контейнер вкладок"
 
-#: lib/available.php:59
+#: lib/available.php:61
 msgid "Title"
 msgstr "Заголовок"
 
-#: lib/available.php:60
+#: lib/available.php:62
 msgid "Tab title"
 msgstr "Заголовок вкладки"
 
-#: lib/available.php:64
+#: lib/available.php:66
+msgid "Tab content"
+msgstr "Содержимое вкладки"
+
+#: lib/available.php:67
 msgid "Single tab"
 msgstr "Одиночная вкладка"
 
-#: lib/available.php:73
-#: lib/available.php:74
+#: lib/available.php:76
+#: lib/available.php:77
 #: lib/shortcodes.php:82
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
-#: lib/available.php:78
+#: lib/available.php:81
+msgid "Hidden content"
+msgstr "Скрытое содержимое"
+
+#: lib/available.php:82
 msgid "Hidden text"
 msgstr "Скрытый текст"
 
-#: lib/available.php:91
+#: lib/available.php:95
 msgid "Show TOP link"
 msgstr "Показать ссылку ВВЕРХ"
 
-#: lib/available.php:95
+#: lib/available.php:99
 msgid "Content divider with optional TOP link"
 msgstr "Разделитель текста со ссылкой ВВЕРХ"
 
-#: lib/available.php:111
+#: lib/available.php:115
 msgid "Spacer height in pixels"
 msgstr "Высота разделителя в пикселях"
 
-#: lib/available.php:115
+#: lib/available.php:119
 msgid "Empty space with adjustable height"
 msgstr "Пробел с настраиваемой высотой"
 
-#: lib/available.php:129
+#: lib/available.php:133
 msgid "Quote style"
 msgstr "Стиль цитаты"
 
-#: lib/available.php:133
+#: lib/available.php:137
+msgid "Quote"
+msgstr "Цитата"
+
+#: lib/available.php:138
 msgid "Blockquote alternative"
 msgstr "Альтернатива цитаты"
 
-#: lib/available.php:146
+#: lib/available.php:151
 msgid "Pullquote alignment"
 msgstr "Выравнивание цитаты"
 
-#: lib/available.php:150
+#: lib/available.php:155
+#: lib/available.php:156
 msgid "Pullquote"
 msgstr "Цитата с обтеканием"
 
-#: lib/available.php:160
+#: lib/available.php:166
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: lib/available.php:165
+#: lib/available.php:171
 msgid "Text color"
 msgstr "Цвет текста"
 
-#: lib/available.php:169
+#: lib/available.php:175
+#: lib/available.php:176
 msgid "Highlighted text"
 msgstr "Подсвеченный текст"
 
-#: lib/available.php:192
+#: lib/available.php:199
 msgid "Option name"
 msgstr "Имя опции"
 
-#: lib/available.php:196
+#: lib/available.php:203
 msgid "Blog info"
 msgstr "Инфо блога"
 
-#: lib/available.php:206
-#: lib/available.php:696
-#: lib/available.php:768
+#: lib/available.php:213
+#: lib/available.php:714
+#: lib/available.php:786
 msgid "Post/page ID"
 msgstr "ID записи/страницы"
 
-#: lib/available.php:214
+#: lib/available.php:221
 msgid "Link target"
 msgstr "Цель ссылки"
 
-#: lib/available.php:218
+#: lib/available.php:225
+msgid "Permalink text"
+msgstr "Текст постоянной ссылки"
+
+#: lib/available.php:226
 msgid "Permalink to specified post/page"
 msgstr "Постоянная ссылка на указанную запись/страницу"
 
-#: lib/available.php:228
+#: lib/available.php:236
 msgid "Button link"
 msgstr "Ссылка кнопки"
 
-#: lib/available.php:233
+#: lib/available.php:241
 msgid "Button background color"
 msgstr "Цвет фона кнопки"
 
-#: lib/available.php:251
+#: lib/available.php:259
 msgid "Button size"
 msgstr "Размер кнопки"
 
-#: lib/available.php:261
+#: lib/available.php:269
 msgid "Button background style"
 msgstr "Стиль фона кнопки"
 
-#: lib/available.php:269
+#: lib/available.php:277
 msgid "Dark text color"
 msgstr "Темный цвет текста"
 
-#: lib/available.php:277
+#: lib/available.php:285
 msgid "Disable rounded corners"
 msgstr "Отключить скругленные уголки"
 
-#: lib/available.php:282
+#: lib/available.php:290
 msgid "Button icon"
 msgstr "Иконка кнопки"
 
-#: lib/available.php:287
+#: lib/available.php:295
 msgid "Button class"
 msgstr "Класс кнопки"
 
-#: lib/available.php:295
+#: lib/available.php:303
 msgid "Button link target"
 msgstr "Цель ссылки кнопки"
 
-#: lib/available.php:299
+#: lib/available.php:307
+msgid "Button text"
+msgstr "Текст кнопки"
+
+#: lib/available.php:308
 msgid "Styled button"
 msgstr "Стильная кнопка"
 
-#: lib/available.php:312
+#: lib/available.php:321
 msgid "Link color"
 msgstr "Цвет ссылки"
 
-#: lib/available.php:317
+#: lib/available.php:326
 msgid "URL"
 msgstr "URL"
 
-#: lib/available.php:321
+#: lib/available.php:330
+msgid "Link text"
+msgstr "Текст ссылки"
+
+#: lib/available.php:331
 msgid "Fancy link"
 msgstr "Стильная ссылка"
 
-#: lib/available.php:330
-#: lib/available.php:331
+#: lib/available.php:340
+#: lib/available.php:341
 msgid "Service title"
 msgstr "Название услуги"
 
-#: lib/available.php:336
+#: lib/available.php:346
 msgid "Service icon"
 msgstr "Иконка услуги"
 
-#: lib/available.php:345
+#: lib/available.php:355
 msgid "Icon size"
 msgstr "Размер иконки"
 
-#: lib/available.php:349
+#: lib/available.php:359
+msgid "Service description"
+msgstr "Описание услуги"
+
+#: lib/available.php:360
 msgid "Service box with title"
 msgstr "Блок услуга с заголовком"
 
-#: lib/available.php:363
+#: lib/available.php:374
 msgid "Box style"
 msgstr "Стиль блока"
 
-#: lib/available.php:367
+#: lib/available.php:378
+msgid "Contnt for logged members"
+msgstr "Содержимое для залогиненных пользователей"
+
+#: lib/available.php:379
 msgid "Content for logged in members only"
 msgstr "Ссодержимое только для залогиненных"
 
-#: lib/available.php:376
-#: lib/available.php:377
+#: lib/available.php:388
+#: lib/available.php:389
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: lib/available.php:382
+#: lib/available.php:394
 msgid "Box color"
 msgstr "Цвет блока"
 
-#: lib/available.php:386
+#: lib/available.php:398
+msgid "Box content"
+msgstr "Содержимое блока"
+
+#: lib/available.php:399
 msgid "Colored box with caption"
 msgstr "Цветной блок с заголовком"
 
-#: lib/available.php:396
+#: lib/available.php:409
 msgid "Note color"
 msgstr "Цвет блока"
 
-#: lib/available.php:400
+#: lib/available.php:413
+msgid "Note text"
+msgstr "Текст заметки"
+
+#: lib/available.php:414
 msgid "Colored box"
 msgstr "Цветной блок"
 
-#: lib/available.php:408
+#: lib/available.php:422
+msgid "Private note text"
+msgstr "Текст приватной заметки"
+
+#: lib/available.php:423
 msgid "Private note for post authors"
 msgstr "Приватный текст для других авторов"
 
-#: lib/available.php:434
+#: lib/available.php:449
 msgid "List style"
 msgstr "Стиль списка"
 
-#: lib/available.php:438
+#: lib/available.php:453
+msgid "List item "
+msgstr "Элемент списка"
+
+#: lib/available.php:454
 msgid "Styled unordered list"
 msgstr "Стильный неупорядоченный список"
 
-#: lib/available.php:448
+#: lib/available.php:464
 msgid "Feed URL"
 msgstr "URL ленты"
 
-#: lib/available.php:459
+#: lib/available.php:475
 msgid "Number of item to show"
 msgstr "Количество элементов для показа"
 
-#: lib/available.php:463
+#: lib/available.php:479
 msgid "Feed grabber"
 msgstr "Граббер новостных лент"
 
-#: lib/available.php:473
+#: lib/available.php:489
 msgid "Custom menu name"
 msgstr "Имя произвольного меню"
 
-#: lib/available.php:477
+#: lib/available.php:493
 msgid "Custom menu by name"
 msgstr "Произвольное меню"
 
-#: lib/available.php:491
-#: lib/available.php:514
+#: lib/available.php:507
+#: lib/available.php:530
 msgid "Depth level"
 msgstr "Глубина"
 
-#: lib/available.php:496
+#: lib/available.php:512
 msgid "Parent page ID"
 msgstr "ID родительской страницы"
 
-#: lib/available.php:500
-#: lib/available.php:518
+#: lib/available.php:516
+#: lib/available.php:534
 msgid "Page childrens"
 msgstr "Потомки страницы"
 
-#: lib/available.php:540
+#: lib/available.php:556
 msgid "Column width"
 msgstr "Ширина колонки"
 
-#: lib/available.php:548
-msgid "For last columns"
-msgstr "Для последних колонок"
+#: lib/available.php:564
+msgid "Last column"
+msgstr "Последняя колонка"
 
-#: lib/available.php:557
-msgid "You can define custom styles for each columns set"
-msgstr "Вы можете определить особые стили для каждого набора колонок"
+#: lib/available.php:573
+msgid "Column style"
+msgstr "Стиль колонки"
 
-#: lib/available.php:561
+#: lib/available.php:577
+msgid "Column content"
+msgstr "Содержимое колонки"
+
+#: lib/available.php:578
 msgid "Flexible columns"
 msgstr "Резновые колонки"
 
-#: lib/available.php:575
+#: lib/available.php:592
 msgid "Table style"
 msgstr "Стиль таблицы"
 
-#: lib/available.php:580
+#: lib/available.php:597
 msgid "Create table from CSV"
 msgstr "Создание таблицы из CSV файла"
 
-#: lib/available.php:584
+#: lib/available.php:602
 msgid "Styled table from HTML or CSV file"
 msgstr "Стильная таблица из HTML или CSV файла"
 
-#: lib/available.php:594
+#: lib/available.php:612
 msgid "Media URL"
 msgstr "Ссылка на медиа"
 
-#: lib/available.php:599
-#: lib/available.php:623
-#: lib/available.php:642
+#: lib/available.php:617
+#: lib/available.php:641
+#: lib/available.php:660
 msgid "Width"
 msgstr "Ширина"
 
-#: lib/available.php:604
-#: lib/available.php:628
-#: lib/available.php:647
+#: lib/available.php:622
+#: lib/available.php:646
+#: lib/available.php:665
 msgid "Height"
 msgstr "Высота"
 
-#: lib/available.php:608
+#: lib/available.php:626
 msgid "YouTube video, Vimeo video, .mp4/.flv video, .mp3 file or images"
 msgstr "YouTube видео, Vimeo видео, .mp4/.flv видео, .mp3 файл или изображения"
 
-#: lib/available.php:618
+#: lib/available.php:636
 msgid "Document URL"
 msgstr "Ссылка на документ"
 
-#: lib/available.php:632
+#: lib/available.php:650
 msgid ".doc, .xls, .pdf viewer by Google"
 msgstr ".doc, .xls, .pdf просмотрщик от Google"
 
-#: lib/available.php:652
+#: lib/available.php:670
 msgid "Marker address"
 msgstr "Адрес маркера"
 
-#: lib/available.php:656
+#: lib/available.php:674
 msgid "Maps by Google"
 msgstr "Карты от Google"
 
-#: lib/available.php:666
+#: lib/available.php:684
 msgid "Slider width"
 msgstr "Ширина слайдера"
 
-#: lib/available.php:671
+#: lib/available.php:689
 msgid "Slider height"
 msgstr "Высота слайдера"
 
-#: lib/available.php:681
+#: lib/available.php:699
 msgid "Slides links"
 msgstr "Ссылки слайдов"
 
-#: lib/available.php:686
-#: lib/available.php:763
+#: lib/available.php:704
+#: lib/available.php:781
 msgid "Animation speed (1000 = 1 second)"
 msgstr "Скорость анимации (1000 = 1 секунда)"
 
-#: lib/available.php:691
+#: lib/available.php:709
 msgid "Animation delay (1000 = 1 second)"
 msgstr "Задержка анимации (1000 = 1 секунда)"
 
-#: lib/available.php:706
+#: lib/available.php:724
 msgid "Animation effect"
 msgstr "Эффект анимации"
 
-#: lib/available.php:710
+#: lib/available.php:728
 msgid "Nivo slider by attached to post images"
 msgstr "Nivo slider из изображений записи"
 
-#: lib/available.php:720
+#: lib/available.php:738
 msgid "Carousel width"
 msgstr "Ширина карусели"
 
-#: lib/available.php:725
+#: lib/available.php:743
 msgid "Carousel height"
 msgstr "Высота карусели"
 
-#: lib/available.php:730
+#: lib/available.php:748
 msgid "Carousel background"
 msgstr "Фон карусели"
 
-#: lib/available.php:739
+#: lib/available.php:757
 msgid "Number of items to show"
 msgstr "Количество элементов для показа"
 
-#: lib/available.php:748
+#: lib/available.php:766
 msgid "Space between items in pixels"
 msgstr "Расстояние между элементами в пикселях"
 
-#: lib/available.php:758
+#: lib/available.php:776
 msgid "Items links"
 msgstr "Ссылки элементов"
 
-#: lib/available.php:772
+#: lib/available.php:790
 msgid "jCarousel by attached to post images"
 msgstr "jCarousel из изображений записи"
+
+#: lib/generator.php:40
+msgid "Insert"
+msgstr "Вставить"
 
 #: lib/shortcodes.php:101
 msgid "Top"
@@ -600,8 +675,8 @@ msgstr "Это содержимое только для участников."
 msgid "Please login"
 msgstr "Пожалуйста войдите"
 
-#~ msgid "Content"
-#~ msgstr "Содержимое"
+#~ msgid "You can define custom styles for each columns set"
+#~ msgstr "Вы можете определить особые стили для каждого набора колонок"
 
 #~ msgid "Tab name"
 #~ msgstr "Имя вкладки"
@@ -614,9 +689,6 @@ msgstr "Пожалуйста войдите"
 
 #~ msgid "image url"
 #~ msgstr "ссылка на изображение"
-
-#~ msgid "Service description"
-#~ msgstr "Описание услуги"
 
 #~ msgid "Content for registered users"
 #~ msgstr "Содержимое для залогиненых посетителей"

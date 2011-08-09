@@ -1,9 +1,8 @@
 <?php
-
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 2.7.0
+	  Version: 3.0.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -49,6 +48,7 @@
 		// Register styles
 		wp_register_style( 'shortcodes-ultimate', su_plugin_url() . '/css/style.css', false, su_get_version(), 'all' );
 		wp_register_style( 'shortcodes-ultimate-admin', su_plugin_url() . '/css/admin.css', false, su_get_version(), 'all' );
+		wp_register_style( 'shortcodes-ultimate-generator', su_plugin_url() . '/css/generator.css', false, su_get_version(), 'all' );
 		wp_register_style( 'nivo-slider', su_plugin_url() . '/css/nivoslider.css', false, su_get_version(), 'all' );
 		wp_register_style( 'jcarousel', su_plugin_url() . '/css/jcarousel.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror', su_plugin_url() . '/css/codemirror.css', false, su_get_version(), 'all' );
@@ -57,6 +57,7 @@
 		// Register scripts
 		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
 		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
+		wp_register_script( 'shortcodes-ultimate-generator', su_plugin_url() . '/js/generator.js', false, su_get_version(), false );
 		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/nivoslider.js', false, su_get_version(), false );
 		wp_register_script( 'jcarousel', su_plugin_url() . '/js/jcarousel.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
@@ -113,6 +114,21 @@
 			wp_enqueue_script( 'codemirror-css' );
 			wp_enqueue_script( 'ajax-form' );
 			wp_enqueue_script( 'shortcodes-ultimate-admin' );
+		}
+
+		// Scipts and stylesheets for editing pages (shortcode generator popup)
+		elseif ( is_admin() ) {
+
+			// Get current page type
+			global $pagenow;
+
+			if ( $pagenow == 'post.php' || $pagenow == 'edit.php' || $pagenow == 'post-new.php' ) {
+				// Enqueue styles
+				wp_enqueue_style( 'shortcodes-ultimate-generator' );
+
+				// Enqueue scripts
+				wp_enqueue_script( 'shortcodes-ultimate-generator' );
+			}
 		}
 
 		// Register shortcodes
@@ -268,4 +284,40 @@
 		}
 	}
 
+	/**
+	 * Add generator button to Upload/Insert buttons
+	 */
+	function su_add_generator_button() {
+		echo '<a href="#TB_inline?width=640&height=500&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
+	}
+
+	add_action( 'media_buttons', 'su_add_generator_button', 20 );
+
+	/**
+	 * Generator popup box
+	 */
+	function su_generator_popup() {
+		?>
+		<div id="su-generator-wrap" style="display:none">
+			<div id="su-generator">
+				<p>
+					<select id="su-generator-select">
+						<option value="false"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
+						<?
+						foreach ( su_shortcodes() as $name => $shortcode ) {
+							?>
+							<option value="<?php echo $name; ?>"><?php echo $shortcode['name']; ?></option>
+							<?php
+						}
+						?>
+					</select>
+				</p>
+				<div id="su-generator-settings"></div>
+				<input type="hidden" name="su-generator-url" id="su-generator-url" value="<?php echo su_plugin_url(); ?>" />
+			</div>
+		</div>
+		<?php
+	}
+
+	add_action( 'admin_footer', 'su_generator_popup' );
 ?>
