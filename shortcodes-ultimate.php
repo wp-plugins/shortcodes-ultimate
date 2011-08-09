@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.0.0
+	  Version: 3.0.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -288,7 +288,7 @@
 	 * Add generator button to Upload/Insert buttons
 	 */
 	function su_add_generator_button() {
-		echo '<a href="#TB_inline?width=640&height=500&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
+		echo '<a href="#TB_inline?width=640&height=800&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
 	}
 
 	add_action( 'media_buttons', 'su_add_generator_button', 20 );
@@ -302,11 +302,11 @@
 			<div id="su-generator">
 				<p>
 					<select id="su-generator-select">
-						<option value="false"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
+						<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
 						<?
 						foreach ( su_shortcodes() as $name => $shortcode ) {
 							?>
-							<option value="<?php echo $name; ?>"><?php echo $shortcode['name']; ?></option>
+							<option value="<?php echo $name; ?>"><?php echo $shortcode['desc']; ?></option>
 							<?php
 						}
 						?>

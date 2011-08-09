@@ -163,12 +163,14 @@
 					'bg' => array(
 						'values' => array( ),
 						'default' => '#DDFF99',
-						'desc' => __( 'Background color', 'shortcodes-ultimate' )
+						'desc' => __( 'Background color', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					),
 					'color' => array(
 						'values' => array( ),
 						'default' => '#000000',
-						'desc' => __( 'Text color', 'shortcodes-ultimate' )
+						'desc' => __( 'Text color', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					)
 				),
 				'usage' => '[highlight bg="#fc0" color="#000"] Content [/highlight]',
@@ -238,7 +240,8 @@
 					'color' => array(
 						'values' => array( ),
 						'default' => '#AAAAAA',
-						'desc' => __( 'Button background color', 'shortcodes-ultimate' )
+						'desc' => __( 'Button background color', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					),
 					'size' => array(
 						'values' => array(
@@ -391,7 +394,8 @@
 					'color' => array(
 						'values' => array( ),
 						'default' => '#333333',
-						'desc' => __( 'Box color', 'shortcodes-ultimate' )
+						'desc' => __( 'Box color', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					)
 				),
 				'usage' => '[box title="Box title" color="#f00"] Content [/box]',
@@ -406,7 +410,8 @@
 					'color' => array(
 						'values' => array( ),
 						'default' => '#FFCC00',
-						'desc' => __( 'Note color', 'shortcodes-ultimate' )
+						'desc' => __( 'Note color', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					)
 				),
 				'usage' => '[note color="#FFCC00"] Content [/note]',
@@ -456,7 +461,7 @@
 			# feed
 			'feed' => array(
 				'name' => 'Feed',
-				'type' => 'wrap',
+				'type' => 'single',
 				'atts' => array(
 					'url' => array(
 						'values' => array( ),
@@ -745,7 +750,8 @@
 					'bg' => array(
 						'values' => false,
 						'default' => '#EEEEEE',
-						'desc' => __( 'Carousel background', 'shortcodes-ultimate' )
+						'desc' => __( 'Carousel background', 'shortcodes-ultimate' ),
+						'type' => 'color'
 					),
 					'items' => array(
 						'values' => array(

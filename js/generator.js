@@ -18,7 +18,14 @@ jQuery(document).ready(function($) {
 				$('#su-generator-result').val( $('#su-generator-result').val() + ' ' + $(this).attr('name') + '="' + $(this).val() + '"' );
 			}
 		});
-		$('#su-generator-result').val($('#su-generator-result').val() + ']' + $('#su-generator-content').val() + '[/' + queried_shortcode + ']');
+		$('#su-generator-result').val($('#su-generator-result').val() + ']');
+
+		// wrap shortcode
+		if ( $('#su-generator-content').val() != 'false' ) {
+			$('#su-generator-result').val($('#su-generator-result').val() + $('#su-generator-content').val() + '[/' + queried_shortcode + ']');
+		}
 		window.send_to_editor(jQuery('#su-generator-result').val());
+		return false;
 	});
+
 });

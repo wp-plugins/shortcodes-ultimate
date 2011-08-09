@@ -251,26 +251,26 @@
 	margin: 0.5em 0 1.5em 0.5em !important;
 	padding: 0 !important;
 }
-.su-list li {
+.su-list ul li {
 	list-style-type: none !important;
 	display: block !important;
 	padding: 3px 0 3px 22px !important;
 }
-.su-list-style-star li { background: 0 50% url(../images/list-style-star.png) no-repeat }
-.su-list-style-arrow li { background: 0 50% url(../images/list-style-arrow.png) no-repeat }
-.su-list-style-check li { background: 0 50% url(../images/list-style-check.png) no-repeat }
-.su-list-style-cross li { background: 0 50% url(../images/list-style-cross.png) no-repeat }
-.su-list-style-thumbs li { background: 0 50% url(../images/list-style-thumbs.png) no-repeat }
-.su-list-style-link li { background: 0 50% url(../images/list-style-link.png) no-repeat }
-.su-list-style-gear li { background: 0 50% url(../images/list-style-gear.png) no-repeat }
-.su-list-style-time li { background: 0 50% url(../images/list-style-time.png) no-repeat }
-.su-list-style-note li { background: 0 50% url(../images/list-style-note.png) no-repeat }
-.su-list-style-plus li { background: 0 50% url(../images/list-style-plus.png) no-repeat }
-.su-list-style-guard li { background: 0 50% url(../images/list-style-guard.png) no-repeat }
-.su-list-style-event li { background: 0 50% url(../images/list-style-event.png) no-repeat }
-.su-list-style-idea li { background: 0 50% url(../images/list-style-idea.png) no-repeat }
-.su-list-style-settings li { background: 0 50% url(../images/list-style-settings.png) no-repeat }
-.su-list-style-twitter li { background: 0 50% url(../images/list-style-twitter.png) no-repeat }
+.su-list-style-star li { background: 0 50% url(../images/list-style-star.png) no-repeat !important }
+.su-list-style-arrow li { background: 0 50% url(../images/list-style-arrow.png) no-repeat !important }
+.su-list-style-check li { background: 0 50% url(../images/list-style-check.png) no-repeat !important }
+.su-list-style-cross li { background: 0 50% url(../images/list-style-cross.png) no-repeat !important }
+.su-list-style-thumbs li { background: 0 50% url(../images/list-style-thumbs.png) no-repeat !important }
+.su-list-style-link li { background: 0 50% url(../images/list-style-link.png) no-repeat !important }
+.su-list-style-gear li { background: 0 50% url(../images/list-style-gear.png) no-repeat !important }
+.su-list-style-time li { background: 0 50% url(../images/list-style-time.png) no-repeat !important }
+.su-list-style-note li { background: 0 50% url(../images/list-style-note.png) no-repeat !important }
+.su-list-style-plus li { background: 0 50% url(../images/list-style-plus.png) no-repeat !important }
+.su-list-style-guard li { background: 0 50% url(../images/list-style-guard.png) no-repeat !important }
+.su-list-style-event li { background: 0 50% url(../images/list-style-event.png) no-repeat !important }
+.su-list-style-idea li { background: 0 50% url(../images/list-style-idea.png) no-repeat !important }
+.su-list-style-settings li { background: 0 50% url(../images/list-style-settings.png) no-repeat !important }
+.su-list-style-twitter li { background: 0 50% url(../images/list-style-twitter.png) no-repeat !important }
 
 /* Box */
 .su-box {

@@ -31,16 +31,25 @@
 
 			// Text input
 			else {
-				$return .= '<input type="text" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
+				$attr_field_type = ( $attr_info['type'] == 'color' ) ? 'color' : 'text';
+				$return .= '<input type="' . $attr_field_type . '" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
 			}
 			$return .= '</p>';
 		}
 	}
 
-	$return .= '<p><a class="button-primary" id="su-generator-insert">' . __( 'Insert', 'shortcodes-ultimate' ) . '</a> ';
-	$return .= '<a href="' . su_plugin_url() . '/images/demo/' . $_GET['shortcode'] . '.png" target="_blank" class="button alignright">' . __( 'Demo', 'shortcodes-ultimate' ) . '</a></p>';
+	// Single shortcode (not closed)
+	if ( $shortcode['type'] == 'single' ) {
+		$return .= '<input type="hidden" name="su-generator-content" id="su-generator-content" value="false" />';
+	}
 
-	$return .= '<input type="hidden" name="su-generator-content" id="su-generator-content" value="' . $shortcode['content'] . '" />';
+	// Wrapping shortcode
+	else {
+		$return .= '<p><label>' . __( 'Content', 'shortcodes-ultimate' ) . '</label><input type="text" name="su-generator-content" id="su-generator-content" value="' . $shortcode['content'] . '" /></p>';
+	}
+
+	$return .= '<p><a href="#" class="button-primary" id="su-generator-insert">' . __( 'Insert', 'shortcodes-ultimate' ) . '</a> ';
+	$return .= '<a href="' . su_plugin_url() . '/images/demo/' . $_GET['shortcode'] . '.png" target="_blank" class="button alignright">' . __( 'Demo', 'shortcodes-ultimate' ) . '</a></p>';
 
 	$return .= '<input type="hidden" name="su-generator-result" id="su-generator-result" value="" />';
 

@@ -12,7 +12,6 @@
 }
 
 #su-generator-select {
-	width: 300px;
 	padding: 5px;
 }
 
@@ -39,4 +38,9 @@
 }
 .su-loading-animation * {
 	display: none;
+}
+
+#su-generator-insert {
+	color: #fff !important;
+	font-weight: bold;
 }
