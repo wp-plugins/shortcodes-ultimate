@@ -486,7 +486,7 @@
 			# menu
 			'menu' => array(
 				'name' => 'Menu',
-				'type' => 'wrap',
+				'type' => 'single',
 				'atts' => array(
 					'name' => array(
 						'values' => array( ),
