@@ -1,0 +1,46 @@
+#su-generator-wrap {
+	display: none;
+}
+
+#su-generator {
+	padding: 20px 10px;
+}
+
+#su-generator-settings {
+	padding: 20px;
+	border: 1px dashed #ccc;
+}
+
+#su-generator-select {
+	padding: 5px;
+}
+
+#su-generator-settings label {
+	float: left;
+	display: block;
+	width: 200px;
+	padding: 5px;
+	border-bottom: 1px dotted #ccc;
+}
+
+#su-generator-settings input[type="text"] {
+	width: 300px;
+	padding: 5px 8px;
+}
+#su-generator-settings select {
+	width: 300px;
+	padding: 5px 8px;
+}
+
+.su-loading-animation {
+	min-height: 100px;
+	background: 50% 50% url(../images/admin/loading.gif) no-repeat;
+}
+.su-loading-animation * {
+	display: none;
+}
+
+#su-generator-insert {
+	color: #fff !important;
+	font-weight: bold;
+}
