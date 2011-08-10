@@ -12,7 +12,8 @@ jQuery(document).ready(function($) {
 	// Insert shortcode
 	$('#su-generator-insert').live('click', function() {
 		var queried_shortcode = $('#su-generator-select').find(':selected').val();
-		$('#su-generator-result').val('[' + queried_shortcode);
+		var su_compatibility_mode_prefix = $('#su-compatibility-mode-prefix').val();
+		$('#su-generator-result').val('[' + su_compatibility_mode_prefix + queried_shortcode);
 		$('#su-generator-settings .su-generator-attr').each(function() {
 			if ( $(this).val() !== '' ) {
 				$('#su-generator-result').val( $('#su-generator-result').val() + ' ' + $(this).attr('name') + '="' + $(this).val() + '"' );
@@ -22,7 +23,7 @@ jQuery(document).ready(function($) {
 
 		// wrap shortcode
 		if ( $('#su-generator-content').val() != 'false' ) {
-			$('#su-generator-result').val($('#su-generator-result').val() + $('#su-generator-content').val() + '[/' + queried_shortcode + ']');
+			$('#su-generator-result').val($('#su-generator-result').val() + $('#su-generator-content').val() + '[/' + su_compatibility_mode_prefix + queried_shortcode + ']');
 		}
 		window.send_to_editor(jQuery('#su-generator-result').val());
 		return false;

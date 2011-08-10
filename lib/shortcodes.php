@@ -802,4 +802,26 @@
 		return $return;
 	}
 
+	/**
+	 * Shortcode: tweets
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_tweets_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'username' => 'twitter',
+				'limit' => 3,
+				'style' => 1,
+				'show_time' => 1
+				), $atts ) );
+
+		$return = '<div class="su-tweets su-tweets-style-' . $style . '">';
+		$return .= su_get_tweets( $username, $limit, $show_time );
+		$return .= '</div>';
+
+		return $return;
+	}
+
 ?>

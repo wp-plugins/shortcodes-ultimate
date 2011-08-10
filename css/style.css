@@ -499,3 +499,46 @@
 	border-bottom: 1px solid #8DC3EB;
 	background: #D9EEFF;
 }
+
+/* Tweets */
+.su-tweets {
+	margin: 0 0 1.5em 0;
+}
+.su-tweet {}
+.su-tweet-time {
+	display: block;
+	margin-top: 0.3em;
+	font-size: 0.9em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.su-tweets-style-1 .su-tweet {
+	margin: 0 0 0.7em 0;
+	padding: 0 0 0.7em 30px;
+	border-bottom: 1px dotted #ccc;
+	background: 0 2px url(../images/tweet-style-1.png) no-repeat;
+}
+.su-tweets-style-1 .su-tweet-last {
+	margin: 0;
+	padding: 0 0 0.7em 30px;
+	border-bottom: none;
+}
+.su-tweets-style-2 .su-tweet {
+	margin: 0 0 0.7em 0;
+	padding: 0.7em 0.7em 0.7em 34px;
+	border: 1px solid #555;
+	background: #333 0.4em 0.8em url(../images/tweet-style-2.png) no-repeat;
+	color: #fff;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.su-tweets-style-2 .su-tweet:hover {
+	background: #444 0.4em 0.8em url(../images/tweet-style-2.png) no-repeat;
+}
+.su-tweets-style-2 .su-tweet a {
+	color: #fff;
+}

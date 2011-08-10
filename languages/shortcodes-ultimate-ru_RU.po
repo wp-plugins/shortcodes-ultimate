@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-08-09 21:58+0300\n"
-"PO-Revision-Date: 2011-08-09 21:58+0300\n"
+"POT-Creation-Date: 2011-08-10 23:34+0300\n"
+"PO-Revision-Date: 2011-08-10 23:35+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -14,41 +14,51 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: shortcodes-ultimate.php:179
+#: shortcodes-ultimate.php:183
 #: lib/admin.php:26
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: shortcodes-ultimate.php:179
+#: shortcodes-ultimate.php:183
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: shortcodes-ultimate.php:179
+#: shortcodes-ultimate.php:183
 msgid "Provides support for many easy to use shortcodes"
 msgstr "Предоставляет поддержку множества полезных шорткодов"
 
-#: shortcodes-ultimate.php:265
+#: shortcodes-ultimate.php:269
+#: shortcodes-ultimate.php:320
 #: lib/admin.php:35
 msgid "Settings"
 msgstr "Настройки"
 
-#: shortcodes-ultimate.php:278
+#: shortcodes-ultimate.php:282
 #: lib/admin.php:62
 msgid "Settings saved"
 msgstr "Настройки сохранены"
 
-#: shortcodes-ultimate.php:283
+#: shortcodes-ultimate.php:287
 #: lib/admin.php:123
 msgid "Custom CSS saved"
 msgstr "Произвольные стили сохранены"
 
-#: shortcodes-ultimate.php:291
+#: shortcodes-ultimate.php:295
 msgid "Insert shortcode"
 msgstr "Вставка шорткода"
 
-#: shortcodes-ultimate.php:305
+#: shortcodes-ultimate.php:310
 msgid "Select shortcode"
 msgstr "Выберите шорткод"
+
+#: shortcodes-ultimate.php:321
+msgid "Color picker"
+msgstr "Подбор цвета"
+
+#: shortcodes-ultimate.php:322
+#: lib/admin.php:44
+msgid "Support forum"
+msgstr "Форум поддержки"
 
 #: lib/admin.php:7
 #: lib/admin.php:37
@@ -80,10 +90,6 @@ msgstr "Инструкции"
 #: lib/admin.php:43
 msgid "FREE Support"
 msgstr "БЕСПЛАТНАЯ поддержка"
-
-#: lib/admin.php:44
-msgid "Support forum"
-msgstr "Форум поддержки"
 
 #: lib/admin.php:45
 msgid "Twitter"
@@ -509,9 +515,12 @@ msgid "Parent page ID"
 msgstr "ID родительской страницы"
 
 #: lib/available.php:521
-#: lib/available.php:539
 msgid "Page childrens"
 msgstr "Потомки страницы"
+
+#: lib/available.php:539
+msgid "Page siblings"
+msgstr "Братья страницы"
 
 #: lib/available.php:561
 msgid "Column width"
@@ -638,6 +647,26 @@ msgstr "Ссылки элементов"
 msgid "jCarousel by attached to post images"
 msgstr "jCarousel из изображений записи"
 
+#: lib/available.php:806
+msgid "Twitter username"
+msgstr "Имя пользователя"
+
+#: lib/available.php:822
+msgid "Number of tweets to show"
+msgstr "Количество твитов для показа"
+
+#: lib/available.php:830
+msgid "Tweets style"
+msgstr "Стиль твитов"
+
+#: lib/available.php:838
+msgid "Show relative time"
+msgstr "Показывать время"
+
+#: lib/available.php:842
+msgid "Recent tweets"
+msgstr "Последние твиты"
+
 #: lib/generator.php:48
 msgid "Content"
 msgstr "Содержимое"
@@ -678,6 +707,46 @@ msgstr "Это содержимое только для участников."
 #: lib/shortcodes.php:680
 msgid "Please login"
 msgstr "Пожалуйста войдите"
+
+#: lib/twitter.php:9
+msgid "year"
+msgstr "год"
+
+#: lib/twitter.php:10
+msgid "month"
+msgstr "месяц"
+
+#: lib/twitter.php:11
+msgid "week"
+msgstr "неделя"
+
+#: lib/twitter.php:12
+msgid "day"
+msgstr "день"
+
+#: lib/twitter.php:13
+msgid "hour"
+msgstr "час"
+
+#: lib/twitter.php:14
+msgid "minute"
+msgstr "минута"
+
+#: lib/twitter.php:28
+#: lib/twitter.php:36
+msgid "s"
+msgstr "с"
+
+#: lib/twitter.php:73
+msgid "username not specified"
+msgstr "имя пользователя не задано"
+
+#: lib/twitter.php:76
+msgid "no public messages"
+msgstr "нет публичных твитов"
+
+#~ msgid "Support"
+#~ msgstr "Форум поддержки"
 
 #~ msgid "You can define custom styles for each columns set"
 #~ msgstr "Вы можете определить особые стили для каждого набора колонок"

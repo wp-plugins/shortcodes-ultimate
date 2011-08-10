@@ -794,7 +794,53 @@
 				),
 				'usage' => '[jcarousel]<br/>[jcarousel width="600" height="130" link="file" items="5" bg="#EEEEEE" speed="400"]',
 				'desc' => __( 'jCarousel by attached to post images', 'shortcodes-ultimate' )
-			)
+			),
+			# tweets
+			'tweets' => array(
+				'name' => 'Tweets',
+				'type' => 'single',
+				'atts' => array(
+					'username' => array(
+						'values' => array( ),
+						'default' => 'twitter',
+						'desc' => __( 'Twitter username', 'shortcodes-ultimate' )
+					),
+					'limit' => array(
+						'values' => array(
+							'1',
+							'2',
+							'3',
+							'4',
+							'5',
+							'6',
+							'7',
+							'8',
+							'9',
+							'10'
+						),
+						'default' => '3',
+						'desc' => __( 'Number of tweets to show', 'shortcodes-ultimate' )
+					),
+					'style' => array(
+						'values' => array(
+							'1',
+							'2'
+						),
+						'default' => '1',
+						'desc' => __( 'Tweets style', 'shortcodes-ultimate' )
+					),
+					'show_time' => array(
+						'values' => array(
+							'0',
+							'1'
+						),
+						'default' => '1',
+						'desc' => __( 'Show relative time', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[tweets username="gn_themes" limit="3" style="1" format="teaser"]',
+				'desc' => __( 'Recent tweets', 'shortcodes-ultimate' )
+			),
 		);
 
 		if ( $shortcode )

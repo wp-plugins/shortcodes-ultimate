@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.1.2
+	  Version: 3.2.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -25,6 +25,7 @@
 		require_once( dirname( __FILE__ ) . '/lib/color.php' );
 		require_once( dirname( __FILE__ ) . '/lib/csv.php' );
 		require_once( dirname( __FILE__ ) . '/lib/media.php' );
+		require_once( dirname( __FILE__ ) . '/lib/twitter.php' );
 		require_once( dirname( __FILE__ ) . '/lib/shortcodes.php' );
 
 		// Enable shortcodes in text widgets
@@ -294,7 +295,7 @@
 		echo '<a href="#TB_inline?width=640&height=800&inlineId=su-generator-wrap" class="thickbox" title="' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '"><img src="' . su_plugin_url() . '/images/admin/media-icon.png" alt="" /></a>';
 	}
 
-	add_action( 'media_buttons', 'su_add_generator_button', 20 );
+	add_action( 'media_buttons', 'su_add_generator_button', 100 );
 
 	/**
 	 * Generator popup box
@@ -304,10 +305,10 @@
 		<div id="su-generator-wrap" style="display:none">
 			<div id="su-generator">
 				<div id="su-generator-shell">
-					<p>
+					<div id="su-generator-header">
 						<select id="su-generator-select">
 							<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
-							<?
+							<?php
 							foreach ( su_shortcodes() as $name => $shortcode ) {
 								?>
 								<option value="<?php echo $name; ?>"><?php echo $shortcode['desc']; ?></option>
@@ -315,9 +316,15 @@
 							}
 							?>
 						</select>
-					</p>
+						<div id="su-generator-tools">
+							<a href="<?php echo admin_url( 'options-general.php?page=shortcodes-ultimate' ); ?>" target="_blank" title="<?php _e( 'Settings', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/settings.png" alt="" /></a>
+							<a href="http://www.colorpicker.com/" target="_blank" title="<?php _e( 'Color picker', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/colorpicker.png" alt="" /></a>
+							<a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank" title="<?php _e( 'Support forum', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/support.png" alt="" /></a>
+						</div>
+					</div>
 					<div id="su-generator-settings"></div>
 					<input type="hidden" name="su-generator-url" id="su-generator-url" value="<?php echo su_plugin_url(); ?>" />
+					<input type="hidden" name="su-compatibility-mode-prefix" id="su-compatibility-mode-prefix" value="<?php echo su_compatibility_mode_prefix(); ?>" />
 				</div>
 			</div>
 		</div>

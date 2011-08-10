@@ -18,8 +18,21 @@
 	border: 1px dashed #ccc;
 }
 
+#su-generator-header {
+	height: 30px;
+	margin-bottom: 20px;
+}
+
 #su-generator-select {
 	padding: 5px;
+}
+
+#su-generator-tools {
+	float: right;
+	padding-top: 5px;
+}
+#su-generator-tools a {
+	margin-left: 10px;
 }
 
 #su-generator-settings label {
