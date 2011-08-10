@@ -536,7 +536,7 @@
 					)
 				),
 				'usage' => '[siblings]<br/>[siblings depth="2"]',
-				'desc' => __( 'Page childrens', 'shortcodes-ultimate' )
+				'desc' => __( 'Page siblings', 'shortcodes-ultimate' )
 			),
 			# column
 			'column' => array(

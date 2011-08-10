@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.1.1
+	  Version: 3.1.2
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -122,7 +122,10 @@
 			// Get current page type
 			global $pagenow;
 
-			if ( $pagenow == 'post.php' || $pagenow == 'edit.php' || $pagenow == 'post-new.php' ) {
+			// Pages for including
+			$su_generator_includes_pages = array( 'post.php', 'edit.php', 'post-new.php', 'index.php' );
+
+			if ( in_array( $pagenow, $su_generator_includes_pages ) ) {
 				// Enqueue styles
 				wp_enqueue_style( 'shortcodes-ultimate-generator' );
 
