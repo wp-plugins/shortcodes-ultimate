@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.0.2
+	  Version: 3.1.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -300,20 +300,22 @@
 		?>
 		<div id="su-generator-wrap" style="display:none">
 			<div id="su-generator">
-				<p>
-					<select id="su-generator-select">
-						<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
-						<?
-						foreach ( su_shortcodes() as $name => $shortcode ) {
+				<div id="su-generator-shell">
+					<p>
+						<select id="su-generator-select">
+							<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
+							<?
+							foreach ( su_shortcodes() as $name => $shortcode ) {
+								?>
+								<option value="<?php echo $name; ?>"><?php echo $shortcode['desc']; ?></option>
+								<?php
+							}
 							?>
-							<option value="<?php echo $name; ?>"><?php echo $shortcode['desc']; ?></option>
-							<?php
-						}
-						?>
-					</select>
-				</p>
-				<div id="su-generator-settings"></div>
-				<input type="hidden" name="su-generator-url" id="su-generator-url" value="<?php echo su_plugin_url(); ?>" />
+						</select>
+					</p>
+					<div id="su-generator-settings"></div>
+					<input type="hidden" name="su-generator-url" id="su-generator-url" value="<?php echo su_plugin_url(); ?>" />
+				</div>
 			</div>
 		</div>
 		<?php
