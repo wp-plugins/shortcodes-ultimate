@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.2.9
-Stable tag: 3.1.0
+Stable tag: 3.1.1
 
 Provides support for multiple useful shortcodes
 
@@ -25,20 +25,20 @@ With this plugin you can easily add buttons, dividers, spacers, boxes, notes and
 * Twitter: http://twitter.com/gn_themes
 
 = Thanks for translations =
-Fr - Aurélien DENIS [ http://wpchannel.com/ ]
-Sp - Esteban Truelsegaard [ http://www.netmdp.com/ ]
+* Fr - Aurélien DENIS [ http://wpchannel.com/ ]
+* Sp - Esteban Truelsegaard [ http://www.netmdp.com/ ]
 
 Have a translation? Contact me - ano.vladimir@gmail.com
 
 
 == Installation ==
 
-1. Unzip plugin files and upload them under your '/wp-content/plugins/' directory.
+Unzip plugin files and upload them under your '/wp-content/plugins/' directory.
 
 Resulted names will be:
   './wp-content/plugins/shortcodes-ultimate/*'
 
-2. Activate plugin at "Plugins" administration page.
+Activate plugin at "Plugins" administration page.
 
 
 == Upgrade Notice ==
@@ -58,9 +58,10 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 = What mean compatibility mode? =
 This mode adds a prefix to all plugin shortcodes
-[button] => [gn_button]
-[tabs] => [gn_tabs]
-[tab] => [gn_tab]
+* [button] => [gn_button]
+* [tabs] => [gn_tabs]
+* [tab] => [gn_tab]
+* etc.
 
 = Where is WYSIWYG button? =
 Search it near Upload/Insert buttons. See screenshots.
