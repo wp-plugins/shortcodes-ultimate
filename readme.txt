@@ -4,7 +4,7 @@ Donate link: http://ilovecode.ru/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 3.2.1
+Stable tag: 3.3.0
 
 Provides support for multiple useful shortcodes
 
@@ -18,20 +18,25 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * Handy shortcodes manager
 * Custom CSS editor with syntax highlight
 * Frequently updates
+* International
 
 = New in this version =
 * Changed: [nivo_slider] and [jcarousel] (see docs in console)
-* New shortcode: custom_gallery
+* New shortcode: [custom_gallery]
+* New parameter: [members login="0|1"]
 * New shortcode: guests
+* German translation
 
 = Got a bug? =
 * Forum - http://wordpress.org/tags/shortcodes-ultimate?forum_id=10
 * Author blog - http://ilovecode.ru/?p=122
 * Twitter: http://twitter.com/gn_themes
 
-= Thanks for translations =
+= Translations =
 * Fr - Aurélien DENIS [ http://wpchannel.com/ ]
 * Sp - Esteban Truelsegaard [ http://www.netmdp.com/ ]
+* De - Matthias Wittmann [ http://net-graphix.de/ ]
+* Ru - Vladimir Anokhin [ http://ilovecode.ru/ ]
 
 Have a translation? Contact me - ano.vladimir@gmail.com
 
@@ -68,11 +73,37 @@ This mode adds a prefix to all plugin shortcodes
 * [tab] => [gn_tab]
 * etc.
 
-= Where is WYSIWYG button? =
+= Is there WYSIWYG button? =
 Search it near Upload/Insert buttons. See screenshots.
+
+= How to use: nivo_slider, jcarousel, custom_gallery =
+With these shortcodes you can create different galleries from attached to post images, or from category posts.
+
+Way 1: gallery from attachments
+* Create new post
+* Upload images
+* Use next shortcode on pages, posts or even widgets
+`[nivo_slider source="post=XX" link="image"]`
+XX - ID of the post with uploaded images
+
+Way 2: gallery from category
+* Create some posts in some category
+* Set the thumbnails of posts
+* Use next shortcode on pages, posts or even widgets
+`[nivo_slider source="cat=XX" link="image"]`
+XX - ID of the category with new posts
+
+Also, you can use [jcarousel] and [custom_gallery] according these principles.
 
 
 == Changelog ==
+
+= 3.3 =
+* Changed: [nivo_slider] and [jcarousel] (see docs in console)
+* New shortcode: [custom_gallery]
+* New parameter: [members login="0|1"]
+* New shortcode: guests
+* German translation
 
 = 3.0 =
 * Button for WYSIWIG editor (search it near Upload/Insert buttons)
