@@ -333,14 +333,4 @@
 	}
 
 	add_action( 'admin_footer', 'su_generator_popup' );
-
-	/**
-	 * Update notification for new modified version
-	 */
-	function su_update_notice() {
-		echo '<div class="file-error">' . __( 'Attention! [nivo_slider] and [jcarousel] was improved and modified!', 'shortcodes-ultimate' ) . ' <a href="' . admin_url( 'plugin-install.php?tab=plugin-information&plugin=shortcodes-ultimate&TB_iframe=true&width=640&height=542' ) . '" class="thickbox">' . __( 'View details', 'shortcodes-ultimate' ) . ' &rsaquo;</a>' . '</div>';
-	}
-
-	if ( is_admin() )
-		add_action( 'in_plugin_update_message-' . plugin_basename( __FILE__ ), 'su_update_notice' );
 ?>
