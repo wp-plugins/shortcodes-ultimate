@@ -9,8 +9,16 @@
 			'heading' => array(
 				'name' => 'Heading',
 				'type' => 'wrap',
-				'atts' => array( ),
-				'usage' => '[heading] Content [/heading]',
+				'atts' => array(
+					'style' => array(
+						'values' => array(
+							'1',
+							'2'
+						),
+						'desc' => __( 'Heading style', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[heading] Content [/heading]<br/>[heading style="2"] Content [/heading]',
 				'content' => __( 'Heading', 'shortcodes-ultimate' ),
 				'desc' => __( 'Styled heading', 'shortcodes-ultimate' )
 			),
@@ -375,11 +383,28 @@
 						),
 						'default' => '1',
 						'desc' => __( 'Box style', 'shortcodes-ultimate' )
+					),
+					'login' => array(
+						'values' => array(
+							'0',
+							'1'
+						),
+						'default' => '1',
+						'desc' => __( 'Show login message', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[members style="2"] Content for logged users [/members]',
-				'content' => __( 'Contnt for logged members', 'shortcodes-ultimate' ),
+				'usage' => '[members style="2" login="1"] Content for logged members [/members]',
+				'content' => __( 'Content for logged members', 'shortcodes-ultimate' ),
 				'desc' => __( 'Content for logged in members only', 'shortcodes-ultimate' )
+			),
+			# guests
+			'guests' => array(
+				'name' => 'Guests',
+				'type' => 'wrap',
+				'atts' => array( ),
+				'usage' => '[guests] Content for guests [/guests]',
+				'content' => __( 'Content for guests', 'shortcodes-ultimate' ),
+				'desc' => __( 'Content for guests only', 'shortcodes-ultimate' )
 			),
 			# box
 			'box' => array(
@@ -683,40 +708,46 @@
 				'name' => 'Nivo slider',
 				'type' => 'single',
 				'atts' => array(
-					'width' => array(
-						'values' => false,
-						'default' => '600',
-						'desc' => __( 'Slider width', 'shortcodes-ultimate' )
-					),
-					'height' => array(
-						'values' => false,
-						'default' => '300',
-						'desc' => __( 'Slider height', 'shortcodes-ultimate' )
+					'source' => array(
+						'values' => array(
+							'post',
+							'post=%post_id%',
+							'cat=%cat_id%'
+						),
+						'default' => 'post',
+						'desc' => __( 'Source of images', 'shortcodes-ultimate' )
 					),
 					'link' => array(
 						'values' => array(
 							'none',
-							'file',
-							'attachment',
-							'caption'
+							'image',
+							'permalink',
+							'caption',
+							'meta'
 						),
-						'default' => 'none',
-						'desc' => __( 'Slides links', 'shortcodes-ultimate' )
+						'default' => 'image',
+						'desc' => __( 'Images links', 'shortcodes-ultimate' )
 					),
-					'speed' => array(
-						'values' => false,
-						'default' => '600',
-						'desc' => __( 'Animation speed (1000 = 1 second)', 'shortcodes-ultimate' )
+					'size' => array(
+						'values' => array(
+							'100x100',
+							'150x150',
+							'200x200',
+							'300x200',
+							'500x300'
+						),
+						'default' => '500x300',
+						'desc' => __( 'Slider size', 'shortcodes-ultimate' )
 					),
-					'delay' => array(
-						'values' => false,
-						'default' => '3000',
-						'desc' => __( 'Animation delay (1000 = 1 second)', 'shortcodes-ultimate' )
-					),
-					'p' => array(
-						'values' => false,
-						'default' => '',
-						'desc' => __( 'Post/page ID', 'shortcodes-ultimate' )
+					'limit' => array(
+						'values' => array(
+							'3',
+							'5',
+							'10',
+							'20'
+						),
+						'default' => '10',
+						'desc' => __( 'Number of slides', 'shortcodes-ultimate' )
 					),
 					'effect' => array(
 						'values' => array(
@@ -727,9 +758,19 @@
 						),
 						'default' => 'random',
 						'desc' => __( 'Animation effect', 'shortcodes-ultimate' )
+					),
+					'speed' => array(
+						'values' => false,
+						'default' => '600',
+						'desc' => __( 'Animation speed (1000 = 1 second)', 'shortcodes-ultimate' )
+					),
+					'delay' => array(
+						'values' => false,
+						'default' => '3000',
+						'desc' => __( 'Animation delay (1000 = 1 second)', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[nivo_slider]<br/>[nivo_slider width="600" height="300" link="file" effect="boxRandom"]',
+				'usage' => '[nivo_slider]<br/>[nivo_slider source="post" link="image" size="500x300" limit="10" effect="boxRandom"]<br/>[nivo_slider source="cat=1" link="permalink" size="500x300" limit="10" effect="boxRandom"]',
 				'desc' => __( 'Nivo slider by attached to post images', 'shortcodes-ultimate' )
 			),
 			# jcarousel
@@ -737,21 +778,45 @@
 				'name' => 'jCarousel',
 				'type' => 'single',
 				'atts' => array(
-					'width' => array(
-						'values' => false,
-						'default' => '600',
-						'desc' => __( 'Carousel width', 'shortcodes-ultimate' )
+					'source' => array(
+						'values' => array(
+							'post',
+							'post=%post_id%',
+							'cat=%cat_id%'
+						),
+						'default' => 'post',
+						'desc' => __( 'Source of images', 'shortcodes-ultimate' )
 					),
-					'height' => array(
-						'values' => false,
-						'default' => '130',
-						'desc' => __( 'Carousel height', 'shortcodes-ultimate' )
+					'link' => array(
+						'values' => array(
+							'none',
+							'image',
+							'permalink',
+							'caption',
+							'meta'
+						),
+						'default' => 'image',
+						'desc' => __( 'Images links', 'shortcodes-ultimate' )
 					),
-					'bg' => array(
-						'values' => false,
-						'default' => '#EEEEEE',
-						'desc' => __( 'Carousel background', 'shortcodes-ultimate' ),
-						'type' => 'color'
+					'size' => array(
+						'values' => array(
+							'100x100',
+							'150x150',
+							'200x200',
+							'150x300'
+						),
+						'default' => '150x150',
+						'desc' => __( 'Carousel item size', 'shortcodes-ultimate' )
+					),
+					'limit' => array(
+						'values' => array(
+							'3',
+							'5',
+							'10',
+							'20'
+						),
+						'default' => '10',
+						'desc' => __( 'Number of items', 'shortcodes-ultimate' )
 					),
 					'items' => array(
 						'values' => array(
@@ -760,7 +825,12 @@
 							'5'
 						),
 						'default' => '3',
-						'desc' => __( 'Number of items to show', 'shortcodes-ultimate' )
+						'desc' => __( 'Number of items in viewport', 'shortcodes-ultimate' )
+					),
+					'speed' => array(
+						'values' => false,
+						'default' => '400',
+						'desc' => __( 'Animation speed (1000 = 1 second)', 'shortcodes-ultimate' )
 					),
 					'margin' => array(
 						'values' => array(
@@ -770,30 +840,59 @@
 						),
 						'default' => '10',
 						'desc' => __( 'Space between items in pixels', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[jcarousel]<br/>[jcarousel source="post" link="image" size="150x150" limit="10" items="3"]<br/>[jcarousel source="cat=1" link="permalink" size="150x150" limit="10" items="3"]',
+				'desc' => __( 'jCarousel by attached to post images', 'shortcodes-ultimate' )
+			),
+			# custom_gallery
+			'custom_gallery' => array(
+				'name' => 'Custom gallery',
+				'type' => 'single',
+				'atts' => array(
+					'source' => array(
+						'values' => array(
+							'post',
+							'post=%post_id%',
+							'cat=%cat_id%'
+						),
+						'default' => 'post',
+						'desc' => __( 'Source of images', 'shortcodes-ultimate' )
 					),
 					'link' => array(
 						'values' => array(
 							'none',
-							'file',
-							'attachment',
-							'caption'
+							'image',
+							'permalink',
+							'caption',
+							'meta'
 						),
-						'default' => 'none',
-						'desc' => __( 'Items links', 'shortcodes-ultimate' )
+						'default' => 'image',
+						'desc' => __( 'Images links', 'shortcodes-ultimate' )
 					),
-					'speed' => array(
-						'values' => false,
-						'default' => '400',
-						'desc' => __( 'Animation speed (1000 = 1 second)', 'shortcodes-ultimate' )
+					'size' => array(
+						'values' => array(
+							'100x100',
+							'150x150',
+							'200x200',
+							'150x300'
+						),
+						'default' => '200x200',
+						'desc' => __( 'Gallery item size', 'shortcodes-ultimate' )
 					),
-					'p' => array(
-						'values' => false,
-						'default' => '',
-						'desc' => __( 'Post/page ID', 'shortcodes-ultimate' )
+					'limit' => array(
+						'values' => array(
+							'3',
+							'5',
+							'10',
+							'20'
+						),
+						'default' => '10',
+						'desc' => __( 'Number of items', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[jcarousel]<br/>[jcarousel width="600" height="130" link="file" items="5" bg="#EEEEEE" speed="400"]',
-				'desc' => __( 'jCarousel by attached to post images', 'shortcodes-ultimate' )
+				'usage' => '[custom_gallery]<br/>[custom_gallery source="post" link="image" size="200x200" limit="10"]<br/>[custom_gallery source="cat=1" link="permalink" size="200x200" limit="10"]',
+				'desc' => __( 'Custom gallery by attached to post images', 'shortcodes-ultimate' )
 			),
 			# tweets
 			'tweets' => array(
@@ -808,14 +907,9 @@
 					'limit' => array(
 						'values' => array(
 							'1',
-							'2',
 							'3',
-							'4',
 							'5',
-							'6',
 							'7',
-							'8',
-							'9',
 							'10'
 						),
 						'default' => '3',

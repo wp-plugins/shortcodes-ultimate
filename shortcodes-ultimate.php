@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.2.1
+	  Version: 3.3.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -26,6 +26,7 @@
 		require_once( dirname( __FILE__ ) . '/lib/csv.php' );
 		require_once( dirname( __FILE__ ) . '/lib/media.php' );
 		require_once( dirname( __FILE__ ) . '/lib/twitter.php' );
+		require_once( dirname( __FILE__ ) . '/lib/images.php' );
 		require_once( dirname( __FILE__ ) . '/lib/shortcodes.php' );
 
 		// Enable shortcodes in text widgets
@@ -58,7 +59,7 @@
 		// Register scripts
 		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
 		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
-		wp_register_script( 'shortcodes-ultimate-generator', su_plugin_url() . '/js/generator.js', false, su_get_version(), false );
+		wp_register_script( 'shortcodes-ultimate-generator', su_plugin_url() . '/js/generator.js', array( 'jquery' ), su_get_version(), false );
 		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/nivoslider.js', false, su_get_version(), false );
 		wp_register_script( 'jcarousel', su_plugin_url() . '/js/jcarousel.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
@@ -226,7 +227,7 @@
 	 */
 	function su_print_custom_css() {
 		if ( get_option( 'su_custom_css' ) ) {
-			echo "\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . get_option( "su_custom_css" ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
+			echo "\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . str_replace( '%theme%', get_template_directory_uri(), get_option( 'su_custom_css' ) ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
 		}
 	}
 
@@ -332,4 +333,14 @@
 	}
 
 	add_action( 'admin_footer', 'su_generator_popup' );
+
+	/**
+	 * Update notification for new modified version
+	 */
+	function su_update_notice() {
+		echo '<div class="file-error">' . __( 'Attention! [nivo_slider] and [jcarousel] was improved and modified!', 'shortcodes-ultimate' ) . ' <a href="' . admin_url( 'plugin-install.php?tab=plugin-information&plugin=shortcodes-ultimate&TB_iframe=true&width=640&height=542' ) . '" class="thickbox">' . __( 'View details', 'shortcodes-ultimate' ) . ' &rsaquo;</a>' . '</div>';
+	}
+
+	if ( is_admin() )
+		add_action( 'in_plugin_update_message-' . plugin_basename( __FILE__ ), 'su_update_notice' );
 ?>

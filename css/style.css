@@ -500,6 +500,11 @@
 	background: #D9EEFF;
 }
 
+/* Guests */
+.su-guests {
+	margin-bottom: 1.5em;
+}
+
 /* Tweets */
 .su-tweets {
 	margin: 0 0 1.5em 0;
@@ -541,4 +546,21 @@
 }
 .su-tweets-style-2 .su-tweet a {
 	color: #fff;
+}
+
+/* Custom gallery */
+.su-custom-gallery {
+	margin: 0 0 1.5em 0;
+}
+.su-custom-gallery a {
+	float: left;
+	display: block;
+	margin: 0 1em 1em 0;
+	padding: 0;
+}
+.su-custom-gallery img {
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 2px solid #ccc;
 }

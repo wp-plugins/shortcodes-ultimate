@@ -9,10 +9,10 @@
 	 */
 	function su_heading_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-				'size' => 3
+				'style' => 1
 				), $atts ) );
 
-		return '<div class="su-heading"><div class="su-heading-shell">' . $content . '</div></div>';
+		return '<div class="su-heading su-heading-style-' . $style . '"><div class="su-heading-shell">' . $content . '</div></div>';
 	}
 
 	/**
@@ -434,83 +434,138 @@
 	 */
 	function su_nivo_slider_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-				'width' => 600,
-				'height' => 300,
-				'link' => false,
+				'source' => 'post',
+				'link' => 'image',
+				'size' => '500x300',
+				'limit' => 10,
 				'effect' => 'random',
 				'speed' => 600,
-				'delay' => 3000,
-				'p' => false
+				'delay' => 3000
 				), $atts ) );
 
-		global $post;
-		$post_id = ( $p ) ? $p : $post->ID;
+		// Get dimensions
+		$dimensions = explode( 'x', strtolower( $size ) );
+		$width = $dimensions[0];
+		$height = $dimensions[1];
 
-		$args = array(
-			'post_type' => 'attachment',
-			'numberposts' => -1,
-			'order' => 'ASC',
-			'post_status' => null,
-			'post_parent' => $post_id
-		);
+		// Define unique slider ID
+		$slider_id = uniqid( 'su-nivo-slider_' );
 
-		// Get attachments
-		$attachments = get_posts( $args );
+		// Get slides
+		$slides = su_build_gallery( $source, $link, $size, $limit );
 
-		// If has attachments
-		if ( count( $attachments ) > 1 ) {
+		// If slides exists
+		if ( count( $slides ) > 1 ) {
 
-			$slider_id = uniqid( 'su-nivo-slider_' );
-
-			$return = '
-				<script type="text/javascript">
-					jQuery(window).load(function() {
-						jQuery("#' . $slider_id . '").nivoSlider({
-							effect: "' . $effect . '",
-							animSpeed: ' . $speed . ',
-							pauseTime: ' . $delay . '
-						});
-					});
-				</script>
-			';
+			$return = '<script type="text/javascript">jQuery(window).load(function(){jQuery("#' . $slider_id . '").nivoSlider({effect:"' . $effect . '",animSpeed:' . $speed . ',pauseTime:' . $delay . '});});</script>';
 
 			$return .= '<div id="' . $slider_id . '" class="su-nivo-slider" style="width:' . $width . 'px;height:' . $height . 'px">';
-
-			foreach ( $attachments as $attachment ) {
-
-				$title = apply_filters( 'the_title', $attachment->post_title );
-				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
-
-				// Link to file
-				if ( $link == 'file' ) {
-					$return .= '<a href="' . $image[0] . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-				}
-
-				// Link to attachment page
-				elseif ( $link == 'attachment' ) {
-					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-				}
-
-				// Custom link
-				elseif ( $link == 'caption' ) {
-					if ( $attachment->post_excerpt ) {
-						$return .= '<a href="' . $attachment->post_excerpt . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-					} else {
-						$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />';
-					}
-				}
-
-				// No link
-				else {
-					$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $width . '" height="' . $height . '" alt="' . $title . '" />';
-				}
+			foreach ( $slides as $slide ) {
+				$return .= '<a href="' . $slide['link'] . '" title="' . $slide['name'] . '"><img src="' . $slide['thumbnail'] . '" alt="' . $slide['name'] . '" width=" ' . $width . ' " height="' . $height . '" /></a>';
 			}
 			$return .= '</div>';
 		}
 
-		// No attachments
+		// No slides
 		else {
 			$return = '<p class="su-error"><strong>Nivo slider:</strong> ' . __( 'no attached images, or only one attached image', 'shortcodes-ultimate' ) . '&hellip;</p>';
+		}
+
+		return $return;
+	}
+
+	/**
+	 * Shortcode: jcarousel
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_jcarousel_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'source' => 'post',
+				'link' => 'image',
+				'size' => '150x150',
+				'limit' => 10,
+				'items' => 3,
+				'speed' => 400,
+				'margin' => 10
+				), $atts ) );
+
+		// Get dimensions
+		$dimensions = explode( 'x', strtolower( $size ) );
+		$width = $dimensions[0];
+		$height = $dimensions[1];
+
+		// Calculate width
+		$container_width = round( ( ( $width + $margin ) * $items ) - $margin );
+
+		// Define unique carousel ID
+		$carousel_id = uniqid( 'su-jcarousel_' );
+
+		// Get slides
+		$slides = su_build_gallery( $source, $link, $size, $limit );
+
+		// If has attachments
+		if ( count( $slides ) > 1 ) {
+
+			$return = '<script type="text/javascript">jQuery(document).ready(function(){jQuery("#' . $carousel_id . '").jcarousel({auto:2,scroll:1,wrap:"last",animation:' . $speed . ',initCallback:mycarousel_initCallback});});</script>';
+
+			$return .= '<div class="su-jcarousel" style="width:' . $container_width . 'px;height:' . $height . 'px"><ul id="' . $carousel_id . '">';
+
+			foreach ( $slides as $slide ) {
+				$return .= '<li style="width:' . $width . 'px;height:' . $height . 'px;margin-right:' . $margin . 'px"><a href="' . $slide['link'] . '" title="' . $slide['name'] . '"><img src="' . $slide['thumbnail'] . '" alt="' . $slide['name'] . '" width=" ' . $width . ' " height="' . $height . '" /></a></li>';
+			}
+			$return .= '</ul></div>';
+		}
+
+		// No attachments
+		else {
+			$return = '<p class="su-error"><strong>jCarousel:</strong> ' . __( 'no attached images, or only one attached image', 'shortcodes-ultimate' ) . '&hellip;</p>';
+		}
+
+		return $return;
+	}
+
+	/**
+	 * Shortcode: custom_gallery
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_custom_gallery_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'source' => 'post',
+				'link' => 'image',
+				'size' => '200x200',
+				'limit' => 10
+				), $atts ) );
+
+		// Get dimensions
+		$size = explode( 'x', strtolower( $size ) );
+		$width = $size[0];
+		$height = $size[1];
+
+		// Define unique gallery ID
+		$gallery_id = uniqid( 'su-custom-gallery_' );
+
+		// Get slides
+		$slides = su_build_gallery( $source, $link, $size, $limit );
+
+		// If slides exists
+		if ( count( $slides ) > 1 ) {
+
+			$return = '<div id="' . $gallery_id . '" class="su-custom-gallery">';
+			foreach ( $slides as $slide ) {
+				$return .= '<a href="' . $slide['link'] . '" title="' . $slide['name'] . '"><img src="' . $slide['thumbnail'] . '" alt="' . $slide['name'] . '" width=" ' . $width . ' " height="' . $height . '" /></a>';
+			}
+			$return .= '<div class="su-spacer"></div></div>';
+		}
+
+		// No slides
+		else {
+			$return = '<p class="su-error"><strong>Custom gallery:</strong> ' . __( 'no attached images, or only one attached image', 'shortcodes-ultimate' ) . '&hellip;</p>';
 		}
 
 		return $return;
@@ -671,13 +726,32 @@
 	 */
 	function su_members_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
-				'style' => 1
+				'style' => 1,
+				'login' => 1
 				), $atts ) );
 
+		// Logged user
 		if ( is_user_logged_in() && !is_null( $content ) && !is_feed() ) {
 			return do_shortcode( $content );
-		} else {
+		}
+
+		// Not logged user, show login message
+		elseif ( $login == 1 ) {
 			return '<div class="su-members su-members-style-' . $style . '"><span class="su-members-shell">' . __( 'This content is for members only.', 'shortcodes-ultimate' ) . ' <a href="' . wp_login_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Please login', 'shortcodes-ultimate' ) . '</a>.' . '</span></div>';
+		}
+	}
+
+	/**
+	 * Shortcode: guests
+	 *
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_guests_shortcode( $atts = null, $content = null ) {
+
+		// Logged user
+		if ( !is_user_logged_in() && !is_null( $content ) ) {
+			return '<div class="su-guests">' . do_shortcode( $content ) . '</div>';
 		}
 	}
 
@@ -697,109 +771,6 @@
 		include_once( ABSPATH . WPINC . '/rss.php' );
 
 		return '<div class="su-feed">' . wp_rss( $url, $limit ) . '</div>';
-	}
-
-	/**
-	 * Shortcode: jcarousel
-	 *
-	 * @param array $atts Shortcode attributes
-	 * @param string $content
-	 * @return string Output html
-	 */
-	function su_jcarousel_shortcode( $atts, $content = null ) {
-		extract( shortcode_atts( array(
-				'width' => 600,
-				'height' => 130,
-				'link' => false,
-				'items' => 3,
-				'margin' => 10,
-				'speed' => 400,
-				'bg' => '#eee',
-				'p' => false
-				), $atts ) );
-
-		global $post;
-		$post_id = ( $p ) ? $p : $post->ID;
-
-		$args = array(
-			'post_type' => 'attachment',
-			'numberposts' => -1,
-			'order' => 'ASC',
-			'post_status' => null,
-			'post_parent' => $post_id
-		);
-
-		// Get attachments
-		$attachments = get_posts( $args );
-
-		// If has attachments
-		if ( count( $attachments ) > 1 ) {
-
-			$carousel_id = uniqid( 'su-jcarousel_' );
-
-			$width = $width - 80;
-			$height = $height - 30;
-
-			$item_width = round( ( $width - ( ( $items - 1 ) * $margin ) ) / $items );
-
-			$return = '
-				<script type="text/javascript">
-					jQuery(document).ready(function() {
-						jQuery("#' . $carousel_id . '").jcarousel({
-							auto: 2,
-							scroll: 1,
-							wrap: "last",
-							animation: ' . $speed . ',
-							initCallback: mycarousel_initCallback
-						 });
-					});
-				</script>
-			';
-
-			$return .= '<div class="su-jcarousel" style="width:' . $width . 'px;height:' . $height . 'px;background-color:' . $bg . '"><div class="su-jcarousel-shell"><ul id="' . $carousel_id . '">';
-
-			foreach ( $attachments as $attachment ) {
-
-				$title = apply_filters( 'the_title', $attachment->post_title );
-				$image = wp_get_attachment_image_src( $attachment->ID, 'full', false );
-
-				$return .= '<li style="width:' . $item_width . 'px;height:' . $height . 'px;margin-right:' . $margin . 'px">';
-
-				// Link to file
-				if ( $link == 'file' ) {
-					$return .= '<a href="' . $image[0] . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-				}
-
-				// Link to attachment page
-				elseif ( $link == 'attachment' ) {
-					$return .= '<a href="' . get_permalink( $attachment->ID ) . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-				}
-
-				// Custom link
-				elseif ( $link == 'caption' ) {
-					if ( $attachment->post_excerpt ) {
-						$return .= '<a href="' . $attachment->post_excerpt . '" title="' . $title . '"><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-					} else {
-						$return .= '<img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" />';
-					}
-				}
-
-				// No link
-				else {
-					$return .= '<a><img src="' . su_plugin_url() . '/lib/timthumb.php?src=' . $image[0] . '&amp;w=' . $item_width . '&amp;h=' . $height . '&amp;q=100&amp;zc=1" width="' . $item_width . '" height="' . $height . '" alt="' . $title . '" /></a>';
-				}
-
-				$return .= '</li>';
-			}
-			$return .= '</ul></div></div>';
-		}
-
-		// No attachments
-		else {
-			$return = '<p class="su-error"><strong>jCarousel:</strong> ' . __( 'no attached images, or only one attached image', 'shortcodes-ultimate' ) . '&hellip;</p>';
-		}
-
-		return $return;
 	}
 
 	/**
