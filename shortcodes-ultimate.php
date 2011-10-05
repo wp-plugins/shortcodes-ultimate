@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.3.0
+	  Version: 3.3.1
 	  Author: Vladimir Anokhin
 	  Author URI: http://ilovecode.ru/
 	  Description: Provides support for many easy to use shortcodes
@@ -312,7 +312,7 @@
 							<?php
 							foreach ( su_shortcodes() as $name => $shortcode ) {
 								?>
-								<option value="<?php echo $name; ?>"><?php echo $shortcode['desc']; ?></option>
+								<option value="<?php echo $name; ?>"><?php echo strtoupper( $name ); ?>:&nbsp;&nbsp;&nbsp;<?php echo $shortcode['desc']; ?></option>
 								<?php
 							}
 							?>

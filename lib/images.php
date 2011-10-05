@@ -11,9 +11,9 @@
 	function su_build_gallery( $source = 'post', $link = 'none', $size = '150x150', $limit = 10, $options = array( ) ) {
 
 		// Thumbnail dimensions
-		$size = explode( 'x', strtolower( $size ) );
-		$width = $size[0];
-		$height = $size[1];
+		$dimensions = explode( 'x', $size );
+		$width = $dimensions[0];
+		$height = $dimensions[1];
 
 		### SOURCE: POST ###
 		if ( strpos( $source, 'post' ) !== false ) {
