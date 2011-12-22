@@ -1,0 +1,888 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: gn_themes\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-12-22 11:29+0300\n"
+"PO-Revision-Date: 2011-12-22 11:30+0300\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: shortcodes-ultimate.php:184
+#: lib/admin.php:9
+#: lib/admin.php:50
+msgid "Shortcodes Ultimate"
+msgstr "Шорткоды"
+
+#: shortcodes-ultimate.php:184
+msgid "Vladimir Anokhin"
+msgstr "Владимир Анохин"
+
+#: shortcodes-ultimate.php:184
+msgid "Provides support for many easy to use shortcodes"
+msgstr "Предоставляет поддержку множества полезных шорткодов"
+
+#: shortcodes-ultimate.php:270
+#: shortcodes-ultimate.php:321
+#: lib/admin.php:59
+msgid "Settings"
+msgstr "Настройки"
+
+#: shortcodes-ultimate.php:283
+#: lib/admin.php:85
+msgid "Settings saved"
+msgstr "Настройки сохранены"
+
+#: shortcodes-ultimate.php:288
+#: lib/admin.php:146
+msgid "Custom CSS saved"
+msgstr "Произвольные стили сохранены"
+
+#: shortcodes-ultimate.php:296
+msgid "Insert shortcode"
+msgstr "Вставка шорткода"
+
+#: shortcodes-ultimate.php:311
+msgid "Select shortcode"
+msgstr "Выберите шорткод"
+
+#: shortcodes-ultimate.php:322
+msgid "Color picker"
+msgstr "Подбор цвета"
+
+#: shortcodes-ultimate.php:323
+#: lib/admin.php:68
+msgid "Support forum"
+msgstr "Форум поддержки"
+
+#: lib/admin.php:10
+msgid "Must have WordPress plugin - Shortcodes Ultimate"
+msgstr "Лучший плагин для WordPress - Shortcodes Ultimate"
+
+#: lib/admin.php:31
+#: lib/admin.php:61
+msgid "Shortcodes"
+msgstr "Шорткоды"
+
+#: lib/admin.php:58
+msgid "About"
+msgstr "О плагине"
+
+#: lib/admin.php:60
+msgid "Custom CSS"
+msgstr "Произвольные стили"
+
+#: lib/admin.php:62
+#: lib/admin.php:198
+#: lib/generator.php:52
+msgid "Demo"
+msgstr "Демо"
+
+#: lib/admin.php:65
+msgid "For full functionality of this page it is recommended to enable JavaScript."
+msgstr "На этой странице рекомендуется включить Javascript."
+
+#: lib/admin.php:65
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: lib/admin.php:67
+msgid "FREE Support"
+msgstr "БЕСПЛАТНАЯ поддержка"
+
+#: lib/admin.php:69
+msgid "Twitter"
+msgstr "Твиттер разработчика"
+
+#: lib/admin.php:73
+msgid "Do you love this plugin?"
+msgstr "Вам нравится этот плагин?"
+
+#: lib/admin.php:74
+msgid "Rate this plugin at wordpress.org"
+msgstr "Оцените плагин на wordpress.org"
+
+#: lib/admin.php:74
+msgid "5 stars"
+msgstr "5 звезд"
+
+#: lib/admin.php:75
+msgid "Review this plugin in your blog"
+msgstr "Сделайте обзор этого плагина в своем блоге"
+
+#: lib/admin.php:84
+#: lib/admin.php:145
+msgid "Saving..."
+msgstr "Сохранение..."
+
+#: lib/admin.php:89
+msgid "Disable custom formatting"
+msgstr "Отключить специальное форматирование"
+
+#: lib/admin.php:92
+msgid "Enable this option if you have some problems with other plugins or content formatting"
+msgstr "Отметьте этот флажок, если у вас возникли пролемы совместимости с другими плагинами или форматированием контента"
+
+#: lib/admin.php:97
+msgid "Compatibility mode"
+msgstr "Режим совместимости"
+
+#: lib/admin.php:100
+msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
+msgstr "Отметьте этот флажок, если у вас используются другие шорткоды с такими же именами. Все шорткоды этого плагина будут иметь такие имена"
+
+#: lib/admin.php:100
+msgid "Forum topic"
+msgstr "Тема на форуме (англ.)"
+
+#: lib/admin.php:104
+msgid "Disable scripts"
+msgstr "Отключить скрипты"
+
+#: lib/admin.php:108
+#: lib/admin.php:109
+#: lib/admin.php:110
+#: lib/admin.php:111
+#: lib/admin.php:112
+#: lib/admin.php:123
+#: lib/admin.php:124
+#: lib/admin.php:125
+msgid "Disable"
+msgstr "Отключить"
+
+#: lib/admin.php:115
+msgid "Check scripts, that you want to exclude form wp_head section"
+msgstr "Отметьте скрипты, которые вы хотите исключить в wp_head"
+
+#: lib/admin.php:115
+#: lib/admin.php:128
+msgid "Be careful with this settings!"
+msgstr "Будьте осторожны с этими настройками!"
+
+#: lib/admin.php:119
+msgid "Disable styles"
+msgstr "Отключить файлы стилей"
+
+#: lib/admin.php:128
+msgid "Check stylesheets, that you want to exclude form wp_head section"
+msgstr "Отметьте файлы стилей, которые вы хотите исключить в wp_head"
+
+#: lib/admin.php:134
+msgid "Save settings"
+msgstr "Сохранить настройки"
+
+#: lib/admin.php:147
+msgid "You can add custom styles, that will override defaults"
+msgstr "Вы можете добавить произвольные стили, которые заменят оригинальные стили для шорткодов"
+
+#: lib/admin.php:148
+msgid "See original styles"
+msgstr "Смотреть оригинальные стили"
+
+#: lib/admin.php:151
+msgid "Save styles"
+msgstr "Сохранить стили"
+
+#: lib/admin.php:161
+#: lib/admin.php:197
+msgid "Shortcode"
+msgstr "Шорткоды"
+
+#: lib/admin.php:162
+msgid "Parameters"
+msgstr "Параметры"
+
+#: lib/admin.php:163
+msgid "Usage"
+msgstr "Пример использования"
+
+#: lib/available.php:18
+msgid "Heading style"
+msgstr "Стиль заголовка"
+
+#: lib/available.php:22
+msgid "Heading"
+msgstr "Заголовок"
+
+#: lib/available.php:23
+msgid "Styled heading"
+msgstr "Стильный заголовок"
+
+#: lib/available.php:37
+msgid "Frame align"
+msgstr "Выравнивание рамки"
+
+#: lib/available.php:41
+msgid "Image tag"
+msgstr "Тег изображения"
+
+#: lib/available.php:42
+msgid "Styled image frame"
+msgstr "Стиьная рамка изображения"
+
+#: lib/available.php:56
+msgid "Tabs style"
+msgstr "Стиль вкладок"
+
+#: lib/available.php:60
+msgid "Tabs container"
+msgstr "Контейнер вкладок"
+
+#: lib/available.php:69
+msgid "Title"
+msgstr "Заголовок"
+
+#: lib/available.php:70
+msgid "Tab title"
+msgstr "Заголовок вкладки"
+
+#: lib/available.php:74
+msgid "Tab content"
+msgstr "Содержимое вкладки"
+
+#: lib/available.php:75
+msgid "Single tab"
+msgstr "Одиночная вкладка"
+
+#: lib/available.php:84
+#: lib/available.php:85
+#: lib/shortcodes.php:82
+msgid "Spoiler title"
+msgstr "Скрытый текст"
+
+#: lib/available.php:89
+msgid "Hidden content"
+msgstr "Скрытое содержимое"
+
+#: lib/available.php:90
+msgid "Hidden text"
+msgstr "Скрытый текст"
+
+#: lib/available.php:103
+msgid "Show TOP link"
+msgstr "Показать ссылку ВВЕРХ"
+
+#: lib/available.php:107
+msgid "Content divider with optional TOP link"
+msgstr "Разделитель текста со ссылкой ВВЕРХ"
+
+#: lib/available.php:123
+msgid "Spacer height in pixels"
+msgstr "Высота разделителя в пикселях"
+
+#: lib/available.php:127
+msgid "Empty space with adjustable height"
+msgstr "Пробел с настраиваемой высотой"
+
+#: lib/available.php:141
+msgid "Quote style"
+msgstr "Стиль цитаты"
+
+#: lib/available.php:145
+msgid "Quote"
+msgstr "Цитата"
+
+#: lib/available.php:146
+msgid "Blockquote alternative"
+msgstr "Альтернатива цитаты"
+
+#: lib/available.php:159
+msgid "Pullquote alignment"
+msgstr "Выравнивание цитаты"
+
+#: lib/available.php:163
+#: lib/available.php:164
+msgid "Pullquote"
+msgstr "Цитата с обтеканием"
+
+#: lib/available.php:174
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: lib/available.php:180
+msgid "Text color"
+msgstr "Цвет текста"
+
+#: lib/available.php:185
+#: lib/available.php:186
+msgid "Highlighted text"
+msgstr "Подсвеченный текст"
+
+#: lib/available.php:200
+msgid "Dropcap style"
+msgstr "Стиль буквицы"
+
+#: lib/available.php:211
+msgid "Dropcap size"
+msgstr "Размер буквицы"
+
+#: lib/available.php:215
+msgid "D"
+msgstr "D"
+
+#: lib/available.php:216
+msgid "Dropcap"
+msgstr "Буквица"
+
+#: lib/available.php:239
+msgid "Option name"
+msgstr "Имя опции"
+
+#: lib/available.php:243
+msgid "Blog info"
+msgstr "Инфо блога"
+
+#: lib/available.php:253
+msgid "Post/page ID"
+msgstr "ID записи/страницы"
+
+#: lib/available.php:261
+msgid "Link target"
+msgstr "Цель ссылки"
+
+#: lib/available.php:265
+msgid "Permalink text"
+msgstr "Текст постоянной ссылки"
+
+#: lib/available.php:266
+msgid "Permalink to specified post/page"
+msgstr "Постоянная ссылка на указанную запись/страницу"
+
+#: lib/available.php:276
+msgid "Button link"
+msgstr "Ссылка кнопки"
+
+#: lib/available.php:281
+msgid "Button background color"
+msgstr "Цвет фона кнопки"
+
+#: lib/available.php:300
+msgid "Button size"
+msgstr "Размер кнопки"
+
+#: lib/available.php:310
+msgid "Button background style"
+msgstr "Стиль фона кнопки"
+
+#: lib/available.php:318
+msgid "Dark text color"
+msgstr "Темный цвет текста"
+
+#: lib/available.php:326
+msgid "Disable rounded corners"
+msgstr "Отключить скругленные уголки"
+
+#: lib/available.php:331
+msgid "Button icon"
+msgstr "Иконка кнопки"
+
+#: lib/available.php:336
+msgid "Button class"
+msgstr "Класс кнопки"
+
+#: lib/available.php:344
+msgid "Button link target"
+msgstr "Цель ссылки кнопки"
+
+#: lib/available.php:348
+msgid "Button text"
+msgstr "Текст кнопки"
+
+#: lib/available.php:349
+msgid "Styled button"
+msgstr "Стильная кнопка"
+
+#: lib/available.php:362
+msgid "Link color"
+msgstr "Цвет ссылки"
+
+#: lib/available.php:367
+msgid "URL"
+msgstr "URL"
+
+#: lib/available.php:371
+msgid "Link text"
+msgstr "Текст ссылки"
+
+#: lib/available.php:372
+msgid "Fancy link"
+msgstr "Стильная ссылка"
+
+#: lib/available.php:381
+#: lib/available.php:382
+msgid "Service title"
+msgstr "Название услуги"
+
+#: lib/available.php:387
+msgid "Service icon"
+msgstr "Иконка услуги"
+
+#: lib/available.php:396
+msgid "Icon size"
+msgstr "Размер иконки"
+
+#: lib/available.php:400
+msgid "Service description"
+msgstr "Описание услуги"
+
+#: lib/available.php:401
+msgid "Service box with title"
+msgstr "Блок услуга с заголовком"
+
+#: lib/available.php:415
+msgid "Box style"
+msgstr "Стиль блока"
+
+#: lib/available.php:423
+msgid "Show login message"
+msgstr "Показывать предложение войти"
+
+#: lib/available.php:427
+msgid "Content for logged members"
+msgstr "Содержимое для залогиненых пользователей"
+
+#: lib/available.php:428
+msgid "Content for logged in members only"
+msgstr "Ссодержимое только для залогиненных"
+
+#: lib/available.php:436
+msgid "Content for guests"
+msgstr "Содержимое для гостей"
+
+#: lib/available.php:437
+msgid "Content for guests only"
+msgstr "Ссодержимое только для гостей"
+
+#: lib/available.php:446
+#: lib/available.php:447
+msgid "Box title"
+msgstr "Заголовок блока"
+
+#: lib/available.php:452
+msgid "Box color"
+msgstr "Цвет блока"
+
+#: lib/available.php:457
+msgid "Box content"
+msgstr "Содержимое блока"
+
+#: lib/available.php:458
+msgid "Colored box with caption"
+msgstr "Цветной блок с заголовком"
+
+#: lib/available.php:468
+msgid "Note color"
+msgstr "Цвет блока"
+
+#: lib/available.php:473
+msgid "Note text"
+msgstr "Текст заметки"
+
+#: lib/available.php:474
+msgid "Colored box"
+msgstr "Цветной блок"
+
+#: lib/available.php:482
+msgid "Private note text"
+msgstr "Текст приватной заметки"
+
+#: lib/available.php:483
+msgid "Private note for post authors"
+msgstr "Приватный текст для других авторов"
+
+#: lib/available.php:509
+msgid "List style"
+msgstr "Стиль списка"
+
+#: lib/available.php:513
+msgid "List item "
+msgstr "Элемент списка"
+
+#: lib/available.php:514
+msgid "Styled unordered list"
+msgstr "Стильный неупорядоченный список"
+
+#: lib/available.php:524
+msgid "Feed URL"
+msgstr "URL ленты"
+
+#: lib/available.php:535
+msgid "Number of item to show"
+msgstr "Количество элементов для показа"
+
+#: lib/available.php:539
+msgid "Feed grabber"
+msgstr "Граббер новостных лент"
+
+#: lib/available.php:549
+msgid "Custom menu name"
+msgstr "Имя произвольного меню"
+
+#: lib/available.php:553
+msgid "Custom menu by name"
+msgstr "Произвольное меню"
+
+#: lib/available.php:567
+#: lib/available.php:590
+msgid "Depth level"
+msgstr "Глубина"
+
+#: lib/available.php:572
+msgid "Parent page ID"
+msgstr "ID родительской страницы"
+
+#: lib/available.php:576
+msgid "Page childrens"
+msgstr "Потомки страницы"
+
+#: lib/available.php:594
+msgid "Page siblings"
+msgstr "Братья страницы"
+
+#: lib/available.php:616
+msgid "Column width"
+msgstr "Ширина колонки"
+
+#: lib/available.php:624
+msgid "Last column"
+msgstr "Последняя колонка"
+
+#: lib/available.php:633
+msgid "Column style"
+msgstr "Стиль колонки"
+
+#: lib/available.php:637
+msgid "Column content"
+msgstr "Содержимое колонки"
+
+#: lib/available.php:638
+msgid "Flexible columns"
+msgstr "Резновые колонки"
+
+#: lib/available.php:652
+msgid "Table style"
+msgstr "Стиль таблицы"
+
+#: lib/available.php:657
+msgid "Create table from CSV"
+msgstr "Создание таблицы из CSV файла"
+
+#: lib/available.php:662
+msgid "Styled table from HTML or CSV file"
+msgstr "Стильная таблица из HTML или CSV файла"
+
+#: lib/available.php:738
+msgid "Media URL"
+msgstr "Ссылка на медиа"
+
+#: lib/available.php:743
+#: lib/available.php:767
+#: lib/available.php:786
+msgid "Width"
+msgstr "Ширина"
+
+#: lib/available.php:748
+#: lib/available.php:772
+#: lib/available.php:791
+msgid "Height"
+msgstr "Высота"
+
+#: lib/available.php:752
+msgid "YouTube video, Vimeo video, .mp4/.flv video, .mp3 file or images"
+msgstr "YouTube видео, Vimeo видео, .mp4/.flv видео, .mp3 файл или изображения"
+
+#: lib/available.php:762
+msgid "Document URL"
+msgstr "Ссылка на документ"
+
+#: lib/available.php:776
+msgid ".doc, .xls, .pdf viewer by Google"
+msgstr ".doc, .xls, .pdf просмотрщик от Google"
+
+#: lib/available.php:796
+msgid "Marker address"
+msgstr "Адрес маркера"
+
+#: lib/available.php:800
+msgid "Maps by Google"
+msgstr "Карты от Google"
+
+#: lib/available.php:814
+#: lib/available.php:884
+#: lib/available.php:956
+msgid "Source of images"
+msgstr "Источник изображений"
+
+#: lib/available.php:825
+#: lib/available.php:895
+#: lib/available.php:967
+msgid "Images links"
+msgstr "Ссылки с изображений"
+
+#: lib/available.php:836
+msgid "Slider size"
+msgstr "Размер слайдера"
+
+#: lib/available.php:846
+msgid "Number of slides"
+msgstr "Количество слайдов"
+
+#: lib/available.php:856
+msgid "Animation effect"
+msgstr "Эффект анимации"
+
+#: lib/available.php:861
+#: lib/available.php:929
+msgid "Animation speed (1000 = 1 second)"
+msgstr "Скорость анимации (1000 = 1 секунда)"
+
+#: lib/available.php:866
+msgid "Animation delay (1000 = 1 second)"
+msgstr "Задержка анимации (1000 = 1 секунда)"
+
+#: lib/available.php:870
+msgid "Nivo slider by attached to post images"
+msgstr "Nivo slider из изображений записи"
+
+#: lib/available.php:905
+msgid "Carousel item size"
+msgstr "Размер элементов карусели"
+
+#: lib/available.php:915
+#: lib/available.php:987
+msgid "Number of items"
+msgstr "Количество элементов"
+
+#: lib/available.php:924
+msgid "Number of items in viewport"
+msgstr "Количество элементов в видмой части"
+
+#: lib/available.php:938
+msgid "Space between items in pixels"
+msgstr "Расстояние между элементами в пикселях"
+
+#: lib/available.php:942
+msgid "jCarousel by attached to post images"
+msgstr "jCarousel из изображений записи"
+
+#: lib/available.php:977
+msgid "Gallery item size"
+msgstr "Размер миниатюр"
+
+#: lib/available.php:991
+msgid "Custom gallery by attached to post images"
+msgstr "Произвольная галерея"
+
+#: lib/available.php:1001
+msgid "Twitter username"
+msgstr "Имя пользователя"
+
+#: lib/available.php:1012
+msgid "Number of tweets to show"
+msgstr "Количество твитов для показа"
+
+#: lib/available.php:1020
+msgid "Tweets style"
+msgstr "Стиль твитов"
+
+#: lib/available.php:1028
+msgid "Show relative time"
+msgstr "Показывать время"
+
+#: lib/available.php:1032
+msgid "Recent tweets"
+msgstr "Последние твиты"
+
+#: lib/generator.php:48
+msgid "Content"
+msgstr "Содержимое"
+
+#: lib/generator.php:51
+msgid "Insert"
+msgstr "Вставить"
+
+#: lib/shortcodes.php:101
+msgid "Top"
+msgstr "Вверх"
+
+#: lib/shortcodes.php:319
+msgid "Service name"
+msgstr "Название услуги"
+
+#: lib/shortcodes.php:337
+msgid "This is box title"
+msgstr "Заголовок блока"
+
+#: lib/shortcodes.php:399
+msgid "Please specify media url"
+msgstr "Укажите ссылку на медиа"
+
+#: lib/shortcodes.php:538
+#: lib/shortcodes.php:591
+#: lib/shortcodes.php:635
+msgid "no attached images, or only one attached image"
+msgstr "не найдены загруженные изображения, или изображение всего одно"
+
+#: lib/shortcodes.php:750
+msgid "This menu doesn't exists, or has no elements"
+msgstr "Такое меню не существует, или в нем нет ни одного элемента"
+
+#: lib/shortcodes.php:807
+msgid "This content is for members only."
+msgstr "Это содержимое только для участников."
+
+#: lib/shortcodes.php:807
+msgid "Please login"
+msgstr "Пожалуйста войдите"
+
+#: lib/twitter.php:9
+msgid "year"
+msgstr "год"
+
+#: lib/twitter.php:10
+msgid "month"
+msgstr "месяц"
+
+#: lib/twitter.php:11
+msgid "week"
+msgstr "неделя"
+
+#: lib/twitter.php:12
+msgid "day"
+msgstr "день"
+
+#: lib/twitter.php:13
+msgid "hour"
+msgstr "час"
+
+#: lib/twitter.php:14
+msgid "minute"
+msgstr "минута"
+
+#: lib/twitter.php:28
+#: lib/twitter.php:36
+msgid "s"
+msgstr "с"
+
+#: lib/twitter.php:73
+msgid "username not specified"
+msgstr "имя пользователя не задано"
+
+#: lib/twitter.php:76
+msgid "no public messages"
+msgstr "нет публичных твитов"
+
+#~ msgid "Bug report"
+#~ msgstr "Сообщить об ошибке"
+
+#~ msgid "Buy author a beer"
+#~ msgstr "Купите автору пива"
+
+#~ msgid "Donate"
+#~ msgstr "Сделать пожертвование"
+
+#~ msgid "Attention! [nivo_slider] and [jcarousel] was improved and modified!"
+#~ msgstr ""
+#~ "Внимание! Шорткоды [nivo_slider] и [jcarousel] были улучшены и изменены!"
+
+#~ msgid "View details"
+#~ msgstr "Смотреть детали"
+
+#~ msgid "Slider height"
+#~ msgstr "Высота слайдера"
+
+#~ msgid "Slides links"
+#~ msgstr "Ссылки слайдов"
+
+#~ msgid "Carousel height"
+#~ msgstr "Высота карусели"
+
+#~ msgid "Carousel background"
+#~ msgstr "Фон карусели"
+
+#~ msgid "Support"
+#~ msgstr "Форум поддержки"
+
+#~ msgid "You can define custom styles for each columns set"
+#~ msgstr "Вы можете определить особые стили для каждого набора колонок"
+
+#~ msgid "Tab name"
+#~ msgstr "Имя вкладки"
+
+#~ msgid "See available values"
+#~ msgstr "Возможные значения (англ.)"
+
+#~ msgid "Read more"
+#~ msgstr "Подробнее"
+
+#~ msgid "image url"
+#~ msgstr "ссылка на изображение"
+
+#~ msgid "Plain table"
+#~ msgstr "Простая таблица"
+
+#~ msgid "From CSV"
+#~ msgstr "Из CSV-файла"
+
+#~ msgid "1 second"
+#~ msgstr "1 секунда"
+
+#~ msgid "See filter IDs"
+#~ msgstr "Смотреть ID фильтров"
+
+#~ msgid "General settings"
+#~ msgstr "Основные настройки"
+
+#~ msgid "Available shortcodes"
+#~ msgstr "Список шорткодов"
+
+#~ msgid "Specify menu name and add elements to menu"
+#~ msgstr "Укажите имя меню, или добавьте элементы в укзанное меню"
+
+#~ msgid "Support links"
+#~ msgstr "Полезные ссылки"
+
+#~ msgid "You can support this project by buying the author a cup of coffee!"
+#~ msgstr "Вы можете поддержать этот проект, купив автору чашечку кофе!"
+
+#~ msgid "Donate with MoneyBookers.com"
+#~ msgstr "Сделать пожертвование через MoneyBookers.com"
+
+#~ msgid "Donation to help support Shortcodes Ultimate plugin"
+#~ msgstr "Пожертвование автору плагина Shortcodes Ultimate"
+
+#~ msgid "Click to make a donation"
+#~ msgstr "Кликните, чтобы сделать пожертвование"
+
+#~ msgid "Donate with Money.Yandex.ru"
+#~ msgstr "Сделать пожертвование через Money.Yandex.ru"
+
+#~ msgid "Donate with WebMoney.ru"
+#~ msgstr "Сделать пожертвование через WebMoney.ru"
+
+#~ msgid "Want to support author? Just share this link!"
+#~ msgstr "Хотите поддержать автора? Просто опубликйте ссылку!"
+
+#~ msgid "Share on Facebook"
+#~ msgstr "Опубликовать на Facebook"
+
+#~ msgid "Share on Twitter"
+#~ msgstr "Опубликовать на Twitter"
+
+#~ msgid "Shortcodes ultimate settings"
+#~ msgstr "Настройки Shortcodes Ultimate"
+
+#~ msgid "Contact author"
+#~ msgstr "Связаться с разработчиком"
+
+#~ msgid "Coming soon"
+#~ msgstr "Появится в ближайшее время"
+
+#~ msgid "Visit"
+#~ msgstr "Посетите"
