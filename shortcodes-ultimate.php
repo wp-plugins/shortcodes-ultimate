@@ -1,10 +1,10 @@
 <?php
 	/*
 	  Plugin Name: Shortcodes Ultimate
-	  Plugin URI: http://ilovecode.ru/?p=122
-	  Version: 3.3.1
+	  Plugin URI: http://gndev.info/shortcodes-ultimate/
+	  Version: 3.4.0
 	  Author: Vladimir Anokhin
-	  Author URI: http://ilovecode.ru/
+	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
 	  Text Domain: shortcodes-ultimate
 	  Domain Path: /languages

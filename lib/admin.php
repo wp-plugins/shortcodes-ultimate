@@ -1,6 +1,30 @@
 <?php
 
 	/**
+	 * Share buttons for admin page
+	 */
+	function su_share() {
+
+		// Share data
+		$title = str_replace( '+', '%20', urlencode( __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ) ) );
+		$text = str_replace( '+', '%20', urlencode( __( 'Must have WordPress plugin - Shortcodes Ultimate', 'shortcodes-ultimate' ) ) );
+		$url = urlencode( 'http://gndev.info/shortcodes-ultimate/' );
+		?>
+		<div id="su-share">
+
+			<!-- PlusOne -->
+			<iframe src="https://plusone.google.com/_/+1/fastbutton?url=<?php echo $url; ?>&amp;size=medium&amp;count=true&amp;annotation=&amp;hl=en-US" style="width:80px;height:21px;" scrolling="no"></iframe>
+
+			<!-- Twitter -->
+			<iframe src="http://platform.twitter.com/widgets/tweet_button.html?url=<?php echo $url; ?>&amp;via=gn_themes&amp;text=<?php echo $text; ?>&amp;lang=en" style="width:105px;height:21px;" scrolling="no"></iframe>
+
+			<!-- Facebook -->
+			<iframe src="http://www.facebook.com/plugins/like.php?href=<?php echo $url; ?>&amp;send=false&amp;layout=button_count&amp;width=80&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;height=21&amp;locale=en_US" style="width:80px;height:21px;" scrolling="no"></iframe>
+		</div>
+		<?php
+	}
+
+	/**
 	 * Register administration page
 	 */
 	function shortcodes_ultimate_add_admin() {
@@ -43,18 +67,17 @@
 						<h3><?php _e( 'FREE Support', 'shortcodes-ultimate' ); ?></h3>
 						<p><a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a></p>
 						<p><a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a></p>
-						<p><a href="http://ilovecode.ru/?p=122#commentform" target="_blank" style="color:red"><?php _e( 'Bug report', 'shortcodes-ultimate' ); ?></a></p>
 					</div>
 
 					<div class="su-twothird-column">
 						<h3><?php _e( 'Do you love this plugin?', 'shortcodes-ultimate' ); ?></h3>
-						<p><?php _e( 'Buy author a beer', 'shortcodes-ultimate' ); ?> - <a href="http://ilovecode.ru/donate/" target="_blank" style="color:red"><?php _e( 'Donate', 'shortcodes-ultimate' ); ?></a></p>
 						<p><a href="http://wordpress.org/extend/plugins/shortcodes-ultimate/" target="_blank"><?php _e( 'Rate this plugin at wordpress.org', 'shortcodes-ultimate' ); ?></a> (<?php _e( '5 stars', 'shortcodes-ultimate' ); ?>)</p>
 						<p><?php _e( 'Review this plugin in your blog', 'shortcodes-ultimate' ); ?></p>
-						<p><iframe src="http://www.facebook.com/plugins/like.php?href=http://wordpress.org/extend/plugins/shortcodes-ultimate/&amp;layout=button_count&amp;show_faces=false&amp;width=130&amp;action=like&amp;colorscheme=light&amp;height=24" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:24px;" allowTransparency="true"></iframe></p>
 					</div>
 
 					<div class="su-clear"></div>
+					<?php su_share(); ?>
+
 				</div>
 				<div class="su-pane">
 					<form action="" method="post" id="su-form-save-settings">
@@ -163,9 +186,9 @@
 								</td>
 								<td><?php echo str_replace( '&lt;br/&gt;', '<br/>', htmlspecialchars( $shortcode['usage'] ) ); ?></td>
 							</tr>
-			<?php
-		}
-		?>
+							<?php
+						}
+						?>
 					</table>
 				</div>
 				<div class="su-pane">
@@ -174,9 +197,9 @@
 							<th width="100"><?php _e( 'Shortcode', 'shortcodes-ultimate' ); ?></th>
 							<th><?php _e( 'Demo', 'shortcodes-ultimate' ); ?></th>
 						</tr>
-		<?php
-		foreach ( su_shortcodes() as $id => $shortcode ) {
-			?>
+						<?php
+						foreach ( su_shortcodes() as $id => $shortcode ) {
+							?>
 							<tr>
 								<td>
 									<strong><?php echo $shortcode['name']; ?></strong><br/>
@@ -184,9 +207,9 @@
 								</td>
 								<td><img src="<?php echo su_plugin_url(); ?>/images/demo/<?php echo $id; ?>.png" width="530" alt="<?php echo $shortcode['name']; ?>" /></td>
 							</tr>
-			<?php
-		}
-		?>
+							<?php
+						}
+						?>
 					</table>
 				</div>
 			</div>

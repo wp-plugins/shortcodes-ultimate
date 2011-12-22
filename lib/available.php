@@ -185,6 +185,36 @@
 				'content' => __( 'Highlighted text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Highlighted text', 'shortcodes-ultimate' )
 			),
+			# dropcap
+			'dropcap' => array(
+				'name' => 'Dropcap',
+				'type' => 'wrap',
+				'atts' => array(
+					'style' => array(
+						'values' => array(
+							'1',
+							'2',
+							'3'
+						),
+						'default' => '1',
+						'desc' => __( 'Dropcap style', 'shortcodes-ultimate' )
+					),
+					'size' => array(
+						'values' => array(
+							'1',
+							'2',
+							'3',
+							'4',
+							'5'
+						),
+						'default' => '3',
+						'desc' => __( 'Dropcap size', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[dropcap style="1"]D[/dropcap]ropcap',
+				'content' => __( 'D', 'shortcodes-ultimate' ),
+				'desc' => __( 'Dropcap', 'shortcodes-ultimate' )
+			),
 			# bloginfo
 			'bloginfo' => array(
 				'name' => 'Bloginfo',
@@ -631,6 +661,72 @@
 				'content' => '<table><tr><td></td></tr></table>',
 				'desc' => __( 'Styled table from HTML or CSV file', 'shortcodes-ultimate' )
 			),
+//			# pricing
+//			'pricing' => array(
+//				'name' => 'Pricing table',
+//				'type' => 'wrap',
+//				'atts' => array(
+//					'style' => array(
+//						'values' => array(
+//							'1',
+//							'2'
+//						),
+//						'default' => '1',
+//						'desc' => __( 'Table style', 'shortcodes-ultimate' )
+//					)
+//				),
+//				'usage' => '[pricing]<br/>[plan name="Plan 1"] Plan description [/plan]<br/>[/pricing]',
+//				'content' => '[plan][/plan]',
+//				'desc' => __( 'Customizable pricing table', 'shortcodes-ultimate' )
+//			),
+//			# plan
+//			'plan' => array(
+//				'name' => 'Pricing plan',
+//				'type' => 'wrap',
+//				'atts' => array(
+//					'name' => array(
+//						'values' => false,
+//						'default' => '&hellip;',
+//						'desc' => __( 'Plan name', 'shortcodes-ultimate' )
+//					),
+//					'price' => array(
+//						'values' => false,
+//						'default' => '$100',
+//						'desc' => __( 'Plan price', 'shortcodes-ultimate' )
+//					),
+//					'per' => array(
+//						'values' => false,
+//						'default' => '$100',
+//						'desc' => __( 'Price period', 'shortcodes-ultimate' )
+//					),
+//					'width' => array(
+//						'values' => array(
+//							'100',
+//							'150',
+//							'200',
+//							'250'
+//						),
+//						'default' => '150',
+//						'desc' => __( 'Box width', 'shortcodes-ultimate' )
+//					),
+//					'primary' => array(
+//						'values' => array(
+//							'0',
+//							'1'
+//						),
+//						'default' => '0',
+//						'desc' => __( 'Is primary plan?', 'shortcodes-ultimate' )
+//					),
+//					'class' => array(
+//						'values' => false,
+//						'default' => '',
+//						'desc' => __( 'Custom box class', 'shortcodes-ultimate' )
+//					)
+//				),
+//				'usage' => '[pricing]<br/>[plan name="Plan 1" price="$100" per="per month" width="150" primary="0"] Plan description [/plan]<br/>[/pricing]',
+//				'content' => '<ul><li>List item</li></ul>[button link="#"]Choose[/button]',
+//				'desc' => __( 'Customizable pricing table', 'shortcodes-ultimate' )
+//			),
 			# media
 			'media' => array(
 				'name' => 'Media',

@@ -9,9 +9,9 @@
 /* Spacer */
 .su-spacer {
 	display: block;
-	height: 0px;
-	line-height: 0px;
+	height: 0;
 	clear: both;
+	overflow: hidden;
 }
 .su-spacer-5 { height: 5px }
 .su-spacer-10 { height: 10px }
@@ -271,6 +271,9 @@
 .su-list-style-idea li { background: 0 50% url(../images/list-style-idea.png) no-repeat !important }
 .su-list-style-settings li { background: 0 50% url(../images/list-style-settings.png) no-repeat !important }
 .su-list-style-twitter li { background: 0 50% url(../images/list-style-twitter.png) no-repeat !important }
+
+.su-list-style-check li.x { background: 0 50% url(../images/list-style-cross.png) no-repeat !important }
+.su-list-style-cross li.v { background: 0 50% url(../images/list-style-check.png) no-repeat !important }
 
 /* Box */
 .su-box {
@@ -563,4 +566,68 @@
 	margin: 0;
 	padding: 0;
 	border: 2px solid #ccc;
+}
+
+/* Pricing & plan */
+.su-pricing {
+	margin: 0 0 1.5em 0;
+}
+.su-plan {
+	float: left;
+}
+
+.su-pricing-style-1 {
+	text-align: center;
+}
+.su-pricing-style-1 ul {
+	margin: 0;
+	padding: 0;
+}
+.su-pricing-style-1 li {
+	list-style-type: none;
+	display: block;
+}
+
+/* Dropcap */
+.su-dropcap {
+	float: left;
+	display: inline-block;
+	width: 2em;
+	height: 2em;
+	margin: 0.2em 0.5em 0.2em 0;
+	line-height: 2em;
+	text-align: center;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+
+.su-dropcap-style-1 {
+	background: #333 0 -20px url(../images/dropcap-style-1.png) repeat-x;
+	color: #f0f0f0;
+	text-shadow: -1px -1px 0 #000;
+	-moz-text-shadow: -1px -1px 0 #000;
+	-webkit-text-shadow: -1px -1px 0 #000;
+	border-radius: 2em;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
+}
+.su-dropcap-style-2 {
+	background: #ccc 0 -20px url(../images/dropcap-style-2.png) repeat-x;
+	color: #000;
+	text-shadow: 1px 1px 0 #eee;
+	-moz-text-shadow: 1px 1px 0 #eee;
+	-webkit-text-shadow: 1px 1px 0 #eee;
+	border-radius: 2em;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
+}
+.su-dropcap-style-3 {
+	background: url(../images/dropcap-style-3.png);
+	color: #fff;
+	border-radius: 2em;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;
+	text-shadow: -1px -1px 0 #aaa;
+	-moz-text-shadow: -1px -1px 0 #aaa;
+	-webkit-text-shadow: -1px -1px 0 #aaa;
 }

@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: gn_themes
-Donate link: http://ilovecode.ru/donate/
+Donate link: http://gndev.info/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 3.3.1
+Stable tag: 3.4.0
 
 Provides support for multiple useful shortcodes
 
@@ -15,31 +15,28 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 
 = Features =
 * 30+ amazing shortcodes
-* Handy shortcodes manager
+* Handy shortcodes generator
 * Custom CSS editor with syntax highlight
 * Frequently updates
 * International
 
 = New in this version =
-* Changed: [nivo_slider] and [jcarousel] (see docs in console)
-* Changed: shortcode generator dropdown
-* New shortcode: [custom_gallery]
-* New parameter: [members login="0|1"]
-* New shortcode: guests
-* German translation
+* Belarusian translation
+* New shortcode [dropcap]
 
 = Got a bug? =
-* Forum - http://wordpress.org/tags/shortcodes-ultimate?forum_id=10
-* Author blog - http://ilovecode.ru/?p=122
+* Support forum - http://wordpress.org/tags/shortcodes-ultimate?forum_id=10
+* Plugin page - http://gndev.info/shortcodes-ultimate/
 * Twitter: http://twitter.com/gn_themes
 
 = Translations =
-* Fr - Aurélien DENIS [ http://wpchannel.com/ ]
-* Sp - Esteban Truelsegaard [ http://www.netmdp.com/ ]
-* De - Matthias Wittmann [ http://net-graphix.de/ ]
-* Ru - Vladimir Anokhin [ http://ilovecode.ru/ ]
+* Fr - [Aurélien DENIS](http://wpchannel.com/)
+* Sp - [Esteban Truelsegaard](http://www.netmdp.com/)
+* De - [Matthias Wittmann](http://net-graphix.de/)
+* Ru - [Vladimir Anokhin](http://gndev.info/)
+* By - [Alexander Ovsov](http://webhostinggeeks.com/science/)
 
-Have a translation? Contact me - ano.vladimir@gmail.com
+Have a translation? [Contact me](ano.vladimir@gmail.com)
 
 
 == Installation ==
@@ -98,6 +95,10 @@ Also, you can use [jcarousel] and [custom_gallery] according these principles.
 
 
 == Changelog ==
+
+= 3.4 =
+* Belarusian translation
+* New shortcode [dropcap]
 
 = 3.3 =
 * Changed: [nivo_slider] and [jcarousel] (see docs in console)

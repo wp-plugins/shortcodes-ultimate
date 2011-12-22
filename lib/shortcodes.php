@@ -133,6 +133,24 @@
 	}
 
 	/**
+	 * Shortcode: dropcap
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_dropcap_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'style' => 1,
+				'size' => 3
+				), $atts ) );
+
+		$em = $size * 0.5 . 'em';
+
+		return '<span class="su-dropcap su-dropcap-style-' . $style . '" style="font-size:' . $em . '">' . $content . '</span>';
+	}
+
+	/**
 	 * Shortcode: column
 	 *
 	 * @param array $atts Shortcode attributes
@@ -400,6 +418,55 @@
 		$return = '<div class="su-table su-table-style-' . $style . '">';
 		$return .= ( $file ) ? su_parse_csv( $file ) : do_shortcode( $content );
 		$return .= '</div>';
+
+		return $return;
+	}
+
+	/**
+	 * Shortcode: pricing
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_pricing_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'style' => 1
+				), $atts ) );
+
+		$return = '<div class="su-pricing su-pricing-style-' . $style . '">';
+		$return .= do_shortcode( $content );
+		$return .= '<div class="su-spacer"></div></div>';
+
+		return $return;
+	}
+
+	/**
+	 * Shortcode: plan
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_plan_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'name' => '&hellip;',
+				'price' => '$100',
+				'per' => 'per month',
+				'width' => 150,
+				'primary' => false,
+				'class' => false
+				), $atts ) );
+
+		$custom_classes = ( $primary ) ? ' su-plan-primary' : '';
+		$custom_classes .= ( $class ) ? ' ' . $class : '';
+
+		$return = '<div class="su-plan' . $custom_classes . '" style="width:' . $width . 'px">';
+		$return .= '<div class="su-plan-name">' . $name . '</div>';
+		$return .= '<div class="su-plan-price">' . $price . '<span class="su-sep">/</span><span class="su-per">' . $per . '</span></div>';
+		$return .= '<div class="su-plan-content">';
+		$return .= do_shortcode( $content );
+		$return .= '</div><div class="su-plan-footer"></div></div>';
 
 		return $return;
 	}
