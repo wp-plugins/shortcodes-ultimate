@@ -4,7 +4,7 @@
 	require( '../../../../wp-load.php' );
 
 	// Capability check
-	if ( !current_user_can( 'edit_posts' ) || !current_user_can( 'edit_pages' ) )
+	if ( !current_user_can( 'publish_posts' ) )
 		die( 'Access denied' );
 
 	// Param check

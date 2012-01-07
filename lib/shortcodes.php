@@ -53,6 +53,10 @@
 			}
 			$return = '<div class="su-tabs su-tabs-style-' . $style . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div><div class="su-spacer"></div></div>';
 		}
+
+		// Unset globals
+		unset( $GLOBALS['tabs'], $GLOBALS['tab_count'] );
+
 		return $return;
 	}
 
@@ -80,10 +84,26 @@
 	function su_spoiler_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
 				'title' => __( 'Spoiler title', 'shortcodes-ultimate' ),
-				'style' => 0
+				'open' => false,
+				'style' => 1
 				), $atts ) );
 
-		return '<div class="su-spoiler su-spoiler-open su-spoiler-style-' . $style . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content">' . do_shortcode( $content ) . '</div></div>';
+		$open_class = ( $open ) ? ' su-spoiler-open' : '';
+		$open_display = ( $open ) ? ' style="display:block"' : '';
+
+		return '<div class="su-spoiler su-spoiler-style-' . $style . $open_class . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content"' . $open_display . '>' . do_shortcode( $content ) . '</div></div>';
+	}
+
+	/**
+	 * Shortcode: accordion
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_accordion_shortcode( $atts = null, $content = null ) {
+
+		return '<div class="su-accordion">' . do_shortcode( $content ) . '</div>';
 	}
 
 	/**

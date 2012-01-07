@@ -7,9 +7,26 @@ jQuery(document).ready(function($) {
 	});
 
 	// Spoiler
-	$('.su-spoiler').removeClass('su-spoiler-open');
 	$('.su-spoiler .su-spoiler-title').click(function() {
-		$(this).parent('.su-spoiler').toggleClass('su-spoiler-open');
+
+		var // Spoiler elements
+		spoiler = $(this).parent('.su-spoiler').filter(':first'),
+		title = spoiler.children('.su-spoiler-title'),
+		content = spoiler.children('.su-spoiler-content'),
+		isAccordion = ( spoiler.parent('.su-accordion').length > 0 ) ? true : false;
+
+		if ( spoiler.hasClass('su-spoiler-open') ) {
+			if ( !isAccordion ) {
+				content.hide(200);
+				spoiler.removeClass('su-spoiler-open');
+			}
+		}
+		else {
+			spoiler.parent('.su-accordion').children('.su-spoiler').removeClass('su-spoiler-open');
+			spoiler.parent('.su-accordion').find('.su-spoiler-content').hide(200);
+			content.show(100);
+			spoiler.addClass('su-spoiler-open');
+		}
 	});
 
 	// Tabs

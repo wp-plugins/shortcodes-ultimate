@@ -83,11 +83,36 @@
 						'values' => array( ),
 						'default' => __( 'Spoiler title', 'shortcodes-ultimate' ),
 						'desc' => __( 'Spoiler title', 'shortcodes-ultimate' )
+					),
+					'open' => array(
+						'values' => array(
+							'0',
+							'1'
+						),
+						'default' => '0',
+						'desc' => __( 'Is spoiler open?', 'shortcodes-ultimate' )
+					),
+					'style' => array(
+						'values' => array(
+							'1',
+							'2'
+						),
+						'default' => '1',
+						'desc' => __( 'Spoiler style', 'shortcodes-ultimate' )
 					)
 				),
 				'usage' => '[spoiler title="Spoiler title"] Hidden text [/spoiler]',
 				'content' => __( 'Hidden content', 'shortcodes-ultimate' ),
 				'desc' => __( 'Hidden text', 'shortcodes-ultimate' )
+			),
+			# accordion
+			'accordion' => array(
+				'name' => 'Accordion',
+				'type' => 'wrap',
+				'atts' => array( ),
+				'usage' => '[accordion]<br/>[spoiler open="true"] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[/accordion]',
+				'content' => '[spoiler] content [/spoiler]',
+				'desc' => __( 'Accordion', 'shortcodes-ultimate' )
 			),
 			# divider
 			'divider' => array(

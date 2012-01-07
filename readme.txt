@@ -4,7 +4,7 @@ Donate link: http://gndev.info/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 3.4.1
+Stable tag: 3.5.0
 
 Provides support for multiple useful shortcodes
 
@@ -21,8 +21,10 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * International
 
 = New in this version =
-* Belarusian translation
-* New shortcode [dropcap]
+* New shortcode [accordion] for muliple spoilers
+* Improved spoiler shortcode (check settings page)
+* Multiple tabs bugfix
+* Authors can also use shortcode generator
 
 = Got a bug? =
 * [Support forum](http://wordpress.org/tags/shortcodes-ultimate?forum_id=10)
@@ -95,6 +97,9 @@ Also, you can use [jcarousel] and [custom_gallery] according these principles.
 
 
 == Changelog ==
+
+= 3.5 =
+
 
 = 3.4 =
 * Belarusian translation
