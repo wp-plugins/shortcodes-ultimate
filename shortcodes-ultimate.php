@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.5.0
+	  Version: 3.6.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -184,6 +184,16 @@
 		$strings = __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ) . __( 'Vladimir Anokhin', 'shortcodes-ultimate' ) . __( 'Provides support for many easy to use shortcodes', 'shortcodes-ultimate' );
 	}
 
+	/*
+	 * Custom shortcode function for nested shortcodes support
+	 */
+	function su_do_shortcode( $content ) {
+		if ( strpos( $content, '[=' ) !== false ) {
+			$content = preg_replace( '@(\[=*)=(s|/)@', "$1$2", $content );
+		}
+		return do_shortcode( $content );
+	}
+
 	/**
 	 * Disable auto-formatting for shortcodes
 	 *
@@ -309,9 +319,9 @@
 					<div id="su-generator-header">
 						<select id="su-generator-select">
 							<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
-							<?php
-							foreach ( su_shortcodes() as $name => $shortcode ) {
-								?>
+		<?php
+		foreach ( su_shortcodes() as $name => $shortcode ) {
+			?>
 								<option value="<?php echo $name; ?>"><?php echo strtoupper( $name ); ?>:&nbsp;&nbsp;<?php echo $shortcode['desc']; ?></option>
 								<?php
 							}

@@ -11,9 +11,9 @@
 	function su_build_gallery( $source = 'post', $link = 'none', $size = '150x150', $limit = 10, $options = array( ) ) {
 
 		// Thumbnail dimensions
-		$dimensions = explode( 'x', $size );
-		$width = $dimensions[0];
-		$height = $dimensions[1];
+		$dims = explode( 'x', $size );
+		$width = $dims[0];
+		$height = $dims[1];
 
 		### SOURCE: POST ###
 		if ( strpos( $source, 'post' ) !== false ) {
@@ -53,7 +53,8 @@
 					'image' => $attachment->guid,
 					'thumbnail' => su_plugin_url() . '/lib/timthumb.php?src=' . $attachment->guid . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;zc=1&amp;q=100',
 					'link' => $linked,
-					'name' => $attachment->post_title
+					'name' => $attachment->post_title,
+					'description' => $attachment->post_content
 				);
 			}
 		}
@@ -84,7 +85,8 @@
 					'image' => su_get_post_image( $image->ID ),
 					'thumbnail' => su_plugin_url() . '/lib/timthumb.php?src=' . su_get_post_image( $image->ID ) . '&amp;w=' . $width . '&amp;h=' . $height . '&amp;zc=1&amp;q=100',
 					'link' => $linked,
-					'name' => $image->post_title
+					'name' => $image->post_title,
+					'description' => $image->post_excerpt
 				);
 			}
 		}

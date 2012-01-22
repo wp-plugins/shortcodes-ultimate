@@ -91,7 +91,7 @@
 		$open_class = ( $open ) ? ' su-spoiler-open' : '';
 		$open_display = ( $open ) ? ' style="display:block"' : '';
 
-		return '<div class="su-spoiler su-spoiler-style-' . $style . $open_class . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content"' . $open_display . '>' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-style-' . $style . $open_class . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content"' . $open_display . '>' . su_do_shortcode( $content ) . '</div></div>';
 	}
 
 	/**
@@ -412,11 +412,17 @@
 		extract( shortcode_atts( array(
 				'url' => '',
 				'width' => 600,
-				'height' => 400
+				'height' => 400,
+				'jwplayer' => false
 				), $atts ) );
 
+		if ( $jwplayer ) {
+			$jwplayer = str_replace( '#038;', '&', $jwplayer );
+			parse_str( $jwplayer, $jwplayer_options );
+		}
+
 		$return = '<div class="su-media">';
-		$return .= ( $url ) ? su_get_media( $url, $width, $height ) : __( 'Please specify media url', 'shortcodes-ultimate' );
+		$return .= ( $url ) ? su_get_media( $url, $width, $height, $jwplayer_options ) : __( 'Please specify media url', 'shortcodes-ultimate' );
 		$return .= '</div>';
 
 		return $return;
@@ -625,14 +631,15 @@
 		extract( shortcode_atts( array(
 				'source' => 'post',
 				'link' => 'image',
+				'description' => false,
 				'size' => '200x200',
 				'limit' => 10
 				), $atts ) );
 
 		// Get dimensions
-		$size = explode( 'x', strtolower( $size ) );
-		$width = $size[0];
-		$height = $size[1];
+		$dims = explode( 'x', strtolower( $size ) );
+		$width = $dims[0];
+		$height = $dims[1];
 
 		// Define unique gallery ID
 		$gallery_id = uniqid( 'su-custom-gallery_' );
@@ -645,7 +652,10 @@
 
 			$return = '<div id="' . $gallery_id . '" class="su-custom-gallery">';
 			foreach ( $slides as $slide ) {
-				$return .= '<a href="' . $slide['link'] . '" title="' . $slide['name'] . '"><img src="' . $slide['thumbnail'] . '" alt="' . $slide['name'] . '" width=" ' . $width . ' " height="' . $height . '" /></a>';
+
+				// Description
+				$desc = ( $description ) ? '<span>' . $slide['description'] . '</span>' : false;
+				$return .= '<a href="' . $slide['link'] . '" title="' . $slide['name'] . '"><img src="' . $slide['thumbnail'] . '" alt="' . $slide['name'] . '" width=" ' . $width . ' " height="' . $height . '" />' . $desc . '</a>';
 			}
 			$return .= '<div class="su-spacer"></div></div>';
 		}

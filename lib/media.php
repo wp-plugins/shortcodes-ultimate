@@ -8,7 +8,7 @@
 	 * @param int $height Media object height
 	 * @return string Object markup
 	 */
-	function su_get_media( $media_url, $width, $height, $preview = false ) {
+	function su_get_media( $media_url, $width, $height, $jwplayer = false ) {
 
 		// Youtube video
 		$video_url = parse_url( $media_url );
@@ -44,38 +44,20 @@
 		if ( in_array( $video_ext, $videos ) ) {
 			$player_id = uniqid( '_', false );
 
-			$return = '
-					<div id="player' . $player_id . '"> </div>
-					<script type="text/javascript">
-						jwplayer("player' . $player_id . '").setup({
-							flashplayer: "' . su_plugin_url() . '/lib/player.swf",
-							file: "' . $media_url . '",
-							height: ' . $height . ',
-							width: ' . $width . '
-						});
-					</script>
-				';
+			if ( is_array( $jwplayer ) ) {
+				foreach( $jwplayer as $jwplayer_option => $jwplayer_value ) {
+					$jwplayer_options .= ',' . $jwplayer_option . ':"' . $jwplayer_value . '"';
+				}
+			}
+
+			$return = '<div id="player' . $player_id . '"><script type="text/javascript">jwplayer("player' . $player_id . '").setup({flashplayer:"' . su_plugin_url() . '/lib/player.swf",file:"' . $media_url . '",height:' . $height . ',width:' . $width . $jwplayer_options . '});</script></div>';
 		}
 
 		// Audio file (mp3)
 		if ( mb_substr( $media_url, -4 ) == '.mp3' ) {
 			$player_id = uniqid( '_', false );
 
-			$return = '
-					<div id="player' . $player_id . '"> </div>
-					<script type="text/javascript">
-						jwplayer("player' . $player_id . '").setup({
-							flashplayer: "' . su_plugin_url() . '/lib/player.swf",
-							file: "' . $media_url . '",
-							height: ' . $height . ',
-							width: ' . $width . ',
-							controlbar: "bottom",
-							image: "' . su_plugin_url() . '/images/media-audio.jpg",
-							icons: "none",
-							screencolor: "F0F0F0"
-						});
-					</script>
-				';
+			$return = '<div id="player' . $player_id . '"><script type="text/javascript">jwplayer("player' . $player_id . '").setup({flashplayer:"' . su_plugin_url() . '/lib/player.swf",file:"' . $media_url . '",height: ' . $height . ',width:' . $width . ',controlbar:"bottom",image:"' . su_plugin_url() . '/images/media-audio.jpg",icons:"none",screencolor:"F0F0F0"});</script></div>';
 		}
 
 		return $return;

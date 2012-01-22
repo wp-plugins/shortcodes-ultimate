@@ -1,0 +1,4 @@
+Shortcode [twitter]/[tweet]
+Shortcode [label]
+Shortcode [pricing] + [plan] (pricing tables)
+Nested shortcodes

@@ -4,7 +4,7 @@ Donate link: http://gndev.info/donate/
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 3.3
-Stable tag: 3.5.0
+Stable tag: 3.6.0
 
 Provides support for multiple useful shortcodes
 
@@ -25,6 +25,10 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * Improved spoiler shortcode (check settings page)
 * Multiple tabs bugfix
 * Authors can also use shortcode generator
+* Nested shortcodes: spoiler, column, tabs, box, note
+* Descriptions for [custom_gallery]
+* Custom options for jwPlayer
+* Fixed size option for sliders and gallery
 
 = Got a bug? =
 * [Support forum](http://wordpress.org/tags/shortcodes-ultimate?forum_id=10)
@@ -68,6 +72,7 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 = What mean compatibility mode? =
 This mode adds a prefix to all plugin shortcodes
+
 * [button] => [gn_button]
 * [tabs] => [gn_tabs]
 * [tab] => [gn_tab]
@@ -80,17 +85,23 @@ Search it near Upload/Insert buttons. See screenshots.
 With these shortcodes you can create different galleries from attached to post images, or from category posts.
 
 Way 1: gallery from attachments
+
 * Create new post
 * Upload images
 * Use next shortcode on pages, posts or even widgets
+
 `[nivo_slider source="post=XX" link="image"]`
+
 XX - ID of the post with uploaded images
 
 Way 2: gallery from category
+
 * Create some posts in some category
 * Set the thumbnails of posts
 * Use next shortcode on pages, posts or even widgets
+
 `[nivo_slider source="cat=XX" link="image"]`
+
 XX - ID of the category with new posts
 
 Also, you can use [jcarousel] and [custom_gallery] according these principles.
@@ -98,8 +109,17 @@ Also, you can use [jcarousel] and [custom_gallery] according these principles.
 
 == Changelog ==
 
-= 3.5 =
+= 3.6 =
+* Descriptions for [custom_gallery]
+* Custom options for jwPlayer
+* Fixed size option for sliders and gallery
 
+= 3.5 =
+* New shortcode [accordion] for muliple spoilers
+* Improved spoiler shortcode (check settings page)
+* Multiple tabs bugfix
+* Authors can also use shortcode generator
+* Nested shortcodes: spoiler, column, tabs, box, note
 
 = 3.4 =
 * Belarusian translation

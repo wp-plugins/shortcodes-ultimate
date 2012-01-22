@@ -771,9 +771,18 @@
 						'values' => false,
 						'default' => '400',
 						'desc' => __( 'Height', 'shortcodes-ultimate' )
+					),
+					'jwplayer' => array(
+						'values' => array(
+							'',
+							'autostart=true',
+							'controlbar=bottom'
+						),
+						'default' => '',
+						'desc' => __( 'jwPlayer url-encoded params', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]',
+				'usage' => '[media url="http://www.youtube.com/watch?v=2c2EEacfC1M"]<br/>[media url="http://vimeo.com/15069551"]<br/>[media url="video.mp4"]<br/>[media url="video.flv"]<br/>[media url="audio.mp3"]<br/>[media url="image.jpg"]<br/>[media url="video.flv" jwplayer="controlbar=bottom&autostart=true"]',
 				'desc' => __( 'YouTube video, Vimeo video, .mp4/.flv video, .mp3 file or images', 'shortcodes-ultimate' )
 			),
 			# document
@@ -990,6 +999,14 @@
 						),
 						'default' => 'image',
 						'desc' => __( 'Images links', 'shortcodes-ultimate' )
+					),
+					'description' => array(
+						'values' => array(
+							'0',
+							'1'
+						),
+						'default' => '0',
+						'desc' => __( 'Show image description', 'shortcodes-ultimate' )
 					),
 					'size' => array(
 						'values' => array(
