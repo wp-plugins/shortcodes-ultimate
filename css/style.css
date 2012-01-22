@@ -577,16 +577,16 @@
 }
 
 /* Custom gallery */
-.su-custom-gallery {
+.su-custom-gallery-style-1 {
 	margin: 0 0 1.5em 0;
 }
-.su-custom-gallery a {
+.su-custom-gallery-style-1 a {
 	float: left;
 	display: block;
 	margin: 0 1em 1em 0;
 	padding: 0;
 }
-.su-custom-gallery img {
+.su-custom-gallery-style-1 img {
 	display: block;
 	margin: 0;
 	padding: 0;

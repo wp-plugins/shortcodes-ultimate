@@ -629,6 +629,7 @@
 	 */
 	function su_custom_gallery_shortcode( $atts, $content = null ) {
 		extract( shortcode_atts( array(
+				'style' => 1,
 				'source' => 'post',
 				'link' => 'image',
 				'description' => false,
@@ -650,7 +651,7 @@
 		// If slides exists
 		if ( count( $slides ) > 1 ) {
 
-			$return = '<div id="' . $gallery_id . '" class="su-custom-gallery">';
+			$return = '<div id="' . $gallery_id . '" class="su-custom-gallery su-custom-gallery-style-' . $style . '">';
 			foreach ( $slides as $slide ) {
 
 				// Description

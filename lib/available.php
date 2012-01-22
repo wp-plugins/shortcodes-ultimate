@@ -980,6 +980,13 @@
 				'name' => 'Custom gallery',
 				'type' => 'single',
 				'atts' => array(
+					'style' => array(
+						'values' => array(
+							'1'
+						),
+						'default' => '1',
+						'desc' => __( 'Gallery style', 'shortcodes-ultimate' )
+					),
 					'source' => array(
 						'values' => array(
 							'post',
