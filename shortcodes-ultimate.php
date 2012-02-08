@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.6.1
+	  Version: 3.7.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -187,9 +187,9 @@
 	/*
 	 * Custom shortcode function for nested shortcodes support
 	 */
-	function su_do_shortcode( $content ) {
-		if ( strpos( $content, '[=' ) !== false ) {
-			$content = preg_replace( '@(\[=*)=(s|/)@', "$1$2", $content );
+	function su_do_shortcode( $content, $modifier ) {
+		if ( strpos( $content, '[_' ) !== false ) {
+			$content = preg_replace( '@(\[_*)_(' . $modifier . '|/)@', "$1$2", $content );
 		}
 		return do_shortcode( $content );
 	}

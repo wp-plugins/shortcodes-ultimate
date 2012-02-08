@@ -34,6 +34,7 @@
 				'post_type' => 'attachment',
 				'numberposts' => $limit,
 				'order' => 'ASC',
+				'orderby' => 'menu_order',
 				'post_status' => null,
 				'post_parent' => $post_id
 				) );

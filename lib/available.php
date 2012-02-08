@@ -210,6 +210,27 @@
 				'content' => __( 'Highlighted text', 'shortcodes-ultimate' ),
 				'desc' => __( 'Highlighted text', 'shortcodes-ultimate' )
 			),
+			# label
+			'label' => array(
+				'name' => 'Label',
+				'type' => 'wrap',
+				'atts' => array(
+					'style' => array(
+						'values' => array(
+							'default',
+							'success',
+							'warning',
+							'important',
+							'info'
+						),
+						'default' => 'default',
+						'desc' => __( 'Label style', 'shortcodes-ultimate' )
+					)
+				),
+				'usage' => '[label style="info"]Something[/label]',
+				'content' => __( 'Label', 'shortcodes-ultimate' ),
+				'desc' => __( 'Styled label', 'shortcodes-ultimate' )
+			),
 			# dropcap
 			'dropcap' => array(
 				'name' => 'Dropcap',
@@ -329,7 +350,8 @@
 							'1',
 							'2',
 							'3',
-							'4'
+							'4',
+							'5'
 						),
 						'default' => '1',
 						'desc' => __( 'Button background style', 'shortcodes-ultimate' )
@@ -342,13 +364,16 @@
 						'default' => '0',
 						'desc' => __( 'Dark text color', 'shortcodes-ultimate' )
 					),
-					'square' => array(
+					'radius' => array(
 						'values' => array(
+							'auto',
 							'0',
-							'1'
+							'5',
+							'10',
+							'20'
 						),
-						'default' => '0',
-						'desc' => __( 'Disable rounded corners', 'shortcodes-ultimate' )
+						'default' => 'auto',
+						'desc' => __( 'Corners radius', 'shortcodes-ultimate' )
 					),
 					'icon' => array(
 						'values' => array( ),
@@ -1077,7 +1102,7 @@
 						'desc' => __( 'Show relative time', 'shortcodes-ultimate' )
 					)
 				),
-				'usage' => '[tweets username="gn_themes" limit="3" style="1" format="teaser"]',
+				'usage' => '[tweets username="gn_themes" limit="3" style="1" show_time="1"]',
 				'desc' => __( 'Recent tweets', 'shortcodes-ultimate' )
 			),
 		);

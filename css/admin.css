@@ -105,6 +105,9 @@
 	border-bottom: 1px solid #DFDFDF;
 	border-left: 1px solid #DFDFDF;
 }
+.su-pane table.fixed input[type="checkbox"] {
+	margin: 0 5px 1px 0;
+}
 
 .no-js .su-pane {
 	display: block;

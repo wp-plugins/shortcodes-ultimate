@@ -145,18 +145,21 @@
 
 /* Spoiler */
 .su-spoiler-style-1 { margin: 0 0 1.5em 0 }
-.su-spoiler-style-1 .su-spoiler-title {
+.su-spoiler-style-1 > .su-spoiler-title {
 	padding: 0.3em 0 0.3em 26px;
 	font-weight: bold;
 	background: 0 50% url(../images/spoiler-closed.png) no-repeat;
 	cursor: pointer;
 }
-.su-spoiler-style-1.su-spoiler-open .su-spoiler-title {
+.su-spoiler-style-1.su-spoiler-open > .su-spoiler-title {
 	background: 0 50% url(../images/spoiler-open.png) no-repeat;
 }
 .su-spoiler-style-1 .su-spoiler-content {
 	padding: 15px 0;
 	display: none;
+}
+.su-spoiler-style-1 .su-spoiler-style-1 {
+	margin: 1em;
 }
 
 .su-spoiler-style-2 {
@@ -167,7 +170,7 @@
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-.su-spoiler-style-2 .su-spoiler-title {
+.su-spoiler-style-2 > .su-spoiler-title {
 	padding: 10px 10px 10px 40px;
 	background: #f0f0f0 12px 8px url(../images/spoiler-style-2.png) no-repeat;
 	font-size: 14px;
@@ -180,7 +183,7 @@
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
-.su-spoiler-style-2.su-spoiler-open .su-spoiler-title {
+.su-spoiler-style-2.su-spoiler-open > .su-spoiler-title {
 	border-bottom: 1px solid #ccc;
 	background: #f0f0f0 12px -92px url(../images/spoiler-style-2.png) no-repeat;
 }
@@ -343,6 +346,26 @@
 	padding: 1px 0;
 }
 
+/* Label */
+.su-label {
+	display: inline-block;
+	margin-right: 0.5em;
+	padding: 0.2em 0.3em;
+	font-size: 0.8em;
+	height: 0.8em;
+	line-height: 0.8em;
+	text-transform: uppercase;
+	color: #fff;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.su-label-style-default { background: #999 }
+.su-label-style-success { background: #090 }
+.su-label-style-warning { background: #f90 }
+.su-label-style-important { background: #f03 }
+.su-label-style-info { background: #09c }
+
 /* Button */
 .su-button {
 	display: inline-block;
@@ -359,32 +382,28 @@
 	padding: 0 !important;
 }
 
-.su-button-style-1 span {
-	background: 0 -20px url(../images/button-style-1.png) repeat-x;
-}
-.su-button-style-1:hover span {
-	background: 0 0 url(../images/button-style-1.png) repeat-x;
-}
+.su-button-style-1 span { background: 0 -20px url(../images/button-style-1.png) repeat-x }
+.su-button-style-1:hover span { background: 0 0 url(../images/button-style-1.png) repeat-x }
 
-.su-button-style-2 span {
-	background: 0 50% url(../images/button-style-2.png) repeat-x;
-}
-.su-button-style-2:hover span {
-	background: 100% 50% url(../images/button-style-2.png) repeat-x;
-}
+.su-button-style-2 span { background: 0 50% url(../images/button-style-2.png) repeat-x }
+.su-button-style-2:hover span { background: 100% 50% url(../images/button-style-2.png) repeat-x }
 
-.su-button-style-3 span {
-	background: 0 50% url(../images/button-style-3.png) no-repeat;
-}
-.su-button-style-3:hover span {
-	background: -710px 50% url(../images/button-style-3.png) no-repeat;
-}
+.su-button-style-3 span { background: 0 50% url(../images/button-style-3.png) no-repeat }
+.su-button-style-3:hover span { background: -710px 50% url(../images/button-style-3.png) no-repeat }
 
-.su-button-style-4 span {
-	background: 0 0 url(../images/button-style-4.png) repeat-x;
+.su-button-style-4 span { background: 0 0 url(../images/button-style-4.png) repeat-x }
+.su-button-style-4:hover span { background: 0 0 url(../images/button-style-1.png) repeat-x }
+
+.su-button-style-5 span {
+	margin: 1px;
+	border: 1px dashed #fff !important;
 }
-.su-button-style-4:hover span {
-	background: 0 0 url(../images/button-style-1.png) repeat-x;
+.su-button-style-5:hover span {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	-moz-opacity: 0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
 }
 
 /* Fancy link */

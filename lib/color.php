@@ -45,16 +45,16 @@
 				if ( preg_match( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', $supplied_hex ) ) {
 					$supplied_hex = preg_replace( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', '\\1\\1\\2\\2\\3\\3', $supplied_hex );
 				} else {
-					trigger_error( "Invalid hex value", E_USER_ERROR );
+					trigger_error( "Invalid hex color value", E_USER_ERROR );
 				}
 				break;
 			case 6:
 				if ( !preg_match( '/^[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i', $supplied_hex ) ) {
-					trigger_error( "Invalid hex value", E_USER_ERROR );
+					trigger_error( "Invalid hex color value", E_USER_ERROR );
 				}
 				break;
 			default:
-				trigger_error( "Invalid hex length", E_USER_ERROR );
+				trigger_error( "Invalid hex color length", E_USER_ERROR );
 		}
 
 		// Start shifting

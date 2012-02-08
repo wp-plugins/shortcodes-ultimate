@@ -91,7 +91,7 @@
 		$open_class = ( $open ) ? ' su-spoiler-open' : '';
 		$open_display = ( $open ) ? ' style="display:block"' : '';
 
-		return '<div class="su-spoiler su-spoiler-style-' . $style . $open_class . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content"' . $open_display . '>' . su_do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-style-' . $style . $open_class . '"><div class="su-spoiler-title">' . $title . '</div><div class="su-spoiler-content"' . $open_display . '>' . su_do_shortcode( $content, 's' ) . '</div></div>';
 	}
 
 	/**
@@ -103,7 +103,7 @@
 	 */
 	function su_accordion_shortcode( $atts = null, $content = null ) {
 
-		return '<div class="su-accordion">' . do_shortcode( $content ) . '</div>';
+		return '<div class="su-accordion">' . su_do_shortcode( $content, 'a' ) . '</div>';
 	}
 
 	/**
@@ -153,6 +153,21 @@
 	}
 
 	/**
+	 * Shortcode: label
+	 *
+	 * @param array $atts Shortcode attributes
+	 * @param string $content
+	 * @return string Output html
+	 */
+	function su_label_shortcode( $atts, $content = null ) {
+		extract( shortcode_atts( array(
+				'style' => 'default'
+				), $atts ) );
+
+		return '<span class="su-label su-label-style-' . $style . '">' . $content . '</span>';
+	}
+
+	/**
 	 * Shortcode: dropcap
 	 *
 	 * @param array $atts Shortcode attributes
@@ -184,7 +199,7 @@
 				'style' => 0
 				), $atts ) );
 
-		return ( $last ) ? '<div class="su-column su-column-' . $size . ' su-column-last su-column-style-' . $style . '">' . do_shortcode( $content ) . '</div><div class="su-spacer"></div>' : '<div class="su-column su-column-' . $size . ' su-column-style-' . $style . '">' . do_shortcode( $content ) . '</div>';
+		return ( $last ) ? '<div class="su-column su-column-' . $size . ' su-column-last su-column-style-' . $style . '">' . su_do_shortcode( $content, 'c' ) . '</div><div class="su-spacer"></div>' : '<div class="su-column su-column-' . $size . ' su-column-style-' . $style . '">' . su_do_shortcode( $content, 'c' ) . '</div>';
 	}
 
 	/**
@@ -245,6 +260,7 @@
 				'link' => '#',
 				'color' => '#aaa',
 				'dark' => false,
+				'radius' => 'auto',
 				'square' => false,
 				'style' => 1,
 				'size' => 3,
@@ -253,8 +269,11 @@
 				'target' => false
 				), $atts ) );
 
+		// Old parameter compatibility, square
+		$radius = ( $square ) ? 0 : $radius;
+
 		$styles = array(
-			'border_radius' => ( $square ) ? 0 : round( $size + 2 ),
+			'border_radius' => ( $radius == 'auto' ) ? round( $size + 2 ) : intval( $radius ),
 			'dark_color' => su_hex_shift( $color, 'darker', 20 ),
 			'light_color' => su_hex_shift( $color, 'lighter', 70 ),
 			'size' => round( ( $size + 9 ) * 1.3 ),
@@ -363,7 +382,7 @@
 			'text_shadow' => su_hex_shift( $color, 'darker', 70 ),
 		);
 
-		return '<div class="su-box" style="border:1px solid ' . $styles['dark_color'] . '"><div class="su-box-title" style="background-color:' . $color . ';border-top:1px solid ' . $styles['light_color'] . ';text-shadow:1px 1px 0 ' . $styles['text_shadow'] . '">' . $title . '</div><div class="su-box-content">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-box" style="border:1px solid ' . $styles['dark_color'] . '"><div class="su-box-title" style="background-color:' . $color . ';border-top:1px solid ' . $styles['light_color'] . ';text-shadow:1px 1px 0 ' . $styles['text_shadow'] . '">' . $title . '</div><div class="su-box-content">' . su_do_shortcode( $content, 'b' ) . '</div></div>';
 	}
 
 	/**
@@ -385,7 +404,7 @@
 			'text_color' => su_hex_shift( $color, 'darker', 70 )
 		);
 
-		return '<div class="su-note" style="background-color:' . $styles['light_color'] . ';border:1px solid ' . $styles['dark_color'] . '"><div class="su-note-shell" style="border:1px solid ' . $styles['extra_light_color'] . ';color:' . $styles['text_color'] . '">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-note" style="background-color:' . $styles['light_color'] . ';border:1px solid ' . $styles['dark_color'] . '"><div class="su-note-shell" style="border:1px solid ' . $styles['extra_light_color'] . ';color:' . $styles['text_color'] . '">' . su_do_shortcode( $content, 'n' ) . '</div></div>';
 	}
 
 	/**
