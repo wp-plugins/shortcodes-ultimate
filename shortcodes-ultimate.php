@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.8.2
+	  Version: 3.8.3
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -28,7 +28,6 @@
 		require_once 'lib/twitter.php';
 		require_once 'lib/images.php';
 		require_once 'lib/shortcodes.php';
-		//require_once 'lib/widget.php';
 
 		// Enable shortcodes in text widgets
 		add_filter( 'widget_text', 'do_shortcode' );
