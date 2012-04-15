@@ -2,7 +2,7 @@
 	/*
 	  Plugin Name: Shortcodes Ultimate
 	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.7.0
+	  Version: 3.8.0
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -20,14 +20,15 @@
 		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
 		// Load libs
-		require_once( dirname( __FILE__ ) . '/lib/available.php' );
-		require_once( dirname( __FILE__ ) . '/lib/admin.php' );
-		require_once( dirname( __FILE__ ) . '/lib/color.php' );
-		require_once( dirname( __FILE__ ) . '/lib/csv.php' );
-		require_once( dirname( __FILE__ ) . '/lib/media.php' );
-		require_once( dirname( __FILE__ ) . '/lib/twitter.php' );
-		require_once( dirname( __FILE__ ) . '/lib/images.php' );
-		require_once( dirname( __FILE__ ) . '/lib/shortcodes.php' );
+		require_once 'lib/available.php';
+		require_once 'lib/admin.php';
+		require_once 'lib/color.php';
+		require_once 'lib/csv.php';
+		require_once 'lib/media.php';
+		require_once 'lib/twitter.php';
+		require_once 'lib/images.php';
+		require_once 'lib/shortcodes.php';
+		//require_once 'lib/widget.php';
 
 		// Enable shortcodes in text widgets
 		add_filter( 'widget_text', 'do_shortcode' );
@@ -125,7 +126,7 @@
 			global $pagenow;
 
 			// Pages for including
-			$su_generator_includes_pages = array( 'post.php', 'edit.php', 'post-new.php', 'index.php' );
+			$su_generator_includes_pages = array( 'post.php', 'edit.php', 'post-new.php', 'index.php', 'edit-tags.php' );
 
 			if ( in_array( $pagenow, $su_generator_includes_pages ) ) {
 				// Enqueue styles
@@ -278,6 +279,7 @@
 	 */
 	function su_add_settings_link( $links ) {
 		$links[] = '<a href="' . admin_url( 'options-general.php?page=shortcodes-ultimate' ) . '">' . __( 'Settings', 'shortcodes-ultimate' ) . '</a>';
+		$links[] = '<a href="' . admin_url( 'options-general.php?page=shortcodes-ultimate#tab-3' ) . '">' . __( 'Docs', 'shortcodes-ultimate' ) . '</a>';
 		return $links;
 	}
 
