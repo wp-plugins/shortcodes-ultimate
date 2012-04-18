@@ -1,10 +1,2 @@
 Shortcode [pricing] + [plan] (pricing tables)
-================================================================================
-
-
-Shortcodes Ultimate special text widget
-================================================================================
-
-
-Gallery styles for visual editor
-================================================================================
+Visual styles for editor

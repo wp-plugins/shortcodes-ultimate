@@ -38,10 +38,10 @@
 		return $return;
 	}
 
-	define( 'MAGPIE_CACHE_ON', 1 ); //2.7 Cache Bug
-	define( 'MAGPIE_CACHE_AGE', 900 );
-	define( 'MAGPIE_INPUT_ENCODING', 'UTF-8' );
-	define( 'MAGPIE_OUTPUT_ENCODING', 'UTF-8' );
+//	define( 'MAGPIE_CACHE_ON', 1 ); //2.7 Cache Bug
+//	define( 'MAGPIE_CACHE_AGE', 900 );
+//	define( 'MAGPIE_INPUT_ENCODING', 'UTF-8' );
+//	define( 'MAGPIE_OUTPUT_ENCODING', 'UTF-8' );
 
 	/**
 	 * Add hyperlinks to tweets
