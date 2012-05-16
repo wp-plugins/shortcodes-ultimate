@@ -1,10 +1,10 @@
 === Plugin Name ===
 Contributors: gn_themes
-Donate link: http://gndev.info/donate/
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 3.9.2
+Stable tag: 3.9.3
 
 Provides support for multiple useful shortcodes
 
@@ -22,13 +22,15 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * International
 
 = New in this version =
-* More screencasts
-* Special widget for shortcodes
+* Small fixes
+* Hebrew translation
+* Awesome tutorial by Digital Cascade TV - http://www.youtube.com/watch?v=IjmaXz-b55I
 
 = Demo video =
 [youtube http://www.youtube.com/watch?v=Q0jDDIjOKsM]
 
 = More videos =
+* [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
 * [How to use nivo_slider, jcarousel and custom_gallery](http://www.youtube.com/watch?v=1QK4cceZrks)
 * [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
 * [Creating jcarousel from category posts](http://www.youtube.com/watch?v=jgDsj_adPqM)
@@ -46,6 +48,7 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * By - [Alexander Ovsov](http://webhostinggeeks.com/science/)
 * Sk - [Viliam Brozman](http://www.brozman.sk/blog/)
 * Lt - [Vincent G](http://www.host1free.com/)
+* He - [Ariel Klikstein](http://www.arielk.net/)
 
 Have a translation? [Contact me (for translators ONLY)](mailto:ano.vladimir@gmail.com)
 
@@ -119,6 +122,9 @@ Also, you can use [jcarousel] and [custom_gallery] according these principles.
 = 3.9 =
 * More screencasts
 * Special widget for shortcodes
+* Small fixes
+* Hebrew translation
+* [Awesome tutorial by Digital Cascade TV](http://www.youtube.com/watch?v=IjmaXz-b55I)
 
 = 3.8 (security release) =
 * 2 new translations (Sk, Lt)

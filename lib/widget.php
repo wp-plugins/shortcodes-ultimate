@@ -8,8 +8,12 @@
 	/**
 	 * Register widget
 	 */
-	function shortcodes_ultimate_load_widgets() {
-		register_widget( 'Shortcodes_Ultimate_Widget' );
+	if ( !function_exists( 'shortcodes_ultimate_load_widgets' ) ) {
+
+		function shortcodes_ultimate_load_widgets() {
+			register_widget( 'Shortcodes_Ultimate_Widget' );
+		}
+
 	}
 
 	/**
@@ -19,84 +23,88 @@
 	 *
 	 * @since 0.1
 	 */
-	class Shortcodes_Ultimate_Widget extends WP_Widget {
+	if ( !class_exists( 'Shortcodes_Ultimate_Widget' ) ) {
 
-		/**
-		 * Widget setup.
-		 */
-		function Shortcodes_Ultimate_Widget() {
-			/* Widget settings. */
-			$widget_ops = array( 'classname' => 'shortcodes-ultimate', 'description' => __( 'Special Shortcodes Ultimate widget', 'shortcodes-ultimate' ) );
+		class Shortcodes_Ultimate_Widget extends WP_Widget {
 
-			/* Widget control settings. */
-			$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'shortcodes-ultimate' );
+			/**
+			 * Widget setup.
+			 */
+			function Shortcodes_Ultimate_Widget() {
+				/* Widget settings. */
+				$widget_ops = array( 'classname' => 'shortcodes-ultimate', 'description' => __( 'Special Shortcodes Ultimate widget', 'shortcodes-ultimate' ) );
 
-			/* Create the widget. */
-			$this->WP_Widget( 'shortcodes-ultimate', __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), $widget_ops, $control_ops );
-		}
+				/* Widget control settings. */
+				$control_ops = array( 'width' => 300, 'height' => 350, 'id_base' => 'shortcodes-ultimate' );
 
-		/**
-		 * How to display the widget on the screen.
-		 */
-		function widget( $args, $instance ) {
-			extract( $args );
+				/* Create the widget. */
+				$this->WP_Widget( 'shortcodes-ultimate', __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), $widget_ops, $control_ops );
+			}
 
-			/* Our variables from the widget settings. */
-			$title = apply_filters( 'widget_title', $instance['title'] );
-			$content = $instance['content'];
+			/**
+			 * How to display the widget on the screen.
+			 */
+			function widget( $args, $instance ) {
+				extract( $args );
 
-			/* Before widget (defined by themes). */
-			echo $before_widget;
+				/* Our variables from the widget settings. */
+				$title = apply_filters( 'widget_title', $instance['title'] );
+				$content = $instance['content'];
 
-			/* Display the widget title if one was input (before and after defined by themes). */
-			if ( $title )
-				echo $before_title . $title . $after_title;
+				/* Before widget (defined by themes). */
+				echo $before_widget;
 
-			/* Display name from widget settings if one was input. */
-			echo '<div class="textwidget">' . do_shortcode( $content ) . '</div>';
+				/* Display the widget title if one was input (before and after defined by themes). */
+				if ( $title )
+					echo $before_title . $title . $after_title;
 
-			/* After widget (defined by themes). */
-			echo $after_widget;
-		}
+				/* Display name from widget settings if one was input. */
+				echo '<div class="textwidget">' . do_shortcode( $content ) . '</div>';
 
-		/**
-		 * Update the widget settings.
-		 */
-		function update( $new_instance, $old_instance ) {
-			$instance = $old_instance;
+				/* After widget (defined by themes). */
+				echo $after_widget;
+			}
 
-			/* Strip tags for title */
-			$instance['title'] = strip_tags( $new_instance['title'] );
-			$instance['content'] = $new_instance['content'];
+			/**
+			 * Update the widget settings.
+			 */
+			function update( $new_instance, $old_instance ) {
+				$instance = $old_instance;
 
-			return $instance;
-		}
+				/* Strip tags for title */
+				$instance['title'] = strip_tags( $new_instance['title'] );
+				$instance['content'] = $new_instance['content'];
 
-		/**
-		 * Displays the widget settings controls on the widget panel.
-		 * Make use of the get_field_id() and get_field_name() function
-		 * when creating your form elements. This handles the confusing stuff.
-		 */
-		function form( $instance ) {
+				return $instance;
+			}
 
-			/* Set up some default widget settings. */
-			$defaults = array( 'title' => __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), 'content' => '' );
-			$instance = wp_parse_args( ( array ) $instance, $defaults );
-			?>
+			/**
+			 * Displays the widget settings controls on the widget panel.
+			 * Make use of the get_field_id() and get_field_name() function
+			 * when creating your form elements. This handles the confusing stuff.
+			 */
+			function form( $instance ) {
 
-			<!-- Widget Title: Text Input -->
-			<p>
-				<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'shortcodes-ultimate' ); ?></label>
-				<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
-			</p>
+				/* Set up some default widget settings. */
+				$defaults = array( 'title' => __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), 'content' => '' );
+				$instance = wp_parse_args( ( array ) $instance, $defaults );
+				?>
 
-			<!-- Content: Textarea -->
-			<p>
+				<!-- Widget Title: Text Input -->
+				<p>
+					<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'shortcodes-ultimate' ); ?></label>
+					<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
+				</p>
+
+				<!-- Content: Textarea -->
+				<p>
 				<?php su_add_generator_button( 'widget', $this->get_field_id( 'content' ) ); ?><br/>
-				<textarea name="<?php echo $this->get_field_name( 'content' ); ?>" id="<?php echo $this->get_field_id( 'content' ); ?>" rows="7" class="widefat"><?php echo $instance['content']; ?></textarea>
-			</p>
+					<textarea name="<?php echo $this->get_field_name( 'content' ); ?>" id="<?php echo $this->get_field_id( 'content' ); ?>" rows="7" class="widefat"><?php echo $instance['content']; ?></textarea>
+				</p>
 
-			<?php
+				<?php
+			}
+
 		}
 
 	}

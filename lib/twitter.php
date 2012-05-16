@@ -8,39 +8,43 @@
 	/**
 	 * Tweet relative time (like: 5 seconds ago)
 	 */
-	function shortcodes_ultimate_relative_time( $original, $do_more = 0 ) {
-		// array of time period chunks
-		$chunks = array(
-			array( 60 * 60 * 24 * 365, __( 'year', 'shortcodes-ultimate' ) ),
-			array( 60 * 60 * 24 * 30, __( 'month', 'shortcodes-ultimate' ) ),
-			array( 60 * 60 * 24 * 7, __( 'week', 'shortcodes-ultimate' ) ),
-			array( 60 * 60 * 24, __( 'day', 'shortcodes-ultimate' ) ),
-			array( 60 * 60, __( 'hour', 'shortcodes-ultimate' ) ),
-			array( 60, __( 'minute', 'shortcodes-ultimate' ) ),
-		);
+	if ( !function_exists( 'shortcodes_ultimate_relative_time' ) ) {
 
-		$today = time();
-		$since = $today - $original;
+		function shortcodes_ultimate_relative_time( $original, $do_more = 0 ) {
+			// array of time period chunks
+			$chunks = array(
+				array( 60 * 60 * 24 * 365, __( 'year', 'shortcodes-ultimate' ) ),
+				array( 60 * 60 * 24 * 30, __( 'month', 'shortcodes-ultimate' ) ),
+				array( 60 * 60 * 24 * 7, __( 'week', 'shortcodes-ultimate' ) ),
+				array( 60 * 60 * 24, __( 'day', 'shortcodes-ultimate' ) ),
+				array( 60 * 60, __( 'hour', 'shortcodes-ultimate' ) ),
+				array( 60, __( 'minute', 'shortcodes-ultimate' ) ),
+			);
 
-		for ( $i = 0, $j = count( $chunks ); $i < $j; $i++ ) {
-			$seconds = $chunks[$i][0];
-			$name = $chunks[$i][1];
+			$today = time();
+			$since = $today - $original;
 
-			if ( ($count = floor( $since / $seconds )) != 0 )
-				break;
+			for ( $i = 0, $j = count( $chunks ); $i < $j; $i++ ) {
+				$seconds = $chunks[$i][0];
+				$name = $chunks[$i][1];
+
+				if ( ($count = floor( $since / $seconds )) != 0 )
+					break;
+			}
+
+			$return = ($count == 1) ? '1 ' . $name : "$count {$name}" . __( 's', 'shortcodes-ultimate' );
+
+			if ( $i + 1 < $j ) {
+				$seconds2 = $chunks[$i + 1][0];
+				$name2 = $chunks[$i + 1][1];
+
+				// add second item if it's greater than 0
+				if ( (($count2 = floor( ($since - ($seconds * $count)) / $seconds2 )) != 0) && $do_more )
+					$return .= ( $count2 == 1) ? ', 1 ' . $name2 : ", $count2 {$name2}" . __( 's', 'shortcodes-ultimate' );
+			}
+			return $return;
 		}
 
-		$return = ($count == 1) ? '1 ' . $name : "$count {$name}" . __( 's', 'shortcodes-ultimate' );
-
-		if ( $i + 1 < $j ) {
-			$seconds2 = $chunks[$i + 1][0];
-			$name2 = $chunks[$i + 1][1];
-
-			// add second item if it's greater than 0
-			if ( (($count2 = floor( ($since - ($seconds * $count)) / $seconds2 )) != 0) && $do_more )
-				$return .= ( $count2 == 1) ? ', 1 ' . $name2 : ", $count2 {$name2}" . __( 's', 'shortcodes-ultimate' );
-		}
-		return $return;
 	}
 
 	/**
