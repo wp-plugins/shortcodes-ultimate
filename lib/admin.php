@@ -8,7 +8,7 @@
 		// Share data
 		$title = str_replace( '+', '%20', urlencode( __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ) ) );
 		$text = str_replace( '+', '%20', urlencode( __( 'Must have WordPress plugin - Shortcodes Ultimate', 'shortcodes-ultimate' ) ) );
-		$url = urlencode( 'http://gndev.info/shortcodes-ultimate/' );
+		$url = urlencode( 'http://shortcodes-ultimate.com/' );
 		?>
 		<div id="su-share">
 
@@ -30,8 +30,17 @@
 				</form>
 			</div>
 			<div id="su-donate-label"><?php _e( 'Support project', 'shortcodes-ultimate' ); ?></div>
-
 		</div>
+		<?php
+	}
+
+	/**
+	 * Banners from partners
+	 */
+	function su_show_partners() {
+		?>
+		<h3><?php _e( 'Partners', 'shortcodes-ultimate' ); ?></h3>
+		<p><a href="http://themefuse.com/wp-themes-shop/?plugin=shortcodes-ultimate" target="_blank"><img src="<?php echo su_plugin_url(); ?>/images/banners/themefuse.jpg" alt="ThemeFuse" width="445" height="220" /></a></p>
 		<?php
 	}
 
@@ -76,7 +85,7 @@
 					<p class="su-message su-message-error"><?php _e( 'For full functionality of this page it is recommended to enable JavaScript.', 'shortcodes-ultimate' ); ?> <a href="http://www.enable-javascript.com/" target="_blank"><?php _e( 'Instructions', 'shortcodes-ultimate' ); ?></a></p>
 					<div class="su-onethird-column">
 						<h3><?php _e( 'FREE Support', 'shortcodes-ultimate' ); ?></h3>
-						<p><a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a></p>
+						<p><a href="http://wordpress.org/support/plugin/shortcodes-ultimate" target="_blank"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a></p>
 						<p><a href="http://twitter.com/gn_themes" target="_blank"><?php _e( 'Twitter', 'shortcodes-ultimate' ); ?></a></p>
 					</div>
 
@@ -84,10 +93,19 @@
 						<h3><?php _e( 'Do you love this plugin?', 'shortcodes-ultimate' ); ?></h3>
 						<p><a href="http://wordpress.org/extend/plugins/shortcodes-ultimate/" target="_blank"><?php _e( 'Rate this plugin at wordpress.org', 'shortcodes-ultimate' ); ?></a> (<?php _e( '5 stars', 'shortcodes-ultimate' ); ?>)</p>
 						<p><?php _e( 'Review this plugin in your blog', 'shortcodes-ultimate' ); ?></p>
+						<p><strong><a href="http://shortcodes-ultimate.com/" target="_blank"><?php _e( 'Check Premium Addons', 'shortcodes-ultimate' ); ?></a> <?php _e( '(coming soon)', 'shortcodes-ultimate' ); ?></strong></p>
 					</div>
 
 					<div class="su-clear"></div>
-					<?php su_share(); ?>
+					<?php
+					// Show partners banners
+					su_show_partners();
+					?>
+					<div class="su-clear"></div>
+					<?php
+					// Share buttons
+					su_share();
+					?>
 
 				</div>
 				<div class="su-pane">

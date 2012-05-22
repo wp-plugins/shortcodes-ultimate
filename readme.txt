@@ -4,16 +4,17 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
 Requires at least: 3.0
 Tested up to: 4.0
-Stable tag: 3.9.3
+Stable tag: 3.9.4
 
 Provides support for multiple useful shortcodes
 
 
 == Description ==
 
-With this plugin you can easily create buttons, boxes, different sliders and much, much more. Turn your free theme to premiun in just a few clicks. Using Shortcodes Ultimate you can quickly and easily retrieve many premium themes features and display it on your site. See screenshots for more information.
+With this plugin you can easily create buttons, boxes, different sliders and much, much more. Turn your free theme to premium in just a few clicks. Using Shortcodes Ultimate you can quickly and easily retrieve many premium themes features and display it on your site. See screenshots for more information.
 
 = Features =
+* [Premium Addons](http://shortcodes-ultimate.com/) (coming soon)
 * 30+ amazing shortcodes
 * Handy shortcodes generator
 * Custom CSS editor with syntax highlight
@@ -23,8 +24,7 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 
 = New in this version =
 * Small fixes
-* Hebrew translation
-* Awesome tutorial by Digital Cascade TV - http://www.youtube.com/watch?v=IjmaXz-b55I
+* Partners section on settings page
 
 = Demo video =
 [youtube http://www.youtube.com/watch?v=Q0jDDIjOKsM]
@@ -36,8 +36,8 @@ With this plugin you can easily create buttons, boxes, different sliders and muc
 * [Creating jcarousel from category posts](http://www.youtube.com/watch?v=jgDsj_adPqM)
 
 = Got a bug or suggestion? =
-* [Support forum](http://wordpress.org/tags/shortcodes-ultimate?forum_id=10)
-* [Plugin page](http://gndev.info/shortcodes-ultimate/)
+* [Support forum](http://wordpress.org/support/plugin/shortcodes-ultimate)
+* [Plugin page](http://shortcodes-ultimate.com/)
 * [Twitter](http://twitter.com/gn_themes)
 
 = Translations =
@@ -125,6 +125,7 @@ Also, you can use [jcarousel] and [custom_gallery] according these principles.
 * Small fixes
 * Hebrew translation
 * [Awesome tutorial by Digital Cascade TV](http://www.youtube.com/watch?v=IjmaXz-b55I)
+* Partners section on settings page
 
 = 3.8 (security release) =
 * 2 new translations (Sk, Lt)
