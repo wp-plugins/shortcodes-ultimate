@@ -4,7 +4,7 @@
 	require( '../../../../wp-load.php' );
 
 	// Capability check
-	if ( !current_user_can( 'publish_posts' ) )
+	if ( !current_user_can( 'author' ) && !current_user_can( 'editor' ) && !current_user_can( 'administrator' ) )
 		die( 'Access denied' );
 
 	// Param check
@@ -29,10 +29,18 @@
 				$return .= '</select>';
 			}
 
-			// Text input
+			// Text & color input
 			else {
-				$attr_field_type = ( $attr_info['type'] == 'color' ) ? 'color' : 'text';
-				$return .= '<input type="' . $attr_field_type . '" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
+
+				// Color picker
+				if ( $attr_info['type'] == 'color' ) {
+					$return .= '<span class="su-generator-select-color"><span class="su-generator-select-color-wheel"></span><input type="text" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-select-color-value" /></span>';
+				}
+
+				// Text input
+				else {
+					$return .= '<input type="text" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
+				}
 			}
 			$return .= '</p>';
 		}

@@ -193,29 +193,31 @@
 						</tr>
 						<?php
 						foreach ( su_shortcodes() as $id => $shortcode ) {
-							?>
-							<tr>
-								<td>
-									<strong><?php echo $id; ?></strong><br/>
-									<small><?php echo $shortcode['desc']; ?></small>
-								</td>
-								<td>
-									<?php
-									foreach ( $shortcode['atts'] as $attr_name => $attr ) {
-										echo '<strong>' . $attr['desc'] . '</strong><br/>';
-										echo $attr_name;
-										if ( $attr['values'] ) {
-											echo '="' . implode( '|', $attr['values'] ) . '"';
-										} elseif ( $attr['default'] ) {
-											echo '="' . $attr['default'] . '"';
+							if ( $shortcode['type'] != 'opengroup' && $shortcode['type'] != 'closegroup' ) {
+								?>
+								<tr>
+									<td>
+										<strong><?php echo $id; ?></strong><br/>
+										<small><?php echo $shortcode['desc']; ?></small>
+									</td>
+									<td>
+										<?php
+										foreach ( $shortcode['atts'] as $attr_name => $attr ) {
+											echo '<strong>' . $attr['desc'] . '</strong><br/>';
+											echo $attr_name;
+											if ( $attr['values'] ) {
+												echo '="' . implode( '|', $attr['values'] ) . '"';
+											} elseif ( $attr['default'] ) {
+												echo '="' . $attr['default'] . '"';
+											}
+											echo '<br/>';
 										}
-										echo '<br/>';
-									}
-									?>
-								</td>
-								<td><?php echo str_replace( '&lt;br/&gt;', '<br/>', htmlspecialchars( $shortcode['usage'] ) ); ?></td>
-							</tr>
-							<?php
+										?>
+									</td>
+									<td><?php echo str_replace( '&lt;br/&gt;', '<br/>', htmlspecialchars( $shortcode['usage'] ) ); ?></td>
+								</tr>
+								<?php
+							}
 						}
 						?>
 					</table>
@@ -228,15 +230,17 @@
 						</tr>
 						<?php
 						foreach ( su_shortcodes() as $id => $shortcode ) {
-							?>
-							<tr>
-								<td>
-									<strong><?php echo $shortcode['name']; ?></strong><br/>
-									<small><?php echo $shortcode['desc']; ?></small>
-								</td>
-								<td><img src="<?php echo su_plugin_url(); ?>/images/demo/<?php echo $id; ?>.png" width="530" alt="<?php echo $shortcode['name']; ?>" /></td>
-							</tr>
-							<?php
+							if ( $shortcode['type'] != 'opengroup' && $shortcode['type'] != 'closegroup' ) {
+								?>
+								<tr>
+									<td>
+										<strong><?php echo $shortcode['name']; ?></strong><br/>
+										<small><?php echo $shortcode['desc']; ?></small>
+									</td>
+									<td><img src="<?php echo su_plugin_url(); ?>/images/demo/<?php echo $id; ?>.png" width="530" alt="<?php echo $shortcode['name']; ?>" /></td>
+								</tr>
+								<?php
+							}
 						}
 						?>
 					</table>

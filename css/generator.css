@@ -15,12 +15,11 @@
 	height: 30px;
 	margin-bottom: 20px;
 }
-#su-generator-select { width: 400px }
+#su-generator-select { width: 350px }
 #su-generator-tools {
 	float: right;
 	padding-top: 5px;
 }
-#su-generator-tools a { margin-left: 10px }
 #su-generator-settings label {
 	float: left;
 	display: block;
@@ -41,4 +40,21 @@
 #su-generator-insert {
 	color: #fff !important;
 	font-weight: bold;
+}
+
+/* Color picker */
+.su-generator-select-color {
+	position: relative;
+}
+.su-generator-select-color-wheel {
+	position: absolute;
+	left: 0;
+	top: 23px;
+	display: none;
+	background: #fff;
+	border: 1px solid #aaa;
+	z-index: 9999;
+	box-shadow: 0 2px 5px #ccc;
+	-moz-box-shadow: 0 2px 5px #ccc;
+	-webkit-box-shadow: 0 2px 5px #ccc;
 }

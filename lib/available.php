@@ -5,6 +5,11 @@
 	 */
 	function su_shortcodes( $shortcode = false ) {
 		$shortcodes = array(
+			# basic shortcodes - start
+			'basic-shortcodes-open' => array(
+				'name' => __( 'Basic shortcodes', 'shortcodes-ultimate' ),
+				'type' => 'opengroup'
+			),
 			# heading
 			'heading' => array(
 				'name' => 'Heading',
@@ -1104,6 +1109,10 @@
 				),
 				'usage' => '[tweets username="gn_themes" limit="3" style="1" show_time="1"]',
 				'desc' => __( 'Recent tweets', 'shortcodes-ultimate' )
+			),
+			# basic shortcodes - end
+			'basic-shortcodes-close' => array(
+				'type' => 'closegroup'
 			),
 		);
 

@@ -1,8 +1,8 @@
 <?php
 	/*
 	  Plugin Name: Shortcodes Ultimate
-	  Plugin URI: http://gndev.info/shortcodes-ultimate/
-	  Version: 3.9.4
+	  Plugin URI: http://shortcodes-ultimate.com/
+	  Version: 3.9.5
 	  Author: Vladimir Anokhin
 	  Author URI: http://gndev.info/
 	  Description: Provides support for many easy to use shortcodes
@@ -56,15 +56,17 @@
 		wp_register_style( 'jcarousel', su_plugin_url() . '/css/jcarousel.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror', su_plugin_url() . '/css/codemirror.css', false, su_get_version(), 'all' );
 		wp_register_style( 'codemirror-css', su_plugin_url() . '/css/codemirror-css.css', false, su_get_version(), 'all' );
+		wp_register_style( 'chosen', su_plugin_url() . '/css/chosen.css', false, su_get_version(), 'all' );
 
 		// Register scripts
-		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', false, su_get_version(), false );
-		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', false, su_get_version(), false );
+		wp_register_script( 'shortcodes-ultimate', su_plugin_url() . '/js/init.js', array( 'jquery' ), su_get_version(), false );
+		wp_register_script( 'shortcodes-ultimate-admin', su_plugin_url() . '/js/admin.js', array( 'jquery' ), su_get_version(), false );
 		wp_register_script( 'shortcodes-ultimate-generator', su_plugin_url() . '/js/generator.js', array( 'jquery' ), su_get_version(), false );
 		wp_register_script( 'nivo-slider', su_plugin_url() . '/js/nivoslider.js', false, su_get_version(), false );
 		wp_register_script( 'jcarousel', su_plugin_url() . '/js/jcarousel.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror', su_plugin_url() . '/js/codemirror.js', false, su_get_version(), false );
 		wp_register_script( 'codemirror-css', su_plugin_url() . '/js/codemirror-css.js', false, su_get_version(), false );
+		wp_register_script( 'chosen', su_plugin_url() . '/js/chosen.js', false, su_get_version(), false );
 		wp_register_script( 'ajax-form', su_plugin_url() . '/js/jquery.form.js', false, su_get_version(), false );
 		wp_register_script( 'jwplayer', su_plugin_url() . '/js/jwplayer.js', false, su_get_version(), false );
 
@@ -131,18 +133,23 @@
 			if ( in_array( $pagenow, $su_generator_includes_pages ) ) {
 				// Enqueue styles
 				wp_enqueue_style( 'thickbox' );
+				wp_enqueue_style( 'farbtastic' );
+				wp_enqueue_style( 'chosen' );
 				wp_enqueue_style( 'shortcodes-ultimate-generator' );
 
 				// Enqueue scripts
 				wp_enqueue_script( 'jquery' );
 				wp_enqueue_script( 'thickbox' );
+				wp_enqueue_script( 'farbtastic' );
+				wp_enqueue_script( 'chosen' );
 				wp_enqueue_script( 'shortcodes-ultimate-generator' );
 			}
 		}
 
 		// Register shortcodes
 		foreach ( su_shortcodes() as $shortcode => $params ) {
-			add_shortcode( su_compatibility_mode_prefix() . $shortcode, 'su_' . $shortcode . '_shortcode' );
+			if ( $params['type'] != 'opengroup' && $params['type'] != 'closegroup' )
+				add_shortcode( su_compatibility_mode_prefix() . $shortcode, 'su_' . $shortcode . '_shortcode' );
 		}
 	}
 
@@ -323,20 +330,28 @@
 			<div id="su-generator">
 				<div id="su-generator-shell">
 					<div id="su-generator-header">
-						<select id="su-generator-select">
-							<option value="raw"><?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?></option>
+						<select id="su-generator-select" data-placeholder="<?php _e( 'Select shortcode', 'shortcodes-ultimate' ); ?>" data-no-results-text="<?php _e( 'Shortcode not found', 'shortcodes-ultimate' ); ?>">
+							<option value="raw"></option>
 							<?php
 							foreach ( su_shortcodes() as $name => $shortcode ) {
-								?>
-								<option value="<?php echo $name; ?>"><?php echo strtoupper( $name ); ?>:&nbsp;&nbsp;<?php echo $shortcode['desc']; ?></option>
-								<?php
+
+								// Open optgroup
+								if ( $shortcode['type'] == 'opengroup' )
+									echo '<optgroup label="' . $shortcode['name'] . '">';
+
+								// Close optgroup
+								elseif ( $shortcode['type'] == 'closegroup' )
+									echo '</optgroup>';
+
+								// Option
+								else
+									echo '<option value="' . $name . '">' . strtoupper( $name ) . ':&nbsp;&nbsp;' . $shortcode['desc'] . '</option>';
 							}
 							?>
 						</select>
 						<div id="su-generator-tools">
-							<a href="<?php echo admin_url( 'options-general.php?page=shortcodes-ultimate' ); ?>" target="_blank" title="<?php _e( 'Settings', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/settings.png" alt="" /></a>
-							<a href="http://www.colorpicker.com/" target="_blank" title="<?php _e( 'Color picker', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/colorpicker.png" alt="" /></a>
-							<a href="http://wordpress.org/tags/shortcodes-ultimate?forum_id=10" target="_blank" title="<?php _e( 'Support forum', 'shortcodes-ultimate' ); ?>"><img src="<?php echo su_plugin_url(); ?>/images/generator/support.png" alt="" /></a>
+							<a href="<?php echo admin_url( 'options-general.php?page=shortcodes-ultimate' ); ?>" target="_blank" title="<?php _e( 'Settings', 'shortcodes-ultimate' ); ?>"><?php _e( 'Settings', 'shortcodes-ultimate' ); ?></a> /
+							<a href="http://wordpress.org/support/plugin/shortcodes-ultimate" target="_blank" title="<?php _e( 'Support forum', 'shortcodes-ultimate' ); ?>"><?php _e( 'Support forum', 'shortcodes-ultimate' ); ?></a>
 						</div>
 					</div>
 					<div id="su-generator-settings"></div>

@@ -1,11 +1,28 @@
 jQuery(document).ready(function($) {
 
+	// Apply chosen
+	$('#su-generator-select').chosen({
+		no_results_text: $('#su-generator-select').attr('data-no-results-text'),
+		allow_single_deselect: true
+	});
+
 	// Select shortcode
 	$('#su-generator-select').live( "change", function() {
 		var queried_shortcode = $('#su-generator-select').find(':selected').val();
 		$('#su-generator-settings').addClass('su-loading-animation');
 		$('#su-generator-settings').load($('#su-generator-url').val() + '/lib/generator.php?shortcode=' + queried_shortcode, function() {
 			$('#su-generator-settings').removeClass('su-loading-animation');
+
+			// Init color pickers
+			$('.su-generator-select-color').each(function(index) {
+				$(this).find('.su-generator-select-color-wheel').filter(':first').farbtastic('.su-generator-select-color-value:eq(' + index + ')');
+				$(this).find('.su-generator-select-color-value').focus(function() {
+					$('.su-generator-select-color-wheel:eq(' + index + ')').show();
+				});
+				$(this).find('.su-generator-select-color-value').blur(function() {
+					$('.su-generator-select-color-wheel:eq(' + index + ')').hide();
+				});
+			});
 		});
 	});
 
