@@ -31,7 +31,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 
 = More videos =
 * [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
-* [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
+* [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA) 
 
 = Requirements =
 * WordPress 3.4+
