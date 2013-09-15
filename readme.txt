@@ -1,61 +1,56 @@
-=== Plugin Name ===
+=== Shortcodes Ultimate ===
 Contributors: gn_themes
+License: GPL3
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
-Tags: shortcode, shortcodes, short code, shortcodes, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, frame, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordeon, slider, nivo, nivo slider, plugin, admin, photoshop, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, documents, jcarousel, rss
-Requires at least: 3.0
+Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
+Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 3.9.5
+Stable tag: 4.0.0
 
-Provides support for multiple useful shortcodes
+Supercharge your WordPress theme with mega pack of shortcodes
 
 
 == Description ==
 
-With this plugin you can easily create buttons, boxes, different sliders and much, much more. Turn your free theme to premium in just a few clicks. Using Shortcodes Ultimate you can quickly and easily retrieve many premium themes features and display it on your site. See screenshots for more information.
+[Shortcodes Ultimate](http://gndev.info/shortcodes-ultimate/) is WordPress plugin that provides mega pack of shortcodes. This is really premium plugin that you can get absolutely for free!
 
-= !! Important note !! =
-
-Be careful when updating to 4.0.0 version in next time. It will be massive update, that affect many code.
+With this plugin you can easily create tabs, buttons, boxes, different sliders, responsive videos and much, much more. Turn your free theme to premium in just a few clicks. Using Shortcodes Ultimate you can quickly and easily retrieve premium themes features and display it on your site. See screenshots for more information.
 
 = Features =
-* [Premium Addons](http://shortcodes-ultimate.com/) (coming soon)
-* 30+ amazing shortcodes
-* Handy shortcodes generator
+* Shortcode Generator
+* 35+ amazing shortcodes
+* Modern responsive design
+* Power of CSS3
+* [Addons](http://gndev.info/shortcodes-ultimate/#Addons)
 * Custom CSS editor with syntax highlight
-* Frequently updates
 * Special widget
-* International
-
-= New in this version =
-* Small fixes
-* Generator select improved with [Chosen](http://harvesthq.github.com/chosen/)
-* Farbtastic color picker
+* Custom skins
 
 = Demo video =
-[youtube http://www.youtube.com/watch?v=Q0jDDIjOKsM]
+[youtube http://www.youtube.com/watch?v=DR2c266yWEA]
 
 = More videos =
 * [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
-* [How to use nivo_slider, jcarousel and custom_gallery](http://www.youtube.com/watch?v=1QK4cceZrks)
 * [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
-* [Creating jcarousel from category posts](http://www.youtube.com/watch?v=jgDsj_adPqM)
+
+= Requirements =
+* WordPress 3.4+
+* PHP 5.1+
 
 = Got a bug or suggestion? =
-* [Support forum](http://wordpress.org/support/plugin/shortcodes-ultimate)
-* [Plugin page](http://shortcodes-ultimate.com/)
-* [Twitter](http://twitter.com/gn_themes)
+* [Support forum](http://wordpress.org/support/plugin/shortcodes-ultimate/)
+* [Documentation](http://gndev.info/kb/)
+* [Contact author](http://gndev.info/feedback/)
 
-= Translations =
-* Fr - [Aurélien DENIS](http://wpchannel.com/)
-* Sp - [Esteban Truelsegaard](http://www.netmdp.com/)
-* De - [Matthias Wittmann](http://net-graphix.de/)
-* Ru - [Vladimir Anokhin](http://gndev.info/)
-* By - [Alexander Ovsov](http://webhostinggeeks.com/science/)
-* Sk - [Viliam Brozman](http://www.brozman.sk/blog/)
-* Lt - [Vincent G](http://www.host1free.com/)
-* He - [Ariel Klikstein](http://www.arielk.net/)
+= Bundled translations =
+* Ru, [Vladimir Anokhin](http://gndev.info/)
+* Fr, [Nicolas Leclerc](http://etic-studio.fr/)
+* Unforunately old translations is incompatible with current version
 
-Have a translation? [Contact me (for translators ONLY)](mailto:ano.vladimir@gmail.com)
+Have a translation? [Contact me](http://gndev.info/feedback/)
+
+= Thanks =
+* Thanks to Vladimir Kharlampidi for [the great Swiper slider](http://www.idangero.us/)
 
 
 == Installation ==
@@ -70,59 +65,40 @@ Activate plugin at "Plugins" administration page.
 
 == Upgrade Notice ==
 
+Be careful! This is a great update and completely new code! Don't forget, you can always install old version.
+
 Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Screenshots ==
 
-1. Insert shortcode in 3 easy steps.
-2. Heading, spoiler, tabs, quote, button.
-3. Box, note, divider (top), list.
-4. List styles.
+1. Generator button
+2. Shortcode Generator
+3. Super powerful buttons. Unlimited colors, sizes, icons and much more
+4. Tabs, spoilers, quotes/testimonials, boxes, notes
+5. Touch-enabled slider and carousel, custom gallery
 
 
 == Frequently Asked Questions ==
 
-= What mean compatibility mode? =
-This mode adds a prefix to all plugin shortcodes
-
-* [button] => [gn_button]
-* [tabs] => [gn_tabs]
-* [tab] => [gn_tab]
-* etc.
-
-= Is there WYSIWYG button? =
-Search it near Upload/Insert buttons. See [screenshots](http://wordpress.org/extend/plugins/shortcodes-ultimate/screenshots/) or [screecast](http://www.youtube.com/watch?v=Q0jDDIjOKsM)
-
-= How to use: nivo_slider, jcarousel, custom_gallery =
-With these shortcodes you can create different galleries from attached to post images, or from category posts.
-
-Way 1: gallery from post attachments
-
-* Create new post
-* Upload images
-* Use next shortcode on pages, posts or even widgets
-
-`[nivo_slider source="post=XX" link="image"]`
-
-XX - ID of the post with uploaded images
-
-Way 2: gallery from category
-
-* Create some posts in some category
-* Set the post thumbnails
-* Use next shortcode on pages, posts or even widgets
-
-`[nivo_slider source="cat=XX" link="post"]`
-
-XX - ID of the category with new posts
-
-And here is the [demo video 1](http://www.youtube.com/watch?v=1QK4cceZrks) and [demo video 2](http://www.youtube.com/watch?v=jgDsj_adPqM)
-
-Also, you can use [jcarousel] and [custom_gallery] according these principles.
+[Visit support forum](http://wordpress.org/support/plugin/shortcodes-ultimate/)
 
 
 == Changelog ==
+
+= 4.0 =
+* [Official plugin page](http://gndev.info/shortcodes-ultimate/)
+* [Premium add-on for creating custom shortcodes](http://gndev.info/shortcodes-ultimate/maker/)
+* Plugin based on [Sunrise Plugin Framework](https://github.com/gndev/sunrise)
+* [GitHub repo](https://github.com/gndev/shortcodes-ultimate). Now you can easily fork and modify best plugin in the world (:
+* Brand new Shortcode Generator, [demo video](http://www.youtube.com/watch?v=DR2c266yWEA)
+* [Shortcodes API](http://gndev.info/kb/shortcodes-ultimate-api-overview/)
+* Completely reorganized code. Added and removed some shortcodes
+* For security maniacs: timthumb.php replaced by native WordPress mechanism
+* For speed-up maniacs: completely rewritten assets mechanism. Now css and js files included on page depend on used shortcodes
+* Added new shortcode [posts]. This is awesome and flexible mechanism to display your content in many different ways
+* Now you can create your own custom skins for shortcodes
+* Columns, google maps, google document viewer, youtube player, vimeo player and custom audio player is now fully responsive
 
 = 3.9 =
 * More screencasts
