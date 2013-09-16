@@ -1,0 +1,2200 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shortcodes Ultimate 4.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-22 04:02+0300\n"
+"PO-Revision-Date: 2013-07-22 04:02+0300\n"
+"Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
+"Language-Team: gndev <ano.vladimir@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../classes/sunrise.class.php:312
+#: ../inc/generator.php:26
+#: ../inc/init.php:53
+#: ../inc/shortcodes/data.php:362
+#: ../inc/sunrise/options.php:17
+msgid "Settings"
+msgstr ""
+
+#: ../inc/example-addon.php:29
+msgid "Heading 2"
+msgstr ""
+
+#: ../inc/example-addon.php:43
+#: ../inc/shortcodes/data.php:20
+#: ../inc/shortcodes/data.php:40
+#: ../inc/shortcodes/data.php:88
+#: ../inc/shortcodes/data.php:115
+#: ../inc/shortcodes/data.php:187
+#: ../inc/shortcodes/data.php:211
+#: ../inc/shortcodes/data.php:244
+#: ../inc/shortcodes/data.php:274
+#: ../inc/shortcodes/data.php:300
+#: ../inc/shortcodes/data.php:397
+#: ../inc/shortcodes/data.php:519
+#: ../inc/shortcodes/data.php:681
+#: ../inc/shortcodes/data.php:740
+#: ../inc/shortcodes/data.php:797
+#: ../inc/shortcodes/data.php:850
+msgid "Default"
+msgstr ""
+
+#: ../inc/example-addon.php:44
+msgid "Small"
+msgstr ""
+
+#: ../inc/example-addon.php:49
+#: ../inc/shortcodes/data.php:25
+#: ../inc/shortcodes/data.php:45
+#: ../inc/shortcodes/data.php:92
+#: ../inc/shortcodes/data.php:120
+#: ../inc/shortcodes/data.php:216
+#: ../inc/shortcodes/data.php:249
+#: ../inc/shortcodes/data.php:280
+#: ../inc/shortcodes/data.php:304
+#: ../inc/shortcodes/data.php:366
+#: ../inc/shortcodes/data.php:407
+#: ../inc/shortcodes/data.php:526
+#: ../inc/shortcodes/data.php:687
+#: ../inc/shortcodes/data.php:745
+#: ../inc/shortcodes/data.php:802
+#: ../inc/shortcodes/data.php:855
+msgid "Style"
+msgstr ""
+
+#: ../inc/example-addon.php:51
+msgid "Heading 2 style"
+msgstr ""
+
+#: ../inc/example-addon.php:57
+msgid "Heading 2 text"
+msgstr ""
+
+#: ../inc/example-addon.php:59
+msgid "Styled heading 2"
+msgstr ""
+
+#: ../inc/generator.php:9
+#: ../inc/generator.php:163
+msgid "Insert shortcode"
+msgstr ""
+
+#: ../inc/generator.php:26
+msgid "Plugin settings"
+msgstr ""
+
+#: ../inc/generator.php:28
+msgid "Plugin homepage"
+msgstr ""
+
+#: ../inc/generator.php:30
+#: ../inc/sunrise/views/about.php:10
+msgid "Support forums"
+msgstr ""
+
+#: ../inc/generator.php:32
+msgid "Search for shortcodes"
+msgstr ""
+
+#: ../inc/generator.php:34
+msgid "Filter by type"
+msgstr ""
+
+#: ../inc/generator.php:35
+msgid "All"
+msgstr ""
+
+#: ../inc/generator.php:36
+#: ../inc/generator.php:161
+msgid "Content"
+msgstr ""
+
+#: ../inc/generator.php:37
+msgid "Boxes"
+msgstr ""
+
+#: ../inc/generator.php:38
+msgid "Media"
+msgstr ""
+
+#: ../inc/generator.php:39
+msgid "Other"
+msgstr ""
+
+#: ../inc/generator.php:70
+#: ../inc/generator.php:177
+#: ../inc/generator.php:196
+#: ../inc/generator.php:210
+msgid "Access denied"
+msgstr ""
+
+#: ../inc/generator.php:73
+msgid "Shortcode not specified"
+msgstr ""
+
+#: ../inc/generator.php:77
+msgid "Click to return to the shortcodes list"
+msgstr ""
+
+#: ../inc/generator.php:77
+msgid "All shortcodes"
+msgstr ""
+
+#: ../inc/generator.php:109
+msgid "Yes"
+msgstr ""
+
+#: ../inc/generator.php:109
+msgid "No"
+msgstr ""
+
+#: ../inc/generator.php:113
+msgid "Max upload file size"
+msgstr ""
+
+#: ../inc/generator.php:113
+msgid "Mb"
+msgstr ""
+
+#: ../inc/generator.php:113
+msgid "How to increase"
+msgstr ""
+
+#: ../inc/generator.php:132
+msgid "Untitled gallery"
+msgstr ""
+
+#: ../inc/generator.php:139
+msgid "Galleries not found"
+msgstr ""
+
+#: ../inc/generator.php:140
+msgid "Manage galleries"
+msgstr ""
+
+#: ../inc/generator.php:152
+msgid "Click to set this value"
+msgstr ""
+
+#: ../inc/generator.php:163
+msgid "Live preview"
+msgstr ""
+
+#: ../inc/generator.php:163
+msgid "Close window"
+msgstr ""
+
+#: ../inc/generator.php:180
+msgid "Preview"
+msgstr ""
+
+#: ../inc/init.php:17
+#, php-format
+msgid "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your version of WordPress (%s).<br />Reccomended WordPress version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+msgstr ""
+
+#: ../inc/init.php:18
+#, php-format
+msgid "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your PHP version (%s).<br />Reccomended PHP version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+msgstr ""
+
+#: ../inc/init.php:44
+#: ../inc/widget.php:40
+#: ../inc/widget.php:83
+msgid "Shortcodes Ultimate"
+msgstr ""
+
+#: ../inc/init.php:45
+msgid "Vladimir Anokhin"
+msgstr ""
+
+#: ../inc/init.php:46
+msgid "Supercharge your WordPress theme with mega pack of shortcodes"
+msgstr ""
+
+#: ../inc/init.php:54
+msgid "Welcome"
+msgstr ""
+
+#: ../inc/resize.php:49
+#: ../inc/resize.php:176
+msgid "No image URL has been entered."
+msgstr ""
+
+#: ../inc/resize.php:235
+msgid "Failed to get $file_path information using \"@getimagesize\"."
+msgstr ""
+
+#: ../inc/resize.php:277
+msgid "Resize path invalid (GIF)"
+msgstr ""
+
+#: ../inc/resize.php:281
+msgid "Resize path invalid (PNG)."
+msgstr ""
+
+#: ../inc/resize.php:289
+msgid "Resize path invalid (JPG)."
+msgstr ""
+
+#: ../inc/resize.php:303
+msgid "Failed to get $dest_file_name (resized image) info via @getimagesize"
+msgstr ""
+
+#: ../inc/tools.php:239
+msgid "year"
+msgstr ""
+
+#: ../inc/tools.php:240
+msgid "month"
+msgstr ""
+
+#: ../inc/tools.php:241
+msgid "week"
+msgstr ""
+
+#: ../inc/tools.php:242
+msgid "day"
+msgstr ""
+
+#: ../inc/tools.php:243
+msgid "hour"
+msgstr ""
+
+#: ../inc/tools.php:244
+msgid "minute"
+msgstr ""
+
+#: ../inc/tools.php:255
+#: ../inc/tools.php:262
+msgid "s"
+msgstr ""
+
+#: ../inc/tools.php:294
+msgid "username not specified"
+msgstr ""
+
+#: ../inc/tools.php:299
+msgid "no public messages"
+msgstr ""
+
+#: ../inc/widget.php:36
+msgid "Special Shortcodes Ultimate widget"
+msgstr ""
+
+#: ../inc/widget.php:88
+msgid "Title:"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:13
+msgid "Heading"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:21
+#: ../inc/shortcodes/data.php:41
+#: ../inc/shortcodes/data.php:89
+#: ../inc/shortcodes/data.php:116
+#: ../inc/shortcodes/data.php:212
+#: ../inc/shortcodes/data.php:245
+#: ../inc/shortcodes/data.php:275
+#: ../inc/shortcodes/data.php:301
+#: ../inc/shortcodes/data.php:398
+#: ../inc/shortcodes/data.php:682
+#: ../inc/shortcodes/data.php:741
+#: ../inc/shortcodes/data.php:798
+#: ../inc/shortcodes/data.php:851
+msgid "Metro"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:22
+msgid "Thin"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:25
+msgid "Choose heading style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:28
+msgid "Heading text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:29
+msgid "Styled heading"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:33
+msgid "Tabs"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:42
+msgid "Vertical"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:45
+msgid "Choose tabs style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:49
+msgid ""
+"[tab title=\"Title 1\"]Content 1[/tab]\n"
+"[tab title=\"Title 2\"]Content 2[/tab]\n"
+"[tab title=\"Title 3\"]Content 3[/tab]"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:50
+msgid "Tabs container"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:54
+msgid "Tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:60
+msgid "Tab name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:61
+#: ../inc/shortcodes/data.php:77
+#: ../inc/shortcodes/data.php:486
+#: ../inc/shortcodes/data.php:514
+#: ../inc/shortcodes/data.php:734
+msgid "Title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:62
+msgid "Enter tab name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:65
+msgid "Tab content"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:66
+msgid "Single tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:70
+msgid "Spoiler"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:76
+#: ../inc/shortcodes/shortcodes.php:71
+msgid "Spoiler title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:77
+msgid "Text in spoiler title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:82
+msgid "Open"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:83
+msgid "Is spoiler content visible by default"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:92
+msgid "Select spoiler style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:95
+msgid "Hidden content"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:95
+msgid "Spoiler with hidden content"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:99
+msgid "Accordion"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:104
+msgid ""
+"[spoiler]Content[/spoiler]\n"
+"[spoiler]Content[/spoiler]\n"
+"[spoiler]Content[/spoiler]"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:104
+msgid "Accordion with spoilers"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:108
+msgid "Divider"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:117
+#: ../inc/shortcodes/data.php:276
+#: ../inc/shortcodes/data.php:449
+msgid "Light"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:120
+msgid "Select divider style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:125
+msgid "Show TOP link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:126
+msgid "Show link to top of the page or not"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:130
+#: ../inc/shortcodes/shortcodes.php:105
+msgid "Go to top"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:131
+msgid "Link text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:131
+msgid "Text for the GO TOP link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:135
+msgid "Content divider with optional TOP link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:139
+msgid "Spacer"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:149
+#: ../inc/shortcodes/data.php:616
+#: ../inc/shortcodes/data.php:654
+#: ../inc/shortcodes/data.php:763
+#: ../inc/shortcodes/data.php:977
+#: ../inc/shortcodes/data.php:1004
+#: ../inc/shortcodes/data.php:1041
+#: ../inc/shortcodes/data.php:1120
+#: ../inc/shortcodes/data.php:1215
+msgid "Height"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:149
+msgid "Height of the spacer in pixels"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:153
+msgid "Empty space with adjustable height"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:157
+msgid "Highlight"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:165
+#: ../inc/shortcodes/data.php:413
+#: ../inc/shortcodes/data.php:562
+msgid "Background"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:166
+msgid "Highlighted text background color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:172
+#: ../inc/shortcodes/data.php:419
+#: ../inc/shortcodes/data.php:568
+msgid "Text color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:172
+msgid "Highlighted text color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:175
+#: ../inc/shortcodes/data.php:176
+msgid "Highlighted text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:180
+#: ../inc/shortcodes/data.php:199
+msgid "Label"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:188
+msgid "Success"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:189
+msgid "Warning"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:190
+msgid "Important"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:191
+msgid "Black"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:192
+msgid "Info"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:195
+msgid "Type"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:196
+msgid "Style of the label"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:200
+msgid "Styled label"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:204
+#: ../inc/shortcodes/data.php:232
+msgid "Quote"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:213
+#: ../inc/shortcodes/data.php:246
+#: ../inc/shortcodes/data.php:277
+#: ../inc/shortcodes/data.php:852
+msgid "Simple"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:217
+msgid "Quote style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:222
+msgid "Cite"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:223
+msgid "Quote author name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:228
+msgid "Cite url"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:229
+msgid "Url of the quote author. Leave empty to disable link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:233
+msgid "Blockquote alternative"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:237
+#: ../inc/shortcodes/data.php:262
+#: ../inc/shortcodes/data.php:263
+msgid "Pullquote"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:250
+msgid "Choose style preset for pullquote"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:255
+#: ../inc/shortcodes/data.php:462
+msgid "Left"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:256
+#: ../inc/shortcodes/data.php:460
+msgid "Right"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:259
+msgid "Align"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:259
+msgid "Pullquote alignment (float)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:267
+#: ../inc/shortcodes/data.php:289
+msgid "Dropcap"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:280
+msgid "Dropcap style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:285
+#: ../inc/shortcodes/data.php:334
+#: ../inc/shortcodes/data.php:425
+msgid "Size"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:285
+msgid "Choose dropcap size"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:288
+msgid "D"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:293
+msgid "Row"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:301
+msgid "Align to left"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:305
+msgid "Style preset for the inner columns"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:309
+msgid ""
+"[column size=\"1/3\"]Content[/column]\n"
+"[column size=\"1/3\"]Content[/column]\n"
+"[column size=\"1/3\"]Content[/column]"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:309
+msgid "Row for flexible columns"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:313
+msgid "Column"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:320
+msgid "Full width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:321
+msgid "One half"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:322
+msgid "One third"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:323
+msgid "Two third"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:324
+msgid "One fourth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:325
+msgid "Three fourth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:326
+msgid "One fifth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:327
+msgid "Two fifth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:328
+msgid "Three fifth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:329
+msgid "Four fifth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:330
+msgid "One sixth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:331
+msgid "Five sixth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:335
+msgid "Select column width. This width will be calculated depend page width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:338
+msgid "Column content"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:338
+msgid "Flexible and responsive columns"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:342
+msgid "List"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:349
+msgid "Star"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:350
+msgid "Arrow"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:351
+msgid "Check"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:352
+msgid "Cross"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:353
+msgid "Thumbs up"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:354
+#: ../inc/shortcodes/data.php:381
+msgid "Link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:355
+msgid "Gear"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:356
+msgid "Time"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:357
+#: ../inc/shortcodes/data.php:554
+msgid "Note"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:358
+msgid "Plus"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:359
+msgid "Guard"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:360
+msgid "Event"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:361
+msgid "Idea"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:363
+msgid "Twitter"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:366
+msgid "List items style/icons"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:370
+msgid ""
+"<ul>\n"
+"<li>List item</li>\n"
+"<li>List item</li>\n"
+"<li>List item</li>\n"
+"</ul>"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:370
+msgid "Styled unordered list"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:374
+#: ../inc/shortcodes/data.php:683
+msgid "Button"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:382
+msgid "Button link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:387
+#: ../inc/shortcodes/data.php:830
+msgid "Same tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:388
+#: ../inc/shortcodes/data.php:831
+msgid "New tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:391
+#: ../inc/shortcodes/data.php:834
+msgid "Target"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:392
+msgid "Button link target"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:399
+#: ../inc/shortcodes/data.php:520
+msgid "Soft"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:400
+#: ../inc/shortcodes/data.php:521
+msgid "Glass"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:401
+#: ../inc/shortcodes/data.php:522
+msgid "Bubbles"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:402
+#: ../inc/shortcodes/data.php:523
+msgid "Noise"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:403
+msgid "Stroked"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:404
+msgid "3D"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:407
+msgid "Button background style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:413
+msgid "Button background color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:420
+msgid "Button text color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:426
+msgid "Button size"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:431
+msgid "Fluid"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:431
+msgid "Fluid buttons has 100% width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:437
+#: ../inc/shortcodes/data.php:546
+#: ../inc/shortcodes/data.php:575
+msgid "Radius"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:438
+msgid "Radius of button corners. Auto-radius calculation based on button size"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:443
+#: ../inc/shortcodes/data.php:492
+msgid "Icon"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:444
+msgid "You can upload custom icon for this button. Try to begin with <a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-quality icons</a>. Download archive, unpack icons and upload in this field"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:450
+msgid "Dark"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:453
+msgid "Text shadow color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:453
+msgid "Color of button text shadow"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:458
+#: ../inc/shortcodes/data.php:1322
+msgid "None"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:459
+msgid "Top"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:461
+msgid "Bottom"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:463
+msgid "Top right"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:464
+msgid "Top left"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:464
+msgid "Bottom right"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:464
+msgid "Bottom left"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:466
+msgid "Text shadow position"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:466
+msgid "Position of button text shadow"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:471
+msgid "CSS class"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:471
+msgid "Extra CSS class for button"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:474
+msgid "Button text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:475
+msgid "Styled button"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:479
+msgid "Service"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:485
+#: ../inc/shortcodes/shortcodes.php:398
+msgid "Service title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:487
+msgid "Service name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:493
+msgid "You can upload custom icon for this box"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:499
+msgid "Icon size"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:500
+msgid "Size of the uploaded icon in pixels"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:503
+msgid "Service description"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:503
+msgid "Service box with title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:507
+msgid "Box"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:513
+msgid "Box title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:514
+msgid "Text for the box title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:527
+msgid "Box style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:533
+msgid "Color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:534
+msgid "Color for the box title and borders"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:540
+msgid "Title text color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:540
+msgid "Color for the box title text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:547
+msgid "Box corners radius"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:550
+msgid "Box content"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:550
+msgid "Colored box with caption"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:562
+msgid "Note background color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:569
+msgid "Note text color"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:575
+msgid "Note corners radius"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:578
+msgid "Note text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:579
+msgid "Colored box"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:583
+msgid "Private"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:587
+msgid "Private note text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:587
+msgid "Private note for post authors"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:591
+msgid "YouTube"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:598
+#: ../inc/shortcodes/data.php:637
+#: ../inc/shortcodes/data.php:889
+#: ../inc/shortcodes/data.php:959
+msgid "Url"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:599
+msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:607
+#: ../inc/shortcodes/data.php:645
+#: ../inc/shortcodes/data.php:694
+#: ../inc/shortcodes/data.php:754
+#: ../inc/shortcodes/data.php:968
+#: ../inc/shortcodes/data.php:995
+#: ../inc/shortcodes/data.php:1033
+#: ../inc/shortcodes/data.php:1112
+#: ../inc/shortcodes/data.php:1207
+msgid "Width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:608
+#: ../inc/shortcodes/data.php:646
+#: ../inc/shortcodes/data.php:755
+msgid "Player width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:617
+#: ../inc/shortcodes/data.php:655
+#: ../inc/shortcodes/data.php:764
+msgid "Player height"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:622
+#: ../inc/shortcodes/data.php:660
+#: ../inc/shortcodes/data.php:700
+#: ../inc/shortcodes/data.php:775
+#: ../inc/shortcodes/data.php:1075
+#: ../inc/shortcodes/data.php:1170
+msgid "Autoplay"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:623
+#: ../inc/shortcodes/data.php:661
+msgid "Play video automatically when page is loaded"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:626
+msgid "YouTube video"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:630
+msgid "Vimeo"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:637
+msgid "Url of Vimeo page with video"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:664
+msgid "Vimeo video"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:668
+msgid "Audio"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:675
+#: ../inc/shortcodes/data.php:722
+msgid "File"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:676
+msgid "Audio file url. Supported formats: mp3, ogg"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:684
+msgid "Hidden"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:688
+#: ../inc/shortcodes/data.php:746
+msgid "Player style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:695
+msgid "Player width. You can specify width in percents and player will be responsive"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:701
+#: ../inc/shortcodes/data.php:776
+msgid "Play file automatically when page is loaded"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:706
+#: ../inc/shortcodes/data.php:781
+msgid "Loop"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:707
+#: ../inc/shortcodes/data.php:782
+msgid "Repeat when playback is ended"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:711
+msgid "Custom audio player"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:715
+msgid "Video"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:723
+msgid "Url to mp4/flv video-file"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:728
+msgid "Poster"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:729
+msgid "Url to poster image, that will be shown before playback"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:735
+msgid "Player title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:742
+#: ../inc/shortcodes/data.php:799
+msgid "Minimal"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:769
+msgid "Controls"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:770
+msgid "Show player controls (play/pause etc.) or not"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:786
+msgid "Custom video player"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:790
+msgid "Table"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:803
+msgid "Table style preset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:808
+msgid "CSV file"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:809
+msgid "Upload CSV file if you want to create HTML-table from file"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:813
+msgid ""
+"<table>\n"
+"<tr>\n"
+"\t<td>Table</td>\n"
+"\t<td>Table</td>\n"
+"</tr>\n"
+"<tr>\n"
+"\t<td>Table</td>\n"
+"\t<td>Table</td>\n"
+"</tr>\n"
+"</table>"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:814
+msgid "Styled table from HTML or CSV file"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:818
+msgid "Permalink"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:824
+msgid "ID"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:825
+msgid "Post or page ID"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:835
+msgid "Link target. blank - link will be opened in new window/tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:839
+msgid "Permalink to specified post/page"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:843
+msgid "Members"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:856
+msgid "Box style preset. This box will be shown for not logged users only"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:860
+#: ../inc/shortcodes/shortcodes.php:648
+msgid "This content is for registered users only. Please %login%."
+msgstr ""
+
+#: ../inc/shortcodes/data.php:861
+msgid "Message"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:861
+msgid "Message for not logged users"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:865
+#: ../inc/shortcodes/shortcodes.php:649
+msgid "login"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:866
+msgid "Login link text"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:866
+msgid "Text for the login link"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:869
+msgid "Content for logged members"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:870
+msgid "Content for logged in members only"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:874
+msgid "Guests"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:878
+msgid "Content for guests"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:878
+msgid "Content for guests only"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:882
+msgid "RSS Feed"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:890
+msgid "Url to RSS-feed"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:895
+msgid "Limit"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:895
+msgid "Number of items to show"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:898
+msgid "Feed grabber"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:902
+msgid "Menu"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:909
+msgid "Menu name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:909
+msgid "Custom menu name. Ex: Main menu"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:912
+msgid "Custom menu by name"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:916
+msgid "Sub pages"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:923
+#: ../inc/shortcodes/data.php:944
+msgid "Depth"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:924
+msgid "Max depth level of children pages"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:929
+msgid "Parent ID"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:930
+msgid "ID of the parent page. Leave blank to use current page"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:933
+msgid "List of sub pages"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:937
+msgid "Siblings"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:945
+msgid "Max depth level"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:948
+msgid "List of cureent page siblings"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:952
+msgid "Document"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:960
+msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
+msgstr ""
+
+#: ../inc/shortcodes/data.php:969
+msgid "Viewer width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:978
+msgid "Viewer height"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:981
+msgid "Document viewer by Google"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:985
+msgid "Gmap"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:996
+msgid "Map width"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1005
+msgid "Map height"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1010
+msgid "Marker"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1011
+msgid "Address for the marker. You can type it in any language"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1014
+msgid "Maps by Google"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1018
+msgid "Slider"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1024
+#: ../inc/shortcodes/data.php:1103
+#: ../inc/shortcodes/data.php:1192
+#: ../inc/shortcodes/data.php:1198
+msgid "Gallery"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1025
+msgid "Choose source gallery, that will be used for this slider"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1033
+msgid "Slider width (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1041
+msgid "Slider height (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1046
+#: ../inc/shortcodes/data.php:1141
+#: ../inc/shortcodes/data.php:1225
+msgid "Show titles"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1046
+msgid "Display slide titles"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1051
+#: ../inc/shortcodes/data.php:1146
+msgid "Center"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1051
+msgid "Is slider centered on the page"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1056
+#: ../inc/shortcodes/data.php:1151
+msgid "Arrows"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1056
+#: ../inc/shortcodes/data.php:1151
+msgid "Show left and right arrows"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1061
+#: ../inc/shortcodes/data.php:1156
+msgid "Pagination"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1062
+#: ../inc/shortcodes/data.php:1157
+msgid "Show pagination"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1066
+#: ../inc/shortcodes/data.php:1161
+msgid "Mouse wheel control"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1067
+msgid "Allow to change slides with mouse wheel"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1076
+msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1084
+#: ../inc/shortcodes/data.php:1179
+msgid "Speed"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1084
+#: ../inc/shortcodes/data.php:1179
+msgid "Specify animation speed"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1089
+#: ../inc/shortcodes/data.php:1184
+#: ../inc/shortcodes/data.php:1231
+msgid "Links target"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1090
+msgid "Open slides links in new window/tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1093
+msgid "Customizable image slider"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1097
+msgid "Carousel"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1104
+msgid "Choose source gallery, that will be used for this carousel"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1112
+msgid "Carousel width (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1120
+msgid "Carousel height (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1127
+msgid "Items to show"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1128
+msgid "How much carousel items is visible"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1135
+msgid "Scroll number"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1136
+msgid "How much items are scrolled in one transition"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1141
+msgid "Display titles for each item"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1146
+msgid "Is carousel centered on the page"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1162
+msgid "Allow to rotate carousel with mouse wheel"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1171
+msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1185
+msgid "Open carousel links in new window/tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1188
+msgid "Customizable image carousel"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1199
+msgid "Choose source gallery, that will be used for this shortcode"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1207
+msgid "Single item width (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1215
+msgid "Single item height (in pixels)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1220
+msgid "Never"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1221
+msgid "On mouse over"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1222
+msgid "Always"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1226
+msgid "Title display mode"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1231
+msgid "Open links in new window/tab"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1234
+msgid "Customizable image gallery"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1238
+msgid "Posts"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1243
+msgid "Template"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1244
+msgid "<b>Do not change this field value if you do not understand description below.</b><br/>Relative path to the template file. Default templates is placed under the plugin directory (templates folder). You can copy it under your theme directory and modify as you want. You can use following default templates that already available in the plugin directory:<br/><b%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/teaser-loop.php</b> - posts loop with thumbnail and title<br/><b%value>templates/single-post.php</b> - single post template<br/><b%value>templates/list-loop.php</b> - unordered list with posts titles"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1248
+msgid "Post ID's"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1249
+msgid "Enter comma separated ID's of the posts that you want to show"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1257
+msgid "Posts per page"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1258
+msgid "Specify number of posts that you want to show. Enter -1 to get all posts"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1265
+msgid "Post types"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1266
+msgid "Select post types. Hold Ctrl key to select multiple post types"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1272
+msgid "Taxonomy"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1273
+msgid "Select taxonomy to show posts from"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1280
+msgid "Terms"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1280
+msgid "Select terms to show posts from"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1285
+msgid "Taxonomy term operator"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1286
+msgid "IN - posts that have any of selected categories terms<br/>NOT IN - posts that is does not have any of selected terms<br/>AND - posts that have all selected terms"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1293
+msgid "Authors"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1294
+msgid "Choose the authors whose posts you want to show"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1298
+msgid "Meta key"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1299
+msgid "Enter meta key name to show posts that have this key"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1306
+msgid "Offset"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1307
+msgid "Specify offset to start posts loop not from first post"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1312
+msgid "Descending"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1313
+msgid "Ascending"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1316
+msgid "Order"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1317
+msgid "Posts order"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1323
+msgid "Post ID"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1324
+msgid "Post author"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1325
+msgid "Post title"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1326
+msgid "Post slug"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1327
+msgid "Date"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1327
+msgid "Last modified date"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1328
+#: ../inc/shortcodes/data.php:1338
+msgid "Post parent"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1329
+msgid "Random"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1329
+msgid "Comments number"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1330
+msgid "Menu order"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1330
+msgid "Meta key values"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1333
+msgid "Order by"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1334
+msgid "Order posts by"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1339
+msgid "Show childrens of entered post (enter post ID)"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1344
+msgid "Published"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1345
+msgid "Pending"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1346
+msgid "Draft"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1347
+msgid "Auto-draft"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1348
+msgid "Future post"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1349
+msgid "Private post"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1350
+msgid "Inherit"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1351
+msgid "Trashed"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1352
+msgid "Any"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1355
+msgid "Post status"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1356
+msgid "Show only posts with selected status"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1361
+msgid "Ignore sticky"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1362
+msgid "Select Yes to ignore posts that is sticked"
+msgstr ""
+
+#: ../inc/shortcodes/data.php:1366
+msgid "Custom posts query with customizable template"
+msgstr ""
+
+#: ../inc/shortcodes/shortcodes.php:416
+msgid "This is box title"
+msgstr ""
+
+#: ../inc/shortcodes/shortcodes.php:486
+#: ../inc/shortcodes/shortcodes.php:518
+#: ../inc/shortcodes/shortcodes.php:554
+#: ../inc/shortcodes/shortcodes.php:588
+msgid "please specify correct url"
+msgstr ""
+
+#: ../inc/shortcodes/shortcodes.php:755
+msgid "This menu doesn't exists, or has no elements"
+msgstr ""
+
+#: ../inc/shortcodes/shortcodes.php:832
+#: ../inc/shortcodes/shortcodes.php:918
+#: ../inc/shortcodes/shortcodes.php:989
+msgid "images not found"
+msgstr ""
+
+#: ../inc/shortcodes/shortcodes.php:1197
+msgid "template not found"
+msgstr ""
+
+#: ../inc/sunrise/options.php:6
+msgid "About"
+msgstr ""
+
+#: ../inc/sunrise/options.php:21
+msgid "Custom formatting"
+msgstr ""
+
+#: ../inc/sunrise/options.php:22
+msgid "Disable this option if you have some problems with other plugins or content formatting"
+msgstr ""
+
+#: ../inc/sunrise/options.php:22
+#: ../inc/sunrise/options.php:30
+msgid "Documentation article"
+msgstr ""
+
+#: ../inc/sunrise/options.php:26
+#: ../inc/sunrise/options.php:34
+msgid "Enabled"
+msgstr ""
+
+#: ../inc/sunrise/options.php:29
+msgid "Compatibility mode"
+msgstr ""
+
+#: ../inc/sunrise/options.php:30
+msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
+msgstr ""
+
+#: ../inc/sunrise/options.php:30
+msgid "etc."
+msgstr ""
+
+#: ../inc/sunrise/options.php:40
+msgid "Custom CSS"
+msgstr ""
+
+#: ../inc/sunrise/options.php:51
+msgid "Galleries"
+msgstr ""
+
+#: ../inc/sunrise/options.php:62
+msgid "Cheatsheet"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:2
+msgid "Welcome to Shortcodes Ultimate"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:2
+msgid "A real swiss army knife for WordPress"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:4
+msgid "Project homepage"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:6
+msgid "Add-ons"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:8
+msgid "Documentation"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:12
+msgid "Changelog"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:14
+msgid "Contact author"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:17
+msgid "Plugin features"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:19
+msgid "30+ amazing shortcodes"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:20
+msgid "Power of CSS3 transitions"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:21
+msgid "Handy shortcodes generator"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:22
+msgid "International"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:23
+msgid "Documented API"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:27
+msgid "What is a shortcode?"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:28
+msgid "<strong>Shortcode</strong> is a WordPress-specific code that lets you do nifty things with very little effort."
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:29
+msgid "Shortcodes can embed files or create objects that would normally require lots of complicated, ugly code in just one line. Shortcode = shortcut."
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:33
+msgid "How it works"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:37
+msgid "More videos"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:39
+msgid "Shortcodes Ultimate Tutorial"
+msgstr ""
+
+#: ../inc/sunrise/views/about.php:40
+msgid "How to use special widget"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:5
+msgid "Shortcode"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:6
+msgid "Parameters"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:7
+msgid "Example"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:17
+msgid "Demo"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:49
+msgid "Default value"
+msgstr ""
+
+#: ../inc/sunrise/views/cheatsheet.php:55
+msgid "-- no parameters --"
+msgstr ""
+
+#: ../inc/sunrise/views/closetab.php:4
+msgid "Save changes"
+msgstr ""
+
+#: ../inc/sunrise/views/closetab.php:5
+msgid "Saving"
+msgstr ""
+
+#: ../inc/sunrise/views/closetab.php:6
+msgid "Saved"
+msgstr ""
+
+#: ../inc/sunrise/views/closetab.php:7
+msgid "Reset all settings to default. Are you sure? This action cannot be undone!"
+msgstr ""
+
+#: ../inc/sunrise/views/closetab.php:7
+msgid "Restore default settings"
+msgstr ""
+
+#: ../inc/sunrise/views/code.php:5
+msgid "Insert code"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:3
+msgid "You can see the original styles to override it"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:17
+msgid "You can use next variables in your custom CSS"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:18
+msgid "home url"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:19
+msgid "theme url"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:20
+msgid "plugin url"
+msgstr ""
+
+#: ../inc/sunrise/views/css.php:23
+msgid "Toggle fullscreen"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:2
+msgid "Are you sure that you want to delete this gallery? This action can't be undone!"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:2
+msgid "Are you sure that you want to delete this image? This action can't be undone!"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:4
+msgid "Create new gallery"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:17
+#: ../inc/sunrise/views/galleries.php:73
+msgid "Enter gallery name"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:19
+#: ../inc/sunrise/views/galleries.php:75
+msgid "Edit gallery"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:20
+#: ../inc/sunrise/views/galleries.php:76
+msgid "Save &amp; close"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:21
+#: ../inc/sunrise/views/galleries.php:51
+#: ../inc/sunrise/views/galleries.php:77
+#: ../inc/sunrise/views/galleries.php:107
+msgid "Close"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:22
+#: ../inc/sunrise/views/galleries.php:42
+#: ../inc/sunrise/views/galleries.php:78
+#: ../inc/sunrise/views/galleries.php:98
+msgid "Delete"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:27
+#: ../inc/sunrise/views/galleries.php:83
+msgid "Add image"
+msgstr ""
+
+#: ../inc/sunrise/views/galleries.php:41
+#: ../inc/sunrise/views/galleries.php:97
+msgid "Edit"
+msgstr ""
+
+#: ../inc/sunrise/views/notifications.php:5
+msgid "Instructions"
+msgstr ""
+
+#: ../inc/sunrise/views/notifications.php:12
+#: ../inc/sunrise/views/notifications.php:20
+#: ../inc/sunrise/views/notifications.php:28
+#: ../inc/sunrise/views/notifications.php:36
+msgid "Click to close"
+msgstr ""
+
+#: ../inc/sunrise/views/settings.php:12
+msgid "For full functionality of this page it is reccomended to enable javascript."
+msgstr ""
+
+#: ../inc/sunrise/views/settings.php:13
+msgid "Settings reseted successfully"
+msgstr ""
+
+#: ../inc/sunrise/views/settings.php:14
+msgid "There is already default settings"
+msgstr ""
+
+#: ../inc/sunrise/views/settings.php:15
+msgid "Settings saved successfully"
+msgstr ""
+
+#: ../inc/sunrise/views/settings.php:16
+msgid "Settings not saved, because there is no changes"
+msgstr ""
+
+#: ../inc/sunrise/views/upload.php:7
+msgid "Upload"
+msgstr ""
+
+#: ../templates/default-loop.php:15
+#: ../templates/single-post.php:18
+msgid "Posted"
+msgstr ""
+
+#: ../templates/default-loop.php:19
+#: ../templates/single-post.php:18
+msgid "0 comments"
+msgstr ""
+
+#: ../templates/default-loop.php:19
+#: ../templates/single-post.php:18
+msgid "1 comment"
+msgstr ""
+
+#: ../templates/default-loop.php:19
+#: ../templates/single-post.php:18
+msgid "%n comments"
+msgstr ""
+
+#: ../templates/default-loop.php:27
+#: ../templates/list-loop.php:18
+#: ../templates/single-post.php:30
+#: ../templates/teaser-loop.php:22
+msgid "Posts not found"
+msgstr ""
+
