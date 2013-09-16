@@ -221,7 +221,9 @@ function su_do_shortcode( $content, $pre ) {
  */
 function su_compatibility_mode_prefix() {
 	global $shult;
-	return $shult->get_option( 'compatibility_mode' ) === 'on' ? apply_filters( 'su/prefix', 'su_' ) : '';
+	$option = get_option( 'su_compatibility_mode_prefix' );
+	if ( $shult->get_option( 'compatibility_mode' ) === 'on' ) return ( $option ) ? $option : 'su_';
+	else return '';
 }
 
 /**
