@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 4.0.3
+Stable tag: 4.0.4
 
 Supercharge your WordPress theme with mega pack of shortcodes
 
@@ -85,6 +85,18 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Changelog ==
+
+= 4.0.4 =
+* Added backward compatibility for [highlight]. Now it accepts bg and background attributes.
+* Added backward compatibility for [label]. Now it accepts style and type attributes.
+* Added backward compatibility for [dropcap]. Now it accepts 1, 2 and 3 as style values.
+* Added backward compatibility for [permalink]. Now it accepts p and id attributes.
+* Added backward compatibility for [button]. Need to test.
+* Added backward compatibility for [members]. Now it accepts style and login attributes.
+* Added backward compatibility for [box]. Now it accepts color and box_color attributes.
+* Added backward compatibility for [note]. Now it accepts color and note_color attributes.
+* Added backward compatibility for [column]. Now it accepts attribute last and can be not wrapped with [row].
+* Added backward compatibility for [document]. Now it accepts file and url attributes.
 
 = 4.0 =
 * [Official plugin page](http://gndev.info/shortcodes-ultimate/)

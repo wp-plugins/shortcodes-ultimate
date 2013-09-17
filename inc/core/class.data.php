@@ -636,13 +636,13 @@ class Shortcodes_Ultimate_Data {
 					'type' => 'wrap',
 					'group' => 'box',
 					'atts' => array(
-						'background' => array(
+						'note_color' => array(
 							'type' => 'color',
 							'values' => array( ),
 							'default' => '#FFFF66',
 							'name' => __( 'Background', 'su' ), 'desc' => __( 'Note background color', 'su' )
 						),
-						'color' => array(
+						'text_color' => array(
 							'type' => 'color',
 							'values' => array( ),
 							'default' => '#333333',

@@ -139,11 +139,16 @@ function su_spacer_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_highlight_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'background' => '#ddff99', 'color' => '#000000', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'background' => '#ddff99',
+			'bg'         => null, // 3.x
+			'color'      => '#000000',
+			'class'      => ''
+		), $atts );
+	if ( $atts['bg'] !== null ) $atts['background'] = $atts['bg'];
 	su_query_asset( 'css', 'su-content-shortcodes' );
 	return
-	'<span class="su-highlight' . su_ecssc( $atts ) . '" style="background:' . $atts['background'] . ';color:' .
-		$atts['color'] . '">&nbsp;' . $content . '&nbsp;</span>';
+	'<span class="su-highlight' . su_ecssc( $atts ) . '" style="background:' . $atts['background'] . ';color:' . $atts['color'] . '">&nbsp;' . $content . '&nbsp;</span>';
 }
 
 /**
@@ -155,7 +160,12 @@ function su_highlight_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_label_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'type' => 'default', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'type'  => 'default',
+			'style' => null, // 3.x
+			'class' => ''
+		), $atts );
+	if ( $atts['style'] !== null ) $atts['type'] = $atts['style'];
 	su_query_asset( 'css', 'su-content-shortcodes' );
 	return '<span class="su-label su-label-type-' . $atts['type'] . su_ecssc( $atts ) . '">' . $content . '</span>';
 }
@@ -203,7 +213,12 @@ function su_pullquote_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_dropcap_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'style' => 'default', 'size' => 3, 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'style' => 'default',
+			'size'  => 3,
+			'class' => ''
+		), $atts );
+	$atts['style'] = str_replace( array( '1', '2', '3' ), array( 'default', 'light', 'default' ), $atts['style'] ); // 3.x
 	// Calculate font-size
 	$em = $atts['size'] * 0.5 . 'em';
 	su_query_asset( 'css', 'su-content-shortcodes' );
@@ -234,10 +249,14 @@ function su_row_shortcode( $atts = null, $content = null ) {
  * @return string Output html
  */
 function su_column_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'size' => '1/2', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'size' => '1/2',
+			'last' => null,
+			'class' => ''
+		), $atts );
+	if ( $atts['last'] !== null && $atts['last'] == '1' ) $atts['class'] .= ' su-column-last';
 	su_query_asset( 'css', 'su-box-shortcodes' );
-	return '<div class="su-column su-column-size-' . str_replace( '/', '-', $atts['size'] ) . su_ecssc( $atts ) .
-		'"><div class="su-column-inner">' . su_do_shortcode( $content, 'c' ) . '</div></div>';
+	return '<div class="su-column su-column-size-' . str_replace( '/', '-', $atts['size'] ) . su_ecssc( $atts ) . '"><div class="su-column-inner">' . su_do_shortcode( $content, 'c' ) . '</div></div>';
 }
 
 /**
@@ -266,10 +285,12 @@ function su_list_shortcode( $atts, $content = null ) {
 function su_button_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
 			'url'        => get_option( 'home' ),
+			'link'       => null, // 3.x
 			'target'     => 'self',
 			'style'      => 'default',
 			'background' => '#2D89EF',
 			'color'      => '#FFFFFF',
+			'dark'       => null,
 			'size'       => 3,
 			'wide'       => 'no',
 			'radius'     => 'auto',
@@ -279,6 +300,13 @@ function su_button_shortcode( $atts, $content = null ) {
 			'desc'       => '',
 			'class'      => ''
 		), $atts );
+
+	if ( $atts['link'] !== null ) $atts['url'] = $atts['link'];
+	if ( $atts['dark'] !== null ) {
+		$atts['background'] = $atts['color'];
+		$atts['color'] = ( $atts['dark'] ) ? '#000' : '#fff';
+	}
+	$atts['style'] = str_replace( array( '1', '2', '3', '4', '5' ), array( 'default', 'glass', 'bubbles', 'noise', 'stroked' ), $atts['style'] ); // 3.x
 
 	// Prepare vars
 	$a_css = array();
@@ -393,17 +421,14 @@ function su_button_shortcode( $atts, $content = null ) {
  */
 function su_service_shortcode( $atts, $content = null ) {
 	$shult = shortcodes_ultimate();
-	$atts = shortcode_atts( array( 'title' => __( 'Service title', 'su' ),
-			'icon' => $shult->assets( 'images', 'service.png' ),
-			'size' => 32,
-			'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'title' => __( 'Service title', 'su' ),
+			'icon'  => $shult->assets( 'images', 'service.png' ),
+			'size'  => 32,
+			'class' => ''
+		), $atts );
 	su_query_asset( 'css', 'su-box-shortcodes' );
-	return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding:' .
-		round( ( $atts['size'] - 16 ) / 2 ) . 'px 0 ' . round( ( $atts['size'] - 16 ) / 2 ) . 'px ' .
-		( $atts['size'] + 15 ) . 'px"><img src="' . $atts['icon'] . '" width="' . $atts['size'] . '" height="' .
-		$atts['size'] . '" alt="' . $atts['title'] . '" /> ' . $atts['title'] .
-		'</div><div class="su-service-content" style="padding:0 0 0 ' . ( $atts['size'] + 15 ) . 'px">' .
-		do_shortcode( $content ) . '</div></div>';
+	return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding:' . round( ( $atts['size'] - 16 ) / 2 ) . 'px 0 ' . round( ( $atts['size'] - 16 ) / 2 ) . 'px ' . ( $atts['size'] + 15 ) . 'px"><img src="' . $atts['icon'] . '" width="' . $atts['size'] . '" height="' . $atts['size'] . '" alt="' . $atts['title'] . '" /> ' . $atts['title'] . '</div><div class="su-service-content" style="padding:0 0 0 ' . ( $atts['size'] + 15 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
 }
 
 /**
@@ -415,12 +440,16 @@ function su_service_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_box_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'title' => __( 'This is box title', 'su' ),
-			'style' => 'default',
-			'box_color' => '#333333',
+	$atts = shortcode_atts( array(
+			'title'       => __( 'This is box title', 'su' ),
+			'style'       => 'default',
+			'box_color'   => '#333333',
 			'title_color' => '#FFFFFF',
-			'radius' => '3',
-			'class' => '' ), $atts );
+			'color'       => null, // 3.x
+			'radius'      => '3',
+			'class'       => ''
+		), $atts );
+	if ( $atts['color'] !== null ) $atts['box_color'] = $atts['color'];
 	// Prepare border-radius
 	$radius = ( $atts['radius'] != '0' ) ?
 		'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] .
@@ -449,21 +478,20 @@ function su_box_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_note_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'background' => '#FFFF66',
-			'color' => '#333333',
-			'radius' => '3',
-			'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'note_color' => '#FFFF66',
+			'text_color' => '#333333',
+			'background' => null, // 3.x
+			'color'      => null, // 3.x
+			'radius'     => '3',
+			'class'      => ''
+		), $atts );
+	if ( $atts['color'] !== null ) $atts['note_color'] = $atts['color'];
+	if ( $atts['background'] !== null ) $atts['note_color'] = $atts['background'];
 	// Prepare border-radius
-	$radius = ( $atts['radius'] != '0' ) ?
-		'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] .
-		'px;-webkit-border-radius:' . $atts['radius'] . 'px;' : '';
+	$radius = ( $atts['radius'] != '0' ) ? 'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] . 'px;-webkit-border-radius:' . $atts['radius'] . 'px;' : '';
 	su_query_asset( 'css', 'su-box-shortcodes' );
-	return
-	'<div class="su-note' . su_ecssc( $atts ) . '" style="border-color:' .
-		su_hex_shift( $atts['background'], 'darker', 10 ) . ';' . $radius .
-		'"><div class="su-note-inner" style="background-color:' . $atts['background'] . ';border-color:' .
-		su_hex_shift( $atts['background'], 'lighter', 80 ) . ';color:' . $atts['color'] . ';' . $radius . '">' .
-		su_do_shortcode( $content, 'n' ) . '</div></div>';
+	return '<div class="su-note' . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['note_color'], 'darker', 10 ) . ';' . $radius . '"><div class="su-note-inner" style="background-color:' . $atts['note_color'] . ';border-color:' . su_hex_shift( $atts['note_color'], 'lighter', 80 ) . ';color:' . $atts['text_color'] . ';' . $radius . '">' . su_do_shortcode( $content, 'n' ) . '</div></div>';
 }
 
 /**
@@ -711,12 +739,16 @@ function su_table_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_permalink_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'id' => 1, 'target' => 'self', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'id' => 1,
+			'p' => null, // 3.x
+			'target' => 'self',
+			'class' => ''
+		), $atts );
+	if ( $atts['p'] !== null ) $atts['id'] = $atts['p'];
 	// Prepare link text
 	$text = ( $content ) ? $content : get_the_title( $atts['id'] );
-	return
-	'<a href="' . get_permalink( $atts['id'] ) . '" class="' . su_ecssc( $atts ) . '" title="' . $text .
-		'" target="_' . $atts['target'] . '">' . $text . '</a>';
+	return '<a href="' . get_permalink( $atts['id'] ) . '" class="' . su_ecssc( $atts ) . '" title="' . $text . '" target="_' . $atts['target'] . '">' . $text . '</a>';
 }
 
 /**
@@ -729,16 +761,20 @@ function su_permalink_shortcode( $atts, $content = null ) {
  */
 function su_members_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
-			'message' => __( 'This content is for registered users only. Please %login%.', 'su' ),
-			'color' => '#ffcc00',
+			'message'    => __( 'This content is for registered users only. Please %login%.', 'su' ),
+			'color'      => '#ffcc00',
+			'style'      => null, // 3.x
 			'login_text' => __( 'login', 'su' ),
-			'login_url' => wp_login_url(),
-			'class' => ''
+			'login_url'  => wp_login_url(),
+			'login'      => null, // 3.x
+			'class'      => ''
 		), $atts );
+	if ( $atts['style'] !== null ) $atts['color'] = str_replace( array( '0', '1', '2' ), array( '#fff', '#FFFF29', '#1F9AFF' ), $atts['style'] );
 	// Check feed
 	if ( is_feed() ) return;
 	// Check authorization
 	if ( !is_user_logged_in() ) {
+		if ( $atts['login'] !== null && $atts['login'] == '0' ) return; // 3.x
 		// Prepare login link
 		$login = '<a href="' . esc_attr( $atts['login_url'] ) . '">' . $atts['login_text'] . '</a>';
 		su_query_asset( 'css', 'su-other-shortcodes' );
@@ -871,17 +907,17 @@ function su_menu_shortcode_fb_cb() {
  * @return string Output html
  */
 function su_document_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'url' => '',
-			'width' => 600,
-			'height' => 400,
+	$atts = shortcode_atts( array(
+			'url'        => '',
+			'file'       => null, // 3.x
+			'width'      => 600,
+			'height'     => 400,
 			'responsive' => 'yes',
-			'class' => '' ), $atts );
+			'class'      => ''
+		), $atts );
+	if ( $atts['file'] !== null ) $atts['url'] = $atts['file'];
 	su_query_asset( 'css', 'su-media-shortcodes' );
-	return
-	'<div class="su-document su-responsive-media-' . $atts['responsive'] .
-		'"><iframe src="http://docs.google.com/viewer?embedded=true&url=' . $atts['url'] . '" width="' .
-		$atts['width'] . '" height="' . $atts['height'] . '" class="su-document' . su_ecssc( $atts ) .
-		'"></iframe></div>';
+	return '<div class="su-document su-responsive-media-' . $atts['responsive'] . '"><iframe src="http://docs.google.com/viewer?embedded=true&url=' . $atts['url'] . '" width="' . $atts['width'] . '" height="' . $atts['height'] . '" class="su-document' . su_ecssc( $atts ) . '"></iframe></div>';
 }
 
 /**
@@ -893,16 +929,15 @@ function su_document_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_gmap_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'width' => 600,
-			'height' => 400,
+	$atts = shortcode_atts( array(
+			'width'      => 600,
+			'height'     => 400,
 			'responsive' => 'yes',
-			'address' => 'New York',
-			'class' => '' ), $atts );
+			'address'    => 'New York',
+			'class'      => ''
+		), $atts );
 	su_query_asset( 'css', 'su-media-shortcodes' );
-	return
-	'<div class="su-gmap su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '"><iframe width="' .
-		$atts['width'] . '" height="' . $atts['height'] . '" src="http://maps.google.com/maps?q=' .
-		urlencode( $atts['address'] ) . '&amp;output=embed"></iframe></div>';
+	return '<div class="su-gmap su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '"><iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://maps.google.com/maps?q=' . urlencode( $atts['address'] ) . '&amp;output=embed"></iframe></div>';
 }
 
 /**
@@ -931,7 +966,7 @@ function su_slider_shortcode( $atts, $content = null ) {
 			'speed'      => 600,
 			'target'     => 'yes',
 			'class'      => ''
-			), $atts );
+		), $atts );
 	// Prepare unique ID
 	$id = uniqid( 'su_slider_' );
 	// Links target
@@ -1017,7 +1052,7 @@ function su_carousel_shortcode( $atts, $content = null ) {
 			'speed'      => 600,
 			'target'     => 'yes',
 			'class'      => ''
-			), $atts );
+		), $atts );
 	// Prepare unique ID
 	$id = uniqid( 'su_carousel_' );
 	// Links target
@@ -1094,7 +1129,7 @@ function su_custom_gallery_shortcode( $atts, $content = null ) {
 			'title'   => 'hover',
 			'target'  => 'yes',
 			'class'   => ''
-			), $atts );
+		), $atts );
 	// Links target
 	$target = ( $atts['target'] === 'yes' ) ? ' target="_blank"' : '';
 	// Prepare gallery
