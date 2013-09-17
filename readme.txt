@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 4.0.5
+Stable tag: 4.0.6
 
 Supercharge your WordPress theme with mega pack of shortcodes
 
@@ -85,6 +85,9 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Changelog ==
+
+= 4.0.6 =
+* Fixed [column] margins
 
 = 4.0.5 =
 * Added backward compatibility for [tabs]. Now it accepts style=3 and vertical attributes
