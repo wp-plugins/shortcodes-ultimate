@@ -29,6 +29,8 @@ class Shortcodes_Ultimate {
 		add_filter( 'plugin_action_links_' . $shult->basename, array( __CLASS__, 'actions_links' ), -10 );
 		// Add plugin meta links
 		add_filter( 'plugin_row_meta', array( __CLASS__, 'meta_links' ), 10, 2 );
+		// Import custom CSS from previous version
+		add_action( 'admin_init', array( __CLASS__, 'import_custom_css' ) );
 		// Shortcodes Ultimate is ready
 		do_action( 'su/init' );
 	}
@@ -92,6 +94,18 @@ class Shortcodes_Ultimate {
 		$upload_dir = wp_upload_dir();
 		$path = trailingslashit( path_join( $upload_dir['basedir'], 'shortcodes-ultimate-skins' ) );
 		if ( !file_exists( $path ) ) mkdir( $path, 0755 );
+	}
+
+	/**
+	 * Import custom CSS from previous version
+	 */
+	public static function import_custom_css() {
+		$shult = shortcodes_ultimate();
+		$old = get_option( 'su_custom_css' );
+		if ( !$old ) return;
+		$current = $shult->get_option( 'custom_css' );
+		$shult->update_option( 'custom_css', "/* Custom CSS from v3 - begin */\n" . $old . "\n/* Custom CSS from v3 - end*/\n\n" . $current );
+		delete_option( 'su_custom_css' );
 	}
 
 	/**

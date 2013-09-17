@@ -71,6 +71,10 @@
 
 .su-spoiler { margin-bottom: 1.5em; }
 .su-spoiler .su-spoiler:last-child { margin-bottom: 0; }
+.su-spoiler-title {
+	position: relative;
+	cursor: pointer;
+}
 .su-spoiler-content {
 	-webkit-transition: padding-top .2s;
 	-moz-transition: padding-top .2s;
@@ -87,17 +91,15 @@
 	border: none;
 	opacity: 0;
 }
-.su-spoiler-title {
-	position: relative;
+.su-spoiler-style-default > .su-spoiler-title {
 	min-height: 16px;
 	padding: 4px 0 4px 24px;
 	background: #fff;
 	color: #333;
 	font-weight: bold;
 	line-height: 16px;
-	cursor: pointer;
 }
-.su-spoiler-title > .su-spoiler-icon {
+.su-spoiler-style-default > .su-spoiler-title > .su-spoiler-icon {
 	position: absolute;
 	top: 4px;
 	left: 0;
@@ -106,9 +108,66 @@
 	height: 16px;
 	background: 0 -16px url('../images/spoiler.png') no-repeat;
 }
-.su-spoiler-closed > .su-spoiler-title > .su-spoiler-icon { background: 0 0 url('../images/spoiler.png') no-repeat; }
-.su-spoiler-content {
+.su-spoiler-style-default.su-spoiler-closed > .su-spoiler-title > .su-spoiler-icon { background: 0 0 url('../images/spoiler.png') no-repeat; }
+.su-spoiler-style-default > .su-spoiler-content {
 	padding: 1em 0 0 24px;
+	background: #fff;
+	color: #333;
+}
+.su-spoiler-style-fancy  {
+	border: 1px solid #ccc;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.su-spoiler-style-fancy > .su-spoiler-title {
+	min-height: 20px;
+	padding: 7px 7px 7px 36px;
+	border-bottom: 1px solid #ccc;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #f0f0f0;
+	color: #333;
+	font-weight: bold;
+	font-size: 0.9em;
+	line-height: 20px;
+}
+.su-spoiler-style-fancy.su-spoiler-closed > .su-spoiler-title { border: none; }
+.su-spoiler-style-fancy > .su-spoiler-title > .su-spoiler-icon {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	display: block;
+	width: 16px;
+	height: 16px;
+	background: 0 -16px url('../images/spoiler.png') no-repeat;
+}
+.su-spoiler-style-fancy.su-spoiler-closed > .su-spoiler-title > .su-spoiler-icon { background: 0 0 url('../images/spoiler.png') no-repeat; }
+.su-spoiler-style-fancy > .su-spoiler-content {
+	padding: 1em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background: #fff;
+	color: #333;
+}
+.su-spoiler-style-simple  {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.su-spoiler-style-simple > .su-spoiler-title {
+	min-height: 20px;
+	padding: 5px 10px;
+	background: #f0f0f0;
+	color: #333;
+	font-weight: bold;
+	font-size: 0.9em;
+	line-height: 20px;
+}
+.su-spoiler-style-simple > .su-spoiler-title > .su-spoiler-icon { display: none; }
+.su-spoiler-style-simple > .su-spoiler-content {
+	padding: 1em 10px;
 	background: #fff;
 	color: #333;
 }

@@ -136,6 +136,17 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Open', 'su' ),
 							'desc' => __( 'Is spoiler content visible by default', 'su' )
 						),
+						'style' => array(
+							'type' => 'select',
+							'values' => array(
+								'default' => __( 'Default', 'su' ),
+								'fancy' => __( 'Fancy', 'su' ),
+								'simple' => __( 'Simple', 'su' )
+							),
+							'default' => 'default',
+							'name' => __( 'Style', 'su' ),
+							'desc' => __( 'Spoiler skin', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),

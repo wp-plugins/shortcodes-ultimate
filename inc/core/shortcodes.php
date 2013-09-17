@@ -25,7 +25,12 @@ function su_heading_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_tabs_shortcode( $atts, $content ) {
-	$atts = shortcode_atts( array( 'vertical' => 'no', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'vertical' => 'no',
+			'style'    => null, // 3.x
+			'class'    => ''
+		), $atts );
+	if ( $atts['style'] == '3' ) $atts['vertical'] = 'yes';
 	$GLOBALS['tab_count'] = 0;
 	do_shortcode( $content );
 	$return = '';
@@ -74,17 +79,18 @@ function su_tab_shortcode( $atts, $content ) {
  * @return string Output html
  */
 function su_spoiler_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'title' => __( 'Spoiler title', 'su' ),
-			'open' => 'no',
-			'class' => '' ), $atts );
-	$open = ( $atts['open'] === 'no' ) ? ' su-spoiler-closed' : '';
+	$atts = shortcode_atts( array(
+			'title' => __( 'Spoiler title', 'su' ),
+			'open'  => 'no',
+			'style' => 'default',
+			'class' => ''
+		), $atts );
+	$atts['style'] = str_replace( array( '1', '2' ), array( 'default', 'fancy' ), $atts['style'] );
+	$closed = ( $atts['open'] !== 'yes' ) ? ' su-spoiler-closed' : '';
 	su_query_asset( 'css', 'su-box-shortcodes' );
 	su_query_asset( 'js', 'jquery' );
 	su_query_asset( 'js', 'su-other-shortcodes' );
-	return
-	'<div class="su-spoiler' . $open . su_ecssc( $atts ) .
-		'"><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . $atts['title'] .
-		'</div><div class="su-spoiler-content">' . su_do_shortcode( $content, 's' ) . '</div></div>';
+	return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . $closed . su_ecssc( $atts ) . '"><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . $atts['title'] . '</div><div class="su-spoiler-content">' . su_do_shortcode( $content, 's' ) . '</div></div>';
 }
 
 /**
@@ -109,8 +115,7 @@ function su_accordion_shortcode( $atts = null, $content = null ) {
  * @return string Output html
  */
 function su_divider_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'top' => 'yes', 'text' => __( 'Go to top', 'su' ), 'class' => '' ),
-		$atts );
+	$atts = shortcode_atts( array( 'top' => 'yes', 'text' => __( 'Go to top', 'su' ), 'class' => '' ), $atts );
 	$top = ( $atts['top'] === 'yes' ) ? '<a href="#">' . $atts['text'] . '</a>' : '';
 	su_query_asset( 'css', 'su-content-shortcodes' );
 	return '<div class="su-divider' . su_ecssc( $atts ) . '">' . $top . '</div>';
