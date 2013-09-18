@@ -227,9 +227,26 @@ function su_dropcap_shortcode( $atts, $content = null ) {
 	// Calculate font-size
 	$em = $atts['size'] * 0.5 . 'em';
 	su_query_asset( 'css', 'su-content-shortcodes' );
-	return
-	'<span class="su-dropcap su-dropcap-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="font-size:' .
-		$em . '">' . $content . '</span>';
+	return '<span class="su-dropcap su-dropcap-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="font-size:' . $em . '">' . $content . '</span>';
+}
+
+/**
+ * Shortcode: frame
+ *
+ * @param array   $atts    Shortcode attributes
+ * @param string  $content
+ *
+ * @return string Output html
+ */
+function su_frame_shortcode( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+			'style' => 'default',
+			'align' => 'left',
+			'class' => ''
+		), $atts );
+	su_query_asset( 'css', 'su-content-shortcodes' );
+	su_query_asset( 'js', 'su-other-shortcodes' );
+	return '<span class="su-frame su-frame-align-' . $atts['align'] . ' su-frame-style-' . $atts['style'] . su_ecssc( $atts ) . '"><span class="su-frame-inner">' . $content . '</span></span>';
 }
 
 /**

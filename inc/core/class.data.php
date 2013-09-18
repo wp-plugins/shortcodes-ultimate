@@ -358,6 +358,33 @@ class Shortcodes_Ultimate_Data {
 					'usage' => '[dropcap style="default"]D[/dropcap]ropcap', 'content' => __( 'D', 'su' ),
 					'desc' => __( 'Dropcap', 'su' )
 				),
+				// frame
+				'frame' => array(
+					'name' => __( 'Frame', 'su' ),
+					'type' => 'wrap',
+					'group' => 'content',
+					'atts' => array(
+						'align' => array(
+							'type' => 'select',
+							'values' => array(
+								'left',
+								'center',
+								'right'
+							),
+							'default' => 'left',
+							'name' => __( 'Align', 'su' ),
+							'desc' => __( 'Frame alignment', 'su' )
+						),
+						'class' => array(
+							'default' => '',
+							'name' => __( 'Class', 'su' ),
+							'desc' => __( 'Extra CSS class', 'su' )
+						)
+					),
+					'usage' => '[frame align="center"]<img src="image.jpg">[/frame]',
+					'content' => __( '<img src="http://lorempixel.com/g/400/200/" />', 'su' ),
+					'desc' => __( 'Styled image frame', 'su' )
+				),
 				// row
 				'row' => array(
 					'name' => __( 'Row', 'su' ),
