@@ -22,6 +22,8 @@ class Shortcodes_Ultimate_Data {
 			// Register shortcode
 			add_shortcode( su_compatibility_mode_prefix() . $shortcode, $function );
 		}
+		// Register [media] manually
+		add_shortcode( su_compatibility_mode_prefix() . 'media', 'su_media_shortcode' );
 	}
 
 	/**
@@ -82,6 +84,15 @@ class Shortcodes_Ultimate_Data {
 					'type' => 'wrap',
 					'group' => 'box',
 					'atts' => array(
+						'active' => array(
+							'type' => 'number',
+							'min' => 1,
+							'max' => 100,
+							'step' => 1,
+							'default' => 1,
+							'name' => __( 'Active tab', 'su' ),
+							'desc' => __( 'Select which tab is open by default', 'su' )
+						),
 						'vertical' => array(
 							'type' => 'switch',
 							'default' => 'no',

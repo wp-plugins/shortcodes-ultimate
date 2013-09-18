@@ -9,11 +9,14 @@
  * @return string Output html
  */
 function su_heading_shortcode( $atts, $content = null ) {
-	$atts = shortcode_atts( array( 'size' => 3, 'align' => 'center', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'size'  => 3,
+			'align' => 'center',
+			'class' => ''
+		), $atts );
 	su_query_asset( 'css', 'su-content-shortcodes' );
 	$size = round( ( $atts['size'] + 7 ) * 1.3 );
-	return '<div class="su-heading su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' .
-		$size . 'px"><div class="su-heading-inner">' . $content . '</div></div>';
+	return '<div class="su-heading su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' . $size . 'px"><div class="su-heading-inner">' . $content . '</div></div>';
 }
 
 /**
@@ -26,6 +29,7 @@ function su_heading_shortcode( $atts, $content = null ) {
  */
 function su_tabs_shortcode( $atts, $content ) {
 	$atts = shortcode_atts( array(
+			'active'   => 1,
 			'vertical' => 'no',
 			'style'    => null, // 3.x
 			'class'    => ''
@@ -36,14 +40,13 @@ function su_tabs_shortcode( $atts, $content ) {
 	$return = '';
 	$tabs = $panes = array();
 	if ( is_array( $GLOBALS['tabs'] ) ) {
+		if ( $GLOBALS['tab_count'] < $atts['active'] ) $atts['active'] = $GLOBALS['tab_count'];
 		foreach ( $GLOBALS['tabs'] as $tab ) {
 			$tabs[] = '<span class="' . su_ecssc( $tab ) . '">' . $tab['title'] . '</span>';
 			$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '</div>';
 		}
 		$vertical = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
-		$return = '<div class="su-tabs' . $vertical . su_ecssc( $atts ) . '"><div class="su-tabs-nav">' .
-			implode( '', $tabs ) . '</div><div class="su-tabs-panes">' .
-			implode( "\n", $panes ) . '</div><div style="clear:both;height:0"></div></div>';
+		$return = '<div class="su-tabs' . $vertical . su_ecssc( $atts ) . '" data-active="' . (string) $atts['active'] . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div><div style="clear:both;height:0"></div></div>';
 	}
 	// Unset globals
 	unset( $GLOBALS['tabs'], $GLOBALS['tab_count'] );
@@ -328,7 +331,7 @@ function su_button_shortcode( $atts, $content = null ) {
 		$atts['background'] = $atts['color'];
 		$atts['color'] = ( $atts['dark'] ) ? '#000' : '#fff';
 	}
-	$atts['style'] = str_replace( array( '1', '2', '3', '4', '5' ), array( 'default', 'glass', 'bubbles', 'noise', 'stroked' ), $atts['style'] ); // 3.x
+	if ( is_numeric( $atts['style'] ) ) $atts['style'] = str_replace( array( '1', '2', '3', '4', '5' ), array( 'default', 'glass', 'bubbles', 'noise', 'stroked' ), $atts['style'] ); // 3.x
 
 	// Prepare vars
 	$a_css = array();
@@ -551,6 +554,25 @@ function su_private_shortcode( $atts = null, $content = null ) {
 	return ( current_user_can( 'publish_posts' ) ) ?
 		'<div class="su-private' . su_ecssc( $atts ) . '"><div class="su-private-shell">' .
 		do_shortcode( $content ) . '</div></div>' : '';
+}
+
+/**
+ * Shortcode: media
+ *
+ * This is shortcode from version 3.x and it not visible in generator
+ *
+ * @param array   $atts    Shortcode attributes
+ * @param string  $content
+ *
+ * @return string Output html
+ */
+function su_media_shortcode( $atts, $content = null ) {
+	// Check YouTube video
+	if ( strpos( $atts['url'], 'youtu' ) !== false ) return su_youtube_shortcode( $atts );
+	// Check Vimeo video
+	elseif ( strpos( $atts['url'], 'vimeo' ) !== false ) return su_vimeo_shortcode( $atts );
+	// Image
+	else return '<img src="' . $atts['url'] . '" width="' . $atts['width'] . '" height="' . $atts['height'] . '" style="max-width:100%" />';
 }
 
 /**
