@@ -87,7 +87,7 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 == Changelog ==
 
 = 4.0.9 =
-* Updated [frame]. Now it can contain other shortcodes
+* Updated [frame]. Now it can contain other shortcodes 
 * Updated caching mechanism. Cache now will be reseted on plugin activation
 * Fixed many PHP warnings when debug mode enabled
 
