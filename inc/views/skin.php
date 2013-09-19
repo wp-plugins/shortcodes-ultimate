@@ -2,14 +2,9 @@
 	$upload_dir = wp_upload_dir();
 	$kins_path = trailingslashit( path_join( $upload_dir['basedir'], 'shortcodes-ultimate-skins' ) );
 	$option['options'] = array( 'default' );
-	foreach ( glob( $kins_path . '*', GLOB_ONLYDIR ) as $dir ) {
-		$option['options'][] = str_replace( $kins_path, '', $dir );
-	}
-	$trigger = ( $option['trigger'] ) ? ' data-trigger="true" data-trigger-type="select"' : '';
-	$triggable = ( $option['triggable'] ) ?
-		' data-triggable="' . $option['triggable'] . '" class="sunrise-plugin-triggable hide-if-js"' : '';
+	foreach ( glob( $kins_path . '*', GLOB_ONLYDIR ) as $dir ) $option['options'][] = str_replace( $kins_path, '', $dir );
 ?>
-<tr<?php echo $trigger, $triggable; ?>>
+<tr>
 	<th scope="row">
 		<label for="sunrise-plugin-field-<?php echo $option['id']; ?>"><?php echo $option['name']; ?></label></th>
 	<td>

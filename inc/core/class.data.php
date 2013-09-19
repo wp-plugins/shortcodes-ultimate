@@ -393,7 +393,7 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[frame align="center"]<img src="image.jpg">[/frame]',
-					'content' => __( '<img src="http://lorempixel.com/g/400/200/" />', 'su' ),
+					'content' => '<img src="http://lorempixel.com/g/400/200/" />',
 					'desc' => __( 'Styled image frame', 'su' )
 				),
 				// row
@@ -1080,7 +1080,7 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Login link text', 'su' ), 'desc' => __( 'Text for the login link', 'su' )
 						),
 						'login_url' => array(
-							'default' => wp_login_url( get_permalink( get_the_ID() ) ),
+							'default' => wp_login_url(),
 							'name' => __( 'Login link url', 'su' ), 'desc' => __( 'Login link url', 'su' )
 						),
 						'class' => array(

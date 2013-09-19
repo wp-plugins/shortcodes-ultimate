@@ -1,7 +1,7 @@
 <?php
 
 	// Check that class doesn't exists
-	if ( !class_exists( 'Sunrise_Plugin_Framework_2' ) ) {
+	if ( !class_exists( 'Sunrise_Plugin_Framework_2_1' ) ) {
 
 		/**
 		 * Sunrise Plugin Framework Class
@@ -9,7 +9,7 @@
 		 * @author  Vladimir Anokhin <ano.vladimir@gmail.com>
 		 * @link    http://gndev.info/sunrise/
 		 */
-		class Sunrise_Plugin_Framework_2 {
+		class Sunrise_Plugin_Framework_2_1 {
 
 			/** @var string Plugin meta */
 			var $meta;
@@ -184,7 +184,7 @@
 				// Check this is settings page
 				if ( !$this->is_settings() ) return;
 				// ACTION: RESET
-				if ( $_GET['action'] == 'reset' ) {
+				if ( isset( $_GET['action'] ) && $_GET['action'] == 'reset' ) {
 					// Prepare variables
 					$new_options = array();
 					// Prepare data
@@ -203,7 +203,7 @@
 					}
 				}
 				// ACTION: SAVE
-				elseif ( $_POST['action'] == 'save' ) {
+				elseif ( isset( $_POST['action'] ) && $_POST['action'] == 'save' ) {
 					// Prepare vars
 					$new_options = array();
 					// Prepare data

@@ -5,6 +5,7 @@
 	<p><?php echo $notifications['js']; ?> <a href="http://enable-javascript.com/" target="_blank"><?php _e( 'Instructions', $this->textdomain ); ?></a>.</p>
 </div>
 <?php
+	if ( empty( $_GET['message'] ) ) return;
 	// Options reseted
 	if ( $_GET['message'] == 1 ) {
 		?>
