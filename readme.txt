@@ -5,7 +5,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
 Requires at least: 3.4
 Tested up to: 4.0
-Stable tag: 4.0.9
+Stable tag: trunk
 
 Supercharge your WordPress theme with mega pack of shortcodes
 
@@ -21,10 +21,14 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * 35+ amazing shortcodes
 * Modern responsive design
 * Power of CSS3
-* [Addons](http://gndev.info/shortcodes-ultimate/#Addons)
 * Custom CSS editor with syntax highlight
 * Special widget
 * Custom skins
+* Extensible
+
+= Add-ons =
+* [Maker add-on](http://gndev.info/sum). Allows you to create custom shortcodes
+* [Metro skins](http://gndev.info/shortcodes-ultimate/metro-skins/). 5 flat skins with different colors
 
 = Demo video =
 [youtube http://www.youtube.com/watch?v=DR2c266yWEA]
@@ -32,6 +36,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 = More videos =
 * [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
 * [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
+* [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
 
 = Requirements =
 * WordPress 3.4+
@@ -86,29 +91,22 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
-= 4.0.9 =
-* Updated [frame]. Now it can contain other shortcodes 
+= 4.1 =
+* [5 metro skins](http://gndev.info/shortcodes-ultimate/metro-skins/)
+* New screencast - [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
+* New attribute "center" for [button]. Buttons can now be centered on the page
+* Updated [frame]. Now it can contain other shortcodes
 * Updated caching mechanism. Cache now will be reseted on plugin activation
 * Fixed many PHP warnings when debug mode enabled
-
-= 4.0.8 =
 * Added backward compatibility for [media]. Shortcode has basic support for youtube and vimeo videos
 * Fixed bug with hidden single [tab]
 * Added attribute "active" for tabs container. This option allows you to select tab number that will be open by default
 * Fixd button style 3D
-
-= 4.0.7 =
 * Added backward compatibility for [frame]
-
-= 4.0.6 =
 * Fixed [column] margins
-
-= 4.0.5 =
 * Added backward compatibility for [tabs]. Now it accepts style=3 and vertical attributes
 * Added backward compatibility for [spoiler]. Now it accepts 0 and 1 as values for attribute open. Also, it now accepts style attribute (1, 2, default, fancy, simple)
 * Added custom CSS import from previous versions. Styles will be imported automatically and prepended to the existing CSS-code
-
-= 4.0.4 =
 * Added backward compatibility for [highlight]. Now it accepts bg and background attributes
 * Added backward compatibility for [label]. Now it accepts style and type attributes
 * Added backward compatibility for [dropcap]. Now it accepts 1, 2 and 3 as style values

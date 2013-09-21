@@ -220,7 +220,7 @@ function su_do_shortcode( $content, $pre ) {
  * @return string Special prefix
  */
 function su_compatibility_mode_prefix() {
-	global $shult;
+	$shult = shortcodes_ultimate();
 	$option = get_option( 'su_compatibility_mode_prefix' );
 	if ( $shult->get_option( 'compatibility_mode' ) === 'on' ) return ( $option ) ? $option : 'su_';
 	else return '';

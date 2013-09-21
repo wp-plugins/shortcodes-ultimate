@@ -318,6 +318,7 @@ function su_button_shortcode( $atts, $content = null ) {
 			'dark'       => null,
 			'size'       => 3,
 			'wide'       => 'no',
+			'center'     => 'no',
 			'radius'     => 'auto',
 			'icon'       => false,
 			'ts_color'   => 'dark',
@@ -339,6 +340,7 @@ function su_button_shortcode( $atts, $content = null ) {
 	$img_css = array();
 	$small_css = array();
 	$radius = '0px';
+	$before = $after = '';
 
 	// Text shadow values
 	$shadows = array(
@@ -422,6 +424,11 @@ function su_button_shortcode( $atts, $content = null ) {
 	$icon = ( $atts['icon'] ) ? '<img src="' . $atts['icon'] . '" alt="' . esc_attr( $content ) . '" style="' . implode( $img_css, ';' ) . '" />' : '';
 	// Prepare <small> with description
 	$desc = ( $atts['desc'] ) ? '<small style="' . implode( $small_css, ';' ) . '">' . ( $atts['desc'] ) . '</small>' : '';
+	// Wrap with div if button centered
+	if ( $atts['center'] === 'yes' ) {
+		$before .= '<div class="su-button-center">';
+		$after .= '</div>';
+	}
 
 	// Replace icon marker in content,
 	// add float-icon class to rearrange margins
@@ -433,7 +440,7 @@ function su_button_shortcode( $atts, $content = null ) {
 	else $content = $icon . ' ' . $content;
 
 	su_query_asset( 'css', 'su-content-shortcodes' );
-	return '<a href="' . $atts['url'] . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"><span style="' . implode( $span_css, ';' ) . '">' . $content . $desc . '</span></a>';
+	return $before . '<a href="' . $atts['url'] . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"><span style="' . implode( $span_css, ';' ) . '">' . $content . $desc . '</span></a>' . $after;
 }
 
 /**
@@ -1021,7 +1028,7 @@ function su_slider_shortcode( $atts, $content = null ) {
 	$mousewheel = ( $atts['mousewheel'] === 'yes' ) ? 'true' : 'false';
 	// Prepare gallery
 	$galleries = $shult->get_option( 'galleries' );
-	$gallery = $galleries[$atts['gallery'] - 1];
+	$gallery = ( is_numeric( $atts['gallery'] ) && $atts['gallery'] > 0 ) ? $galleries[$atts['gallery'] - 1] : 1;
 	// Prepare slides
 	$slides = ( count( ( array ) $gallery['items'] ) ) ? $gallery['items'] : array();
 	// Prepare width and height
@@ -1107,7 +1114,7 @@ function su_carousel_shortcode( $atts, $content = null ) {
 	$mousewheel = ( $atts['mousewheel'] === 'yes' ) ? 'true' : 'false';
 	// Prepare gallery
 	$galleries = $shult->get_option( 'galleries' );
-	$gallery = $galleries[$atts['gallery'] - 1];
+	$gallery = ( is_numeric( $atts['gallery'] ) && $atts['gallery'] > 0 ) ? $galleries[$atts['gallery'] - 1] : 1;
 	// Prepare slides
 	$slides = ( count( ( array ) $gallery['items'] ) ) ? $gallery['items'] : array();
 	// Prepare width and height
@@ -1178,7 +1185,7 @@ function su_custom_gallery_shortcode( $atts, $content = null ) {
 	$target = ( $atts['target'] === 'yes' ) ? ' target="_blank"' : '';
 	// Prepare gallery
 	$galleries = $shult->get_option( 'galleries' );
-	$gallery = $galleries[$atts['gallery'] - 1];
+	$gallery = ( is_numeric( $atts['gallery'] ) && $atts['gallery'] > 0 ) ? $galleries[$atts['gallery'] - 1] : 1;
 	// Prepare slides
 	$slides = ( count( ( array ) $gallery['items'] ) ) ? $gallery['items'] : array();
 	// Slides not found

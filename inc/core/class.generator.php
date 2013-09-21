@@ -224,7 +224,7 @@ class Shortcodes_Ultimate_Generator {
 			// Single shortcode (not closed)
 			if ( $shortcode['type'] == 'single' ) $return .= '<input type="hidden" name="su-generator-content" id="su-generator-content" value="false" />';
 			// Wrapping shortcode
-			else $return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'su' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="3">' . esc_attr( $shortcode['content'] ) . '</textarea></div>';
+			else $return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'su' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="3">' . esc_attr( str_replace( '%prefix_', su_compatibility_mode_prefix(), $shortcode['content'] ) ) . '</textarea></div>';
 			$return .= '<div id="su-generator-preview"></div>';
 			$return .= '<div class="su-generator-actions">' . implode( ' ', array_values( $actions ) ) . '</div>';
 			set_transient( 'su/generator/settings/' . sanitize_text_field( $_REQUEST['shortcode'] ), $return, 60*60*24*30 );

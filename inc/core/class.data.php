@@ -106,7 +106,7 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[tabs style="default"] [tab title="Tab name"] Tab content [/tab] [/tabs]',
-					'content' => __( "[tab title=\"Title 1\"]Content 1[/tab]\n[tab title=\"Title 2\"]Content 2[/tab]\n[tab title=\"Title 3\"]Content 3[/tab]", 'su' ),
+					'content' => __( "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]", 'su' ),
 					'desc' => __( 'Tabs container', 'su' )
 				),
 				// tab
@@ -409,7 +409,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[row]<br/>[column size="1/2"] 50% [/column]<br/>[column size="1/4"] 25% [/column]<br/>[column size="1/4"] 25% [/column]<br/>[/row]',
-					'content' => __( "[column size=\"1/3\"]Content[/column]\n[column size=\"1/3\"]Content[/column]\n[column size=\"1/3\"]Content[/column]", 'su' ), 'desc' => __( 'Row for flexible columns', 'su' )
+					'content' => __( "[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]", 'su' ),
+					'desc' => __( 'Row for flexible columns', 'su' )
 				),
 				// column
 				'column' => array(
@@ -542,6 +543,11 @@ class Shortcodes_Ultimate_Data {
 							'type' => 'switch',
 							'default' => 'no',
 							'name' => __( 'Fluid', 'su' ), 'desc' => __( 'Fluid buttons has 100% width', 'su' )
+						),
+						'center' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Centered', 'su' ), 'desc' => __( 'Is button centered on the page', 'su' )
 						),
 						'radius' => array(
 							'type' => 'select',
@@ -742,7 +748,7 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[lightbox src="http://example.com/" type="iframe"] Open example.com [/lightbox]',
-					'content' => __( '[button] Click Here to Watch the Video [/button]', 'su' ),
+					'content' => __( '[%prefix_button] Click Here to Watch the Video [/%prefix_button]', 'su' ),
 					'desc' => __( 'Lightbox window with custom content', 'su' )
 				),
 				// private
@@ -757,7 +763,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[private] Private content [/private]', 'content' => __( 'Private note text', 'su' ), 'desc' => __( 'Private note for post authors', 'su' )
+					'usage' => '[private] Private content [/private]',
+					'content' => __( 'Private note text', 'su' ), 
+					'desc' => __( 'Private note for post authors', 'su' )
 				),
 				// youtube
 				'youtube' => array(
@@ -1058,7 +1066,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[permalink id=52]<br/>[permalink id="52" target="blank"] Content [/permalink]',
-					'content' => '', 'desc' => __( 'Permalink to specified post/page', 'su' )
+					'content' => '',
+					'desc' => __( 'Permalink to specified post/page', 'su' )
 				),
 				// members
 				'members' => array(
@@ -1089,7 +1098,8 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[members style="default"] Content for logged members [/members]', 'content' => __( 'Content for logged members', 'su' ),
+					'usage' => '[members style="default"] Content for logged members [/members]',
+					'content' => __( 'Content for logged members', 'su' ),
 					'desc' => __( 'Content for logged in members only', 'su' )
 				),
 				// guests
