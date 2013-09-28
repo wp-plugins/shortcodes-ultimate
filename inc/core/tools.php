@@ -355,7 +355,7 @@ function su_get_taxonomies( $first = false ) {
 function su_get_terms( $taxonomy ) {
 	$terms = array();
 	// Get the terms
-	foreach ( ( array ) get_terms( $taxonomy ) as $term ) {
+	foreach ( ( array ) get_terms( $taxonomy, array( 'hide_empty' => false ) ) as $term ) {
 		$terms[$term->slug] = $term->name;
 	}
 	return $terms;

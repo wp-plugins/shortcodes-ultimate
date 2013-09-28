@@ -24,7 +24,6 @@
 						</div>
 						<div class="su-gallery-content">
 							<div class="su-gallery-add-image">
-								<a href="#" class="button"><?php _e( 'Add image', $this->textdomain ); ?></a>
 								<input type="file" />
 								<small class="description"><?php _e( 'Max upload file size', $this->textdomain ); ?>: <?php echo floor( wp_max_upload_size() / 1024 / 1024 ) . __( 'Mb', $this->textdomain ); ?>. <a href="http://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress/" target="_blank"><?php _e( 'How to increase', $this->textdomain ); ?></a>.</small>
 							</div>
@@ -68,9 +67,9 @@
 		?>
 	</div>
 	<script type="text/html" id="su_new_gallery_template">
-		<div class="su-gallery su-gallery-edit" data-id="<%=id%>">
+		<div class="su-gallery su-gallery-edit" data-id="{{:id}}">
 			<div class="su-gallery-title">
-				<strong><%=id+1%></strong>: <input type="text" value="" class="su-gallery-name" size="30" name="galleries[<%=id%>][name]" placeholder="<?php _e( 'Enter gallery name', $this->textdomain ); ?>" />
+				<strong>{{:id+1}}</strong>: <input type="text" value="" class="su-gallery-name" size="30" name="galleries[{{:id}}][name]" placeholder="<?php _e( 'Enter gallery name', $this->textdomain ); ?>" />
 				<span class="su-gallery-actions">
 					<a href="#" class="su-gallery-open"><?php _e( 'Edit gallery', $this->textdomain ); ?></a>
 					<a href="#" class="su-gallery-save-close"><?php _e( 'Save &amp; close', $this->textdomain ); ?></a>
@@ -89,9 +88,9 @@
 	<script type="text/html" id="su_new_image_template">
 		<div class="su-gallery-image">
 			<span class="su-gallery-image-sort-handle"></span>
-			<a href="<%=image%>" class="su-gallery-image-preview"><img src="<%=image%>" alt="" /></a>
+			<a href="{{:image}}" class="su-gallery-image-preview"><img src="{{:image}}" alt="" /></a>
 			<div class="su-gallery-image-header">
-				<a href="#" class="su-gallery-image-title"><%=title%></a>
+				<a href="#" class="su-gallery-image-title">{{:title}}</a>
 				<span class="su-gallery-image-actions">
 					<a href="#" class="su-gallery-image-open"><?php _e( 'Edit', $this->textdomain ); ?></a>
 					<a href="#" class="su-gallery-image-delete"><?php _e( 'Delete', $this->textdomain ); ?></a>
@@ -99,10 +98,10 @@
 			</div>
 			<div class="su-gallery-image-data">
 				<label><?php _e( 'Title', $this->textdomain ); ?></label><br />
-				<input type="text" value="<%=title%>" name="galleries[<%=gallery_id%>][items][<%=id%>][title]" class="su-gallery-image-title-value" data-field="title" /><br />
+				<input type="text" value="{{:title}}" name="galleries[{{:gallery_id}}][items][{{:id}}][title]" class="su-gallery-image-title-value" data-field="title" /><br />
 				<label><?php _e( 'Link', $this->textdomain ); ?></label><br />
-				<input type="text" value="<%=image%>" name="galleries[<%=gallery_id%>][items][<%=id%>][link]" data-field="link" /><br />
-				<input type="hidden" value="<%=image%>" class="su-gallery-image-image" name="galleries[<%=gallery_id%>][items][<%=id%>][image]" data-field="image" />
+				<input type="text" value="{{:image}}" name="galleries[{{:gallery_id}}][items][{{:id}}][link]" data-field="link" /><br />
+				<input type="hidden" value="{{:image}}" class="su-gallery-image-image" name="galleries[{{:gallery_id}}][items][{{:id}}][image]" data-field="image" />
 				<a href="#" class="button button-small su-gallery-image-ok"><?php _e( 'Close', $this->textdomain ); ?></a>
 			</div>
 		</div>
