@@ -30,6 +30,11 @@
 }
 .su-tabs-nav span:hover { background: #f5f5f5; }
 .su-tabs-nav span.su-tabs-current { background: #fff; }
+.su-tabs-nav span.su-tabs-disabled {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+	cursor: default;
+}
 .su-tabs-pane {
 	padding: 1em;
 	-webkit-box-sizing: border-box;

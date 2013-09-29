@@ -2,7 +2,7 @@
 /*
   Plugin Name: Shortcodes Ultimate
   Plugin URI: http://gndev.info/shortcodes-ultimate/
-  Version: 4.1.1
+  Version: 4.1.2
   Author: Vladimir Anokhin
   Author URI: http://gndev.info/
   Description: Supercharge your WordPress theme with mega pack of shortcodes
@@ -18,6 +18,7 @@ define( 'SU_PLUGIN_FILE', __FILE__ );
 require_once 'inc/vendor/class.sunrise-framework.php';
 require_once 'inc/vendor/class.image-meta.php';
 require_once 'inc/vendor/class.media-upload.php';
+require_once 'inc/core/class.requirements.php';
 require_once 'inc/core/class.shortcodes-ultimate.php';
 require_once 'inc/core/class.assets.php';
 require_once 'inc/core/class.data.php';

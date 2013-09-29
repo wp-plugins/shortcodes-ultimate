@@ -116,10 +116,15 @@ class Shortcodes_Ultimate_Data {
 					'group' => 'box',
 					'atts' => array(
 						'title' => array(
-							'values' => array( ),
 							'default' => __( 'Tab name', 'su' ),
 							'name' => __( 'Title', 'su' ),
 							'desc' => __( 'Enter tab name', 'su' )
+						),
+						'disabled' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Disabled', 'su' ),
+							'desc' => __( 'Is this tab disabled', 'su' )
 						),
 						'class' => array(
 							'default' => '',
@@ -127,7 +132,8 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[tabs] [tab title="Tab name"] Tab content [/tab] [/tabs]', 'content' => __( 'Tab content', 'su' ),
+					'usage' => '[tabs] [tab title="Tab name"] Tab content [/tab] [/tabs]',
+					'content' => __( 'Tab content', 'su' ),
 					'desc' => __( 'Single tab', 'su' )
 				),
 				// spoiler
@@ -137,7 +143,6 @@ class Shortcodes_Ultimate_Data {
 					'group' => 'box',
 					'atts' => array(
 						'title' => array(
-							'values' => array( ),
 							'default' => __( 'Spoiler title', 'su' ),
 							'name' => __( 'Title', 'su' ), 'desc' => __( 'Text in spoiler title', 'su' )
 						),
@@ -179,7 +184,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[accordion]<br/>[spoiler open="yes"] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[/accordion]',
-					'content' => __( "[spoiler]Content[/spoiler]\n[spoiler]Content[/spoiler]\n[spoiler]Content[/spoiler]", 'su' ), 'desc' => __( 'Accordion with spoilers', 'su' )
+					'content' => __( "[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]", 'su' ),
+					'desc' => __( 'Accordion with spoilers', 'su' )
 				),
 				// divider
 				'divider' => array(
@@ -750,6 +756,108 @@ class Shortcodes_Ultimate_Data {
 					'usage' => '[lightbox src="http://example.com/" type="iframe"] Open example.com [/lightbox]',
 					'content' => __( '[%prefix_button] Click Here to Watch the Video [/%prefix_button]', 'su' ),
 					'desc' => __( 'Lightbox window with custom content', 'su' )
+				),
+				// tooltip
+				'tooltip' => array(
+					'name' => __( 'Tooltip', 'su' ),
+					'type' => 'wrap',
+					'group' => 'other',
+					'atts' => array(
+						'style' => array(
+							'type' => 'select',
+							'values' => array(
+								'light' => __( 'Basic: Light', 'su' ),
+								'dark' => __( 'Basic: Dark', 'su' ),
+								'yellow' => __( 'Basic: Yellow', 'su' ),
+								'green' => __( 'Basic: Green', 'su' ),
+								'red' => __( 'Basic: Red', 'su' ),
+								'blue' => __( 'Basic: Blue', 'su' ),
+								'youtube' => __( 'Youtube', 'su' ),
+								'tipsy' => __( 'Tipsy', 'su' ),
+								'bootstrap' => __( 'Bootstrap', 'su' ),
+								'jtools' => __( 'jTools', 'su' ),
+								'tipped' => __( 'Tipped', 'su' ),
+								'cluetip' => __( 'Cluetip', 'su' ),
+							),
+							'default' => 'yellow',
+							'name' => __( 'Style', 'su' ),
+							'desc' => __( 'Tooltip window style', 'su' )
+						),
+						'position' => array(
+							'type' => 'select',
+							'values' => array(
+								'north' => __( 'Top', 'su' ),
+								'south' => __( 'Bottom', 'su' ),
+								'west' => __( 'Left', 'su' ),
+								'east' => __( 'Right', 'su' )
+							),
+							'default' => 'top',
+							'name' => __( 'Position', 'su' ),
+							'desc' => __( 'Tooltip position', 'su' )
+						),
+						'shadow' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Shadow', 'su' ),
+							'desc' => __( 'Add shadow to tooltip. This option is only works with basic styes, e.g. blue, green etc.', 'su' )
+						),
+						'rounded' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Rounded corners', 'su' ),
+							'desc' => __( 'Use rounded for tooltip. This option is only works with basic styes, e.g. blue, green etc.', 'su' )
+						),
+						'size' => array(
+							'type' => 'select',
+							'values' => array(
+								'default' => __( 'Default', 'su' ),
+								'1' => 1,
+								'2' => 2,
+								'3' => 3,
+								'4' => 4,
+								'5' => 5,
+								'6' => 6,
+							),
+							'default' => 'default',
+							'name' => __( 'Font size', 'su' ),
+							'desc' => __( 'Tooltip font size', 'su' )
+						),
+						'title' => array(
+							'default' => '',
+							'name' => __( 'Tooltip title', 'su' ),
+							'desc' => __( 'Enter title for tooltip window. Leave this field empty to hide the title', 'su' )
+						),
+						'content' => array(
+							'default' => __( 'Tooltip text', 'su' ),
+							'name' => __( 'Tooltip content', 'su' ),
+							'desc' => __( 'Enter tooltip content here', 'su' )
+						),
+						'behavior' => array(
+							'type' => 'select',
+							'values' => array(
+								'hover' => __( 'Show and hide on mouse hover', 'su' ),
+								'click' => __( 'Show and hide by mouse click', 'su' ),
+								'always' => __( 'Always visible', 'su' )
+							),
+							'default' => 'hover',
+							'name' => __( 'Behavior', 'su' ),
+							'desc' => __( 'Select tooltip behavior', 'su' )
+						),
+						'close' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Close button', 'su' ),
+							'desc' => __( 'Show close button', 'su' )
+						),
+						'class' => array(
+							'default' => '',
+							'name' => __( 'Class', 'su' ),
+							'desc' => __( 'Extra CSS class', 'su' )
+						)
+					),
+					'usage' => '[tooltip] Hover me [/lightbox]',
+					'content' => __( '[%prefix_button] Hover me to open tooltip [/%prefix_button]', 'su' ),
+					'desc' => __( 'Tooltip window with custom content', 'su' )
 				),
 				// private
 				'private' => array(

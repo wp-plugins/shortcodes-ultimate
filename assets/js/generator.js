@@ -23,24 +23,11 @@ jQuery(document).ready(function ($) {
 		var $c = $(this);
 		if ($c.attr('title') != '') $c.qtip({
 			style: {
-				name: 'dark',
-				tip: 'bottomMiddle',
-				background: '#303030',
-				border: {
-					width: 3,
-					radius: 5
-				}
-			},
-			show: {
-				effect: {
-					length: 0
-				}
+				classes: 'qtip-bootstrap'
 			},
 			position: {
-				corner: {
-					tooltip: 'bottomMiddle',
-					target: 'topMiddle'
-				}
+				my: 'bottom center',
+				at: 'top center'
 			}
 		});
 	});

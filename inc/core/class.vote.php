@@ -9,7 +9,7 @@ class Shortcodes_Ultimate_Vote {
 		Shortcodes_Ultimate::timestamp();
 		$vote = get_option( 'su_vote' );
 		$timeout = time() > ( get_option( 'su_installed' ) + 60*60*24*3 );
-		if ( $vote === 'yes' || $vote === 'no' || !$timeout ) return;
+		if ( in_array( $vote, array( 'yes', 'no', 'tweet' ) ) || !$timeout ) return;
 		add_action( 'in_admin_footer', array( __CLASS__, 'message' ) );
 		add_action( 'admin_head',      array( __CLASS__, 'register' ) );
 		add_action( 'admin_footer',    array( __CLASS__, 'enqueue' ) );

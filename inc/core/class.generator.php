@@ -55,7 +55,7 @@ class Shortcodes_Ultimate_Generator {
 		add_action( 'wp_footer',    array( __CLASS__, 'popup' ) );
 		add_action( 'admin_footer', array( __CLASS__, 'popup' ) );
 		// Request assets
-		su_query_asset( 'css', array( 'farbtastic', 'magnific-popup', 'su-generator' ) );
+		su_query_asset( 'css', array( 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
 		su_query_asset( 'js', array( 'jquery', 'jquery-ui-widget', 'iframe-transport', 'fileupload', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
 		// Print/return result
 		if ( $args['echo'] ) echo $button;

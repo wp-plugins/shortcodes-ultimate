@@ -39,7 +39,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
 
 = Requirements =
-* WordPress 3.4+
+* WordPress 3.5+
 * PHP 5.1+
 
 = Got a bug or suggestion? =
@@ -55,7 +55,8 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 Have a translation? [Contact me](http://gndev.info/feedback/)
 
 = Thanks =
-* Thanks to Vladimir Kharlampidi for [the great Swiper slider](http://www.idangero.us/)
+* Thanks to Vladimir Kharlampidi for [the Swiper slider](http://www.idangero.us/)
+* Thanks to Craig Thompson for [the qTip jQuery plugin](http://qtip2.com/)
 
 
 == Installation ==
@@ -90,6 +91,13 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Changelog ==
+
+= 4.1.2 =
+* Added compatibility mode prefix for spoilers inside of accordion
+* Updated qTip plugin
+* Added shortcode [tooltip]
+* Added new attribute. [tab disabled="yes"]. Now, any tab can be disabled. [Forum topic](http://wordpress.org/support/topic/tabs-how-to-disable-one-of-the-tabs)
+* Added [accordion] scrolling. [Forum topic](http://wordpress.org/support/topic/accordion-usability-issue)
 
 = 4.1.1 =
 * Updated caching mechanism. Cache will be reseted when you add or remove terms

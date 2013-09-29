@@ -40,7 +40,6 @@ class Shortcodes_Ultimate {
 	 */
 	public static function activation() {
 		self::timestamp();
-		self::check_requirements();
 		self::create_skins_dir();
 		Shortcodes_Ultimate_Generator::reset();
 		do_action( 'su/activation' );
@@ -58,34 +57,6 @@ class Shortcodes_Ultimate {
 	 */
 	public static function timestamp() {
 		if ( !get_option( 'su_installed' ) ) update_option( 'su_installed', time() );
-	}
-
-	/**
-	 * Check WordPress and PHP versions
-	 */
-	public static function check_requirements() {
-		// Prepare versions
-		$min_wp = '3.4';
-		$min_php = '5.1';
-		$wp = get_bloginfo( 'version' );
-		$php = phpversion();
-		// Load textdomain
-		load_plugin_textdomain( 'shortcodes-ultimate', false, dirname( plugin_basename( SU_PLUGIN_FILE ) ), '/languages/' );
-		// Prepare messages
-		$message_wp = sprintf( __( '<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your version of WordPress (%s).<br />Reccomended WordPress version &ndash; %s (or higher).</p><a href="%s">&larr; Return to the plugins screen</a> <a href="%s"%s>Continue and activate anyway &rarr;</a>', 'su' ), $wp, $min_wp, network_admin_url( 'plugins.php?deactivate=true' ), $_SERVER['REQUEST_URI'] . '&continue=true', ' style="float:right;font-weight:bold"' );
-		$message_php = sprintf( __( '<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your PHP version (%s).<br />Reccomended PHP version &ndash; %s (or higher).</p><a href="%s">&larr; Return to the plugins screen</a> <a href="%s"%s>Continue and activate anyway &rarr;</a>', 'su' ), $php, $min_php, network_admin_url( 'plugins.php?deactivate=true' ), $_SERVER['REQUEST_URI'] . '&continue=true', ' style="float:right;font-weight:bold"' );
-		// Check Forced activation
-		if ( isset( $_GET['continue'] ) ) return;
-		// WP version is too low
-		if ( version_compare( $min_wp, $wp, '>' ) ) {
-			deactivate_plugins( plugin_basename( SU_PLUGIN_FILE ) );
-			wp_die( $message_wp );
-		}
-		// PHP version is too low
-		elseif ( version_compare( $min_php, $php, '>' ) ) {
-			deactivate_plugins( plugin_basename( SU_PLUGIN_FILE ) );
-			wp_die( $message_php );
-		}
 	}
 
 	/**

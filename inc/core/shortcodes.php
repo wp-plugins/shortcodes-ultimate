@@ -42,7 +42,7 @@ function su_tabs_shortcode( $atts, $content ) {
 	if ( is_array( $GLOBALS['tabs'] ) ) {
 		if ( $GLOBALS['tab_count'] < $atts['active'] ) $atts['active'] = $GLOBALS['tab_count'];
 		foreach ( $GLOBALS['tabs'] as $tab ) {
-			$tabs[] = '<span class="' . su_ecssc( $tab ) . '">' . $tab['title'] . '</span>';
+			$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '">' . $tab['title'] . '</span>';
 			$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '</div>';
 		}
 		$vertical = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
@@ -65,11 +65,18 @@ function su_tabs_shortcode( $atts, $content ) {
  * @return string Output html
  */
 function su_tab_shortcode( $atts, $content ) {
-	$atts = shortcode_atts( array( 'title' => 'Tab %d', 'class' => '' ), $atts );
+	$atts = shortcode_atts( array(
+			'title'    => 'Tab %d',
+			'disabled' => 'no',
+			'class'    => ''
+		), $atts );
 	$x = $GLOBALS['tab_count'];
-	$GLOBALS['tabs'][$x] = array( 'title' => sprintf( $atts['title'], $GLOBALS['tab_count'] ),
+	$GLOBALS['tabs'][$x] = array(
+		'title' => sprintf( $atts['title'], $GLOBALS['tab_count'] ),
 		'content' => do_shortcode( $content ),
-		'class' => $atts['class'] );
+		'disabled' => ( $atts['disabled'] === 'yes' ) ? ' su-tabs-disabled' : '',
+		'class' => $atts['class']
+	);
 	$GLOBALS['tab_count']++;
 }
 
@@ -546,6 +553,56 @@ function su_lightbox_shortcode( $atts, $content = null ) {
 	su_query_asset( 'js', 'su-other-shortcodes' );
 	return '<span class="su-lightbox' . su_ecssc( $atts ) . '" data-mfp-src="' . $atts['src'] . '" data-mfp-type="' . $atts['type'] . '">' . do_shortcode( $content ) . '</span>';
 }
+
+/**
+ * Shortcode: tooltip
+ *
+ * @param array   $atts    Shortcode attributes
+ * @param string  $content
+ *
+ * @return string Output html
+ */
+function su_tooltip_shortcode( $atts, $content = null ) {
+	$atts = shortcode_atts( array(
+			'style'        => 'yellow',
+			'position'     => 'north',
+			'shadow'       => 'no',
+			'rounded'      => 'no',
+			'size'         => 'default',
+			'title'        => '',
+			'content'      => __( 'Tooltip text', 'su' ),
+			'behavior'     => 'hover',
+			'close'        => 'no',
+			'class'        => ''
+		), $atts );
+	// Prepare style
+	$atts['style'] = ( in_array( $atts['style'], array( 'light', 'dark', 'green', 'red', 'blue', 'youtube', 'tipsy', 'bootstrap', 'jtools', 'tipped', 'cluetip' ) ) ) ? $atts['style'] : 'plain';
+	// Position
+	$atts['position'] = str_replace( array( 'top', 'right', 'bottom', 'left' ), array( 'north', 'east', 'south', 'west' ), $atts['position'] );
+	$position = array(
+		'my' => str_replace( array( 'north', 'east', 'south', 'west' ), array( 'bottom center', 'center left', 'top center', 'center right' ), $atts['position'] ),
+		'at' => str_replace( array( 'north', 'east', 'south', 'west' ), array( 'top center', 'center right', 'bottom center', 'center left' ), $atts['position'] )
+	);
+	// Prepare classes
+	$classes = array( 'su-qtip qtip-' . $atts['style'] );
+	$classes[] = 'su-qtip-size-' . $atts['size'];
+	if ( $atts['shadow'] === 'yes' ) $classes[] = 'qtip-shadow';
+	if ( $atts['rounded'] === 'yes' ) $classes[] = 'qtip-rounded';
+	// Query assets
+	su_query_asset( 'css', 'qtip' );
+	su_query_asset( 'css', 'su-other-shortcodes' );
+	su_query_asset( 'js', 'jquery' );
+	su_query_asset( 'js', 'qtip' );
+	su_query_asset( 'js', 'su-other-shortcodes' );
+	return '<div class="su-tooltip' . su_ecssc( $atts ) . '" data-close="' . $atts['close'] . '" data-behavior="' . $atts['behavior'] . '" data-my="' . $position['my'] . '" data-at="' . $position['at'] . '" data-classes="' . implode( ' ', $classes ) . '" data-title="' . $atts['title'] . '" title="' . esc_attr( $atts['content'] ) . '">' . do_shortcode( $content ) . '</div>';
+}
+
+function su_ttc_shortcode( $atts = null, $content = null ) {
+	return '<span class="su-tooltip-content">' . do_shortcode( $content ) . '</span>';
+}
+
+add_shortcode( 'ttc', 'su_ttc_shortcode' );
+add_shortcode( 'tooltip_content', 'su_ttc_shortcode' );
 
 /**
  * Shortcode: private

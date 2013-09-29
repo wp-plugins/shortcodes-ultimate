@@ -39,7 +39,8 @@ class Shortcodes_Ultimate_Assets {
 		// Get plugin object
 		$shult = shortcodes_ultimate();
 		// qTip
-		wp_register_script( 'qtip', $shult->assets( 'js', 'qtip.js' ), array( 'jquery' ), '1.0.0-rc3', true );
+		wp_register_style( 'qtip', $shult->assets( 'css', 'qtip.css' ), false, '2.1.1', 'all' );
+		wp_register_script( 'qtip', $shult->assets( 'js', 'qtip.js' ), array( 'jquery' ), '2.1.1', true );
 		// jsRender
 		wp_register_script( 'jsrender', $shult->assets( 'js', 'jsrender.js' ), array( 'jquery' ), '1.0.0-beta', true );
 		// Magnific Popup
