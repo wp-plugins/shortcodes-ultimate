@@ -99,6 +99,7 @@ jQuery(document).ready(function ($) {
 			};
 		if (data.title !== '') config.content.title = data.title;
 		if (is_advanced) config.content.text = $content;
+		else config.content.text = $tt.attr('title');
 		if (data.close === 'yes') config.content.button = true;
 		if (data.behavior === 'click') {
 			config.show = 'click';
