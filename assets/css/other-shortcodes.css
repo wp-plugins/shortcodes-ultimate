@@ -3,15 +3,15 @@
 /*		Tooltip
 ---------------------------------------------------------------*/
 
-.su-qtip { max-width: 480px; }
-.su-tooltip { display: inline-block }
-.su-qtip-size-1 { font-size: 0.8em !important }
-.su-qtip-size-2 { font-size: 0.9em !important }
-.su-qtip-size-3 { font-size: 1em !important }
-.su-qtip-size-4 { font-size: 1.1em !important }
-.su-qtip-size-5 { font-size: 1.2em !important }
-.su-qtip-size-6 { font-size: 1.3em !important }
-.su-tooltip-content { display: none }
+.qtip.su-qtip { max-width: 480px !important; }
+.su-tooltip { display: inline-block; }
+.su-qtip-size-1 { font-size: 0.8em !important; }
+.su-qtip-size-2 { font-size: 0.9em !important; }
+.su-qtip-size-3 { font-size: 1em !important; }
+.su-qtip-size-4 { font-size: 1.1em !important; }
+.su-qtip-size-5 { font-size: 1.2em !important; }
+.su-qtip-size-6 { font-size: 1.3em !important; }
+.su-tooltip-content { display: none; }
 .su-tooltip-content > :last-child { margin-bottom: 0; }
 .qtip-content .su-tooltip-content img,
 .qtip-content .su-tooltip-content object,

@@ -1,3 +1,8 @@
+.su-generator-clear {
+	clear: both;
+	height: 0;
+	overflow: hidden;
+}
 .su-generator-hidden { display: none !important; }
 .su-generator-button img {
 	margin: -1px 2px 0 -5px;
@@ -149,10 +154,12 @@
 	color: #555;
 	line-height: 24px;
 }
-#su-generator-breadcrumbs span { font-weight: bold; }
+#su-generator-breadcrumbs span {
+	margin-right: 1em;
+	font-weight: bold;
+}
 #su-generator-breadcrumbs small {
-	margin-left: 1em;
-	color: #aaa;
+	color: #bbb;
 	font-weight: normal;
 	font-size: 0.9em;
 }

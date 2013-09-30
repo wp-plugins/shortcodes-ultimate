@@ -18,7 +18,7 @@
 	<div class="su-about-column">
 		<h3><?php _e( 'Plugin features', $this->textdomain ); ?></h3>
 		<ul>
-			<li><?php _e( '35+ amazing shortcodes', $this->textdomain ); ?></li>
+			<li><?php _e( '40+ amazing shortcodes', $this->textdomain ); ?></li>
 			<li><?php _e( 'Power of CSS3 transitions', $this->textdomain ); ?></li>
 			<li><?php _e( 'Handy shortcodes generator', $this->textdomain ) ?></li>
 			<li><?php _e( 'International', $this->textdomain ); ?></li>

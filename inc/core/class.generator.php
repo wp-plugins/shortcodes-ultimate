@@ -150,7 +150,7 @@ class Shortcodes_Ultimate_Generator {
 				) );
 			// Shortcode header
 			$return = '<div id="su-generator-breadcrumbs">';
-			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="#" id="su-generator-select-another" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small>' . $shortcode['desc'] . '</small>' );
+			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="#" id="su-generator-select-another" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
 			$return .= '</div>';
 			// Shortcode has atts
 			if ( count( $shortcode['atts'] ) && $shortcode['atts'] ) {

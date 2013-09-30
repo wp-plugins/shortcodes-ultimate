@@ -18,7 +18,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 
 = Features =
 * Shortcode Generator
-* 35+ amazing shortcodes
+* 40+ amazing shortcodes
 * Modern responsive design
 * Power of CSS3
 * Custom CSS editor with syntax highlight
@@ -50,13 +50,15 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 = Bundled translations =
 * Ru, [Vladimir Anokhin](http://gndev.info/)
 * Fr, [Nicolas Leclerc](http://etic-studio.fr/)
+* Gr, [Kleanthis Manolopoulos]()
 * Unforunately old translations is incompatible with current version
 
 Have a translation? [Contact me](http://gndev.info/feedback/)
 
 = Thanks =
-* Thanks to Vladimir Kharlampidi for [the Swiper slider](http://www.idangero.us/)
-* Thanks to Craig Thompson for [the qTip jQuery plugin](http://qtip2.com/)
+* Dmitry Semenov - [Magnific Popup jQuery plugin](http://dimsemenov.com/plugins/magnific-popup/)
+* Craig Thompson - [qTip jQuery plugin](http://qtip2.com/)
+* Vladimir Kharlampidi - [Swiper jQuery plugin](http://www.idangero.us/sliders/swiper/)
 
 
 == Installation ==
@@ -92,12 +94,18 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.1.3 =
+* Small fix for tooltips
+* Fixed wp_footer notice
+* Greek translation
+
 = 4.1.2 =
 * Added compatibility mode prefix for spoilers inside of accordion
 * Updated qTip plugin
 * Added shortcode [tooltip]
 * Added new attribute. [tab disabled="yes"]. Now, any tab can be disabled. [Forum topic](http://wordpress.org/support/topic/tabs-how-to-disable-one-of-the-tabs)
 * Added [accordion] scrolling. [Forum topic](http://wordpress.org/support/topic/accordion-usability-issue)
+* Added wp_footer check. User will be noticed if current theme doen't includes wp_footer
 
 = 4.1.1 =
 * Updated caching mechanism. Cache will be reseted when you add or remove terms
