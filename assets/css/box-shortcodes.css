@@ -323,7 +323,7 @@
 
 .su-box {
 	margin: 0 0 1.5em 0;
-	border-width: 1px;
+	border-width: 2px;
 	border-style: solid;
 }
 .su-box-title {
@@ -331,6 +331,10 @@
 	padding: 0.5em 1em;
 	font-weight: bold;
 	font-size: 1.1em;
+}
+.su-box-content {
+	background-color: #fff;
+	color: #444;
 }
 .su-box-content { padding: 1em; }
 .su-box-style-soft .su-box-title {

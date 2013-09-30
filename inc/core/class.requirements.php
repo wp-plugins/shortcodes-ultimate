@@ -1,25 +1,23 @@
 <?php
 class Shortcodes_Ultimate_Requirements {
 
-	static $wp_footer_option = 'su_no_wp_footer';
-
 	/**
 	 * Constructor
 	 */
 	function __construct() {
-		add_action( 'shutdown',      array( __CLASS__, 'wp_footer_check' ) );
+		add_action( 'shutdown',      array( __CLASS__, 'wp_footer_check' ), -99 );
 		add_action( 'admin_notices', array( __CLASS__, 'wp_footer_notice' ) );
 		add_action( 'su/activation', array( __CLASS__, 'php_wp' ) );
 	}
 
 	public static function wp_footer_check() {
-		if ( is_admin() ) return;
-		if ( did_action( 'wp_footer' ) < 1 ) update_option( self::$wp_footer_option, true );
-		else delete_option( self::$wp_footer_option );
+		if ( is_admin() || strpos( $_SERVER['REQUEST_URI'], 'wp-admin' ) !== false ) return;
+		delete_option( 'su_no_wp_footer' );
+		if ( !did_action( 'wp_footer' ) && !did_action( 'admin_init' ) && !defined( 'DOING_AJAX' ) ) update_option( 'su_no_wp_footer', true );
 	}
 
 	public static function wp_footer_notice() {
-		if ( get_option( self::$wp_footer_option ) ) echo '<div class="error"><p>' . __( '<b>Shortcodes Ultimate:</b> Your current theme does not use wp_footer tag. Shortcodes will not work properly. Please add the wp_footer in the footer of your theme.', 'su' ) . ' <a href="http://codex.wordpress.org/Function_Reference/wp_footer" target="_blank">' . __( 'Learn more', 'su' ) . '</a>.' . '</p></div>';
+		if ( get_option( 'su_no_wp_footer' ) ) echo '<div class="error"><p>' . __( '<b>Shortcodes Ultimate:</b> Your current theme does not use wp_footer tag. Shortcodes will not work properly. Please add the wp_footer in the footer of your theme.', 'su' ) . ' <a href="http://codex.wordpress.org/Function_Reference/wp_footer" target="_blank">' . __( 'Learn more', 'su' ) . '</a>.' . '</p></div>';
 	}
 
 	/**

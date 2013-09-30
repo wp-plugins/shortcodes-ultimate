@@ -94,6 +94,9 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.1.4 =
+* Fixed wp_footer notice, again
+
 = 4.1.3 =
 * Small fix for tooltips
 * Fixed wp_footer notice
