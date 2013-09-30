@@ -17,7 +17,7 @@ class Shortcodes_Ultimate_Requirements {
 	}
 
 	public static function wp_footer_notice() {
-		if ( get_option( 'su_no_wp_footer' ) ) echo '<div class="error"><p>' . __( '<b>Shortcodes Ultimate:</b> Your current theme does not use wp_footer tag. Shortcodes will not work properly. Please add the wp_footer in the footer of your theme.', 'su' ) . ' <a href="http://codex.wordpress.org/Function_Reference/wp_footer" target="_blank">' . __( 'Learn more', 'su' ) . '</a>.' . '</p></div>';
+		//if ( get_option( 'su_no_wp_footer' ) ) echo '<div class="error"><p>' . __( '<b>Shortcodes Ultimate:</b> Your current theme does not use wp_footer tag. Shortcodes will not work properly. Please add the wp_footer in the footer of your theme.', 'su' ) . ' <a href="http://codex.wordpress.org/Function_Reference/wp_footer" target="_blank">' . __( 'Learn more', 'su' ) . '</a>.' . '</p></div>';
 	}
 
 	/**

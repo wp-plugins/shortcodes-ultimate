@@ -94,6 +94,10 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.1.5 =
+* Fixed [lightbox]
+* Disabled wp_footer check
+
 = 4.1.4 =
 * Fixed wp_footer notice, again
 

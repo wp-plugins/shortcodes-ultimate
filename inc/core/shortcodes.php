@@ -550,6 +550,7 @@ function su_lightbox_shortcode( $atts, $content = null ) {
 	su_query_asset( 'css', 'magnific-popup' );
 	su_query_asset( 'js', 'jquery' );
 	su_query_asset( 'js', 'magnific-popup' );
+	su_query_asset( 'js', 'su-other-shortcodes' );
 	return '<span class="su-lightbox' . su_ecssc( $atts ) . '" data-mfp-src="' . $atts['src'] . '" data-mfp-type="' . $atts['type'] . '">' . do_shortcode( $content ) . '</span>';
 }
 
