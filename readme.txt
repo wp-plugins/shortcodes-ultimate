@@ -50,7 +50,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 = Bundled translations =
 * Ru, [Vladimir Anokhin](http://gndev.info/)
 * Fr, [Nicolas Leclerc](http://etic-studio.fr/)
-* Gr, [Kleanthis Manolopoulos]()
+* Gr, [Kleanthis Manolopoulos](mailto:akis_manolopoulos_at_hotmail_dot_com)
 * Unforunately old translations is incompatible with current version
 
 Have a translation? [Contact me](http://gndev.info/feedback/)
@@ -93,6 +93,13 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Changelog ==
+
+= 4.1.6 =
+* Added pot file
+* Fixed [button] css code
+* Updated [accordion], [spoiler] and [tabs] js code
+* Fixed [tooltip]
+* Updated Greek translation
 
 = 4.1.5 =
 * Fixed [lightbox]

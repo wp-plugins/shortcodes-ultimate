@@ -594,7 +594,7 @@ function su_tooltip_shortcode( $atts, $content = null ) {
 	su_query_asset( 'js', 'jquery' );
 	su_query_asset( 'js', 'qtip' );
 	su_query_asset( 'js', 'su-other-shortcodes' );
-	return '<div class="su-tooltip' . su_ecssc( $atts ) . '" data-close="' . $atts['close'] . '" data-behavior="' . $atts['behavior'] . '" data-my="' . $position['my'] . '" data-at="' . $position['at'] . '" data-classes="' . implode( ' ', $classes ) . '" data-title="' . $atts['title'] . '" title="' . esc_attr( $atts['content'] ) . '">' . do_shortcode( $content ) . '</div>';
+	return '<span class="su-tooltip' . su_ecssc( $atts ) . '" data-close="' . $atts['close'] . '" data-behavior="' . $atts['behavior'] . '" data-my="' . $position['my'] . '" data-at="' . $position['at'] . '" data-classes="' . implode( ' ', $classes ) . '" data-title="' . $atts['title'] . '" title="' . esc_attr( $atts['content'] ) . '">' . do_shortcode( $content ) . '</span>';
 }
 
 function su_ttc_shortcode( $atts = null, $content = null ) {
