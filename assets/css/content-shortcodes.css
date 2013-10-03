@@ -225,7 +225,7 @@
 	-moz-transition: all .2s;
 	-webkit-transition: all .2s;
 }
-.su-button..su-button-wide { display: block !important; }
+.su-button-wide { display: block !important; }
 .su-button-center { text-align: center; }
 .su-button span {
 	display: block !important;

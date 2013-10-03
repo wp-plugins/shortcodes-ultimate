@@ -282,11 +282,13 @@ function su_row_shortcode( $atts = null, $content = null ) {
  */
 function su_column_shortcode( $atts, $content = null ) {
 	$atts = shortcode_atts( array(
-			'size' => '1/2',
-			'last' => null,
-			'class' => ''
+			'size'   => '1/2',
+			'center' => 'no',
+			'last'   => null,
+			'class'  => ''
 		), $atts );
 	if ( $atts['last'] !== null && $atts['last'] == '1' ) $atts['class'] .= ' su-column-last';
+	if ( $atts['center'] === 'yes' ) $atts['class'] .= ' su-column-centered';
 	su_query_asset( 'css', 'su-box-shortcodes' );
 	return '<div class="su-column su-column-size-' . str_replace( '/', '-', $atts['size'] ) . su_ecssc( $atts ) . '"><div class="su-column-inner">' . su_do_shortcode( $content, 'c' ) . '</div></div>';
 }

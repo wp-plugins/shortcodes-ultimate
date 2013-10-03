@@ -369,7 +369,7 @@ function su_get_terms( $taxonomy ) {
  * @return string
  */
 function su_ecssc( $atts ) {
-	return ( $atts['class'] ) ? ' ' . $atts['class'] : '';
+	return ( $atts['class'] ) ? ' ' . trim( $atts['class'] ) : '';
 }
 
 /**

@@ -8,14 +8,9 @@ jQuery(document).ready(function ($) {
 		$choices = $('#su-generator-choices'),
 		$choice = $choices.find('span'),
 		$settings = $('#su-generator-settings'),
-		$button = $('.su-generator-button'),
-		$cancel = $('.su-generator-cancel'),
-		$insert = $('#su-generator-insert'),
 		$prefix = $('#su-compatibility-mode-prefix'),
-		$another = $('#su-generator-select-another'),
 		$result = $('#su-generator-result'),
 		$selected = $('#su-generator-selected'),
-		$preview_link = $('#su-generator-preview-link'),
 		mce_selection = '';
 
 	// Apply qTip to choices
@@ -33,7 +28,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Generator button
-	$button.live('click', function (e) {
+	$('body').on('click', '.su-generator-button', function (e) {
 		e.preventDefault();
 		// Save the target
 		window.su_generator_target = $(this).data('target');
@@ -97,8 +92,8 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 	});
 
-	// Select another shortcode link
-	$another.live('click', function (e) {
+	// Go to home link
+	$('#su-generator').on('click', '.su-generator-home', function (e) {
 		// Clear search field
 		$search.val('');
 		// Hide settings
@@ -118,7 +113,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Generator close button
-	$cancel.live('click', function (e) {
+	$('#su-generator').on('click', '.su-generator-close', function (e) {
 		// Close popup
 		$.magnificPopup.close();
 		// Prevent default action
@@ -330,7 +325,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Insert shortcode
-	$insert.live('click', function (e) {
+	$('#su-generator').on('click', '.su-generator-insert', function (e) {
 		// Prepare data
 		var shortcode = su_generator_parse();
 		if (typeof window.su_generator_target !== 'undefined' && window.su_generator_target !== 'content') {
@@ -350,7 +345,7 @@ jQuery(document).ready(function ($) {
 	});
 
 	// Preview shortcode
-	$preview_link.live('click', function (e) {
+	$('#su-generator').on('click', '.su-generator-toggle-preview', function (e) {
 		// Prepare data
 		var $button = $(this);
 		// Update link text

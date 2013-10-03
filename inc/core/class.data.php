@@ -444,6 +444,12 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Size', 'su' ),
 							'desc' => __( 'Select column width. This width will be calculated depend page width', 'su' )
 						),
+						'center' => array(
+							'type' => 'switch',
+							'default' => 'no',
+							'name' => __( 'Centered', 'su' ),
+							'desc' => __( 'Is this column centered on the page', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),

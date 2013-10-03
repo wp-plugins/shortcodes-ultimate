@@ -45,7 +45,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 = Got a bug or suggestion? =
 * [Support forum](http://wordpress.org/support/plugin/shortcodes-ultimate/)
 * [Documentation](http://gndev.info/kb/)
-* [Contact author](http://gndev.info/feedback/)
+* [Contact author](http://gndev.info/feedback/) (please *DO NOT* use this form for support requests)
 
 = Bundled translations =
 * Ru, [Vladimir Anokhin](http://gndev.info/)
@@ -93,6 +93,14 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 
 == Changelog ==
+
+
+= 4.1.7 =
+* Fixed [button wide=yes]
+* Fixed media query for [column]
+* Added new attr [column center=yes]
+* Improved js code for spoilers and tabs
+* Improved js code for generator
 
 = 4.1.6 =
 * Added pot file

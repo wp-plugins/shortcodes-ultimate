@@ -144,13 +144,13 @@ class Shortcodes_Ultimate_Generator {
 			$skip = ( $shult->get_option( 'skip' ) === 'on' ) ? ' su-generator-skip' : '';
 			// Prepare actions
 			$actions = apply_filters( 'su/generator/actions', array(
-					'insert' => '<a href="#" class="button button-primary button-large" id="su-generator-insert">' . __( 'Insert shortcode', 'su' ) . '</a>',
-					'preview' => '<a href="#" class="button button-large" id="su-generator-preview-link">' . __( 'Live preview', 'su' ) . '</a>',
-					'close' => '<a href="#" class="button alignright button-large su-generator-cancel">' . __( 'Close window', 'su' ) . '</a>'
+					'insert' => '<a href="javascript:void(0);" class="button button-primary button-large su-generator-insert">' . __( 'Insert shortcode', 'su' ) . '</a>',
+					'preview' => '<a href="javascript:void(0);" class="button button-large su-generator-toggle-preview">' . __( 'Live preview', 'su' ) . '</a>',
+					'close' => '<a href="javascript:void(0);" class="button alignright button-large su-generator-close">' . __( 'Close window', 'su' ) . '</a>'
 				) );
 			// Shortcode header
 			$return = '<div id="su-generator-breadcrumbs">';
-			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="#" id="su-generator-select-another" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
+			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="javascript:void(0);" class="su-generator-home" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
 			$return .= '</div>';
 			// Shortcode has atts
 			if ( count( $shortcode['atts'] ) && $shortcode['atts'] ) {
