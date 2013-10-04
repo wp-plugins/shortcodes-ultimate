@@ -51,6 +51,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Ru, [Vladimir Anokhin](http://gndev.info/)
 * Fr, [Nicolas Leclerc](http://etic-studio.fr/)
 * Gr, [Kleanthis Manolopoulos](mailto:akis_manolopoulos_at_hotmail_dot_com)
+* Ja, [Stranger](#)
 * Unforunately old translations is incompatible with current version
 
 Have a translation? [Contact me](http://gndev.info/feedback/)
@@ -94,6 +95,11 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.1.8 =
+* Added defalt taxonomy value for [posts]
+* Added defalt post_type value for [posts]
+* Added ability to use shortcodes inside of attributes
+* Translated into Japanese
 
 = 4.1.7 =
 * Fixed [button wide=yes]

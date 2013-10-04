@@ -67,7 +67,8 @@ class Shortcodes_Ultimate_Data {
 								'right' => __( 'Right', 'su' )
 							),
 							'default' => 'center',
-							'name' => __( 'Align', 'su' ), 'desc' => __( 'Heading text alignment', 'su' )
+							'name' => __( 'Align', 'su' ),
+							'desc' => __( 'Heading text alignment', 'su' )
 						),
 						'class' => array(
 							'default' => '',
@@ -1683,14 +1684,14 @@ class Shortcodes_Ultimate_Data {
 							'type' => 'select',
 							'multiple' => true,
 							'values' => su_get_post_types(),
-							'default' => 'default',
+							'default' => 'post',
 							'name' => __( 'Post types', 'su' ),
 							'desc' => __( 'Select post types. Hold Ctrl key to select multiple post types', 'su' )
 						),
 						'taxonomy' => array(
 							'type' => 'select',
 							'values' => su_get_taxonomies(),
-							'default' => '',
+							'default' => 'category',
 							'name' => __( 'Taxonomy', 'su' ),
 							'desc' => __( 'Select taxonomy to show posts from', 'su' )
 						),
