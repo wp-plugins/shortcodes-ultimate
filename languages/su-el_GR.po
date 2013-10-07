@@ -1,0 +1,2696 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shortcodes Ultimate 4.1.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-01 10:35+0200\n"
+"PO-Revision-Date: 2013-10-01 22:10+0200\n"
+"Last-Translator: Kleanthis Manolopoulos <akis_manolopoulos@hotmail.com>\n"
+"Language-Team: Kleanthis Manolopoulos <akis_manolopoulos@hotmail.com>\n"
+"Language: el_GR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../inc/example-addon.php:29
+msgid "Heading 2"
+msgstr "Κεφαλίδα 2"
+
+#: ../inc/example-addon.php:43 ../inc/core/class.data.php:158
+#: ../inc/core/class.data.php:276 ../inc/core/class.data.php:356
+#: ../inc/core/class.data.php:517 ../inc/core/class.data.php:654
+#: ../inc/core/class.data.php:813
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#: ../inc/example-addon.php:44
+msgid "Small"
+msgstr "Μικρό"
+
+#: ../inc/example-addon.php:49 ../inc/core/class.data.php:163
+#: ../inc/core/class.data.php:362 ../inc/core/class.data.php:481
+#: ../inc/core/class.data.php:527 ../inc/core/class.data.php:661
+#: ../inc/core/class.data.php:783
+msgid "Style"
+msgstr "Στυλ"
+
+#: ../inc/example-addon.php:51
+msgid "Heading 2 style"
+msgstr "Στυλ κεφαλίδας 2"
+
+#: ../inc/example-addon.php:57
+msgid "Heading 2 text"
+msgstr "Κείμενο κεφαλίδας 2"
+
+#: ../inc/example-addon.php:59
+msgid "Styled heading 2"
+msgstr "Μορφοποίημένη κεφαλίδα 2"
+
+#: ../inc/core/class.assets.php:76
+msgid ""
+"This shortcode doesn't work in live preview. Please insert it into editor "
+"and preview on the site."
+msgstr ""
+"Αυτό το shortcode δεν λειτουργεί στη ζωντανη απεικόνηση. Παρακαλώ να τον "
+"εισάγετε στον επεξεργαστή κειμένου και να τον δείτε στην ιστοσελίδα σας."
+
+#: ../inc/core/class.data.php:34
+msgid "All"
+msgstr "Όλα"
+
+#: ../inc/core/class.data.php:35 ../inc/core/class.generator.php:233
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#: ../inc/core/class.data.php:36 ../inc/core/class.data.php:642
+msgid "Box"
+msgstr "Box"
+
+#: ../inc/core/class.data.php:37
+msgid "Media"
+msgstr "Πολυμέσα"
+
+#: ../inc/core/class.data.php:38 ../inc/core/class.data.php:1413
+#: ../inc/core/class.data.php:1503 ../inc/core/class.data.php:1603
+#: ../inc/core/class.data.php:1609
+msgid "Gallery"
+msgstr "Gallery"
+
+#: ../inc/core/class.data.php:39
+msgid "Other"
+msgstr "Άλλα"
+
+#: ../inc/core/class.data.php:50
+msgid "Heading"
+msgstr "Heading"
+
+#: ../inc/core/class.data.php:60 ../inc/core/class.data.php:367
+#: ../inc/core/class.data.php:444 ../inc/core/class.data.php:545
+msgid "Size"
+msgstr "Μέγεθος"
+
+#: ../inc/core/class.data.php:60
+msgid "Select heading size"
+msgstr "Μορφοποιημένη κεφαλίδα 2"
+
+#: ../inc/core/class.data.php:65 ../inc/core/class.data.php:332
+#: ../inc/core/class.data.php:587 ../inc/core/class.data.php:791
+msgid "Left"
+msgstr "Αριστερά"
+
+#: ../inc/core/class.data.php:66 ../inc/core/class.data.php:1446
+#: ../inc/core/class.data.php:1552
+msgid "Center"
+msgstr "Κέντρο"
+
+#: ../inc/core/class.data.php:67 ../inc/core/class.data.php:333
+#: ../inc/core/class.data.php:585 ../inc/core/class.data.php:792
+msgid "Right"
+msgstr "Δεξιά"
+
+#: ../inc/core/class.data.php:70 ../inc/core/class.data.php:336
+#: ../inc/core/class.data.php:392
+msgid "Align"
+msgstr "Στοίχιση"
+
+#: ../inc/core/class.data.php:70
+msgid "Heading text alignment"
+msgstr "Στοίχιση κειμένου κεφαλίδας"
+
+#: ../inc/core/class.data.php:74 ../inc/core/class.data.php:104
+#: ../inc/core/class.data.php:131 ../inc/core/class.data.php:168
+#: ../inc/core/class.data.php:182 ../inc/core/class.data.php:209
+#: ../inc/core/class.data.php:232 ../inc/core/class.data.php:260
+#: ../inc/core/class.data.php:289 ../inc/core/class.data.php:316
+#: ../inc/core/class.data.php:340 ../inc/core/class.data.php:371
+#: ../inc/core/class.data.php:397 ../inc/core/class.data.php:413
+#: ../inc/core/class.data.php:449 ../inc/core/class.data.php:485
+#: ../inc/core/class.data.php:600 ../inc/core/class.data.php:634
+#: ../inc/core/class.data.php:686 ../inc/core/class.data.php:721
+#: ../inc/core/class.data.php:752 ../inc/core/class.data.php:854
+#: ../inc/core/class.data.php:870 ../inc/core/class.data.php:922
+#: ../inc/core/class.data.php:971 ../inc/core/class.data.php:1013
+#: ../inc/core/class.data.php:1051 ../inc/core/class.data.php:1120
+#: ../inc/core/class.data.php:1141 ../inc/core/class.data.php:1172
+#: ../inc/core/class.data.php:1205 ../inc/core/class.data.php:1221
+#: ../inc/core/class.data.php:1246 ../inc/core/class.data.php:1265
+#: ../inc/core/class.data.php:1291 ../inc/core/class.data.php:1311
+#: ../inc/core/class.data.php:1355 ../inc/core/class.data.php:1399
+#: ../inc/core/class.data.php:1489 ../inc/core/class.data.php:1595
+#: ../inc/core/class.data.php:1646
+msgid "Class"
+msgstr "Κλάση"
+
+#: ../inc/core/class.data.php:75 ../inc/core/class.data.php:105
+#: ../inc/core/class.data.php:132 ../inc/core/class.data.php:169
+#: ../inc/core/class.data.php:183 ../inc/core/class.data.php:210
+#: ../inc/core/class.data.php:233 ../inc/core/class.data.php:261
+#: ../inc/core/class.data.php:290 ../inc/core/class.data.php:317
+#: ../inc/core/class.data.php:341 ../inc/core/class.data.php:372
+#: ../inc/core/class.data.php:398 ../inc/core/class.data.php:414
+#: ../inc/core/class.data.php:450 ../inc/core/class.data.php:486
+#: ../inc/core/class.data.php:601 ../inc/core/class.data.php:635
+#: ../inc/core/class.data.php:687 ../inc/core/class.data.php:722
+#: ../inc/core/class.data.php:753 ../inc/core/class.data.php:855
+#: ../inc/core/class.data.php:871 ../inc/core/class.data.php:923
+#: ../inc/core/class.data.php:972 ../inc/core/class.data.php:1014
+#: ../inc/core/class.data.php:1052 ../inc/core/class.data.php:1121
+#: ../inc/core/class.data.php:1142 ../inc/core/class.data.php:1173
+#: ../inc/core/class.data.php:1206 ../inc/core/class.data.php:1222
+#: ../inc/core/class.data.php:1247 ../inc/core/class.data.php:1266
+#: ../inc/core/class.data.php:1292 ../inc/core/class.data.php:1312
+#: ../inc/core/class.data.php:1356 ../inc/core/class.data.php:1400
+#: ../inc/core/class.data.php:1490 ../inc/core/class.data.php:1596
+#: ../inc/core/class.data.php:1647
+msgid "Extra CSS class"
+msgstr "Επιπρόσθετη CSS κλάση"
+
+#: ../inc/core/class.data.php:78
+msgid "Heading text"
+msgstr "Κείμενο κεφαλίδας"
+
+#: ../inc/core/class.data.php:79
+msgid "Styled heading"
+msgstr "Μορφοποιημένη κεφαλίδα"
+
+#: ../inc/core/class.data.php:83
+msgid "Tabs"
+msgstr "Tabs"
+
+#: ../inc/core/class.data.php:93
+msgid "Active tab"
+msgstr "Ενεργή καρτέλα"
+
+#: ../inc/core/class.data.php:94
+msgid "Select which tab is open by default"
+msgstr "Επιλέξτε την προεπιλεγμένη καρτέλα που θα είναι ανοιχτή"
+
+#: ../inc/core/class.data.php:99
+msgid "Vertical"
+msgstr "Κάθετο"
+
+#: ../inc/core/class.data.php:100
+msgid "Show tabs vertically"
+msgstr "Προβολή καρτελών κάθετα"
+
+#: ../inc/core/class.data.php:109
+msgid ""
+"[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n"
+"[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n"
+"[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
+msgstr ""
+"[%prefix_tab title=\"Τίτλος 1\"]Περιεχόμενο 1[/%prefix_tab]\n"
+"[%prefix_tab title=\"Τίτλος 2\"]Περιεχόμενο 2[/%prefix_tab]\n"
+"[%prefix_tab title=\"Τίτλος 3\"]Περιεχόμενο 3[/%prefix_tab]"
+
+#: ../inc/core/class.data.php:110
+msgid "Tabs container"
+msgstr "Δοχείο καρτελών"
+
+#: ../inc/core/class.data.php:114
+msgid "Tab"
+msgstr "Tab"
+
+#: ../inc/core/class.data.php:119
+msgid "Tab name"
+msgstr "Όνομα καρτέλας"
+
+#: ../inc/core/class.data.php:120 ../inc/core/class.data.php:147
+#: ../inc/core/class.data.php:616 ../inc/core/class.data.php:649
+#: ../inc/core/class.data.php:1079 ../inc/views/galleries.php:45
+#: ../inc/views/galleries.php:100
+msgid "Title"
+msgstr "Τίτλος"
+
+#: ../inc/core/class.data.php:121
+msgid "Enter tab name"
+msgstr "Εισάγετε το όνομα της καρτέλας"
+
+#: ../inc/core/class.data.php:126
+msgid "Disabled"
+msgstr "Απενεργοποιημένο"
+
+#: ../inc/core/class.data.php:127
+msgid "Is this tab disabled"
+msgstr "Είναι αυτή η καρτέλα απενεργοποιημένη"
+
+#: ../inc/core/class.data.php:136
+msgid "Tab content"
+msgstr "Περιεχόμενο της καρτέλας"
+
+#: ../inc/core/class.data.php:137
+msgid "Single tab"
+msgstr "Ενιαία καρτέλα"
+
+#: ../inc/core/class.data.php:141
+msgid "Spoiler"
+msgstr "Spoiler"
+
+#: ../inc/core/class.data.php:146 ../inc/core/shortcodes.php:93
+msgid "Spoiler title"
+msgstr "Τίτλος Spoiler"
+
+#: ../inc/core/class.data.php:147
+msgid "Text in spoiler title"
+msgstr "Κείμενο στον τίτλο του spoiler"
+
+#: ../inc/core/class.data.php:152
+msgid "Open"
+msgstr "Ανοιχτό"
+
+#: ../inc/core/class.data.php:153
+msgid "Is spoiler content visible by default"
+msgstr "Είναι το περιεχόμενο του spoiler προκαθορισμένα ορατό"
+
+#: ../inc/core/class.data.php:159
+msgid "Fancy"
+msgstr "Fancy"
+
+#: ../inc/core/class.data.php:160 ../inc/core/class.data.php:359
+msgid "Simple"
+msgstr "Απλό"
+
+#: ../inc/core/class.data.php:164
+msgid "Spoiler skin"
+msgstr "Spoiler skin"
+
+#: ../inc/core/class.data.php:172
+msgid "Hidden content"
+msgstr "Κρυμένο περιεχόμενο"
+
+#: ../inc/core/class.data.php:172
+msgid "Spoiler with hidden content"
+msgstr "Spoiler με κρυφό περιεχόμενο"
+
+#: ../inc/core/class.data.php:176
+msgid "Accordion"
+msgstr "Accordion"
+
+#: ../inc/core/class.data.php:187
+msgid ""
+"[%prefix_spoiler]Content[/%prefix_spoiler]\n"
+"[%prefix_spoiler]Content[/%prefix_spoiler]\n"
+"[%prefix_spoiler]Content[/%prefix_spoiler]"
+msgstr ""
+"[%prefix_spoiler]Περιεχόμενο[/%prefix_spoiler]\n"
+"[%prefix_spoiler]Περιεχόμενο[/%prefix_spoiler]\n"
+"[%prefix_spoiler]Περιεχόμενο[/%prefix_spoiler]"
+
+#: ../inc/core/class.data.php:188
+msgid "Accordion with spoilers"
+msgstr "Accordion με spoilers"
+
+#: ../inc/core/class.data.php:192
+msgid "Divider"
+msgstr "Divider"
+
+#: ../inc/core/class.data.php:199
+msgid "Show TOP link"
+msgstr "Προβολή συνδέσμου TOP"
+
+#: ../inc/core/class.data.php:200
+msgid "Show link to top of the page or not"
+msgstr "Προβολή ή όχι του συνδέσμου στο πάνω μέρος της σελίδας"
+
+#: ../inc/core/class.data.php:204 ../inc/core/shortcodes.php:128
+msgid "Go to top"
+msgstr "Επιστροφή στην αρχή"
+
+#: ../inc/core/class.data.php:205
+msgid "Link text"
+msgstr "Κείμενο συνδέσμου"
+
+#: ../inc/core/class.data.php:205
+msgid "Text for the GO TOP link"
+msgstr "Κείμενο για τον σύνδεσμο GO TOP"
+
+#: ../inc/core/class.data.php:214
+msgid "Content divider with optional TOP link"
+msgstr "Περιεχόμενο του divider με προαιρετικό σύνδεσμο TOP"
+
+#: ../inc/core/class.data.php:218
+msgid "Spacer"
+msgstr "Spacer"
+
+#: ../inc/core/class.data.php:228 ../inc/core/class.data.php:905
+#: ../inc/core/class.data.php:954 ../inc/core/class.data.php:1002
+#: ../inc/core/class.data.php:1097 ../inc/core/class.data.php:1344
+#: ../inc/core/class.data.php:1382 ../inc/core/class.data.php:1430
+#: ../inc/core/class.data.php:1520 ../inc/core/class.data.php:1626
+msgid "Height"
+msgstr "Ύψος"
+
+#: ../inc/core/class.data.php:228
+msgid "Height of the spacer in pixels"
+msgstr "Ύψος του spacer σε pixels"
+
+#: ../inc/core/class.data.php:237
+msgid "Empty space with adjustable height"
+msgstr "Κενός χώρος με ρυθμιζόμενο ύψος"
+
+#: ../inc/core/class.data.php:241
+msgid "Highlight"
+msgstr "Highlight"
+
+#: ../inc/core/class.data.php:249 ../inc/core/class.data.php:533
+#: ../inc/core/class.data.php:704
+msgid "Background"
+msgstr "Φόντο"
+
+#: ../inc/core/class.data.php:250
+msgid "Highlighted text background color"
+msgstr "Χρώμα φόντου τονισμένου κειμένου"
+
+#: ../inc/core/class.data.php:256 ../inc/core/class.data.php:539
+#: ../inc/core/class.data.php:710
+msgid "Text color"
+msgstr "Χρώμα κειμένου"
+
+#: ../inc/core/class.data.php:256
+msgid "Highlighted text color"
+msgstr "Χρώμα κειμένου"
+
+#: ../inc/core/class.data.php:264 ../inc/core/class.data.php:265
+msgid "Highlighted text"
+msgstr "Τονισμένο κείμενο"
+
+#: ../inc/core/class.data.php:269 ../inc/core/class.data.php:293
+msgid "Label"
+msgstr "Label"
+
+#: ../inc/core/class.data.php:277
+msgid "Success"
+msgstr "Επιτυχία"
+
+#: ../inc/core/class.data.php:278
+msgid "Warning"
+msgstr "Προειδοποίηση"
+
+#: ../inc/core/class.data.php:279
+msgid "Important"
+msgstr "Σημαντικό"
+
+#: ../inc/core/class.data.php:280
+msgid "Black"
+msgstr "Μαύρο"
+
+#: ../inc/core/class.data.php:281
+msgid "Info"
+msgstr "Πληροφορίες"
+
+#: ../inc/core/class.data.php:284
+msgid "Type"
+msgstr "Τύπος"
+
+#: ../inc/core/class.data.php:285
+msgid "Style of the label"
+msgstr "Στυλ ετικέτας"
+
+#: ../inc/core/class.data.php:294
+msgid "Styled label"
+msgstr "Μορφοποιημένη ετικέτα"
+
+#: ../inc/core/class.data.php:298 ../inc/core/class.data.php:320
+msgid "Quote"
+msgstr "Quote"
+
+#: ../inc/core/class.data.php:305
+msgid "Cite"
+msgstr "Αναφορά"
+
+#: ../inc/core/class.data.php:306
+msgid "Quote author name"
+msgstr "Παράθεση ονόματος του συγγραφέα"
+
+#: ../inc/core/class.data.php:311
+msgid "Cite url"
+msgstr "Διεύθυνση αναφοράς"
+
+#: ../inc/core/class.data.php:312
+msgid "Url of the quote author. Leave empty to disable link"
+msgstr ""
+"Διεύθυνση του συγγραφέα αναφοράς. Αφήστε κενό για απενεργοποίηση του "
+"συνδέσμου"
+
+#: ../inc/core/class.data.php:321
+msgid "Blockquote alternative"
+msgstr "Εναλλακτικά blockquote"
+
+#: ../inc/core/class.data.php:325 ../inc/core/class.data.php:344
+#: ../inc/core/class.data.php:345
+msgid "Pullquote"
+msgstr "Pullquote"
+
+#: ../inc/core/class.data.php:336
+msgid "Pullquote alignment (float)"
+msgstr "Στοίχιση Pullquote (float)"
+
+#: ../inc/core/class.data.php:349 ../inc/core/class.data.php:376
+msgid "Dropcap"
+msgstr "Dropcap"
+
+#: ../inc/core/class.data.php:357 ../inc/core/class.data.php:518
+msgid "Flat"
+msgstr "Επίπεδο"
+
+#: ../inc/core/class.data.php:358 ../inc/core/class.data.php:574
+msgid "Light"
+msgstr "Ανάλαφρο"
+
+#: ../inc/core/class.data.php:362
+msgid "Dropcap style preset"
+msgstr "Προκαθορισμένο στυλ dropcap"
+
+#: ../inc/core/class.data.php:367
+msgid "Choose dropcap size"
+msgstr "Επιλέξτε το μέγεθος του dropcap"
+
+#: ../inc/core/class.data.php:375
+msgid "D"
+msgstr "Δ"
+
+#: ../inc/core/class.data.php:380
+msgid "Frame"
+msgstr "Frame"
+
+#: ../inc/core/class.data.php:393
+msgid "Frame alignment"
+msgstr "Στοίχιση της Frame"
+
+#: ../inc/core/class.data.php:403
+msgid "Styled image frame"
+msgstr "Μορφοποιημένο περίγραμμα εικόνας"
+
+#: ../inc/core/class.data.php:407
+msgid "Row"
+msgstr "Row"
+
+#: ../inc/core/class.data.php:418
+msgid ""
+"[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n"
+"[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n"
+"[%prefix_column size=\"1/3\"]Content[/%prefix_column]"
+msgstr ""
+"[%prefix_column size=\"1/3\"]Περιεχόμενο[/%prefix_column]\n"
+"[%prefix_column size=\"1/3\"]Περιεχόμενο[/%prefix_column]\n"
+"[%prefix_column size=\"1/3\"]Περιεχόμενο[/%prefix_column]"
+
+#: ../inc/core/class.data.php:419
+msgid "Row for flexible columns"
+msgstr "Γραμμή για ευέλικτες στήλες"
+
+#: ../inc/core/class.data.php:423
+msgid "Column"
+msgstr "Column"
+
+#: ../inc/core/class.data.php:430
+msgid "Full width"
+msgstr "Πλήρες πλάτος"
+
+#: ../inc/core/class.data.php:431
+msgid "One half"
+msgstr "Ένα δεύτερο"
+
+#: ../inc/core/class.data.php:432
+msgid "One third"
+msgstr "Ένα τρίτο"
+
+#: ../inc/core/class.data.php:433
+msgid "Two third"
+msgstr "Δύο τρίτα"
+
+#: ../inc/core/class.data.php:434
+msgid "One fourth"
+msgstr "Ένα τέταρτο"
+
+#: ../inc/core/class.data.php:435
+msgid "Three fourth"
+msgstr "Τρία τέταρτα"
+
+#: ../inc/core/class.data.php:436
+msgid "One fifth"
+msgstr "Ένα πέμπτο"
+
+#: ../inc/core/class.data.php:437
+msgid "Two fifth"
+msgstr "Δύο πέμπτα"
+
+#: ../inc/core/class.data.php:438
+msgid "Three fifth"
+msgstr "Τρία πέμπτα"
+
+#: ../inc/core/class.data.php:439
+msgid "Four fifth"
+msgstr "Τέσσερα πέμπτα"
+
+#: ../inc/core/class.data.php:440
+msgid "One sixth"
+msgstr "Ένα έκτο"
+
+#: ../inc/core/class.data.php:441
+msgid "Five sixth"
+msgstr "Πέντε έκτα"
+
+#: ../inc/core/class.data.php:445
+msgid "Select column width. This width will be calculated depend page width"
+msgstr ""
+"Επιπέξτε το πλάτος της στήλης. Το πλάτος θα υπολογιστεί σε σχέση με το "
+"πλάτος της σελίδας"
+
+#: ../inc/core/class.data.php:453
+msgid "Column content"
+msgstr "Περιεχόμενο στήλης"
+
+#: ../inc/core/class.data.php:453
+msgid "Flexible and responsive columns"
+msgstr "Ευέλικτες και ευπροσάρμοστες στήλες"
+
+#: ../inc/core/class.data.php:457
+msgid "List"
+msgstr "List"
+
+#: ../inc/core/class.data.php:464
+msgid "Star"
+msgstr "Αστέρι"
+
+#: ../inc/core/class.data.php:465
+msgid "Arrow"
+msgstr "Βέλος"
+
+#: ../inc/core/class.data.php:466
+msgid "Check"
+msgstr "Check"
+
+#: ../inc/core/class.data.php:467
+msgid "Cross"
+msgstr "Σταυρός"
+
+#: ../inc/core/class.data.php:468
+msgid "Thumbs up"
+msgstr "Thumbs up"
+
+#: ../inc/core/class.data.php:469 ../inc/core/class.data.php:501
+#: ../inc/views/galleries.php:47 ../inc/views/galleries.php:102
+msgid "Link"
+msgstr "Σύνδεση"
+
+#: ../inc/core/class.data.php:470
+msgid "Gear"
+msgstr "Γρανάζι"
+
+#: ../inc/core/class.data.php:471
+msgid "Time"
+msgstr "Ώρα"
+
+#: ../inc/core/class.data.php:472 ../inc/core/class.data.php:696
+msgid "Note"
+msgstr "Σημείωση"
+
+#: ../inc/core/class.data.php:473
+msgid "Plus"
+msgstr "Συν"
+
+#: ../inc/core/class.data.php:474
+msgid "Guard"
+msgstr "Guard"
+
+#: ../inc/core/class.data.php:475
+msgid "Event"
+msgstr "Συμβάν"
+
+#: ../inc/core/class.data.php:476
+msgid "Idea"
+msgstr "Ιδέα"
+
+#: ../inc/core/class.data.php:477 ../inc/core/class.generator.php:88
+#: ../inc/core/class.shortcodes-ultimate.php:115
+#: ../inc/vendor/class.sunrise-framework.php:281
+msgid "Settings"
+msgstr "Ρυθμίσεις"
+
+#: ../inc/core/class.data.php:478
+msgid "Twitter"
+msgstr "Twitter"
+
+#: ../inc/core/class.data.php:481
+msgid "List items style/icons"
+msgstr "Στυλ/Εικονίδια αντικειμένων λίστας"
+
+#: ../inc/core/class.data.php:490
+msgid ""
+"<ul>\n"
+"<li>List item</li>\n"
+"<li>List item</li>\n"
+"<li>List item</li>\n"
+"</ul>"
+msgstr ""
+"<ul>\n"
+"<li>Αντικείμενο λίστας</li>\n"
+"<li>Αντικείμενο λίστας</li>\n"
+"<li>Αντικείμενο λίστας</li>\n"
+"</ul>"
+
+#: ../inc/core/class.data.php:490
+msgid "Styled unordered list"
+msgstr "Στυλ αταξινόμητης λίστας"
+
+#: ../inc/core/class.data.php:494
+msgid "Button"
+msgstr "Button"
+
+#: ../inc/core/class.data.php:502
+msgid "Button link"
+msgstr "Σύνδεσμος κουμπιού"
+
+#: ../inc/core/class.data.php:507 ../inc/core/class.data.php:1163
+msgid "Same tab"
+msgstr "Ίδια καρτέλα"
+
+#: ../inc/core/class.data.php:508 ../inc/core/class.data.php:1164
+msgid "New tab"
+msgstr "Νέα καρτέλα"
+
+#: ../inc/core/class.data.php:511 ../inc/core/class.data.php:1167
+msgid "Target"
+msgstr "Στόχος"
+
+#: ../inc/core/class.data.php:512
+msgid "Button link target"
+msgstr "Σύνδεσμος προορισμού του κουμπιού"
+
+#: ../inc/core/class.data.php:519 ../inc/core/class.data.php:655
+msgid "Soft"
+msgstr "Απαλό"
+
+#: ../inc/core/class.data.php:520 ../inc/core/class.data.php:656
+msgid "Glass"
+msgstr "Γυάλινο"
+
+#: ../inc/core/class.data.php:521 ../inc/core/class.data.php:657
+msgid "Bubbles"
+msgstr "Φυσαλίδες"
+
+#: ../inc/core/class.data.php:522 ../inc/core/class.data.php:658
+msgid "Noise"
+msgstr "Θόρυβος"
+
+#: ../inc/core/class.data.php:523
+msgid "Stroked"
+msgstr "Stroked"
+
+#: ../inc/core/class.data.php:524
+msgid "3D"
+msgstr "3D"
+
+#: ../inc/core/class.data.php:527
+msgid "Button background style preset"
+msgstr "Προκαθορισμένο στυλ φόντου κουμπιού"
+
+#: ../inc/core/class.data.php:533
+msgid "Button background color"
+msgstr "Χρώμα φόντου κουμπιού"
+
+#: ../inc/core/class.data.php:540
+msgid "Button text color"
+msgstr "Χρώμα κειμένου κουμπιού"
+
+#: ../inc/core/class.data.php:546
+msgid "Button size"
+msgstr "Μέγεθος κουμπιού"
+
+#: ../inc/core/class.data.php:551
+msgid "Fluid"
+msgstr "Fluid"
+
+#: ../inc/core/class.data.php:551
+msgid "Fluid buttons has 100% width"
+msgstr "Τα κουμπιά fluid έχουν 100% πλάτος"
+
+#: ../inc/core/class.data.php:556
+msgid "Centered"
+msgstr "Κεντραρισμένο"
+
+#: ../inc/core/class.data.php:556
+msgid "Is button centered on the page"
+msgstr "Είναι το κουμπί κεντραρισμένο στην σελίδα"
+
+#: ../inc/core/class.data.php:562 ../inc/core/class.data.php:681
+#: ../inc/core/class.data.php:717
+msgid "Radius"
+msgstr "Radius"
+
+#: ../inc/core/class.data.php:563
+msgid "Radius of button corners. Auto-radius calculation based on button size"
+msgstr ""
+"Στρογγύλεμα των γωνιών του κουμπιού. Ο υπολογισμός για αυτόματο στρογγύλεμα "
+"γίνεται βάση του μεγέθους του κουμπιού"
+
+#: ../inc/core/class.data.php:568 ../inc/core/class.data.php:622
+msgid "Icon"
+msgstr "Εικονίδιο"
+
+#: ../inc/core/class.data.php:569
+msgid ""
+"You can upload custom icon for this button. Try to begin with <a href="
+"\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-"
+"crisp-web-app-icons/\" target=\"_blank\">these free high-quality icons</a>. "
+"Download archive, unpack icons and upload in this field"
+msgstr ""
+"Μπορείτε να μεταφορτώσετε δικά σας εικονίδια για αυτό το κουμπί. Ξεκινήστε "
+"με αυτά τα <a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/"
+"exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">δωρεάν "
+"εικονίδια υψηλής ποιότητας</a>. Κατεβάστε το αρχείο, ξεπακετάρετε τα "
+"εικονίδια και μεταφορτώστε τα εικονίδια σε αυτό το πεδίο"
+
+#: ../inc/core/class.data.php:575
+msgid "Dark"
+msgstr "Σκούρο"
+
+#: ../inc/core/class.data.php:578
+msgid "Text shadow color"
+msgstr "Χρώμα σκιάς κειμένου"
+
+#: ../inc/core/class.data.php:578
+msgid "Color of button text shadow"
+msgstr "Χρώμα σκιάς κειμένου του κουμπιού"
+
+#: ../inc/core/class.data.php:583 ../inc/core/class.data.php:1738
+msgid "None"
+msgstr "Κανένα"
+
+#: ../inc/core/class.data.php:584 ../inc/core/class.data.php:789
+msgid "Top"
+msgstr "Επάνω"
+
+#: ../inc/core/class.data.php:586 ../inc/core/class.data.php:790
+msgid "Bottom"
+msgstr "Κάτω"
+
+#: ../inc/core/class.data.php:588
+msgid "Top right"
+msgstr "Πάνω δεξιά"
+
+#: ../inc/core/class.data.php:589
+msgid "Top left"
+msgstr "Πάνω αριστερά"
+
+#: ../inc/core/class.data.php:589
+msgid "Bottom right"
+msgstr "Κάτω δεξιά"
+
+#: ../inc/core/class.data.php:589
+msgid "Bottom left"
+msgstr "Κάτω αριστερά"
+
+#: ../inc/core/class.data.php:591
+msgid "Text shadow position"
+msgstr "Θέση σκιάς κειμένου"
+
+#: ../inc/core/class.data.php:591
+msgid "Position of button text shadow"
+msgstr "Θέση σκιάς κειμένου κουμπιού"
+
+#: ../inc/core/class.data.php:595
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: ../inc/core/class.data.php:596
+msgid ""
+"Small description under button text. This option is incompatible with icon."
+msgstr ""
+"Μικρή περιγραφή κάτω από το κείμενο του κουμπιού. Αυτή η επιλογή δεν είναι "
+"συμβατή με το εικονίδιο."
+
+#: ../inc/core/class.data.php:604
+msgid "Button text"
+msgstr "Κείμενο κουμπιού"
+
+#: ../inc/core/class.data.php:605
+msgid "Styled button"
+msgstr "Μορφοποίηση κουμπιού"
+
+#: ../inc/core/class.data.php:609
+msgid "Service"
+msgstr "Service"
+
+#: ../inc/core/class.data.php:615 ../inc/core/shortcodes.php:464
+msgid "Service title"
+msgstr "Τίτλος service"
+
+#: ../inc/core/class.data.php:617
+msgid "Service name"
+msgstr "Όνομα service"
+
+#: ../inc/core/class.data.php:623
+msgid "You can upload custom icon for this box"
+msgstr "Μπορείτε να μεταφορτώσετε δικά σας εικονίδια για αυτό το πλαίσιο"
+
+#: ../inc/core/class.data.php:629
+msgid "Icon size"
+msgstr "Μέγεθος εικονιδίου"
+
+#: ../inc/core/class.data.php:630
+msgid "Size of the uploaded icon in pixels"
+msgstr "Μέγεθος του μεταφορτωμένου εικονιδίου σε pixels"
+
+#: ../inc/core/class.data.php:638
+msgid "Service description"
+msgstr "Περιγραφή Service"
+
+#: ../inc/core/class.data.php:638
+msgid "Service box with title"
+msgstr "Πλαίσιο service με τίτλο"
+
+#: ../inc/core/class.data.php:648
+msgid "Box title"
+msgstr "Τίτλος πλαισίου"
+
+#: ../inc/core/class.data.php:649
+msgid "Text for the box title"
+msgstr "Κείμενο για τον τίτλο του πλαισίου"
+
+#: ../inc/core/class.data.php:662
+msgid "Box style preset"
+msgstr "Προκαθορισμένο στυλ πλαισίου"
+
+#: ../inc/core/class.data.php:668
+msgid "Color"
+msgstr "Χρώμα"
+
+#: ../inc/core/class.data.php:669
+msgid "Color for the box title and borders"
+msgstr "Χρώμα τίτλου και περιθωρίων πλαισίου"
+
+#: ../inc/core/class.data.php:675
+msgid "Title text color"
+msgstr "Χρώμα κειμένου τίτλου"
+
+#: ../inc/core/class.data.php:675
+msgid "Color for the box title text"
+msgstr "Χρώμα κειμένου τίτλου του πλαισίου"
+
+#: ../inc/core/class.data.php:682
+msgid "Box corners radius"
+msgstr "Στρογγυλεμένες γωνίες πλαισίου"
+
+#: ../inc/core/class.data.php:691
+msgid "Box content"
+msgstr "Περιεχόμενο πλαισίου"
+
+#: ../inc/core/class.data.php:692
+msgid "Colored box with caption"
+msgstr "Χρωματισμένο πλαίσιο με λεζάντα"
+
+#: ../inc/core/class.data.php:704
+msgid "Note background color"
+msgstr "Χρώμα φόντου σημείωσης"
+
+#: ../inc/core/class.data.php:711
+msgid "Note text color"
+msgstr "Χρώμα κειμένου σημείωσης"
+
+#: ../inc/core/class.data.php:717
+msgid "Note corners radius"
+msgstr "Στρογγυλεμένες γωνίες σημείωσης"
+
+#: ../inc/core/class.data.php:725
+msgid "Note text"
+msgstr "Κείμενο σημείωσης"
+
+#: ../inc/core/class.data.php:726
+msgid "Colored box"
+msgstr "Χρωματισμένο πλαίσιο"
+
+#: ../inc/core/class.data.php:730
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: ../inc/core/class.data.php:737
+msgid "Iframe"
+msgstr "Iframe"
+
+#: ../inc/core/class.data.php:738
+msgid "Image"
+msgstr "Image"
+
+#: ../inc/core/class.data.php:739
+msgid "Inline (html content)"
+msgstr "Inline (html περιεχόμενο)"
+
+#: ../inc/core/class.data.php:742
+msgid "Content type"
+msgstr "Τύπος περιεχομένου"
+
+#: ../inc/core/class.data.php:743
+msgid "Select type of the lightbox window content"
+msgstr "Επιλέξτε τον τύπο του περιεχομένου του παραθύρου lightbox"
+
+#: ../inc/core/class.data.php:747
+msgid "Content source"
+msgstr "Πηγή περιεχομένου"
+
+#: ../inc/core/class.data.php:748
+msgid ""
+"Insert here URL or CSS selector. Use URL for Iframe and Image content types. "
+"Use CSS selector for Inline content type.<br />Example values:<br /><b"
+"%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTube video "
+"(iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - "
+"uploaded image (image)<br /><b%value>http://example.com/</b> - any web page "
+"(iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
+msgstr ""
+"Εισάγετε εδώ την διεύθυνση ή τον επιλογέα CSS. Χρησιμοποιήστε τύπους "
+"περιεχομένου για το Iframe και το Image. Χρησιμοποιήστε επιλογέα CSS για "
+"Inline τύπο περιεχομένου.<br />Παραδείγματα τιμών:<br /><b%value>http://www."
+"youtube.com/watch?v=NbE8INOjTKM</b> - YouTube βίντεο (iframe)<br /><b"
+"%value>http://example.com/wp-content/uploads/image.jpg</b> - μεταφορτωμένη "
+"εικόνα (image)<br /><b%value>http://example.com/</b> - οποιαδήποτε "
+"ιστοσελίδα (iframe)<br /><b%value>#contact-form</b> - οποιοδήποτε HTML "
+"περιεχόμενο (inline)"
+
+#: ../inc/core/class.data.php:757
+msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
+msgstr ""
+"[%prefix_button] Πατήστε εδώ για Αναπαραγωγή του Βίντεο [/%prefix_button]"
+
+#: ../inc/core/class.data.php:758
+msgid "Lightbox window with custom content"
+msgstr "Παράθυρο Lightbox με προσαρμοσμένο περιεχόμενο"
+
+#: ../inc/core/class.data.php:762
+msgid "Tooltip"
+msgstr "Tooltip"
+
+#: ../inc/core/class.data.php:769
+msgid "Basic: Light"
+msgstr "Βασικό: Ανοιχτόχρωμο"
+
+#: ../inc/core/class.data.php:770
+msgid "Basic: Dark"
+msgstr "Βασικό: Σκούρο"
+
+#: ../inc/core/class.data.php:771
+msgid "Basic: Yellow"
+msgstr "Βασικό: Κίτρινο"
+
+#: ../inc/core/class.data.php:772
+msgid "Basic: Green"
+msgstr "Βασικό: Πράσινο"
+
+#: ../inc/core/class.data.php:773
+msgid "Basic: Red"
+msgstr "Βασικό: Κόκκινο"
+
+#: ../inc/core/class.data.php:774
+msgid "Basic: Blue"
+msgstr "Βασικό: Μπλε"
+
+#: ../inc/core/class.data.php:775
+msgid "Youtube"
+msgstr "Youtube"
+
+#: ../inc/core/class.data.php:776
+msgid "Tipsy"
+msgstr "Tipsy"
+
+#: ../inc/core/class.data.php:777
+msgid "Bootstrap"
+msgstr "Bootstrap"
+
+#: ../inc/core/class.data.php:778
+msgid "jTools"
+msgstr "jTools"
+
+#: ../inc/core/class.data.php:779
+msgid "Tipped"
+msgstr "Tipped"
+
+#: ../inc/core/class.data.php:780
+msgid "Cluetip"
+msgstr "Cluetip"
+
+#: ../inc/core/class.data.php:784
+msgid "Tooltip window style"
+msgstr "Στυλ παραθύρου Tooltip"
+
+#: ../inc/core/class.data.php:795
+msgid "Position"
+msgstr "Θέση"
+
+#: ../inc/core/class.data.php:796
+msgid "Tooltip position"
+msgstr "Θέση του Tooltip"
+
+#: ../inc/core/class.data.php:801
+msgid "Shadow"
+msgstr "Σκιά"
+
+#: ../inc/core/class.data.php:802
+msgid ""
+"Add shadow to tooltip. This option is only works with basic styes, e.g. "
+"blue, green etc."
+msgstr ""
+"Προσθέστε σκιά στο  tooltip. Αυτή η επιλογή λειτουργεί μόνο με τα βασικά "
+"στυλ, π.χ. μπλε, πράσινο κτλ."
+
+#: ../inc/core/class.data.php:807
+msgid "Rounded corners"
+msgstr "Στρογγυλεμένες γωνίες"
+
+#: ../inc/core/class.data.php:808
+msgid ""
+"Use rounded for tooltip. This option is only works with basic styes, e.g. "
+"blue, green etc."
+msgstr ""
+"Χρησιμοποιήστε στρογγυλεμένα  tooltip. Αυτή η επιλογή λειτουργεί μόνο με τα "
+"βασικά στυλ, π.χ. μπλε, πράσινο κτλ."
+
+#: ../inc/core/class.data.php:822
+msgid "Font size"
+msgstr "Μέγεθος γραμματοσειράς"
+
+#: ../inc/core/class.data.php:823
+msgid "Tooltip font size"
+msgstr "Μέγεθος γραμματοσειράς του Tooltip"
+
+#: ../inc/core/class.data.php:827
+msgid "Tooltip title"
+msgstr "Τίτλος Tooltip"
+
+#: ../inc/core/class.data.php:828
+msgid ""
+"Enter title for tooltip window. Leave this field empty to hide the title"
+msgstr ""
+"Εισάγεται τον τίτλο για το παράθυρο του  tooltip. Αφήστε αυτό το πεδίο κενό "
+"για να αποκρύψετε τον τίτλο"
+
+#: ../inc/core/class.data.php:831 ../inc/core/shortcodes.php:573
+msgid "Tooltip text"
+msgstr "Κείμενο Tooltip"
+
+#: ../inc/core/class.data.php:832
+msgid "Tooltip content"
+msgstr "Περιεχόμενο Tooltip"
+
+#: ../inc/core/class.data.php:833
+msgid "Enter tooltip content here"
+msgstr "Εισάγετε το περιεχόμενο του tooltip εδώ"
+
+#: ../inc/core/class.data.php:838
+msgid "Show and hide on mouse hover"
+msgstr "Προβολή και απόκρυψη όταν είναι το ποντίκι από πάνω"
+
+#: ../inc/core/class.data.php:839
+msgid "Show and hide by mouse click"
+msgstr "Προβολή και απόκρυψη με πάτημα του ποντικιού"
+
+#: ../inc/core/class.data.php:840
+msgid "Always visible"
+msgstr "Πάντα ορατό"
+
+#: ../inc/core/class.data.php:843
+msgid "Behavior"
+msgstr "Συμπεριφορά"
+
+#: ../inc/core/class.data.php:844
+msgid "Select tooltip behavior"
+msgstr "Επιλέξτε την συμπερηφορά του tooltip"
+
+#: ../inc/core/class.data.php:849
+msgid "Close button"
+msgstr "Κουμπί κλεισίματος"
+
+#: ../inc/core/class.data.php:850
+msgid "Show close button"
+msgstr "Προβολή κουμπιού κλεισίματος"
+
+#: ../inc/core/class.data.php:859
+msgid "[%prefix_button] Hover me to open tooltip [/%prefix_button]"
+msgstr ""
+"[%prefix_button] Περάστε το ποντίκι από πάνω για να προβληθεί το tooltip [/"
+"%prefix_button]"
+
+#: ../inc/core/class.data.php:860
+msgid "Tooltip window with custom content"
+msgstr "Παράθυρο tooltip με προσαρμοσμένο περιεχόμενο"
+
+#: ../inc/core/class.data.php:864
+msgid "Private"
+msgstr "Private"
+
+#: ../inc/core/class.data.php:875
+msgid "Private note text"
+msgstr "Κείμενο σημείωσης Private"
+
+#: ../inc/core/class.data.php:876
+msgid "Private note for post authors"
+msgstr "Σημείωση Private για συγγραφείς δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:880
+msgid "YouTube"
+msgstr "YouTube"
+
+#: ../inc/core/class.data.php:887 ../inc/core/class.data.php:937
+#: ../inc/core/class.data.php:985 ../inc/core/class.data.php:1236
+#: ../inc/core/class.data.php:1326
+msgid "Url"
+msgstr "Διεύθυνση"
+
+#: ../inc/core/class.data.php:888
+msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
+msgstr ""
+"Διεύθυνση της σελίδας YouTube με το βίντεο. Π.χ. http://youtube.com/watch?"
+"v=XXXXXX"
+
+#: ../inc/core/class.data.php:896 ../inc/core/class.data.php:945
+#: ../inc/core/class.data.php:993 ../inc/core/class.data.php:1034
+#: ../inc/core/class.data.php:1088 ../inc/core/class.data.php:1335
+#: ../inc/core/class.data.php:1373 ../inc/core/class.data.php:1422
+#: ../inc/core/class.data.php:1512 ../inc/core/class.data.php:1618
+msgid "Width"
+msgstr "Πλάτος"
+
+#: ../inc/core/class.data.php:897 ../inc/core/class.data.php:946
+#: ../inc/core/class.data.php:994 ../inc/core/class.data.php:1089
+msgid "Player width"
+msgstr "Πλάτος Player"
+
+#: ../inc/core/class.data.php:906 ../inc/core/class.data.php:955
+#: ../inc/core/class.data.php:1003 ../inc/core/class.data.php:1098
+msgid "Player height"
+msgstr "Ύψος Player"
+
+#: ../inc/core/class.data.php:911 ../inc/core/class.data.php:960
+#: ../inc/core/class.data.php:1008 ../inc/core/class.data.php:1350
+#: ../inc/core/class.data.php:1388 ../inc/core/class.data.php:1435
+#: ../inc/core/class.data.php:1525
+msgid "Responsive"
+msgstr "Ανταπόκριση"
+
+#: ../inc/core/class.data.php:912 ../inc/core/class.data.php:961
+#: ../inc/core/class.data.php:1009
+msgid "Ignore width and height parameters and make player responsive"
+msgstr ""
+"Αγνόηση των παραμέτρων πλάτους και ύψους, και αυτόματη ανταπόκριση του player"
+
+#: ../inc/core/class.data.php:917 ../inc/core/class.data.php:966
+#: ../inc/core/class.data.php:1040 ../inc/core/class.data.php:1109
+#: ../inc/core/class.data.php:1470 ../inc/core/class.data.php:1576
+msgid "Autoplay"
+msgstr "Αυτόματη αναπαραγωγή"
+
+#: ../inc/core/class.data.php:918 ../inc/core/class.data.php:967
+msgid "Play video automatically when page is loaded"
+msgstr "Αυτόματη αναπαραγωγή βίντεο με την φόρτωση της σελίδας"
+
+#: ../inc/core/class.data.php:926
+msgid "YouTube video"
+msgstr "Βίντεο YouTube"
+
+#: ../inc/core/class.data.php:930
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: ../inc/core/class.data.php:937
+msgid "Url of Vimeo page with video"
+msgstr "Διεύθυνση της σελίδας Vimeo με το βίντεο."
+
+#: ../inc/core/class.data.php:975
+msgid "Vimeo video"
+msgstr "Βίντεο Vimeo"
+
+#: ../inc/core/class.data.php:979
+msgid "Screenr"
+msgstr "Screenr"
+
+#: ../inc/core/class.data.php:985
+msgid "Url of Screenr page with video"
+msgstr "Διεύθυνση της σελίδας Screenr με το βίντεο."
+
+#: ../inc/core/class.data.php:1017
+msgid "Screenr video"
+msgstr "Βίντεο Screenr"
+
+#: ../inc/core/class.data.php:1021
+msgid "Audio"
+msgstr "Audio"
+
+#: ../inc/core/class.data.php:1028 ../inc/core/class.data.php:1067
+msgid "File"
+msgstr "Αρχείο"
+
+#: ../inc/core/class.data.php:1029
+msgid "Audio file url. Supported formats: mp3, ogg"
+msgstr "Διεύθυνση αρχείου ήχου. Υποστηριζόμενοι τύποι: mp3, ogg"
+
+#: ../inc/core/class.data.php:1035
+msgid ""
+"Player width. You can specify width in percents and player will be "
+"responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
+msgstr ""
+"Πλάτος player. Μπορείτε να ορίσετε το πλάτος σε ποσοστό επί τοις εκατό και ο "
+"player θα ανταποκριθεί. Τιμές παραδειγμάτων: <b%value>200px</b>, <b"
+"%value>100&#37;</b>"
+
+#: ../inc/core/class.data.php:1041 ../inc/core/class.data.php:1110
+msgid "Play file automatically when page is loaded"
+msgstr "Αυτόματη αναπαραγωγή αρχείου όταν θα φορτωθεί η σελίδα"
+
+#: ../inc/core/class.data.php:1046 ../inc/core/class.data.php:1115
+msgid "Loop"
+msgstr "Ανακύκλωση"
+
+#: ../inc/core/class.data.php:1047 ../inc/core/class.data.php:1116
+msgid "Repeat when playback is ended"
+msgstr "Επανάληψη όταν η αναπαραγωγή τερματιστεί"
+
+#: ../inc/core/class.data.php:1056
+msgid "Custom audio player"
+msgstr "Προσαρμοσμένος player ήχου"
+
+#: ../inc/core/class.data.php:1060
+msgid "Video"
+msgstr "Video"
+
+#: ../inc/core/class.data.php:1068
+msgid "Url to mp4/flv video-file"
+msgstr "Διεύθυνση του αρχείου βίντεο mp4/flv"
+
+#: ../inc/core/class.data.php:1073
+msgid "Poster"
+msgstr "Αφίσα"
+
+#: ../inc/core/class.data.php:1074
+msgid "Url to poster image, that will be shown before playback"
+msgstr ""
+"Διεύθυσνη της φωτογραφίας αφίσας, που θα προβάλλεται πριν από την αναπαραγωγή"
+
+#: ../inc/core/class.data.php:1080
+msgid "Player title"
+msgstr "Τίτλος player"
+
+#: ../inc/core/class.data.php:1103
+msgid "Controls"
+msgstr "Χειριστήρια"
+
+#: ../inc/core/class.data.php:1104
+msgid "Show player controls (play/pause etc.) or not"
+msgstr "Προβολή ή όχι των χειριστηρίων του player (αναπαραγωγή/παύση κτλ)"
+
+#: ../inc/core/class.data.php:1125
+msgid "Custom video player"
+msgstr "Προσαρμοσμένος player για βίντεο"
+
+#: ../inc/core/class.data.php:1129
+msgid "Table"
+msgstr "Table"
+
+#: ../inc/core/class.data.php:1136
+msgid "CSV file"
+msgstr "Αρχείο CSV"
+
+#: ../inc/core/class.data.php:1137
+msgid "Upload CSV file if you want to create HTML-table from file"
+msgstr ""
+"Μεταφορτώστε ένα αρχείο CSV αν θέλετε να δημιουργήσετε πίνακα - HTML από "
+"αρχείο"
+
+#: ../inc/core/class.data.php:1146
+msgid ""
+"<table>\n"
+"<tr>\n"
+"\t<td>Table</td>\n"
+"\t<td>Table</td>\n"
+"</tr>\n"
+"<tr>\n"
+"\t<td>Table</td>\n"
+"\t<td>Table</td>\n"
+"</tr>\n"
+"</table>"
+msgstr ""
+"<table>\n"
+"<tr>\n"
+"\t<td>Πίνακας</td>\n"
+"\t<td>Πίνακας</td>\n"
+"</tr>\n"
+"<tr>\n"
+"\t<td>Πίνακας</td>\n"
+"\t<td>Πίνακας</td>\n"
+"</tr>\n"
+"</table>"
+
+#: ../inc/core/class.data.php:1147
+msgid "Styled table from HTML or CSV file"
+msgstr "Μορφοποιημένος πίνακας από HTML ή CSV αρχείο"
+
+#: ../inc/core/class.data.php:1151
+msgid "Permalink"
+msgstr "Permalink"
+
+#: ../inc/core/class.data.php:1157
+msgid "ID"
+msgstr "ID"
+
+#: ../inc/core/class.data.php:1158
+msgid "Post or page ID"
+msgstr "Δημοσίευση ή ID σελίδας"
+
+#: ../inc/core/class.data.php:1168
+msgid "Link target. blank - link will be opened in new window/tab"
+msgstr ""
+"Στόχος συναδέσμου. Κενό - ο σύνδεσμος θα ανοίξει σε νέο παράθυρο/νέα καρτέλα"
+
+#: ../inc/core/class.data.php:1178
+msgid "Permalink to specified post/page"
+msgstr "Το permalink για τον ορισμό του δημοσιεύματος/της σελίδας"
+
+#: ../inc/core/class.data.php:1182
+msgid "Members"
+msgstr "Members"
+
+#: ../inc/core/class.data.php:1187 ../inc/core/shortcodes.php:872
+msgid "This content is for registered users only. Please %login%."
+msgstr ""
+"Αυτό το περιεχόμενο είναι μόνο για εγγεγραμμένους χρήστες. Παρακαλώ "
+"%συνδεθείτε%."
+
+#: ../inc/core/class.data.php:1188
+msgid "Message"
+msgstr "Μήνυμα"
+
+#: ../inc/core/class.data.php:1188
+msgid "Message for not logged users"
+msgstr "Μήνυμα για μη συνδεδεμένους χρήστες"
+
+#: ../inc/core/class.data.php:1193
+msgid "Box color"
+msgstr "Χρώμα πλαισίου"
+
+#: ../inc/core/class.data.php:1193
+msgid "This color will applied only to box for not logged users"
+msgstr ""
+"Αυτό το χρώμα θα εφαρμόζεται στα πλαίσια μόνο για τους μή συνδεδεμένους "
+"χρήστες"
+
+#: ../inc/core/class.data.php:1196 ../inc/core/shortcodes.php:875
+msgid "login"
+msgstr "συνδεθείτε"
+
+#: ../inc/core/class.data.php:1197
+msgid "Login link text"
+msgstr "Κείμενο διεύθυνσης σύνδεσης"
+
+#: ../inc/core/class.data.php:1197
+msgid "Text for the login link"
+msgstr "Κείμενο για την διεύθυσνη σύνδεσης"
+
+#: ../inc/core/class.data.php:1201
+msgid "Login link url"
+msgstr "Διεύθυνση σύνδεσης"
+
+#: ../inc/core/class.data.php:1210
+msgid "Content for logged members"
+msgstr "Περιεχόμενο για συνδεδεμένους χρήστες"
+
+#: ../inc/core/class.data.php:1211
+msgid "Content for logged in members only"
+msgstr "Περιεχόμενο μόνο για συνδεδεμένους χρήστες"
+
+#: ../inc/core/class.data.php:1215
+msgid "Guests"
+msgstr "Guests"
+
+#: ../inc/core/class.data.php:1225
+msgid "Content for guests"
+msgstr "Περιεχόμενο για guests"
+
+#: ../inc/core/class.data.php:1225
+msgid "Content for guests only"
+msgstr "Περιεχόμενο μόνο για guests"
+
+#: ../inc/core/class.data.php:1229
+msgid "RSS Feed"
+msgstr "RSS Feed"
+
+#: ../inc/core/class.data.php:1237
+msgid "Url to RSS-feed"
+msgstr "Διεύθυνση του RSS-feed"
+
+#: ../inc/core/class.data.php:1242
+msgid "Limit"
+msgstr "Όριο"
+
+#: ../inc/core/class.data.php:1242
+msgid "Number of items to show"
+msgstr "Αριθμός αντικειμένων που θα προβάλλονται"
+
+#: ../inc/core/class.data.php:1250
+msgid "Feed grabber"
+msgstr "Feed grabber"
+
+#: ../inc/core/class.data.php:1254
+msgid "Menu"
+msgstr "Menu"
+
+#: ../inc/core/class.data.php:1261
+msgid "Menu name"
+msgstr "Ονομασία μενού"
+
+#: ../inc/core/class.data.php:1261
+msgid "Custom menu name. Ex: Main menu"
+msgstr "Προσαρμοσμένη ονομασία μενού. Π.χ. Main menu"
+
+#: ../inc/core/class.data.php:1269
+msgid "Custom menu by name"
+msgstr "Προσαρμοσμένο μενού κατά όνομα"
+
+#: ../inc/core/class.data.php:1273
+msgid "Sub pages"
+msgstr "Sub pages"
+
+#: ../inc/core/class.data.php:1280 ../inc/core/class.data.php:1306
+msgid "Depth"
+msgstr "Βάθος"
+
+#: ../inc/core/class.data.php:1281
+msgid "Max depth level of children pages"
+msgstr "Μέγιστο επίπεδο βάθους για υποσελίδες"
+
+#: ../inc/core/class.data.php:1286
+msgid "Parent ID"
+msgstr "ID γονέα"
+
+#: ../inc/core/class.data.php:1287
+msgid "ID of the parent page. Leave blank to use current page"
+msgstr ""
+"ID της γονικής σελίδας. Αφήστε το κενό, ώστε να χρησιμοποιηθεί η τρέχουσα "
+"σελίδα"
+
+#: ../inc/core/class.data.php:1295
+msgid "List of sub pages"
+msgstr "Λίστα για υποσελίδες"
+
+#: ../inc/core/class.data.php:1299
+msgid "Siblings"
+msgstr "Siblings"
+
+#: ../inc/core/class.data.php:1307
+msgid "Max depth level"
+msgstr "Μέγιστο επίπεδο βάθους"
+
+#: ../inc/core/class.data.php:1315
+msgid "List of cureent page siblings"
+msgstr "Λίστα από τρέχουσες σελίδες siblings"
+
+#: ../inc/core/class.data.php:1319
+msgid "Document"
+msgstr "Document"
+
+#: ../inc/core/class.data.php:1327
+msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
+msgstr ""
+"Διεύθυνση για τη μεταφόρτωση εγγράφου. Υποστηριζόμενοι τύποι: doc, xls, pdf "
+"κτλ."
+
+#: ../inc/core/class.data.php:1336
+msgid "Viewer width"
+msgstr "Πλάτος Viewer"
+
+#: ../inc/core/class.data.php:1345
+msgid "Viewer height"
+msgstr "Ύψος Viewer"
+
+#: ../inc/core/class.data.php:1351
+msgid "Ignore width and height parameters and make viewer responsive"
+msgstr ""
+"Αγνόηση των παραμέτρων πλάτους και ύψους, και αυτόματη ανταπόκριση του viewer"
+
+#: ../inc/core/class.data.php:1359
+msgid "Document viewer by Google"
+msgstr "Viewer εγγράφου από Google"
+
+#: ../inc/core/class.data.php:1363
+msgid "Gmap"
+msgstr "Gmap"
+
+#: ../inc/core/class.data.php:1374
+msgid "Map width"
+msgstr "Πλάτος χάρτη"
+
+#: ../inc/core/class.data.php:1383
+msgid "Map height"
+msgstr "Ύψος χάρτη"
+
+#: ../inc/core/class.data.php:1389
+msgid "Ignore width and height parameters and make map responsive"
+msgstr ""
+"Αγνόηση των παραμέτρων πλάτους και ύψους, και αυτόματη ανταπόκριση του χάρτη"
+
+#: ../inc/core/class.data.php:1394
+msgid "Marker"
+msgstr "Δείκτης"
+
+#: ../inc/core/class.data.php:1395
+msgid "Address for the marker. You can type it in any language"
+msgstr "Διεύθυνση του δείκτη. Μπορείτε να την γράψετε σε οποιαδήποτε γλώσσα"
+
+#: ../inc/core/class.data.php:1403
+msgid "Maps by Google"
+msgstr "Χάρτες από Google"
+
+#: ../inc/core/class.data.php:1407
+msgid "Slider"
+msgstr "Slider"
+
+#: ../inc/core/class.data.php:1414
+msgid "Choose source gallery, that will be used for this slider"
+msgstr "Επιλέξτε τη γκαλερί που θα χρησιμοποιηθεί σε αυτό το slider"
+
+#: ../inc/core/class.data.php:1422
+msgid "Slider width (in pixels)"
+msgstr "Πλάτος slider (σε pixels)"
+
+#: ../inc/core/class.data.php:1430
+msgid "Slider height (in pixels)"
+msgstr "Ycow slider (σε pixels)"
+
+#: ../inc/core/class.data.php:1436
+msgid "Ignore width and height parameters and make slider responsive"
+msgstr ""
+"Αγνόηση των παραμέτρων πλάτους και ύψους, και αυτόματη ανταπόκριση του slider"
+
+#: ../inc/core/class.data.php:1441 ../inc/core/class.data.php:1547
+#: ../inc/core/class.data.php:1636
+msgid "Show titles"
+msgstr "Προβολή τίτλων"
+
+#: ../inc/core/class.data.php:1441
+msgid "Display slide titles"
+msgstr "Προβολή των τίτλων του slide"
+
+#: ../inc/core/class.data.php:1446
+msgid "Is slider centered on the page"
+msgstr "Είναι το slider κεντραρισμένο στην σελίδα"
+
+#: ../inc/core/class.data.php:1451 ../inc/core/class.data.php:1557
+msgid "Arrows"
+msgstr "Βέλη"
+
+#: ../inc/core/class.data.php:1451 ../inc/core/class.data.php:1557
+msgid "Show left and right arrows"
+msgstr "Προβολή αριστερού και δεξιού βέλους"
+
+#: ../inc/core/class.data.php:1456 ../inc/core/class.data.php:1562
+msgid "Pagination"
+msgstr "Σελιδοποίηση"
+
+#: ../inc/core/class.data.php:1457 ../inc/core/class.data.php:1563
+msgid "Show pagination"
+msgstr "Προβολή σελιδοποίησης"
+
+#: ../inc/core/class.data.php:1461 ../inc/core/class.data.php:1567
+msgid "Mouse wheel control"
+msgstr "Έλεγχος ρόδας ποντικιού"
+
+#: ../inc/core/class.data.php:1462
+msgid "Allow to change slides with mouse wheel"
+msgstr "Επιτρέψτε την αλλαγή των slides με την ρόδα του ποντικιού"
+
+#: ../inc/core/class.data.php:1471
+msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
+msgstr ""
+"Επιλέξτε το χρονικό διάστημα μεταξύ των κινούμενων εικόνων του slide. Ορίστε "
+"σε 0 για απενεργοποίηση την αυτόματης αναπαραγωγής"
+
+#: ../inc/core/class.data.php:1479 ../inc/core/class.data.php:1585
+msgid "Speed"
+msgstr "Ταχύτητα"
+
+#: ../inc/core/class.data.php:1479 ../inc/core/class.data.php:1585
+msgid "Specify animation speed"
+msgstr "Καθορίστε την ταχύτητα κίνησης"
+
+#: ../inc/core/class.data.php:1484 ../inc/core/class.data.php:1590
+#: ../inc/core/class.data.php:1642
+msgid "Links target"
+msgstr "Στόχος συνδέσμου"
+
+#: ../inc/core/class.data.php:1485
+msgid "Open slides links in new window/tab"
+msgstr "Άνοιγμα των συνδέσμων του slide σε νέο παράθυρο/νέα καρτέλα"
+
+#: ../inc/core/class.data.php:1493
+msgid "Customizable image slider"
+msgstr "Προσαρμοζόμενο slider εικόνων"
+
+#: ../inc/core/class.data.php:1497
+msgid "Carousel"
+msgstr "Carousel"
+
+#: ../inc/core/class.data.php:1504
+msgid "Choose source gallery, that will be used for this carousel"
+msgstr "Επιλέξτε τη γκαλερί που θα χρησιμοποιηθεί σε αυτό το carousel"
+
+#: ../inc/core/class.data.php:1512
+msgid "Carousel width (in pixels)"
+msgstr "Πλάτος Carousel (σε pixels)"
+
+#: ../inc/core/class.data.php:1520
+msgid "Carousel height (in pixels)"
+msgstr "Ύψος Carousel (σε pixels)"
+
+#: ../inc/core/class.data.php:1526
+msgid "Ignore width and height parameters and make carousel responsive"
+msgstr ""
+"Αγνόηση των παραμέτρων πλάτους και ύψους, και αυτόματη ανταπόκριση του "
+"carousel"
+
+#: ../inc/core/class.data.php:1533
+msgid "Items to show"
+msgstr "Αντικείμενα για προβολή"
+
+#: ../inc/core/class.data.php:1534
+msgid "How much carousel items is visible"
+msgstr "Πόσα αντικείμενα του Carousel θα προβάλονται"
+
+#: ../inc/core/class.data.php:1541
+msgid "Scroll number"
+msgstr "Αριθμός κύλισης"
+
+#: ../inc/core/class.data.php:1542
+msgid "How much items are scrolled in one transition"
+msgstr "Πόσα στοιχεία μετακυλίονται σε ένα μεταβατικό στάδιο"
+
+#: ../inc/core/class.data.php:1547
+msgid "Display titles for each item"
+msgstr "Προβολή τίτλων για κάθε αντικέιμενο"
+
+#: ../inc/core/class.data.php:1552
+msgid "Is carousel centered on the page"
+msgstr "Είναι το carousel κεντραρισμένο στην σελίδα"
+
+#: ../inc/core/class.data.php:1568
+msgid "Allow to rotate carousel with mouse wheel"
+msgstr "Να επιτρέπεται η περιστροφή του carousel με τη ρόδα του ποντικιού"
+
+#: ../inc/core/class.data.php:1577
+msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
+msgstr ""
+"Επιλέξτε το χρονικό διάστημα μεταξύ των αυτόματων κινούμενων εικόνων. Ορίστε "
+"σε 0 για απενεργοποίηση την αυτόματης αναπαραγωγής"
+
+#: ../inc/core/class.data.php:1591
+msgid "Open carousel links in new window/tab"
+msgstr "Άνοιγμα των συνδέσμων του carousel σε νέο παράθυρο/νέα καρτέλα"
+
+#: ../inc/core/class.data.php:1599
+msgid "Customizable image carousel"
+msgstr "Carousel προσαρμοζόμενης εικόνας"
+
+#: ../inc/core/class.data.php:1610
+msgid "Choose source gallery, that will be used for this shortcode"
+msgstr "Επιλέξτε τη γκαλερί που θα χρησιμοποιηθεί σε αυτό το shortcode"
+
+#: ../inc/core/class.data.php:1618
+msgid "Single item width (in pixels)"
+msgstr "Πλάτος ενιαίου αντικειμένου (σε pixels)"
+
+#: ../inc/core/class.data.php:1626
+msgid "Single item height (in pixels)"
+msgstr "Ύψος ενιαίου αντικειμένου (σε pixels)"
+
+#: ../inc/core/class.data.php:1631
+msgid "Never"
+msgstr "Ποτέ"
+
+#: ../inc/core/class.data.php:1632
+msgid "On mouse over"
+msgstr "Με το ποντίκι πάνω"
+
+#: ../inc/core/class.data.php:1633
+msgid "Always"
+msgstr "Πάντα"
+
+#: ../inc/core/class.data.php:1637
+msgid "Title display mode"
+msgstr "Τρόπος προβολής τίτλου"
+
+#: ../inc/core/class.data.php:1642
+msgid "Open links in new window/tab"
+msgstr "Άνοιγμα συνδέσμων σε νέο παράθυρο/νέα καρτέλα"
+
+#: ../inc/core/class.data.php:1650
+msgid "Customizable image gallery"
+msgstr "Προσαρμόσιμη γκαλερί εικόνων"
+
+#: ../inc/core/class.data.php:1654
+msgid "Posts"
+msgstr "Posts"
+
+#: ../inc/core/class.data.php:1659
+msgid "Template"
+msgstr "Πρότυπο"
+
+#: ../inc/core/class.data.php:1660
+msgid ""
+"<b>Do not change this field value if you do not understand description below."
+"</b><br/>Relative path to the template file. Default templates is placed "
+"under the plugin directory (templates folder). You can copy it under your "
+"theme directory and modify as you want. You can use following default "
+"templates that already available in the plugin directory:<br/><b"
+"%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/"
+"teaser-loop.php</b> - posts loop with thumbnail and title<br/><b"
+"%value>templates/single-post.php</b> - single post template<br/><b"
+"%value>templates/list-loop.php</b> - unordered list with posts titles"
+msgstr ""
+"<b>ΜΗΝ αλλάξετε την τιμή αυτού του πεδίου αν δεν καταλαβαίνετε την παρακάτω "
+"σημείωση.</b><br/>Σχετισμένη διεύθυνση με το πρότυπο αρχείο. Τα "
+"προκαθορισμένα πρότυπα είναι τοποθετημένα στον κατάλογο του πρόσθετου "
+"(φάκελος templates). Μπορείτε να τα αντιγράψετε στον κατάλογο του θέματός "
+"σας και να τα τροποποιήσετε όπως θέλετε. Μπορείτε να χρησιμοποιήσετε τα "
+"επόμενα προκαθορισμένα πρότυπα που είναι ήδη διαθέσιμα στον κατάλογο του "
+"πρόσθετου:<br/><b%value>templates/default-loop.php</b> - posts loop<br/><b"
+"%value>templates/teaser-loop.php</b> - posts loop with thumbnail and "
+"title<br/><b%value>templates/single-post.php</b> - single post template<br/"
+"><b%value>templates/list-loop.php</b> - unordered list with posts titles"
+
+#: ../inc/core/class.data.php:1664
+msgid "Post ID's"
+msgstr "ID δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:1665
+msgid "Enter comma separated ID's of the posts that you want to show"
+msgstr ""
+"Εισάγεται τις ID διαχωρισμένες με κόμμα, για τα δημοσιεύματα που θέλετε να "
+"προβάλλονται"
+
+#: ../inc/core/class.data.php:1673
+msgid "Posts per page"
+msgstr "Δημοσιεύματα ανά σελίδα"
+
+#: ../inc/core/class.data.php:1674
+msgid ""
+"Specify number of posts that you want to show. Enter -1 to get all posts"
+msgstr ""
+"Ορίστε των αριθμό των δημοσιεύσεων που θέλετε να προβάλονται. Εισάγεται -1 "
+"για να προβληθούν όλες οι δημοσιεύσεις"
+
+#: ../inc/core/class.data.php:1681
+msgid "Post types"
+msgstr "Τύπος δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:1682
+msgid "Select post types. Hold Ctrl key to select multiple post types"
+msgstr ""
+"Επιλέξτε τους τύπους των δημοσιευμάτων. Κρατήστε το πλήκτρο Ctrl για να "
+"επιλέξετε πολλαπλούς τύπους δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:1688
+msgid "Taxonomy"
+msgstr "Taxonomy"
+
+#: ../inc/core/class.data.php:1689
+msgid "Select taxonomy to show posts from"
+msgstr "Επιλέξτε taxonomy για την προβολή άρθρων"
+
+#: ../inc/core/class.data.php:1696
+msgid "Terms"
+msgstr "Όροι"
+
+#: ../inc/core/class.data.php:1696
+msgid "Select terms to show posts from"
+msgstr "Επιλογή όρων για την προβολή δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:1701
+msgid "Taxonomy term operator"
+msgstr "Taxonomy term operator"
+
+#: ../inc/core/class.data.php:1702
+msgid ""
+"IN - posts that have any of selected categories terms<br/>NOT IN - posts "
+"that is does not have any of selected terms<br/>AND - posts that have all "
+"selected terms"
+msgstr ""
+"IN - δημοσιεύματα που έχουν οποιονδήποτε όρο της επιλεγμένης κατηγορίας<br/"
+">NOT IN - δημοσιεύματα που δεν έχουν οποιονδήποτε όρο επιλεγμένο<br/>AND - "
+"δημοσιεύματα που έχουν όλους τους όρους επιλεγμένους"
+
+#: ../inc/core/class.data.php:1709
+msgid "Authors"
+msgstr "Συγγραφείς"
+
+#: ../inc/core/class.data.php:1710
+msgid "Choose the authors whose posts you want to show"
+msgstr ""
+"Επιλέξτε τους συγγραφείς των οποίων τα δημοσιεύματα θέλετε να προβάλλονται"
+
+#: ../inc/core/class.data.php:1714
+msgid "Meta key"
+msgstr "Κλειδιά μεταδεδομένων"
+
+#: ../inc/core/class.data.php:1715
+msgid "Enter meta key name to show posts that have this key"
+msgstr ""
+"Εισάγεται ονόματα κλειδιών μεταδεδομένων για να προβληθούν τα δημοσιεύματα "
+"που τα έχουν"
+
+#: ../inc/core/class.data.php:1722
+msgid "Offset"
+msgstr "Offset"
+
+#: ../inc/core/class.data.php:1723
+msgid "Specify offset to start posts loop not from first post"
+msgstr ""
+"Ορίστε offset για την έναρξη του κύκλου δημοσιευμάτων, όχι από το πρώτο "
+"δημοσίευμα"
+
+#: ../inc/core/class.data.php:1728
+msgid "Descending"
+msgstr "Φθίνουσα"
+
+#: ../inc/core/class.data.php:1729
+msgid "Ascending"
+msgstr "Αύξουσα"
+
+#: ../inc/core/class.data.php:1732
+msgid "Order"
+msgstr "Σειρά"
+
+#: ../inc/core/class.data.php:1733
+msgid "Posts order"
+msgstr "Σειρά δημοσιευμάτων"
+
+#: ../inc/core/class.data.php:1739
+msgid "Post ID"
+msgstr "ID δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1740
+msgid "Post author"
+msgstr "Συγγραφέας δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1741
+msgid "Post title"
+msgstr "Τίτλος δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1742
+msgid "Post slug"
+msgstr "Slug δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1743
+msgid "Date"
+msgstr "Ημέρα"
+
+#: ../inc/core/class.data.php:1743
+msgid "Last modified date"
+msgstr "Ημέρα τελευταίας τροποποίησης"
+
+#: ../inc/core/class.data.php:1744 ../inc/core/class.data.php:1754
+msgid "Post parent"
+msgstr "Γονέας δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1745
+msgid "Random"
+msgstr "Τυχαίο"
+
+#: ../inc/core/class.data.php:1745
+msgid "Comments number"
+msgstr "Αριθμός σχόλιων"
+
+#: ../inc/core/class.data.php:1746
+msgid "Menu order"
+msgstr "Σειρά μενού"
+
+#: ../inc/core/class.data.php:1746
+msgid "Meta key values"
+msgstr "Τιμές κλειδιών μεταδεδομένων"
+
+#: ../inc/core/class.data.php:1749
+msgid "Order by"
+msgstr "Ταξινόμηση κατά"
+
+#: ../inc/core/class.data.php:1750
+msgid "Order posts by"
+msgstr "Ταξινόμηση δημοσιευμάτων κατά"
+
+#: ../inc/core/class.data.php:1755
+msgid "Show childrens of entered post (enter post ID)"
+msgstr ""
+"Προβολή υποδημοσιευμάτων για τα δημοσιεύματα που έχετε εισάγει (εισάγεται ID "
+"δημοσιεύματος)"
+
+#: ../inc/core/class.data.php:1760
+msgid "Published"
+msgstr "Δημοσιευμένα"
+
+#: ../inc/core/class.data.php:1761
+msgid "Pending"
+msgstr "Εν αναμονή"
+
+#: ../inc/core/class.data.php:1762
+msgid "Draft"
+msgstr "Προσχέδιο"
+
+#: ../inc/core/class.data.php:1763
+msgid "Auto-draft"
+msgstr "Αυτόματο προσχέδιο"
+
+#: ../inc/core/class.data.php:1764
+msgid "Future post"
+msgstr "Μελλοντικό δημοσίευμα"
+
+#: ../inc/core/class.data.php:1765
+msgid "Private post"
+msgstr "Ιδιωτικό δημοσίευμα"
+
+#: ../inc/core/class.data.php:1766
+msgid "Inherit"
+msgstr "Κληρονομημένο"
+
+#: ../inc/core/class.data.php:1767
+msgid "Trashed"
+msgstr "Διεγραμμένο"
+
+#: ../inc/core/class.data.php:1768
+msgid "Any"
+msgstr "Οποιοδήποτε"
+
+#: ../inc/core/class.data.php:1771
+msgid "Post status"
+msgstr "Κατάσταση δημοσιεύματος"
+
+#: ../inc/core/class.data.php:1772
+msgid "Show only posts with selected status"
+msgstr "Προβολή μόνο των δημοσιευμάτων με την επιλεγμένη κατάσταση"
+
+#: ../inc/core/class.data.php:1777
+msgid "Ignore sticky"
+msgstr "Παράβλεψη καρφιτσωμένων"
+
+#: ../inc/core/class.data.php:1778
+msgid "Select Yes to ignore posts that is sticked"
+msgstr "Επιλέξτε Ναι για να παραβλέψετε τα καρφιτσωμένα δημοσιεύματα"
+
+#: ../inc/core/class.data.php:1782
+msgid "Custom posts query with customizable template"
+msgstr "Προσαρμοσμένο ερώτημα δημοσιευμάτων με προσαρμοζόμενο πρότυπο"
+
+#: ../inc/core/class.generator.php:44 ../inc/core/class.generator.php:147
+msgid "Insert shortcode"
+msgstr "Εισαγωγή shortcode"
+
+#: ../inc/core/class.generator.php:88
+msgid "Plugin settings"
+msgstr "Ρυθμίσεις πρόσθετου"
+
+#: ../inc/core/class.generator.php:89
+msgid "Plugin homepage"
+msgstr "Σελίδα πρόσθετου"
+
+#: ../inc/core/class.generator.php:90
+msgid "Support forums"
+msgstr "Forum υποστήριξης"
+
+#: ../inc/core/class.generator.php:97
+msgid "Search for shortcodes"
+msgstr "Αναζήτηση για shortcodes"
+
+#: ../inc/core/class.generator.php:99
+msgid "Filter by type"
+msgstr "Κατηγοριοποίηση κατά τύπο"
+
+#: ../inc/core/class.generator.php:135
+msgid "Shortcode not specified"
+msgstr "Δεν καθορίστικε shortcode"
+
+#: ../inc/core/class.generator.php:148
+msgid "Live preview"
+msgstr "Ζωντανή προεπισκόπηση"
+
+#: ../inc/core/class.generator.php:149
+msgid "Close window"
+msgstr "Κλείσιμο παραθύρου"
+
+#: ../inc/core/class.generator.php:153
+msgid "Click to return to the shortcodes list"
+msgstr "Πατήστε εδώ για να επιστρέψετε στην λίστα των shortcode"
+
+#: ../inc/core/class.generator.php:153
+msgid "All shortcodes"
+msgstr "Όλα τα shortcodes"
+
+#: ../inc/core/class.generator.php:186
+msgid "Yes"
+msgstr "Ναι"
+
+#: ../inc/core/class.generator.php:186
+msgid "No"
+msgstr "Όχι"
+
+#: ../inc/core/class.generator.php:190 ../inc/views/galleries.php:28
+#: ../inc/views/galleries.php:83
+msgid "Max upload file size"
+msgstr "Μέγιστο μέγεθος μεταφόρτωσης αρχείου"
+
+#: ../inc/core/class.generator.php:190 ../inc/views/galleries.php:28
+#: ../inc/views/galleries.php:83
+msgid "Mb"
+msgstr "Mb"
+
+#: ../inc/core/class.generator.php:190 ../inc/views/galleries.php:28
+#: ../inc/views/galleries.php:83
+msgid "How to increase"
+msgstr "Πώς να το αυξήσετε"
+
+#: ../inc/core/class.generator.php:201
+msgid "Please wait"
+msgstr "Παρακαλώ περιμένετε"
+
+#: ../inc/core/class.generator.php:208 ../inc/core/class.generator.php:296
+msgid "Untitled gallery"
+msgstr "Γκαλερί χωρίς τίτλο"
+
+#: ../inc/core/class.generator.php:214 ../inc/core/class.generator.php:302
+#: ../inc/views/galleries.php:64
+msgid "Galleries not found"
+msgstr "Δεν βρέθηκαν γκαλερί"
+
+#: ../inc/core/class.generator.php:215
+msgid "Manage galleries"
+msgstr "Διαχείριση γκαλερί"
+
+#: ../inc/core/class.generator.php:215
+msgid "Reload galleries"
+msgstr "Επαναφόρτωση των γκαλερί"
+
+#: ../inc/core/class.generator.php:226
+msgid "Click to set this value"
+msgstr "Κάντε κλικ για να ορίσετε αυτήν την τιμή"
+
+#: ../inc/core/class.generator.php:250
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: ../inc/core/class.generator.php:311
+msgid "Access denied"
+msgstr "Άρνηση πρόσβασης"
+
+#: ../inc/core/class.requirements.php:35
+#, php-format
+msgid ""
+"<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
+"fully compatible with your version of WordPress (%s).<br />Reccomended "
+"WordPress version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to "
+"the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</"
+"a>"
+msgstr ""
+"<h1>Ωπ! Το Πρόσθετο δεν ενεργοποιήθηκε&hellip;</h1> <p>Το Shortcodes "
+"Ultimate δεν είναι πλήρως συμβατό με την έκδοση του WordPress (%s).<br />Η "
+"προτεινόμενη έκδοση του WordPress είναι &ndash; %s (ή μεγαλύτερη).</p><a "
+"href=\"%s\">&larr; Επιστροφή στην οθόνη των πρόσθετων</a> <a href=\"%s"
+"\"%s>Συνέχεια και ενεργοποίηση οπωσδήποτε &rarr;</a>"
+
+#: ../inc/core/class.requirements.php:36
+#, php-format
+msgid ""
+"<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not "
+"fully compatible with your PHP version (%s).<br />Reccomended PHP version "
+"&ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins "
+"screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+msgstr ""
+"<h1>Ωπ! Το Πρόσθετο δεν ενεργοποιήθηκε&hellip;</h1> <p>Το Shortcodes "
+"Ultimate δεν είναι πλήρως συμβατό με την έκδοση της PHP (%s).<br />Η "
+"προτεινόμενη έκδοση της PHP είναι &ndash; %s (ή μεγαλύτερη).</p><a href=\"%s"
+"\">&larr; Return to the plugins screen</a> <a href=\"%s\"%s>Continue and "
+"activate anyway &rarr;</a>"
+
+#: ../inc/core/class.shortcodes-ultimate.php:25
+#: ../inc/core/class.widget.php:40 ../inc/core/class.widget.php:82
+msgid "Shortcodes Ultimate"
+msgstr "Shortcodes Ultimate"
+
+#: ../inc/core/class.shortcodes-ultimate.php:26 ../inc/core/class.vote.php:37
+msgid "Vladimir Anokhin"
+msgstr "Vladimir Anokhin"
+
+#: ../inc/core/class.shortcodes-ultimate.php:27
+msgid "Supercharge your WordPress theme with mega pack of shortcodes"
+msgstr "Εμπλουτίστε το WordPess θέμα σας με ένα μεγάλο πακέτο από shortcodes"
+
+#: ../inc/core/class.shortcodes-ultimate.php:88
+msgid "Where to start?"
+msgstr "Από που να ξεκινήσω;"
+
+#: ../inc/core/class.shortcodes-ultimate.php:100 ../inc/views/about.php:4
+msgid "Project homepage"
+msgstr "Iστοσελίδα του πρόσθετου"
+
+#: ../inc/core/class.shortcodes-ultimate.php:101 ../inc/views/about.php:10
+msgid "Support forum"
+msgstr "Forum υποστήριξης"
+
+#: ../inc/core/class.shortcodes-ultimate.php:102 ../inc/views/about.php:12
+msgid "Changelog"
+msgstr "Αρχείο καταγραφής αλλαγών"
+
+#: ../inc/core/class.shortcodes-ultimate.php:112
+msgid "About"
+msgstr "Σχετικά με"
+
+#: ../inc/core/class.shortcodes-ultimate.php:117
+msgid "Custom formatting"
+msgstr "Προσαρμοσμένη μορφοποίηση"
+
+#: ../inc/core/class.shortcodes-ultimate.php:118
+msgid ""
+"Disable this option if you have some problems with other plugins or content "
+"formatting"
+msgstr ""
+"Απενεργοποιήστε αυτή την επιλογή αν έχετε προβλήματα με άλλα πρόσθετα ή με "
+"την μορφοποίηση του περιεχομένου"
+
+#: ../inc/core/class.shortcodes-ultimate.php:118
+#: ../inc/core/class.shortcodes-ultimate.php:126
+msgid "Documentation article"
+msgstr "Άρθρο τεκμηρίωσης"
+
+#: ../inc/core/class.shortcodes-ultimate.php:122
+#: ../inc/core/class.shortcodes-ultimate.php:130
+#: ../inc/core/class.shortcodes-ultimate.php:138
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: ../inc/core/class.shortcodes-ultimate.php:125
+msgid "Compatibility mode"
+msgstr "Λειτουργία συμβατότητας"
+
+#: ../inc/core/class.shortcodes-ultimate.php:126
+msgid ""
+"Enable this option if you have some problems with other plugins that uses "
+"similar shortcode names"
+msgstr ""
+"Ενεργοποιήστε αυτή την επιλογή, αν έχετε προβλήματα με άλλα πρόσθετα που "
+"χρησιμοποιούν παρόμοια ονόματα στα shortcode"
+
+#: ../inc/core/class.shortcodes-ultimate.php:126
+msgid "etc."
+msgstr "κτλ"
+
+#: ../inc/core/class.shortcodes-ultimate.php:133
+msgid "Skip default values"
+msgstr "Παράληψη προεπιλεγμένων τιμών"
+
+#: ../inc/core/class.shortcodes-ultimate.php:134
+msgid ""
+"Enable this option and the generator will insert a shortcode without default "
+"attribute values that you have not changed. As a result, the generated code "
+"will be shorter."
+msgstr ""
+"Ενεργοποιήστε αυτή την επιλογή και θα δημιουργείται shortcode χωρίς "
+"προεπιλεγμένες τιμές παραμέτρων που δεν έχετε αλλάξει. Σαν αποτέλεσμα, ο "
+"παραγόμενος κώδικας θα είναι μικρότερος."
+
+#: ../inc/core/class.shortcodes-ultimate.php:141
+msgid "Skin"
+msgstr "Θέμα"
+
+#: ../inc/core/class.shortcodes-ultimate.php:142
+#, php-format
+msgid ""
+"Choose skin for shortcodes.<br /><a href=\"%s\" target=\"_blank\">Learn how "
+"to create custom skin</a><br /><a href=\"%s\" target=\"_blank\"><b>Download "
+"more skins</b></a>"
+msgstr ""
+"Επιλέξτε ένα θέμα για τα shortcodes σας.<br /><a href=\"%s\" target=\"_blank"
+"\">Μάθετε πως να δημιουργείτε νέα θέματα</a><br /><a href=\"%s\" target="
+"\"_blank\"><b>Μεταφορτώστε περισσότερα θέματα</b></a>"
+
+#: ../inc/core/class.shortcodes-ultimate.php:148
+msgid "Custom CSS"
+msgstr "Προσαρμοσμένο CSS"
+
+#: ../inc/core/class.shortcodes-ultimate.php:151
+msgid "Galleries"
+msgstr "Γκαλερί"
+
+#: ../inc/core/class.shortcodes-ultimate.php:154
+msgid "Cheatsheet"
+msgstr "Αρχείο Cheatsheet"
+
+#: ../inc/core/class.vote.php:39
+msgid ""
+"Hello, my name is Vladimir Anokhin, and I am developer of plugin "
+"<b>Shortcodes Ultimate</b>.<br>If you like this plugin, please write a few "
+"words about it at the wordpress.org or twitter. It will help other people "
+"find this useful plugin more quickly.<br><b>Thank you!</b>"
+msgstr ""
+"Γεια σας, το όνομά μου είναι Vladimir Anokhin, και είμαι ο προγραμματιστής "
+"του πρόσθετού <b>Shortcodes Ultimate</b>.<br>Εάν σας αρέσει αυτό το "
+"πρόσθετο, παρακαλώ γράψτε μερικές καλές κουβέντες στο wordpress.org ή στο "
+"twitter. Αυτό θα βοηθήσει και άλλους ανθρώπους να βρούνε αυτό το χρήσιμο "
+"πρόσθετο πιο γρήγορα.<br><b>Ευχαριστώ πολύ!</b>"
+
+#: ../inc/core/class.vote.php:41
+msgid "Rate plugin"
+msgstr "Βαθμολογήστε το πρόσθετο"
+
+#: ../inc/core/class.vote.php:42
+msgid "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
+msgstr ""
+"Shortcodes Ultimate - ένα πρόσθετο του WordPress που όλοι πρέπει να έχουν "
+"#shortcodesultimate"
+
+#: ../inc/core/class.vote.php:42
+msgid "Tweet"
+msgstr "Tweet"
+
+#: ../inc/core/class.vote.php:43
+msgid "No, thanks"
+msgstr "Όχι ευχαριστώ"
+
+#: ../inc/core/class.vote.php:44
+msgid "or"
+msgstr "ή"
+
+#: ../inc/core/class.vote.php:45
+msgid "Remind me later"
+msgstr "Υπενθύμιση αργότερα"
+
+#: ../inc/core/class.widget.php:36
+msgid "Special Shortcodes Ultimate widget"
+msgstr "Ειδικό widget για το Shortcodes Ultimate"
+
+#: ../inc/core/class.widget.php:87
+msgid "Title:"
+msgstr "Τίτλος:"
+
+#: ../inc/core/shortcodes.php:483
+msgid "This is box title"
+msgstr "Αυτός είναι τίτλος πλαισίου"
+
+#: ../inc/core/shortcodes.php:663 ../inc/core/shortcodes.php:696
+#: ../inc/core/shortcodes.php:730 ../inc/core/shortcodes.php:764
+#: ../inc/core/shortcodes.php:804
+msgid "please specify correct url"
+msgstr "παρακαλώ να διευκρινίστε σωστή διεύθυνση"
+
+#: ../inc/core/shortcodes.php:1006
+msgid "This menu doesn't exists, or has no elements"
+msgstr "Αυτό το μενού δεν υπάρχει ή δεν έχει στοιχεία"
+
+#: ../inc/core/shortcodes.php:1094 ../inc/core/shortcodes.php:1180
+#: ../inc/core/shortcodes.php:1249
+msgid "images not found"
+msgstr "δεν βρέθηκαν εικόνες"
+
+#: ../inc/core/shortcodes.php:1447
+msgid "template not found"
+msgstr "δεν βρέθηκε πρότυπο"
+
+#: ../inc/core/tools.php:234
+msgid "year"
+msgstr "έτος"
+
+#: ../inc/core/tools.php:235
+msgid "month"
+msgstr "μήνας"
+
+#: ../inc/core/tools.php:236
+msgid "week"
+msgstr "εβδομάδα"
+
+#: ../inc/core/tools.php:237
+msgid "day"
+msgstr "ημέρα"
+
+#: ../inc/core/tools.php:238
+msgid "hour"
+msgstr "ώρα"
+
+#: ../inc/core/tools.php:239
+msgid "minute"
+msgstr "λεπτό"
+
+#: ../inc/core/tools.php:248 ../inc/core/tools.php:255
+msgid "s"
+msgstr "s"
+
+#: ../inc/core/tools.php:291
+msgid "username not specified"
+msgstr "Τό όνομα χρήστη δεν προσδιορίστηκε"
+
+#: ../inc/core/tools.php:296
+msgid "no public messages"
+msgstr "κανένα δημόσιο μήνυμα"
+
+#: ../inc/views/about.php:2
+msgid "Welcome to Shortcodes Ultimate"
+msgstr "Καλώς ορίσατε στο Shortcodes Ultimate"
+
+#: ../inc/views/about.php:2
+msgid "A real swiss army knife for WordPress"
+msgstr "Ένας ελβετικός σουγιάς για το WordPress"
+
+#: ../inc/views/about.php:6
+msgid "Addons"
+msgstr "Πρόσθετα"
+
+#: ../inc/views/about.php:8
+msgid "Documentation"
+msgstr "Τεκμηρίωση"
+
+#: ../inc/views/about.php:14
+msgid "GitHub"
+msgstr "GitHub"
+
+#: ../inc/views/about.php:16
+msgid "Contact author"
+msgstr "Επικοινωνήστε με τον συντάκτη"
+
+#: ../inc/views/about.php:19
+msgid "Plugin features"
+msgstr "Χαρακτηριστικά πρόσθετου"
+
+#: ../inc/views/about.php:21
+msgid "40+ amazing shortcodes"
+msgstr "40+ καταπληκτικά shortcodes"
+
+#: ../inc/views/about.php:22
+msgid "Power of CSS3 transitions"
+msgstr "Ενδυναμωμένο με μεταβάσεις του CSS3"
+
+#: ../inc/views/about.php:23
+msgid "Handy shortcodes generator"
+msgstr "Εύχρηστη παραγωγή των shortcode"
+
+#: ../inc/views/about.php:24
+msgid "International"
+msgstr "Διεθνοποιημένο"
+
+#: ../inc/views/about.php:25
+msgid "Documented API"
+msgstr "Τεκμηριωμένο API"
+
+#: ../inc/views/about.php:29
+msgid "What is a shortcode?"
+msgstr "Τι είναι τα shortcodes;"
+
+#: ../inc/views/about.php:30
+msgid ""
+"<strong>Shortcode</strong> is a WordPress-specific code that lets you do "
+"nifty things with very little effort."
+msgstr ""
+"<strong>Τα Shortcode</strong> είναι ένας συγκεκριμένος κώδικας για το "
+"WordPress, που σας επιτρέπει να δημιουργείτε κομψά αντικείμενα με πολύ λίγη "
+"προσπάθεια."
+
+#: ../inc/views/about.php:31
+msgid ""
+"Shortcodes can embed files or create objects that would normally require "
+"lots of complicated, ugly code in just one line. Shortcode = shortcut."
+msgstr ""
+"Τα Shortcodes μπορούν να  ενσωματώσουν αρχεία ή να δημιουργήσουν αντικείμενα "
+"με μία γραμμή, που κανονικά θα χρειαζόταν αρκετά περίπλοκο κώδικα. Shortcode "
+"= Συντόμευση."
+
+#: ../inc/views/about.php:35
+msgid "How does it works"
+msgstr "Πως λειτουργούνε"
+
+#: ../inc/views/about.php:39
+msgid "More videos"
+msgstr "Περισσότερα βίντεο"
+
+#: ../inc/views/about.php:41
+msgid "Shortcodes Ultimate Tutorial"
+msgstr "Εκμάθηση του Shortcodes Ultimate"
+
+#: ../inc/views/about.php:42
+msgid "How to use special widget"
+msgstr "Πως να χρησιμοποιείται συγκεκριμένα widget"
+
+#: ../inc/views/about.php:43
+msgid "How to create Carousel"
+msgstr "Πώς να δημιουργήσετε Carousel"
+
+#: ../inc/views/about.php:44
+msgid "How to create image gallery"
+msgstr "Πώς να δημιουργήσετε γκαλερί εικόνων"
+
+#: ../inc/views/cheatsheet.php:5
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: ../inc/views/cheatsheet.php:6
+msgid "Parameters"
+msgstr "Παράμετροι"
+
+#: ../inc/views/cheatsheet.php:7
+msgid "Example"
+msgstr "Παράδειγμα"
+
+#: ../inc/views/cheatsheet.php:17
+msgid "Demo"
+msgstr "Επίδειξη"
+
+#: ../inc/views/cheatsheet.php:49
+msgid "Default value"
+msgstr "Προκαθορισμένη τιμή"
+
+#: ../inc/views/cheatsheet.php:55
+msgid "-- no parameters --"
+msgstr "-- χωρίς παραμέτρους --"
+
+#: ../inc/views/closetab.php:4
+msgid "Save changes"
+msgstr "Αποθήκευση αλλαγών"
+
+#: ../inc/views/closetab.php:5
+msgid "Saving"
+msgstr "Αποθηκεύεται"
+
+#: ../inc/views/closetab.php:6
+msgid "Saved"
+msgstr "Αποθηκεύτηκε"
+
+#: ../inc/views/closetab.php:7
+msgid ""
+"This action will remove all your custom CSS, galleries and settings. Are you "
+"sure? This action cannot be undone!"
+msgstr ""
+"Αυτή η ενέργεια θα αφαιρέσει όλο τον προσαρμοσμένο CSS κώδικα, τις γκαλερί "
+"και τις ρυθμίσεις. Είστε σίγουροι; Αυτή η ενέργεια δεν μπορεί να αναιρεθεί!!!"
+
+#: ../inc/views/closetab.php:7
+msgid "Restore default settings"
+msgstr "Επαναφορά προκαθορισμένων ρυθμίσεων"
+
+#: ../inc/views/code.php:5
+msgid "Insert code"
+msgstr "Εισαγωγή κώδικα"
+
+#: ../inc/views/css.php:3
+msgid "You can see the original styles to override it"
+msgstr "Μπορείτε να δείτε το πρωτότυπο στυλ για να το παρακάμψετε"
+
+#: ../inc/views/css.php:17
+msgid "You can use next variables in your custom CSS"
+msgstr ""
+"Μπορείτε να χρησμοποιείσετε τις ακόλουθες μεταβλητές στο προσαρμοσμένο CSS"
+
+#: ../inc/views/css.php:18
+msgid "home url"
+msgstr "διεύθυνση αρχικής σελίδας"
+
+#: ../inc/views/css.php:19
+msgid "theme url"
+msgstr "διεύθυνση θέματος"
+
+#: ../inc/views/css.php:20
+msgid "plugin url"
+msgstr "διεύθυνση πρόσθετου"
+
+#: ../inc/views/galleries.php:2
+msgid ""
+"Are you sure that you want to delete this gallery? This action can't be "
+"undone!"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την γκαλερί; Αυτή η ενέργεια "
+"δεν μπορεί να αναιρεθεί!!!"
+
+#: ../inc/views/galleries.php:2
+msgid ""
+"Are you sure that you want to delete this image? This action can't be undone!"
+msgstr ""
+"Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή την εικόνα; Αυτή η ενέργεια δεν "
+"είναι αναστρέψιμη!!!"
+
+#: ../inc/views/galleries.php:4
+msgid "Create new gallery"
+msgstr "Δημιουργία νέας γκαλερί"
+
+#: ../inc/views/galleries.php:17 ../inc/views/galleries.php:72
+msgid "Enter gallery name"
+msgstr "Εισάγετε το όνομα της γκαλερί"
+
+#: ../inc/views/galleries.php:19 ../inc/views/galleries.php:74
+msgid "Edit gallery"
+msgstr "Επεξεργασία γκαλερί"
+
+#: ../inc/views/galleries.php:20 ../inc/views/galleries.php:75
+msgid "Save &amp; close"
+msgstr "Αποθήκευση &amp; κλείσιμο"
+
+#: ../inc/views/galleries.php:21 ../inc/views/galleries.php:50
+#: ../inc/views/galleries.php:76 ../inc/views/galleries.php:105
+msgid "Close"
+msgstr "Κλείσιμο"
+
+#: ../inc/views/galleries.php:22 ../inc/views/galleries.php:41
+#: ../inc/views/galleries.php:77 ../inc/views/galleries.php:96
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: ../inc/views/galleries.php:40 ../inc/views/galleries.php:95
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: ../inc/views/notifications.php:5
+msgid "Instructions"
+msgstr "Οδηγίες"
+
+#: ../inc/views/notifications.php:13 ../inc/views/notifications.php:21
+#: ../inc/views/notifications.php:29 ../inc/views/notifications.php:37
+msgid "Click to close"
+msgstr "Πατήστε για κλείσιμο"
+
+#: ../inc/views/settings.php:12
+msgid ""
+"For full functionality of this page it is reccomended to enable javascript."
+msgstr ""
+"Για την πλήρη ενεργοποίηση των χαρακτηριστικών αυτής της σελίδας, προτείνετε "
+"να ενεργοποιήσετε την javascript."
+
+#: ../inc/views/settings.php:14
+msgid "Settings reseted successfully"
+msgstr "Οι ρυθμίσεις επαναφέρθηκαν επιτυχώς"
+
+#: ../inc/views/settings.php:15
+msgid "There is already default settings"
+msgstr "Αυτές είναι ήδη οι προκαθορισμένες ρυθμίσεις"
+
+#: ../inc/views/settings.php:16
+msgid "Settings saved successfully"
+msgstr "Οι ρυθμίσεις αποθηκεύτηκαν επιτυχώς"
+
+#: ../inc/views/settings.php:17
+msgid "Settings not saved, because there is no changes"
+msgstr "Οι ρυθμίσεις δεν αποθηκεύτηκαν, διότι δεν υπάρχουν αλλαγές"
+
+#: ../inc/views/upload.php:7
+msgid "Upload"
+msgstr "Μεταφόρτωση"
+
+#: ../templates/default-loop.php:15 ../templates/single-post.php:18
+msgid "Posted"
+msgstr "Δημοσιεύτηκε"
+
+#: ../templates/default-loop.php:19 ../templates/single-post.php:18
+msgid "0 comments"
+msgstr "0 σχόλια"
+
+#: ../templates/default-loop.php:19 ../templates/single-post.php:18
+msgid "1 comment"
+msgstr "1 σχόλιο"
+
+#: ../templates/default-loop.php:19 ../templates/single-post.php:18
+msgid "%n comments"
+msgstr "%n σχόλια"
+
+#: ../templates/default-loop.php:27 ../templates/list-loop.php:18
+#: ../templates/single-post.php:30 ../templates/teaser-loop.php:22
+msgid "Posts not found"
+msgstr "Τα δημοσιεύματα δεν βρέθηκαν"
+
+#~ msgid "Boxes"
+#~ msgstr "Πλαίσια"
+
+#~ msgid "Welcome"
+#~ msgstr "Καλώς ορίσατε"
+
+#~ msgid "No image URL has been entered."
+#~ msgstr "Δεν έχει εισαχθεί καμία διεύθυνση εικόνας"
+
+#~ msgid "Failed to get $file_path information using \"@getimagesize\"."
+#~ msgstr ""
+#~ "Αποτυχία λήψης πληροφοριών $file_path χρησιμοποιώντας \"@getimagesize\"."
+
+#~ msgid "Resize path invalid (GIF)"
+#~ msgstr "Άκυρη διαδρομή αλλαγής μεγέθους (GIF)"
+
+#~ msgid "Resize path invalid (PNG)."
+#~ msgstr "Άκυρη διαδρομή αλλαγής μεγέθους (PNG)"
+
+#~ msgid "Resize path invalid (JPG)."
+#~ msgstr "Άκυρη διαδρομή αλλαγής μεγέθους (JPG)"
+
+#~ msgid "Failed to get $dest_file_name (resized image) info via @getimagesize"
+#~ msgstr ""
+#~ "Αποτυχία λήψης πληροφοριών $dest_file_name (αλλαγμένου μεγέθους εικόνας) "
+#~ "μέσω του \"@getimagesize\"."
+
+#~ msgid "Metro"
+#~ msgstr "Metro"
+
+#~ msgid "Thin"
+#~ msgstr "Λεπτό"
+
+#~ msgid "Choose heading style preset"
+#~ msgstr "Επιλέξτε προεπιλεγμένο στυλ κεφαλίδας"
+
+#~ msgid "Choose tabs style preset"
+#~ msgstr "Επιλέξτε το προκαθορισμένο στυλ των καρτελών"
+
+#~ msgid "Select spoiler style preset"
+#~ msgstr "Επιλογή προκαθορισμένου στυλ spoiler"
+
+#~ msgid "Select divider style preset"
+#~ msgstr "Επιλέξτε προκαθορισμένο στυλ divider"
+
+#~ msgid "Quote style preset"
+#~ msgstr "Προκαθορισμένο στυλ Quote"
+
+#~ msgid "Choose style preset for pullquote"
+#~ msgstr "Επιλέξτε προκαθορισμένο στυλ για pullquote"
+
+#~ msgid "Align to left"
+#~ msgstr "Αριστεή στοίχιση"
+
+#~ msgid "Style preset for the inner columns"
+#~ msgstr "Προκαθορισμένο στυλ για τις εσωτερικές στήλες"
+
+#~ msgid "Extra CSS class for button"
+#~ msgstr "Επιπλέον κλάση CSS για το κουμπί"
+
+#~ msgid "Hidden"
+#~ msgstr "Κρυφό"
+
+#~ msgid "Player style preset"
+#~ msgstr "Προκαθορισμένο στυλ player"
+
+#~ msgid "Minimal"
+#~ msgstr "Minimal"
+
+#~ msgid "Table style preset"
+#~ msgstr "Προκαθορισμένο στυλ πίνακα"
+
+#~ msgid "Add-ons"
+#~ msgstr "Πρόσθετα"
+
+#~ msgid "Toggle fullscreen"
+#~ msgstr "Αλλαγή σε πλήρη οθόνη"
+
+#~ msgid "Add image"
+#~ msgstr "Προσθήκη εικόνας"
