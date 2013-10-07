@@ -2,7 +2,7 @@
 /*
   Plugin Name: Shortcodes Ultimate
   Plugin URI: http://gndev.info/shortcodes-ultimate/
-  Version: 4.1.9
+  Version: 4.2.0
   Author: Vladimir Anokhin
   Author URI: http://gndev.info/
   Description: Supercharge your WordPress theme with mega pack of shortcodes
@@ -23,7 +23,7 @@ require_once 'inc/core/class.shortcodes-ultimate.php';
 require_once 'inc/core/class.assets.php';
 require_once 'inc/core/class.data.php';
 require_once 'inc/core/tools.php';
-require_once 'inc/core/shortcodes.php';
+require_once 'inc/core/class.shortcodes.php';
 require_once 'inc/core/class.generator.php';
 require_once 'inc/core/class.widget.php';
 require_once 'inc/core/class.vote.php';

@@ -16,14 +16,16 @@ class Shortcodes_Ultimate_Data {
 	 */
 	public static function register() {
 		// Loop through shortcodes
-		foreach ( ( array ) self::shortcodes() as $shortcode => $data ) {
-			// Prepare shortcode function name
-			$function = ( isset( $data['function'] ) ) ? $data['function'] : 'su_' . $shortcode . '_shortcode';
+		foreach ( ( array ) self::shortcodes() as $id => $data ) {
+			unset( $func );
+			if ( isset( $data['function'] ) ) $func = $data['function'];
+			elseif ( method_exists( 'Shortcodes_Ultimate_Shortcodes', $id ) ) $func = array( 'Shortcodes_Ultimate_Shortcodes', $id );
+			elseif ( method_exists( 'Shortcodes_Ultimate_Shortcodes', 'su_' . $id ) ) $func = array( 'Shortcodes_Ultimate_Shortcodes', 'su_' . $id );
 			// Register shortcode
-			add_shortcode( su_compatibility_mode_prefix() . $shortcode, $function );
+			if ( isset( $func ) ) add_shortcode( su_cmpt() . $id, $func );
 		}
-		// Register [media] manually
-		add_shortcode( su_compatibility_mode_prefix() . 'media', 'su_media_shortcode' );
+		// Register [media] manually // 3.x
+		add_shortcode( su_cmpt() . 'media', array( 'Shortcodes_Ultimate_Shortcodes', 'media' ) );
 	}
 
 	/**
@@ -77,7 +79,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[heading] Content [/heading]<br/>[heading size="5"] Content [/heading]', 'content' => __( 'Heading text', 'su' ),
-					'desc' => __( 'Styled heading', 'su' )
+					'desc' => __( 'Styled heading', 'su' ),
+					'icon' => 'icon-h-sign'
 				),
 				// tabs
 				'tabs' => array(
@@ -108,7 +111,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[tabs style="default"] [tab title="Tab name"] Tab content [/tab] [/tabs]',
 					'content' => __( "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]", 'su' ),
-					'desc' => __( 'Tabs container', 'su' )
+					'desc' => __( 'Tabs container', 'su' ),
+					'icon' => 'icon-list-alt'
 				),
 				// tab
 				'tab' => array(
@@ -135,7 +139,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[tabs] [tab title="Tab name"] Tab content [/tab] [/tabs]',
 					'content' => __( 'Tab content', 'su' ),
-					'desc' => __( 'Single tab', 'su' )
+					'desc' => __( 'Single tab', 'su' ),
+					'icon' => 'icon-list-alt'
 				),
 				// spoiler
 				'spoiler' => array(
@@ -170,7 +175,10 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[spoiler title="Spoiler title"] Hidden text [/spoiler]', 'content' => __( 'Hidden content', 'su' ), 'desc' => __( 'Spoiler with hidden content', 'su' )
+					'usage' => '[spoiler title="Spoiler title"] Hidden text [/spoiler]',
+					'content' => __( 'Hidden content', 'su' ),
+					'desc' => __( 'Spoiler with hidden content', 'su' ),
+					'icon' => 'icon-list-ul'
 				),
 				// accordion
 				'accordion' => array(
@@ -186,7 +194,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[accordion]<br/>[spoiler open="yes"] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[spoiler] content [/spoiler]<br/>[/accordion]',
 					'content' => __( "[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]", 'su' ),
-					'desc' => __( 'Accordion with spoilers', 'su' )
+					'desc' => __( 'Accordion with spoilers', 'su' ),
+					'icon' => 'icon-list'
 				),
 				// divider
 				'divider' => array(
@@ -212,7 +221,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[divider top="yes" text="Go to top"]',
-					'desc' => __( 'Content divider with optional TOP link', 'su' )
+					'desc' => __( 'Content divider with optional TOP link', 'su' ),
+					'icon' => 'icon-ellipsis-horizontal'
 				),
 				// spacer
 				'spacer' => array(
@@ -235,7 +245,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[spacer size="20"]',
-					'desc' => __( 'Empty space with adjustable height', 'su' )
+					'desc' => __( 'Empty space with adjustable height', 'su' ),
+					'icon' => 'icon-resize-vertical'
 				),
 				// highlight
 				'highlight' => array(
@@ -263,7 +274,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[highlight background="#DDFF99" color="#000000"] Content [/highlight]', 'content' => __( 'Highlighted text', 'su' ),
-					'desc' => __( 'Highlighted text', 'su' )
+					'desc' => __( 'Highlighted text', 'su' ),
+					'icon' => 'icon-pencil'
 				),
 				// label
 				'label' => array(
@@ -292,7 +304,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[label type="info"] Information [/label]', 'content' => __( 'Label', 'su' ),
-					'desc' => __( 'Styled label', 'su' )
+					'desc' => __( 'Styled label', 'su' ),
+					'icon' => 'icon-tag'
 				),
 				// quote
 				'quote' => array(
@@ -319,7 +332,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[quote style="default"] Content [/quote]', 'content' => __( 'Quote', 'su' ),
-					'desc' => __( 'Blockquote alternative', 'su' )
+					'desc' => __( 'Blockquote alternative', 'su' ),
+					'icon' => 'icon-quote-right'
 				),
 				// pullquote
 				'pullquote' => array(
@@ -343,7 +357,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[pullquote align="left"] Content [/pullquote]', 'content' => __( 'Pullquote', 'su' ),
-					'desc' => __( 'Pullquote', 'su' )
+					'desc' => __( 'Pullquote', 'su' ),
+					'icon' => 'icon-quote-left'
 				),
 				// dropcap
 				'dropcap' => array(
@@ -374,7 +389,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[dropcap style="default"]D[/dropcap]ropcap', 'content' => __( 'D', 'su' ),
-					'desc' => __( 'Dropcap', 'su' )
+					'desc' => __( 'Dropcap', 'su' ),
+					'icon' => 'icon-bold'
 				),
 				// frame
 				'frame' => array(
@@ -401,7 +417,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[frame align="center"]<img src="image.jpg">[/frame]',
 					'content' => '<img src="http://lorempixel.com/g/400/200/" />',
-					'desc' => __( 'Styled image frame', 'su' )
+					'desc' => __( 'Styled image frame', 'su' ),
+					'icon' => 'icon-picture'
 				),
 				// row
 				'row' => array(
@@ -417,7 +434,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[row]<br/>[column size="1/2"] 50% [/column]<br/>[column size="1/4"] 25% [/column]<br/>[column size="1/4"] 25% [/column]<br/>[/row]',
 					'content' => __( "[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]", 'su' ),
-					'desc' => __( 'Row for flexible columns', 'su' )
+					'desc' => __( 'Row for flexible columns', 'su' ),
+					'icon' => 'icon-columns'
 				),
 				// column
 				'column' => array(
@@ -457,7 +475,10 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[row]<br/>[column size="6"] 50% [/column]<br/>[column size="3"] 25% [/column]<br/>[column size="3"] 25% [/column]<br/>[/row]', 'content' => __( 'Column content', 'su' ), 'desc' => __( 'Flexible and responsive columns', 'su' )
+					'usage' => '[row]<br/>[column size="6"] 50% [/column]<br/>[column size="3"] 25% [/column]<br/>[column size="3"] 25% [/column]<br/>[/row]',
+					'content' => __( 'Column content', 'su' ),
+					'desc' => __( 'Flexible and responsive columns', 'su' ),
+					'icon' => 'icon-columns'
 				),
 				// list
 				'list' => array(
@@ -494,7 +515,9 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[list style="check"] <ul> <li> List item </li> </ul> [/list]',
-					'content' => __( "<ul>\n<li>List item</li>\n<li>List item</li>\n<li>List item</li>\n</ul>", 'su' ), 'desc' => __( 'Styled unordered list', 'su' )
+					'content' => __( "<ul>\n<li>List item</li>\n<li>List item</li>\n<li>List item</li>\n</ul>", 'su' ),
+					'desc' => __( 'Styled unordered list', 'su' ),
+					'icon' => 'icon-list-ol'
 				),
 				// button
 				'button' => array(
@@ -608,8 +631,10 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[button url="#" background="#b00" size="3" style="default"] Button text [/button]', 'content' => __( 'Button text', 'su' ),
-					'desc' => __( 'Styled button', 'su' )
+					'usage' => '[button url="#" background="#b00" size="3" style="default"] Button text [/button]',
+					'content' => __( 'Button text', 'su' ),
+					'desc' => __( 'Styled button', 'su' ),
+					'icon' => 'icon-heart'
 				),
 				// service
 				'service' => array(
@@ -642,7 +667,10 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[service title="Service title" icon="service.png" size="32"] Service description [/service]', 'content' => __( 'Service description', 'su' ), 'desc' => __( 'Service box with title', 'su' )
+					'usage' => '[service title="Service title" icon="service.png" size="32"] Service description [/service]',
+					'content' => __( 'Service description', 'su' ),
+					'desc' => __( 'Service box with title', 'su' ),
+					'icon' => 'icon-check'
 				),
 				// box
 				'box' => array(
@@ -696,7 +724,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[box title="Box title"] Content [/box]',
 					'content' => __( 'Box content', 'su' ),
-					'desc' => __( 'Colored box with caption', 'su' )
+					'desc' => __( 'Colored box with caption', 'su' ),
+					'icon' => 'icon-list-alt'
 				),
 				// note
 				'note' => array(
@@ -730,7 +759,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[note background="#FFCC00"] Content [/note]', 'content' => __( 'Note text', 'su' ),
-					'desc' => __( 'Colored box', 'su' )
+					'desc' => __( 'Colored box', 'su' ),
+					'icon' => 'icon-list-alt'
 				),
 				// lightbox
 				'lightbox' => array(
@@ -762,7 +792,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[lightbox src="http://example.com/" type="iframe"] Open example.com [/lightbox]',
 					'content' => __( '[%prefix_button] Click Here to Watch the Video [/%prefix_button]', 'su' ),
-					'desc' => __( 'Lightbox window with custom content', 'su' )
+					'desc' => __( 'Lightbox window with custom content', 'su' ),
+					'icon' => 'icon-external-link'
 				),
 				// tooltip
 				'tooltip' => array(
@@ -864,7 +895,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[tooltip] Hover me [/lightbox]',
 					'content' => __( '[%prefix_button] Hover me to open tooltip [/%prefix_button]', 'su' ),
-					'desc' => __( 'Tooltip window with custom content', 'su' )
+					'desc' => __( 'Tooltip window with custom content', 'su' ),
+					'icon' => 'icon-comment-alt'
 				),
 				// private
 				'private' => array(
@@ -879,8 +911,9 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[private] Private content [/private]',
-					'content' => __( 'Private note text', 'su' ), 
-					'desc' => __( 'Private note for post authors', 'su' )
+					'content' => __( 'Private note text', 'su' ),
+					'desc' => __( 'Private note for post authors', 'su' ),
+					'icon' => 'icon-lock'
 				),
 				// youtube
 				'youtube' => array(
@@ -930,7 +963,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[youtube url="http://www.youtube.com/watch?v=NbE8INOjTKM"]', 'desc' => __( 'YouTube video', 'su' )
+					'usage' => '[youtube url="http://www.youtube.com/watch?v=NbE8INOjTKM"]',
+					'desc' => __( 'YouTube video', 'su' ),
+					'icon' => 'icon-youtube-play'
 				),
 				// vimeo
 				'vimeo' => array(
@@ -979,7 +1014,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[vimeo url="http://vimeo.com/21294655"]', 'desc' => __( 'Vimeo video', 'su' )
+					'usage' => '[vimeo url="http://vimeo.com/21294655"]',
+					'desc' => __( 'Vimeo video', 'su' ),
+					'icon' => 'icon-youtube-play'
 				),
 				// screenr
 				'screenr' => array(
@@ -1021,7 +1058,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[screenr url="http://www.screenr.com/OuWH"]', 'desc' => __( 'Screenr video', 'su' )
+					'usage' => '[screenr url="http://www.screenr.com/OuWH"]',
+					'desc' => __( 'Screenr video', 'su' ),
+					'icon' => 'icon-youtube-play'
 				),
 				// audio
 				'audio' => array(
@@ -1060,7 +1099,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[audio url="http://example.com/audio.mp3"]',
-					'desc' => __( 'Custom audio player', 'su' )
+					'desc' => __( 'Custom audio player', 'su' ),
+					'icon' => 'icon-play-circle'
 				),
 				// video
 				'video' => array(
@@ -1129,7 +1169,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[video url="http://example.com/video.mp4"]',
-					'desc' => __( 'Custom video player', 'su' )
+					'desc' => __( 'Custom video player', 'su' ),
+					'icon' => 'icon-play-circle'
 				),
 				// table
 				'table' => array(
@@ -1151,7 +1192,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[table style="default"] <table> ... </table> [/table]<br/>[table style="default" url="http://example.com/file.csv"] [/table]',
 					'content' => __( "<table>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n</table>", 'su' ),
-					'desc' => __( 'Styled table from HTML or CSV file', 'su' )
+					'desc' => __( 'Styled table from HTML or CSV file', 'su' ),
+					'icon' => 'icon-table'
 				),
 				// permalink
 				'permalink' => array(
@@ -1182,7 +1224,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[permalink id=52]<br/>[permalink id="52" target="blank"] Content [/permalink]',
 					'content' => '',
-					'desc' => __( 'Permalink to specified post/page', 'su' )
+					'desc' => __( 'Permalink to specified post/page', 'su' ),
+					'icon' => 'icon-link'
 				),
 				// members
 				'members' => array(
@@ -1215,7 +1258,8 @@ class Shortcodes_Ultimate_Data {
 					),
 					'usage' => '[members style="default"] Content for logged members [/members]',
 					'content' => __( 'Content for logged members', 'su' ),
-					'desc' => __( 'Content for logged in members only', 'su' )
+					'desc' => __( 'Content for logged in members only', 'su' ),
+					'icon' => 'icon-lock'
 				),
 				// guests
 				'guests' => array(
@@ -1229,7 +1273,10 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[guests] Content for guests [/guests]', 'content' => __( 'Content for guests', 'su' ), 'desc' => __( 'Content for guests only', 'su' )
+					'usage' => '[guests] Content for guests [/guests]',
+					'content' => __( 'Content for guests', 'su' ),
+					'desc' => __( 'Content for guests only', 'su' ),
+					'icon' => 'icon-user'
 				),
 				// feed
 				'feed' => array(
@@ -1254,7 +1301,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[feed url="http://rss1.smashingmagazine.com/feed/" limit="5"]', 'desc' => __( 'Feed grabber', 'su' )
+					'usage' => '[feed url="http://rss1.smashingmagazine.com/feed/" limit="5"]',
+					'desc' => __( 'Feed grabber', 'su' ),
+					'icon' => 'icon-rss'
 				),
 				// menu
 				'menu' => array(
@@ -1273,7 +1322,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[menu name="Main menu"]', 'desc' => __( 'Custom menu by name', 'su' )
+					'usage' => '[menu name="Main menu"]',
+					'desc' => __( 'Custom menu by name', 'su' ),
+					'icon' => 'icon-reorder'
 				),
 				// subpages
 				'subpages' => array(
@@ -1299,7 +1350,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[subpages]<br/>[subpages depth="2" p="122"]', 'desc' => __( 'List of sub pages', 'su' )
+					'usage' => '[subpages]<br/>[subpages depth="2" p="122"]',
+					'desc' => __( 'List of sub pages', 'su' ),
+					'icon' => 'icon-reorder'
 				),
 				// siblings
 				'siblings' => array(
@@ -1319,7 +1372,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[siblings]<br/>[siblings depth="2"]', 'desc' => __( 'List of cureent page siblings', 'su' )
+					'usage' => '[siblings]<br/>[siblings depth="2"]',
+					'desc' => __( 'List of cureent page siblings', 'su' ),
+					'icon' => 'icon-reorder'
 				),
 				// document
 				'document' => array(
@@ -1363,7 +1418,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[document url="file.doc" width="600" height="400"]', 'desc' => __( 'Document viewer by Google', 'su' )
+					'usage' => '[document url="file.doc" width="600" height="400"]',
+					'desc' => __( 'Document viewer by Google', 'su' ),
+					'icon' => 'icon-file-text'
 				),
 				// gmap
 				'gmap' => array(
@@ -1407,7 +1464,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[gmap width="600" height="400" address="New York"]', 'desc' => __( 'Maps by Google', 'su' )
+					'usage' => '[gmap width="600" height="400" address="New York"]',
+					'desc' => __( 'Maps by Google', 'su' ),
+					'icon' => 'icon-globe'
 				),
 				// slider
 				'slider' => array(
@@ -1497,7 +1556,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[slider gallery="1"]', 'desc' => __( 'Customizable image slider', 'su' )
+					'usage' => '[slider gallery="1"]',
+					'desc' => __( 'Customizable image slider', 'su' ),
+					'icon' => 'icon-picture'
 				),
 				// carousel
 				'carousel' => array(
@@ -1603,7 +1664,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[carousel gallery="1"]', 'desc' => __( 'Customizable image carousel', 'su' )
+					'usage' => '[carousel gallery="1"]',
+					'desc' => __( 'Customizable image carousel', 'su' ),
+					'icon' => 'icon-picture'
 				),
 				// custom_gallery
 				'custom_gallery' => array(
@@ -1654,7 +1717,9 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Extra CSS class', 'su' )
 						)
 					),
-					'usage' => '[custom_gallery gallery="1"]', 'desc' => __( 'Customizable image gallery', 'su' )
+					'usage' => '[custom_gallery gallery="1"]',
+					'desc' => __( 'Customizable image gallery', 'su' ),
+					'icon' => 'icon-picture'
 				),
 				// posts
 				'posts' => array(
@@ -1786,7 +1851,8 @@ class Shortcodes_Ultimate_Data {
 						)
 					),
 					'usage' => '[posts template="templates/posts.php"]',
-					'desc' => __( 'Custom posts query with customizable template', 'su' )
+					'desc' => __( 'Custom posts query with customizable template', 'su' ),
+					'icon' => 'icon-th-list'
 				)
 			) );
 		// Return result

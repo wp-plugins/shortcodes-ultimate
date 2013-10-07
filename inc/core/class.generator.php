@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Class for managing shortcodes generator
+ * Shortcode Generator
  */
 class Shortcodes_Ultimate_Generator {
 
@@ -24,14 +23,6 @@ class Shortcodes_Ultimate_Generator {
 
 	/**
 	 * Generator button
-	 *
-	 * @param string  $target
-	 * @param unknown
-	 * @param string  $class
-	 * @param bool    $icon
-	 * @param bool    $echo
-	 *
-	 * @return string
 	 */
 	public static function button( $args = array() ) {
 		// Check access
@@ -43,7 +34,7 @@ class Shortcodes_Ultimate_Generator {
 				'target'    => 'content',
 				'text'      => __( 'Insert shortcode', 'su' ),
 				'class'     => 'button',
-				'icon'      => $shult->assets( 'images/generator', 'icon.png' ),
+				'icon'      => plugins_url( 'assets/images/generator/icon.png', SU_PLUGIN_FILE ),
 				'echo'      => true,
 				'shortcode' => false
 			) );
@@ -55,7 +46,7 @@ class Shortcodes_Ultimate_Generator {
 		add_action( 'wp_footer',    array( __CLASS__, 'popup' ) );
 		add_action( 'admin_footer', array( __CLASS__, 'popup' ) );
 		// Request assets
-		su_query_asset( 'css', array( 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
+		su_query_asset( 'css', array( 'farbtastic', 'qtip', 'magnific-popup', 'font-awesome', 'su-generator' ) );
 		su_query_asset( 'js', array( 'jquery', 'jquery-ui-widget', 'iframe-transport', 'fileupload', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
 		// Print/return result
 		if ( $args['echo'] ) echo $button;
@@ -63,7 +54,7 @@ class Shortcodes_Ultimate_Generator {
 	}
 
 	/**
-	 * Delete cache on plugin activation
+	 * Cache reset
 	 */
 	public static function reset() {
 		// Clear popup cache
@@ -77,6 +68,7 @@ class Shortcodes_Ultimate_Generator {
 	 * Generator popup form
 	 */
 	public static function popup() {
+		self::reset(); //////////////////////////////////////////////////////////////////////////////////////////
 		// Get cache
 		$output = get_transient( 'su/generator/popup' );
 		if ( $output ) echo $output;
@@ -103,8 +95,8 @@ class Shortcodes_Ultimate_Generator {
 						<?php
 			// Choices loop
 			foreach ( (array) Shortcodes_Ultimate_Data::shortcodes() as $name => $shortcode ) {
-				$icon = ( isset( $shortcode['icon'] ) ) ? $shortcode['icon'] : $shult->assets( 'images/icons', $name ) . '.png';
-				echo '<span data-shortcode="' . $name . '" title="' . esc_attr( $shortcode['desc'] ) . '" data-desc="' . esc_attr( $shortcode['desc'] ) . '" data-group="' . $shortcode['group'] . '"><img src="' . $icon . '" alt="" width="32" height="32" /><strong>' . $shortcode['name'] . '</strong></span>' . "\n";
+				$icon = ( isset( $shortcode['icon'] ) ) ? $shortcode['icon'] : '';
+				echo '<span data-shortcode="' . $name . '" title="' . esc_attr( $shortcode['desc'] ) . '" data-desc="' . esc_attr( $shortcode['desc'] ) . '" data-group="' . $shortcode['group'] . '">' . Shortcodes_Ultimate_Tools::icon( $icon ) . $shortcode['name'] . '</span>' . "\n";
 			}
 ?>
 					</div>

@@ -227,6 +227,13 @@ function su_compatibility_mode_prefix() {
 }
 
 /**
+ * Shortcut for su_compatibility_mode_prefix()
+ */
+function su_cmpt() {
+	return su_compatibility_mode_prefix();
+}
+
+/**
  * Tweet relative time (like: 5 seconds ago)
  */
 function su_rel_time( $original, $do_more = 0 ) {
@@ -718,6 +725,10 @@ class Shortcodes_Ultimate_Tools {
 	function __construct() {}
 	public static function decode_shortcode( $value ) {
 		return do_shortcode( str_replace( array( '{', '}' ), array( '[', ']' ), $value ) );
+	}
+
+	public static function icon( $src = 'icon-file' ) {
+		return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="' . $src . '"></i>';
 	}
 }
 

@@ -95,54 +95,40 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
-= 4.1.9 =
+= 4.2 =
+* Font Awesome icons (in Generator)
+* Fixed warning in footer - [forum topic](http://wordpress.org/support/topic/bug-showing-in-online-site-after-updating-the-plugin)
 * Removed warning at settings page - [forum topic](http://wordpress.org/support/topic/warning-on-settings-page)
 * Removed another warning (undefined index) - [forum topic](http://wordpress.org/support/topic/undefined-index-with-wp_debug-true)
 * Changed syntax for shortcodes inside of attributes - [documentation](http://gndev.info/kb/how-to-use-another-shortcodes-inside-of-attributes/)
 * Small performance improvemets
 * Aded font-awesome.css. Will be completely included in closest versions
-
-= 4.1.8 =
 * Added default taxonomy value for [posts]
 * Added default post_type value for [posts]
 * Added ability to use shortcodes inside of attributes
 * Translated into Japanese
-
-= 4.1.7 =
 * Fixed [button wide=yes]
 * Fixed media query for [column]
 * Added new attr [column center=yes]
 * Improved js code for spoilers and tabs
 * Improved js code for generator
-
-= 4.1.6 =
 * Added pot file
 * Fixed [button] css code
 * Updated [accordion], [spoiler] and [tabs] js code
 * Fixed [tooltip]
 * Updated Greek translation
-
-= 4.1.5 =
 * Fixed [lightbox]
 * Disabled wp_footer check
-
-= 4.1.4 =
 * Fixed wp_footer notice, again
-
-= 4.1.3 =
 * Small fix for tooltips
 * Fixed wp_footer notice
 * Greek translation
-
-= 4.1.2 =
 * Added compatibility mode prefix for spoilers inside of accordion
 * Updated qTip plugin
 * Added shortcode [tooltip]
 * Added new attribute. [tab disabled="yes"]. Now, any tab can be disabled. [Forum topic](http://wordpress.org/support/topic/tabs-how-to-disable-one-of-the-tabs)
 * Added [accordion] scrolling. [Forum topic](http://wordpress.org/support/topic/accordion-usability-issue)
 * Added wp_footer check. User will be noticed if current theme doen't includes wp_footer
-
-= 4.1.1 =
 * Updated caching mechanism. Cache will be reseted when you add or remove terms
 * Updated galleries mechanism. Removed some conflicts
 * Fixed spoiler background for style=fancy

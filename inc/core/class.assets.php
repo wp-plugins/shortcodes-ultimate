@@ -38,6 +38,8 @@ class Shortcodes_Ultimate_Assets {
 	public static function register() {
 		// Get plugin object
 		$shult = shortcodes_ultimate();
+		// Font Awesome
+		wp_register_style( 'font-awesome', $shult->assets( 'css', 'font-awesome.css' ), false, '3.2.1', 'all' );
 		// qTip
 		wp_register_style( 'qtip', $shult->assets( 'css', 'qtip.css' ), false, '2.1.1', 'all' );
 		wp_register_script( 'qtip', $shult->assets( 'js', 'qtip.js' ), array( 'jquery' ), '2.1.1', true );
@@ -112,7 +114,7 @@ class Shortcodes_Ultimate_Assets {
 	public static function custom_css() {
 		$shult = shortcodes_ultimate();
 		// Get custom CSS and apply filters to it
-		$custom_css = apply_filters( 'su/assets/custom_css', str_replace( '&#039;', '\'', html_entity_decode( $shult->get_option( 'custom_css' ) ) ) );
+		$custom_css = apply_filters( 'su/assets/custom_css', str_replace( '&#039;', '\'', html_entity_decode( (string) $shult->get_option( 'custom_css' ) ) ) );
 		// Print CSS if exists
 		if ( $custom_css ) echo "\n\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . stripslashes( str_replace( array( '%theme_url%', '%home_url%', '%plugin_url%' ), array( get_stylesheet_directory_uri(), get_option( 'home' ), $shult->url ), $custom_css ) ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
 	}
