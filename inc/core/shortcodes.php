@@ -66,13 +66,13 @@ function su_tabs_shortcode( $atts, $content ) {
  */
 function su_tab_shortcode( $atts, $content ) {
 	$atts = shortcode_atts( array(
-			'title'    => 'Tab %d',
+			'title'    => __( 'Tab title', 'su' ),
 			'disabled' => 'no',
 			'class'    => ''
 		), $atts );
 	$x = $GLOBALS['tab_count'];
 	$GLOBALS['tabs'][$x] = array(
-		'title' => sprintf( $atts['title'], $GLOBALS['tab_count'] ),
+		'title' => $atts['title'],
 		'content' => do_shortcode( $content ),
 		'disabled' => ( $atts['disabled'] === 'yes' ) ? ' su-tabs-disabled' : '',
 		'class' => $atts['class']
@@ -474,10 +474,9 @@ function su_button_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_service_shortcode( $atts, $content = null ) {
-	$shult = shortcodes_ultimate();
 	$atts = shortcode_atts( array(
 			'title' => __( 'Service title', 'su' ),
-			'icon'  => $shult->assets( 'images', 'service.png' ),
+			'icon'  => plugins_url( 'assets/images/service.png', SU_PLUGIN_FILE ),
 			'size'  => 32,
 			'class' => ''
 		), $atts );
@@ -763,8 +762,6 @@ function su_screenr_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_audio_shortcode( $atts, $content = null ) {
-	// Prepare data
-	$shult = shortcodes_ultimate();
 	$atts = shortcode_atts( array(
 			'url'      => 'http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3',
 			'width'    => 'auto',
@@ -786,7 +783,7 @@ function su_audio_shortcode( $atts, $content = null ) {
 	su_query_asset( 'js', 'su-players-shortcodes' );
 	su_query_asset( 'js', 'su-players-shortcodes' );
 	// Create player
-	return '<div class="su-audio' . su_ecssc( $atts ) . '" data-id="' . $id . '" data-audio="' . $atts['url'] . '" data-swf="' . $shult->assets( 'other', 'Jplayer.swf' ) . '" data-autoplay="' . $atts['autoplay'] . '" data-loop="' . $atts['loop'] . '" style="' . $width . '"><div id="' . $id . '" class="jp-jplayer"></div><div id="' . $id . '_container" class="jp-audio"><div class="jp-type-single"><div class="jp-gui jp-interface"><div class="jp-controls"><span class="jp-play"></span><span class="jp-pause"></span><span class="jp-stop"></span><span class="jp-mute"></span><span class="jp-unmute"></span><span class="jp-volume-max"></span></div><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div><div class="jp-current-time"></div><div class="jp-duration"></div></div><div class="jp-title">' . $atts['title'] . '</div></div></div></div>';
+	return '<div class="su-audio' . su_ecssc( $atts ) . '" data-id="' . $id . '" data-audio="' . $atts['url'] . '" data-swf="' . plugins_url( 'assets/other/Jplayer.swf', SU_PLUGIN_FILE ) . '" data-autoplay="' . $atts['autoplay'] . '" data-loop="' . $atts['loop'] . '" style="' . $width . '"><div id="' . $id . '" class="jp-jplayer"></div><div id="' . $id . '_container" class="jp-audio"><div class="jp-type-single"><div class="jp-gui jp-interface"><div class="jp-controls"><span class="jp-play"></span><span class="jp-pause"></span><span class="jp-stop"></span><span class="jp-mute"></span><span class="jp-unmute"></span><span class="jp-volume-max"></span></div><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div><div class="jp-current-time"></div><div class="jp-duration"></div></div><div class="jp-title">' . $atts['title'] . '</div></div></div></div>';
 }
 
 /**
@@ -798,8 +795,6 @@ function su_audio_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_video_shortcode( $atts, $content = null ) {
-	// Prepare data
-	$shult = shortcodes_ultimate();
 	$atts = shortcode_atts( array(
 			'url'      => 'http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v',
 			'poster'   => 'http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png',
@@ -823,7 +818,7 @@ function su_video_shortcode( $atts, $content = null ) {
 	su_query_asset( 'js', 'jplayer' );
 	su_query_asset( 'js', 'su-players-shortcodes' );
 	// Create player
-	return '<div style="width:' . $atts['width'] . 'px"><div id="' . $id . '" class="su-video jp-video su-video-controls-' . $atts['controls'] . su_ecssc( $atts ) . '" data-id="' . $id . '" data-video="' . $atts['url'] . '" data-swf="' . $shult->assets( 'other', 'Jplayer.swf' ) . '" data-autoplay="' . $atts['autoplay'] . '" data-loop="' . $atts['loop'] . '" data-poster="' . $atts['poster'] . '"><div id="' . $id . '_player" class="jp-jplayer" style="width:' . $atts['width'] . 'px;height:' . $atts['height'] . 'px"></div>' . $title . '<div class="jp-start jp-play"></div><div class="jp-gui"><div class="jp-interface"><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div><div class="jp-current-time"></div><div class="jp-duration"></div><div class="jp-controls-holder"><span class="jp-play"></span><span class="jp-pause"></span><span class="jp-mute"></span><span class="jp-unmute"></span><span class="jp-full-screen"></span><span class="jp-restore-screen"></span><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div></div></div></div></div></div>';
+	return '<div style="width:' . $atts['width'] . 'px"><div id="' . $id . '" class="su-video jp-video su-video-controls-' . $atts['controls'] . su_ecssc( $atts ) . '" data-id="' . $id . '" data-video="' . $atts['url'] . '" data-swf="' . plugins_url( 'assets/other/Jplayer.swf', SU_PLUGIN_FILE ) . '" data-autoplay="' . $atts['autoplay'] . '" data-loop="' . $atts['loop'] . '" data-poster="' . $atts['poster'] . '"><div id="' . $id . '_player" class="jp-jplayer" style="width:' . $atts['width'] . 'px;height:' . $atts['height'] . 'px"></div>' . $title . '<div class="jp-start jp-play"></div><div class="jp-gui"><div class="jp-interface"><div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div><div class="jp-current-time"></div><div class="jp-duration"></div><div class="jp-controls-holder"><span class="jp-play"></span><span class="jp-pause"></span><span class="jp-mute"></span><span class="jp-unmute"></span><span class="jp-full-screen"></span><span class="jp-restore-screen"></span><div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div></div></div></div></div></div>';
 }
 
 /**
@@ -1013,7 +1008,6 @@ function su_menu_shortcode( $atts, $content = null ) {
  * @return string Text message
  */
 function su_menu_shortcode_fb_cb() {
-	$shult = shortcodes_ultimate();
 	return __( 'This menu doesn\'t exists, or has no elements', 'su' );
 }
 
@@ -1297,8 +1291,6 @@ function su_custom_gallery_shortcode( $atts, $content = null ) {
  * @return string Output html
  */
 function su_posts_shortcode( $atts, $content = null ) {
-	// Get plugin object
-	$shult = shortcodes_ultimate();
 	// Prepare error var
 	$error = null;
 	// Parse attributes
@@ -1442,7 +1434,7 @@ function su_posts_shortcode( $atts, $content = null ) {
 	// Search for template in theme directory
 	elseif ( file_exists( TEMPLATEPATH . '/' . $atts['template'] ) ) load_template( TEMPLATEPATH . '/' . $atts['template'], false );
 	// Search for template in plugin directory
-	elseif ( path_join( dirname( $shult->file ), $atts['template'] ) ) load_template( path_join( dirname( $shult->file ), $atts['template'] ), false );
+	elseif ( path_join( dirname( SU_PLUGIN_FILE ), $atts['template'] ) ) load_template( path_join( dirname( SU_PLUGIN_FILE ), $atts['template'] ), false );
 	// Template not found
 	else echo '<p class="su-error">Posts: ' . __( 'template not found', 'su' ) . '</p>';
 	$output = ob_get_contents();

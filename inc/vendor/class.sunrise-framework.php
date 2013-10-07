@@ -154,7 +154,7 @@ if ( !class_exists( 'Sunrise_Plugin_Framework_2_1' ) ) {
 			// Get options from database
 			$options = get_option( $this->option );
 			// Check option is specified
-			$value = ( !empty( $option ) ) ? $options[$option] : $options;
+			$value = ( !empty( $option ) && isset( $options[$option] ) ) ? $options[$option] : $options;
 			// Return result
 			return ( is_array( $value ) ) ? array_filter( $value, 'esc_attr' ) : esc_attr( stripslashes( $value ) );
 		}

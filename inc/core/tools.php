@@ -717,7 +717,7 @@ add_action( 'delete_attachment', 'su_delete_resized_images' );
 class Shortcodes_Ultimate_Tools {
 	function __construct() {}
 	public static function decode_shortcode( $value ) {
-		return do_shortcode( str_replace( array( '%_', '_%' ), array( '[', ']' ), $value ) );
+		return do_shortcode( str_replace( array( '{', '}' ), array( '[', ']' ), $value ) );
 	}
 }
 

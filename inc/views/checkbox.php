@@ -1,6 +1,6 @@
 <?php
 	$triggable = ( isset( $option['triggable'] ) ) ? ' data-triggable="' . $option['triggable'] . '" class="sunrise-plugin-triggable hide-if-js"' : '';
-	$checked = ( $settings[$option['id']] == 'on' ) ? ' checked="checked"' : '';
+	$checked = ( isset( $settings[$option['id']] ) && $settings[$option['id']] == 'on' ) ? ' checked="checked"' : '';
 ?>
 <tr<?php echo $triggable; ?>>
 	<th scope="row"><label for="sunrise-plugin-field-<?php echo $option['id']; ?>"><?php echo $option['name']; ?></label></th>

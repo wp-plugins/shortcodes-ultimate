@@ -95,9 +95,16 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.1.9 =
+* Removed warning at settings page - [forum topic](http://wordpress.org/support/topic/warning-on-settings-page)
+* Removed another warning (undefined index) - [forum topic](http://wordpress.org/support/topic/undefined-index-with-wp_debug-true)
+* Changed syntax for shortcodes inside of attributes - [documentation](http://gndev.info/kb/how-to-use-another-shortcodes-inside-of-attributes/)
+* Small performance improvemets
+* Aded font-awesome.css. Will be completely included in closest versions
+
 = 4.1.8 =
-* Added defalt taxonomy value for [posts]
-* Added defalt post_type value for [posts]
+* Added default taxonomy value for [posts]
+* Added default post_type value for [posts]
 * Added ability to use shortcodes inside of attributes
 * Translated into Japanese
 
