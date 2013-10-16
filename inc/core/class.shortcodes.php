@@ -34,10 +34,10 @@ class Shortcodes_Ultimate_Shortcodes {
 			if ( self::$tab_count < $atts['active'] ) $atts['active'] = self::$tab_count;
 			foreach ( self::$tabs as $tab ) {
 				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '">' . su_scattr( $tab['title'] ) . '</span>';
-				$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '</div>';
+				$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '<div style="clear:both;height:0"></div></div>';
 			}
 			$vertical = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
-			$return = '<div class="su-tabs' . $vertical . su_ecssc( $atts ) . '" data-active="' . (string) $atts['active'] . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div><div style="clear:both;height:0"></div></div>';
+			$return = '<div class="su-tabs' . $vertical . su_ecssc( $atts ) . '" data-active="' . (string) $atts['active'] . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div></div>';
 		}
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-box-shortcodes' );
 		Shortcodes_Ultimate_Assets::add( 'js', 'jquery' );
@@ -215,6 +215,7 @@ class Shortcodes_Ultimate_Shortcodes {
 				'ts_color'   => 'dark',
 				'ts_pos'     => 'none',
 				'desc'       => '',
+				'onclick'    => '',
 				'class'      => ''
 			), $atts );
 
@@ -317,8 +318,10 @@ class Shortcodes_Ultimate_Shortcodes {
 		}
 		// Button text has no icon marker, append icon to begin of the text
 		else $content = $icon . ' ' . $content;
+		// Prepare onclick action
+		$atts['onclick'] = ( $atts['onclick'] ) ? ' onClick="' . $atts['onclick'] . '"' : '';
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-content-shortcodes' );
-		return $before . '<a href="' . $atts['url'] . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"><span style="' . implode( $span_css, ';' ) . '">' . $content . $desc . '</span></a>' . $after;
+		return $before . '<a href="' . su_scattr( $atts['url'] ) . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"' . $atts['onclick'] . '><span style="' . implode( $span_css, ';' ) . '">' . $content . $desc . '</span></a>' . $after;
 	}
 
 	public static function service( $atts = null, $content = null ) {

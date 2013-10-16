@@ -625,6 +625,11 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Description', 'su' ),
 							'desc' => __( 'Small description under button text. This option is incompatible with icon.', 'su' )
 						),
+						'onclick' => array(
+							'default' => '',
+							'name' => __( 'onClick', 'su' ),
+							'desc' => __( 'Advanced JavaScript code for onClick action', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),

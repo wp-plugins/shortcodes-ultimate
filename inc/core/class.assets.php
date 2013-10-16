@@ -46,8 +46,8 @@ class Shortcodes_Ultimate_Assets {
 		// jsRender
 		wp_register_script( 'jsrender', $shult->assets( 'js', 'jsrender.js' ), array( 'jquery' ), '1.0.0-beta', true );
 		// Magnific Popup
-		wp_register_style( 'magnific-popup', $shult->assets( 'css', 'magnific-popup.css' ), false, '0.9.5', 'all' );
-		wp_register_script( 'magnific-popup', $shult->assets( 'js', 'magnific-popup.js' ), array( 'jquery' ), '0.9.5', true );
+		wp_register_style( 'magnific-popup', $shult->assets( 'css', 'magnific-popup.css' ), false, '0.9.7', 'all' );
+		wp_register_script( 'magnific-popup', $shult->assets( 'js', 'magnific-popup.js' ), array( 'jquery' ), '0.9.7', true );
 		// Ace
 		wp_register_script( 'ace', $shult->assets( 'js', 'ace/ace.js' ), false, '1.1.01', true );
 		// Iframe transport

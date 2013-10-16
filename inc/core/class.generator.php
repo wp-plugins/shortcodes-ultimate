@@ -68,7 +68,6 @@ class Shortcodes_Ultimate_Generator {
 	 * Generator popup form
 	 */
 	public static function popup() {
-		self::reset(); //////////////////////////////////////////////////////////////////////////////////////////
 		// Get cache
 		$output = get_transient( 'su/generator/popup' );
 		if ( $output ) echo $output;

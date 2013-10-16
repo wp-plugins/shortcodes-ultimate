@@ -95,6 +95,12 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.2.1 =
+* Z-index for visual composer - [forum topic](http://wordpress.org/support/topic/compatible-with-visual-composer)
+* New attr for [button] onclick
+* Fixed settings page
+* Fixed [video] player
+
 = 4.2 =
 * Font Awesome icons (in Generator)
 * Fixed warning in footer - [forum topic](http://wordpress.org/support/topic/bug-showing-in-online-site-after-updating-the-plugin)

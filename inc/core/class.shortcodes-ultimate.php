@@ -142,7 +142,7 @@ class Shortcodes_Ultimate {
 					'desc' => sprintf( __( 'Choose skin for shortcodes.<br /><a href="%s" target="_blank">Learn how to create custom skin</a><br /><a href="%s" target="_blank"><b>Download more skins</b></a>', 'su' ), 'http://gndev.info/kb/how-to-create-custom-skin-for-shortcodes-ultimate/', 'http://gndev.info/shortcodes-ultimate/' ),
 					'std' => 'default',
 					'id' => 'skin',
-					'type' => 'skin'
+					'type' => 'text'
 				),
 				array( 'type' => 'closetab' ),
 				array( 'name' => __( 'Custom CSS', 'su' ), 'type' => 'opentab' ),

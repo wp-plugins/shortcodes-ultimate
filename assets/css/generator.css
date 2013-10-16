@@ -344,3 +344,11 @@
 	color: #fff !important;
 	font-weight: bold;
 }
+
+/* Compatibility for Visual Composer - http://wordpress.org/support/topic/compatible-with-visual-composer */
+body.su-generator-shown .mfp-bg { z-index: 1142; }
+body.su-generator-shown .mfp-wrap { z-index: 1143; }
+body.su-generator-shown .mfp-preloader { z-index: 1144; }
+body.su-generator-shown .mfp-content { z-index: 1145; }
+body.su-generator-shown button.mfp-close,
+body.su-generator-shown button.mfp-arrow { z-index: 1146; }

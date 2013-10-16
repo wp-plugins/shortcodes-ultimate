@@ -46,8 +46,10 @@ jQuery(document).ready(function ($) {
 					else window.setTimeout(function () {
 						$search.focus();
 					}, 200);
+					// Change z-index
+					$('body').addClass('su-generator-shown');
 					// Save selection
-					mce_selection = (typeof tinyMCE !== 'undefined') ? tinyMCE.activeEditor.selection.getContent({
+					mce_selection = (typeof tinyMCE !== 'undefined' && tinyMCE.activeEditor.selection !== null) ? tinyMCE.activeEditor.selection.getContent({
 						format: "text"
 					}) : '';
 				},
@@ -65,6 +67,8 @@ jQuery(document).ready(function ($) {
 					$choice.show();
 					// Clear selection
 					mce_selection = '';
+					// Change z-index
+					$('body').removeClass('su-generator-shown');
 				}
 			}
 		}).magnificPopup('open');
