@@ -237,10 +237,8 @@ input.su-gallery-name {
 .su-gallery-image:nth-child(even) { background: #f8f8f8 }
 
 .su-gallery-add-image {
-	position: relative;
-	height: 60px;
+	margin-bottom: 1em;
 }
-.su-gallery-add-image input {}
 .su-gallery-image-uploading { background: 0 5px url('../images/galleries/loading.gif') no-repeat }
 .su-gallery-image-uploading * {
 	position: absolute;

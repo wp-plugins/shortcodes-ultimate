@@ -219,42 +219,10 @@
 }
 
 /* Upload fields */
-.su-generator-upload-field-wrap { position: relative; }
-.su-generator-upload-field {
-	display: inline-block;
-	width: 85%;
-}
-.su-generator-upload-button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: inline-block;
-	width: 14%;
-	height: 100%;
-	overflow: hidden;
-}
-.su-generator-upload-button a.button {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	font-weight: bold;
-	line-height: 40px;
-}
-.su-generator-upload-button input {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	font-size: 10em;
-	opacity: 0;
-	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	cursor: pointer;
-	-moz-opacity: 0;
-	-khtml-opacity: 0;
+.su-generator-upload-value { margin-bottom: 10px; }
+.su-generator-upload-button img {
+	vertical-align: middle;
+	margin: 0 6px 0 -4px;
 }
 .su-generator-uploading { background: 50% 50% url('../images/generator/loading.gif') no-repeat; }
 #su-generator-settings .su-generator-uploading * {

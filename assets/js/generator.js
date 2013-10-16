@@ -228,28 +228,36 @@ jQuery(document).ready(function ($) {
 					});
 				});
 				// Init upload buttons
-				$('.su-generator-upload-button input:file').each(function () {
-					// Prepare data
-					var $container = $(this).parent('span').parent('div'),
-						$value = $container.find('.su-generator-upload-field').children('input:text');
-					$(this).fileupload({
-						paramName: 'file',
-						url: ajaxurl,
-						formData: {
-							action: 'su_generator_upload'
-						},
-						dataType: 'html',
-						autoUpload: true,
-						beforeSend: function () {
-							// Show loading animation
-							$container.addClass('su-generator-uploading');
-						},
-						done: function (ev, data) {
-							// Hide loading animation
-							$container.removeClass('su-generator-uploading');
-							// Update text field value
-							$value.val(data.result).trigger('change');
-						}
+				$('.su-generator-upload-button').each(function () {
+					var $button = $(this),
+						$val = $(this).parents('.su-generator-attr-container').find('.su-generator-upload-value'),
+						file;
+					$button.on('click', function (e) {
+						e.preventDefault();
+						e.stopPropagation();
+						// If the frame already exists, reopen it
+						if (typeof (file) !== 'undefined') file.close();
+						// Create WP media frame.
+						file = wp.media.frames.customHeader = wp.media({
+							// Title of media manager frame
+							title: su_generator.upload_title,
+							library: {
+								type: 'image'
+							},
+							button: {
+								//Button text
+								text: su_generator.upload_insert
+							},
+							// Do not allow multiple files, if you want multiple, set true
+							multiple: false
+						});
+						//callback for selected image
+						file.on('select', function () {
+							var attachment = file.state().get('selection').first().toJSON();
+							$val.val(attachment.url).trigger('change');
+						});
+						// Open modal
+						file.open();
 					});
 				});
 				// Init switches

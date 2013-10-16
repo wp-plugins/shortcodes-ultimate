@@ -1,5 +1,5 @@
 // Wait DOM
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
 
 	// ########## Custom CSS screen ##########
 
@@ -10,7 +10,7 @@ jQuery(document).ready(function($) {
 	var editor = ace.edit('sunrise-plugin-field-custom_css-editor'),
 		$textarea = $('#sunrise-plugin-field-custom_css').hide();
 	editor.getSession().setValue($textarea.val());
-	editor.getSession().on('change', function() {
+	editor.getSession().on('change', function () {
 		$textarea.val(editor.getSession().getValue());
 	});
 	editor.getSession().setMode('ace/mode/css');
@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
 	// ########## Galleries screen ##########
 
 	// Create new gallery
-	$('.su-gallery-create').click(function(e) {
+	$('.su-gallery-create').click(function (e) {
 		// Prepare data
 		var $last = $('#su-galleries .su-gallery:last'),
 			id = ($last.length > 0) ? $last.data('id') + 1 : 0,
@@ -55,27 +55,27 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 	});
 	// Open/close gallery
-	$('.su-gallery-open, .su-gallery-close').live('click', function(e) {
+	$('.su-gallery-open, .su-gallery-close').live('click', function (e) {
 		$(this).parents('.su-gallery').toggleClass('su-gallery-edit');
 		$(this).parents('.su-gallery').find('.su-gallery-image').removeClass('su-gallery-image-edit');
 		e.preventDefault();
 	});
 	// Close and save gallery
-	$('.su-gallery-save-close').live('click', function(e) {
+	$('.su-gallery-save-close').live('click', function (e) {
 		$(this).parents('.su-gallery').removeClass('su-gallery-edit');
 		$(this).parents('.su-gallery').find('.su-gallery-image').removeClass('su-gallery-image-edit');
 		$('#sunrise-plugin-options-form').submit();
 		e.preventDefault();
 	});
 	// Image preview
-	$('.su-gallery-image-preview').live('click', function(e) {
+	$('.su-gallery-image-preview').live('click', function (e) {
 		$(this).magnificPopup({
 			type: 'image'
 		}).magnificPopup('open');
 		e.preventDefault();
 	});
 	// Delete gallery
-	$('.su-gallery-delete').live('click', function(e) {
+	$('.su-gallery-delete').live('click', function (e) {
 		var message = $('#su-galleries').data('delete-gallery-message');
 		if (confirm(message)) {
 			$(this).parents('.su-gallery').remove();
@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
 	// Apply sortables
 	apply_sortable();
 	// Open/close image
-	$('.su-gallery-image-open, .su-gallery-image-title, .su-gallery-image-ok').live('click', function(e) {
+	$('.su-gallery-image-open, .su-gallery-image-title, .su-gallery-image-ok').live('click', function (e) {
 		var $image = $(this).parents('.su-gallery-image');
 		// Change image container class
 		$image.toggleClass('su-gallery-image-edit');
@@ -99,7 +99,7 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 	});
 	// Delete image
-	$('.su-gallery-image-delete').live('click', function(e) {
+	$('.su-gallery-image-delete').live('click', function (e) {
 		// Get message
 		var message = $('#su-galleries').data('delete-image-message');
 		// Confirm deletion
@@ -116,63 +116,73 @@ jQuery(document).ready(function($) {
 			items: '> .su-gallery-image',
 			handle: '.su-gallery-image-sort-handle',
 			axis: 'y',
-			stop: function(event, ui) {
+			stop: function (event, ui) {
 				update_images();
 			}
 		});
 	}
 
 	function apply_uploads() {
-		$('.su-gallery-add-image:not(.su-gallery-add-image-ready) input:file').each(function() {
-			// Prepare data
-			var $container = $(this).parent(),
-				$gallery = $(this).parents('.su-gallery');
+		$('.su-gallery-add-image:not(.su-gallery-add-image-ready) a').each(function () {
+			var $button = $(this),
+				$cnt = $button.parent(),
+				$gallery = $(this).parents('.su-gallery'),
+				files;
+			$button.on('click', function (e) {
+				e.preventDefault();
+				e.stopPropagation();
+				// If the frame already exists, reopen it
+				if (typeof (files) !== 'undefined') files.close();
+				// Create WP media frame.
+				files = wp.media.frames.customHeader = wp.media({
+					// Title of media manager frame
+					title: su_options_page.upload_title,
+					library: {
+						type: 'image'
+					},
+					button: {
+						//Button text
+						text: su_options_page.upload_insert
+					},
+					// Do not allow multiple files, if you want multiple, set true
+					multiple: true
+				});
+				//callback for selected image
+				files.on('select', function () {
+					var attachments = files.state().get('selection').toJSON();
+					$.each(attachments, function () {
+						// Create new image section
+						var att = this,
+							$image = $($.templates('#su_new_image_template').render([{
+								id: 999,
+								title: att.title,
+								gallery_id: $gallery.data('id'),
+								image: att.url
+							}]));
+						// Append new image to gallery content
+						$cnt.after($image);
+						// Update images indexes
+						update_images();
+					});
+				});
+				// Open modal
+				files.open();
+			});
 			// Add ready class
 			$(this).addClass('su-gallery-add-image-ready');
-			// Apply upload actions
-			$(this).fileupload({
-				paramName: 'file',
-				url: ajaxurl,
-				formData: {
-					action: 'su_generator_upload'
-				},
-				dataType: 'html',
-				autoUpload: true,
-				beforeSend: function() {
-					// Show loading animation
-					$container.addClass('su-gallery-image-uploading');
-				},
-				done: function(ev, data) {
-					// Hide loading animation
-					$container.removeClass('su-gallery-image-uploading');
-					// Check result
-					if (data.result == '') return;
-					// Create new image section
-					var $image = $($.templates('#su_new_image_template').render([{
-						id: 999,
-						title: get_file_title(data.result),
-						gallery_id: $gallery.data('id'),
-						image: data.result
-					}]));
-					// Append new image to gallery content
-					$container.after($image);
-					// Update images indexes
-					update_images();
-				}
-			})
 		});
 	}
 
 	function update_images() {
 		// Loop through galleries
-		$('#su-galleries .su-gallery').each(function() {
+		$('#su-galleries .su-gallery').each(function () {
 			// Prepare gallery data
 			var $gallery = $(this),
 				id = $gallery.data('id');
 			// Loop through images
-			$gallery.find('.su-gallery-image').each(function(i) {
+			$gallery.find('.su-gallery-image').each(function (i) {
 				// Loop through fields
-				$(this).find('[data-field]').each(function() {
+				$(this).find('[data-field]').each(function () {
 					$(this).attr('name', 'galleries[' + id + '][items][' + i + '][' + $(this).data('field') +
 						']')
 				});

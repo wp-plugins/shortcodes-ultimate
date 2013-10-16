@@ -1,3 +1,4 @@
+<?php wp_enqueue_media(); ?>
 <div id="su-galleries-screen">
 	<div id="su-galleries" data-delete-gallery-message="<?php _e( 'Are you sure that you want to delete this gallery? This action can\'t be undone!', $this->textdomain ); ?>" data-delete-image-message="<?php _e( 'Are you sure that you want to delete this image? This action can\'t be undone!', $this->textdomain ); ?>">
 		<div id="su-galleries-actions">
@@ -23,10 +24,7 @@
 							</span>
 						</div>
 						<div class="su-gallery-content">
-							<div class="su-gallery-add-image">
-								<input type="file" />
-								<small class="description"><?php _e( 'Max upload file size', $this->textdomain ); ?>: <?php echo floor( wp_max_upload_size() / 1024 / 1024 ) . __( 'Mb', $this->textdomain ); ?>. <a href="http://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress/" target="_blank"><?php _e( 'How to increase', $this->textdomain ); ?></a>.</small>
-							</div>
+							<div class="su-gallery-add-image"><a href="javscript:;" class="button button-primary button-large"><?php _e( 'Add images', 'su' ); ?></a></div>
 							<?php
 							if ( is_array( $gallery['items'] ) && count( $gallery['items'] ) )
 								foreach ( $gallery['items'] as $item_id => $item ) {
@@ -78,10 +76,7 @@
 				</span>
 			</div>
 			<div class="su-gallery-content">
-				<div class="su-gallery-add-image">
-					<input type="file" />
-					<small class="description"><?php _e( 'Max upload file size', $this->textdomain ); ?>: <?php echo floor( wp_max_upload_size() / 1024 / 1024 ) . __( 'Mb', $this->textdomain ); ?>. <a href="http://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress/" target="_blank"><?php _e( 'How to increase', $this->textdomain ); ?></a>.</small>
-				</div>
+				<div class="su-gallery-add-image"><a href="javscript:;" class="button button-primary button-large"><?php _e( 'Add images', 'su' ); ?></a></div>
 			</div>
 		</div>
 	</script>

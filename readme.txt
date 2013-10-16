@@ -95,6 +95,10 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.2.2 =
+* New media manager added for galleries manager
+* New media manager added to the file fields in Generator
+
 = 4.2.1 =
 * Z-index for visual composer - [forum topic](http://wordpress.org/support/topic/compatible-with-visual-composer)
 * New attr for [button] onclick

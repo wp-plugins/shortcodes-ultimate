@@ -47,7 +47,7 @@ class Shortcodes_Ultimate_Generator {
 		add_action( 'admin_footer', array( __CLASS__, 'popup' ) );
 		// Request assets
 		su_query_asset( 'css', array( 'farbtastic', 'qtip', 'magnific-popup', 'font-awesome', 'su-generator' ) );
-		su_query_asset( 'js', array( 'jquery', 'jquery-ui-widget', 'iframe-transport', 'fileupload', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
+		su_query_asset( 'js', array( 'jquery', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
 		// Print/return result
 		if ( $args['echo'] ) echo $button;
 		else return $button;
@@ -178,7 +178,7 @@ class Shortcodes_Ultimate_Generator {
 						break;
 						// Upload
 					case 'upload':
-						$return .= '<div class="su-generator-upload-field-wrap"><span class="su-generator-upload-field"><input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" /></span><span class="su-generator-upload-button"><a href="#" class="button">&hellip;</a><input type="file" name="su_generator_file_upload" /></span></div><small class="description">' . __( 'Max upload file size', 'su' ) . ': ' . floor( wp_max_upload_size() / 1024 / 1024 ) . __( 'Mb', 'su' ) . '. <a href="http://www.wpbeginner.com/wp-tutorials/how-to-increase-the-maximum-file-upload-size-in-wordpress/" target="_blank">' . __( 'How to increase', 'su' ) . '</a>.</small>';
+						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-upload-value" /><a href="javascript:;" class="button su-generator-upload-button"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a>';
 						break;
 						// Color
 					case 'color':

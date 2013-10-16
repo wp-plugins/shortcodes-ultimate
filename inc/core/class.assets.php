@@ -61,9 +61,17 @@ class Shortcodes_Ultimate_Assets {
 		// Options page
 		wp_register_style( 'su-options-page', $shult->assets( 'css', 'options-page.css' ), false, $shult->version, 'all' );
 		wp_register_script( 'su-options-page', $shult->assets( 'js', 'options-page.js' ), array( 'magnific-popup', 'file-upload', 'jquery-ui-sortable', 'ace', 'jsrender' ), $shult->version, true );
+		wp_localize_script( 'su-options-page', 'su_options_page', array(
+				'upload_title' => __( 'Choose files', 'su' ),
+				'upload_insert' => __( 'Add selected files', 'su' )
+			) );
 		// Generator
 		wp_register_style( 'su-generator', $shult->assets( 'css', 'generator.css' ), array( 'farbtastic', 'magnific-popup' ), $shult->version, 'all' );
 		wp_register_script( 'su-generator', $shult->assets( 'js', 'generator.js' ), array( 'file-upload', 'farbtastic', 'magnific-popup', 'qtip' ), $shult->version, true );
+		wp_localize_script( 'su-generator', 'su_generator', array(
+				'upload_title' => __( 'Choose file', 'su' ),
+				'upload_insert' => __( 'Insert', 'su' )
+			) );
 		// Shortcodes stylesheets
 		wp_register_style( 'su-content-shortcodes', self::skin_url( 'content-shortcodes.css' ), false, $shult->version, 'all' );
 		wp_register_style( 'su-box-shortcodes', self::skin_url( 'box-shortcodes.css' ), false, $shult->version, 'all' );
