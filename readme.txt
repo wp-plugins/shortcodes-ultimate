@@ -95,6 +95,11 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.2.3 =
+* Media manager is now works on widgets page
+* Shortcodes inside of [button]
+* Fixed fatal error in [media]
+
 = 4.2.2 =
 * New media manager added for galleries manager
 * New media manager added to the file fields in Generator

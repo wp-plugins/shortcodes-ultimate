@@ -46,6 +46,7 @@ class Shortcodes_Ultimate_Generator {
 		add_action( 'wp_footer',    array( __CLASS__, 'popup' ) );
 		add_action( 'admin_footer', array( __CLASS__, 'popup' ) );
 		// Request assets
+		wp_enqueue_media();
 		su_query_asset( 'css', array( 'farbtastic', 'qtip', 'magnific-popup', 'font-awesome', 'su-generator' ) );
 		su_query_asset( 'js', array( 'jquery', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
 		// Print/return result
