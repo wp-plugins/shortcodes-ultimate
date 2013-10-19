@@ -490,28 +490,6 @@ class Shortcodes_Ultimate_Data {
 					'type' => 'wrap',
 					'group' => 'content',
 					'atts' => array(
-						'style' => array(
-							'type' => 'select',
-							'values' => array(
-								'star' => __( 'Star', 'su' ),
-								'arrow' => __( 'Arrow', 'su' ),
-								'check' => __( 'Check', 'su' ),
-								'cross' => __( 'Cross', 'su' ),
-								'thumbs' => __( 'Thumbs up', 'su' ),
-								'link' => __( 'Link', 'su' ),
-								'gear' => __( 'Gear', 'su' ),
-								'time' => __( 'Time', 'su' ),
-								'note' => __( 'Note', 'su' ),
-								'plus' => __( 'Plus', 'su' ),
-								'guard' => __( 'Guard', 'su' ),
-								'event' => __( 'Event', 'su' ),
-								'idea' => __( 'Idea', 'su' ),
-								'settings' => __( 'Settings', 'su' ),
-								'twitter' => __( 'Twitter', 'su' )
-							),
-							'default' => 'star',
-							'name' => __( 'Style', 'su' ), 'desc' => __( 'List items style/icons', 'su' )
-						),
 						'icon' => array(
 							'type' => 'icon',
 							'default' => '',
@@ -522,7 +500,7 @@ class Shortcodes_Ultimate_Data {
 							'type' => 'color',
 							'default' => '#333333',
 							'name' => __( 'Icon color', 'su' ),
-							'desc' => __( 'This color will be applied to the selected icon. Does not work with uploaded icons', 'su' )
+							'desc' => __( 'This color will be applied to the selected icon. Does not works with uploaded icons', 'su' )
 						),
 						'class' => array(
 							'default' => '',
@@ -618,7 +596,7 @@ class Shortcodes_Ultimate_Data {
 							'type' => 'color',
 							'default' => '#FFFFFF',
 							'name' => __( 'Icon color', 'su' ),
-							'desc' => __( 'This color will be applied to the selected icon. Does not work with uploaded icons', 'su' )
+							'desc' => __( 'This color will be applied to the selected icon. Does not works with uploaded icons', 'su' )
 						),
 						'ts_color' => array(
 							'type' => 'select',
@@ -685,7 +663,7 @@ class Shortcodes_Ultimate_Data {
 							'type' => 'color',
 							'default' => '#333333',
 							'name' => __( 'Icon color', 'su' ),
-							'desc' => __( 'This color will be applied to the selected icon. Doed no works with uploaded icons', 'su' )
+							'desc' => __( 'This color will be applied to the selected icon. Does not works with uploaded icons', 'su' )
 						),
 						'size' => array(
 							'type' => 'number',
