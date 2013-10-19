@@ -1,0 +1,2367 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shortcodes Ultimate\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-01 17:50+0300\n"
+"PO-Revision-Date: 2013-10-02 13:27+0900\n"
+"Last-Translator: \n"
+"Language-Team: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"Language: ja\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: inc/example-addon.php:29
+msgid "Heading 2"
+msgstr "見出し2"
+
+#: inc/example-addon.php:43 inc/core/class.data.php:158
+#: inc/core/class.data.php:276 inc/core/class.data.php:356
+#: inc/core/class.data.php:517 inc/core/class.data.php:654
+#: inc/core/class.data.php:813
+msgid "Default"
+msgstr "デフォルト"
+
+#: inc/example-addon.php:44
+msgid "Small"
+msgstr "スモール"
+
+#: inc/example-addon.php:49 inc/core/class.data.php:163
+#: inc/core/class.data.php:362 inc/core/class.data.php:481
+#: inc/core/class.data.php:527 inc/core/class.data.php:661
+#: inc/core/class.data.php:783
+msgid "Style"
+msgstr "スタイル"
+
+#: inc/example-addon.php:51
+msgid "Heading 2 style"
+msgstr "見出し2スタイル"
+
+#: inc/example-addon.php:57
+msgid "Heading 2 text"
+msgstr "見出し2テキスト"
+
+#: inc/example-addon.php:59
+msgid "Styled heading 2"
+msgstr "見出し2のスタイルを設定"
+
+#: inc/core/class.assets.php:76
+msgid "This shortcode doesn't work in live preview. Please insert it into editor and preview on the site."
+msgstr "このショートコードは、ライブプレビューでは動作しません。サイト上のエディタに挿入してください。"
+
+#: inc/core/class.data.php:34
+msgid "All"
+msgstr "すべて"
+
+#: inc/core/class.data.php:35 inc/core/class.generator.php:233
+msgid "Content"
+msgstr "コンテンツ"
+
+#: inc/core/class.data.php:36 inc/core/class.data.php:642
+msgid "Box"
+msgstr "ボックス"
+
+#: inc/core/class.data.php:37
+msgid "Media"
+msgstr "メディア"
+
+#: inc/core/class.data.php:38 inc/core/class.data.php:1413
+#: inc/core/class.data.php:1503 inc/core/class.data.php:1603
+#: inc/core/class.data.php:1609
+msgid "Gallery"
+msgstr "ギャラリー"
+
+#: inc/core/class.data.php:39
+msgid "Other"
+msgstr "その他"
+
+#: inc/core/class.data.php:50
+msgid "Heading"
+msgstr "見出し"
+
+#: inc/core/class.data.php:60 inc/core/class.data.php:367
+#: inc/core/class.data.php:444 inc/core/class.data.php:545
+msgid "Size"
+msgstr "サイズ"
+
+#: inc/core/class.data.php:60
+msgid "Select heading size"
+msgstr "見出しサイズを選択"
+
+#: inc/core/class.data.php:65 inc/core/class.data.php:332
+#: inc/core/class.data.php:587 inc/core/class.data.php:791
+msgid "Left"
+msgstr "左"
+
+#: inc/core/class.data.php:66 inc/core/class.data.php:1446
+#: inc/core/class.data.php:1552
+msgid "Center"
+msgstr "中央"
+
+#: inc/core/class.data.php:67 inc/core/class.data.php:333
+#: inc/core/class.data.php:585 inc/core/class.data.php:792
+msgid "Right"
+msgstr "右"
+
+#: inc/core/class.data.php:70 inc/core/class.data.php:336
+#: inc/core/class.data.php:392
+msgid "Align"
+msgstr "整列"
+
+#: inc/core/class.data.php:70
+msgid "Heading text alignment"
+msgstr "見出しテキストの位置"
+
+#: inc/core/class.data.php:74 inc/core/class.data.php:104
+#: inc/core/class.data.php:131 inc/core/class.data.php:168
+#: inc/core/class.data.php:182 inc/core/class.data.php:209
+#: inc/core/class.data.php:232 inc/core/class.data.php:260
+#: inc/core/class.data.php:289 inc/core/class.data.php:316
+#: inc/core/class.data.php:340 inc/core/class.data.php:371
+#: inc/core/class.data.php:397 inc/core/class.data.php:413
+#: inc/core/class.data.php:449 inc/core/class.data.php:485
+#: inc/core/class.data.php:600 inc/core/class.data.php:634
+#: inc/core/class.data.php:686 inc/core/class.data.php:721
+#: inc/core/class.data.php:752 inc/core/class.data.php:854
+#: inc/core/class.data.php:870 inc/core/class.data.php:922
+#: inc/core/class.data.php:971 inc/core/class.data.php:1013
+#: inc/core/class.data.php:1051 inc/core/class.data.php:1120
+#: inc/core/class.data.php:1141 inc/core/class.data.php:1172
+#: inc/core/class.data.php:1205 inc/core/class.data.php:1221
+#: inc/core/class.data.php:1246 inc/core/class.data.php:1265
+#: inc/core/class.data.php:1291 inc/core/class.data.php:1311
+#: inc/core/class.data.php:1355 inc/core/class.data.php:1399
+#: inc/core/class.data.php:1489 inc/core/class.data.php:1595
+#: inc/core/class.data.php:1646
+msgid "Class"
+msgstr "クラス"
+
+#: inc/core/class.data.php:75 inc/core/class.data.php:105
+#: inc/core/class.data.php:132 inc/core/class.data.php:169
+#: inc/core/class.data.php:183 inc/core/class.data.php:210
+#: inc/core/class.data.php:233 inc/core/class.data.php:261
+#: inc/core/class.data.php:290 inc/core/class.data.php:317
+#: inc/core/class.data.php:341 inc/core/class.data.php:372
+#: inc/core/class.data.php:398 inc/core/class.data.php:414
+#: inc/core/class.data.php:450 inc/core/class.data.php:486
+#: inc/core/class.data.php:601 inc/core/class.data.php:635
+#: inc/core/class.data.php:687 inc/core/class.data.php:722
+#: inc/core/class.data.php:753 inc/core/class.data.php:855
+#: inc/core/class.data.php:871 inc/core/class.data.php:923
+#: inc/core/class.data.php:972 inc/core/class.data.php:1014
+#: inc/core/class.data.php:1052 inc/core/class.data.php:1121
+#: inc/core/class.data.php:1142 inc/core/class.data.php:1173
+#: inc/core/class.data.php:1206 inc/core/class.data.php:1222
+#: inc/core/class.data.php:1247 inc/core/class.data.php:1266
+#: inc/core/class.data.php:1292 inc/core/class.data.php:1312
+#: inc/core/class.data.php:1356 inc/core/class.data.php:1400
+#: inc/core/class.data.php:1490 inc/core/class.data.php:1596
+#: inc/core/class.data.php:1647
+msgid "Extra CSS class"
+msgstr "別のCSSクラス"
+
+#: inc/core/class.data.php:78
+msgid "Heading text"
+msgstr "見出しテキスト"
+
+#: inc/core/class.data.php:79
+msgid "Styled heading"
+msgstr "見出しスタイル"
+
+#: inc/core/class.data.php:83
+msgid "Tabs"
+msgstr "タブ"
+
+#: inc/core/class.data.php:93
+msgid "Active tab"
+msgstr "有効なタブ"
+
+#: inc/core/class.data.php:94
+msgid "Select which tab is open by default"
+msgstr "最初に開いているタブを指定"
+
+#: inc/core/class.data.php:99
+msgid "Vertical"
+msgstr "垂直"
+
+#: inc/core/class.data.php:100
+msgid "Show tabs vertically"
+msgstr "タブを垂直に表示"
+
+#: inc/core/class.data.php:109
+msgid "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]"
+msgstr "[%prefix_tab title=\"Title 1\"]コンテンツ 1[/%prefix_tab]\n[%prefix_tab title=\"Title 2\"]コンテンツ2[/%prefix_tab]\n[%prefix_tab title=\"Title 3\"]コンテンツ 3[/%prefix_tab]"
+
+#: inc/core/class.data.php:110
+msgid "Tabs container"
+msgstr "コンテナタブ"
+
+#: inc/core/class.data.php:114
+msgid "Tab"
+msgstr "タブ"
+
+#: inc/core/class.data.php:119
+msgid "Tab name"
+msgstr "タブ名"
+
+#: inc/core/class.data.php:120 inc/core/class.data.php:147
+#: inc/core/class.data.php:616 inc/core/class.data.php:649
+#: inc/core/class.data.php:1079
+msgid "Title"
+msgstr "タイトル"
+
+#: inc/core/class.data.php:121
+msgid "Enter tab name"
+msgstr "タブ名を入力"
+
+#: inc/core/class.data.php:126
+msgid "Disabled"
+msgstr "無効"
+
+#: inc/core/class.data.php:127
+msgid "Is this tab disabled"
+msgstr "このタブでは無効になっています"
+
+#: inc/core/class.data.php:136
+msgid "Tab content"
+msgstr "タブのコンテンツ"
+
+#: inc/core/class.data.php:137
+msgid "Single tab"
+msgstr "単一のタブ"
+
+#: inc/core/class.data.php:141
+msgid "Spoiler"
+msgstr "スポイラー"
+
+#: inc/core/class.data.php:146 inc/core/shortcodes.php:93
+msgid "Spoiler title"
+msgstr "スポイラーのタイトル"
+
+#: inc/core/class.data.php:147
+msgid "Text in spoiler title"
+msgstr "スポイラーのタイトル内のテキスト"
+
+#: inc/core/class.data.php:152
+msgid "Open"
+msgstr "開く"
+
+#: inc/core/class.data.php:153
+msgid "Is spoiler content visible by default"
+msgstr "スポイラーの内容はデフォルトで表示されている"
+
+#: inc/core/class.data.php:159
+msgid "Fancy"
+msgstr "ファンシー"
+
+#: inc/core/class.data.php:160 inc/core/class.data.php:359
+msgid "Simple"
+msgstr "シンプル"
+
+#: inc/core/class.data.php:164
+msgid "Spoiler skin"
+msgstr "シンプルスキン"
+
+#: inc/core/class.data.php:172
+msgid "Hidden content"
+msgstr "非表示のコンテンツ"
+
+#: inc/core/class.data.php:172
+msgid "Spoiler with hidden content"
+msgstr "内容が非表示のスポイラー"
+
+#: inc/core/class.data.php:176
+msgid "Accordion"
+msgstr "アコーディオン"
+
+#: inc/core/class.data.php:187
+msgid "[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]"
+msgstr "[%prefix_spoiler]コンテンツ[/%prefix_spoiler]\n[%prefix_spoiler]コンテンツ[/%prefix_spoiler]\n[%prefix_spoiler]コンテンツ[/%prefix_spoiler]"
+
+#: inc/core/class.data.php:188
+msgid "Accordion with spoilers"
+msgstr "スポイラーとアコーディオン"
+
+#: inc/core/class.data.php:192
+msgid "Divider"
+msgstr "仕切り"
+
+#: inc/core/class.data.php:199
+msgid "Show TOP link"
+msgstr "トップに戻るを表示"
+
+#: inc/core/class.data.php:200
+msgid "Show link to top of the page or not"
+msgstr "トップに戻るリンクを表示"
+
+#: inc/core/class.data.php:204 inc/core/shortcodes.php:128
+msgid "Go to top"
+msgstr "ページのトップへ"
+
+#: inc/core/class.data.php:205
+msgid "Link text"
+msgstr "リンクテキスト"
+
+#: inc/core/class.data.php:205
+msgid "Text for the GO TOP link"
+msgstr "トップに戻るリンクのテキスト"
+
+#: inc/core/class.data.php:214
+msgid "Content divider with optional TOP link"
+msgstr "トップに戻るリンクの仕切り"
+
+#: inc/core/class.data.php:218
+msgid "Spacer"
+msgstr "スペーサ"
+
+#: inc/core/class.data.php:228 inc/core/class.data.php:905
+#: inc/core/class.data.php:954 inc/core/class.data.php:1002
+#: inc/core/class.data.php:1097 inc/core/class.data.php:1344
+#: inc/core/class.data.php:1382 inc/core/class.data.php:1430
+#: inc/core/class.data.php:1520 inc/core/class.data.php:1626
+msgid "Height"
+msgstr "高さ"
+
+#: inc/core/class.data.php:228
+msgid "Height of the spacer in pixels"
+msgstr "ピクセル単位のスペーサの高さ"
+
+#: inc/core/class.data.php:237
+msgid "Empty space with adjustable height"
+msgstr "調節可能な空きスペースの高さ"
+
+#: inc/core/class.data.php:241
+msgid "Highlight"
+msgstr "ハイライト"
+
+#: inc/core/class.data.php:249 inc/core/class.data.php:533
+#: inc/core/class.data.php:704
+msgid "Background"
+msgstr "背景"
+
+#: inc/core/class.data.php:250
+msgid "Highlighted text background color"
+msgstr "強調表示するテキストの背景色"
+
+#: inc/core/class.data.php:256 inc/core/class.data.php:539
+#: inc/core/class.data.php:710
+msgid "Text color"
+msgstr "テキストの色"
+
+#: inc/core/class.data.php:256
+msgid "Highlighted text color"
+msgstr "強調表示するテキストの色"
+
+#: inc/core/class.data.php:264 inc/core/class.data.php:265
+msgid "Highlighted text"
+msgstr "強調表示するテキストの背景色"
+
+#: inc/core/class.data.php:269 inc/core/class.data.php:293
+msgid "Label"
+msgstr "ラベル"
+
+#: inc/core/class.data.php:277
+msgid "Success"
+msgstr "成功"
+
+#: inc/core/class.data.php:278
+msgid "Warning"
+msgstr "警告"
+
+#: inc/core/class.data.php:279
+msgid "Important"
+msgstr "重要"
+
+#: inc/core/class.data.php:280
+msgid "Black"
+msgstr "黒"
+
+#: inc/core/class.data.php:281
+msgid "Info"
+msgstr "情報"
+
+#: inc/core/class.data.php:284
+msgid "Type"
+msgstr "タイプ"
+
+#: inc/core/class.data.php:285
+msgid "Style of the label"
+msgstr "ラベルのスタイル"
+
+#: inc/core/class.data.php:294
+msgid "Styled label"
+msgstr "ラベルスタイル"
+
+#: inc/core/class.data.php:298 inc/core/class.data.php:320
+msgid "Quote"
+msgstr "引用"
+
+#: inc/core/class.data.php:305
+msgid "Cite"
+msgstr "引用"
+
+#: inc/core/class.data.php:306
+msgid "Quote author name"
+msgstr "引用の投稿者名"
+
+#: inc/core/class.data.php:311
+msgid "Cite url"
+msgstr "引用URL"
+
+#: inc/core/class.data.php:312
+msgid "Url of the quote author. Leave empty to disable link"
+msgstr "引用投稿者のURL。リンクを無効にする場合は空白にする"
+
+#: inc/core/class.data.php:321
+msgid "Blockquote alternative"
+msgstr "代替Blockquote"
+
+#: inc/core/class.data.php:325 inc/core/class.data.php:344
+#: inc/core/class.data.php:345
+msgid "Pullquote"
+msgstr "Pullquote"
+
+#: inc/core/class.data.php:336
+msgid "Pullquote alignment (float)"
+msgstr "Pullquoteアライメント(フロート)"
+
+#: inc/core/class.data.php:349 inc/core/class.data.php:376
+msgid "Dropcap"
+msgstr "Dropcap"
+
+#: inc/core/class.data.php:357 inc/core/class.data.php:518
+msgid "Flat"
+msgstr "フラット"
+
+#: inc/core/class.data.php:358 inc/core/class.data.php:574
+msgid "Light"
+msgstr "ライト"
+
+#: inc/core/class.data.php:362
+msgid "Dropcap style preset"
+msgstr "Dropcapのプリセットスタイル"
+
+#: inc/core/class.data.php:367
+msgid "Choose dropcap size"
+msgstr "Dropcapのサイズを選択"
+
+#: inc/core/class.data.php:375
+msgid "D"
+msgstr "D"
+
+#: inc/core/class.data.php:380
+msgid "Frame"
+msgstr "フレーム"
+
+#: inc/core/class.data.php:393
+msgid "Frame alignment"
+msgstr "フレームアライメント"
+
+#: inc/core/class.data.php:403
+msgid "Styled image frame"
+msgstr "イメージフレームスタイル"
+
+#: inc/core/class.data.php:407
+msgid "Row"
+msgstr "行"
+
+#: inc/core/class.data.php:418
+msgid "[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n[%prefix_column size=\"1/3\"]Content[/%prefix_column]"
+msgstr "[%prefix_column size=\"1/3\"]コンテンツ[/%prefix_column]\n[%prefix_column size=\"1/3\"]コンテンツ[/%prefix_column]\n[%prefix_column size=\"1/3\"]コンテンツ[/%prefix_column]"
+
+#: inc/core/class.data.php:419
+msgid "Row for flexible columns"
+msgstr "柔軟性のある列の行"
+
+#: inc/core/class.data.php:423
+msgid "Column"
+msgstr "コラム"
+
+#: inc/core/class.data.php:430
+msgid "Full width"
+msgstr "全幅"
+
+#: inc/core/class.data.php:431
+msgid "One half"
+msgstr "1/2"
+
+#: inc/core/class.data.php:432
+msgid "One third"
+msgstr "1/3"
+
+#: inc/core/class.data.php:433
+msgid "Two third"
+msgstr "2/3"
+
+#: inc/core/class.data.php:434
+msgid "One fourth"
+msgstr "1/4"
+
+#: inc/core/class.data.php:435
+msgid "Three fourth"
+msgstr "3/4"
+
+#: inc/core/class.data.php:436
+msgid "One fifth"
+msgstr "1/5"
+
+#: inc/core/class.data.php:437
+msgid "Two fifth"
+msgstr "2/5"
+
+#: inc/core/class.data.php:438
+msgid "Three fifth"
+msgstr "3/5"
+
+#: inc/core/class.data.php:439
+msgid "Four fifth"
+msgstr "4/5"
+
+#: inc/core/class.data.php:440
+msgid "One sixth"
+msgstr "1/6"
+
+#: inc/core/class.data.php:441
+msgid "Five sixth"
+msgstr "5/6"
+
+#: inc/core/class.data.php:445
+msgid "Select column width. This width will be calculated depend page width"
+msgstr "列幅を選択。この幅はページ幅に依存して計算される"
+
+#: inc/core/class.data.php:453
+msgid "Column content"
+msgstr "列の内容"
+
+#: inc/core/class.data.php:453
+msgid "Flexible and responsive columns"
+msgstr "列の柔軟性と応答性"
+
+#: inc/core/class.data.php:457
+msgid "List"
+msgstr "リスト"
+
+#: inc/core/class.data.php:464
+msgid "Star"
+msgstr "星"
+
+#: inc/core/class.data.php:465
+msgid "Arrow"
+msgstr "矢印"
+
+#: inc/core/class.data.php:466
+msgid "Check"
+msgstr "チェック"
+
+#: inc/core/class.data.php:467
+msgid "Cross"
+msgstr "クロス"
+
+#: inc/core/class.data.php:468
+msgid "Thumbs up"
+msgstr "親指"
+
+#: inc/core/class.data.php:469 inc/core/class.data.php:501
+msgid "Link"
+msgstr "リンク"
+
+#: inc/core/class.data.php:470
+msgid "Gear"
+msgstr "歯車"
+
+#: inc/core/class.data.php:471
+msgid "Time"
+msgstr "時間"
+
+#: inc/core/class.data.php:472 inc/core/class.data.php:696
+msgid "Note"
+msgstr "ノート"
+
+#: inc/core/class.data.php:473
+msgid "Plus"
+msgstr "プラス"
+
+#: inc/core/class.data.php:474
+msgid "Guard"
+msgstr "ガード"
+
+#: inc/core/class.data.php:475
+msgid "Event"
+msgstr "エベント"
+
+#: inc/core/class.data.php:476
+msgid "Idea"
+msgstr "アイデア"
+
+#: inc/core/class.data.php:477 inc/core/class.generator.php:88
+#: inc/core/class.shortcodes-ultimate.php:115
+#: inc/vendor/class.sunrise-framework.php:281
+msgid "Settings"
+msgstr "設定"
+
+#: inc/core/class.data.php:478
+msgid "Twitter"
+msgstr "Twitter"
+
+#: inc/core/class.data.php:481
+msgid "List items style/icons"
+msgstr "リストのスタイル/アイコン"
+
+#: inc/core/class.data.php:490
+msgid "<ul>\n<li>List item</li>\n<li>List item</li>\n<li>List item</li>\n</ul>"
+msgstr "<ul>\n<li>並び項目</li>\n<li>並び項目</li>\n<li>並び項目</li>\n</ul>"
+
+#: inc/core/class.data.php:490
+msgid "Styled unordered list"
+msgstr "番号の付かないリスト"
+
+#: inc/core/class.data.php:494
+msgid "Button"
+msgstr "ボタン"
+
+#: inc/core/class.data.php:502
+msgid "Button link"
+msgstr "ボタン"
+
+#: inc/core/class.data.php:507 inc/core/class.data.php:1163
+msgid "Same tab"
+msgstr "同じタブ"
+
+#: inc/core/class.data.php:508 inc/core/class.data.php:1164
+msgid "New tab"
+msgstr "新しいタブ"
+
+#: inc/core/class.data.php:511 inc/core/class.data.php:1167
+msgid "Target"
+msgstr "ターゲット"
+
+#: inc/core/class.data.php:512
+msgid "Button link target"
+msgstr "ボタンのリンク先"
+
+#: inc/core/class.data.php:519 inc/core/class.data.php:655
+msgid "Soft"
+msgstr "ソフト"
+
+#: inc/core/class.data.php:520 inc/core/class.data.php:656
+msgid "Glass"
+msgstr "ガラス"
+
+#: inc/core/class.data.php:521 inc/core/class.data.php:657
+msgid "Bubbles"
+msgstr "泡"
+
+#: inc/core/class.data.php:522 inc/core/class.data.php:658
+msgid "Noise"
+msgstr "ノイズ"
+
+#: inc/core/class.data.php:523
+msgid "Stroked"
+msgstr "撫でる"
+
+#: inc/core/class.data.php:524
+msgid "3D"
+msgstr "3D"
+
+#: inc/core/class.data.php:527
+msgid "Button background style preset"
+msgstr "ボタンの背景スタイルプリセット"
+
+#: inc/core/class.data.php:533
+msgid "Button background color"
+msgstr "ボタンの背景色"
+
+#: inc/core/class.data.php:540
+msgid "Button text color"
+msgstr "ボタンのテキストの色"
+
+#: inc/core/class.data.php:546
+msgid "Button size"
+msgstr "ボタンサイズ"
+
+#: inc/core/class.data.php:551
+msgid "Fluid"
+msgstr "流体"
+
+#: inc/core/class.data.php:551
+msgid "Fluid buttons has 100% width"
+msgstr "流体ボタンが100%の幅を有する"
+
+#: inc/core/class.data.php:556
+msgid "Centered"
+msgstr "中央"
+
+#: inc/core/class.data.php:556
+msgid "Is button centered on the page"
+msgstr "ボタンをページの中央に配置"
+
+#: inc/core/class.data.php:562 inc/core/class.data.php:681
+#: inc/core/class.data.php:717
+msgid "Radius"
+msgstr "半径"
+
+#: inc/core/class.data.php:563
+msgid "Radius of button corners. Auto-radius calculation based on button size"
+msgstr "ボタンコーナーの半径。ボタンサイズに基づいて半径を自動算出"
+
+#: inc/core/class.data.php:568 inc/core/class.data.php:622
+msgid "Icon"
+msgstr "アイコン"
+
+#: inc/core/class.data.php:569
+msgid "You can upload custom icon for this button. Try to begin with <a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-quality icons</a>. Download archive, unpack icons and upload in this field"
+msgstr "このボタンのカスタムアイコンをアップロード可能。<a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">無料で高品質なアイコン</a>"
+
+#: inc/core/class.data.php:575
+msgid "Dark"
+msgstr "ダーク"
+
+#: inc/core/class.data.php:578
+msgid "Color of button text shadow"
+msgstr "ボタンのテキストの影の色"
+
+#: inc/core/class.data.php:583 inc/core/class.data.php:1738
+msgid "None"
+msgstr "なし"
+
+#: inc/core/class.data.php:584 inc/core/class.data.php:789
+msgid "Top"
+msgstr "上"
+
+#: inc/core/class.data.php:586 inc/core/class.data.php:790
+msgid "Bottom"
+msgstr "下"
+
+#: inc/core/class.data.php:588
+msgid "Top right"
+msgstr "右上"
+
+#: inc/core/class.data.php:589
+msgid "Top left"
+msgstr "左上"
+
+#: inc/core/class.data.php:589
+msgid "Bottom right"
+msgstr "右下"
+
+#: inc/core/class.data.php:589
+msgid "Bottom left"
+msgstr "左下"
+
+#: inc/core/class.data.php:591
+msgid "Text shadow position"
+msgstr "テキストの影の位置"
+
+#: inc/core/class.data.php:591
+msgid "Position of button text shadow"
+msgstr "ボタンのテキストの影の位置"
+
+#: inc/core/class.data.php:595
+msgid "Description"
+msgstr "説明"
+
+#: inc/core/class.data.php:596
+msgid "Small description under button text. This option is incompatible with icon."
+msgstr "ボタンの下の小さな説明。このオプションはアイコンと互換性がない"
+
+#: inc/core/class.data.php:604
+msgid "Button text"
+msgstr "ボタンのテキスト"
+
+#: inc/core/class.data.php:605
+msgid "Styled button"
+msgstr "ボタンスタイル"
+
+#: inc/core/class.data.php:609
+msgid "Service"
+msgstr "サービス"
+
+#: inc/core/class.data.php:615 inc/core/shortcodes.php:464
+msgid "Service title"
+msgstr "サービスタイトル"
+
+#: inc/core/class.data.php:617
+msgid "Service name"
+msgstr "サービス名"
+
+#: inc/core/class.data.php:623
+msgid "You can upload custom icon for this box"
+msgstr "このボックスにカスタムアイコンをアップロード可能"
+
+#: inc/core/class.data.php:629
+msgid "Icon size"
+msgstr "アイコンサイズ"
+
+#: inc/core/class.data.php:630
+msgid "Size of the uploaded icon in pixels"
+msgstr "アイコンサイズ(px単位)"
+
+#: inc/core/class.data.php:638
+msgid "Service description"
+msgstr "サービスの説明"
+
+#: inc/core/class.data.php:638
+msgid "Service box with title"
+msgstr "サービスボックスのタイトル"
+
+#: inc/core/class.data.php:648
+msgid "Box title"
+msgstr "ボックスのタイトル"
+
+#: inc/core/class.data.php:649
+msgid "Text for the box title"
+msgstr "ボックスタイトルのテキスト"
+
+#: inc/core/class.data.php:662
+msgid "Box style preset"
+msgstr "ボックススタイルプリセッ"
+
+#: inc/core/class.data.php:668
+msgid "Color"
+msgstr "色"
+
+#: inc/core/class.data.php:669
+msgid "Color for the box title and borders"
+msgstr "ボックスのタイトルと枠線の色"
+
+#: inc/core/class.data.php:675
+msgid "Title text color"
+msgstr "タイトルテキストの色"
+
+#: inc/core/class.data.php:675
+msgid "Color for the box title text"
+msgstr "ボックスのタイトルテキストの色"
+
+#: inc/core/class.data.php:682
+msgid "Box corners radius"
+msgstr "ボックスコーナー半径"
+
+#: inc/core/class.data.php:691
+msgid "Box content"
+msgstr "ボックスの内容"
+
+#: inc/core/class.data.php:692
+msgid "Colored box with caption"
+msgstr "見出しのカラーボック"
+
+#: inc/core/class.data.php:704
+msgid "Note background color"
+msgstr "ノートの背景色"
+
+#: inc/core/class.data.php:711
+msgid "Note text color"
+msgstr "ノートテキストの背景色"
+
+#: inc/core/class.data.php:717
+msgid "Note corners radius"
+msgstr "ノートテキストの色"
+
+#: inc/core/class.data.php:725
+msgid "Note text"
+msgstr "ノートテキスト"
+
+#: inc/core/class.data.php:726
+msgid "Colored box"
+msgstr "カラーボックス"
+
+#: inc/core/class.data.php:730
+msgid "Lightbox"
+msgstr "Lightbox"
+
+#: inc/core/class.data.php:737
+msgid "Iframe"
+msgstr "Iframe"
+
+#: inc/core/class.data.php:738
+msgid "Image"
+msgstr "画像"
+
+#: inc/core/class.data.php:739
+msgid "Inline (html content)"
+msgstr "インライン (HTMLコンテンツ)"
+
+#: inc/core/class.data.php:742
+msgid "Content type"
+msgstr "コンテンツタイプ"
+
+#: inc/core/class.data.php:743
+msgid "Select type of the lightbox window content"
+msgstr "Lightboxのウィンドウタイプを選択"
+
+#: inc/core/class.data.php:747
+msgid "Content source"
+msgstr "コンテンツソース"
+
+#: inc/core/class.data.php:748
+msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
+msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像コンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例:<br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTubeのビデオ (インラインフレーム)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされたイメージ (画像)<br /><b%value>http://example.com/</b> - 任意のWebページ (インラインフレーム)<br />#コンタクトフォーム - 任意のHTMLコンテンツ (インライン)"
+
+#: inc/core/class.data.php:757
+msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
+msgstr "[%prefix_button] ここをクリックして動画を再生 [/%prefix_button]"
+
+#: inc/core/class.data.php:758
+msgid "Lightbox window with custom content"
+msgstr "カスタムコンテンツとLightboxのウィンドウ"
+
+#: inc/core/class.data.php:762
+msgid "Tooltip"
+msgstr "ツールチップ"
+
+#: inc/core/class.data.php:769
+msgid "Basic: Light"
+msgstr "基本：明るい"
+
+#: inc/core/class.data.php:770
+msgid "Basic: Dark"
+msgstr "基本:暗い"
+
+#: inc/core/class.data.php:771
+msgid "Basic: Yellow"
+msgstr "基本:黄"
+
+#: inc/core/class.data.php:772
+msgid "Basic: Green"
+msgstr "基本:緑"
+
+#: inc/core/class.data.php:773
+msgid "Basic: Red"
+msgstr "基本:赤"
+
+#: inc/core/class.data.php:774
+msgid "Basic: Blue"
+msgstr "基本:青"
+
+#: inc/core/class.data.php:775
+msgid "Youtube"
+msgstr "Youtube"
+
+#: inc/core/class.data.php:776
+msgid "Tipsy"
+msgstr "ほろ酔い"
+
+#: inc/core/class.data.php:777
+msgid "Bootstrap"
+msgstr "ブートストラップ"
+
+#: inc/core/class.data.php:778
+msgid "jTools"
+msgstr "jTools"
+
+#: inc/core/class.data.php:779
+msgid "Tipped"
+msgstr "傾ける"
+
+#: inc/core/class.data.php:780
+msgid "Cluetip"
+msgstr "Cluetip"
+
+#: inc/core/class.data.php:784
+msgid "Tooltip window style"
+msgstr "ツールチップウィンドウスタイル"
+
+#: inc/core/class.data.php:795
+msgid "Position"
+msgstr "位置"
+
+#: inc/core/class.data.php:796
+msgid "Tooltip position"
+msgstr "ツールチップの位置"
+
+#: inc/core/class.data.php:801
+msgid "Shadow"
+msgstr "影"
+
+#: inc/core/class.data.php:802
+msgid "Add shadow to tooltip. This option is only works with basic styes, e.g. blue, green etc."
+msgstr "ツールチップに影を追加。このオプションは基本的なスタイルを持つ。例えば青、緑など"
+
+#: inc/core/class.data.php:807
+msgid "Rounded corners"
+msgstr "角丸"
+
+#: inc/core/class.data.php:808
+msgid "Use rounded for tooltip. This option is only works with basic styes, e.g. blue, green etc."
+msgstr "ツールチップ丸みを帯びた角を使用。このオプションは基本的なスタイルを持つ。"
+
+#: inc/core/class.data.php:822
+msgid "Font size"
+msgstr "フォントサイズ"
+
+#: inc/core/class.data.php:823
+msgid "Tooltip font size"
+msgstr "ツールチップのフォントサイズ"
+
+#: inc/core/class.data.php:827
+msgid "Tooltip title"
+msgstr "ツールチップタイトル"
+
+#: inc/core/class.data.php:828
+msgid "Enter title for tooltip window. Leave this field empty to hide the title"
+msgstr "ツールチップトウィンドウのタイトルを入力。タイトルを非表示にする場合は空白にする"
+
+#: inc/core/class.data.php:831 inc/core/shortcodes.php:573
+msgid "Tooltip text"
+msgstr "ツールチップテキスト"
+
+#: inc/core/class.data.php:832
+msgid "Tooltip content"
+msgstr "ツールチップコンテンツ"
+
+#: inc/core/class.data.php:833
+msgid "Enter tooltip content here"
+msgstr "ここにツールチップのコンテンツを入力する"
+
+#: inc/core/class.data.php:838
+msgid "Show and hide on mouse hover"
+msgstr "マウスホバーで表示と非表示"
+
+#: inc/core/class.data.php:839
+msgid "Show and hide by mouse click"
+msgstr "マウスクリックによって表示と非表示"
+
+#: inc/core/class.data.php:840
+msgid "Always visible"
+msgstr "常に表示"
+
+#: inc/core/class.data.php:843
+msgid "Behavior"
+msgstr "行動"
+
+#: inc/core/class.data.php:844
+msgid "Select tooltip behavior"
+msgstr "選択したツールチップの動作"
+
+#: inc/core/class.data.php:849
+msgid "Close button"
+msgstr "閉じるボタン"
+
+#: inc/core/class.data.php:850
+msgid "Show close button"
+msgstr "閉じるボタンを表示"
+
+#: inc/core/class.data.php:859
+msgid "[%prefix_button] Hover me to open tooltip [/%prefix_button]"
+msgstr "[%prefix_button] ボタンに表示する文字 [/%prefix_button]"
+
+#: inc/core/class.data.php:860
+msgid "Tooltip window with custom content"
+msgstr "カスタムコンテンツとウィンドウをツールチップ"
+
+#: inc/core/class.data.php:864
+msgid "Private"
+msgstr "プライベート"
+
+#: inc/core/class.data.php:875
+msgid "Private note text"
+msgstr "プライベートメモ"
+
+#: inc/core/class.data.php:876
+msgid "Private note for post authors"
+msgstr "自分用のメモ"
+
+#: inc/core/class.data.php:880
+msgid "YouTube"
+msgstr "YouTube"
+
+#: inc/core/class.data.php:887 inc/core/class.data.php:937
+#: inc/core/class.data.php:985 inc/core/class.data.php:1236
+#: inc/core/class.data.php:1326
+msgid "Url"
+msgstr "URL"
+
+#: inc/core/class.data.php:888
+msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
+msgstr "YouTubeページのURL 。例： http://youtube.com/watch?v=XXXXXX"
+
+#: inc/core/class.data.php:896 inc/core/class.data.php:945
+#: inc/core/class.data.php:993 inc/core/class.data.php:1034
+#: inc/core/class.data.php:1088 inc/core/class.data.php:1335
+#: inc/core/class.data.php:1373 inc/core/class.data.php:1422
+#: inc/core/class.data.php:1512 inc/core/class.data.php:1618
+msgid "Width"
+msgstr "幅"
+
+#: inc/core/class.data.php:897 inc/core/class.data.php:946
+#: inc/core/class.data.php:994 inc/core/class.data.php:1089
+msgid "Player width"
+msgstr "プレイヤー幅"
+
+#: inc/core/class.data.php:906 inc/core/class.data.php:955
+#: inc/core/class.data.php:1003 inc/core/class.data.php:1098
+msgid "Player height"
+msgstr "プレイヤーの高さ"
+
+#: inc/core/class.data.php:911 inc/core/class.data.php:960
+#: inc/core/class.data.php:1008 inc/core/class.data.php:1350
+#: inc/core/class.data.php:1388 inc/core/class.data.php:1435
+#: inc/core/class.data.php:1525
+msgid "Responsive"
+msgstr "応答"
+
+#: inc/core/class.data.php:912 inc/core/class.data.php:961
+#: inc/core/class.data.php:1009
+msgid "Ignore width and height parameters and make player responsive"
+msgstr "幅と高さのパラメータを無視してプレーヤーが応答"
+
+#: inc/core/class.data.php:917 inc/core/class.data.php:966
+#: inc/core/class.data.php:1040 inc/core/class.data.php:1109
+#: inc/core/class.data.php:1470 inc/core/class.data.php:1576
+msgid "Autoplay"
+msgstr "自動再生"
+
+#: inc/core/class.data.php:918 inc/core/class.data.php:967
+msgid "Play video automatically when page is loaded"
+msgstr "ページがロードされたとき自動的にビデオを再生"
+
+#: inc/core/class.data.php:926
+msgid "YouTube video"
+msgstr "YouTube video"
+
+#: inc/core/class.data.php:930
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: inc/core/class.data.php:937
+msgid "Url of Vimeo page with video"
+msgstr "ビデオによるVimeoページのURL"
+
+#: inc/core/class.data.php:975
+msgid "Vimeo video"
+msgstr "Vimeo video"
+
+#: inc/core/class.data.php:979
+msgid "Screenr"
+msgstr "Screenr"
+
+#: inc/core/class.data.php:985
+msgid "Url of Screenr page with video"
+msgstr "ビデオによるScreenrのページのURL"
+
+#: inc/core/class.data.php:1017
+msgid "Screenr video"
+msgstr "Screenr video"
+
+#: inc/core/class.data.php:1021
+msgid "Audio"
+msgstr "オーディオ"
+
+#: inc/core/class.data.php:1028 inc/core/class.data.php:1067
+msgid "File"
+msgstr "ファイル"
+
+#: inc/core/class.data.php:1029
+msgid "Audio file url. Supported formats: mp3, ogg"
+msgstr "音声ファイルのURL 。サポート形式：mp3, ogg"
+
+#: inc/core/class.data.php:1035
+msgid "Player width. You can specify width in percents and player will be responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
+msgstr "プレイヤー幅。パーセントで幅を指定することができプレイヤーはレスポンシブになります。値の例:<b%value>200px</b>、<b%value>100%</b>"
+
+#: inc/core/class.data.php:1041 inc/core/class.data.php:1110
+msgid "Play file automatically when page is loaded"
+msgstr "ページがロードされたとき自動的にファイルを再生"
+
+#: inc/core/class.data.php:1046 inc/core/class.data.php:1115
+msgid "Loop"
+msgstr "ループ"
+
+#: inc/core/class.data.php:1047 inc/core/class.data.php:1116
+msgid "Repeat when playback is ended"
+msgstr "再生が終了したときに繰り返す"
+
+#: inc/core/class.data.php:1056
+msgid "Custom audio player"
+msgstr "カスタムオーディオプレーヤー"
+
+#: inc/core/class.data.php:1060
+msgid "Video"
+msgstr "ビデオ"
+
+#: inc/core/class.data.php:1068
+msgid "Url to mp4/flv video-file"
+msgstr "ビデオファイル mp4/flvへのURL"
+
+#: inc/core/class.data.php:1073
+msgid "Poster"
+msgstr "ポスター"
+
+#: inc/core/class.data.php:1074
+msgid "Url to poster image, that will be shown before playback"
+msgstr "ポスター画像のURL。こは再生前に表示される"
+
+#: inc/core/class.data.php:1080
+msgid "Player title"
+msgstr "プレイヤータイトル"
+
+#: inc/core/class.data.php:1103
+msgid "Controls"
+msgstr "コントロール"
+
+#: inc/core/class.data.php:1104
+msgid "Show player controls (play/pause etc.) or not"
+msgstr "プレーヤーコントロール(再生/一時停止など)表示"
+
+#: inc/core/class.data.php:1125
+msgid "Custom video player"
+msgstr "カスタムビデオプレーヤー"
+
+#: inc/core/class.data.php:1129
+msgid "Table"
+msgstr "テーブル"
+
+#: inc/core/class.data.php:1136
+msgid "CSV file"
+msgstr "CSVファイル"
+
+#: inc/core/class.data.php:1137
+msgid "Upload CSV file if you want to create HTML-table from file"
+msgstr "ファイルからHTMLテーブルを作成する場合は、CSVファイルをアップロードする"
+
+#: inc/core/class.data.php:1146
+msgid "<table>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n</table>"
+msgstr "<Table>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n</Table>"
+
+#: inc/core/class.data.php:1147
+msgid "Styled table from HTML or CSV file"
+msgstr "HTMLまたはCSVファイルからスタイルテーブル"
+
+#: inc/core/class.data.php:1151
+msgid "Permalink"
+msgstr "パーマリンク"
+
+#: inc/core/class.data.php:1157
+msgid "ID"
+msgstr "ID"
+
+#: inc/core/class.data.php:1158
+msgid "Post or page ID"
+msgstr "投稿やページID"
+
+#: inc/core/class.data.php:1168
+msgid "Link target. blank - link will be opened in new window/tab"
+msgstr "リンクターゲット。空白 - リンクは新しいウィンドウ/タブで開く"
+
+#: inc/core/class.data.php:1178
+msgid "Permalink to specified post/page"
+msgstr "指定された投稿/ページへのパーマリンク"
+
+#: inc/core/class.data.php:1182
+msgid "Members"
+msgstr "メンバー"
+
+#: inc/core/class.data.php:1187 inc/core/shortcodes.php:872
+msgid "This content is for registered users only. Please %login%."
+msgstr "このコンテンツは登録ユーザーにだけ許可されています。%login%してください。"
+
+#: inc/core/class.data.php:1188
+msgid "Message"
+msgstr "メッセージ"
+
+#: inc/core/class.data.php:1188
+msgid "Message for not logged users"
+msgstr "ログインしていないユーザーへのメッセージ"
+
+#: inc/core/class.data.php:1193
+msgid "Box color"
+msgstr "ボックスの色"
+
+#: inc/core/class.data.php:1193
+msgid "This color will applied only to box for not logged users"
+msgstr "この色はログインしていないユーザーに表示するボックスに適用"
+
+#: inc/core/class.data.php:1196 inc/core/shortcodes.php:875
+msgid "login"
+msgstr "ログイン"
+
+#: inc/core/class.data.php:1197
+msgid "Login link text"
+msgstr "ログインリンクテキスト"
+
+#: inc/core/class.data.php:1197
+msgid "Text for the login link"
+msgstr "ログインリンク用のテキスト"
+
+#: inc/core/class.data.php:1201
+msgid "Login link url"
+msgstr "ログインリンクURL"
+
+#: inc/core/class.data.php:1210
+msgid "Content for logged members"
+msgstr "ログイン会員向けコンテンツ"
+
+#: inc/core/class.data.php:1211
+msgid "Content for logged in members only"
+msgstr "ログインメンバーのみの内容"
+
+#: inc/core/class.data.php:1215
+msgid "Guests"
+msgstr "ゲスト"
+
+#: inc/core/class.data.php:1225
+msgid "Content for guests"
+msgstr "ゲストのためのコンテンツ"
+
+#: inc/core/class.data.php:1225
+msgid "Content for guests only"
+msgstr "ゲストのみのコンテンツ"
+
+#: inc/core/class.data.php:1229
+msgid "RSS Feed"
+msgstr "RSSフィード"
+
+#: inc/core/class.data.php:1237
+msgid "Url to RSS-feed"
+msgstr "RSSフィードへのURL"
+
+#: inc/core/class.data.php:1242
+msgid "Limit"
+msgstr "制限"
+
+#: inc/core/class.data.php:1242
+msgid "Number of items to show"
+msgstr "表示する項目の数"
+
+#: inc/core/class.data.php:1250
+msgid "Feed grabber"
+msgstr "フィードグラバー"
+
+#: inc/core/class.data.php:1254
+msgid "Menu"
+msgstr "メニュー"
+
+#: inc/core/class.data.php:1261
+msgid "Menu name"
+msgstr "メニュー名"
+
+#: inc/core/class.data.php:1261
+msgid "Custom menu name. Ex: Main menu"
+msgstr "カスタムメニュー名。例：メインメニュー"
+
+#: inc/core/class.data.php:1269
+msgid "Custom menu by name"
+msgstr "名前によるカスタムメニュー"
+
+#: inc/core/class.data.php:1273
+msgid "Sub pages"
+msgstr "サブページ"
+
+#: inc/core/class.data.php:1280 inc/core/class.data.php:1306
+msgid "Depth"
+msgstr "深さ"
+
+#: inc/core/class.data.php:1281
+msgid "Max depth level of children pages"
+msgstr "子ページの最大深さレベル"
+
+#: inc/core/class.data.php:1286
+msgid "Parent ID"
+msgstr "親ID"
+
+#: inc/core/class.data.php:1287
+msgid "ID of the parent page. Leave blank to use current page"
+msgstr "親ページID。現在のページを使用する場合は空白にする"
+
+#: inc/core/class.data.php:1295
+msgid "List of sub pages"
+msgstr "サブページのリスト"
+
+#: inc/core/class.data.php:1299
+msgid "Siblings"
+msgstr "兄弟"
+
+#: inc/core/class.data.php:1307
+msgid "Max depth level"
+msgstr "最大深さレベル"
+
+#: inc/core/class.data.php:1315
+msgid "List of cureent page siblings"
+msgstr "現在のページ兄弟のリスト"
+
+#: inc/core/class.data.php:1319
+msgid "Document"
+msgstr "文書"
+
+#: inc/core/class.data.php:1327
+msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
+msgstr "アップロードしたドキュメントのURL。使用可能なファイル形式: doc, xls, pdf 等"
+
+#: inc/core/class.data.php:1336
+msgid "Viewer width"
+msgstr "ビューアの幅"
+
+#: inc/core/class.data.php:1345
+msgid "Viewer height"
+msgstr "ビューアの高さ"
+
+#: inc/core/class.data.php:1351
+msgid "Ignore width and height parameters and make viewer responsive"
+msgstr "幅と高さのパラメータを無視して視聴者に応答する"
+
+#: inc/core/class.data.php:1359
+msgid "Document viewer by Google"
+msgstr "Google ドキュメントビューア"
+
+#: inc/core/class.data.php:1363
+msgid "Gmap"
+msgstr "Googleマップ"
+
+#: inc/core/class.data.php:1374
+msgid "Map width"
+msgstr "地図の幅"
+
+#: inc/core/class.data.php:1383
+msgid "Map height"
+msgstr "地図の高さ"
+
+#: inc/core/class.data.php:1389
+msgid "Ignore width and height parameters and make map responsive"
+msgstr "幅と高さのパラメータを無視して地図に応答する"
+
+#: inc/core/class.data.php:1394
+msgid "Marker"
+msgstr "マーカー"
+
+#: inc/core/class.data.php:1395
+msgid "Address for the marker. You can type it in any language"
+msgstr "地図のアドレス。住所もしくは座標を入力する"
+
+#: inc/core/class.data.php:1403
+msgid "Maps by Google"
+msgstr "Googleマップ"
+
+#: inc/core/class.data.php:1407
+msgid "Slider"
+msgstr "スライダー"
+
+#: inc/core/class.data.php:1414
+msgid "Choose source gallery, that will be used for this slider"
+msgstr "このスライダーに使用するソースギャラリーを選択"
+
+#: inc/core/class.data.php:1422
+msgid "Slider width (in pixels)"
+msgstr "スライダ幅(px単位)"
+
+#: inc/core/class.data.php:1430
+msgid "Slider height (in pixels)"
+msgstr "スライダーの高さ(px単位)"
+
+#: inc/core/class.data.php:1436
+msgid "Ignore width and height parameters and make slider responsive"
+msgstr "幅と高さのパラメータを無視してスライダーに応答する"
+
+#: inc/core/class.data.php:1441 inc/core/class.data.php:1547
+#: inc/core/class.data.php:1636
+msgid "Show titles"
+msgstr "タイトルを表示"
+
+#: inc/core/class.data.php:1441
+msgid "Display slide titles"
+msgstr "スライドのタイトルを表示"
+
+#: inc/core/class.data.php:1446
+msgid "Is slider centered on the page"
+msgstr "スライダーをページの中央に配置"
+
+#: inc/core/class.data.php:1451 inc/core/class.data.php:1557
+msgid "Arrows"
+msgstr "矢印"
+
+#: inc/core/class.data.php:1451 inc/core/class.data.php:1557
+msgid "Show left and right arrows"
+msgstr "左右の矢印を表示"
+
+#: inc/core/class.data.php:1456 inc/core/class.data.php:1562
+msgid "Pagination"
+msgstr "ページネーション"
+
+#: inc/core/class.data.php:1457 inc/core/class.data.php:1563
+msgid "Show pagination"
+msgstr "ページネーションを表示"
+
+#: inc/core/class.data.php:1461 inc/core/class.data.php:1567
+msgid "Mouse wheel control"
+msgstr "マウスホイールの制御"
+
+#: inc/core/class.data.php:1462
+msgid "Allow to change slides with mouse wheel"
+msgstr "マウスホイールでスライド可能"
+
+#: inc/core/class.data.php:1471
+msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
+msgstr "スライドアニメーションの間隔を選択。自動再生を無効にするには0に設定"
+
+#: inc/core/class.data.php:1479 inc/core/class.data.php:1585
+msgid "Speed"
+msgstr "スピード"
+
+#: inc/core/class.data.php:1479 inc/core/class.data.php:1585
+msgid "Specify animation speed"
+msgstr "アニメーションの速度を指定"
+
+#: inc/core/class.data.php:1484 inc/core/class.data.php:1590
+#: inc/core/class.data.php:1642
+msgid "Links target"
+msgstr "リンクターゲット"
+
+#: inc/core/class.data.php:1485
+msgid "Open slides links in new window/tab"
+msgstr "スライドリンクを新しいウィンドウ/タブで開く"
+
+#: inc/core/class.data.php:1493
+msgid "Customizable image slider"
+msgstr "カスタマイズ可能なスライダー"
+
+#: inc/core/class.data.php:1497
+msgid "Carousel"
+msgstr "カルーセル"
+
+#: inc/core/class.data.php:1504
+msgid "Choose source gallery, that will be used for this carousel"
+msgstr "このカルーセルに使用するソースギャラリーを選択"
+
+#: inc/core/class.data.php:1512
+msgid "Carousel width (in pixels)"
+msgstr "カルーセルの幅(px単位)"
+
+#: inc/core/class.data.php:1520
+msgid "Carousel height (in pixels)"
+msgstr "カルーセルの高さ(px単位)"
+
+#: inc/core/class.data.php:1526
+msgid "Ignore width and height parameters and make carousel responsive"
+msgstr "幅と高さのパラメータを無視しカルーセルが応答する"
+
+#: inc/core/class.data.php:1533
+msgid "Items to show"
+msgstr "表示するアイテム"
+
+#: inc/core/class.data.php:1534
+msgid "How much carousel items is visible"
+msgstr "いくつカルーセル項目を表示するか"
+
+#: inc/core/class.data.php:1541
+msgid "Scroll number"
+msgstr "スクロール数"
+
+#: inc/core/class.data.php:1542
+msgid "How much items are scrolled in one transition"
+msgstr "どれくらいのアイテムが1つの移行においてスクロールされるか"
+
+#: inc/core/class.data.php:1547
+msgid "Display titles for each item"
+msgstr "各項目のタイトルを表示します。"
+
+#: inc/core/class.data.php:1552
+msgid "Is carousel centered on the page"
+msgstr "カルーセルをページ中央に配置"
+
+#: inc/core/class.data.php:1568
+msgid "Allow to rotate carousel with mouse wheel"
+msgstr "マウスホイールでカルーセルを回転することを許可"
+
+#: inc/core/class.data.php:1577
+msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
+msgstr "自動アニメーションの間隔を選択。自動再生を無効にするには0に設定"
+
+#: inc/core/class.data.php:1591
+msgid "Open carousel links in new window/tab"
+msgstr "新しいウィンドウ/タブでカルーセルのリンクを開く"
+
+#: inc/core/class.data.php:1599
+msgid "Customizable image carousel"
+msgstr "カスタマイズ可能な画像カルーセル"
+
+#: inc/core/class.data.php:1610
+msgid "Choose source gallery, that will be used for this shortcode"
+msgstr "このショートコードに使用するギャラリーのソースを選択"
+
+#: inc/core/class.data.php:1618
+msgid "Single item width (in pixels)"
+msgstr "単一アイテムの幅(px単位)"
+
+#: inc/core/class.data.php:1626
+msgid "Single item height (in pixels)"
+msgstr "単一の項目の高さ(px単位)"
+
+#: inc/core/class.data.php:1631
+msgid "Never"
+msgstr "なし"
+
+#: inc/core/class.data.php:1632
+msgid "On mouse over"
+msgstr "マウスオーバー"
+
+#: inc/core/class.data.php:1633
+msgid "Always"
+msgstr "常に"
+
+#: inc/core/class.data.php:1637
+msgid "Title display mode"
+msgstr "タイトル表示モード"
+
+#: inc/core/class.data.php:1642
+msgid "Open links in new window/tab"
+msgstr "新しいウィンドウ/タブでリンクを開く"
+
+#: inc/core/class.data.php:1650
+msgid "Customizable image gallery"
+msgstr "カスタマイズ可能なイメージギャラリー"
+
+#: inc/core/class.data.php:1654
+msgid "Posts"
+msgstr "投稿"
+
+#: inc/core/class.data.php:1659
+msgid "Template"
+msgstr "テンプレート"
+
+#: inc/core/class.data.php:1660
+msgid "<b>Do not change this field value if you do not understand description below.</b><br/>Relative path to the template file. Default templates is placed under the plugin directory (templates folder). You can copy it under your theme directory and modify as you want. You can use following default templates that already available in the plugin directory:<br/><b%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/teaser-loop.php</b> - posts loop with thumbnail and title<br/><b%value>templates/single-post.php</b> - single post template<br/><b%value>templates/list-loop.php</b> - unordered list with posts titles"
+msgstr "<b>以下の説明を理解していない場合は、このフィールドの値を変更しないでください。</b><br />テンプレート・ファイルへの相対パス。デフォルトのテンプレートはプラグインディレクトリの下に配置される。(テンプレートフォルダ)<br />テーマディレクトリの下にそれをコピーし、必要に応じて変更することができる。<br />プラグインディレクトリで既に利用可能であれば次のデフォルトのテンプレートが使用可能。<br /><b%value>templates/default-loop.php</b> - 投稿ループ<br /><b%value>templates/teaser-loop.php</b> - サムネイルとタイトルの記事ループ<br /><b%value>templates/single-post.php</b> - シングル投稿テンプレート<br /><b%value>templates/list-loop.php</b> - 順不同 記事のタイトルとリスト"
+
+#: inc/core/class.data.php:1664
+msgid "Post ID's"
+msgstr "投稿ID"
+
+#: inc/core/class.data.php:1665
+msgid "Enter comma separated ID's of the posts that you want to show"
+msgstr "表示したいIDをカンマで区切って入力"
+
+#: inc/core/class.data.php:1673
+msgid "Posts per page"
+msgstr "ページあたりの投稿数"
+
+#: inc/core/class.data.php:1674
+msgid "Specify number of posts that you want to show. Enter -1 to get all posts"
+msgstr "表示したい記事数を指定。すべての投稿を取得するには-1を入力"
+
+#: inc/core/class.data.php:1681
+msgid "Post types"
+msgstr "投稿タイプ"
+
+#: inc/core/class.data.php:1682
+msgid "Select post types. Hold Ctrl key to select multiple post types"
+msgstr "投稿タイプを選択。複数の投稿タイプを選択するにはCtrlキーを押しながら選択"
+
+#: inc/core/class.data.php:1688
+msgid "Taxonomy"
+msgstr "タクソノミー"
+
+#: inc/core/class.data.php:1689
+msgid "Select taxonomy to show posts from"
+msgstr "表示する投稿のタクソノミー"
+
+#: inc/core/class.data.php:1696
+msgid "Terms"
+msgstr "条件"
+
+#: inc/core/class.data.php:1696
+msgid "Select terms to show posts from"
+msgstr "表示する投稿の条件"
+
+#: inc/core/class.data.php:1701
+msgid "Taxonomy term operator"
+msgstr "表示する投稿の条件"
+
+#: inc/core/class.data.php:1702
+msgid "IN - posts that have any of selected categories terms<br/>NOT IN - posts that is does not have any of selected terms<br/>AND - posts that have all selected terms"
+msgstr "IN - 選択したカテゴリの条件のいずれかを持っている投稿<br />NOT IN - ある記事に選択した条件のいずれも持っていない<br />AND - 選択したすべての条件を持っている記事"
+
+#: inc/core/class.data.php:1709
+msgid "Authors"
+msgstr "投稿者"
+
+#: inc/core/class.data.php:1710
+msgid "Choose the authors whose posts you want to show"
+msgstr "表示したい投稿者を選択"
+
+#: inc/core/class.data.php:1714
+msgid "Meta key"
+msgstr "Metaキー"
+
+#: inc/core/class.data.php:1715
+msgid "Enter meta key name to show posts that have this key"
+msgstr "このキーを持っている投稿を表示するMetaキー名を入力"
+
+#: inc/core/class.data.php:1722
+msgid "Offset"
+msgstr "オフセット"
+
+#: inc/core/class.data.php:1723
+msgid "Specify offset to start posts loop not from first post"
+msgstr "最初の投稿から投稿ループを始めないためのオフセットを指定"
+
+#: inc/core/class.data.php:1728
+msgid "Descending"
+msgstr "降順"
+
+#: inc/core/class.data.php:1729
+msgid "Ascending"
+msgstr "昇順"
+
+#: inc/core/class.data.php:1732
+msgid "Order"
+msgstr "順序"
+
+#: inc/core/class.data.php:1733
+msgid "Posts order"
+msgstr "投稿順"
+
+#: inc/core/class.data.php:1739
+msgid "Post ID"
+msgstr "投稿ID"
+
+#: inc/core/class.data.php:1740
+msgid "Post author"
+msgstr "投稿者"
+
+#: inc/core/class.data.php:1741
+msgid "Post title"
+msgstr "投稿タイトル"
+
+#: inc/core/class.data.php:1742
+msgid "Post slug"
+msgstr "投稿スラッグ"
+
+#: inc/core/class.data.php:1743
+msgid "Date"
+msgstr "日付"
+
+#: inc/core/class.data.php:1743
+msgid "Last modified date"
+msgstr "最終更新日"
+
+#: inc/core/class.data.php:1744 inc/core/class.data.php:1754
+msgid "Post parent"
+msgstr "親投稿"
+
+#: inc/core/class.data.php:1745
+msgid "Random"
+msgstr "ランダム"
+
+#: inc/core/class.data.php:1745
+msgid "Comments number"
+msgstr "コメント数"
+
+#: inc/core/class.data.php:1746
+msgid "Menu order"
+msgstr "メニュー順"
+
+#: inc/core/class.data.php:1746
+msgid "Meta key values"
+msgstr "Metaキー値"
+
+#: inc/core/class.data.php:1749
+msgid "Order by"
+msgstr "順"
+
+#: inc/core/class.data.php:1750
+msgid "Order posts by"
+msgstr "投稿順"
+
+#: inc/core/class.data.php:1755
+msgid "Show childrens of entered post (enter post ID)"
+msgstr "入力した後の子供を表示 (投稿IDを入力)"
+
+#: inc/core/class.data.php:1760
+msgid "Published"
+msgstr "公開"
+
+#: inc/core/class.data.php:1761
+msgid "Pending"
+msgstr "未定"
+
+#: inc/core/class.data.php:1762
+msgid "Draft"
+msgstr "下書き"
+
+#: inc/core/class.data.php:1763
+msgid "Auto-draft"
+msgstr "自動下書き"
+
+#: inc/core/class.data.php:1764
+msgid "Future post"
+msgstr "予約投稿"
+
+#: inc/core/class.data.php:1765
+msgid "Private post"
+msgstr "個人的な投稿"
+
+#: inc/core/class.data.php:1766
+msgid "Inherit"
+msgstr "継承"
+
+#: inc/core/class.data.php:1767
+msgid "Trashed"
+msgstr "壊れた"
+
+#: inc/core/class.data.php:1768
+msgid "Any"
+msgstr "任意"
+
+#: inc/core/class.data.php:1771
+msgid "Post status"
+msgstr "投稿ステータス"
+
+#: inc/core/class.data.php:1772
+msgid "Show only posts with selected status"
+msgstr "選択した状態の投稿のみ表示"
+
+#: inc/core/class.data.php:1777
+msgid "Ignore sticky"
+msgstr "スティッキーを無視"
+
+#: inc/core/class.data.php:1778
+msgid "Select Yes to ignore posts that is sticked"
+msgstr "貼られた記事を無視する場合は[はい]にする"
+
+#: inc/core/class.data.php:1782
+msgid "Custom posts query with customizable template"
+msgstr "カスタム投稿はカスタマイズ可能なテンプレートを使用して照会します。"
+
+#: inc/core/class.generator.php:44 inc/core/class.generator.php:147
+msgid "Insert shortcode"
+msgstr "ショートコードを挿入"
+
+#: inc/core/class.generator.php:88
+msgid "Plugin settings"
+msgstr "プラグイン設定"
+
+#: inc/core/class.generator.php:89
+msgid "Plugin homepage"
+msgstr "プラグインのホームページ"
+
+#: inc/core/class.generator.php:90
+msgid "Support forums"
+msgstr "サポートフォーラム"
+
+#: inc/core/class.generator.php:97
+msgid "Search for shortcodes"
+msgstr "ショートコードを検索"
+
+#: inc/core/class.generator.php:99
+msgid "Filter by type"
+msgstr "タイプ別フィルタ"
+
+#: inc/core/class.generator.php:135
+msgid "Shortcode not specified"
+msgstr "ショートコードが指定されていません。"
+
+#: inc/core/class.generator.php:148
+msgid "Live preview"
+msgstr "プレビュー"
+
+#: inc/core/class.generator.php:149
+msgid "Close window"
+msgstr "ウィンドウを閉じる"
+
+#: inc/core/class.generator.php:153
+msgid "Click to return to the shortcodes list"
+msgstr "ショートコードのリストに戻ります"
+
+#: inc/core/class.generator.php:153
+msgid "All shortcodes"
+msgstr "全てのショートコード"
+
+#: inc/core/class.generator.php:186
+msgid "Yes"
+msgstr "はい"
+
+#: inc/core/class.generator.php:186
+msgid "No"
+msgstr "いいえ"
+
+#: inc/core/class.generator.php:190
+msgid "Max upload file size"
+msgstr "アップロードファイルの最大サイズ"
+
+#: inc/core/class.generator.php:190
+msgid "Mb"
+msgstr "MB"
+
+#: inc/core/class.generator.php:190
+msgid "How to increase"
+msgstr "増加方法"
+
+#: inc/core/class.generator.php:201
+msgid "Please wait"
+msgstr "しばらくお待ちください"
+
+#: inc/core/class.generator.php:208 inc/core/class.generator.php:296
+msgid "Untitled gallery"
+msgstr "無題のギャラリー"
+
+#: inc/core/class.generator.php:214 inc/core/class.generator.php:302
+msgid "Galleries not found"
+msgstr "ギャラリーが見つかりません"
+
+#: inc/core/class.generator.php:215
+msgid "Manage galleries"
+msgstr "ギャラリーを管理"
+
+#: inc/core/class.generator.php:215
+msgid "Reload galleries"
+msgstr "ギャラリーをリロード"
+
+#: inc/core/class.generator.php:226
+msgid "Click to set this value"
+msgstr "この値を設定する場合クリックします。"
+
+#: inc/core/class.generator.php:250
+msgid "Preview"
+msgstr "プレビュー"
+
+#: inc/core/class.generator.php:311
+msgid "Access denied"
+msgstr "アクセスが拒否されました"
+
+#: inc/core/class.requirements.php:35
+#, php-format
+msgid "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your version of WordPress (%s).<br />Reccomended WordPress version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+msgstr "<h1>プラグインが有効になっていません&hellip;</h1><p>Shortcodes UltimateはWordPressのバージョン(%s)と互換性がありません。<br />推奨 WordPressのバージョン -%s(またはそれ以上)</p><a href=\"%s\">&larr; プラグイン画面に戻る</a><a href=\"%s\"%s>続けて有効にする &rarr;</a>"
+
+#: inc/core/class.requirements.php:36
+#, php-format
+msgid "<h1>Oops! Plugin not activated&hellip;</h1> <p>Shortcodes Ultimate is not fully compatible with your PHP version (%s).<br />Reccomended PHP version &ndash; %s (or higher).</p><a href=\"%s\">&larr; Return to the plugins screen</a> <a href=\"%s\"%s>Continue and activate anyway &rarr;</a>"
+msgstr "<h1>プラグインが有効になっていません&hellip;</h1><p>Shortcodes UltimateはPHPのバージョン(%s)と互換性がありません。<br />推奨 PHPバージョン - %s(またはそれ以上)</p><a href=\"%s\">&larr; プラグイン画面に戻る</a><a href=\"%s\"%s>続けて有効にする &rarr;</a>"
+
+#: inc/core/class.shortcodes-ultimate.php:25 inc/core/class.widget.php:40
+#: inc/core/class.widget.php:82
+msgid "Shortcodes Ultimate"
+msgstr "Shortcodes Ultimate"
+
+#: inc/core/class.shortcodes-ultimate.php:26 inc/core/class.vote.php:37
+msgid "Vladimir Anokhin"
+msgstr "Vladimir Anokhin"
+
+#: inc/core/class.shortcodes-ultimate.php:27
+msgid "Supercharge your WordPress theme with mega pack of shortcodes"
+msgstr "ショートコードのメガ・パックで、あなたのWordPressテーマに過給します"
+
+#: inc/core/class.shortcodes-ultimate.php:88
+msgid "Where to start?"
+msgstr "どこで開始？"
+
+#: inc/core/class.shortcodes-ultimate.php:100 inc/views/about.php:4
+msgid "Project homepage"
+msgstr "プロジェクトのホームページ"
+
+#: inc/core/class.shortcodes-ultimate.php:101 inc/views/about.php:10
+msgid "Support forum"
+msgstr "サポートフォーラム"
+
+#: inc/core/class.shortcodes-ultimate.php:102 inc/views/about.php:12
+msgid "Changelog"
+msgstr "変更履歴"
+
+#: inc/core/class.shortcodes-ultimate.php:112
+msgid "About"
+msgstr "About"
+
+#: inc/core/class.shortcodes-ultimate.php:117
+msgid "Custom formatting"
+msgstr "カスタムフォーマッティング"
+
+#: inc/core/class.shortcodes-ultimate.php:118
+msgid "Disable this option if you have some problems with other plugins or content formatting"
+msgstr "他のプラグインやコンテンツのフォーマットに問題がある場合は、このオプションを無効にしてください。"
+
+#: inc/core/class.shortcodes-ultimate.php:118
+#: inc/core/class.shortcodes-ultimate.php:126
+msgid "Documentation article"
+msgstr "ドキュメンテーション記事"
+
+#: inc/core/class.shortcodes-ultimate.php:122
+#: inc/core/class.shortcodes-ultimate.php:130
+#: inc/core/class.shortcodes-ultimate.php:138
+msgid "Enabled"
+msgstr "有効"
+
+#: inc/core/class.shortcodes-ultimate.php:125
+msgid "Compatibility mode"
+msgstr "互換モード"
+
+#: inc/core/class.shortcodes-ultimate.php:126
+msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
+msgstr "同じようなショートコードを使用した他のプラグインと問題がある場合は、このオプションを有効にしてください。"
+
+#: inc/core/class.shortcodes-ultimate.php:126
+msgid "etc."
+msgstr "等"
+
+#: inc/core/class.shortcodes-ultimate.php:133
+msgid "Skip default values"
+msgstr "デフォルト値をスキップ"
+
+#: inc/core/class.shortcodes-ultimate.php:134
+msgid "Enable this option and the generator will insert a shortcode without default attribute values that you have not changed. As a result, the generated code will be shorter."
+msgstr "このオプションを有効にしてください。変更していないデフォルトの属性値でジェネレーターはショーコードを挿入します。その結果、生成するコードはより短くなります。"
+
+#: inc/core/class.shortcodes-ultimate.php:141
+msgid "Skin"
+msgstr "スキン"
+
+#: inc/core/class.shortcodes-ultimate.php:142
+#, php-format
+msgid "Choose skin for shortcodes.<br /><a href=\"%s\" target=\"_blank\">Learn how to create custom skin</a><br /><a href=\"%s\" target=\"_blank\"><b>Download more skins</b></a>"
+msgstr "ショートコードのスキンを選択してください。<br /><a href=\"%s\" target=\"_blank\">カスタムスキンの作成方法を学んでください。</a><br /><a href=\"%s\" target=\"_blank\"><b>スキンをダウンロードする。</b></a>"
+
+#: inc/core/class.shortcodes-ultimate.php:148
+msgid "Custom CSS"
+msgstr "カスタムCSS"
+
+#: inc/core/class.shortcodes-ultimate.php:151
+msgid "Galleries"
+msgstr "ギャラリー"
+
+#: inc/core/class.shortcodes-ultimate.php:154
+msgid "Cheatsheet"
+msgstr "虎の巻"
+
+#: inc/core/class.vote.php:39
+msgid "Hello, my name is Vladimir Anokhin, and I am developer of plugin <b>Shortcodes Ultimate</b>.<br>If you like this plugin, please write a few words about it at the wordpress.org or twitter. It will help other people find this useful plugin more quickly.<br><b>Thank you!</b>"
+msgstr "こんにちは、私の名前はVladimir Anokhin、私はプラグイン<b>Shortcodes Ultimate</b>の開発者がです。<br>もし良ければ、このプラグインをwordpress.orgやTwitterで話題にしてください。それは他の人がより迅速に、この便利なプラグインを見つけやすくなります。ありがとうございました！"
+
+#: inc/core/class.vote.php:41
+msgid "Rate plugin"
+msgstr "プラグインを評価"
+
+#: inc/core/class.vote.php:42
+msgid "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
+msgstr "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
+
+#: inc/core/class.vote.php:42
+msgid "Tweet"
+msgstr "Tweet"
+
+#: inc/core/class.vote.php:43
+msgid "No, thanks"
+msgstr "何もしない"
+
+#: inc/core/class.vote.php:44
+msgid "or"
+msgstr "または"
+
+#: inc/core/class.vote.php:45
+msgid "Remind me later"
+msgstr "後で通知"
+
+#: inc/core/class.widget.php:36
+msgid "Special Shortcodes Ultimate widget"
+msgstr "Special Shortcodes Ultimateウィジェット"
+
+#: inc/core/class.widget.php:87
+msgid "Title:"
+msgstr "タイトル:"
+
+#: inc/core/shortcodes.php:483
+msgid "This is box title"
+msgstr "これはボックスのタイトルです。"
+
+#: inc/core/shortcodes.php:663 inc/core/shortcodes.php:696
+#: inc/core/shortcodes.php:730 inc/core/shortcodes.php:764
+#: inc/core/shortcodes.php:804
+msgid "please specify correct url"
+msgstr "正しいURLを指定してください。"
+
+#: inc/core/shortcodes.php:1006
+msgid "This menu doesn't exists, or has no elements"
+msgstr "このメニューには要素が存在しないか、または持っていません。"
+
+#: inc/core/shortcodes.php:1094 inc/core/shortcodes.php:1180
+#: inc/core/shortcodes.php:1249
+msgid "images not found"
+msgstr "画像が見つかりません。"
+
+#: inc/core/shortcodes.php:1447
+msgid "template not found"
+msgstr "テンプレートが見つかりません。"
+
+#: inc/core/tools.php:234
+msgid "year"
+msgstr "年"
+
+#: inc/core/tools.php:235
+msgid "month"
+msgstr "月"
+
+#: inc/core/tools.php:236
+msgid "week"
+msgstr "週"
+
+#: inc/core/tools.php:237
+msgid "day"
+msgstr "日"
+
+#: inc/core/tools.php:238
+msgid "hour"
+msgstr "時間"
+
+#: inc/core/tools.php:239
+msgid "minute"
+msgstr "分"
+
+#: inc/core/tools.php:248 inc/core/tools.php:255
+msgid "s"
+msgstr "s"
+
+#: inc/core/tools.php:291
+msgid "username not specified"
+msgstr "ユーザ名を指定していません。"
+
+#: inc/core/tools.php:296
+msgid "no public messages"
+msgstr "パブリックメッセージがありません。"
+
+#: inc/views/about.php:2
+msgid "Welcome to Shortcodes Ultimate"
+msgstr "Shortcodes Ultimateへようこそ"
+
+#: inc/views/about.php:2
+msgid "A real swiss army knife for WordPress"
+msgstr "Special Shortcodes Ultimateウィジェット"
+
+#: inc/views/about.php:6
+msgid "Addons"
+msgstr "アドオン"
+
+#: inc/views/about.php:8
+msgid "Documentation"
+msgstr "ドキュメンテーション"
+
+#: inc/views/about.php:14
+msgid "GitHub"
+msgstr "GitHub"
+
+#: inc/views/about.php:16
+msgid "Contact author"
+msgstr "作者に連絡"
+
+#: inc/views/about.php:19
+msgid "Plugin features"
+msgstr "プラグインの機能"
+
+#: inc/views/about.php:21
+msgid "40+ amazing shortcodes"
+msgstr "40+ amazing shortcodes"
+
+#: inc/views/about.php:22
+msgid "Power of CSS3 transitions"
+msgstr "Power of CSS3 transitions"
+
+#: inc/views/about.php:23
+msgid "Handy shortcodes generator"
+msgstr "Handy shortcodes generator"
+
+#: inc/views/about.php:24
+msgid "International"
+msgstr "International"
+
+#: inc/views/about.php:25
+msgid "Documented API"
+msgstr "Documented API"
+
+#: inc/views/about.php:29
+msgid "What is a shortcode?"
+msgstr "ショートコードとは何ですか？"
+
+#: inc/views/about.php:30
+msgid "<strong>Shortcode</strong> is a WordPress-specific code that lets you do nifty things with very little effort."
+msgstr "<strong>ショートコード</strong>は、ごくわずかな努力でしか素晴らしいことができるWordPressに特有のコードです。"
+
+#: inc/views/about.php:31
+msgid "Shortcodes can embed files or create objects that would normally require lots of complicated, ugly code in just one line. Shortcode = shortcut."
+msgstr "ショートコードはファイルを埋め込みや1行だけで複雑なコードを多くを必要とするオブジェクトを作成することができます。 ショートコード = ショートカット"
+
+#: inc/views/about.php:35
+msgid "How does it works"
+msgstr "仕組み"
+
+#: inc/views/about.php:39
+msgid "More videos"
+msgstr "その他のビデオ"
+
+#: inc/views/about.php:41
+msgid "Shortcodes Ultimate Tutorial"
+msgstr "Shortcodes Ultimateのチュートリアル"
+
+#: inc/views/about.php:42
+msgid "How to use special widget"
+msgstr "特殊なウィジェットの使用方法"
+
+#: inc/views/about.php:43
+msgid "How to create Carousel"
+msgstr "カルーセルの作製方法"
+
+#: inc/views/about.php:44
+msgid "How to create image gallery"
+msgstr "イメージギャラリーの作製方法"
+
+#: inc/views/cheatsheet.php:5
+msgid "Shortcode"
+msgstr "ショートコード"
+
+#: inc/views/cheatsheet.php:6
+msgid "Parameters"
+msgstr "パラメータ"
+
+#: inc/views/cheatsheet.php:7
+msgid "Example"
+msgstr "例"
+
+#: inc/views/cheatsheet.php:17
+msgid "Demo"
+msgstr "デモ"
+
+#: inc/views/cheatsheet.php:49
+msgid "Default value"
+msgstr "デフォルト値"
+
+#: inc/views/cheatsheet.php:55
+msgid "-- no parameters --"
+msgstr "-- パラメータなし --"
+
+#: inc/views/closetab.php:4
+msgid "Save changes"
+msgstr "変更を保存"
+
+#: inc/views/closetab.php:5
+msgid "Saving"
+msgstr "保存中"
+
+#: inc/views/closetab.php:6
+msgid "Saved"
+msgstr "保存しました"
+
+#: inc/views/closetab.php:7
+msgid "This action will remove all your custom CSS, galleries and settings. Are you sure? This action cannot be undone!"
+msgstr "カスタムCSS、ギャラリーや設定がすべて削除されます。この操作は元に戻すことはできません。"
+
+#: inc/views/closetab.php:7
+msgid "Restore default settings"
+msgstr "デフォルト設定を復元"
+
+#: inc/views/code.php:5
+msgid "Insert code"
+msgstr "コードを挿入"
+
+#: inc/views/css.php:3
+msgid "You can see the original styles to override it"
+msgstr "上書きするオリジナルスタイルを見ることができます。"
+
+#: inc/views/css.php:17
+msgid "You can use next variables in your custom CSS"
+msgstr "カスタムCSSで次の変数が使用可能です。"
+
+#: inc/views/css.php:18
+msgid "home url"
+msgstr "ホームのURL"
+
+#: inc/views/css.php:19
+msgid "theme url"
+msgstr "テーマのURL"
+
+#: inc/views/css.php:20
+msgid "plugin url"
+msgstr "プラグインのURL"
+
+#: inc/views/galleries.php:2
+msgid "Are you sure that you want to delete this gallery? This action can't be undone!"
+msgstr "このギャラリーを削除してもよろしいですか？この操作は元に戻すことはできません。"
+
+#: inc/views/galleries.php:2
+msgid "Are you sure that you want to delete this image? This action can't be undone!"
+msgstr "この画像を削除してもよろしいですか？この操作は元に戻すことはできません。"
+
+#: inc/views/galleries.php:4
+msgid "Create new gallery"
+msgstr "新しいギャラリーを作成"
+
+#: inc/views/galleries.php:17 inc/views/galleries.php:72
+msgid "Enter gallery name"
+msgstr "ギャラリー名を入力してください。"
+
+#: inc/views/galleries.php:19 inc/views/galleries.php:74
+msgid "Edit gallery"
+msgstr "ギャラリーを編集"
+
+#: inc/views/galleries.php:20 inc/views/galleries.php:75
+msgid "Save &amp; close"
+msgstr "保存して閉じる"
+
+#: inc/views/galleries.php:21 inc/views/galleries.php:50
+#: inc/views/galleries.php:76 inc/views/galleries.php:105
+msgid "Close"
+msgstr "閉じる"
+
+#: inc/views/galleries.php:22 inc/views/galleries.php:41
+#: inc/views/galleries.php:77 inc/views/galleries.php:96
+msgid "Delete"
+msgstr "削除"
+
+#: inc/views/galleries.php:40 inc/views/galleries.php:95
+msgid "Edit"
+msgstr "編集"
+
+#: inc/views/notifications.php:5
+msgid "Instructions"
+msgstr "説明書"
+
+#: inc/views/notifications.php:13 inc/views/notifications.php:21
+#: inc/views/notifications.php:29 inc/views/notifications.php:37
+msgid "Click to close"
+msgstr "クリックして閉じる"
+
+#: inc/views/settings.php:12
+msgid "For full functionality of this page it is reccomended to enable javascript."
+msgstr "このページの完全な機能はJavaScriptの有効が推奨されています。"
+
+#: inc/views/settings.php:14
+msgid "Settings reseted successfully"
+msgstr "設定をリセットしました。"
+
+#: inc/views/settings.php:15
+msgid "There is already default settings"
+msgstr "デフォルト設定が既に存在します。"
+
+#: inc/views/settings.php:16
+msgid "Settings saved successfully"
+msgstr "設定を保存しました"
+
+#: inc/views/settings.php:17
+msgid "Settings not saved, because there is no changes"
+msgstr "何も変更がないので設定は保存されません。"
+
+#: inc/views/upload.php:7
+msgid "Upload"
+msgstr "アップロード"
+
+#: templates/default-loop.php:15 templates/single-post.php:18
+msgid "Posted"
+msgstr "投稿"
+
+#: templates/default-loop.php:19 templates/single-post.php:18
+msgid "0 comments"
+msgstr "コメントなし"
+
+#: templates/default-loop.php:19 templates/single-post.php:18
+msgid "1 comment"
+msgstr "1件のコメント"
+
+#: templates/default-loop.php:19 templates/single-post.php:18
+msgid "%n comments"
+msgstr "%n件のコメント"
+
+#: templates/default-loop.php:27 templates/list-loop.php:18
+#: templates/single-post.php:30 templates/teaser-loop.php:22
+msgid "Posts not found"
+msgstr "投稿が見つかりません。"
+
+msgid "Is this column centered on the page"
+msgstr "この列はページの中央に配置される"
