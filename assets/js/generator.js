@@ -230,7 +230,7 @@ jQuery(document).ready(function ($) {
 				// Init upload buttons
 				$('.su-generator-upload-button').each(function () {
 					var $button = $(this),
-						$val = $(this).parents('.su-generator-attr-container').find('.su-generator-upload-value'),
+						$val = $(this).parents('.su-generator-attr-container').find('input:text'),
 						file;
 					$button.on('click', function (e) {
 						e.preventDefault();
@@ -260,13 +260,50 @@ jQuery(document).ready(function ($) {
 						file.open();
 					});
 				});
+				// Init icon pickers
+				$('.su-generator-icon-picker-button').each(function () {
+					var $button = $(this),
+						$field = $(this).parents('.su-generator-attr-container'),
+						$val = $field.find('input:text'),
+						$picker = $field.find('.su-generator-icon-picker');
+
+					$button.click(function (e) {
+						$picker.toggleClass('su-generator-icon-picker-visible');
+						if ($picker.html() !== '') return;
+						// Load icons
+						$.ajax({
+							type: 'POST',
+							url: ajaxurl,
+							data: {
+								action: 'su_generator_icons'
+							},
+							dataType: 'json',
+							beforeSend: function () {
+								// Show loading animation
+								$picker.html(su_generator.loading_icons + '&hellip;');
+							},
+							success: function (data) {
+								$picker.html('');
+								$.each(data, function (icon) {
+									$picker.append('<i class="icon-' + data[icon] + '" title="' + data[icon] + '"></i>');
+								});
+								$picker.find('i').click(function (e) {
+									$val.val('icon: ' + $(this).attr('title'));
+									$picker.removeClass('su-generator-icon-picker-visible');
+									$val.trigger('change');
+									e.preventDefault();
+								});
+							}
+						});
+						e.preventDefault();
+					});
+				});
 				// Init switches
 				$('.su-generator-switch').click(function (e) {
 					// Prepare data
 					var $switch = $(this),
 						$value = $switch.parent().children('input'),
-						is_on = !! ($value.val() ===
-							'yes');
+						is_on = !! ($value.val() === 'yes');
 					// Disable
 					if (is_on) {
 						// Change class

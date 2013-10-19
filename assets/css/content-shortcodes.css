@@ -186,28 +186,30 @@
 	padding: 0 !important;
 }
 .su-list ul li {
+	position: relative;
 	list-style-type: none !important;
 	display: block !important;
+	line-height: 1.3em;
 	margin: 0 !important;
-	padding: 0.15em 0 0.15em 26px !important;
+	padding: 4px 0 4px 2em !important;
 }
-.su-list-style-star li { background: 0 50% url('../images/lists/list-style-star.png') no-repeat !important }
-.su-list-style-arrow li { background: 0 50% url('../images/lists/list-style-arrow.png') no-repeat !important }
-.su-list-style-check li { background: 0 50% url('../images/lists/list-style-check.png') no-repeat !important }
-.su-list-style-cross li { background: 0 50% url('../images/lists/list-style-cross.png') no-repeat !important }
-.su-list-style-thumbs li { background: 0 50% url('../images/lists/list-style-thumbs.png') no-repeat !important }
-.su-list-style-link li { background: 0 50% url('../images/lists/list-style-link.png') no-repeat !important }
-.su-list-style-gear li { background: 0 50% url('../images/lists/list-style-gear.png') no-repeat !important }
-.su-list-style-time li { background: 0 50% url('../images/lists/list-style-time.png') no-repeat !important }
-.su-list-style-note li { background: 0 50% url('../images/lists/list-style-note.png') no-repeat !important }
-.su-list-style-plus li { background: 0 50% url('../images/lists/list-style-plus.png') no-repeat !important }
-.su-list-style-guard li { background: 0 50% url('../images/lists/list-style-guard.png') no-repeat !important }
-.su-list-style-event li { background: 0 50% url('../images/lists/list-style-event.png') no-repeat !important }
-.su-list-style-idea li { background: 0 50% url('../images/lists/list-style-idea.png') no-repeat !important }
-.su-list-style-settings li { background: 0 50% url('../images/lists/list-style-settings.png') no-repeat !important }
-.su-list-style-twitter li { background: 0 50% url('../images/lists/list-style-twitter.png') no-repeat !important }
-.su-list-style-check li.x { background: 0 50% url('../images/lists/list-style-cross.png') no-repeat !important }
-.su-list-style-cross li.v { background: 0 50% url('../images/lists/list-style-check.png') no-repeat !important }
+.su-list ul li img {
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 1.3em;
+	height: 1.3em;
+	line-height: 1.3em;
+}
+.su-list ul li i {
+	position: absolute;
+	left: 0;
+	top: 4px;
+	width: 1.3em;
+	height: 1.3em;
+	line-height: 1.3em;
+	text-align: center;
+}
 
 /*		Button
 ---------------------------------------------------------------*/
@@ -246,6 +248,14 @@
 	box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	-webkit-box-shadow: none !important;
+}
+.su-button i {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin: 0 0.5em 0 0 !important;
+	text-align: center;
+	line-height: 1em;
 }
 .su-button.su-button-float-icon img { margin: 0 0.5em !important }
 .su-button small {

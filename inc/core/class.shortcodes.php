@@ -191,11 +191,83 @@ class Shortcodes_Ultimate_Shortcodes {
 
 	public static function su_list( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'style' => 'star',
+				'icon' => 'icon: star',
+				'icon_color' => '#333',
+				'style' => null,
 				'class' => ''
 			), $atts );
+		// Backward compatibility // 4.2.3+
+		if ( $atts['style'] !== null ) {
+			switch ( $atts['style'] ) {
+			case 'star':
+				$atts['icon'] = 'icon: star';
+				$atts['icon_color'] = '#ffd647';
+				break;
+			case 'arrow':
+				$atts['icon'] = 'icon: long-arrow-right';
+				$atts['icon_color'] = '#00d1ce';
+				break;
+			case 'check':
+				$atts['icon'] = 'icon: ok';
+				$atts['icon_color'] = '#17bf20';
+				break;
+			case 'cross':
+				$atts['icon'] = 'icon: remove';
+				$atts['icon_color'] = '#ff142b';
+				break;
+			case 'thumbs':
+				$atts['icon'] = 'icon: thumbs-up-alt';
+				$atts['icon_color'] = '#8a8a8a';
+				break;
+			case 'link':
+				$atts['icon'] = 'icon: external-link';
+				$atts['icon_color'] = '#5c5c5c';
+				break;
+			case 'gear':
+				$atts['icon'] = 'icon: cog';
+				$atts['icon_color'] = '#ccc';
+				break;
+			case 'time':
+				$atts['icon'] = 'icon: time';
+				$atts['icon_color'] = '#a8a8a8';
+				break;
+			case 'note':
+				$atts['icon'] = 'icon: edit';
+				$atts['icon_color'] = '#f7d02c';
+				break;
+			case 'plus':
+				$atts['icon'] = 'icon: plus-sign';
+				$atts['icon_color'] = '#61dc3c';
+				break;
+			case 'guard':
+				$atts['icon'] = 'icon: shield';
+				$atts['icon_color'] = '#1bbe08';
+				break;
+			case 'event':
+				$atts['icon'] = 'icon: bullhorn';
+				$atts['icon_color'] = '#ff4c42';
+				break;
+			case 'idea':
+				$atts['icon'] = 'icon: sun';
+				$atts['icon_color'] = '#ffd880';
+				break;
+			case 'settings':
+				$atts['icon'] = 'icon: cogs';
+				$atts['icon_color'] = '#8a8a8a';
+				break;
+			case 'twitter':
+				$atts['icon'] = 'icon: twitter-sign';
+				$atts['icon_color'] = '#00ced6';
+				break;
+			}
+		}
+		if ( strpos( $atts['icon'], 'icon:' ) !== false ) {
+			$atts['icon'] = '<i class="icon-' . trim( str_replace( 'icon:', '', $atts['icon'] ) ) . '" style="color:' . $atts['icon_color'] . '"></i>';
+			Shortcodes_Ultimate_Assets::add( 'css', 'font-awesome' );
+		}
+		else $atts['icon'] = '<img src="' . $atts['icon'] . '" alt="" />';
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-content-shortcodes' );
-		return '<div class="su-list su-list-style-' . $atts['style'] . su_ecssc( $atts ) . '">' . su_do_shortcode( $content, 'l' ) . '</div>';
+		return '<div class="su-list su-list-style-' . $atts['style'] . su_ecssc( $atts ) . '">' . str_replace( '<li>', '<li>' . $atts['icon'] . ' ', su_do_shortcode( $content, 'l' ) ) . '</div>';
 	}
 
 	public static function button( $atts = null, $content = null ) {
@@ -212,6 +284,7 @@ class Shortcodes_Ultimate_Shortcodes {
 				'center'     => 'no',
 				'radius'     => 'auto',
 				'icon'       => false,
+				'icon_color' => '#FFFFFF',
 				'ts_color'   => 'dark',
 				'ts_pos'     => 'none',
 				'desc'       => '',
@@ -279,8 +352,8 @@ class Shortcodes_Ultimate_Shortcodes {
 		);
 		// CSS rules for <img> tag
 		$img_rules = array(
-			'width'  => round( $styles['size'] * 1.5 ) . 'px',
-			'height' => round( $styles['size'] * 1.5 ) . 'px'
+			'width'     => round( $styles['size'] * 1.5 ) . 'px',
+			'height'    => round( $styles['size'] * 1.5 ) . 'px'
 		);
 		// CSS rules for <small> tag
 		$small_rules = array(
@@ -302,7 +375,14 @@ class Shortcodes_Ultimate_Shortcodes {
 		// Wide class
 		if ( $atts['wide'] === 'yes' ) $classes[] = 'su-button-wide';
 		// Prepare icon
-		$icon = ( $atts['icon'] ) ? '<img src="' . $atts['icon'] . '" alt="' . esc_attr( $content ) . '" style="' . implode( $img_css, ';' ) . '" />' : '';
+		if ( $atts['icon'] ) {
+			if ( strpos( $atts['icon'], 'icon:' ) !== false ) {
+				$icon = '<i class="icon-' . trim( str_replace( 'icon:', '', $atts['icon'] ) ) . '" style="font-size:' . $styles['size'] . 'px;color:' . $atts['icon_color'] . '"></i>';
+				Shortcodes_Ultimate_Assets::add( 'css', 'font-awesome' );
+			}
+			else $icon = '<img src="' . $atts['icon'] . '" alt="' . esc_attr( $content ) . '" style="' . implode( $img_css, ';' ) . '" />';
+		}
+		else $icon = '';
 		// Prepare <small> with description
 		$desc = ( $atts['desc'] ) ? '<small style="' . implode( $small_css, ';' ) . '">' . su_scattr( $atts['desc'] ) . '</small>' : '';
 		// Wrap with div if button centered
@@ -326,13 +406,23 @@ class Shortcodes_Ultimate_Shortcodes {
 
 	public static function service( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'title' => __( 'Service title', 'su' ),
-				'icon'  => plugins_url( 'assets/images/service.png', SU_PLUGIN_FILE ),
-				'size'  => 32,
-				'class' => ''
+				'title'       => __( 'Service title', 'su' ),
+				'icon'        => plugins_url( 'assets/images/service.png', SU_PLUGIN_FILE ),
+				'icon_color'  => '#333',
+				'size'        => 32,
+				'class'       => ''
 			), $atts );
+		// Built-in icon
+		if ( strpos( $atts['icon'], 'icon:' ) !== false ) {
+			$atts['icon'] = '<i class="icon-' . trim( str_replace( 'icon:', '', $atts['icon'] ) ) . '" style="font-size:' . $atts['size'] . 'px;color:' . $atts['icon_color'] . '"></i>';
+			Shortcodes_Ultimate_Assets::add( 'css', 'font-awesome' );
+		}
+		// Uploaded icon
+		else {
+			$atts['icon'] = '<img src="' . $atts['icon'] . '" width="' . $atts['size'] . '" height="' . $atts['size'] . '" alt="' . $atts['title'] . '" />';
+		}
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-box-shortcodes' );
-		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding:' . round( ( $atts['size'] - 16 ) / 2 ) . 'px 0 ' . round( ( $atts['size'] - 16 ) / 2 ) . 'px ' . ( $atts['size'] + 15 ) . 'px"><img src="' . su_scattr( $atts['icon'] ) . '" width="' . $atts['size'] . '" height="' . $atts['size'] . '" alt="' . $atts['title'] . '" /> ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content" style="padding:0 0 0 ' . ( $atts['size'] + 15 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding-left:' . round( $atts['size'] + 14 ) . 'px;height:' . $atts['size'] . 'px;line-height:' . $atts['size'] . 'px">' . $atts['icon'] . ' ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content" style="padding-left:' . round( $atts['size'] + 14 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	public static function box( $atts = null, $content = null ) {
@@ -690,7 +780,7 @@ class Shortcodes_Ultimate_Shortcodes {
 				'container'   => false,
 				'fallback_cb' => array( __CLASS__, 'menu_fb' ),
 				'class'       => $atts['class']
-				) );
+			) );
 		return ( $atts['name'] ) ? $return : false;
 	}
 
@@ -974,7 +1064,7 @@ class Shortcodes_Ultimate_Shortcodes {
 			'post_type'      => explode( ',', $post_type ),
 			'posts_per_page' => $posts_per_page,
 			'tag'            => $tag
-			);
+		);
 		// Ignore Sticky Posts
 		if ( $ignore_sticky_posts ) $args['ignore_sticky_posts'] = true;
 		// Meta key (for ordering)

@@ -50,27 +50,24 @@ class Shortcodes_Ultimate_Assets {
 		wp_register_script( 'magnific-popup', $shult->assets( 'js', 'magnific-popup.js' ), array( 'jquery' ), '0.9.7', true );
 		// Ace
 		wp_register_script( 'ace', $shult->assets( 'js', 'ace/ace.js' ), false, '1.1.01', true );
-		// Iframe transport
-		wp_register_script( 'iframe-transport', $shult->assets( 'js', 'iframe-transport.js' ), array( 'jquery' ), '1.7', true );
-		// File upload
-		wp_register_script( 'file-upload', $shult->assets( 'js', 'file-upload.js' ), array( 'iframe-transport', 'jquery-ui-widget' ), '5.31.6', true );
 		// Swiper
 		wp_register_script( 'swiper', $shult->assets( 'js', 'swiper.js' ), array( 'jquery' ), $shult->version, true );
 		// jPlayer
 		wp_register_script( 'jplayer', $shult->assets( 'js', 'jplayer.js' ), array( 'jquery' ), $shult->version, true );
 		// Options page
 		wp_register_style( 'su-options-page', $shult->assets( 'css', 'options-page.css' ), false, $shult->version, 'all' );
-		wp_register_script( 'su-options-page', $shult->assets( 'js', 'options-page.js' ), array( 'magnific-popup', 'file-upload', 'jquery-ui-sortable', 'ace', 'jsrender' ), $shult->version, true );
+		wp_register_script( 'su-options-page', $shult->assets( 'js', 'options-page.js' ), array( 'magnific-popup', 'jquery-ui-sortable', 'ace', 'jsrender' ), $shult->version, true );
 		wp_localize_script( 'su-options-page', 'su_options_page', array(
 				'upload_title' => __( 'Choose files', 'su' ),
 				'upload_insert' => __( 'Add selected files', 'su' )
 			) );
 		// Generator
 		wp_register_style( 'su-generator', $shult->assets( 'css', 'generator.css' ), array( 'farbtastic', 'magnific-popup' ), $shult->version, 'all' );
-		wp_register_script( 'su-generator', $shult->assets( 'js', 'generator.js' ), array( 'file-upload', 'farbtastic', 'magnific-popup', 'qtip' ), $shult->version, true );
+		wp_register_script( 'su-generator', $shult->assets( 'js', 'generator.js' ), array( 'farbtastic', 'magnific-popup', 'qtip' ), $shult->version, true );
 		wp_localize_script( 'su-generator', 'su_generator', array(
 				'upload_title' => __( 'Choose file', 'su' ),
-				'upload_insert' => __( 'Insert', 'su' )
+				'upload_insert' => __( 'Insert', 'su' ),
+				'loading_icons' => __( 'Please wait', 'su' )
 			) );
 		// Shortcodes stylesheets
 		wp_register_style( 'su-content-shortcodes', self::skin_url( 'content-shortcodes.css' ), false, $shult->version, 'all' );
@@ -158,7 +155,7 @@ class Shortcodes_Ultimate_Assets {
 		if ( $_GET['page'] !== $shult->slug ) return;
 		// Request assets
 		self::add( 'css', array( 'magnific-popup', 'ace', 'su-options-page' ) );
-		self::add( 'js', array( 'jquery', 'magnific-popup', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-sortable', 'iframe-transport', 'file-upload', 'jsrender', 'su-options-page' ) );
+		self::add( 'js', array( 'jquery', 'magnific-popup', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'jquery-ui-sortable', 'jsrender', 'su-options-page' ) );
 	}
 
 	/**

@@ -95,16 +95,14 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
-= 4.2.3 =
+= 4.3 =
+* IMPORTANT: removed old list icons. These icons replaced with new font-awesome icons
+* New icon picker for [service], [button] and [list]
 * Media manager is now works on widgets page
 * Shortcodes inside of [button]
 * Fixed fatal error in [media]
-
-= 4.2.2 =
 * New media manager added for galleries manager
 * New media manager added to the file fields in Generator
-
-= 4.2.1 =
 * Z-index for visual composer - [forum topic](http://wordpress.org/support/topic/compatible-with-visual-composer)
 * New attr for [button] onclick
 * Fixed settings page

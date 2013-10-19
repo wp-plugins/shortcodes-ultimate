@@ -18,6 +18,7 @@ class Shortcodes_Ultimate_Generator {
 		add_action( 'wp_ajax_su_generator_preview',   array( __CLASS__, 'preview' ) );
 		add_action( 'wp_ajax_su_generator_get_terms', array( __CLASS__, 'get_terms' ) );
 		add_action( 'wp_ajax_su_generator_upload',    array( __CLASS__, 'upload' ) );
+		add_action( 'wp_ajax_su_generator_icons',     array( __CLASS__, 'icons' ) );
 		add_action( 'wp_ajax_su_generator_galleries', array( __CLASS__, 'galleries' ) );
 	}
 
@@ -179,7 +180,11 @@ class Shortcodes_Ultimate_Generator {
 						break;
 						// Upload
 					case 'upload':
-						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-upload-value" /><a href="javascript:;" class="button su-generator-upload-button"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a>';
+						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-upload-value" /><div class="su-generator-field-actions"><a href="javascript:;" class="button su-generator-upload-button"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a></div>';
+						break;
+						// Icon
+					case 'icon':
+						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-icon-picker-value" /><div class="su-generator-field-actions"><a href="javascript:;" class="button su-generator-upload-button su-generator-field-action"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a> <a href="javascript:;" class="button su-generator-icon-picker-button su-generator-field-action"><img src="' . admin_url( '/images/media-button-other.gif' ) . '" alt="' . __( 'Icon picker', 'su' ) . '" />' . __( 'Icon picker', 'su' ) . '</a></div><div class="su-generator-icon-picker"></div>';
 						break;
 						// Color
 					case 'color':
@@ -267,6 +272,13 @@ class Shortcodes_Ultimate_Generator {
 		$file = $upload->saveUpload( $field_name = 'file' );
 		// Print result
 		die( wp_get_attachment_url( $file['attachment_id'] ) );
+	}
+
+	public static function icons() {
+		// Check capability
+		self::access();
+		// Return JSON-encoded list of available icons
+		die( json_encode( Shortcodes_Ultimate_Data::icons() ) );
 	}
 
 	/**

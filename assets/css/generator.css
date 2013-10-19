@@ -37,9 +37,7 @@
 #su-generator.su-generator-narrow { max-width: 500px; }
 
 /* Generator tools */
-#su-generator-tools {
-	margin-bottom: 20px;
-}
+#su-generator-tools { margin-bottom: 20px; }
 #su-generator-tools span {
 	display: inline-block;
 	width: 1px;
@@ -219,8 +217,10 @@
 }
 
 /* Upload fields */
-.su-generator-upload-value { margin-bottom: 10px; }
-.su-generator-upload-button img {
+.su-generator-field-actions { padding-top: 10px; }
+.su-generator-field-actions .button,
+.su-generator-field-actions span { margin-right: 5px; }
+.su-generator-field-actions img {
 	vertical-align: middle;
 	margin: 0 6px 0 -4px;
 }
@@ -231,6 +231,47 @@
 	filter: alpha(opacity=0);
 	-moz-opacity: 0;
 	-khtml-opacity: 0;
+}
+
+/* Icon picker */
+.su-generator-icon-picker {
+	height: 0;
+	overflow: hidden;
+	margin: 0 -20px;
+	padding: 0 20px;
+	background: #eee;
+	line-height: 24px;
+	transition: all .2s;
+	-moz-transition: all .2s;
+	-webkit-transition: all .2s;
+}
+.su-generator-icon-picker:after {
+	display: block;
+	clear: both;
+	content: '';
+}
+.su-generator-icon-picker.su-generator-icon-picker-visible {
+	height: auto;
+	overflow: visible;
+	margin: 1em -20px 0 -20px;
+	padding: 14px 20px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.su-generator-icon-picker i {
+	display: block;
+	width: 24px;
+	height: 24px;
+	float: left;
+	color: #555;
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+	cursor: pointer;
+}
+.su-generator-icon-picker i:hover {
+	color: #000;
+	font-size: 24px;
 }
 
 /* Switches */

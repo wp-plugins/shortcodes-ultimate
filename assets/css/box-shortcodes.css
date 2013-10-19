@@ -345,11 +345,10 @@
 }
 .su-service-title {
 	display: block;
-	margin: 0 0 5px 0;
+	margin-bottom: 0.5em;
 	color: #333;
 	font-weight: bold;
-	font-size: 1.15em;
-	line-height: 1.5;
+	font-size: 1.1em;
 }
 .su-service-title img {
 	position: absolute;
@@ -359,10 +358,19 @@
 	margin: 0 !important;
 	padding: 0 !important;
 	border: none !important;
-	border: none !important;
 	-webkit-box-shadow: none !important;
 	-moz-box-shadow: none !important;
 	box-shadow: none !important;
+}
+.su-service-title i {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block !important;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	line-height: 1em;
 }
 .su-service-content { line-height: 1.4; }
 

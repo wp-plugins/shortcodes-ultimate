@@ -42,6 +42,10 @@ class Shortcodes_Ultimate_Data {
 			) );
 	}
 
+	public static function icons() {
+		return apply_filters( 'su/data/icons', array( 'adjust', 'anchor', 'archive', 'asterisk', 'ban-circle', 'bar-chart', 'barcode', 'beaker', 'beer', 'bell', 'bell-alt', 'bolt', 'book', 'bookmark', 'bookmark-empty', 'briefcase', 'bug', 'building', 'bullhorn', 'bullseye', 'calendar', 'calendar-empty', 'camera', 'camera-retro', 'certificate', 'check', 'check-empty', 'check-minus', 'check-sign', 'circle', 'circle-blank', 'cloud', 'cloud-download', 'cloud-upload', 'code', 'code-fork', 'coffee', 'cog', 'cogs', 'collapse', 'collapse-alt', 'collapse-top', 'comment', 'comment-alt', 'comments', 'comments-alt', 'compass', 'credit-card', 'crop', 'dashboard', 'desktop', 'download', 'download-alt', 'edit', 'edit-sign', 'ellipsis-horizontal', 'ellipsis-vertical', 'envelope', 'envelope-alt', 'eraser', 'exchange', 'exclamation', 'exclamation-sign', 'expand', 'expand-alt', 'external-link', 'external-link-sign', 'eye-close', 'eye-open', 'facetime-video', 'female', 'fighter-jet', 'film', 'filter', 'fire', 'fire-extinguisher', 'flag', 'flag-alt', 'flag-checkered', 'folder-close', 'folder-close-alt', 'folder-open', 'folder-open-alt', 'food', 'frown', 'gamepad', 'cog', 'cogs', 'gift', 'glass', 'globe', 'group', 'hdd', 'headphones', 'heart', 'heart-empty', 'home', 'inbox', 'info', 'info-sign', 'key', 'keyboard', 'laptop', 'leaf', 'legal', 'lemon', 'level-down', 'level-up', 'lightbulb', 'location-arrow', 'lock', 'magic', 'magnet', 'share-alt', 'reply', 'mail-reply-all', 'male', 'map-marker', 'meh', 'microphone', 'microphone-off', 'minus', 'minus-sign', 'minus-sign-alt', 'mobile-phone', 'money', 'moon', 'move', 'music', 'off', 'ok', 'ok-circle', 'ok-sign', 'pencil', 'phone', 'phone-sign', 'picture', 'plane', 'plus', 'plus-sign', 'plus-sign-alt', 'off', 'print', 'pushpin', 'puzzle-piece', 'qrcode', 'question', 'question-sign', 'quote-left', 'quote-right', 'random', 'refresh', 'remove', 'remove-circle', 'remove-sign', 'reorder', 'reply', 'reply-all', 'resize-horizontal', 'resize-vertical', 'retweet', 'road', 'rocket', 'rss', 'rss-sign', 'screenshot', 'search', 'share', 'share-alt', 'share-sign', 'shield', 'shopping-cart', 'sign-blank', 'signal', 'signin', 'signout', 'sitemap', 'smile', 'sort', 'sort-by-alphabet', 'sort-by-alphabet-alt', 'sort-by-attributes', 'sort-by-attributes-alt', 'sort-by-order', 'sort-by-order-alt', 'sort-down', 'sort-up', 'spinner', 'star', 'star-empty', 'star-half', 'star-half-empty', 'star-half-empty', 'subscript', 'suitcase', 'sun', 'superscript', 'tablet', 'tag', 'tags', 'tasks', 'terminal', 'thumbs-down', 'thumbs-down-alt', 'thumbs-up', 'thumbs-up-alt', 'ticket', 'time', 'tint', 'trash', 'trophy', 'truck', 'umbrella', 'check-empty', 'unlock', 'unlock-alt', 'upload', 'upload-alt', 'user', 'volume-down', 'volume-off', 'volume-up', 'warning-sign', 'wrench', 'zoom-in', 'zoom-out', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-left', 'arrow-right', 'arrow-up', 'caret-down', 'caret-left', 'caret-right', 'caret-up', 'chevron-down', 'chevron-left', 'chevron-right', 'chevron-sign-down', 'chevron-sign-left', 'chevron-sign-right', 'chevron-sign-up', 'chevron-up', 'circle-arrow-down', 'circle-arrow-left', 'circle-arrow-right', 'circle-arrow-up', 'double-angle-down', 'double-angle-left', 'double-angle-right', 'double-angle-up', 'hand-down', 'hand-left', 'hand-right', 'hand-up', 'long-arrow-down', 'long-arrow-left', 'long-arrow-right', 'long-arrow-up', 'backward', 'eject', 'fast-backward', 'fast-forward', 'forward', 'fullscreen', 'pause', 'play', 'play-circle', 'play-sign', 'resize-full', 'resize-small', 'step-backward', 'step-forward', 'stop', 'youtube-play', 'adn', 'android', 'apple', 'bitbucket', 'bitbucket-sign', 'btc', 'btc', 'css3', 'dribbble', 'dropbox', 'facebook', 'facebook-sign', 'flickr', 'foursquare', 'github', 'github-alt', 'github-sign', 'gittip', 'google-plus', 'google-plus-sign', 'html5', 'instagram', 'linkedin', 'linkedin-sign', 'linux', 'maxcdn', 'pinterest', 'pinterest-sign', 'renren', 'skype', 'stackexchange', 'trello', 'tumblr', 'tumblr-sign', 'twitter', 'twitter-sign', 'vk', 'weibo', 'windows', 'xing', 'xing-sign', 'youtube', 'youtube-play', 'youtube-sign', 'ambulance', 'h-sign', 'hospital', 'medkit', 'plus-sign-alt', 'stethoscope', 'user-md' ) );
+	}
+
 	/**
 	 * Shortcodes
 	 */
@@ -508,6 +512,18 @@ class Shortcodes_Ultimate_Data {
 							'default' => 'star',
 							'name' => __( 'Style', 'su' ), 'desc' => __( 'List items style/icons', 'su' )
 						),
+						'icon' => array(
+							'type' => 'icon',
+							'default' => '',
+							'name' => __( 'Icon', 'su' ),
+							'desc' => __( 'You can upload custom icon for this list or pick a built-in icon', 'su' )
+						),
+						'icon_color' => array(
+							'type' => 'color',
+							'default' => '#333333',
+							'name' => __( 'Icon color', 'su' ),
+							'desc' => __( 'This color will be applied to the selected icon. Does not work with uploaded icons', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -593,10 +609,16 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Radius of button corners. Auto-radius calculation based on button size', 'su' )
 						),
 						'icon' => array(
-							'type' => 'upload',
+							'type' => 'icon',
 							'default' => '',
 							'name' => __( 'Icon', 'su' ),
-							'desc' => __( 'You can upload custom icon for this button. Try to begin with <a href="http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/" target="_blank">these free high-quality icons</a>. Download archive, unpack icons and upload in this field', 'su' )
+							'desc' => __( 'You can upload custom icon for this button or pick a built-in icon', 'su' )
+						),
+						'icon_color' => array(
+							'type' => 'color',
+							'default' => '#FFFFFF',
+							'name' => __( 'Icon color', 'su' ),
+							'desc' => __( 'This color will be applied to the selected icon. Does not work with uploaded icons', 'su' )
 						),
 						'ts_color' => array(
 							'type' => 'select',
@@ -654,14 +676,22 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Service name', 'su' )
 						),
 						'icon' => array(
-							'type' => 'upload',
+							'type' => 'icon',
 							'default' => '',
 							'name' => __( 'Icon', 'su' ),
 							'desc' => __( 'You can upload custom icon for this box', 'su' )
 						),
+						'icon_color' => array(
+							'type' => 'color',
+							'default' => '#333333',
+							'name' => __( 'Icon color', 'su' ),
+							'desc' => __( 'This color will be applied to the selected icon. Doed no works with uploaded icons', 'su' )
+						),
 						'size' => array(
-							'type' => 'select',
-							'values' => array( 16, 24, 32, 48 ),
+							'type' => 'number',
+							'min' => 10,
+							'max' => 128,
+							'step' => 2,
 							'default' => 32,
 							'name' => __( 'Icon size', 'su' ),
 							'desc' => __( 'Size of the uploaded icon in pixels', 'su' )
