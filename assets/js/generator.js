@@ -353,8 +353,34 @@ jQuery(document).ready(function ($) {
 						}
 					});
 				});
+				// Init shadow pickers
+				$('.su-generator-shadow-picker').each(function (index) {
+					var $picker = $(this),
+						$fields = $picker.find('.su-generator-shadow-picker-field input'),
+						$hoff = $picker.find('.su-generator-sp-hoff'),
+						$voff = $picker.find('.su-generator-sp-voff'),
+						$blur = $picker.find('.su-generator-sp-blur'),
+						$color = {
+							cnt: $picker.find('.su-generator-shadow-picker-color'),
+							value: $picker.find('.su-generator-shadow-picker-color-value'),
+							wheel: $picker.find('.su-generator-shadow-picker-color-wheel')
+						},
+						$val = $picker.find('.su-generator-attr');
+					// Init color picker
+					$color.wheel.farbtastic($color.value);
+					$color.value.focus(function () {
+						$color.wheel.show();
+					});
+					$color.value.blur(function () {
+						$color.wheel.hide();
+					});
+					// Handle text fields
+					$fields.on('change blur keyup', function () {
+						$val.val($hoff.val() + 'px ' + $voff.val() + 'px ' + $blur.val() + 'px ' + $color.value.val()).trigger('change');
+					});
+				});
 				// Remove skip class when setting is changed
-				$settings.find('input, textarea, select').on('change keyup blur', function () {
+				$settings.find('.su-generator-attr').on('change keyup blur', function () {
 					var $cnt = $(this).parents('.su-generator-attr-container'),
 						_default = $cnt.data('default'),
 						val = $(this).val();

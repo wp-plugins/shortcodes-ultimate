@@ -72,7 +72,7 @@ class Shortcodes_Ultimate_Generator {
 	public static function popup() {
 		// Get cache
 		$output = get_transient( 'su/generator/popup' );
-		if ( $output ) echo $output;
+		if ( $output && SU_ENABLE_CACHE ) echo $output;
 		// Cache not found
 		else {
 			ob_start();
@@ -128,7 +128,7 @@ class Shortcodes_Ultimate_Generator {
 		if ( empty( $_REQUEST['shortcode'] ) ) wp_die( __( 'Shortcode not specified', 'su' ) );
 		// Get cache
 		$output = get_transient( 'su/generator/settings/' . sanitize_text_field( $_REQUEST['shortcode'] ) );
-		if ( $output ) echo $output;
+		if ( $output && SU_ENABLE_CACHE ) echo $output;
 		// Cache not found
 		else {
 			// Request queried shortcode
@@ -158,66 +158,39 @@ class Shortcodes_Ultimate_Generator {
 					switch ( $attr_info['type'] ) {
 						// Select
 					case 'select':
-						// Detect array type (numbers or strings with translations)
-						$is_numbers = is_numeric( implode( '', array_keys( $attr_info['values'] ) ) ) ? true : false;
-						// Multiple selects
-						$multiple = ( isset( $attr_info['multiple'] ) ) ? ' multiple' : '';
-						$return .= '<select name="' . $attr_name . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr"' . $multiple . '>';
-						// Create options
-						foreach ( $attr_info['values'] as $option_value => $option_title ) {
-							// Values is indexed array, replace  array keys by titles
-							if ( $is_numbers ) $option_value = $option_title;
-							// Is this option selected
-							$selected = ( $attr_info['default'] == $option_value ) ? ' selected="selected"' : '';
-							// Create option
-							$return .= '<option value="' . $option_value . '"' . $selected . '>' . $option_title . '</option>';
-						}
-						$return .= '</select>';
+						$return .= Shortcodes_Ultimate_Generator_Fields::select( $attr_name, $attr_info );
 						break;
 						// Switch
 					case 'switch':
-						$return .= '<span class="su-generator-switch su-generator-switch-' . $attr_info['default'] . '"><span class="su-generator-yes">' . __( 'Yes', 'su' ) . '</span><span class="su-generator-no">' . __( 'No', 'su' ) . '</span></span><input type="hidden" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
+						$return .= Shortcodes_Ultimate_Generator_Fields::swtch( $attr_name, $attr_info );
 						break;
 						// Upload
 					case 'upload':
-						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-upload-value" /><div class="su-generator-field-actions"><a href="javascript:;" class="button su-generator-upload-button"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a></div>';
+						$return .= Shortcodes_Ultimate_Generator_Fields::upload( $attr_name, $attr_info );
 						break;
 						// Icon
 					case 'icon':
-						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-icon-picker-value" /><div class="su-generator-field-actions"><a href="javascript:;" class="button su-generator-upload-button su-generator-field-action"><img src="' . admin_url( '/images/media-button.png' ) . '" alt="' . __( 'Media manager', 'su' ) . '" />' . __( 'Media manager', 'su' ) . '</a> <a href="javascript:;" class="button su-generator-icon-picker-button su-generator-field-action"><img src="' . admin_url( '/images/media-button-other.gif' ) . '" alt="' . __( 'Icon picker', 'su' ) . '" />' . __( 'Icon picker', 'su' ) . '</a></div><div class="su-generator-icon-picker"></div>';
+						$return .= Shortcodes_Ultimate_Generator_Fields::icon( $attr_name, $attr_info );
 						break;
 						// Color
 					case 'color':
-						$return .= '<span class="su-generator-select-color"><span class="su-generator-select-color-wheel"></span><input type="text" name="' . $attr_name . '" value="' . $attr_info['default'] . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr su-generator-select-color-value" /></span>';
+						$return .= Shortcodes_Ultimate_Generator_Fields::color( $attr_name, $attr_info );
 						break;
 						// Gallery
 					case 'gallery':
-						// Prepare galleries list
-						$galleries = $shult->get_option( 'galleries' );
-						$created = ( is_array( $galleries ) && count( $galleries ) ) ? true : false;
-						$return .= '<select name="' . $attr_name . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" data-loading="' . __( 'Please wait', 'su' ) . '">';
-						// Check that galleries is set
-						if ( $created ) // Create options
-							foreach ( $galleries as $g_id => $gallery ) {
-								// Is this option selected
-								$selected = ( $g_id == 0 ) ? ' selected="selected"' : '';
-								// Prepare title
-								$gallery['name'] = ( $gallery['name'] == '' ) ? __( 'Untitled gallery', 'su' ) : stripslashes( $gallery['name'] );
-								// Create option
-								$return .= '<option value="' . ( $g_id + 1 ) . '"' . $selected . '>' . $gallery['name'] . '</option>';
-							}
-						// Galleries not created
-						else
-							$return .= '<option value="0" selected>' . __( 'Galleries not found', 'su' ) . '</option>';
-						$return .= '</select><small class="description"><a href="' . $shult->admin_url . '#tab-3" target="_blank">' . __( 'Manage galleries', 'su' ) . '</a>&nbsp;&nbsp;&nbsp;<a href="javascript:;" class="su-generator-reload-galleries">' . __( 'Reload galleries', 'su' ) . '</a></small>';
+						$return .= Shortcodes_Ultimate_Generator_Fields::gallery( $attr_name, $attr_info );
 						break;
 						// Number
 					case 'number':
-						$return .= '<input type="number" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" min="' . $attr_info['min'] . '" max="' . $attr_info['max'] . '" step="' . $attr_info['step'] . '" class="su-generator-attr" />';
+						$return .= Shortcodes_Ultimate_Generator_Fields::number( $attr_name, $attr_info );
+						break;
+						// Shadow
+					case 'shadow':
+						$return .= Shortcodes_Ultimate_Generator_Fields::shadow( $attr_name, $attr_info );
 						break;
 						// Text and other types
 					default:
-						$return .= '<input type="text" name="' . $attr_name . '" value="' . esc_attr( $attr_info['default'] ) . '" id="su-generator-attr-' . $attr_name . '" class="su-generator-attr" />';
+						$return .= Shortcodes_Ultimate_Generator_Fields::text( $attr_name, $attr_info );
 						break;
 					}
 					if ( isset( $attr_info['desc'] ) ) $return .= '<div class="su-generator-attr-desc">' . str_replace( '<b%value>', '<b class="su-generator-set-value" title="' . __( 'Click to set this value', 'su' ) . '">', $attr_info['desc'] ) . '</div>';

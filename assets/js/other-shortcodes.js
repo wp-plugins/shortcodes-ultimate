@@ -45,6 +45,9 @@ jQuery(document).ready(function ($) {
 		tabs_height();
 	});
 
+	// Activate anchor nav for tabs
+	anchor_nav();
+
 	// Lightbox
 	$('.su-lightbox').each(function () {
 		$(this).on('click', function (e) {
@@ -120,9 +123,42 @@ jQuery(document).ready(function ($) {
 			var $tabs = $(this),
 				$panes = $(this).children('.su-tabs-panes'),
 				height = 0;
-			$panes.css('height', 'auto').css('height', $tabs.height());
+			$panes.css('min-height', '0').css('min-height', $tabs.height());
 		});
 	}
+
+	function anchor_nav() {
+		// Check hash
+		if (document.location.hash === '') return;
+		// Go through tabs
+		$('.su-tabs-nav span[data-anchor]').each(function () {
+			if ('#' + $(this).data('anchor') === document.location.hash) {
+				var $tabs = $(this).parents('.su-tabs'),
+					bar = ($('#wpadminbar').length > 0) ? 28 : 0;
+				// Activate tab
+				$(this).trigger('click');
+				// Scroll-in tabs container
+				window.setTimeout(function () {
+					$(window).scrollTop($tabs.offset().top - bar - 10);
+				}, 100);
+			}
+		});
+		// Go through spoilers
+		$('.su-spoiler[data-anchor]').each(function () {
+			if ('#' + $(this).data('anchor') === document.location.hash) {
+				var $spoiler = $(this),
+					bar = ($('#wpadminbar').length > 0) ? 28 : 0;
+				// Activate tab
+				if ($spoiler.hasClass('su-spoiler-closed')) $spoiler.find('.su-spoiler-title:first').trigger('click');
+				// Scroll-in tabs container
+				window.setTimeout(function () {
+					$(window).scrollTop($spoiler.offset().top - bar - 10);
+				}, 100);
+			}
+		});
+	}
+
+	if ('onhashchange' in window) $(window).on('hashchange', anchor_nav);
 
 	$('body').addClass('su-other-shortcodes-loaded');
 });

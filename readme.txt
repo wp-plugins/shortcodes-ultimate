@@ -95,6 +95,11 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
+= 4.3.2 =
+* Small fixes
+* New text-shadow picker for [button]
+* Anchor navigation for spoilers and tabs - [forum topic](http://wordpress.org/support/topic/hyperlinks-to-spoilers-and-tabs)
+
 = 4.3 =
 * IMPORTANT: removed old list icons. These icons replaced with new font-awesome icons
 * New icon picker for [service], [button] and [list]

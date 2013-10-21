@@ -96,7 +96,7 @@ class Shortcodes_Ultimate_Assets {
 		// Enqueue scripts
 		foreach ( $assets['js'] as $script ) wp_enqueue_script( $script );
 		// Hook to dequeue assets or add custom
-		do_action( 'su/assets/enqueue' );
+		do_action( 'su/assets/enqueue', $assets );
 	}
 
 	/**
@@ -110,7 +110,7 @@ class Shortcodes_Ultimate_Assets {
 		// Enqueue scripts
 		wp_print_scripts( $assets['js'] );
 		// Hook
-		do_action( 'su/assets/print' );
+		do_action( 'su/assets/print', $assets );
 	}
 
 	/**

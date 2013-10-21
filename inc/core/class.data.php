@@ -135,6 +135,11 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Disabled', 'su' ),
 							'desc' => __( 'Is this tab disabled', 'su' )
 						),
+						'anchor' => array(
+							'default' => '',
+							'name' => __( 'Anchor', 'su' ),
+							'desc' => __( 'You can use unique anchor for this tab to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This tab will be activated and scrolled in', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -172,6 +177,11 @@ class Shortcodes_Ultimate_Data {
 							'default' => 'default',
 							'name' => __( 'Style', 'su' ),
 							'desc' => __( 'Spoiler skin', 'su' )
+						),
+						'anchor' => array(
+							'default' => '',
+							'name' => __( 'Anchor', 'su' ),
+							'desc' => __( 'You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This spoiler will be open and scrolled in', 'su' )
 						),
 						'class' => array(
 							'default' => '',
@@ -405,9 +415,9 @@ class Shortcodes_Ultimate_Data {
 						'align' => array(
 							'type' => 'select',
 							'values' => array(
-								'left',
-								'center',
-								'right'
+								'left' => __( 'Left', 'su' ),
+								'center' => __( 'Center', 'su' ),
+								'right' => __( 'Right', 'su' )
 							),
 							'default' => 'left',
 							'name' => __( 'Align', 'su' ),
@@ -564,8 +574,11 @@ class Shortcodes_Ultimate_Data {
 							'desc' => __( 'Button text color', 'su' )
 						),
 						'size' => array(
-							'type' => 'select',
-							'values' => array( 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 ), 'default' => 3,
+							'type' => 'number',
+							'min' => 1,
+							'max' => 20,
+							'step' => 1,
+							'default' => 3,
 							'name' => __( 'Size', 'su' ),
 							'desc' => __( 'Button size', 'su' )
 						),
@@ -581,7 +594,14 @@ class Shortcodes_Ultimate_Data {
 						),
 						'radius' => array(
 							'type' => 'select',
-							'values' => array( 'auto', 'round', '0', '5', '10', '20' ),
+							'values' => array(
+								'auto' => __( 'Auto', 'su' ),
+								'round' => __( 'Round', 'su' ),
+								'0' => __( 'Square', 'su' ),
+								'5' => '5px',
+								'10' => '10px',
+								'20' => '20px'
+							),
 							'default' => 'auto',
 							'name' => __( 'Radius', 'su' ),
 							'desc' => __( 'Radius of button corners. Auto-radius calculation based on button size', 'su' )
@@ -598,27 +618,11 @@ class Shortcodes_Ultimate_Data {
 							'name' => __( 'Icon color', 'su' ),
 							'desc' => __( 'This color will be applied to the selected icon. Does not works with uploaded icons', 'su' )
 						),
-						'ts_color' => array(
-							'type' => 'select',
-							'values' => array(
-								'light' => __( 'Light', 'su' ),
-								'dark' => __( 'Dark', 'su' )
-							),
-							'default' => 'dark',
-							'name' => __( 'Text shadow color', 'su' ), 'desc' => __( 'Color of button text shadow', 'su' )
-						),
-						'ts_pos' => array(
-							'type' => 'select',
-							'values' => array(
-								'none' => __( 'None', 'su' ),
-								'top' => __( 'Top', 'su' ),
-								'right' => __( 'Right', 'su' ),
-								'bottom' => __( 'Bottom', 'su' ),
-								'left' => __( 'Left', 'su' ),
-								'top-right' => __( 'Top right', 'su' ),
-								'top-left' => __( 'Top left', 'su' ), 'bottom-right' => __( 'Bottom right', 'su' ), 'bottom-left' => __( 'Bottom left', 'su' )
-							),
-							'default' => 'none', 'name' => __( 'Text shadow position', 'su' ), 'desc' => __( 'Position of button text shadow', 'su' )
+						'text_shadow' => array(
+							'type' => 'shadow',
+							'default' => 'none',
+							'name' => __( 'Text shadow', 'su' ),
+							'desc' => __( 'Button text shadow', 'su' )
 						),
 						'desc' => array(
 							'default' => '',

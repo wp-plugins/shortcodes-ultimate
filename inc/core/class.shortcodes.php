@@ -33,7 +33,7 @@ class Shortcodes_Ultimate_Shortcodes {
 		if ( is_array( self::$tabs ) ) {
 			if ( self::$tab_count < $atts['active'] ) $atts['active'] = self::$tab_count;
 			foreach ( self::$tabs as $tab ) {
-				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '">' . su_scattr( $tab['title'] ) . '</span>';
+				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '"' . $tab['anchor'] . '>' . su_scattr( $tab['title'] ) . '</span>';
 				$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '<div style="clear:both;height:0"></div></div>';
 			}
 			$vertical = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
@@ -49,6 +49,7 @@ class Shortcodes_Ultimate_Shortcodes {
 		$atts = shortcode_atts( array(
 				'title'    => __( 'Tab title', 'su' ),
 				'disabled' => 'no',
+				'anchor' => '',
 				'class'    => ''
 			), $atts );
 		$x = self::$tab_count;
@@ -56,6 +57,7 @@ class Shortcodes_Ultimate_Shortcodes {
 			'title' => $atts['title'],
 			'content' => do_shortcode( $content ),
 			'disabled' => ( $atts['disabled'] === 'yes' ) ? ' su-tabs-disabled' : '',
+			'anchor' => ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( ' ', '', trim( sanitize_text_field( $atts['anchor'] ) ) ) . '"' : '',
 			'class' => $atts['class']
 		);
 		self::$tab_count++;
@@ -63,17 +65,19 @@ class Shortcodes_Ultimate_Shortcodes {
 
 	public static function spoiler( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'title' => __( 'Spoiler title', 'su' ),
-				'open'  => 'no',
-				'style' => 'default',
-				'class' => ''
+				'title'  => __( 'Spoiler title', 'su' ),
+				'open'   => 'no',
+				'style'  => 'default',
+				'anchor' => '',
+				'class'  => ''
 			), $atts );
 		$atts['style'] = str_replace( array( '1', '2' ), array( 'default', 'fancy' ), $atts['style'] );
 		$closed = ( $atts['open'] !== 'yes' ) ? ' su-spoiler-closed' : '';
+		$atts['anchor'] = ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( ' ', '', trim( sanitize_text_field( $atts['anchor'] ) ) ) . '"' : '';
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-box-shortcodes' );
 		Shortcodes_Ultimate_Assets::add( 'js', 'jquery' );
 		Shortcodes_Ultimate_Assets::add( 'js', 'su-other-shortcodes' );
-		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . $closed . su_ecssc( $atts ) . '"><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content">' . su_do_shortcode( $content, 's' ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . $closed . su_ecssc( $atts ) . '"' . $atts['anchor'] . '><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content">' . su_do_shortcode( $content, 's' ) . '</div></div>';
 	}
 
 	public static function accordion( $atts = null, $content = null ) {
@@ -272,24 +276,25 @@ class Shortcodes_Ultimate_Shortcodes {
 
 	public static function button( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'url'        => get_option( 'home' ),
-				'link'       => null, // 3.x
-				'target'     => 'self',
-				'style'      => 'default',
-				'background' => '#2D89EF',
-				'color'      => '#FFFFFF',
-				'dark'       => null, // 3.x
-				'size'       => 3,
-				'wide'       => 'no',
-				'center'     => 'no',
-				'radius'     => 'auto',
-				'icon'       => false,
-				'icon_color' => '#FFFFFF',
-				'ts_color'   => 'dark',
-				'ts_pos'     => 'none',
-				'desc'       => '',
-				'onclick'    => '',
-				'class'      => ''
+				'url'         => get_option( 'home' ),
+				'link'        => null, // 3.x
+				'target'      => 'self',
+				'style'       => 'default',
+				'background'  => '#2D89EF',
+				'color'       => '#FFFFFF',
+				'dark'        => null, // 3.x
+				'size'        => 3,
+				'wide'        => 'no',
+				'center'      => 'no',
+				'radius'      => 'auto',
+				'icon'        => false,
+				'icon_color'  => '#FFFFFF',
+				'ts_color'    => null, // Dep. 4.3.2
+				'ts_pos'      => null, // Dep. 4.3.2
+				'text_shadow' => 'none',
+				'desc'        => '',
+				'onclick'     => '',
+				'class'       => ''
 			), $atts );
 
 		if ( $atts['link'] !== null ) $atts['url'] = $atts['link'];
@@ -321,7 +326,7 @@ class Shortcodes_Ultimate_Shortcodes {
 		$styles = array(
 			'size'     => round( ( $atts['size'] + 7 ) * 1.3 ),
 			'ts_color' => ( $atts['ts_color'] === 'light' ) ? su_hex_shift( $atts['background'], 'lighter', 50 ) : su_hex_shift( $atts['background'], 'darker', 40 ),
-			'ts_pos'   => $shadows[$atts['ts_pos']]
+			'ts_pos'   => ( $atts['ts_pos'] !== null ) ? $shadows[$atts['ts_pos']] : $shadows['none']
 		);
 		// Calculate border-radius
 		if ( $atts['radius'] == 'auto' ) $radius = round( $atts['size'] + 2 ) . 'px';
@@ -350,6 +355,12 @@ class Shortcodes_Ultimate_Shortcodes {
 			'-moz-text-shadow'      => $styles['ts_pos'] . ' 1px ' . $styles['ts_color'],
 			'-webkit-text-shadow'   => $styles['ts_pos'] . ' 1px ' . $styles['ts_color']
 		);
+		// Apply new text-shadow value
+		if ( $atts['ts_color'] === null && $atts['ts_pos'] === null ) {
+			$span_rules['text-shadow'] = $atts['text_shadow'];
+			$span_rules['-moz-text-shadow'] = $atts['text_shadow'];
+			$span_rules['-webkit-text-shadow'] = $atts['text_shadow'];
+		}
 		// CSS rules for <img> tag
 		$img_rules = array(
 			'width'     => round( $styles['size'] * 1.5 ) . 'px',
@@ -437,22 +448,12 @@ class Shortcodes_Ultimate_Shortcodes {
 			), $atts );
 		if ( $atts['color'] !== null ) $atts['box_color'] = $atts['color'];
 		// Prepare border-radius
-		$radius = ( $atts['radius'] != '0' ) ?
-			'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] .
-			'px;-webkit-border-radius:' . $atts['radius'] . 'px;' : '';
+		$radius = ( $atts['radius'] != '0' ) ? 'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] . 'px;-webkit-border-radius:' . $atts['radius'] . 'px;' : '';
 		$title_radius = ( $atts['radius'] != '0' ) ? $atts['radius'] - 1 : '';
-		$title_radius = ( $title_radius ) ?
-			'-webkit-border-top-left-radius:' . $title_radius . 'px;-webkit-border-top-right-radius:' . $title_radius .
-			'px;-moz-border-radius-topleft:' . $title_radius . 'px;-moz-border-radius-topright:' . $title_radius .
-			'px;border-top-left-radius:' . $title_radius . 'px;border-top-right-radius:' . $title_radius . 'px;' : '';
+		$title_radius = ( $title_radius ) ? '-webkit-border-top-left-radius:' . $title_radius . 'px;-webkit-border-top-right-radius:' . $title_radius . 'px;-moz-border-radius-topleft:' . $title_radius . 'px;-moz-border-radius-topright:' . $title_radius . 'px;border-top-left-radius:' . $title_radius . 'px;border-top-right-radius:' . $title_radius . 'px;' : '';
 		Shortcodes_Ultimate_Assets::add( 'css', 'su-box-shortcodes' );
 		// Return result
-		return
-		'<div class="su-box su-box-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="border-color:' .
-			su_hex_shift( $atts['box_color'], 'darker', 20 ) . ';' . $radius .
-			'"><div class="su-box-title" style="background-color:' . $atts['box_color'] . ';color:' .
-			$atts['title_color'] . ';' . $title_radius . '">' . su_scattr( $atts['title'] ) . '</div><div class="su-box-content">' .
-			su_do_shortcode( $content, 'b' ) . '</div></div>';
+		return '<div class="su-box su-box-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['box_color'], 'darker', 20 ) . ';' . $radius . '"><div class="su-box-title" style="background-color:' . $atts['box_color'] . ';color:' . $atts['title_color'] . ';' . $title_radius . '">' . su_scattr( $atts['title'] ) . '</div><div class="su-box-content">' . su_do_shortcode( $content, 'b' ) . '</div></div>';
 	}
 
 	public static function note( $atts = null, $content = null ) {
