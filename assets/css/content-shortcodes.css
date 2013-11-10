@@ -3,20 +3,21 @@
 /*		Heading
 ---------------------------------------------------------------*/
 
-.su-heading {
-	margin: 0 0 1.5em 0;
+.su-heading-style-default {
 	padding: 2px 0;
 	border-top: 1px solid #999;
 	border-bottom: 1px solid #999;
 }
-.su-heading-inner {
+.su-heading-style-default .su-heading-inner {
 	padding: 1em 0.5em;
 	border-top: 4px solid #eee;
 	border-bottom: 4px solid #eee;
 }
-.su-heading-align-left { text-align: left }
-.su-heading-align-center { text-align: center }
-.su-heading-align-right { text-align: right }
+.su-heading.su-heading-align-left { text-align: left; }
+.su-heading.su-heading-align-left .su-heading-inner { padding-left: 0.2em; }
+.su-heading.su-heading-align-right { text-align: right; }
+.su-heading.su-heading-align-right .su-heading-inner { padding-right: 0.2em; }
+.su-heading.su-heading-align-center { text-align: center; }
 
 /*		Divider
 ---------------------------------------------------------------*/
@@ -193,13 +194,15 @@
 	margin: 0 !important;
 	padding: 4px 0 4px 2em !important;
 }
-.su-list ul li img {
+.su-list ul li > img {
 	position: absolute;
 	left: 0;
 	top: 4px;
 	width: 1.3em;
 	height: 1.3em;
-	line-height: 1.3em;
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 .su-list ul li i {
 	position: absolute;
@@ -227,7 +230,10 @@
 	-moz-transition: all .2s;
 	-webkit-transition: all .2s;
 }
-.su-button-wide { display: block !important; }
+.su-button-wide {
+	display: block !important;
+	margin: 1em 0;
+}
 .su-button-center { text-align: center; }
 .su-button span {
 	display: block !important;

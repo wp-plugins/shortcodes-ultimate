@@ -1,11 +1,4 @@
 <?php
-
-/**
- * Csv files parser
- * Converts csv-files to html-tables
- *
- * @param type $file File url to parse
- */
 function su_parse_csv( $file ) {
 	$csv_lines = file( $file );
 	if ( is_array( $csv_lines ) ) {
@@ -78,8 +71,8 @@ function su_parse_csv( $file ) {
 /**
  * Color shift a hex value by a specific percentage factor
  *
- * @param string $supplied_hex  Any valid hex value. Short forms e.g. #333 accepted.
- * @param string $shift_method  How to shift the value e.g( +,up,lighter,>)
+ * @param string  $supplied_hex Any valid hex value. Short forms e.g. #333 accepted.
+ * @param string  $shift_method How to shift the value e.g( +,up,lighter,>)
  * @param integer $percentage   Percentage in range of [0-100] to shift provided hex value by
  *
  * @return string shifted hex value
@@ -110,22 +103,22 @@ function su_hex_shift( $supplied_hex, $shift_method, $percentage = 50 ) {
 	if ( !$valid_shift_option ) trigger_error( "Invalid shift method", E_USER_NOTICE );
 	// Check Hex string
 	switch ( strlen( $supplied_hex = ( str_replace( '#', '', trim( $supplied_hex ) ) ) ) ) {
-		case 3:
-			if ( preg_match( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', $supplied_hex ) ) {
-				$supplied_hex = preg_replace( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', '\\1\\1\\2\\2\\3\\3',
-				                              $supplied_hex );
-			}
-			else {
-				trigger_error( "Invalid hex color value", E_USER_NOTICE );
-			}
-			break;
-		case 6:
-			if ( !preg_match( '/^[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i', $supplied_hex ) ) {
-				trigger_error( "Invalid hex color value", E_USER_NOTICE );
-			}
-			break;
-		default:
-			trigger_error( "Invalid hex color length", E_USER_NOTICE );
+	case 3:
+		if ( preg_match( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', $supplied_hex ) ) {
+			$supplied_hex = preg_replace( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', '\\1\\1\\2\\2\\3\\3',
+				$supplied_hex );
+		}
+		else {
+			trigger_error( "Invalid hex color value", E_USER_NOTICE );
+		}
+		break;
+	case 6:
+		if ( !preg_match( '/^[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i', $supplied_hex ) ) {
+			trigger_error( "Invalid hex color value", E_USER_NOTICE );
+		}
+		break;
+	default:
+		trigger_error( "Invalid hex color length", E_USER_NOTICE );
 	}
 	// Start shifting
 	$RGB_values['R'] = hexdec( $supplied_hex{0} . $supplied_hex{1} );
@@ -133,14 +126,14 @@ function su_hex_shift( $supplied_hex, $shift_method, $percentage = 50 ) {
 	$RGB_values['B'] = hexdec( $supplied_hex{4} . $supplied_hex{5} );
 	foreach ( $RGB_values as $c => $v ) {
 		switch ( $shift_method ) {
-			case '-':
-				$amount = round( ( ( 255 - $v ) / 100 ) * $percentage ) + $v;
-				break;
-			case '+':
-				$amount = $v - round( ( $v / 100 ) * $percentage );
-				break;
-			default:
-				trigger_error( "Oops. Unexpected shift method", E_USER_NOTICE );
+		case '-':
+			$amount = round( ( ( 255 - $v ) / 100 ) * $percentage ) + $v;
+			break;
+		case '+':
+			$amount = $v - round( ( $v / 100 ) * $percentage );
+			break;
+		default:
+			trigger_error( "Oops. Unexpected shift method", E_USER_NOTICE );
 		}
 		$shifted_hex_value .= $current_value = ( strlen( $decimal_to_hex = dechex( $amount ) ) < 2 ) ?
 			'0' . $decimal_to_hex : $decimal_to_hex;
@@ -152,14 +145,12 @@ function su_hex_shift( $supplied_hex, $shift_method, $percentage = 50 ) {
  * Apply all custom formatting options of plugin
  */
 function su_apply_formatting() {
-	// Get plugin object
-	global $shult;
 	// Enable shortcodes in text widgets
 	add_filter( 'widget_text', 'do_shortcode' );
 	// Enable shortcodes in category descriptions
 	add_filter( 'category_description', 'do_shortcode' );
 	// Enable auto-formatting
-	if ( $shult->get_option( 'custom_formatting' ) == 'on' ) {
+	if ( get_option( 'su_option_custom-formatting' ) === 'on' ) {
 		// Disable WordPress native content formatters
 		remove_filter( 'the_content', 'wpautop' );
 		remove_filter( 'the_content', 'wptexturize' );
@@ -177,7 +168,7 @@ add_action( 'init', 'su_apply_formatting' );
 /**
  * Custom formatter function
  *
- * @param string $content
+ * @param string  $content
  *
  * @return string Formatted content with clean shortcodes content
  */
@@ -204,8 +195,8 @@ function su_custom_formatter( $content ) {
 /**
  * Custom do_shortcode function for nested shortcodes
  *
- * @param string $content Shortcode content
- * @param string $pre     First shortcode letter
+ * @param string  $content Shortcode content
+ * @param string  $pre     First shortcode letter
  *
  * @return string Formatted content
  */
@@ -220,9 +211,8 @@ function su_do_shortcode( $content, $pre ) {
  * @return string Special prefix
  */
 function su_compatibility_mode_prefix() {
-	$shult = shortcodes_ultimate();
 	$option = get_option( 'su_compatibility_mode_prefix' );
-	if ( $shult->get_option( 'compatibility_mode' ) === 'on' ) return ( $option ) ? $option : 'su_';
+	if ( get_option( 'su_option_compatibility-mode' ) === 'on' ) return ( $option ) ? $option : 'su_';
 	else return '';
 }
 
@@ -234,144 +224,9 @@ function su_cmpt() {
 }
 
 /**
- * Tweet relative time (like: 5 seconds ago)
- */
-function su_rel_time( $original, $do_more = 0 ) {
-	// array of time period chunks
-	$chunks = array( array( 60 * 60 * 24 * 365, __( 'year', 'su' ) ),
-	                 array( 60 * 60 * 24 * 30, __( 'month', 'su' ) ),
-	                 array( 60 * 60 * 24 * 7, __( 'week', 'su' ) ),
-	                 array( 60 * 60 * 24, __( 'day', 'su' ) ),
-	                 array( 60 * 60, __( 'hour', 'su' ) ),
-	                 array( 60, __( 'minute', 'su' ) ), );
-	$today = time();
-	$since = $today - $original;
-	for ( $i = 0, $j = count( $chunks ); $i < $j; $i++ ) {
-		$seconds = $chunks[$i][0];
-		$name = $chunks[$i][1];
-
-		if ( ( $count = floor( $since / $seconds ) ) != 0 ) break;
-	}
-	$return = ( $count == 1 ) ? '1 ' . $name : "$count {$name}" . __( 's', 'su' );
-	if ( $i + 1 < $j ) {
-		$seconds2 = $chunks[$i + 1][0];
-		$name2 = $chunks[$i + 1][1];
-
-		// add second item if it's greater than 0
-		if ( ( ( $count2 = floor( ( $since - ( $seconds * $count ) ) / $seconds2 ) ) != 0 ) && $do_more
-		) $return .= ( $count2 == 1 ) ? ', 1 ' . $name2 : ", $count2 {$name2}" . __( 's', 'su' );
-	}
-	return $return;
-}
-
-/**
- * Add hyperlinks to tweets
- */
-function su_parse_links( $text ) {
-	// Props to Allen Shaw & webmancers.com
-	// match protocol://address/path/file.extension?some=variable&another=asf%
-	$text = preg_replace( '/\b([a-zA-Z]+:\/\/[\w_.\-]+\.[a-zA-Z]{2,6}[\/\w\-~.?=&%#+$*!]*)\b/i',
-	                      "<a href=\"$1\" class=\"twitter-link\">$1</a>", $text );
-	// match www.something.domain/path/file.extension?some=variable&another=asf%
-	$text = preg_replace( '/\b(?<!:\/\/)(www\.[\w_.\-]+\.[a-zA-Z]{2,6}[\/\w\-~.?=&%#+$*!]*)\b/i',
-	                      "<a href=\"http://$1\" class=\"twitter-link\">$1</a>", $text );
-
-	// match name@address
-	$text = preg_replace( "/\b([a-zA-Z][a-zA-Z0-9\_\.\-]*[a-zA-Z]*\@[a-zA-Z][a-zA-Z0-9\_\.\-]*[a-zA-Z]{2,6})\b/i",
-	                      "<a href=\"mailto://$1\" class=\"twitter-link\">$1</a>", $text );
-	//mach #trendingtopics. Props to Michael Voigt
-	$text = preg_replace( '/([\.|\,|\:|\¡|\¿|\>|\{|\(]?)#{1}(\w*)([\.|\,|\:|\!|\?|\>|\}|\)]?)\s/i',
-	                      "$1<a href=\"http://twitter.com/#search?q=$2\" class=\"twitter-link\">#$2</a>$3 ",
-	                      $text );
-	return $text;
-}
-
-/**
- * Get tweets by username
- */
-function su_get_tweets( $username, $limit, $show_time ) {
-	// Get tweets
-	$tweets = json_decode( file_get_contents( 'https://api.twitter.com/1/statuses/user_timeline.json?screen_name=' .
-	                                          $username . '&count=' . $limit ) );
-	// No username
-	if ( !$username ) {
-		$return = __( 'username not specified', 'su' );
-		$error = true;
-	}
-	// No messages
-	if ( !count( $tweets ) ) {
-		$return = __( 'no public messages', 'su' );
-		$error = true;
-	}
-	// Loop tweets
-	if ( count( $tweets ) ) foreach ( $tweets as $num => $tweet ) {
-		// Prepare relative time
-		$time = ( $show_time ) ?
-			'<span class="su-tweet-time">' . su_rel_time( strtotime( $tweet->created_at ) ) . '</span>' : '';
-		// Prepare last tweet class
-		$last_tweet_class = ( $num == ( $limit - 1 ) ) ? ' su-tweet-last' : '';
-		// Prepare markup
-		$return = '<div class="su-tweet' . $last_tweet_class . '">';
-		$return .=
-			'<a href="http://twitter.com/' . $username . '" class="su-tweet-username">@' . $username . '</a>: ';
-		$return .= su_parse_links( $tweet->text );
-		$return .= $time;
-		$return .= '</div>';
-	}
-	// Return results
-	return ( $error ) ? '<p class="su-error"><strong>Tweets:</strong> ' . $return . '</p>' : $return;
-}
-
-function su_get_categories() {
-	$cats = array();
-	foreach ( ( array ) get_terms( 'category' ) as $cat ) {
-		$cats[$cat->slug] = $cat->name;
-	}
-	return $cats;
-}
-
-function su_get_post_types() {
-	$types = array();
-	foreach ( ( array ) get_post_types( '', 'objects' ) as $cpt => $cpt_data ) {
-		$types[$cpt] = $cpt_data->label;
-	}
-	return $types;
-}
-
-function su_get_users() {
-	$users = array();
-	foreach ( ( array ) get_users() as $user ) {
-		$users[$user->ID] = $user->data->display_name;
-	}
-	return $users;
-}
-
-function su_get_taxonomies( $first = false ) {
-	$taxes = array();
-	foreach ( ( array ) get_taxonomies( '', 'objects' ) as $tax ) {
-		$taxes[$tax->name] = $tax->label;
-	}
-	// Return only first taxonomy name
-	if ( $first ) {
-		reset( $taxes );
-		return key( $taxes );
-	}
-	return $taxes;
-}
-
-function su_get_terms( $taxonomy ) {
-	$terms = array();
-	// Get the terms
-	foreach ( ( array ) get_terms( $taxonomy, array( 'hide_empty' => false ) ) as $term ) {
-		$terms[$term->slug] = $term->name;
-	}
-	return $terms;
-}
-
-/**
  * Extra CSS class helper
  *
- * @param array $atts Shortcode attributes
+ * @param array   $atts Shortcode attributes
  *
  * @return string
  */
@@ -381,7 +236,7 @@ function su_ecssc( $atts ) {
 
 /**
  *  Resizes an image and returns an array containing the resized URL, width, height and file type. Uses native Wordpress functionality.
- * 
+ *
  *  @author Matthew Ruddy (http://easinglider.com)
  *  @return array   An array containing the resized image URL, width, height and file type.
  */
@@ -392,74 +247,53 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 	//  First implementation
 	//######################################################################
 	if ( isset( $wp_version ) && version_compare( $wp_version, '3.5' ) >= 0 ) {
-
 		global $wpdb;
-
 		if ( empty( $url ) )
 			return new WP_Error( 'no_image_url', 'No image URL has been entered.', $url );
-
 		// Get default size from database
 		$width = ( $width ) ? $width : get_option( 'thumbnail_size_w' );
 		$height = ( $height ) ? $height : get_option( 'thumbnail_size_h' );
-
 		// Allow for different retina sizes
 		$retina = $retina ? ( $retina === true ? 2 : $retina ) : 1;
-
 		// Get the image file path
 		$file_path = parse_url( $url );
 		$file_path = $_SERVER['DOCUMENT_ROOT'] . $file_path['path'];
-
 		// Check for Multisite
 		if ( is_multisite() ) {
 			global $blog_id;
 			$blog_details = get_blog_details( $blog_id );
 			$file_path = str_replace( $blog_details->path . 'files/', '/wp-content/blogs.dir/' . $blog_id . '/files/', $file_path );
 		}
-
 		// Destination width and height variables
 		$dest_width = $width * $retina;
 		$dest_height = $height * $retina;
-
 		// File name suffix (appended to original file name)
 		$suffix = "{$dest_width}x{$dest_height}";
-
 		// Some additional info about the image
 		$info = pathinfo( $file_path );
 		$dir = $info['dirname'];
 		$ext = $info['extension'];
 		$name = wp_basename( $file_path, ".$ext" );
-
 		// Suffix applied to filename
 		$suffix = "{$dest_width}x{$dest_height}";
-
 		// Get the destination file name
 		$dest_file_name = "{$dir}/{$name}-{$suffix}.{$ext}";
-
 		if ( !file_exists( $dest_file_name ) ) {
-
-			/*
-				 *  Bail if this image isn't in the Media Library.
-				 *  We only want to resize Media Library images, so we can be sure they get deleted correctly when appropriate.
-				 */
 			$query = $wpdb->prepare( "SELECT * FROM $wpdb->posts WHERE guid='%s'", $url );
 			$get_attachment = $wpdb->get_results( $query );
 			if ( !$get_attachment )
 				return array( 'url' => $url, 'width' => $width, 'height' => $height );
-
 			// Load Wordpress Image Editor
 			$editor = wp_get_image_editor( $file_path );
 			if ( is_wp_error( $editor ) )
 				return array( 'url' => $url, 'width' => $width, 'height' => $height );
-
 			// Get the original image size
 			$size = $editor->get_size();
 			$orig_width = $size['width'];
 			$orig_height = $size['height'];
-
 			$src_x = $src_y = 0;
 			$src_w = $orig_width;
 			$src_h = $orig_height;
-
 			if ( $crop ) {
 
 				$cmp_x = $orig_width / $dest_width;
@@ -478,23 +312,19 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 
 			// Time to crop the image!
 			$editor->crop( $src_x, $src_y, $src_w, $src_h, $dest_width, $dest_height );
-
 			// Now let's save the image
 			$saved = $editor->save( $dest_file_name );
-
 			// Get resized image information
 			$resized_url = str_replace( basename( $url ), basename( $saved['path'] ), $url );
 			$resized_width = $saved['width'];
 			$resized_height = $saved['height'];
 			$resized_type = $saved['mime-type'];
-
 			// Add the resized dimensions to original image metadata (so we can delete our resized images when the original image is delete from the Media Library)
 			$metadata = wp_get_attachment_metadata( $get_attachment[0]->ID );
 			if ( isset( $metadata['image_meta'] ) ) {
 				$metadata['image_meta']['resized_images'][] = $resized_width . 'x' . $resized_height;
 				wp_update_attachment_metadata( $get_attachment[0]->ID, $metadata );
 			}
-
 			// Create the image array
 			$image_array = array(
 				'url' => $resized_url,
@@ -511,7 +341,6 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 				'type' => $ext
 			);
 		}
-
 		// Return image array
 		return $image_array;
 	}
@@ -721,20 +550,260 @@ function su_delete_resized_images( $post_id ) {
 
 add_action( 'delete_attachment', 'su_delete_resized_images' );
 
-class Shortcodes_Ultimate_Tools {
-	function __construct() {}
-	public static function decode_shortcode( $value ) {
+class Su_Tools {
+	function __construct() {
+		add_action( 'wp_ajax_su_example_preview', array( __CLASS__, 'example' ) );
+		add_action( 'su/update',                  array( __CLASS__, 'reset_examples' ) );
+		add_action( 'su/activation',              array( __CLASS__, 'reset_examples' ) );
+	}
+
+	public static function select( $args ) {
+		$args = wp_parse_args( $args, array(
+				'id'       => '',
+				'name'     => '',
+				'class'    => '',
+				'multiple' => '',
+				'size'     => '',
+				'disabled' => '',
+				'selected' => '',
+				'none'     => '',
+				'options'  => array(),
+				'style' => '',
+				'format'   => 'keyval', // keyval/idtext
+				'noselect' => '' // return options without <select> tag
+			) );
+		$options = array();
+		if ( !is_array( $args['options'] ) ) $args['options'] = array();
+		if ( $args['id'] ) $args['id'] = ' id="' . $args['id'] . '"';
+		if ( $args['name'] ) $args['name'] = ' name="' . $args['name'] . '"';
+		if ( $args['class'] ) $args['class'] = ' class="' . $args['class'] . '"';
+		if ( $args['style'] ) $args['style'] = ' style="' . esc_attr( $args['style'] ) . '"';
+		if ( $args['multiple'] ) $args['multiple'] = ' multiple="multiple"';
+		if ( $args['disabled'] ) $args['disabled'] = ' disabled="disabled"';
+		if ( $args['size'] ) $args['size'] = ' size="' . $args['size'] . '"';
+		if ( $args['none'] && $args['format'] === 'keyval' ) $args['options'][0] = $args['none'];
+		if ( $args['none'] && $args['format'] === 'idtext' ) array_unshift( $args['options'], array( 'id' => '0', 'text' => $args['none'] ) );
+		// keyval loop
+		// $args['options'] = array(
+		//   id => text,
+		//   id => text
+		// );
+		if ( $args['format'] === 'keyval' ) foreach ( $args['options'] as $id => $text ) {
+				$options[] = '<option value="' . (string) $id . '">' . (string) $text . '</option>';
+			}
+		// idtext loop
+		// $args['options'] = array(
+		//   array( id => id, text => text ),
+		//   array( id => id, text => text )
+		// );
+		elseif ( $args['format'] === 'idtext' ) foreach ( $args['options'] as $option ) {
+				if ( isset( $option['id'] ) && isset( $option['text'] ) )
+					$options[] = '<option value="' . (string) $option['id'] . '">' . (string) $option['text'] . '</option>';
+			}
+		$options = implode( '', $options );
+		$options = str_replace( 'value="' . $args['selected'] . '"', 'value="' . $args['selected'] . '" selected="selected"', $options );
+		return ( $args['noselect'] ) ? $options : '<select' . $args['id'] . $args['name'] . $args['class'] . $args['multiple'] . $args['size'] . $args['disabled'] . $args['style'] . '>' . $options . '</select>';
+	}
+
+	public static function get_categories() {
+		$cats = array();
+		foreach ( (array) get_terms( 'category', array( 'hide_empty' => false ) ) as $cat ) $cats[$cat->slug] = $cat->name;
+		return $cats;
+	}
+
+	public static function get_types() {
+		$types = array();
+		foreach ( (array) get_post_types( '', 'objects' ) as $cpt => $cpt_data ) $types[$cpt] = $cpt_data->label;
+		return $types;
+	}
+
+	public static function get_users() {
+		$users = array();
+		foreach ( (array) get_users() as $user ) $users[$user->ID] = $user->data->display_name;
+		return $users;
+	}
+
+	public static function get_taxonomies() {
+		$taxes = array();
+		foreach ( (array) get_taxonomies( '', 'objects' ) as $tax ) $taxes[$tax->name] = $tax->label;
+		return $taxes;
+	}
+
+	public static function get_terms( $tax = 'category' ) {
+		$terms = array();
+		foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
+		return $terms;
+	}
+
+	public static function get_slides( $args ) {
+		$args = wp_parse_args( $args, array(
+				'source'  => 'none',
+				'gallery' => null,
+				'type'    => '',
+				'link'    => 'none'
+			) );
+		// Get deprecated galleries if needed
+		if ( $args['gallery'] !== null || ( $args['source'] === 'none' && get_option( 'su_option_galleries-432' ) ) ) return self::get_slides_432( $args );
+		// Prepare empty array for slides
+		$slides = array();
+		// Loop through source types
+		foreach ( array( 'media', 'posts', 'category', 'taxonomy' ) as $type )
+			if ( strpos( trim( $args['source'] ), $type . ':' ) === 0 ) {
+				$args['source'] = array(
+					'type' => $type,
+					'val'  => (string) trim( str_replace( array( $type . ':', ' ' ), '', $args['source'] ), ',' )
+				);
+				break;
+			}
+		// Source is not parsed correctly, return empty array
+		if ( !is_array( $args['source'] ) ) return $slides;
+		// Default posts query
+		$query = array( 'posts_per_page' => 100 );
+		// Source: media
+		if ( $args['source']['type'] === 'media' ) {
+			$query['post_type'] = 'attachment';
+			$query['post_status'] = 'any';
+			$query['post__in'] = (array) explode( ',', $args['source']['val'] );
+			$query['orderby'] = 'post__in';
+		}
+		// Source: posts
+		if ( $args['source']['type'] === 'posts' ) {
+			if ( $args['source']['val'] !== 'recent' ) {
+				$query['post__in'] = (array) explode( ',', $args['source']['val'] );
+				$query['orderby'] = 'post__in';
+			}
+		}
+		// Source: category
+		elseif ( $args['source']['type'] === 'category' ) {
+			$query['category__in'] = (array) explode( ',', $args['source']['val'] );
+		}
+		// Source: taxonomy
+		elseif ( $args['source']['type'] === 'taxonomy' ) {
+			// Parse taxonomy name and terms ids
+			$args['source']['val'] = explode( '/', $args['source']['val'] );
+			// Taxonomy parsed incorrectly, return empty array
+			if ( !is_array( $args['source']['val'] ) || count( $args['source']['val'] ) !== 2 ) return $slides;
+			$query['tax_query'] = array(
+				array(
+					'taxonomy' => $args['source']['val'][0],
+					'field' => 'id',
+					'terms' => (array) explode( ',', $args['source']['val'][1] )
+				)
+			);
+		}
+		// Query posts
+		$query = new WP_Query( $query );
+		// print_r($query);
+		// Loop through posts
+		if ( is_array( $query->posts ) ) foreach ( $query->posts as $post ) {
+				// Get post thumbnail ID
+				$thumb = ( $args['source']['type'] === 'media' ) ? $post->ID : get_post_thumbnail_id( $post->ID );
+				// Thumbnail isn't set, go to next post
+				if ( !is_numeric( $thumb ) ) continue;
+				$slide = array(
+					'image' => wp_get_attachment_url( $thumb ),
+					'link'  => '',
+					'title' => get_the_title( $post->ID )
+				);
+				if ( $args['link'] === 'image' ) $slide['link'] = $slide['image'];
+				elseif ( $args['link'] === 'post' ) $slide['link'] = get_permalink( $post->ID );
+				elseif ( $args['link'] === 'attachment' ) $slide['link'] = get_attachment_link( $thumb );
+				$slides[] = $slide;
+			}
+		// Return slides
+		return $slides;
+	}
+
+	public static function get_slides_432( $args ) {
+		$args = wp_parse_args( $args, array(
+				'gallery' => 1
+			) );
+		$slides = array();
+		$args['gallery'] = ( $args['gallery'] === null ) ? 0 : $args['gallery'] - 1;
+		$galleries = get_option( 'su_option_galleries-432' );
+		// No galleries found
+		if ( !is_array( $galleries ) ) return $slides;
+		// If galleries found loop through them
+		if ( isset( $galleries[$args['gallery']] ) ) $slides = $galleries[$args['gallery']]['items'];
+		// Return slides
+		return $slides;
+	}
+
+	public static function example() {
+		// Check authentication
+		self::access();
+		// Check incoming data
+		if ( !isset( $_REQUEST['code'] ) || !isset( $_REQUEST['id'] ) ) return;
+		// Check for cache
+		$output = get_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ) );
+		if ( $output && SU_ENABLE_CACHE ) echo $output;
+		// Cache not found
+		else {
+			ob_start();
+			// Prepare data
+			$code = file_get_contents( sanitize_text_field( $_REQUEST['code'] ) );
+			// Check for code
+			if ( !$code ) die( '<p class="su-examples-error">' . __( 'Example code does not found, please check it later', 'su' ) . '</p>' );
+			// Clean-up the code
+			$code = str_replace( array( "\t", '%su_' ), array( '  ', su_cmpt() ), $code );
+			// Split code
+			$chunks = explode( '-----', $code );
+			// Show snippets
+			do_action( 'su/examples/preview/before' );
+			foreach ( $chunks as $chunk ) {
+				// Clean-up new lines
+				$chunk = trim( $chunk, "\n\r" );
+				// Calc textarea rows
+				$rows = substr_count( $chunk, "\n" );
+				$rows = ( $rows < 4 ) ? '4' : (string) ( $rows + 1 );
+				$rows = ( $rows > 20 ) ? '20' : (string) ( $rows + 1 );
+				echo wpautop( do_shortcode( $chunk ) );
+				echo '<div style="clear:both"></div>';
+				echo '<div class="su-examples-code"><span class="su-examples-get-code button"><i class="fa fa-code"></i>&nbsp;&nbsp;' . __( 'Get the code', 'su' ) . '</span><textarea rows="' . $rows . '">' . esc_textarea( $chunk ) . '</textarea></div>';
+			}
+			do_action( 'su/examples/preview/after' );
+			$output = ob_get_contents();
+			ob_end_clean();
+			set_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ), $output );
+			echo $output;
+		}
+		die();
+	}
+
+	public static function reset_examples() {
+		foreach( (array) Su_Data::examples() as $example ) foreach( (array) $example['items'] as $item ) delete_transient( 'su/examples/render/' . $item['id'] );
+	}
+
+	public static function do_attr( $value ) {
 		return do_shortcode( str_replace( array( '{', '}' ), array( '[', ']' ), $value ) );
 	}
 
-	public static function icon( $src = 'icon-file' ) {
-		return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="' . $src . '"></i>';
+	public static function icon( $src = 'file' ) {
+		return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . $src . '"></i>';
+	}
+
+	public static function icons() {
+		$icons = array();
+		if ( is_callable( array( 'Su_Data', 'icons' ) ) ) foreach ( (array) Su_Data::icons() as $icon ) {
+				$icons[] = '<i class="fa fa-' . $icon . '" title="' . $icon . '"></i>';
+			}
+		return implode( '', $icons );
+	}
+
+	public static function access() {
+		if ( !self::access_check() ) wp_die( __( 'Access denied', 'su' ) );
+	}
+
+	public static function access_check() {
+		return current_user_can( 'edit_posts' );
 	}
 }
 
+new Su_Tools;
+
 /**
- * Just a shortcut for Shortcodes_Ultimate_Tools::decode_shortcode()
+ * Just a shortcut for Su_Tools::decode_shortcode()
  */
 function su_scattr( $value ) {
-	return Shortcodes_Ultimate_Tools::decode_shortcode( $value );
+	return Su_Tools::do_attr( $value );
 }

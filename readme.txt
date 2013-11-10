@@ -3,7 +3,7 @@ Contributors: gn_themes
 License: GPL3
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
-Requires at least: 3.4
+Requires at least: 3.5
 Tested up to: 4.0
 Stable tag: trunk
 
@@ -23,12 +23,11 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Power of CSS3
 * Custom CSS editor with syntax highlight
 * Special widget
-* Custom skins
-* Extensible
+* Rich API
 
-= Add-ons =
-* [Maker add-on](http://gndev.info/sum). Allows you to create custom shortcodes
-* [Metro skins](http://gndev.info/shortcodes-ultimate/metro-skins/). 5 flat skins with different colors
+= Premium Add-ons =
+* __[Extra Skins](http://gndev.info/shortcodes-ultimate/skins/)__ - 60+ additional skins for plugin shortcodes
+* __[Shortcode Creator](http://gndev.info/shortcodes-ultimate/maker/)__ - allows you to create your own custom shortcodes
 
 = Demo video =
 [youtube http://www.youtube.com/watch?v=DR2c266yWEA]
@@ -60,6 +59,9 @@ Have a translation? [Contact me](http://gndev.info/feedback/)
 * Dmitry Semenov - [Magnific Popup jQuery plugin](http://dimsemenov.com/plugins/magnific-popup/)
 * Craig Thompson - [qTip jQuery plugin](http://qtip2.com/)
 * Vladimir Kharlampidi - [Swiper jQuery plugin](http://www.idangero.us/sliders/swiper/)
+* Designmodo - [Flat UI Free icons](http://designmodo.com/)
+* Dave Gandy - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+* James Smith - [Simple Slider jQuery plugin](http://loopj.com/jquery-simple-slider/)
 
 
 == Installation ==
@@ -95,10 +97,24 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
-= 4.3.2 =
+= 4.4.0 =
+* __IMPORTANT__: new galleries mechanism. Your created galleries will work but will not be visible in admin panel. Now, you're able to create galleries right in "Insert shortcode" window. Also, you can now create galleries from posts, categories or even custom taxonomies.
+* New shortocde [dummy_image]
+* New shortocde [dummy_text]
+* New shortocde [animate]
+* New shortocde [youtube_advanced]
+* New admin page - Examples
+* New admin page - Add-ons
+* Font Awesome updated to version 4
+* New attr [spoiler icon=""]
+* Fixed issue with date format in [posts]
+* New slider control for shortcode generator
 * Small fixes
+
+= 4.3.2 =
 * New text-shadow picker for [button]
 * Anchor navigation for spoilers and tabs - [forum topic](http://wordpress.org/support/topic/hyperlinks-to-spoilers-and-tabs)
+* Small fixes
 
 = 4.3 =
 * IMPORTANT: removed old list icons. These icons replaced with new font-awesome icons
