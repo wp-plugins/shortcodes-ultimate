@@ -50,37 +50,37 @@ class Su_Data {
 						array(
 							'name' => __( 'Accordions, spoilers, different styles, anchors', 'su' ),
 							'id'   => 'spoilers',
-							'code' => plugins_url( 'inc/examples/spoilers.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/spoilers.example',
 							'icon' => 'tasks'
 						),
 						array(
 							'name' => __( 'Tabs, vertical tabs, tab anchors', 'su' ),
 							'id'   => 'tabs',
-							'code' => plugins_url( 'inc/examples/tabs.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/tabs.example',
 							'icon' => 'folder'
 						),
 						array(
 							'name' => __( 'Column layouts', 'su' ),
 							'id'   => 'columns',
-							'code' => plugins_url( 'inc/examples/columns.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/columns.example',
 							'icon' => 'th-large'
 						),
 						array(
 							'name' => __( 'Media elements, YouTube, Vimeo, Screenr and self-hosted videos, audio player', 'su' ),
 							'id'   => 'media',
-							'code' => plugins_url( 'inc/examples/media.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/media.example',
 							'icon' => 'play-circle'
 						),
 						array(
 							'name' => __( 'Unlimited buttons', 'su' ),
 							'id'   => 'buttons',
-							'code' => plugins_url( 'inc/examples/buttons.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/buttons.example',
 							'icon' => 'heart'
 						),
 						array(
 							'name' => __( 'Animations', 'su' ),
 							'id'   => 'animations',
-							'code' => plugins_url( 'inc/examples/animations.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/animations.example',
 							'icon' => 'bolt'
 						),
 					)
@@ -91,13 +91,13 @@ class Su_Data {
 						array(
 							'name' => __( 'Interacting with posts shortcode', 'su' ),
 							'id' => 'posts',
-							'code' => plugins_url( 'inc/examples/posts.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/posts.example',
 							'icon' => 'list'
 						),
 						array(
 							'name' => __( 'Nested shortcodes, shortcodes inside of attributes', 'su' ),
 							'id' => 'nested',
-							'code' => plugins_url( 'inc/examples/nested.example', SU_PLUGIN_FILE ),
+							'code' => plugin_dir_path( SU_PLUGIN_FILE ) . '/inc/examples/nested.example',
 							'icon' => 'indent'
 						),
 					)

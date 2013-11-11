@@ -16,7 +16,7 @@ class Su_Shortcodes {
 			), $atts );
 		su_query_asset( 'css', 'su-content-shortcodes' );
 		do_action( 'su/shortcode/heading', $atts );
-		return '<div class="su-heading su-heading-style-' . $atts['style'] . ' su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' . intVal( $atts['size'] ) . 'px;margin-bottom:' . $atts['margin'] . 'px"><div class="su-heading-inner">' . $content . '</div></div>';
+		return '<div class="su-heading su-heading-style-' . $atts['style'] . ' su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' . intVal( $atts['size'] ) . 'px;margin-bottom:' . $atts['margin'] . 'px"><div class="su-heading-inner">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	public static function tabs( $atts = null, $content = null ) {
