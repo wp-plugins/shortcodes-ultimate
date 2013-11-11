@@ -485,10 +485,11 @@ class Su_Shortcodes {
 
 	public static function lightbox( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'src'   => 'http://www.youtube.com/watch?v=NbE8INOjTKM',
+				'src'   => false,
 				'type'  => 'iframe',
 				'class' => ''
 			), $atts );
+		if ( !$atts['src'] ) return '<p class="su-error">Lightbox: ' . __( 'please specify correct source', 'su' ) . '</p>';
 		su_query_asset( 'css', 'magnific-popup' );
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'magnific-popup' );
@@ -550,13 +551,14 @@ class Su_Shortcodes {
 		// Prepare data
 		$return = array();
 		$atts = shortcode_atts( array(
-				'url'        => 'http://www.youtube.com/watch?v=NbE8INOjTKM',
+				'url'        => false,
 				'width'      => 600,
 				'height'     => 400,
 				'autoplay'   => 'no',
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
@@ -577,7 +579,7 @@ class Su_Shortcodes {
 		$return = array();
 		$params = array();
 		$atts = shortcode_atts( array(
-				'url'            => 'http://www.youtube.com/watch?v=NbE8INOjTKM',
+				'url'            => false,
 				'width'          => 600,
 				'height'         => 400,
 				'autohide'       => 'alt',
@@ -593,6 +595,7 @@ class Su_Shortcodes {
 				'responsive'     => 'yes',
 				'class'          => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
@@ -616,13 +619,14 @@ class Su_Shortcodes {
 		// Prepare data
 		$return = array();
 		$atts = shortcode_atts( array(
-				'url'        => 'http://vimeo.com/21294655',
+				'url'        => false,
 				'width'      => 600,
 				'height'     => 400,
 				'autoplay'   => 'no',
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">Vimeo: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
@@ -644,12 +648,13 @@ class Su_Shortcodes {
 		// Prepare data
 		$return = array();
 		$atts = shortcode_atts( array(
-				'url'        => 'http://www.screenr.com/OuWH',
+				'url'        => false,
 				'width'      => 600,
 				'height'     => 400,
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">Screenr: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*screenr\.com(?:[\/\w]*\/videos?)?\/([a-zA-Z0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
@@ -666,13 +671,14 @@ class Su_Shortcodes {
 
 	public static function audio( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'url'      => 'http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3',
+				'url'      => false,
 				'width'    => 'auto',
 				'title'    => '',
 				'autoplay' => 'no',
 				'loop'     => 'no',
 				'class'    => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">Audio: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		// Generate unique ID
 		$id = uniqid( 'su_audio_player_' );
@@ -691,8 +697,8 @@ class Su_Shortcodes {
 
 	public static function video( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'url'      => 'http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v',
-				'poster'   => 'http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png',
+				'url'      => false,
+				'poster'   => false,
 				'title'    => '',
 				'width'    => 600,
 				'height'   => 300,
@@ -701,6 +707,7 @@ class Su_Shortcodes {
 				'loop'     => 'no',
 				'class'    => ''
 			), $atts );
+		if ( !$atts['url'] ) return '<p class="su-error">Video: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		$atts['url'] = su_scattr( $atts['url'] );
 		// Generate unique ID
 		$id = uniqid( 'su_video_player_' );

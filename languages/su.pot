@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Shortcodes Ultimate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-10 21:52+0300\n"
-"PO-Revision-Date: 2013-11-10 21:52+0300\n"
+"POT-Creation-Date: 2013-11-12 01:26+0300\n"
+"PO-Revision-Date: 2013-11-12 01:26+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -479,7 +479,7 @@ msgstr ""
 msgid "Spoiler"
 msgstr ""
 
-#: inc/core/data.php:246 inc/core/shortcodes.php:73
+#: inc/core/data.php:246 inc/core/shortcodes.php:72
 msgid "Spoiler title"
 msgstr ""
 
@@ -610,7 +610,7 @@ msgstr ""
 msgid "Show link to top of the page or not"
 msgstr ""
 
-#: inc/core/data.php:332 inc/core/shortcodes.php:100
+#: inc/core/data.php:332 inc/core/shortcodes.php:99
 msgid "Go to top"
 msgstr ""
 
@@ -1037,7 +1037,7 @@ msgstr ""
 msgid "Service"
 msgstr ""
 
-#: inc/core/data.php:766 inc/core/shortcodes.php:431
+#: inc/core/data.php:766 inc/core/shortcodes.php:430
 msgid "Service title"
 msgstr ""
 
@@ -1664,7 +1664,7 @@ msgstr ""
 msgid "Members"
 msgstr ""
 
-#: inc/core/data.php:1474 inc/core/shortcodes.php:750
+#: inc/core/data.php:1474 inc/core/shortcodes.php:756
 msgid "This content is for registered users only. Please %login%."
 msgstr ""
 
@@ -1684,7 +1684,7 @@ msgstr ""
 msgid "This color will applied only to box for not logged users"
 msgstr ""
 
-#: inc/core/data.php:1483 inc/core/shortcodes.php:753
+#: inc/core/data.php:1483 inc/core/shortcodes.php:759
 msgid "login"
 msgstr ""
 
@@ -2316,7 +2316,7 @@ msgstr ""
 msgid "Text placeholder"
 msgstr ""
 
-#: inc/core/data.php:2184 inc/core/shortcodes.php:1231
+#: inc/core/data.php:2184 inc/core/shortcodes.php:1237
 msgid "Dummy image"
 msgstr ""
 
@@ -2711,30 +2711,37 @@ msgid ""
 "a>"
 msgstr ""
 
-#: inc/core/shortcodes.php:54
+#: inc/core/shortcodes.php:53
 msgid "Tab title"
 msgstr ""
 
-#: inc/core/shortcodes.php:452
+#: inc/core/shortcodes.php:451
 msgid "This is box title"
 msgstr ""
 
-#: inc/core/shortcodes.php:564 inc/core/shortcodes.php:600
-#: inc/core/shortcodes.php:630 inc/core/shortcodes.php:657
-#: inc/core/shortcodes.php:683 inc/core/shortcodes.php:709
+#: inc/core/shortcodes.php:492
+msgid "please specify correct source"
+msgstr ""
+
+#: inc/core/shortcodes.php:561 inc/core/shortcodes.php:565
+#: inc/core/shortcodes.php:598 inc/core/shortcodes.php:602
+#: inc/core/shortcodes.php:629 inc/core/shortcodes.php:633
+#: inc/core/shortcodes.php:657 inc/core/shortcodes.php:661
+#: inc/core/shortcodes.php:681 inc/core/shortcodes.php:688
+#: inc/core/shortcodes.php:710 inc/core/shortcodes.php:715
 msgid "please specify correct url"
 msgstr ""
 
-#: inc/core/shortcodes.php:840
+#: inc/core/shortcodes.php:846
 msgid "This menu doesn't exists, or has no elements"
 msgstr ""
 
-#: inc/core/shortcodes.php:938 inc/core/shortcodes.php:1013
-#: inc/core/shortcodes.php:1058
+#: inc/core/shortcodes.php:944 inc/core/shortcodes.php:1019
+#: inc/core/shortcodes.php:1064
 msgid "images not found"
 msgstr ""
 
-#: inc/core/shortcodes.php:1193
+#: inc/core/shortcodes.php:1199
 msgid "template not found"
 msgstr ""
 

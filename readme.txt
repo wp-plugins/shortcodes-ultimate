@@ -99,6 +99,7 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 = 4.4 =
 * __IMPORTANT__: new galleries mechanism. Your created galleries will work but will not be visible in admin panel. Now, you're able to create galleries right in "Insert shortcode" window. Also, you can now create galleries from posts, categories or even custom taxonomies.
+* Removed all default links (default youtube videos)
 * Fixed file_get_contents() (disabled http wrappers) issue at the examples page
 * Added classes Shortcodes_Ultimate_Generator, Shortcodes_Ultimate_Shortcodes and Shortcodes_Ultimate_Data
 * Removed unused classes MediaUpload and ImageMeta
