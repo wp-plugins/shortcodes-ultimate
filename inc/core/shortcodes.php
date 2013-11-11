@@ -1,5 +1,4 @@
 <?php
-
 class Su_Shortcodes {
 	static $tabs = array();
 	static $tab_count = 0;
@@ -1259,3 +1258,9 @@ class Su_Shortcodes {
 }
 
 new Su_Shortcodes;
+
+class Shortcodes_Ultimate_Shortcodes extends Su_Shortcodes {
+	function __construct() {
+		parent::__construct();
+	}
+}

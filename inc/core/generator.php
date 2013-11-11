@@ -220,3 +220,9 @@ class Su_Generator {
 }
 
 new Su_Generator;
+
+class Shortcodes_Ultimate_Generator extends Su_Generator {
+	function __construct() {
+		parent::__construct();
+	}
+}

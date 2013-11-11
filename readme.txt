@@ -97,11 +97,11 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 
 == Changelog ==
 
-= 4.4.1 =
-* Fixed file_get_contents() (disabled http wrappers) issue at the examples page
-
-= 4.4.0 =
+= 4.4 =
 * __IMPORTANT__: new galleries mechanism. Your created galleries will work but will not be visible in admin panel. Now, you're able to create galleries right in "Insert shortcode" window. Also, you can now create galleries from posts, categories or even custom taxonomies.
+* Fixed file_get_contents() (disabled http wrappers) issue at the examples page
+* Added classes Shortcodes_Ultimate_Generator, Shortcodes_Ultimate_Shortcodes and Shortcodes_Ultimate_Data
+* Removed unused classes MediaUpload and ImageMeta
 * New shortocde [dummy_image]
 * New shortocde [dummy_text]
 * New shortocde [animate]
@@ -114,12 +114,10 @@ Upgrade normally via your Wordpress admin -> Plugins panel.
 * New slider control for shortcode generator
 * Small fixes
 
-= 4.3.2 =
+= 4.3 =
 * New text-shadow picker for [button]
 * Anchor navigation for spoilers and tabs - [forum topic](http://wordpress.org/support/topic/hyperlinks-to-spoilers-and-tabs)
 * Small fixes
-
-= 4.3 =
 * IMPORTANT: removed old list icons. These icons replaced with new font-awesome icons
 * New icon picker for [service], [button] and [list]
 * Media manager is now works on widgets page

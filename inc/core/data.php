@@ -153,7 +153,7 @@ class Su_Data {
 							'default' => 20,
 							'name' => __( 'Margin', 'su' ),
 							'desc' => __( 'Bottom margin (pixels)', 'su' )
-						),						
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -2270,7 +2270,7 @@ class Su_Data {
 							'default' => 'no',
 							'name' => __( 'Inline', 'su' ),
 							'desc' => __( 'This parameter determines what HTML tag will be used for animation wrapper. Turn this option to YES and animated element will be wrapped in SPAN instead of DIV. Useful for inline animations, like buttons', 'su' )
-						),						
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -2284,5 +2284,11 @@ class Su_Data {
 			) );
 		// Return result
 		return ( is_string( $shortcode ) ) ? $shortcodes[sanitize_text_field( $shortcode )] : $shortcodes;
+	}
+}
+
+class Shortcodes_Ultimate_Data extends Su_Data {
+	function __construct() {
+		parent::__construct();
 	}
 }
