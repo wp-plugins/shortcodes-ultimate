@@ -1,0 +1,71 @@
+<h2>Full-width column</h2>
+
+[%su_row]
+	[%su_column size="1/1"] [%su_dummy_text what="words" amount="60"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>1/2 + 1/2</h2>
+
+[%su_row]
+	[%su_column size="1/2"] [%su_dummy_text what="words" amount="50"] [/%su_column]
+	[%su_column size="1/2"] [%su_dummy_text what="words" amount="50"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>1/3 + 1/3 + 1/3</h2>
+
+[%su_row]
+	[%su_column size="1/3"] [%su_dummy_text what="words" amount="40"] [/%su_column]
+	[%su_column size="1/3"] [%su_dummy_text what="words" amount="40"] [/%su_column]
+	[%su_column size="1/3"] [%su_dummy_text what="words" amount="40"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>1/2 + 1/4 + 1/4</h2>
+
+[%su_row]
+	[%su_column size="1/2"] [%su_dummy_text what="words" amount="50"] [/%su_column]
+	[%su_column size="1/4"] [%su_dummy_text what="words" amount="20"] [/%su_column]
+	[%su_column size="1/4"] [%su_dummy_text what="words" amount="20"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>3/4 + 1/4</h2>
+
+[%su_row]
+	[%su_column size="3/4"] [%su_dummy_text what="words" amount="60"] [/%su_column]
+	[%su_column size="1/4"] [%su_dummy_text what="words" amount="20"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>1/5 + 4/5</h2>
+
+[%su_row]
+	[%su_column size="1/5"] [%su_dummy_text what="words" amount="20"] [/%su_column]
+	[%su_column size="4/5"] [%su_dummy_text what="words" amount="80"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>2/5 + 3/5</h2>
+
+[%su_row]
+	[%su_column size="2/5"] [%su_dummy_text what="words" amount="40"] [/%su_column]
+	[%su_column size="3/5"] [%su_dummy_text what="words" amount="60"] [/%su_column]
+[/%su_row]
+
+-----
+
+<h2>2/3 + 1/6 + 1/6</h2>
+
+[%su_row]
+	[%su_column size="2/3"] [%su_dummy_text what="words" amount="40"] [/%su_column]
+	[%su_column size="1/6"] [%su_dummy_text what="words" amount="10"] [/%su_column]
+	[%su_column size="1/6"] [%su_dummy_text what="words" amount="10"] [/%su_column]
+[/%su_row]
