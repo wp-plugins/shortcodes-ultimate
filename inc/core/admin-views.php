@@ -1,6 +1,6 @@
 <?php
 if ( class_exists( 'Sunrise3_Views' ) ) {
-	class Su_Admin_Views extends Sunrise3_Views {
+	class Su_Admin_Views {
 		function __construct() {}
 
 		public static function about( $field, $config ) {

@@ -19,14 +19,14 @@ class Shortcodes_Ultimate {
 		// Make plugin available for translation
 		load_plugin_textdomain( 'su', false, dirname( plugin_basename( SU_PLUGIN_FILE ) ) . '/languages/' );
 		// Setup admin class
-		Su_Admin::setup( array(
+		$admin = new Sunrise4( array(
 				'file'       => SU_PLUGIN_FILE,
 				'slug'       => 'su',
 				'prefix'     => 'su_option_',
 				'textdomain' => 'su'
 			) );
 		// Top-level menu
-		Su_Admin::add_menu( array(
+		$admin->add_menu( array(
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => __( 'Shortcodes', 'su' ),
 				'capability'  => 'edit_others_posts',
@@ -100,7 +100,7 @@ class Shortcodes_Ultimate {
 				)
 			) );
 		// Settings submenu
-		Su_Admin::add_submenu( array(
+		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => __( 'Settings', 'su' ),
@@ -109,7 +109,7 @@ class Shortcodes_Ultimate {
 				'options'     => array()
 			) );
 		// Examples submenu
-		Su_Admin::add_submenu( array(
+		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Examples', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => __( 'Examples', 'su' ),
@@ -123,7 +123,7 @@ class Shortcodes_Ultimate {
 				)
 			) );
 		// Add-ons submenu
-		Su_Admin::add_submenu( array(
+		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Add-ons', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => __( 'Add-ons', 'su' ),
@@ -140,6 +140,8 @@ class Shortcodes_Ultimate {
 		__( 'Shortcodes Ultimate', 'su' );
 		__( 'Vladimir Anokhin', 'su' );
 		__( 'Supercharge your WordPress theme with mega pack of shortcodes', 'su' );
+		// Prevent insertion of default options
+		if ( get_option( 'su_option_skin' ) ) update_option( 'sunrise_defaults_su', true );
 		// Add plugin actions links
 		add_filter( 'plugin_action_links_' . plugin_basename( SU_PLUGIN_FILE ), array( __CLASS__, 'actions_links' ), -10 );
 		// Add plugin meta links
@@ -188,7 +190,7 @@ class Shortcodes_Ultimate {
 		$prefix = su_cmpt();
 		// Loop through shortcodes
 		foreach ( ( array ) Su_Data::shortcodes() as $id => $data ) {
-			if ( isset( $data['function'] ) && is_callable( $data['function'] ) ) $func = $data['function']; 
+			if ( isset( $data['function'] ) && is_callable( $data['function'] ) ) $func = $data['function'];
 			elseif ( is_callable( array( 'Su_Shortcodes', $id ) ) ) $func = array( 'Su_Shortcodes', $id );
 			elseif ( is_callable( array( 'Su_Shortcodes', 'su_' . $id ) ) ) $func = array( 'Su_Shortcodes', 'su_' . $id );
 			else continue;
