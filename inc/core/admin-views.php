@@ -1,10 +1,9 @@
 <?php
-if ( class_exists( 'Sunrise3_Views' ) ) {
-	class Su_Admin_Views {
-		function __construct() {}
+class Su_Admin_Views {
+	function __construct() {}
 
-		public static function about( $field, $config ) {
-			ob_start();
+	public static function about( $field, $config ) {
+		ob_start();
 ?>
 <div id="su-about-screen">
 	<h1><?php _e( 'Welcome to Shortcodes Ultimate', 'su' ); ?> <small><?php _e( 'A real swiss army knife for WordPress', 'su' ); ?></small></h1>
@@ -49,15 +48,15 @@ if ( class_exists( 'Sunrise3_Views' ) ) {
 	</div>
 </div>
 		<?php
-			$output = ob_get_contents();
-			ob_end_clean();
-			su_query_asset( 'css', array( 'magnific-popup', 'su-options-page' ) );
-			su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
-			return $output;
-		}
+		$output = ob_get_contents();
+		ob_end_clean();
+		su_query_asset( 'css', array( 'magnific-popup', 'su-options-page' ) );
+		su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
+		return $output;
+	}
 
-		public static function custom_css( $field, $config ) {
-			ob_start();
+	public static function custom_css( $field, $config ) {
+		ob_start();
 ?>
 <div id="su-custom-css-screen">
 	<div class="su-custom-css-originals">
@@ -83,65 +82,64 @@ if ( class_exists( 'Sunrise3_Views' ) ) {
 	</div>
 </div>
 			<?php
-			$output = ob_get_contents();
-			ob_end_clean();
-			su_query_asset( 'css', array( 'magnific-popup', 'su-options-page' ) );
-			su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'ace', 'su-options-page' ) );
-			return $output;
-		}
+		$output = ob_get_contents();
+		ob_end_clean();
+		su_query_asset( 'css', array( 'magnific-popup', 'su-options-page' ) );
+		su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'ace', 'su-options-page' ) );
+		return $output;
+	}
 
-		public static function examples( $field, $config ) {
-			$output = array();
-			$examples = Su_Data::examples();
-			$preview = '<div style="display:none"><div id="su-examples-window"><div id="su-examples-preview"></div></div></div>';
-			foreach ( $examples as $group ) {
-				$items = array();
-				if ( isset( $group['items'] ) ) foreach ( $group['items'] as $item ) {
-						$code = ( isset( $item['code'] ) ) ? $item['code'] : plugins_url( 'inc/examples/' . $item['id'] . '.example', SU_PLUGIN_FILE );
-						$id = ( isset( $item['id'] ) ) ? $item['id'] : '';
-						$items[] = '<div class="su-examples-item" data-code="' . $code . '" data-id="' . $id . '" data-mfp-src="#su-examples-window" style="visibility:hidden"><i class="fa fa-' . $item['icon'] . '"></i> ' . $item['name'] . '</div>';
-					}
-				$output[] = '<div class="su-examples-group su-clearfix"><h2 class="su-examples-group-title" style="visibility:hidden">' . $group['title'] . '</h2>' . implode( '', $items ) . '</div>';
-			}
-			su_query_asset( 'css', array( 'magnific-popup', 'animate', 'font-awesome', 'su-options-page' ) );
-			su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
-			return '<div id="su-examples-screen">' . implode( '', $output ) . '</div>' . $preview;
+	public static function examples( $field, $config ) {
+		$output = array();
+		$examples = Su_Data::examples();
+		$preview = '<div style="display:none"><div id="su-examples-window"><div id="su-examples-preview"></div></div></div>';
+		foreach ( $examples as $group ) {
+			$items = array();
+			if ( isset( $group['items'] ) ) foreach ( $group['items'] as $item ) {
+					$code = ( isset( $item['code'] ) ) ? $item['code'] : plugins_url( 'inc/examples/' . $item['id'] . '.example', SU_PLUGIN_FILE );
+					$id = ( isset( $item['id'] ) ) ? $item['id'] : '';
+					$items[] = '<div class="su-examples-item" data-code="' . $code . '" data-id="' . $id . '" data-mfp-src="#su-examples-window" style="visibility:hidden"><i class="fa fa-' . $item['icon'] . '"></i> ' . $item['name'] . '</div>';
+				}
+			$output[] = '<div class="su-examples-group su-clearfix"><h2 class="su-examples-group-title" style="visibility:hidden">' . $group['title'] . '</h2>' . implode( '', $items ) . '</div>';
 		}
+		su_query_asset( 'css', array( 'magnific-popup', 'animate', 'font-awesome', 'su-options-page' ) );
+		su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
+		return '<div id="su-examples-screen">' . implode( '', $output ) . '</div>' . $preview;
+	}
 
-		public static function addons( $field, $config ) {
-			$output = array();
-			$addons = array(
-				array(
-					'name' => __( 'Maker', 'su' ),
-					'desc' => __( 'This add-on allows you to create custom shortcodes. You can easily create any shortcode with different parameters or even override default shortcodes', 'su' ),
-					'url' => 'http://gndev.info/shortcodes-ultimate/maker/',
-					'image' => plugins_url( 'assets/images/banners/maker.png', SU_PLUGIN_FILE )
-				),
-				array(
-					'name' => __( 'Skins', 'su' ),
-					'desc' => __( 'Set of additional skins for Shrtcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes', 'su' ),
-					'url' => 'http://gndev.info/shortcodes-ultimate/skins/',
-					'image' => plugins_url( 'assets/images/banners/skins.png', SU_PLUGIN_FILE )
-				),
-			);
-			$plugins = array();
-			$output[] = '<h2>' . __( 'Shortcodes Ultimate Add-ons', 'su' ) . '</h2>';
+	public static function addons( $field, $config ) {
+		$output = array();
+		$addons = array(
+			array(
+				'name' => __( 'Maker', 'su' ),
+				'desc' => __( 'This add-on allows you to create custom shortcodes. You can easily create any shortcode with different parameters or even override default shortcodes', 'su' ),
+				'url' => 'http://gndev.info/shortcodes-ultimate/maker/',
+				'image' => plugins_url( 'assets/images/banners/maker.png', SU_PLUGIN_FILE )
+			),
+			array(
+				'name' => __( 'Skins', 'su' ),
+				'desc' => __( 'Set of additional skins for Shrtcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes', 'su' ),
+				'url' => 'http://gndev.info/shortcodes-ultimate/skins/',
+				'image' => plugins_url( 'assets/images/banners/skins.png', SU_PLUGIN_FILE )
+			),
+		);
+		$plugins = array();
+		$output[] = '<h2>' . __( 'Shortcodes Ultimate Add-ons', 'su' ) . '</h2>';
+		$output[] = '<div class="su-addons-loop su-clearfix">';
+		foreach ( $addons as $addon ) {
+			$output[] = '<div class="su-addons-item" style="visibility:hidden" data-url="' . $addon['url'] . '"><img src="' . $addon['image'] . '" alt="' . $addon['image'] . '" /><div class="su-addons-item-content"><h4>' . $addon['name'] . '</h4><p>' . $addon['desc'] . '</p><div class="su-addons-item-button"><a href="' . $addon['url'] . '" class="button button-primary" target="_blank">' . __( 'Learn more', 'su' ) . '</a></div></div></div>';
+		}
+		$output[] = '</div>';
+		if ( count( $plugins ) ) {
+			$output[] = '<h2>' . __( 'Other WordPress Plugins', 'su' ) . '</h2>';
 			$output[] = '<div class="su-addons-loop su-clearfix">';
-			foreach ( $addons as $addon ) {
-				$output[] = '<div class="su-addons-item" style="visibility:hidden" data-url="' . $addon['url'] . '"><img src="' . $addon['image'] . '" alt="' . $addon['image'] . '" /><div class="su-addons-item-content"><h4>' . $addon['name'] . '</h4><p>' . $addon['desc'] . '</p><div class="su-addons-item-button"><a href="' . $addon['url'] . '" class="button button-primary" target="_blank">' . __( 'Learn more', 'su' ) . '</a></div></div></div>';
+			foreach ( $plugins as $plugin ) {
+				$output[] = '<div class="su-addons-item" style="visibility:hidden" data-url="' . $plugin['url'] . '"><img src="' . $plugin['image'] . '" alt="' . $plugin['image'] . '" /><div class="su-addons-item-content"><h4>' . $plugin['name'] . '</h4><p>' . $plugin['desc'] . '</p>' . Su_Shortcodes::button( array( 'url' => $plugin['url'], 'target' => 'blank', 'style' => 'flat', 'background' => '#FF7654', 'wide' => 'yes', 'radius' => '0' ), __( 'Learn more', 'su' ) ) . '</div></div>';
 			}
 			$output[] = '</div>';
-			if ( count( $plugins ) ) {
-				$output[] = '<h2>' . __( 'Other WordPress Plugins', 'su' ) . '</h2>';
-				$output[] = '<div class="su-addons-loop su-clearfix">';
-				foreach ( $plugins as $plugin ) {
-					$output[] = '<div class="su-addons-item" style="visibility:hidden" data-url="' . $plugin['url'] . '"><img src="' . $plugin['image'] . '" alt="' . $plugin['image'] . '" /><div class="su-addons-item-content"><h4>' . $plugin['name'] . '</h4><p>' . $plugin['desc'] . '</p>' . Su_Shortcodes::button( array( 'url' => $plugin['url'], 'target' => 'blank', 'style' => 'flat', 'background' => '#FF7654', 'wide' => 'yes', 'radius' => '0' ), __( 'Learn more', 'su' ) ) . '</div></div>';
-				}
-				$output[] = '</div>';
-			}
-			su_query_asset( 'css', array( 'animate', 'su-options-page' ) );
-			su_query_asset( 'js', array( 'jquery', 'su-options-page' ) );
-			return '<div id="su-addons-screen">' . implode( '', $output ) . '</div>';
 		}
+		su_query_asset( 'css', array( 'animate', 'su-options-page' ) );
+		su_query_asset( 'js', array( 'jquery', 'su-options-page' ) );
+		return '<div id="su-addons-screen">' . implode( '', $output ) . '</div>';
 	}
 }

@@ -2,7 +2,7 @@
 /*
   Plugin Name: Shortcodes Ultimate
   Plugin URI: http://gndev.info/shortcodes-ultimate/
-  Version: 4.4.5
+  Version: 4.4.6
   Author: Vladimir Anokhin
   Author URI: http://gndev.info/
   Description: Supercharge your WordPress theme with mega pack of shortcodes
@@ -13,7 +13,7 @@
 
 // Define plugin file constant
 define( 'SU_PLUGIN_FILE', __FILE__ );
-define( 'SU_PLUGIN_VERSION', '4.4.5' );
+define( 'SU_PLUGIN_VERSION', '4.4.6' );
 define( 'SU_ENABLE_CACHE', true );
 
 // Includes
