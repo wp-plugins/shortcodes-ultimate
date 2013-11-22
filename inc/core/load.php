@@ -60,14 +60,6 @@ class Shortcodes_Ultimate {
 					),
 					array(
 						'type'    => 'checkbox',
-						'id'      => 'compatibility-mode',
-						'name'    => __( 'Compatibility mode', 'su' ),
-						'desc'    => __( 'Enable this option if you have some problems with other plugins that uses similar shortcode names', 'su' ) . '<br /><code>[button] => [su_button]</code> ' . __( 'etc.', 'su' ) . '<br /><a href="http://gndev.info/kb/compatibility-mode/" target="_blank">' . __( 'Documentation article', 'su' ) . '</a>',
-						'default' => '',
-						'label'   => __( 'Enabled', 'su' )
-					),
-					array(
-						'type'    => 'checkbox',
 						'id'      => 'skip',
 						'name'    => __( 'Skip default values', 'su' ),
 						'desc'    => __( 'Enable this option and the generator will insert a shortcode without default attribute values that you have not changed. As a result, the generated code will be shorter.', 'su' ),
@@ -76,9 +68,16 @@ class Shortcodes_Ultimate {
 					),
 					array(
 						'type'    => 'text',
+						'id'      => 'prefix',
+						'name'    => __( 'Shortcodes prefix', 'su' ),
+						'desc'    => sprintf( __( 'This prefix will be added to all shortcodes by this plugin. For example, type here %s and you\'ll get shortcodes like %s and %s. Please keep in mind: this option is not affects your already inserted shortcodes and if you\'ll change this value your old shortcodes will be broken', 'su' ), '<code>su_</code>', '<code>[su_button]</code>', '<code>[su_column]</code>' ),
+						'default' => 'su_'
+					),
+					array(
+						'type'    => 'text',
 						'id'      => 'skin',
 						'name'    => __( 'Skin', 'su' ),
-						'desc'    => sprintf( __( 'Choose skin for shortcodes.<br /><a href="%s" target="_blank">Learn how to create custom skin</a><br /><a href="%s" target="_blank"><b>Download more skins</b></a>', 'su' ), 'http://gndev.info/kb/how-to-create-custom-skin-for-shortcodes-ultimate/', 'http://gndev.info/shortcodes-ultimate/' ),
+						'desc'    => __( 'Choose global skin for shortcodes', 'su' ),
 						'default' => 'default'
 					),
 					array(
@@ -272,6 +271,28 @@ class Shortcodes_Ultimate {
 		// Galleries
 		if ( isset( $from_432['galleries'] ) ) update_option( 'su_option_galleries-432', $from_432['galleries'] );
 		delete_option( 'shortcodesultimate_options' );
+	}
+
+	/**
+	 * Import compatibility mode settings from versions 4.4.6 and below
+	 */
+	public static function import_446() {
+		$from_395 = get_option( 'su_compatibility_mode_prefix' );
+		$from_446 = get_option( 'su_option_compatibility-mode' );
+		$from_450 = get_option( 'su_option_prefix' );
+		// Check for new prefix first
+		if ( $from_450 ) return;
+		// Old prefixes - gn_
+		if ( $from_395 ) {
+			update_option( 'su_option_prefix', $from_395 );
+		}
+		// New chechbox - ON
+		elseif ( $from_446 && $from_446 === 'on' ) update_option( 'su_option_prefix', 'su_' );
+		// New checkbox - OFF
+		elseif ( $from_446 && $from_446 === '' ) update_option( 'su_option_prefix', '' );
+		// Remove old options
+		delete_option( 'su_compatibility_mode_prefix' );
+		delete_option( 'su_option_compatibility-mode' );
 	}
 }
 

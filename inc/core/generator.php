@@ -9,17 +9,24 @@ class Su_Generator {
 	 */
 	function __construct() {
 		add_action( 'media_buttons',                       array( __CLASS__, 'button' ), 1000 );
+
 		add_action( 'su/update',                           array( __CLASS__, 'reset' ) );
 		add_action( 'su/activation',                       array( __CLASS__, 'reset' ) );
 		add_action( 'sunrise/page/before',                 array( __CLASS__, 'reset' ) );
 		add_action( 'create_term',                         array( __CLASS__, 'reset' ), 10, 3 );
 		add_action( 'edit_term',                           array( __CLASS__, 'reset' ), 10, 3 );
 		add_action( 'delete_term',                         array( __CLASS__, 'reset' ), 10, 3 );
+
 		add_action( 'wp_ajax_su_generator_settings',       array( __CLASS__, 'settings' ) );
 		add_action( 'wp_ajax_su_generator_preview',        array( __CLASS__, 'preview' ) );
+		add_action( 'su/generator/actions',                array( __CLASS__, 'presets' ) );
+
 		add_action( 'wp_ajax_su_generator_get_icons',      array( __CLASS__, 'ajax_get_icons' ) );
 		add_action( 'wp_ajax_su_generator_get_terms',      array( __CLASS__, 'ajax_get_terms' ) );
 		add_action( 'wp_ajax_su_generator_get_taxonomies', array( __CLASS__, 'ajax_get_taxonomies' ) );
+		add_action( 'wp_ajax_su_generator_add_preset',     array( __CLASS__, 'ajax_add_preset' ) );
+		add_action( 'wp_ajax_su_generator_remove_preset',  array( __CLASS__, 'ajax_remove_preset' ) );
+		add_action( 'wp_ajax_su_generator_get_preset',     array( __CLASS__, 'ajax_get_preset' ) );
 	}
 
 	/**
@@ -46,8 +53,8 @@ class Su_Generator {
 		add_action( 'admin_footer', array( __CLASS__, 'popup' ) );
 		// Request assets
 		wp_enqueue_media();
-		su_query_asset( 'css', array( 'simpleslider', 'farbtastic', 'qtip', 'magnific-popup', 'font-awesome', 'su-generator' ) );
-		su_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simpleslider', 'farbtastic', 'qtip', 'magnific-popup', 'su-generator' ) );
+		su_query_asset( 'css', array( 'simpleslider', 'farbtastic', 'magnific-popup', 'font-awesome', 'su-generator' ) );
+		su_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simpleslider', 'farbtastic', 'magnific-popup', 'su-generator' ) );
 		// Print/return result
 		if ( $args['echo'] ) echo $button;
 		return $button;
@@ -60,7 +67,7 @@ class Su_Generator {
 		// Clear popup cache
 		delete_transient( 'su/generator/popup' );
 		// Clear shortcodes settings cache
-		foreach ( (array) Su_Data::shortcodes() as $name => $data ) delete_transient( 'su/generator/settings/' . $name );
+		foreach ( array_keys( (array) Su_Data::shortcodes() ) as $shortcode ) delete_transient( 'su/generator/settings/' . $shortcode );
 	}
 
 	/**
@@ -108,7 +115,7 @@ class Su_Generator {
 		</div>
 	<?php
 			$output = ob_get_contents();
-			set_transient( 'su/generator/popup', $output, 60*60*24*30 );
+			set_transient( 'su/generator/popup', $output, 2 * DAY_IN_SECONDS );
 			ob_end_clean();
 			echo $output;
 		}
@@ -132,9 +139,8 @@ class Su_Generator {
 			$skip = ( get_option( 'su_option_skip' ) === 'on' ) ? ' su-generator-skip' : '';
 			// Prepare actions
 			$actions = apply_filters( 'su/generator/actions', array(
-					'insert' => '<a href="javascript:void(0);" class="button button-primary button-large su-generator-insert">' . __( 'Insert shortcode', 'su' ) . '</a>',
-					'preview' => '<a href="javascript:void(0);" class="button button-large su-generator-toggle-preview">' . __( 'Live preview', 'su' ) . '</a>',
-					'close' => '<a href="javascript:void(0);" class="button alignright button-large su-generator-close">' . __( 'Close window', 'su' ) . '</a>'
+					'insert' => '<a href="javascript:void(0);" class="button button-primary button-large su-generator-insert"><i class="fa fa-check"></i> ' . __( 'Insert shortcode', 'su' ) . '</a>',
+					'preview' => '<a href="javascript:void(0);" class="button button-large su-generator-toggle-preview"><i class="fa fa-eye"></i> ' . __( 'Live preview', 'su' ) . '</a>'
 				) );
 			// Shortcode header
 			$return = '<div id="su-generator-breadcrumbs">';
@@ -161,11 +167,10 @@ class Su_Generator {
 			// Single shortcode (not closed)
 			if ( $shortcode['type'] == 'single' ) $return .= '<input type="hidden" name="su-generator-content" id="su-generator-content" value="false" />';
 			// Wrapping shortcode
-			else $return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'su' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="3">' . esc_attr( str_replace( '%prefix_', su_compatibility_mode_prefix(), $shortcode['content'] ) ) . '</textarea></div>';
+			else $return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'su' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="3">' . esc_attr( str_replace( '%prefix_', su_cmpt(), $shortcode['content'] ) ) . '</textarea></div>';
 			$return .= '<div id="su-generator-preview"></div>';
-			// $return .= '<div class="su-generator-presets su-generator-clearfix"><a href="javascript:;">Save current settings</a> <a href="javascript:;">Load saved settings</a></div>';
 			$return .= '<div class="su-generator-actions su-generator-clearfix">' . implode( ' ', array_values( $actions ) ) . '</div>';
-			set_transient( 'su/generator/settings/' . sanitize_text_field( $_REQUEST['shortcode'] ), $return, 60*60*24*30 );
+			set_transient( 'su/generator/settings/' . sanitize_text_field( $_REQUEST['shortcode'] ), $return, 2 * DAY_IN_SECONDS );
 			echo $return;
 		}
 		exit;
@@ -216,6 +221,119 @@ class Su_Generator {
 		$args = array();
 		$args['options'] = Su_Tools::get_taxonomies();
 		die( Su_Tools::select( $args ) );
+	}
+
+	public static function presets( $actions ) {
+		ob_start();
+		?>
+<div class="su-generator-presets alignright" data-shortcode="<?php echo sanitize_key( $_REQUEST['shortcode'] ); ?>">
+	<a href="javascript:void(0);" class="button button-large su-gp-button"><i class="fa fa-bars"></i> <?php _e( 'Presets', 'su' ); ?></a>
+	<div class="su-gp-popup">
+		<div class="su-gp-head">
+			<a href="javascript:void(0);" class="button button-small button-primary su-gp-new"><?php _e( 'Save current settings as preset', 'su' ); ?></a>
+		</div>
+		<div class="su-gp-list">
+			<?php self::presets_list(); ?>
+		</div>
+	</div>
+</div>
+		<?php
+		$actions['presets'] = ob_get_contents();
+		ob_end_clean();
+		return $actions;
+	}
+
+	public static function presets_list( $shortcode = false ) {
+		// Shortcode isn't specified, try to get it from $_REQUEST
+		if ( !$shortcode ) $shortcode = $_REQUEST['shortcode'];
+		// Shortcode name is still doesn't exists, exit
+		if ( !$shortcode ) return;
+		// Shortcode has been specified, sanitize it
+		$shortcode = sanitize_key( $shortcode );
+		// Get presets
+		$presets = get_option( 'su_presets_' . $shortcode );
+		// Presets has been found
+		if ( is_array( $presets ) && count( $presets ) ) {
+			// Print the presets
+			foreach( $presets as $preset ) {
+				echo '<span data-id="' . $preset['id'] . '"><em>' . stripslashes( $preset['name'] ) . '</em> <i class="fa fa-times"></i></span>';
+			}
+			// Hide default text
+			echo sprintf( '<b style="display:none">%s</b>', __( 'Presets not found', 'su' ) );
+		}
+		// Presets doesn't found
+		else echo sprintf( '<b>%s</b>', __( 'Presets not found', 'su' ) );
+	}
+
+	public static function ajax_add_preset() {
+		self::access();
+		// Check incoming data
+		if ( empty( $_POST['id'] ) ) return;
+		if ( empty( $_POST['name'] ) ) return;
+		if ( empty( $_POST['settings'] ) ) return;
+		if ( empty( $_POST['shortcode'] ) ) return;
+		// Clean-up incoming data
+		$id = sanitize_key( $_POST['id'] );
+		$name = sanitize_text_field( $_POST['name'] );
+		$settings = ( is_array( $_POST['settings'] ) ) ? stripslashes_deep( $_POST['settings'] ) : array();
+		$shortcode = sanitize_key( $_POST['shortcode'] );
+		// Prepare option name
+		$option = 'su_presets_' . $shortcode;
+		// Get the existing presets
+		$current = get_option( $option );
+		// Create array with new preset
+		$new = array(
+			'id'       => $id,
+			'name'     => $name,
+			'settings' => $settings
+		);
+		// Add new array to the option value
+		if ( !is_array( $current ) ) $current = array();
+		$current[$id] = $new;
+		// Save updated option
+		update_option( $option, $current );
+		// Clear cache
+		delete_transient( 'su/generator/settings/' . $shortcode );
+	}
+
+	public static function ajax_remove_preset() {
+		self::access();
+		// Check incoming data
+		if ( empty( $_POST['id'] ) ) return;
+		if ( empty( $_POST['shortcode'] ) ) return;
+		// Clean-up incoming data
+		$id = sanitize_key( $_POST['id'] );
+		$shortcode = sanitize_key( $_POST['shortcode'] );
+		// Prepare option name
+		$option = 'su_presets_' . $shortcode;
+		// Get the existing presets
+		$current = get_option( $option );
+		// Check that preset is exists
+		if ( !is_array( $current ) || empty( $current[$id] ) ) return;
+		// Remove preset
+		unset( $current[$id] );
+		// Save updated option
+		update_option( $option, $current );
+		// Clear cache
+		delete_transient( 'su/generator/settings/' . $shortcode );
+	}
+
+	public static function ajax_get_preset() {
+		self::access();
+		// Check incoming data
+		if ( empty( $_GET['id'] ) ) return;
+		if ( empty( $_GET['shortcode'] ) ) return;
+		// Clean-up incoming data
+		$id = sanitize_key( $_GET['id'] );
+		$shortcode = sanitize_key( $_GET['shortcode'] );
+		// Default data
+		$data = array();
+		// Get the existing presets
+		$presets = get_option( 'su_presets_' . $shortcode );
+		// Check that preset is exists
+		if ( is_array( $presets ) && isset( $presets[$id]['settings'] ) ) $data = $presets[$id]['settings'];
+		// Print results
+		die( json_encode( $data ) );
 	}
 }
 

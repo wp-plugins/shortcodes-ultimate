@@ -19,6 +19,7 @@ class Su_Data {
 				'box'     => __( 'Box', 'su' ),
 				'media'   => __( 'Media', 'su' ),
 				'gallery' => __( 'Gallery', 'su' ),
+				'data'    => __( 'Data', 'su' ),
 				'other'   => __( 'Other', 'su' )
 			) );
 	}
@@ -36,7 +37,7 @@ class Su_Data {
 	}
 
 	public static function icons() {
-		return apply_filters( 'su/data/icons', array( 'glass', 'music', 'search', 'envelope-o', 'heart', 'star', 'star-o', 'user', 'film', 'th-large', 'th', 'th-list', 'check', 'times', 'search-plus', 'search-minus', 'power-off', 'signal', 'cog', 'trash-o', 'home', 'file-o', 'clock-o', 'road', 'download', 'arrow-circle-o-down', 'arrow-circle-o-up', 'inbox', 'play-circle-o', 'repeat', 'refresh', 'list-alt', 'lock', 'flag', 'headphones', 'volume-off', 'volume-down', 'volume-up', 'qrcode', 'barcode', 'tag', 'tags', 'book', 'bookmark', 'print', 'camera', 'font', 'bold', 'italic', 'text-height', 'text-width', 'align-left', 'align-center', 'align-right', 'align-justify', 'list', 'outdent', 'indent', 'video-camera', 'picture-o', 'pencil', 'map-marker', 'adjust', 'tint', 'pencil-square-o', 'share-square-o', 'check-square-o', 'move', 'step-backward', 'fast-backward', 'backward', 'play', 'pause', 'stop', 'forward', 'fast-forward', 'step-forward', 'eject', 'chevron-left', 'chevron-right', 'plus-circle', 'minus-circle', 'times-circle', 'check-circle', 'question-circle', 'info-circle', 'crosshairs', 'times-circle-o', 'check-circle-o', 'ban', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-down', 'share', 'resize-full', 'resize-small', 'plus', 'minus', 'asterisk', 'exclamation-circle', 'gift', 'leaf', 'fire', 'eye', 'eye-slash', 'exclamation-triangle', 'plane', 'calendar', 'random', 'comment', 'magnet', 'chevron-up', 'chevron-down', 'retweet', 'shopping-cart', 'folder', 'folder-open', 'resize-vertical', 'resize-horizontal', 'bar-chart-o', 'twitter-square', 'facebook-square', 'camera-retro', 'key', 'cogs', 'comments', 'thumbs-o-up', 'thumbs-o-down', 'star-half', 'heart-o', 'sign-out', 'linkedin-square', 'thumb-tack', 'external-link', 'sign-in', 'trophy', 'github-square', 'upload', 'lemon-o', 'phone', 'square-o', 'bookmark-o', 'phone-square', 'twitter', 'facebook', 'github', 'unlock', 'credit-card', 'rss', 'hdd', 'bullhorn', 'bell', 'certificate', 'hand-o-right', 'hand-o-left', 'hand-o-up', 'hand-o-down', 'arrow-circle-left', 'arrow-circle-right', 'arrow-circle-up', 'arrow-circle-down', 'globe', 'wrench', 'tasks', 'filter', 'briefcase', 'fullscreen', 'group', 'link', 'cloud', 'flask', 'scissors', 'files-o', 'paperclip', 'floppy-o', 'square', 'reorder', 'list-ul', 'list-ol', 'strikethrough', 'underline', 'table', 'magic', 'truck', 'pinterest', 'pinterest-square', 'google-plus-square', 'google-plus', 'money', 'caret-down', 'caret-up', 'caret-left', 'caret-right', 'columns', 'sort', 'sort-asc', 'sort-desc', 'envelope', 'linkedin', 'undo', 'gavel', 'tachometer', 'comment-o', 'comments-o', 'bolt', 'sitemap', 'umbrella', 'clipboard', 'lightbulb-o', 'exchange', 'cloud-download', 'cloud-upload', 'user-md', 'stethoscope', 'suitcase', 'bell-o', 'coffee', 'cutlery', 'file-text-o', 'building', 'hospital', 'ambulance', 'medkit', 'fighter-jet', 'beer', 'h-square', 'plus-square', 'angle-double-left', 'angle-double-right', 'angle-double-up', 'angle-double-down', 'angle-left', 'angle-right', 'angle-up', 'angle-down', 'desktop', 'laptop', 'tablet', 'mobile', 'circle-o', 'quote-left', 'quote-right', 'spinner', 'circle', 'reply', 'github-alt', 'folder-o', 'folder-open-o', 'expand-o', 'collapse-o', 'smile-o', 'frown-o', 'meh-o', 'gamepad', 'keyboard-o', 'flag-o', 'flag-checkered', 'terminal', 'code', 'reply-all', 'mail-reply-all', 'star-half-o', 'location-arrow', 'crop', 'code-fork', 'chain-broken', 'question', 'info', 'exclamation', 'superscript', 'subscript', 'eraser', 'puzzle-piece', 'microphone', 'microphone-slash', 'shield', 'calendar-o', 'fire-extinguisher', 'rocket', 'maxcdn', 'chevron-circle-left', 'chevron-circle-right', 'chevron-circle-up', 'chevron-circle-down', 'html5', 'css3', 'anchor', 'unlock-o', 'bullseye', 'ellipsis-horizontal', 'ellipsis-vertical', 'rss-square', 'play-circle', 'ticket', 'minus-square', 'minus-square-o', 'level-up', 'level-down', 'check-square', 'pencil-square', 'external-link-square', 'share-square', 'compass', 'caret-square-o-down', 'caret-square-o-up', 'caret-square-o-right', 'eur', 'gbp', 'usd', 'inr', 'jpy', 'rub', 'krw', 'btc', 'file', 'file-text', 'sort-alpha-asc', 'sort-alpha-desc', 'sort-amount-asc', 'sort-amount-desc', 'sort-numeric-asc', 'sort-numeric-desc', 'thumbs-up', 'thumbs-down', 'youtube-square', 'youtube', 'xing', 'xing-square', 'youtube-play', 'dropbox', 'stack-overflow', 'instagram', 'flickr', 'adn', 'bitbucket', 'bitbucket-square', 'tumblr', 'tumblr-square', 'long-arrow-down', 'long-arrow-up', 'long-arrow-left', 'long-arrow-right', 'apple', 'windows', 'android', 'linux', 'dribbble', 'skype', 'foursquare', 'trello', 'female', 'male', 'gittip', 'sun-o', 'moon-o', 'archive', 'bug', 'vk', 'weibo', 'renren', 'pagelines', 'stack-exchange', 'arrow-circle-o-right', 'arrow-circle-o-left', 'caret-square-o-left', 'dot-circle-o', 'wheelchair', 'vimeo-square', 'try' ) );
+		return apply_filters( 'su/data/icons', array( 'glass', 'music', 'search', 'envelope-o', 'heart', 'star', 'star-o', 'user', 'film', 'th-large', 'th', 'th-list', 'check', 'times', 'search-plus', 'search-minus', 'power-off', 'signal', 'cog', 'trash-o', 'home', 'file-o', 'clock-o', 'road', 'download', 'arrow-circle-o-down', 'arrow-circle-o-up', 'inbox', 'play-circle-o', 'repeat', 'refresh', 'list-alt', 'lock', 'flag', 'headphones', 'volume-off', 'volume-down', 'volume-up', 'qrcode', 'barcode', 'tag', 'tags', 'book', 'bookmark', 'print', 'camera', 'font', 'bold', 'italic', 'text-height', 'text-width', 'align-left', 'align-center', 'align-right', 'align-justify', 'list', 'outdent', 'indent', 'video-camera', 'picture-o', 'pencil', 'map-marker', 'adjust', 'tint', 'pencil-square-o', 'share-square-o', 'check-square-o', 'arrows', 'step-backward', 'fast-backward', 'backward', 'play', 'pause', 'stop', 'forward', 'fast-forward', 'step-forward', 'eject', 'chevron-left', 'chevron-right', 'plus-circle', 'minus-circle', 'times-circle', 'check-circle', 'question-circle', 'info-circle', 'crosshairs', 'times-circle-o', 'check-circle-o', 'ban', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-down', 'share', 'expand', 'compress', 'plus', 'minus', 'asterisk', 'exclamation-circle', 'gift', 'leaf', 'fire', 'eye', 'eye-slash', 'exclamation-triangle', 'plane', 'calendar', 'random', 'comment', 'magnet', 'chevron-up', 'chevron-down', 'retweet', 'shopping-cart', 'folder', 'folder-open', 'arrows-v', 'arrows-h', 'bar-chart-o', 'twitter-square', 'facebook-square', 'camera-retro', 'key', 'cogs', 'comments', 'thumbs-o-up', 'thumbs-o-down', 'star-half', 'heart-o', 'sign-out', 'linkedin-square', 'thumb-tack', 'external-link', 'sign-in', 'trophy', 'github-square', 'upload', 'lemon-o', 'phone', 'square-o', 'bookmark-o', 'phone-square', 'twitter', 'facebook', 'github', 'unlock', 'credit-card', 'rss', 'hdd-o', 'bullhorn', 'bell', 'certificate', 'hand-o-right', 'hand-o-left', 'hand-o-up', 'hand-o-down', 'arrow-circle-left', 'arrow-circle-right', 'arrow-circle-up', 'arrow-circle-down', 'globe', 'wrench', 'tasks', 'filter', 'briefcase', 'arrows-alt', 'users', 'link', 'cloud', 'flask', 'scissors', 'files-o', 'paperclip', 'floppy-o', 'square', 'bars', 'list-ul', 'list-ol', 'strikethrough', 'underline', 'table', 'magic', 'truck', 'pinterest', 'pinterest-square', 'google-plus-square', 'google-plus', 'money', 'caret-down', 'caret-up', 'caret-left', 'caret-right', 'columns', 'sort', 'sort-asc', 'sort-desc', 'envelope', 'linkedin', 'undo', 'gavel', 'tachometer', 'comment-o', 'comments-o', 'bolt', 'sitemap', 'umbrella', 'clipboard', 'lightbulb-o', 'exchange', 'cloud-download', 'cloud-upload', 'user-md', 'stethoscope', 'suitcase', 'bell-o', 'coffee', 'cutlery', 'file-text-o', 'building-o', 'hospital-o', 'ambulance', 'medkit', 'fighter-jet', 'beer', 'h-square', 'plus-square', 'angle-double-left', 'angle-double-right', 'angle-double-up', 'angle-double-down', 'angle-left', 'angle-right', 'angle-up', 'angle-down', 'desktop', 'laptop', 'tablet', 'mobile', 'circle-o', 'quote-left', 'quote-right', 'spinner', 'circle', 'reply', 'github-alt', 'folder-o', 'folder-open-o', 'smile-o', 'frown-o', 'meh-o', 'gamepad', 'keyboard-o', 'flag-o', 'flag-checkered', 'terminal', 'code', 'reply-all', 'mail-reply-all', 'star-half-o', 'location-arrow', 'crop', 'code-fork', 'chain-broken', 'question', 'info', 'exclamation', 'superscript', 'subscript', 'eraser', 'puzzle-piece', 'microphone', 'microphone-slash', 'shield', 'calendar-o', 'fire-extinguisher', 'rocket', 'maxcdn', 'chevron-circle-left', 'chevron-circle-right', 'chevron-circle-up', 'chevron-circle-down', 'html5', 'css3', 'anchor', 'unlock-alt', 'bullseye', 'ellipsis-h', 'ellipsis-v', 'rss-square', 'play-circle', 'ticket', 'minus-square', 'minus-square-o', 'level-up', 'level-down', 'check-square', 'pencil-square', 'external-link-square', 'share-square', 'compass', 'caret-square-o-down', 'caret-square-o-up', 'caret-square-o-right', 'eur', 'gbp', 'usd', 'inr', 'jpy', 'rub', 'krw', 'btc', 'file', 'file-text', 'sort-alpha-asc', 'sort-alpha-desc', 'sort-amount-asc', 'sort-amount-desc', 'sort-numeric-asc', 'sort-numeric-desc', 'thumbs-up', 'thumbs-down', 'youtube-square', 'youtube', 'xing', 'xing-square', 'youtube-play', 'dropbox', 'stack-overflow', 'instagram', 'flickr', 'adn', 'bitbucket', 'bitbucket-square', 'tumblr', 'tumblr-square', 'long-arrow-down', 'long-arrow-up', 'long-arrow-left', 'long-arrow-right', 'apple', 'windows', 'android', 'linux', 'dribbble', 'skype', 'foursquare', 'trello', 'female', 'male', 'gittip', 'sun-o', 'moon-o', 'archive', 'bug', 'vk', 'weibo', 'renren', 'pagelines', 'stack-exchange', 'arrow-circle-o-right', 'arrow-circle-o-left', 'caret-square-o-left', 'dot-circle-o', 'wheelchair', 'vimeo-square', 'try', 'plus-square-o' ) );
 	}
 
 	/**
@@ -339,7 +340,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Content divider with optional TOP link', 'su' ),
-					'icon' => 'ellipsis-horizontal'
+					'icon' => 'ellipsis-h'
 				),
 				// spacer
 				'spacer' => array(
@@ -363,7 +364,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Empty space with adjustable height', 'su' ),
-					'icon' => 'resize-vertical'
+					'icon' => 'arrows-v'
 				),
 				// highlight
 				'highlight' => array(
@@ -1560,7 +1561,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Custom menu by name', 'su' ),
-					'icon' => 'reorder'
+					'icon' => 'bars'
 				),
 				// subpages
 				'subpages' => array(
@@ -1587,7 +1588,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'List of sub pages', 'su' ),
-					'icon' => 'reorder'
+					'icon' => 'bars'
 				),
 				// siblings
 				'siblings' => array(
@@ -1608,7 +1609,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'List of cureent page siblings', 'su' ),
-					'icon' => 'reorder'
+					'icon' => 'bars'
 				),
 				// document
 				'document' => array(
@@ -1711,6 +1712,15 @@ class Su_Data {
 							'default' => 'none',
 							'name'    => __( 'Source', 'su' ),
 							'desc'    => __( 'Choose images source. You can use images from Media library or retrieve it from posts (thumbnails) posted under specified blog category. You can also pick any custom taxonomy', 'su' )
+						),
+						'limit' => array(
+							'type' => 'slider',
+							'min' => -1,
+							'max' => 100,
+							'step' => 1,
+							'default' => 20,
+							'name' => __( 'Limit', 'su' ),
+							'desc' => __( 'Maximum number of image source posts (for recent posts, category and custom taxonomy)', 'su' )
 						),
 						'link' => array(
 							'type' => 'select',
@@ -1819,6 +1829,15 @@ class Su_Data {
 							'default' => 'none',
 							'name'    => __( 'Source', 'su' ),
 							'desc'    => __( 'Choose images source. You can use images from Media library or retrieve it from posts (thumbnails) posted under specified blog category. You can also pick any custom taxonomy', 'su' )
+						),
+						'limit' => array(
+							'type' => 'slider',
+							'min' => -1,
+							'max' => 100,
+							'step' => 1,
+							'default' => 20,
+							'name' => __( 'Limit', 'su' ),
+							'desc' => __( 'Maximum number of image source posts (for recent posts, category and custom taxonomy)', 'su' )
 						),
 						'link' => array(
 							'type' => 'select',
@@ -1946,6 +1965,15 @@ class Su_Data {
 							'default' => 'none',
 							'name'    => __( 'Source', 'su' ),
 							'desc'    => __( 'Choose images source. You can use images from Media library or retrieve it from posts (thumbnails) posted under specified blog category. You can also pick any custom taxonomy', 'su' )
+						),
+						'limit' => array(
+							'type' => 'slider',
+							'min' => -1,
+							'max' => 100,
+							'step' => 1,
+							'default' => 20,
+							'name' => __( 'Limit', 'su' ),
+							'desc' => __( 'Maximum number of image source posts (for rcent posts, category and custom taxonomy)', 'su' )
 						),
 						'link' => array(
 							'type' => 'select',
@@ -2280,7 +2308,177 @@ class Su_Data {
 					'content' => __( 'Animated content', 'su' ),
 					'desc' => __( 'Wrapper for animation. Any nested element will be animated', 'su' ),
 					'icon' => 'bolt'
-				)
+				),
+				// meta
+				'meta' => array(
+					'name' => __( 'Meta', 'su' ),
+					'type' => 'single',
+					'group' => 'data',
+					'atts' => array(
+						'key' => array(
+							'default' => '',
+							'name' => __( 'Key', 'su' ),
+							'desc' => __( 'Meta key name', 'su' )
+						),
+						'default' => array(
+							'default' => '',
+							'name' => __( 'Default', 'su' ),
+							'desc' => __( 'This text will be shown if data is not found', 'su' )
+						),
+						'before' => array(
+							'default' => '',
+							'name' => __( 'Before', 'su' ),
+							'desc' => __( 'This content will be shown before the value', 'su' )
+						),
+						'after' => array(
+							'default' => '',
+							'name' => __( 'After', 'su' ),
+							'desc' => __( 'This content will be shown after the value', 'su' )
+						),
+						'post_id' => array(
+							'default' => '',
+							'name' => __( 'Post ID', 'su' ),
+							'desc' => __( 'You can specify custom post ID. Leave this field empty to use an ID of the current post. Current post ID may not work in Live Preview mode', 'su' )
+						),
+						'filter' => array(
+							'default' => '',
+							'name' => __( 'Filter', 'su' ),
+							'desc' => __( 'You can apply custom filter to the retrieved value. Enter here function name. Your function must accept one argument and return modified value. Example function: ', 'su' ) . "<br /><pre><code style='display:block;padding:5px'>function my_custom_filter( \$value ) {\n\treturn 'Value is: ' . \$value;\n}</code></pre>"
+						)
+					),
+					'desc' => __( 'Post meta', 'su' ),
+					'icon' => 'info-circle'
+				),
+				// user
+				'user' => array(
+					'name' => __( 'User', 'su' ),
+					'type' => 'single',
+					'group' => 'data',
+					'atts' => array(
+						'field' => array(
+							'type' => 'select',
+							'values' => array(
+								'display_name'        => __( 'Display name', 'su' ),
+								'ID'                  => __( 'ID', 'su' ),
+								'user_login'          => __( 'Login', 'su' ),
+								'user_nicename'       => __( 'Nice name', 'su' ),
+								'user_email'          => __( 'Email', 'su' ),
+								'user_url'            => __( 'URL', 'su' ),
+								'user_registered'     => __( 'Registered', 'su' ),
+								'user_activation_key' => __( 'Activation key', 'su' ),
+								'user_status'         => __( 'Status', 'su' )
+							),
+							'default' => 'display_name',
+							'name' => __( 'Field', 'su' ),
+							'desc' => __( 'User data field name', 'su' )
+						),
+						'default' => array(
+							'default' => '',
+							'name' => __( 'Default', 'su' ),
+							'desc' => __( 'This text will be shown if data is not found', 'su' )
+						),
+						'before' => array(
+							'default' => '',
+							'name' => __( 'Before', 'su' ),
+							'desc' => __( 'This content will be shown before the value', 'su' )
+						),
+						'after' => array(
+							'default' => '',
+							'name' => __( 'After', 'su' ),
+							'desc' => __( 'This content will be shown after the value', 'su' )
+						),
+						'user_id' => array(
+							'default' => '',
+							'name' => __( 'User ID', 'su' ),
+							'desc' => __( 'You can specify custom user ID. Leave this field empty to use an ID of the current user', 'su' )
+						),
+						'filter' => array(
+							'default' => '',
+							'name' => __( 'Filter', 'su' ),
+							'desc' => __( 'You can apply custom filter to the retrieved value. Enter here function name. Your function must accept one argument and return modified value. Example function: ', 'su' ) . "<br /><pre><code style='display:block;padding:5px'>function my_custom_filter( \$value ) {\n\treturn 'Value is: ' . \$value;\n}</code></pre>"
+						)
+					),
+					'desc' => __( 'User data', 'su' ),
+					'icon' => 'info-circle'
+				),
+				// post
+				'post' => array(
+					'name' => __( 'Post', 'su' ),
+					'type' => 'single',
+					'group' => 'data',
+					'atts' => array(
+						'field' => array(
+							'type' => 'select',
+							'values' => array(
+								'ID'                    => __( 'Post ID', 'su' ),
+								'post_author'           => __( 'Post author', 'su' ),
+								'post_date'             => __( 'Post date', 'su' ),
+								'post_date_gmt'         => __( 'Post date', 'su' ) . ' GMT',
+								'post_content'          => __( 'Post content', 'su' ),
+								'post_title'            => __( 'Post title', 'su' ),
+								'post_excerpt'          => __( 'Post excerpt', 'su' ),
+								'post_status'           => __( 'Post status', 'su' ),
+								'comment_status'        => __( 'Comment status', 'su' ),
+								'ping_status'           => __( 'Ping status', 'su' ),
+								'post_name'             => __( 'Post name', 'su' ),
+								'post_modified'         => __( 'Post modified', 'su' ),
+								'post_modified_gmt'     => __( 'Post modified', 'su' ) . ' GMT',
+								'post_content_filtered' => __( 'Filtered post content', 'su' ),
+								'post_parent'           => __( 'Post parent', 'su' ),
+								'guid'                  => __( 'GUID', 'su' ),
+								'menu_order'            => __( 'Menu order', 'su' ),
+								'post_type'             => __( 'Post type', 'su' ),
+								'post_mime_type'        => __( 'Post mime type', 'su' ),
+								'comment_count'         => __( 'Comment count', 'su' )
+							),
+							'default' => 'post_title',
+							'name' => __( 'Field', 'su' ),
+							'desc' => __( 'Post data field name', 'su' )
+						),
+						'default' => array(
+							'default' => '',
+							'name' => __( 'Default', 'su' ),
+							'desc' => __( 'This text will be shown if data is not found', 'su' )
+						),
+						'before' => array(
+							'default' => '',
+							'name' => __( 'Before', 'su' ),
+							'desc' => __( 'This content will be shown before the value', 'su' )
+						),
+						'after' => array(
+							'default' => '',
+							'name' => __( 'After', 'su' ),
+							'desc' => __( 'This content will be shown after the value', 'su' )
+						),
+						'post_id' => array(
+							'default' => '',
+							'name' => __( 'Post ID', 'su' ),
+							'desc' => __( 'You can specify custom post ID. Leave this field empty to use an ID of the current post. Current post ID may not work in Live Preview mode', 'su' )
+						),
+						'filter' => array(
+							'default' => '',
+							'name' => __( 'Filter', 'su' ),
+							'desc' => __( 'You can apply custom filter to the retrieved value. Enter here function name. Your function must accept one argument and return modified value. Example function: ', 'su' ) . "<br /><pre><code style='display:block;padding:5px'>function my_custom_filter( \$value ) {\n\treturn 'Value is: ' . \$value;\n}</code></pre>"
+						)
+					),
+					'desc' => __( 'Post data', 'su' ),
+					'icon' => 'info-circle'
+				),
+				// template
+				'template' => array(
+					'name' => __( 'Template', 'su' ),
+					'type' => 'single',
+					'group' => 'other',
+					'atts' => array(
+						'name' => array(
+							'default' => '',
+							'name' => __( 'Template name', 'su' ),
+							'desc' => sprintf( __( 'Use template file name (with optional .php extension). If you need to use templates from theme sub-folder, use relative path. Example values: %s, %s, %s', 'su' ), '<b%value>page</b>', '<b%value>page.php</b>', '<b%value>includes/page.php</b>' )
+						)
+					),
+					'desc' => __( 'Theme template', 'su' ),
+					'icon' => 'puzzle-piece'
+				),
 			) );
 		// Return result
 		return ( is_string( $shortcode ) ) ? $shortcodes[sanitize_text_field( $shortcode )] : $shortcodes;

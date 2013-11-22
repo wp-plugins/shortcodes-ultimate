@@ -10,7 +10,19 @@ class Su_Generator_Views {
 	function __construct() {}
 
 	public static function text( $id, $field ) {
+		$field = wp_parse_args( $field, array(
+			'default' => ''
+		) );
 		$return = '<input type="text" name="' . $id . '" value="' . esc_attr( $field['default'] ) . '" id="su-generator-attr-' . $id . '" class="su-generator-attr" />';
+		return $return;
+	}
+
+	public static function textarea( $id, $field ) {
+		$field = wp_parse_args( $field, array(
+			'rows'    => 3,
+			'default' => ''
+		) );
+		$return = '<textarea name="' . $id . '" id="su-generator-attr-' . $id . '" rows="' . $field['rows'] . '" class="su-generator-attr">' . esc_textarea( $field['default'] ) . '</textarea>';
 		return $return;
 	}
 

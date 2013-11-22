@@ -211,9 +211,7 @@ function su_do_shortcode( $content, $pre ) {
  * @return string Special prefix
  */
 function su_compatibility_mode_prefix() {
-	$option = get_option( 'su_compatibility_mode_prefix' );
-	if ( get_option( 'su_option_compatibility-mode' ) === 'on' ) return ( $option ) ? $option : 'su_';
-	else return '';
+	return get_option( 'su_option_prefix' );
 }
 
 /**
@@ -638,6 +636,7 @@ class Su_Tools {
 	public static function get_slides( $args ) {
 		$args = wp_parse_args( $args, array(
 				'source'  => 'none',
+				'limit'   => 20,
 				'gallery' => null,
 				'type'    => '',
 				'link'    => 'none'
@@ -658,7 +657,7 @@ class Su_Tools {
 		// Source is not parsed correctly, return empty array
 		if ( !is_array( $args['source'] ) ) return $slides;
 		// Default posts query
-		$query = array( 'posts_per_page' => 100 );
+		$query = array( 'posts_per_page' => $args['limit'] );
 		// Source: media
 		if ( $args['source']['type'] === 'media' ) {
 			$query['post_type'] = 'attachment';

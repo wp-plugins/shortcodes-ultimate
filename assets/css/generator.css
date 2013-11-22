@@ -104,7 +104,7 @@
 	width: 20%;
 	height: 28px;
 	min-width: 130px;
-	padding: 0 5px 0 28px;
+	padding: 0 5px 0 30px;
 	float: left;
 	overflow: hidden;
 	-webkit-box-sizing: border-box;
@@ -148,15 +148,17 @@
 }
 #su-generator-choices span i {
 	position: absolute;
-	top: 7px;
-	left: 7px;
+	left: 1px;
+	top: 1px;
+	display: block;
+	width: 26px;
+	height: 26px;
 	color: #aaa;
+	text-align: center;
 	font-size: 14px;
+	line-height: 26px;
 }
 #su-generator-choices span:hover i {
-	top: 5px;
-	left: 5px;
-	color: #aaa;
 	color: #000;
 	font-size: 18px;
 }
@@ -380,9 +382,9 @@
 	box-shadow: 0 0 0 5px rgba(33,117,155,0.5);
 }
 .su-generator-range-picker .slider > .track {
-	background: #fff !important;
-	border: 1px solid #ccc !important;
 	height: 12px !important;
+	border: 1px solid #ccc !important;
+	background: #fff !important;
 }
 .su-generator-range-picker input {
 	width: 60px !important;
@@ -546,11 +548,8 @@
 	border-bottom-left-radius: 5px;
 	background: #eee;
 }
-.su-generator-actions .button { margin: 0 5px; }
-#su-generator-insert {
-	color: #fff !important;
-	font-weight: bold;
-}
+.su-generator-actions > .button { margin: 0 5px; }
+.su-generator-actions .button i { margin: 0 5px 0 -3px; }
 
 /* Compatibility for Visual Composer - http://wordpress.org/support/topic/compatible-with-visual-composer */
 body.su-generator-shown .mfp-bg { z-index: 1142; }
@@ -560,14 +559,76 @@ body.su-generator-shown .mfp-content { z-index: 1145; }
 body.su-generator-shown button.mfp-close,
 body.su-generator-shown button.mfp-arrow { z-index: 1146; }
 
-/* Preset manager */
-.su-generator-presets {
-	margin: 0 -20px;
-	padding: 1.5em 20px;
-	border-bottom: 1px solid #ccc;
-	background: #FDFFD4;
-	line-height: 24px;
+.su-generator-presets { position: relative; }
+.su-generator-presets > .button { cursor: default; }
+.su-gp-popup {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: none;
+	min-width: 160px;
+	max-width: 500px;
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fff;
 }
-.su-generator-presets a {
-	margin-right: 1em;
+.su-gp-head {
+	margin-bottom: 10px;
+	padding: 10px;
+	border-bottom: 1px dotted #ccc;
+}
+.su-gp-head .button {
+	display: block;
+	text-align: center;
+}
+.su-gp-list {
+	margin: 5px 0;
+}
+.su-gp-list b {
+	display: block;
+	padding: 5px 10px;
+	color: #aaa;
+	font-weight: normal;
+	font-style: italic;
+}
+.su-gp-list span {
+	position: relative;
+	display: block;
+	padding: 5px 10px;
+	overflow: hidden;
+	color: #21759b;
+	cursor: pointer;
+}
+.su-gp-list span:nth-child(odd) { background: #f8f8f8; }
+.su-gp-list span:hover {
+	background: #eee;
+	color: #d54e21;
+}
+.su-gp-list span em {
+	margin-right: 32px;
+	white-space: nowrap;
+	font-style: normal;
+}
+.su-gp-list span i {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-top: -10px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	color: #999;
+	text-align: center;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 20px;
+}
+.su-gp-list span i:hover {
+	background: #f03;
+	color: #fff;
 }

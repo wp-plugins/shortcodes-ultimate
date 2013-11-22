@@ -13,20 +13,6 @@ jQuery(document).ready(function ($) {
 		$selected = $('#su-generator-selected'),
 		mce_selection = '';
 
-	// Apply qTip to choices
-	$choice.each(function () {
-		var $c = $(this);
-		if ($c.attr('title') != '') $c.qtip({
-			style: {
-				classes: 'qtip-bootstrap'
-			},
-			position: {
-				my: 'bottom center',
-				at: 'top center'
-			}
-		});
-	});
-
 	// Generator button
 	$('body').on('click', '.su-generator-button', function (e) {
 		e.preventDefault();
@@ -49,7 +35,7 @@ jQuery(document).ready(function ($) {
 					// Change z-index
 					$('body').addClass('su-generator-shown');
 					// Save selection
-					mce_selection = (typeof tinyMCE !== 'undefined' && tinyMCE.activeEditor.selection !== null) ? tinyMCE.activeEditor.selection.getContent({
+					mce_selection = (typeof tinyMCE !== 'undefined' && tinyMCE.activeEditor != null && tinyMCE.activeEditor.hasOwnProperty('selection')) ? tinyMCE.activeEditor.selection.getContent({
 						format: "text"
 					}) : '';
 				},
@@ -79,18 +65,24 @@ jQuery(document).ready(function ($) {
 		// Prepare data
 		var filter = $(this).data('filter');
 		// If filter All, show all choices
-		if (filter === 'all') $choice.show();
+		if (filter === 'all') $choice.css({
+			opacity: 1
+		});
 		// Else run search
 		else {
 			var regex = new RegExp(filter, 'gi');
 			// Hide all choices
-			$choice.hide();
+			$choice.css({
+				opacity: 0.2
+			});
 			// Find searched choices and show
 			$choice.each(function () {
 				// Get shortcode name
 				var group = $(this).data('group');
 				// Show choice if matched
-				if (group.match(regex) !== null) $(this).show();
+				if (group.match(regex) !== null) $(this).css({
+					opacity: 1
+				});
 			});
 		}
 		e.preventDefault();
@@ -135,7 +127,9 @@ jQuery(document).ready(function ($) {
 			$generator.removeClass('su-generator-narrow');
 			// Show choices panel
 			$choices.show();
-			$choice.show();
+			$choice.css({
+				opacity: 1
+			});
 			// Show filters
 			$filter.show();
 		},
@@ -144,7 +138,9 @@ jQuery(document).ready(function ($) {
 			var val = $(this).val(),
 				regex = new RegExp(val, 'gi');
 			// Hide all choices
-			$choice.hide();
+			$choice.css({
+				opacity: 0.2
+			});
 			// Find searched choices and show
 			$choice.each(function () {
 				// Get shortcode name
@@ -153,10 +149,18 @@ jQuery(document).ready(function ($) {
 					desc = $(this).data('desc'),
 					group = $(this).data('group');
 				// Show choice if matched
-				if (id.match(regex) !== null) $(this).show();
-				else if (name.match(regex) !== null) $(this).show();
-				else if (desc.match(regex) !== null) $(this).show();
-				else if (group.match(regex) !== null) $(this).show();
+				if (id.match(regex) !== null) $(this).css({
+					opacity: 1
+				});
+				else if (name.match(regex) !== null) $(this).css({
+					opacity: 1
+				});
+				else if (desc.match(regex) !== null) $(this).css({
+					opacity: 1
+				});
+				else if (group.match(regex) !== null) $(this).css({
+					opacity: 1
+				});
 			});
 		}
 	});
@@ -522,6 +526,17 @@ jQuery(document).ready(function ($) {
 					$fields.on('change blur keyup', function () {
 						$val.val($hoff.val() + 'px ' + $voff.val() + 'px ' + $blur.val() + 'px ' + $color.value.val()).trigger('change');
 					});
+					$val.on('keyup', function () {
+						var value = $(this).val().split(' ');
+						// Value is correct
+						if (value.length === 4) {
+							$hoff.val(value[0].replace('px', ''));
+							$voff.val(value[1].replace('px', ''));
+							$blur.val(value[2].replace('px', ''));
+							$color.value.val(value[3]);
+							$fields.trigger('keyup');
+						}
+					});
 				});
 				// Init border pickers
 				$('.su-generator-border-picker').each(function (index) {
@@ -547,6 +562,16 @@ jQuery(document).ready(function ($) {
 					$fields.on('change blur keyup', function () {
 						$val.val($width.val() + 'px ' + $style.val() + ' ' + $color.value.val()).trigger('change');
 					});
+					$val.on('keyup', function () {
+						var value = $(this).val().split(' ');
+						// Value is correct
+						if (value.length === 3) {
+							$width.val(value[0].replace('px', ''));
+							$style.val(value[1]);
+							$color.value.val(value[2]);
+							$fields.trigger('keyup');
+						}
+					});
 				});
 				// Remove skip class when setting is changed
 				$settings.find('.su-generator-attr').on('change keyup blur', function () {
@@ -571,7 +596,7 @@ jQuery(document).ready(function ($) {
 	// Insert shortcode
 	$('#su-generator').on('click', '.su-generator-insert', function (e) {
 		// Prepare data
-		var shortcode = su_generator_parse();
+		var shortcode = parse();
 		if (typeof window.su_generator_target !== 'undefined' && window.su_generator_target !== 'content') {
 			// Prepare target
 			var $target = $('#' + window.su_generator_target);
@@ -591,26 +616,146 @@ jQuery(document).ready(function ($) {
 	// Preview shortcode
 	$('#su-generator').on('click', '.su-generator-toggle-preview', function (e) {
 		// Prepare data
-		var $button = $(this),
-			update_timer;
-		// Update link text
-		$button.hide(); //.text($button.data('update-text'));
+		var $preview = $('#su-generator-preview'),
+			$button = $(this);
+		// Hide button
+		$button.hide();
+		// Show preview box
+		$preview.addClass('su-generator-loading').show();
 		// Bind updating on settings changes
-		if (!$button.hasClass('su-preview-enabled')) $settings.find('input, textarea, select').on('change keyup blur', function () {
-			window.clearTimeout(update_timer);
-			update_timer = window.setTimeout(function () {
-				su_generator_update_preview();
-			}, 500);
+		$settings.find('input, textarea, select').on('change keyup blur', function () {
+			update_preview();
 		});
-		// Add ready-class
-		$button.addClass('su-preview-enabled');
 		// Update preview box
-		su_generator_update_preview();
+		update_preview(true);
 		// Prevent default action
 		e.preventDefault();
 	});
 
-	function su_generator_parse() {
+	var gp_hover_timer;
+
+	// Presets manager - mouseenter
+	$('#su-generator').on('mouseenter click', '.su-generator-presets', function () {
+		clearTimeout(gp_hover_timer);
+		$('.su-gp-popup').fadeIn(200);
+	});
+	// Presets manager - mouseleave
+	$('#su-generator').on('mouseleave', '.su-generator-presets', function () {
+		gp_hover_timer = window.setTimeout(function () {
+			$('.su-gp-popup').fadeOut(200);
+		}, 600);
+	});
+	// Presets manager - add new preset
+	$('#su-generator').on('click', '.su-gp-new', function (e) {
+		// Prepare data
+		var $container = $(this).parents('.su-generator-presets'),
+			$list = $('.su-gp-list'),
+			id = new Date().getTime();
+		// Ask for preset name
+		var name = prompt(su_generator.presets_prompt_msg, su_generator.presets_prompt_value);
+		// Name is entered
+		if (name !== '' && name !== null) {
+			// Hide default text
+			$list.find('b').hide();
+			// Add new option
+			$list.append('<span data-id="' + id + '"><em>' + name + '</em><i class="fa fa-times"></i></span>');
+			// Perform AJAX request
+			add_preset(id, name);
+		}
+	});
+	// Presets manager - load preset
+	$('#su-generator').on('click', '.su-gp-list span', function (e) {
+		// Prepare data
+		var shortcode = $('.su-generator-presets').data('shortcode'),
+			id = $(this).data('id'),
+			$insert = $('.su-generator-insert');
+		// Hide popup
+		$('.su-gp-popup').hide();
+		// Disable hover timer
+		clearTimeout(gp_hover_timer);
+		// Get the preset
+		$.ajax({
+			type: 'GET',
+			url: ajaxurl,
+			data: {
+				action: 'su_generator_get_preset',
+				id: id,
+				shortcode: shortcode
+			},
+			beforeSend: function () {
+				// Disable insert button
+				$insert.addClass('button-primary-disabled').attr('disabled', true);
+			},
+			success: function (data) {
+				// Enable insert button
+				$insert.removeClass('button-primary-disabled').attr('disabled', false);
+				// Set new settings
+				set(data);
+			},
+			dataType: 'json'
+		});
+		// Prevent default action
+		e.preventDefault();
+		e.stopPropagation();
+	});
+	// Presets manager - remove preset
+	$('#su-generator').on('click', '.su-gp-list i', function (e) {
+		// Prepare data
+		var $list = $(this).parents('.su-gp-list'),
+			$preset = $(this).parent('span'),
+			id = $preset.data('id');
+		// Remove DOM element
+		$preset.remove();
+		// Show default text if last preset was removed
+		if ($list.find('span').length < 1) $list.find('b').show();
+		// Perform ajax request
+		remove_preset(id);
+		// Prevent <span> action
+		e.stopPropagation();
+		// Prevent default action
+		e.preventDefault();
+	});
+
+	/**
+	 * Create new preset with specified name from current settings
+	 */
+	function add_preset(id, name) {
+		// Prepare shortcode name and current settings
+		var shortcode = $('.su-generator-presets').data('shortcode'),
+			settings = get();
+		// Perform AJAX request
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'su_generator_add_preset',
+				id: id,
+				name: name,
+				shortcode: shortcode,
+				settings: settings
+			}
+		});
+	}
+
+	/**
+	 * Remove preset by ID
+	 */
+	function remove_preset(id) {
+		// Get current shortcode name
+		var shortcode = $('.su-generator-presets').data('shortcode');
+		// Perform AJAX request
+		$.ajax({
+			type: 'POST',
+			url: ajaxurl,
+			data: {
+				action: 'su_generator_remove_preset',
+				id: id,
+				shortcode: shortcode
+			}
+		});
+	}
+
+	function parse() {
 		// Prepare data
 		var query = $selected.val(),
 			prefix = $prefix.val(),
@@ -630,7 +775,7 @@ jQuery(document).ready(function ($) {
 			else value = $this.val();
 			// Check that value is not empty
 			if (value == null) value = '';
-			else if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val() + '"';
+			else if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val().replace(/"/gi, "'") + '"';
 		});
 		// End of opening tag
 		result += ']';
@@ -640,33 +785,92 @@ jQuery(document).ready(function ($) {
 		return result;
 	}
 
-	function su_generator_update_preview() {
+	function get() {
+		// Prepare data
+		var query = $selected.val(),
+			$settings = $('#su-generator-settings .su-generator-attr'),
+			content = $('#su-generator-content').val(),
+			data = {};
+		// Add shortcode attributes
+		$settings.each(function (i) {
+			// Prepare field and value
+			var $this = $(this),
+				value = '',
+				name = $this.attr('name');
+			// Selects
+			if ($this.is('select')) value = $this.find('option:selected').val();
+			// Other fields
+			else value = $this.val();
+			// Check that value is not empty
+			if (value == null) value = '';
+			// Save value
+			data[name] = value;
+		});
+		// Add content
+		data['content'] = content.toString();
+		// Return data
+		return data;
+	}
+
+	function set(data) {
+		// Prepare data
+		var $settings = $('#su-generator-settings .su-generator-attr'),
+			$content = $('#su-generator-content');
+		// Loop through settings
+		$settings.each(function () {
+			var $this = $(this),
+				name = $this.attr('name');
+			// Data contains value for this field
+			if (data.hasOwnProperty(name)) {
+				// Set new value
+				$this.val(data[name]);
+				$this.trigger('keyup').trigger('change').trigger('blur');
+			}
+		});
+		// Set content
+		if (data.hasOwnProperty('content')) $content.val(data['content']).trigger('keyup').trigger('change').trigger('blur');
+		// Update preview
+		update_preview();
+	}
+
+	var update_preview_timer,
+		update_preview_request;
+
+	function update_preview(forced) {
 		// Prepare data
 		var $preview = $('#su-generator-preview'),
-			shortcode = su_generator_parse(),
+			shortcode = parse(),
 			previous = $result.text();
-		// Request new preview
-		if (shortcode !== previous || !$preview.is(':visible')) window.su_generator_preview_request = $.ajax({
-			type: 'POST',
-			url: ajaxurl,
-			cache: false,
-			data: {
-				action: 'su_generator_preview',
-				shortcode: shortcode
-			},
-			beforeSend: function () {
-				// Abort previous requests
-				if (typeof window.su_generator_preview_request ===
-					'object') window.su_generator_preview_request.abort();
-				// Show loading animation
-				$preview.addClass('su-generator-loading').html('').show();
-			},
-			success: function (data) {
-				// Hide loading animation and set new HTML
-				$preview.html(data).removeClass('su-generator-loading');
-			},
-			dataType: 'html'
-		});
+		// Check forced mode
+		forced = forced || false;
+		// Break if preview box is hidden (preview isn't enabled)
+		if (!$preview.is(':visible')) return;
+		// Check shortcode is changed is this is not a forced mode
+		if (shortcode === previous && !forced) return;
+		// Run timer to filter often calls
+		window.clearTimeout(update_preview_timer);
+		update_preview_timer = window.setTimeout(function () {
+			update_preview_request = $.ajax({
+				type: 'POST',
+				url: ajaxurl,
+				cache: false,
+				data: {
+					action: 'su_generator_preview',
+					shortcode: shortcode
+				},
+				beforeSend: function () {
+					// Abort previous requests
+					if (typeof update_preview_request === 'object') update_preview_request.abort();
+					// Show loading animation
+					$preview.addClass('su-generator-loading').html('');
+				},
+				success: function (data) {
+					// Hide loading animation and set new HTML
+					$preview.html(data).removeClass('su-generator-loading');
+				},
+				dataType: 'html'
+			});
+		}, 300);
 		// Save shortcode to div
 		$result.text(shortcode);
 	}

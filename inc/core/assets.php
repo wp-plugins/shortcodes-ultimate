@@ -31,6 +31,9 @@ class Su_Assets {
 		add_action( 'wp_footer',                   array( __CLASS__, 'custom_css' ), 99 );
 		add_action( 'su/generator/preview/after',  array( __CLASS__, 'custom_css' ), 99 );
 		add_action( 'su/examples/preview/after',   array( __CLASS__, 'custom_css' ), 99 );
+		// Custom TinyMCE CSS and JS
+		// add_filter( 'mce_css',                     array( __CLASS__, 'mce_css' ) );
+		// add_filter( 'mce_external_plugins',        array( __CLASS__, 'mce_js' ) );
 	}
 
 	/**
@@ -72,10 +75,12 @@ class Su_Assets {
 		wp_register_style( 'su-generator', plugins_url( 'assets/css/generator.css', SU_PLUGIN_FILE ), array( 'farbtastic', 'magnific-popup' ), SU_PLUGIN_VERSION, 'all' );
 		wp_register_script( 'su-generator', plugins_url( 'assets/js/generator.js', SU_PLUGIN_FILE ), array( 'farbtastic', 'magnific-popup', 'qtip' ), SU_PLUGIN_VERSION, true );
 		wp_localize_script( 'su-generator', 'su_generator', array(
-				'upload_title' => __( 'Choose file', 'su' ),
-				'upload_insert' => __( 'Insert', 'su' ),
-				'isp_media_title' => __( 'Select images', 'su' ),
-				'isp_media_insert' => __( 'Add selected images', 'su' )
+				'upload_title'         => __( 'Choose file', 'su' ),
+				'upload_insert'        => __( 'Insert', 'su' ),
+				'isp_media_title'      => __( 'Select images', 'su' ),
+				'isp_media_insert'     => __( 'Add selected images', 'su' ),
+				'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'su' ),
+				'presets_prompt_value' => __( 'New preset', 'su' )
 			) );
 		// Shortcodes stylesheets
 		wp_register_style( 'su-content-shortcodes', self::skin_url( 'content-shortcodes.css' ), false, SU_PLUGIN_VERSION, 'all' );
@@ -129,6 +134,23 @@ class Su_Assets {
 		$custom_css = apply_filters( 'su/assets/custom_css', str_replace( '&#039;', '\'', html_entity_decode( (string) get_option( 'su_option_custom-css' ) ) ) );
 		// Print CSS if exists
 		if ( $custom_css ) echo "\n\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . stripslashes( str_replace( array( '%theme_url%', '%home_url%', '%plugin_url%' ), array( trailingslashit( get_stylesheet_directory_uri() ), trailingslashit( get_option( 'home' ) ), trailingslashit( plugins_url( '', SU_PLUGIN_FILE ) ) ), $custom_css ) ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
+	}
+
+	/**
+	 * Styles for visualised shortcodes
+	 */
+	public static function mce_css( $mce_css ) {
+		if ( ! empty( $mce_css ) ) $mce_css .= ',';
+		$mce_css .= plugins_url( 'assets/css/tinymce.css', SU_PLUGIN_FILE );
+		return $mce_css;
+	}
+
+	/**
+	 * TinyMCE plugin for visualised shortcodes
+	 */
+	public static function mce_js( $plugins ) {
+		$plugins['shortcodesultimate'] = plugins_url( 'assets/js/tinymce.js', SU_PLUGIN_FILE );
+		return $plugins;
 	}
 
 	/**
