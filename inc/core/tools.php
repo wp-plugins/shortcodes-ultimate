@@ -144,23 +144,67 @@ function su_hex_shift( $supplied_hex, $shift_method, $percentage = 50 ) {
 /**
  * Apply all custom formatting options of plugin
  */
+// function su_apply_formatting() {
+//  // Enable shortcodes in text widgets
+//  add_filter( 'widget_text', 'do_shortcode' );
+//  // Enable shortcodes in category descriptions
+//  add_filter( 'category_description', 'do_shortcode' );
+//  // Enable auto-formatting
+//  if ( get_option( 'su_option_custom-formatting' ) === 'on' ) {
+//   // Disable WordPress native content formatters
+//   remove_filter( 'the_content', 'wpautop' );
+//   remove_filter( 'the_content', 'wptexturize' );
+//   // Apply custom formatter function
+//   add_filter( 'the_content', 'su_custom_formatter', 99 );
+//   add_filter( 'widget_text', 'su_custom_formatter', 99 );
+//   add_filter( 'category_description', 'su_custom_formatter', 99 );
+//  }
+//  // Fix for large posts, http://core.trac.wordpress.org/ticket/8553
+//  @ini_set( 'pcre.backtrack_limit', 500000 );
+// }
+
+// add_action( 'init', 'su_apply_formatting' );
+
+/**
+ * Custom formatter function
+ *
+ * @param string  $content
+ *
+ * @return string Formatted content with clean shortcodes content
+ */
+// function su_custom_formatter( $content ) {
+//  // Prepare variables
+//  $new_content = '';
+//  // Matches the contents and the open and closing tags
+//  $pattern_full = '{(\[raw\].*?\[/raw\])}is';
+//  // Matches just the contents
+//  $pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
+//  // Divide content into pieces
+//  $pieces = preg_split( $pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE );
+//  // Loop over pieces
+//  foreach ( $pieces as $piece ) {
+//   // Look for presence of the shortcode, Append to content (no formatting)
+//   if ( preg_match( $pattern_contents, $piece, $matches ) ) $new_content .= $matches[1];
+//   // Format and append to content
+//   else $new_content .= wptexturize( wpautop( $piece ) );
+//  }
+//  // Return formatted content
+//  return $new_content;
+// }
+
+/**
+ * Apply all custom formatting options of plugin
+ */
 function su_apply_formatting() {
 	// Enable shortcodes in text widgets
 	add_filter( 'widget_text', 'do_shortcode' );
 	// Enable shortcodes in category descriptions
 	add_filter( 'category_description', 'do_shortcode' );
-	// Enable auto-formatting
+	// Enable custom formatting
 	if ( get_option( 'su_option_custom-formatting' ) === 'on' ) {
-		// Disable WordPress native content formatters
-		remove_filter( 'the_content', 'wpautop' );
-		remove_filter( 'the_content', 'wptexturize' );
 		// Apply custom formatter function
-		add_filter( 'the_content', 'su_custom_formatter', 99 );
-		add_filter( 'widget_text', 'su_custom_formatter', 99 );
-		add_filter( 'category_description', 'su_custom_formatter', 99 );
+		add_filter( 'the_content', 'su_clean_shortcodes' );
 	}
-	// Fix for large posts, http://core.trac.wordpress.org/ticket/8553
-	@ini_set( 'pcre.backtrack_limit', 500000 );
 }
 
 add_action( 'init', 'su_apply_formatting' );
@@ -172,24 +216,15 @@ add_action( 'init', 'su_apply_formatting' );
  *
  * @return string Formatted content with clean shortcodes content
  */
-function su_custom_formatter( $content ) {
-	// Prepare variables
-	$new_content = '';
-	// Matches the contents and the open and closing tags
-	$pattern_full = '{(\[raw\].*?\[/raw\])}is';
-	// Matches just the contents
-	$pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
-	// Divide content into pieces
-	$pieces = preg_split( $pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE );
-	// Loop over pieces
-	foreach ( $pieces as $piece ) {
-		// Look for presence of the shortcode, Append to content (no formatting)
-		if ( preg_match( $pattern_contents, $piece, $matches ) ) $new_content .= $matches[1];
-		// Format and append to content
-		else $new_content .= wptexturize( wpautop( $piece ) );
-	}
-	// Return formatted content
-	return $new_content;
+function su_clean_shortcodes( $content ) {
+	$p = su_cmpt();
+	$array = array (
+		'<p>[' => '[',
+		']</p>' => ']',
+		']<br />' => ']'
+	);
+	$content = strtr( $content, $array );
+	return $content;
 }
 
 /**
@@ -553,6 +588,7 @@ class Su_Tools {
 		add_action( 'wp_ajax_su_example_preview', array( __CLASS__, 'example' ) );
 		add_action( 'su/update',                  array( __CLASS__, 'reset_examples' ) );
 		add_action( 'su/activation',              array( __CLASS__, 'reset_examples' ) );
+		add_action( 'sunrise/page/before',        array( __CLASS__, 'reset_examples' ) );
 	}
 
 	public static function select( $args ) {
@@ -770,7 +806,7 @@ class Su_Tools {
 	}
 
 	public static function reset_examples() {
-		foreach( (array) Su_Data::examples() as $example ) foreach( (array) $example['items'] as $item ) delete_transient( 'su/examples/render/' . $item['id'] );
+		foreach ( (array) Su_Data::examples() as $example ) foreach ( (array) $example['items'] as $item ) delete_transient( 'su/examples/render/' . $item['id'] );
 	}
 
 	public static function do_attr( $value ) {

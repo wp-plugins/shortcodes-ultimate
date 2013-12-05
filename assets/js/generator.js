@@ -775,7 +775,7 @@ jQuery(document).ready(function ($) {
 			else value = $this.val();
 			// Check that value is not empty
 			if (value == null) value = '';
-			else if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val().replace(/"/gi, "'") + '"';
+			else if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val().toString().replace(/"/gi, "'") + '"';
 		});
 		// End of opening tag
 		result += ']';

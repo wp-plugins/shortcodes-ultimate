@@ -40,6 +40,8 @@ class Su_Assets {
 	 * Register assets
 	 */
 	public static function register() {
+		// Chart.js
+		wp_register_script( 'chartjs', plugins_url( 'assets/js/chart.js', SU_PLUGIN_FILE ), false, '0.2', true );
 		// noUIslider
 		wp_register_script( 'simpleslider', plugins_url( 'assets/js/simpleslider.js', SU_PLUGIN_FILE ), array( 'jquery' ), '1.0.0', true );
 		wp_register_style( 'simpleslider', plugins_url( 'assets/css/simpleslider.css', SU_PLUGIN_FILE ), false, '1.0.0', 'all' );

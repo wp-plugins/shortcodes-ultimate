@@ -95,6 +95,12 @@ Activate plugin at "Plugins" administration page.
 
 == Changelog ==
 
+= 4.5.1 =
+* Updated custom formatting filter
+* Updated Japanese translation
+* Added NL translation
+* Minor fixes
+
 = 4.5.0 =
 * Presets. Now you need to adjust the shortcodes only once
 * New WP filters for shortcodes attributes
