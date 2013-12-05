@@ -95,7 +95,7 @@ Activate plugin at "Plugins" administration page.
 
 == Changelog ==
 
-= 4.5.1 =
+= 4.5.2 =
 * Updated custom formatting filter
 * Updated Japanese translation
 * Added NL translation

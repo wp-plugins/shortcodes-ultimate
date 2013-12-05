@@ -1127,7 +1127,7 @@ class Su_Shortcodes {
 			$args['post__in'] = $posts_in;
 		}
 		// Post Author
-		if ( !empty( $author ) ) $args['author_name'] = $author;
+		if ( !empty( $author ) ) $args['author'] = $author;
 		// Offset
 		if ( !empty( $offset ) ) $args['offset'] = $offset;
 		// Post Status

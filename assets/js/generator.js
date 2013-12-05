@@ -637,7 +637,7 @@ jQuery(document).ready(function ($) {
 	// Presets manager - mouseenter
 	$('#su-generator').on('mouseenter click', '.su-generator-presets', function () {
 		clearTimeout(gp_hover_timer);
-		$('.su-gp-popup').fadeIn(200);
+		$('.su-gp-popup').show();
 	});
 	// Presets manager - mouseleave
 	$('#su-generator').on('mouseleave', '.su-generator-presets', function () {
@@ -775,7 +775,9 @@ jQuery(document).ready(function ($) {
 			else value = $this.val();
 			// Check that value is not empty
 			if (value == null) value = '';
-			else if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val().toString().replace(/"/gi, "'") + '"';
+			else if (typeof value === 'array') value = value.join(',');
+			// Add attribute
+			if (value !== '') result += ' ' + $(this).attr('name') + '="' + $(this).val().toString().replace(/"/gi, "'") + '"';
 		});
 		// End of opening tag
 		result += ']';

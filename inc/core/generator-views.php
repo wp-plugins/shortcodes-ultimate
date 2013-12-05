@@ -27,15 +27,11 @@ class Su_Generator_Views {
 	}
 
 	public static function select( $id, $field ) {
-		// Detect array type (numbers or strings with translations)
-		$is_numbers = is_numeric( implode( '', array_keys( $field['values'] ) ) );
 		// Multiple selects
 		$multiple = ( isset( $field['multiple'] ) ) ? ' multiple' : '';
 		$return = '<select name="' . $id . '" id="su-generator-attr-' . $id . '" class="su-generator-attr"' . $multiple . '>';
 		// Create options
 		foreach ( $field['values'] as $option_value => $option_title ) {
-			// Values is indexed array, replace  array keys by titles
-			if ( $is_numbers ) $option_value = $option_title;
 			// Is this option selected
 			$selected = ( $field['default'] === $option_value ) ? ' selected="selected"' : '';
 			// Create option
