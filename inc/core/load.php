@@ -139,16 +139,10 @@ class Shortcodes_Ultimate {
 		__( 'Shortcodes Ultimate', 'su' );
 		__( 'Vladimir Anokhin', 'su' );
 		__( 'Supercharge your WordPress theme with mega pack of shortcodes', 'su' );
-		// Prevent insertion of default options
-		if ( get_option( 'su_option_skin' ) ) update_option( 'sunrise_defaults_su', true );
 		// Add plugin actions links
 		add_filter( 'plugin_action_links_' . plugin_basename( SU_PLUGIN_FILE ), array( __CLASS__, 'actions_links' ), -10 );
 		// Add plugin meta links
 		add_filter( 'plugin_row_meta', array( __CLASS__, 'meta_links' ), 10, 2 );
-		// Import custom CSS from version 3.9.5 and below
-		add_action( 'admin_init', array( __CLASS__, 'import_395' ) );
-		// Import settings from versions 4.3.2 and below
-		add_action( 'admin_init', array( __CLASS__, 'import_432' ) );
 		// Shortcodes Ultimate is ready
 		do_action( 'su/init' );
 	}
@@ -236,63 +230,6 @@ class Shortcodes_Ultimate {
 			$links[] = '<a href="http://wordpress.org/extend/plugins/shortcodes-ultimate/changelog/" target="_blank">' . __( 'Changelog', 'su' ) . '</a>';
 		}
 		return $links;
-	}
-
-	/**
-	 * Import custom CSS from versions 3.9.5 and below
-	 */
-	public static function import_395() {
-		$from_395 = get_option( 'su_custom_css' );
-		if ( !$from_395 ) return;
-		$current = get_option( 'su_option_custom-css' );
-		update_option( 'su_option_custom-css', $from_395 . "\n\n" . $current );
-		delete_option( 'su_custom_css' );
-	}
-
-	/**
-	 * Import settings from versions 4.3.2 and below
-	 */
-	public static function import_432() {
-		$from_432 = get_option( 'shortcodesultimate_options' );
-		if ( !$from_432 ) return;
-		// Custom formatting
-		if ( isset( $from_432['custom_formatting'] ) ) update_option( 'su_option_custom-formatting', 'on' );
-		else update_option( 'su_option_custom-formatting', '' );
-		// Compatibility mode
-		if ( isset( $from_432['compatibility_mode'] ) ) update_option( 'su_option_compatibility-mode', 'on' );
-		else update_option( 'su_option_compatibility-mode', '' );
-		// Skin
-		if ( isset( $from_432['skin'] ) ) update_option( 'su_option_skin', $from_432['skin'] );
-		// Skip
-		if ( isset( $from_432['skip'] ) ) update_option( 'su_option_skip', 'on' );
-		else update_option( 'su_option_skip', '' );
-		// Custom CSS
-		if ( isset( $from_432['custom_css'] ) ) update_option( 'su_option_custom-css', $from_432['custom_css'] );
-		// Galleries
-		if ( isset( $from_432['galleries'] ) ) update_option( 'su_option_galleries-432', $from_432['galleries'] );
-		delete_option( 'shortcodesultimate_options' );
-	}
-
-	/**
-	 * Import compatibility mode settings from versions 4.4.6 and below
-	 */
-	public static function import_446() {
-		$from_395 = get_option( 'su_compatibility_mode_prefix' );
-		$from_446 = get_option( 'su_option_compatibility-mode' );
-		$from_450 = get_option( 'su_option_prefix' );
-		// Check for new prefix first
-		if ( $from_450 ) return;
-		// Old prefixes - gn_
-		if ( $from_395 ) {
-			update_option( 'su_option_prefix', $from_395 );
-		}
-		// New chechbox - ON
-		elseif ( $from_446 && $from_446 === 'on' ) update_option( 'su_option_prefix', 'su_' );
-		// New checkbox - OFF
-		elseif ( $from_446 && $from_446 === '' ) update_option( 'su_option_prefix', '' );
-		// Remove old options
-		delete_option( 'su_compatibility_mode_prefix' );
-		delete_option( 'su_option_compatibility-mode' );
 	}
 }
 

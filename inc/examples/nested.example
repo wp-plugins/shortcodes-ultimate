@@ -11,9 +11,9 @@
 <h2>The same nested shortcodes</h2>
 
 [%su_spoiler title="Click me to see nested spoilers" style="fancy"]
-	[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
-	[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
-	[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+	[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+	[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+	[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
 [/%su_spoiler]
 
 -----
@@ -22,9 +22,9 @@
 
 [%su_spoiler title="Click me to see nested accordion" style="fancy"]
 	[%su_accordion]
-		[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
-		[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
-		[%su__spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+		[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+		[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
+		[_%su_spoiler title="Spoiler title"] Spoiler content [_/%su_spoiler]
 	[/%su_accordion]
 [/%su_spoiler]
 
