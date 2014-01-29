@@ -33,7 +33,7 @@ class Su_Shortcodes {
 			if ( self::$tab_count < $atts['active'] ) $atts['active'] = self::$tab_count;
 			foreach ( self::$tabs as $tab ) {
 				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '"' . $tab['anchor'] . '>' . su_scattr( $tab['title'] ) . '</span>';
-				$panes[] = '<div class="su-tabs-pane' . su_ecssc( $tab ) . '">' . $tab['content'] . '<div style="clear:both;height:0"></div></div>';
+				$panes[] = '<div class="su-tabs-pane su-clearfix' . su_ecssc( $tab ) . '">' . $tab['content'] . '</div>';
 			}
 			$atts['vertical'] = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
 			$return = '<div class="su-tabs su-tabs-style-' . $atts['style'] . $atts['vertical'] . su_ecssc( $atts ) . '" data-active="' . (string) $atts['active'] . '"><div class="su-tabs-nav">' . implode( '', $tabs ) . '</div><div class="su-tabs-panes">' . implode( "\n", $panes ) . '</div></div>';
@@ -84,7 +84,7 @@ class Su_Shortcodes {
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'su-other-shortcodes' );
 		do_action( 'su/shortcode/spoiler', $atts );
-		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . ' su-spoiler-icon-' . $atts['icon'] . su_ecssc( $atts ) . '"' . $atts['anchor'] . '><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content">' . su_do_shortcode( $content, 's' ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . ' su-spoiler-icon-' . $atts['icon'] . su_ecssc( $atts ) . '"' . $atts['anchor'] . '><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content su-clearfix">' . su_do_shortcode( $content, 's' ) . '</div></div>';
 	}
 
 	public static function accordion( $atts = null, $content = null ) {
@@ -149,7 +149,7 @@ class Su_Shortcodes {
 		$cite_class = ( $atts['cite'] ) ? ' su-quote-has-cite' : '';
 		su_query_asset( 'css', 'su-box-shortcodes' );
 		do_action( 'su/shortcode/quote', $atts );
-		return '<div class="su-quote su-quote-style-' . $atts['style'] . $cite_class . su_ecssc( $atts ) . '"><div class="su-quote-inner">' . do_shortcode( $content ) . su_scattr( $cite ) . '</div></div>';
+		return '<div class="su-quote su-quote-style-' . $atts['style'] . $cite_class . su_ecssc( $atts ) . '"><div class="su-quote-inner su-clearfix">' . do_shortcode( $content ) . su_scattr( $cite ) . '</div></div>';
 	}
 
 	public static function pullquote( $atts = null, $content = null ) {
@@ -200,7 +200,7 @@ class Su_Shortcodes {
 		if ( $atts['last'] !== null && $atts['last'] == '1' ) $atts['class'] .= ' su-column-last';
 		if ( $atts['center'] === 'yes' ) $atts['class'] .= ' su-column-centered';
 		su_query_asset( 'css', 'su-box-shortcodes' );
-		return '<div class="su-column su-column-size-' . str_replace( '/', '-', $atts['size'] ) . su_ecssc( $atts ) . '"><div class="su-column-inner">' . su_do_shortcode( $content, 'c' ) . '</div></div>';
+		return '<div class="su-column su-column-size-' . str_replace( '/', '-', $atts['size'] ) . su_ecssc( $atts ) . '"><div class="su-column-inner su-clearfix">' . su_do_shortcode( $content, 'c' ) . '</div></div>';
 	}
 
 	public static function su_list( $atts = null, $content = null ) {
@@ -443,7 +443,7 @@ class Su_Shortcodes {
 			$atts['icon'] = '<img src="' . $atts['icon'] . '" width="' . $atts['size'] . '" height="' . $atts['size'] . '" alt="' . $atts['title'] . '" />';
 		}
 		su_query_asset( 'css', 'su-box-shortcodes' );
-		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding-left:' . round( $atts['size'] + 14 ) . 'px;height:' . $atts['size'] . 'px;line-height:' . $atts['size'] . 'px">' . $atts['icon'] . ' ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content" style="padding-left:' . round( $atts['size'] + 14 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding-left:' . round( $atts['size'] + 14 ) . 'px;min-height:' . $atts['size'] . 'px;line-height:' . $atts['size'] . 'px">' . $atts['icon'] . ' ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content su-clearfix" style="padding-left:' . round( $atts['size'] + 14 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	public static function box( $atts = null, $content = null ) {
@@ -463,7 +463,7 @@ class Su_Shortcodes {
 		$title_radius = ( $title_radius ) ? '-webkit-border-top-left-radius:' . $title_radius . 'px;-webkit-border-top-right-radius:' . $title_radius . 'px;-moz-border-radius-topleft:' . $title_radius . 'px;-moz-border-radius-topright:' . $title_radius . 'px;border-top-left-radius:' . $title_radius . 'px;border-top-right-radius:' . $title_radius . 'px;' : '';
 		su_query_asset( 'css', 'su-box-shortcodes' );
 		// Return result
-		return '<div class="su-box su-box-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['box_color'], 'darker', 20 ) . ';' . $radius . '"><div class="su-box-title" style="background-color:' . $atts['box_color'] . ';color:' . $atts['title_color'] . ';' . $title_radius . '">' . su_scattr( $atts['title'] ) . '</div><div class="su-box-content">' . su_do_shortcode( $content, 'b' ) . '</div></div>';
+		return '<div class="su-box su-box-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['box_color'], 'darker', 20 ) . ';' . $radius . '"><div class="su-box-title" style="background-color:' . $atts['box_color'] . ';color:' . $atts['title_color'] . ';' . $title_radius . '">' . su_scattr( $atts['title'] ) . '</div><div class="su-box-content su-clearfix">' . su_do_shortcode( $content, 'b' ) . '</div></div>';
 	}
 
 	public static function note( $atts = null, $content = null ) {
@@ -480,7 +480,7 @@ class Su_Shortcodes {
 		// Prepare border-radius
 		$radius = ( $atts['radius'] != '0' ) ? 'border-radius:' . $atts['radius'] . 'px;-moz-border-radius:' . $atts['radius'] . 'px;-webkit-border-radius:' . $atts['radius'] . 'px;' : '';
 		su_query_asset( 'css', 'su-box-shortcodes' );
-		return '<div class="su-note' . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['note_color'], 'darker', 10 ) . ';' . $radius . '"><div class="su-note-inner" style="background-color:' . $atts['note_color'] . ';border-color:' . su_hex_shift( $atts['note_color'], 'lighter', 80 ) . ';color:' . $atts['text_color'] . ';' . $radius . '">' . su_do_shortcode( $content, 'n' ) . '</div></div>';
+		return '<div class="su-note' . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['note_color'], 'darker', 10 ) . ';' . $radius . '"><div class="su-note-inner su-clearfix" style="background-color:' . $atts['note_color'] . ';border-color:' . su_hex_shift( $atts['note_color'], 'lighter', 80 ) . ';color:' . $atts['text_color'] . ';' . $radius . '">' . su_do_shortcode( $content, 'n' ) . '</div></div>';
 	}
 
 	public static function lightbox( $atts = null, $content = null ) {
@@ -1144,8 +1144,9 @@ class Su_Shortcodes {
 			$tax_term = explode( ',', $tax_term );
 			// Validate operator
 			if ( !in_array( $tax_operator, array( 'IN', 'NOT IN', 'AND' ) ) ) $tax_operator = 'IN';
-			$tax_args = array( 'tax_query' => array( array( 'taxonomy' => $taxonomy,
-						'field' => 'slug',
+			$tax_args = array( 'tax_query' => array( array(
+						'taxonomy' => $taxonomy,
+						'field' => ( is_numeric( $tax_term[0] ) ) ? 'id' : 'slug',
 						'terms' => $tax_term,
 						'operator' => $tax_operator ) ) );
 			// Check for multiple taxonomy queries

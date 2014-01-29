@@ -1,5 +1,15 @@
 /*** Shortcodes Ultimate - box elements ***/
 
+/*		Common styles
+---------------------------------------------------------------*/
+
+.su-clearfix:before,
+.su-clearfix:after {
+	display: table;
+	content: " ";
+}
+.su-clearfix:after { clear: both; }
+
 /*		Tabs + Tab
 ---------------------------------------------------------------*/
 
@@ -97,11 +107,12 @@
 	box-sizing: border-box !important;
 }
 
-/*		Spoiler
+/*		Spoiler + Accordion
 ---------------------------------------------------------------*/
 
 .su-spoiler { margin-bottom: 1.5em; }
 .su-spoiler .su-spoiler:last-child { margin-bottom: 0; }
+.su-accordion { margin-bottom: 1.5em; }
 .su-accordion .su-spoiler { margin-bottom: 0.5em; }
 .su-spoiler-title {
 	position: relative;
@@ -281,6 +292,7 @@
 .su-row {
 	clear: both;
 	zoom: 1;
+	margin-bottom: 1.5em;
 }
 .su-row:before,
 .su-row:after {
@@ -290,14 +302,14 @@
 .su-row:after { clear: both; }
 .su-column {
 	display: block;
-	margin: 0 4% 1em 0;
+	margin: 0 4% 0 0;
 	float: left;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 .su-column-last { margin-right: 0; }
-.su-row .su-column { margin: 0 0 1em 4%; }
+.su-row .su-column { margin: 0 0 0 4%; }
 .su-row .su-column.su-column-size-1-1 { margin-left: 0; margin-right: 0; }
 .su-row .su-column:first-child { margin-left: 0; }
 .su-column-centered {
@@ -328,8 +340,11 @@
 @media only screen and (max-width: 768px) {
 	.su-column {
 		width: 100% !important;
-		margin: 0 0 1em 0 !important;
+		margin: 0 0 1.5em 0 !important;
 		float: none !important;
+	}
+	.su-row .su-column:last-child {
+		margin-bottom: 0 !important;
 	}
 }
 
@@ -388,8 +403,8 @@
 .su-box-content {
 	background-color: #fff;
 	color: #444;
+	padding: 1em;
 }
-.su-box-content { padding: 1em; }
 .su-box-style-soft .su-box-title {
 	background-image: url('../images/styles/style-soft.png');
 	background-position: 0 0;
@@ -424,3 +439,20 @@
 	border-width: 1px;
 	border-style: solid;
 }
+
+/*		Common margin resets for box elements
+---------------------------------------------------------------*/
+
+.su-column-inner > *:first-child,
+.su-accordion > *:first-child,
+.su-spoiler-content > *:first-child,
+.su-service-content > *:first-child,
+.su-box-content > *:first-child,
+.su-note-inner > *:first-child { margin-top: 0; }
+.su-column-inner > *:last-child,
+.su-tabs-pane > *:last-child,
+.su-accordion > *:last-child,
+.su-spoiler-content > *:last-child,
+.su-service-content > *:last-child,
+.su-box-content > *:last-child,
+.su-note-inner > *:last-child { margin-bottom: 0; }

@@ -28,7 +28,7 @@ class Shortcodes_Ultimate {
 		// Top-level menu
 		$admin->add_menu( array(
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
-				'menu_title'  => __( 'Shortcodes', 'su' ),
+				'menu_title'  => apply_filters( 'su/menu/shortcodes', __( 'Shortcodes', 'su' ) ),
 				'capability'  => 'edit_others_posts',
 				'slug'        => 'shortcodes-ultimate',
 				'icon_url'    => plugins_url( 'assets/images/icon.png', SU_PLUGIN_FILE ),
@@ -102,7 +102,7 @@ class Shortcodes_Ultimate {
 		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
-				'menu_title'  => __( 'Settings', 'su' ),
+				'menu_title'  => apply_filters( 'su/menu/settings', __( 'Settings', 'su' ) ),
 				'capability'  => 'edit_others_posts',
 				'slug'        => 'shortcodes-ultimate',
 				'options'     => array()
@@ -111,7 +111,7 @@ class Shortcodes_Ultimate {
 		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Examples', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
-				'menu_title'  => __( 'Examples', 'su' ),
+				'menu_title'  => apply_filters( 'su/menu/examples', __( 'Examples', 'su' ) ),
 				'capability'  => 'edit_others_posts',
 				'slug'        => 'shortcodes-ultimate-examples',
 				'options'     => array(
@@ -125,7 +125,7 @@ class Shortcodes_Ultimate {
 		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Add-ons', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
-				'menu_title'  => __( 'Add-ons', 'su' ),
+				'menu_title'  => apply_filters( 'su/menu/addons', __( 'Add-ons', 'su' ) ),
 				'capability'  => 'edit_others_posts',
 				'slug'        => 'shortcodes-ultimate-addons',
 				'options'     => array(

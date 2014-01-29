@@ -42,9 +42,13 @@ class Su_Assets {
 	public static function register() {
 		// Chart.js
 		wp_register_script( 'chartjs', plugins_url( 'assets/js/chart.js', SU_PLUGIN_FILE ), false, '0.2', true );
-		// noUIslider
+		// SimpleSlider
 		wp_register_script( 'simpleslider', plugins_url( 'assets/js/simpleslider.js', SU_PLUGIN_FILE ), array( 'jquery' ), '1.0.0', true );
 		wp_register_style( 'simpleslider', plugins_url( 'assets/css/simpleslider.css', SU_PLUGIN_FILE ), false, '1.0.0', 'all' );
+		// Owl Carousel
+		wp_register_script( 'owl-carousel', plugins_url( 'assets/js/owl-carousel.js', SU_PLUGIN_FILE ), array( 'jquery' ), '1.3.2', true );
+		wp_register_style( 'owl-carousel', plugins_url( 'assets/css/owl-carousel.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
+		wp_register_style( 'owl-carousel-transitions', plugins_url( 'assets/css/owl-carousel-transitions.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
 		// Font Awesome
 		wp_register_style( 'font-awesome', plugins_url( 'assets/css/font-awesome.css', SU_PLUGIN_FILE ), false, '3.2.1', 'all' );
 		// Animate.css
@@ -69,7 +73,7 @@ class Su_Assets {
 		wp_register_style( 'su-options-page', plugins_url( 'assets/css/options-page.css', SU_PLUGIN_FILE ), false, SU_PLUGIN_VERSION, 'all' );
 		wp_register_script( 'su-options-page', plugins_url( 'assets/js/options-page.js', SU_PLUGIN_FILE ), array( 'magnific-popup', 'jquery-ui-sortable', 'ace', 'jsrender' ), SU_PLUGIN_VERSION, true );
 		wp_localize_script( 'su-options-page', 'su_options_page', array(
-				'upload_title' => __( 'Choose files', 'su' ),
+				'upload_title'  => __( 'Choose files', 'su' ),
 				'upload_insert' => __( 'Add selected files', 'su' ),
 				'not_clickable' => __( 'This button is not clickable', 'su' )
 			) );
@@ -82,7 +86,8 @@ class Su_Assets {
 				'isp_media_title'      => __( 'Select images', 'su' ),
 				'isp_media_insert'     => __( 'Add selected images', 'su' ),
 				'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'su' ),
-				'presets_prompt_value' => __( 'New preset', 'su' )
+				'presets_prompt_value' => __( 'New preset', 'su' ),
+				'last_used'            => __( 'Last used settings', 'su' )
 			) );
 		// Shortcodes stylesheets
 		wp_register_style( 'su-content-shortcodes', self::skin_url( 'content-shortcodes.css' ), false, SU_PLUGIN_VERSION, 'all' );

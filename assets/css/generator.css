@@ -13,9 +13,7 @@
 
 .su-generator-loading {
 	min-height: 60px;
-	background-image: url("../images/loading.gif") !important;
-	background-position: 50% 50% !important;
-	background-repeat: no-repeat !important;
+	background: 50% 50% url("../images/spinner.gif") no-repeat !important;
 }
 .su-generator-loading * { visibility: hidden; }
 
@@ -35,12 +33,6 @@
 	max-width: 1000px;
 	margin: 28px auto 100px;
 	padding: 20px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	border-bottom-left-radius: 5px;
 	background: #fff;
 	-webkit-box-shadow: 0 2px 25px #000;
 	-moz-box-shadow: 0 2px 25px #000;
@@ -110,12 +102,7 @@
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border: 1px solid #fff;
-	border-bottom-style: dotted;
-	border-bottom-color: #e5e5e5;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
+	border-bottom: 1px dotted #e5e5e5;
 	color: #222;
 	vertical-align: top;
 	text-align: left;
@@ -123,14 +110,9 @@
 	cursor: pointer;
 }
 #su-generator-choices span:hover {
-	border: 1px solid #2687b3;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	background: #f5f5f5;
-	-webkit-box-shadow: 0 0 20px #fff inset;
-	-moz-box-shadow: 0 0 20px #fff inset;
-	box-shadow: 0 0 20px #fff inset;
+	background: #333;
+	color: #fff;
+	border-bottom: 1px solid #333;
 }
 #su-generator-choices span img {
 	position: absolute;
@@ -139,13 +121,6 @@
 	width: 14px;
 	height: 14px;
 }
-#su-generator-choices span:hover img {
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 18px;
-	height: 18px;
-}
 #su-generator-choices span i {
 	position: absolute;
 	left: 1px;
@@ -153,15 +128,12 @@
 	display: block;
 	width: 26px;
 	height: 26px;
-	color: #aaa;
+	color: #888;
 	text-align: center;
 	font-size: 14px;
 	line-height: 26px;
 }
-#su-generator-choices span:hover i {
-	color: #000;
-	font-size: 18px;
-}
+#su-generator-choices span:hover i { color: #fff; }
 
 /* Breadcrumbs */
 #su-generator-breadcrumbs {
@@ -540,12 +512,6 @@
 .su-generator-actions {
 	margin: 0 -20px -20px;
 	padding: 1.5em 15px;
-	-webkit-border-bottom-right-radius: 5px;
-	-moz-border-radius-bottomright: 5px;
-	border-bottom-right-radius: 5px;
-	-webkit-border-bottom-left-radius: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	border-bottom-left-radius: 5px;
 	background: #eee;
 }
 .su-generator-actions > .button { margin: 0 5px; }

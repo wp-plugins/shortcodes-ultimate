@@ -42,7 +42,7 @@ class Su_Generator_Views {
 	}
 
 	public static function bool( $id, $field ) {
-		$return = '<span class="su-generator-switch su-generator-switch-' . $field['default'] . '"><span class="su-generator-yes">' . __( 'Yes', 'su' ) . '</span><span class="su-generator-no">' . __( 'No', 'su' ) . '</span></span><input type="hidden" name="' . $id . '" value="' . esc_attr( $field['default'] ) . '" id="su-generator-attr-' . $id . '" class="su-generator-attr" />';
+		$return = '<span class="su-generator-switch su-generator-switch-' . $field['default'] . '"><span class="su-generator-yes">' . __( 'Yes', 'su' ) . '</span><span class="su-generator-no">' . __( 'No', 'su' ) . '</span></span><input type="hidden" name="' . $id . '" value="' . esc_attr( $field['default'] ) . '" id="su-generator-attr-' . $id . '" class="su-generator-attr su-generator-switch-value" />';
 		return $return;
 	}
 

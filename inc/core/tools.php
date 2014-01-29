@@ -663,9 +663,10 @@ class Su_Tools {
 		return $taxes;
 	}
 
-	public static function get_terms( $tax = 'category' ) {
+	public static function get_terms( $tax = 'category', $key = 'id' ) {
 		$terms = array();
-		foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
+		if ( $key === 'id' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
+		elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
 		return $terms;
 	}
 
@@ -817,6 +818,39 @@ class Su_Tools {
 		return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . $src . '"></i>';
 	}
 
+	public static function get_icon( $args ) {
+		$args = wp_parse_args( $args, array(
+				'icon' => '',
+				'size' => '',
+				'color' => '',
+				'style' => ''
+			) );
+		// Check for icon param
+		if ( !$args['icon'] ) return;
+		// Add trailing ; to the style param
+		if ( $args['style'] ) $args['style'] = rtrim( $args['style'], ';' ) . ';';
+		// Font Awesome icon
+		if ( strpos( $args['icon'], 'icon:' ) !== false ) {
+			// Add size
+			if ( $args['size'] ) $args['style'] .= 'font-size:' . $args['size'] . 'px;';
+			// Add color
+			if ( $args['color'] ) $args['style'] .= 'color:' . $args['color'] . ';';
+			// Query font-awesome stylesheet
+			su_query_asset( 'css', 'font-awesome' );
+			// Return icon
+			return '<i class="fa fa-' . trim( str_replace( 'icon:', '', $args['icon'] ) ) . '" style="' . $args['style'] . '"></i>';
+		}
+		// Image icon
+		elseif ( strpos( $args['icon'], '/' ) !== false ) {
+			// Add size
+			if ( $args['size'] ) $args['style'] .= 'width:' . $args['size'] . 'px;height:' . $args['size'] . 'px;';
+			// Return icon
+			return '<img src="' . $args['icon'] . '" alt="" style="' . $args['style'] . '" />';
+		}
+		// Icon is not detected
+		return false;
+	}
+
 	public static function icons() {
 		$icons = array();
 		if ( is_callable( array( 'Su_Data', 'icons' ) ) ) foreach ( (array) Su_Data::icons() as $icon ) {
@@ -837,8 +871,15 @@ class Su_Tools {
 new Su_Tools;
 
 /**
- * Just a shortcut for Su_Tools::decode_shortcode()
+ * Shortcut for Su_Tools::decode_shortcode()
  */
 function su_scattr( $value ) {
 	return Su_Tools::do_attr( $value );
+}
+
+/**
+ * Shortcut for Su_Tools::get_icon()
+ */
+function su_get_icon( $args ) {
+	return Su_Tools::get_icon( $args );
 }

@@ -111,6 +111,12 @@ class Su_Admin_Views {
 		$output = array();
 		$addons = array(
 			array(
+				'name' => __( 'New Shortcodes', 'su' ),
+				'desc' => __( 'Parallax sections, responsive content slider, pricing tables, vector icons, testimonials, progress bars and even more', 'su' ),
+				'url' => 'http://gndev.info/shortcodes-ultimate/extra/',
+				'image' => plugins_url( 'assets/images/banners/extra.png', SU_PLUGIN_FILE )
+			),
+			array(
 				'name' => __( 'Maker', 'su' ),
 				'desc' => __( 'This add-on allows you to create custom shortcodes. You can easily create any shortcode with different parameters or even override default shortcodes', 'su' ),
 				'url' => 'http://gndev.info/shortcodes-ultimate/maker/',
@@ -118,7 +124,7 @@ class Su_Admin_Views {
 			),
 			array(
 				'name' => __( 'Skins', 'su' ),
-				'desc' => __( 'Set of additional skins for Shrtcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes', 'su' ),
+				'desc' => __( 'Set of additional skins for Shortcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes', 'su' ),
 				'url' => 'http://gndev.info/shortcodes-ultimate/skins/',
 				'image' => plugins_url( 'assets/images/banners/skins.png', SU_PLUGIN_FILE )
 			),

@@ -453,22 +453,28 @@ jQuery(document).ready(function ($) {
 					// Prepare data
 					var $switch = $(this),
 						$value = $switch.parent().children('input'),
-						is_on = !! ($value.val() === 'yes');
+						is_on = $value.val() === 'yes';
 					// Disable
 					if (is_on) {
-						// Change class
-						$switch.removeClass('su-generator-switch-yes').addClass('su-generator-switch-no');
 						// Change value
 						$value.val('no').trigger('change');
 					}
 					// Enable
 					else {
-						// Change class
-						$switch.removeClass('su-generator-switch-no').addClass('su-generator-switch-yes');
 						// Change value
 						$value.val('yes').trigger('change');
 					}
 					e.preventDefault();
+				});
+				$('.su-generator-switch-value').on('change', function () {
+					// Prepare data
+					var $value = $(this),
+						$switch = $value.parent().children('.su-generator-switch'),
+						value = $value.val();
+					// Disable
+					if (value === 'yes') $switch.removeClass('su-generator-switch-no').addClass('su-generator-switch-yes');
+					// Enable
+					else if (value === 'no') $switch.removeClass('su-generator-switch-yes').addClass('su-generator-switch-no');
 				});
 				// Init tax_term selects
 				$('select#su-generator-attr-taxonomy').on('change', function () {
@@ -588,6 +594,29 @@ jQuery(document).ready(function ($) {
 				});
 				// Save selected value
 				$selected.val(shortcode);
+				// Load last used preset
+				$.ajax({
+					type: 'GET',
+					url: ajaxurl,
+					data: {
+						action: 'su_generator_get_preset',
+						id: 'last_used',
+						shortcode: shortcode
+					},
+					beforeSend: function () {
+						// Show loading animation
+						// $settings.addClass('su-generator-loading');
+					},
+					success: function (data) {
+						// Remove loading animation
+						// $settings.removeClass('su-generator-loading');
+						// Set new settings
+						set(data);
+						// Apply selected text to the content field
+						if (typeof mce_selection !== 'undefined' && mce_selection !== '') $('#su-generator-content').val(mce_selection);
+					},
+					dataType: 'json'
+				});
 			},
 			dataType: 'html'
 		});
@@ -605,6 +634,8 @@ jQuery(document).ready(function ($) {
 		}
 		// Insert into editor
 		else window.wp.media.editor.insert(shortcode);
+		// Save current settings to presets
+		add_preset('last_used', su_generator.last_used);
 		// Close popup
 		$.magnificPopup.close();
 		// Save shortcode to div

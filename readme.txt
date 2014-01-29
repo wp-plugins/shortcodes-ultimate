@@ -1,6 +1,6 @@
 === Shortcodes Ultimate ===
 Contributors: gn_themes
-License: GPL3
+License: GPL
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
 Requires at least: 3.5
@@ -17,7 +17,8 @@ Supercharge your WordPress theme with mega pack of shortcodes
 With this plugin you can easily create tabs, buttons, boxes, different sliders, responsive videos and much, much more. Turn your free theme to premium in just a few clicks. Using Shortcodes Ultimate you can quickly and easily retrieve premium themes features and display it on your site. See screenshots for more information.
 
 = Premium Add-ons =
-* __[Extra Skins](http://gndev.info/shortcodes-ultimate/skins/)__ - 60+ additional skins for plugin shortcodes
+* __[Extra Shortcodes](http://gndev.info/shortcodes-ultimate/extra/)__ - 15+ additional shortcodes
+* __[Additional Skins](http://gndev.info/shortcodes-ultimate/skins/)__ - 60+ additional skins for plugin shortcodes
 * __[Shortcode Creator](http://gndev.info/shortcodes-ultimate/maker/)__ - allows you to create your own custom shortcodes
 
 = Features =
@@ -29,13 +30,19 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Special widget
 * Rich API
 
+= What people are saying (reviews) =
+* [40+ Reasons Shortcodes Ultimate Is A Must Have Plugin](http://www.the-best-web-hosting-service.com/blog/2014/01/ultimateshortcodesreview/)
+* [Обзор плагина Shortcodes Ultimate](http://rad-dom.ru/shortcodes-ultimate/) (Ru)
+* [Shortcodes Ultimate Plugin Review](http://kevindankowebdesign.com/shortcodes-ultimate-plugin-review/)
+* [Shortcodes Ultimate — плагин неограниченных возможностей](http://altacademic.ru/shortcodes-ultimate/) (Ru)
+* [Shortcodes Ultimate – Free Shortcode Plugin For WordPress](http://www.wordpress-masterclass.com/shortcodes-ultimate-free-shortcode-plugin-for-wordpress/)
+* [Shortcodes Ultimate – Newest Update Broke My Website](http://4spotmarketing.com/shortcodes-ultimate-stopped-working-and-the-update-broke-my-website/)
+* Video: [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
+* Video: [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
+* Video: [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
+
 = Demo video =
 [youtube http://www.youtube.com/watch?v=DR2c266yWEA]
-
-= More videos =
-* [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
-* [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
-* [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
 
 = Requirements =
 * WordPress 3.5+
@@ -62,6 +69,7 @@ Have a translation? [Contact me](http://gndev.info/feedback/)
 * Designmodo - [Flat UI Free icons](http://designmodo.com/)
 * Dave Gandy - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * James Smith - [Simple Slider jQuery plugin](http://loopj.com/jquery-simple-slider/)
+* Kevin Batdorf - [Liquid Slider jQuery plugin](http://liquidslider.com)
 
 
 == Installation ==
@@ -76,7 +84,7 @@ Activate plugin at "Plugins" administration page.
 
 == Upgrade Notice ==
 
-
+Upgrade normally
 
 
 == Screenshots ==
@@ -95,17 +103,22 @@ Activate plugin at "Plugins" administration page.
 
 == Changelog ==
 
-= 4.5.3 =
+= 4.6.0 =
+* Auto-save for shortcodes settings. Now you don't need to adjust it again and again
+* New premium add-on - [Extra Shortcodes](http://gndev.info/shortcodes-ultimate/extra/)
+* Minor UX improvements
+* New locale - VI
+* Fixed bug with tax_term IDs in [posts] shortcode, [forum topic](http://wordpress.org/support/topic/posts-tax_term-category-number)
+* Fixed bug with service title, [forum topic](http://wordpress.org/support/topic/service-shortcode-not-wrapping-properly-on-mobile-browser)
+* Fixed bug with animations names in shortcode generator, [forum topic](http://wordpress.org/support/topic/animations-2)
+
+= 4.5 =
 * Updated some examples
 * Removed import functions. Old versions of plugin (like 3.9.5) is not supported anymore
-
-= 4.5.2 =
 * Updated custom formatting filter
 * Updated Japanese translation
 * Added NL translation
 * Minor fixes
-
-= 4.5.0 =
 * Presets. Now you need to adjust the shortcodes only once
 * New WP filters for shortcodes attributes
 * New option for compatibility mode prefix
