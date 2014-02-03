@@ -517,14 +517,6 @@
 .su-generator-actions > .button { margin: 0 5px; }
 .su-generator-actions .button i { margin: 0 5px 0 -3px; }
 
-/* Compatibility for Visual Composer - http://wordpress.org/support/topic/compatible-with-visual-composer */
-body.su-generator-shown .mfp-bg { z-index: 1142; }
-body.su-generator-shown .mfp-wrap { z-index: 1143; }
-body.su-generator-shown .mfp-preloader { z-index: 1144; }
-body.su-generator-shown .mfp-content { z-index: 1145; }
-body.su-generator-shown button.mfp-close,
-body.su-generator-shown button.mfp-arrow { z-index: 1146; }
-
 .su-generator-presets { position: relative; }
 .su-generator-presets > .button { cursor: default; }
 .su-gp-popup {
@@ -598,3 +590,11 @@ body.su-generator-shown button.mfp-arrow { z-index: 1146; }
 	background: #f03;
 	color: #fff;
 }
+
+/* Compatibility for Visual Composer, Elegant Themes and SiteOrigin page builders */
+body.su-generator-priority-mode .mfp-bg { z-index: 90001 !important; }
+body.su-generator-priority-mode .mfp-wrap { z-index: 90002 !important; }
+body.su-generator-priority-mode .mfp-preloader { z-index: 90003 !important; }
+body.su-generator-priority-mode .mfp-content { z-index: 90004 !important; }
+body.su-generator-priority-mode button.mfp-close,
+body.su-generator-priority-mode button.mfp-arrow { z-index: 90005 !important; }

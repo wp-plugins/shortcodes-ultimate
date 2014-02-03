@@ -103,6 +103,11 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.6.1 =
+* Compatibility with recent version of [SiteOrigin page builder](http://wordpress.org/plugins/siteorigin-panels/)
+* Compatibility with recent version of [Visual Composer](http://vc.wpbakery.com/)
+* Compatibility with recent version of [Elegant Themes page builder](http://www.elegantthemes.com/gallery/elegant-builder/)
+
 = 4.6.0 =
 * Auto-save for shortcodes settings. Now you don't need to adjust it again and again
 * New premium add-on - [Extra Shortcodes](http://gndev.info/shortcodes-ultimate/extra/)

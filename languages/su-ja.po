@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Shortcodes Ultimate\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-01 17:50+0300\n"
-"PO-Revision-Date: 2013-11-22 18:42+0900\n"
+"PO-Revision-Date: 2014-01-29 13:44+0900\n"
 "Last-Translator: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "Language-Team: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -248,7 +248,7 @@ msgid "Cite url"
 msgstr "引用URL"
 
 msgid "Url of the quote author. Leave empty to disable link"
-msgstr "引用投稿者のURL。リンクを無効にする場合は空白にする"
+msgstr "引用投稿者のURL。リンクを無効にする場合は空白にします"
 
 msgid "Blockquote alternative"
 msgstr "代替Blockquote"
@@ -257,7 +257,7 @@ msgid "Pullquote"
 msgstr "Pullquote"
 
 msgid "Pullquote alignment (float)"
-msgstr "Pullquoteアライメント(フロート)"
+msgstr "Pullquoteアライメント (フロート)"
 
 msgid "Dropcap"
 msgstr "Dropcap"
@@ -284,7 +284,7 @@ msgid "Frame alignment"
 msgstr "フレームアライメント"
 
 msgid "Styled image frame"
-msgstr "イメージフレームスタイル"
+msgstr "画像フレームスタイル"
 
 msgid "Row"
 msgstr "行"
@@ -296,7 +296,7 @@ msgid "Row for flexible columns"
 msgstr "柔軟性のある列の行"
 
 msgid "Column"
-msgstr "コラム"
+msgstr "カラム"
 
 msgid "Full width"
 msgstr "全幅"
@@ -335,13 +335,13 @@ msgid "Five sixth"
 msgstr "5/6"
 
 msgid "Select column width. This width will be calculated depend page width"
-msgstr "列幅を選択。この幅はページ幅に依存して計算される"
+msgstr "列幅を選択。この幅はページ幅に依存して計算されます"
 
 msgid "Column content"
 msgstr "列の内容"
 
 msgid "Flexible and responsive columns"
-msgstr "列の柔軟性と応答性"
+msgstr "列の柔軟性とレスポンシブ"
 
 msgid "List"
 msgstr "リスト"
@@ -352,23 +352,8 @@ msgstr "星"
 msgid "Arrow"
 msgstr "矢印"
 
-msgid "Check"
-msgstr "チェック"
-
-msgid "Cross"
-msgstr "クロス"
-
-msgid "Thumbs up"
-msgstr "親指"
-
 msgid "Link"
 msgstr "リンク"
-
-msgid "Gear"
-msgstr "歯車"
-
-msgid "Time"
-msgstr "時間"
 
 msgid "Note"
 msgstr "ノート"
@@ -376,23 +361,8 @@ msgstr "ノート"
 msgid "Plus"
 msgstr "プラス"
 
-msgid "Guard"
-msgstr "ガード"
-
-msgid "Event"
-msgstr "エベント"
-
-msgid "Idea"
-msgstr "アイデア"
-
 msgid "Settings"
 msgstr "設定"
-
-msgid "Twitter"
-msgstr "Twitter"
-
-msgid "List items style/icons"
-msgstr "リストのスタイル/アイコン"
 
 msgid "<ul>\n<li>List item</li>\n<li>List item</li>\n<li>List item</li>\n</ul>"
 msgstr "<ul>\n<li>並び項目</li>\n<li>並び項目</li>\n<li>並び項目</li>\n</ul>"
@@ -443,7 +413,7 @@ msgid "Button background color"
 msgstr "ボタンの背景色"
 
 msgid "Button text color"
-msgstr "ボタンのテキストの色"
+msgstr "ボタンのテキスト色"
 
 msgid "Button size"
 msgstr "ボタンサイズ"
@@ -452,7 +422,7 @@ msgid "Fluid"
 msgstr "流体"
 
 msgid "Fluid buttons has 100% width"
-msgstr "流体ボタンが100%の幅を有する"
+msgstr "流体ボタンが100%の幅を有します"
 
 msgid "Centered"
 msgstr "中央"
@@ -472,12 +442,6 @@ msgstr "アイコン"
 msgid "You can upload custom icon for this button. Try to begin with <a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-quality icons</a>. Download archive, unpack icons and upload in this field"
 msgstr "このボタンのカスタムアイコンをアップロード可能。<a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">無料で高品質なアイコン</a>"
 
-msgid "Dark"
-msgstr "ダーク"
-
-msgid "Color of button text shadow"
-msgstr "ボタンのテキストの影の色"
-
 msgid "None"
 msgstr "なし"
 
@@ -487,32 +451,20 @@ msgstr "上"
 msgid "Bottom"
 msgstr "下"
 
-msgid "Top right"
-msgstr "右上"
-
-msgid "Top left"
-msgstr "左上"
-
-msgid "Bottom right"
-msgstr "右下"
-
-msgid "Bottom left"
-msgstr "左下"
-
 msgid "Text shadow position"
 msgstr "テキストの影の位置"
 
 msgid "Position of button text shadow"
-msgstr "ボタンのテキストの影の位置"
+msgstr "ボタンテキストの影の位置"
 
 msgid "Description"
 msgstr "説明"
 
 msgid "Small description under button text. This option is incompatible with icon."
-msgstr "ボタンの下の小さな説明。このオプションはアイコンと互換性がない"
+msgstr "ボタンの下の小さな説明。このオプションはアイコンと互換性がありません"
 
 msgid "Button text"
-msgstr "ボタンのテキスト"
+msgstr "ボタンテキスト"
 
 msgid "Styled button"
 msgstr "ボタンスタイル"
@@ -533,7 +485,7 @@ msgid "Icon size"
 msgstr "アイコンサイズ"
 
 msgid "Size of the uploaded icon in pixels"
-msgstr "アイコンサイズ(px単位)"
+msgstr "アイコンサイズ (px単位)"
 
 msgid "Service description"
 msgstr "サービスの説明"
@@ -542,25 +494,25 @@ msgid "Service box with title"
 msgstr "サービスボックスのタイトル"
 
 msgid "Box title"
-msgstr "ボックスのタイトル"
+msgstr "ボックスタイトル"
 
 msgid "Text for the box title"
 msgstr "ボックスタイトルのテキスト"
 
 msgid "Box style preset"
-msgstr "ボックススタイルプリセッ"
+msgstr "ボックススタイルプリセット"
 
 msgid "Color"
 msgstr "色"
 
 msgid "Color for the box title and borders"
-msgstr "ボックスのタイトルと枠線の色"
+msgstr "ボックスタイトルと枠線色"
 
 msgid "Title text color"
 msgstr "タイトルテキストの色"
 
 msgid "Color for the box title text"
-msgstr "ボックスのタイトルテキストの色"
+msgstr "ボックスタイトルのテキスト色"
 
 msgid "Box corners radius"
 msgstr "ボックスコーナー半径"
@@ -569,7 +521,7 @@ msgid "Box content"
 msgstr "ボックスの内容"
 
 msgid "Colored box with caption"
-msgstr "見出しのカラーボック"
+msgstr "カラーボックスの見出し"
 
 msgid "Note background color"
 msgstr "ノートの背景色"
@@ -578,7 +530,7 @@ msgid "Note text color"
 msgstr "ノートテキストの背景色"
 
 msgid "Note corners radius"
-msgstr "ノートテキストの色"
+msgstr "ノートテキスト色"
 
 msgid "Note text"
 msgstr "ノートテキスト"
@@ -608,7 +560,7 @@ msgid "Content source"
 msgstr "コンテンツソース"
 
 msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
-msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像コンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例:<br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTubeのビデオ (インラインフレーム)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされたイメージ (画像)<br /><b%value>http://example.com/</b> - 任意のWebページ (インラインフレーム)<br />#コンタクトフォーム - 任意のHTMLコンテンツ (インライン)"
+msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像コンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例: <br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTubeの動画 (インラインフレーム)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像<br /><b%value>http://example.com/</b> - 任意のWebページ (インラインフレーム)<br />#コンタクトフォーム - 任意のHTMLコンテンツ (インライン)"
 
 msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
 msgstr "[%prefix_button] ここをクリックして動画を再生 [/%prefix_button]"
@@ -620,22 +572,22 @@ msgid "Tooltip"
 msgstr "ツールチップ"
 
 msgid "Basic: Light"
-msgstr "基本：明るい"
+msgstr "基本:明るい"
 
 msgid "Basic: Dark"
-msgstr "基本:暗い"
+msgstr "基本: 暗い"
 
 msgid "Basic: Yellow"
-msgstr "基本:黄"
+msgstr "基本: 黄"
 
 msgid "Basic: Green"
-msgstr "基本:緑"
+msgstr "基本: 緑"
 
 msgid "Basic: Red"
-msgstr "基本:赤"
+msgstr "基本: 赤"
 
 msgid "Basic: Blue"
-msgstr "基本:青"
+msgstr "基本: 青"
 
 msgid "Youtube"
 msgstr "Youtube"
@@ -686,7 +638,7 @@ msgid "Tooltip title"
 msgstr "ツールチップタイトル"
 
 msgid "Enter title for tooltip window. Leave this field empty to hide the title"
-msgstr "ツールチップトウィンドウのタイトルを入力。タイトルを非表示にする場合は空白にする"
+msgstr "ツールチップトウィンドウのタイトルを入力。タイトルを非表示にする場合は空白にします"
 
 msgid "Tooltip text"
 msgstr "ツールチップテキスト"
@@ -695,13 +647,13 @@ msgid "Tooltip content"
 msgstr "ツールチップコンテンツ"
 
 msgid "Enter tooltip content here"
-msgstr "ここにツールチップのコンテンツを入力する"
+msgstr "ここにツールチップのコンテンツを入力します"
 
 msgid "Show and hide on mouse hover"
 msgstr "マウスホバーで表示と非表示"
 
 msgid "Show and hide by mouse click"
-msgstr "マウスクリックによって表示と非表示"
+msgstr "マウスクリックによって表示、非表示"
 
 msgid "Always visible"
 msgstr "常に表示"
@@ -722,7 +674,7 @@ msgid "[%prefix_button] Hover me to open tooltip [/%prefix_button]"
 msgstr "[%prefix_button] ボタンに表示する文字 [/%prefix_button]"
 
 msgid "Tooltip window with custom content"
-msgstr "カスタムコンテンツとウィンドウをツールチップ"
+msgstr "カスタムコンテンツとウィンドウのツールチップ"
 
 msgid "Private"
 msgstr "プライベート"
@@ -740,28 +692,28 @@ msgid "Url"
 msgstr "URL"
 
 msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
-msgstr "YouTubeページのURL 。例： http://youtube.com/watch?v=XXXXXX"
+msgstr "YouTubeページのURL。例: http://youtube.com/watch?v=XXXXXX"
 
 msgid "Width"
 msgstr "幅"
 
 msgid "Player width"
-msgstr "プレイヤー幅"
+msgstr "プレイヤーの幅"
 
 msgid "Player height"
 msgstr "プレイヤーの高さ"
 
 msgid "Responsive"
-msgstr "応答"
+msgstr "レスポンシブ"
 
 msgid "Ignore width and height parameters and make player responsive"
-msgstr "幅と高さのパラメータを無視してプレーヤーが応答"
+msgstr "幅と高さのパラメーターは無視され、プレーヤーはレスポンシブになります"
 
 msgid "Autoplay"
 msgstr "自動再生"
 
 msgid "Play video automatically when page is loaded"
-msgstr "ページがロードされたとき自動的にビデオを再生"
+msgstr "ページをロードしたとき自動的に動画を再生"
 
 msgid "YouTube video"
 msgstr "YouTube video"
@@ -770,19 +722,19 @@ msgid "Vimeo"
 msgstr "Vimeo"
 
 msgid "Url of Vimeo page with video"
-msgstr "ビデオによるVimeoページのURL"
+msgstr "VimeoのページURL"
 
 msgid "Vimeo video"
-msgstr "Vimeo video"
+msgstr ""
 
 msgid "Screenr"
-msgstr "Screenr"
+msgstr ""
 
 msgid "Url of Screenr page with video"
-msgstr "ビデオによるScreenrのページのURL"
+msgstr "動画によるScreenrのページのURL"
 
 msgid "Screenr video"
-msgstr "Screenr video"
+msgstr ""
 
 msgid "Audio"
 msgstr "オーディオ"
@@ -791,13 +743,13 @@ msgid "File"
 msgstr "ファイル"
 
 msgid "Audio file url. Supported formats: mp3, ogg"
-msgstr "音声ファイルのURL 。サポート形式：mp3, ogg"
+msgstr "音声ファイルのURL 。サポート形式:mp3, ogg"
 
 msgid "Player width. You can specify width in percents and player will be responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
-msgstr "プレイヤー幅。パーセントで幅を指定することができプレイヤーはレスポンシブになります。値の例:<b%value>200px</b>、<b%value>100%</b>"
+msgstr "プレイヤー幅。パーセントで幅を指定することができプレイヤーはレスポンシブになります。値の例: <b%value>200px</b>、<b%value>100%</b>"
 
 msgid "Play file automatically when page is loaded"
-msgstr "ページがロードされたとき自動的にファイルを再生"
+msgstr "ページをロードしたとき自動的にファイルを再生"
 
 msgid "Loop"
 msgstr "ループ"
@@ -809,16 +761,16 @@ msgid "Custom audio player"
 msgstr "カスタムオーディオプレーヤー"
 
 msgid "Video"
-msgstr "ビデオ"
+msgstr "動画"
 
 msgid "Url to mp4/flv video-file"
-msgstr "ビデオファイル mp4/flvへのURL"
+msgstr "動画ファイル mp4/flvのURL"
 
 msgid "Poster"
 msgstr "ポスター"
 
 msgid "Url to poster image, that will be shown before playback"
-msgstr "ポスター画像のURL。こは再生前に表示される"
+msgstr "ポスター画像のURL。こは再生前に表示されます"
 
 msgid "Player title"
 msgstr "プレイヤータイトル"
@@ -827,10 +779,10 @@ msgid "Controls"
 msgstr "コントロール"
 
 msgid "Show player controls (play/pause etc.) or not"
-msgstr "プレーヤーコントロール(再生/一時停止など)表示"
+msgstr "プレーヤーコントロール(再生/一時停止など)を表示"
 
 msgid "Custom video player"
-msgstr "カスタムビデオプレーヤー"
+msgstr "カスタム動画プレーヤー"
 
 msgid "Table"
 msgstr "テーブル"
@@ -839,7 +791,7 @@ msgid "CSV file"
 msgstr "CSVファイル"
 
 msgid "Upload CSV file if you want to create HTML-table from file"
-msgstr "ファイルからHTMLテーブルを作成する場合は、CSVファイルをアップロードする"
+msgstr "ファイルからHTMLテーブルを作成する場合は、CSVファイルをアップロードします"
 
 msgid "<table>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n</table>"
 msgstr "<Table>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n</Table>"
@@ -860,7 +812,7 @@ msgid "Link target. blank - link will be opened in new window/tab"
 msgstr "リンクターゲット。空白 - リンクは新しいウィンドウ/タブで開く"
 
 msgid "Permalink to specified post/page"
-msgstr "指定された投稿/ページへのパーマリンク"
+msgstr "指定された投稿/ページのパーマリンク"
 
 msgid "Members"
 msgstr "メンバー"
@@ -893,7 +845,7 @@ msgid "Login link url"
 msgstr "ログインリンクURL"
 
 msgid "Content for logged members"
-msgstr "ログイン会員向けコンテンツ"
+msgstr "ログインメンバー向けコンテンツ"
 
 msgid "Content for logged in members only"
 msgstr "ログインメンバーのみの内容"
@@ -911,16 +863,16 @@ msgid "RSS Feed"
 msgstr "RSSフィード"
 
 msgid "Url to RSS-feed"
-msgstr "RSSフィードへのURL"
+msgstr "RSSフィードのURL"
 
 msgid "Limit"
 msgstr "制限"
 
 msgid "Number of items to show"
-msgstr "表示する項目の数"
+msgstr "表示する項目数"
 
 msgid "Feed grabber"
-msgstr "フィードグラバー"
+msgstr ""
 
 msgid "Menu"
 msgstr "メニュー"
@@ -929,7 +881,7 @@ msgid "Menu name"
 msgstr "メニュー名"
 
 msgid "Custom menu name. Ex: Main menu"
-msgstr "カスタムメニュー名。例：メインメニュー"
+msgstr "カスタムメニュー名。例: メインメニュー"
 
 msgid "Custom menu by name"
 msgstr "名前によるカスタムメニュー"
@@ -947,7 +899,7 @@ msgid "Parent ID"
 msgstr "親ID"
 
 msgid "ID of the parent page. Leave blank to use current page"
-msgstr "親ページID。現在のページを使用する場合は空白にする"
+msgstr "親ページID。現在のページを使用する場合は空白にします"
 
 msgid "List of sub pages"
 msgstr "サブページのリスト"
@@ -974,7 +926,7 @@ msgid "Viewer height"
 msgstr "ビューアの高さ"
 
 msgid "Ignore width and height parameters and make viewer responsive"
-msgstr "幅と高さのパラメータを無視して視聴者に応答する"
+msgstr "幅と高さのパラメータを無視して視聴者にレスポンジブに表示します"
 
 msgid "Document viewer by Google"
 msgstr "Google ドキュメントビューア"
@@ -989,13 +941,13 @@ msgid "Map height"
 msgstr "地図の高さ"
 
 msgid "Ignore width and height parameters and make map responsive"
-msgstr "幅と高さのパラメータを無視して地図に応答する"
+msgstr "幅と高さのパラメータを無視して地図をレスポンジブに表示します"
 
 msgid "Marker"
 msgstr "マーカー"
 
 msgid "Address for the marker. You can type it in any language"
-msgstr "地図のアドレス。住所もしくは座標を入力する"
+msgstr "地図のアドレス。住所もしくは座標を入力します"
 
 msgid "Maps by Google"
 msgstr "Googleマップ"
@@ -1010,7 +962,7 @@ msgid "Slider height (in pixels)"
 msgstr "スライダーの高さ(px単位)"
 
 msgid "Ignore width and height parameters and make slider responsive"
-msgstr "幅と高さのパラメータを無視してスライダーに応答する"
+msgstr "幅と高さのパラメータを無視してスライダーをレスポンシブに表示します"
 
 msgid "Show titles"
 msgstr "タイトルを表示"
@@ -1040,7 +992,7 @@ msgid "Allow to change slides with mouse wheel"
 msgstr "マウスホイールでスライド可能"
 
 msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
-msgstr "スライドアニメーションの間隔を選択。自動再生を無効にするには0に設定"
+msgstr "スライドアニメーションの間隔を選択。自動再生を無効にする場合は0に設定"
 
 msgid "Speed"
 msgstr "スピード"
@@ -1058,13 +1010,13 @@ msgid "Carousel"
 msgstr "カルーセル"
 
 msgid "Carousel width (in pixels)"
-msgstr "カルーセルの幅(px単位)"
+msgstr "カルーセルの幅 (px単位)"
 
 msgid "Carousel height (in pixels)"
-msgstr "カルーセルの高さ(px単位)"
+msgstr "カルーセルの高さ (px単位)"
 
 msgid "Ignore width and height parameters and make carousel responsive"
-msgstr "幅と高さのパラメータを無視しカルーセルが応答する"
+msgstr "幅と高さのパラメータを無視しカルーセルをレスポンシブに表示します"
 
 msgid "Items to show"
 msgstr "表示するアイテム"
@@ -1088,16 +1040,16 @@ msgid "Allow to rotate carousel with mouse wheel"
 msgstr "マウスホイールでカルーセルを回転することを許可"
 
 msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
-msgstr "自動アニメーションの間隔を選択。自動再生を無効にするには0に設定"
+msgstr "自動アニメーションの間隔を選択。自動再生を無効にする場合は0に設定"
 
 msgid "Customizable image carousel"
 msgstr "カスタマイズ可能な画像カルーセル"
 
 msgid "Single item width (in pixels)"
-msgstr "単一アイテムの幅(px単位)"
+msgstr "単一アイテムの幅 (px単位)"
 
 msgid "Single item height (in pixels)"
-msgstr "単一の項目の高さ(px単位)"
+msgstr "単一の項目の高さ (px単位)"
 
 msgid "Never"
 msgstr "なし"
@@ -1112,7 +1064,7 @@ msgid "Title display mode"
 msgstr "タイトル表示モード"
 
 msgid "Customizable image gallery"
-msgstr "カスタマイズ可能なイメージギャラリー"
+msgstr "カスタマイズ可能な画像ギャラリー"
 
 msgid "Posts"
 msgstr "投稿"
@@ -1121,7 +1073,7 @@ msgid "Template"
 msgstr "テンプレート"
 
 msgid "<b>Do not change this field value if you do not understand description below.</b><br/>Relative path to the template file. Default templates is placed under the plugin directory (templates folder). You can copy it under your theme directory and modify as you want. You can use following default templates that already available in the plugin directory:<br/><b%value>templates/default-loop.php</b> - posts loop<br/><b%value>templates/teaser-loop.php</b> - posts loop with thumbnail and title<br/><b%value>templates/single-post.php</b> - single post template<br/><b%value>templates/list-loop.php</b> - unordered list with posts titles"
-msgstr "<b>以下の説明を理解していない場合は、このフィールドの値を変更しないでください。</b><br />テンプレート・ファイルへの相対パス。デフォルトのテンプレートはプラグインディレクトリの下に配置される。(テンプレートフォルダ)<br />テーマディレクトリの下にそれをコピーし、必要に応じて変更することができる。<br />プラグインディレクトリで既に利用可能であれば次のデフォルトのテンプレートが使用可能。<br /><b%value>templates/default-loop.php</b> - 投稿ループ<br /><b%value>templates/teaser-loop.php</b> - サムネイルとタイトルの記事ループ<br /><b%value>templates/single-post.php</b> - シングル投稿テンプレート<br /><b%value>templates/list-loop.php</b> - 順不同 記事のタイトルとリスト"
+msgstr "<b>以下の説明を理解していない場合は、このフィールドの値を変更しないでください。</b><br />テンプレートファイルへの相対パス。デフォルトのテンプレートはプラグインディレクトリの下に配置される。(テンプレートフォルダ)<br />テーマディレクトリの下にそれをコピーし、必要に応じて変更することができる。<br />プラグインディレクトリで既に利用可能であれば次のデフォルトのテンプレートが使用可能。<br /><b%value>templates/default-loop.php</b> - 投稿ループ<br /><b%value>templates/teaser-loop.php</b> - サムネイルとタイトルの記事ループ<br /><b%value>templates/single-post.php</b> - シングル投稿テンプレート<br /><b%value>templates/list-loop.php</b> - 順不同 記事のタイトルとリスト"
 
 msgid "Post ID's"
 msgstr "投稿ID"
@@ -1253,7 +1205,7 @@ msgid "Inherit"
 msgstr "継承"
 
 msgid "Trashed"
-msgstr "壊れた"
+msgstr "ゴミ箱に移動"
 
 msgid "Any"
 msgstr "任意"
@@ -1268,7 +1220,7 @@ msgid "Ignore sticky"
 msgstr "スティッキーを無視"
 
 msgid "Select Yes to ignore posts that is sticked"
-msgstr "貼られた記事を無視する場合は[はい]にする"
+msgstr "貼られた記事を無視する場合は[はい]にします"
 
 msgid "Custom posts query with customizable template"
 msgstr "カスタム投稿はカスタマイズ可能なテンプレートを使用して照会します。"
@@ -1297,9 +1249,6 @@ msgstr "ショートコードが指定されていません。"
 msgid "Live preview"
 msgstr "プレビュー"
 
-msgid "Close window"
-msgstr "ウィンドウを閉じる"
-
 msgid "Click to return to the shortcodes list"
 msgstr "ショートコードのリストに戻ります"
 
@@ -1314,12 +1263,6 @@ msgstr "いいえ"
 
 msgid "Max upload file size"
 msgstr "アップロードファイルの最大サイズ"
-
-msgid "Mb"
-msgstr "MB"
-
-msgid "How to increase"
-msgstr "増加方法"
 
 msgid "Please wait"
 msgstr "しばらくお待ちください"
@@ -1360,10 +1303,10 @@ msgid "Vladimir Anokhin"
 msgstr "Vladimir Anokhin"
 
 msgid "Supercharge your WordPress theme with mega pack of shortcodes"
-msgstr "ショートコードのメガ・パックで、あなたのWordPressテーマに過給します"
+msgstr "ショートコードのメガパックでWordPressテーマに過給します"
 
 msgid "Where to start?"
-msgstr "どこで開始？"
+msgstr "どこから始める？"
 
 msgid "Project homepage"
 msgstr "プロジェクトのホームページ"
@@ -1389,15 +1332,6 @@ msgstr "ドキュメンテーション記事"
 msgid "Enabled"
 msgstr "有効"
 
-msgid "Compatibility mode"
-msgstr "互換モード"
-
-msgid "Enable this option if you have some problems with other plugins that uses similar shortcode names"
-msgstr "同じようなショートコードを使用した他のプラグインと問題がある場合は、このオプションを有効にしてください。"
-
-msgid "etc."
-msgstr "等"
-
 msgid "Skip default values"
 msgstr "デフォルト値をスキップ"
 
@@ -1407,24 +1341,20 @@ msgstr "このオプションを有効にしてください。変更していな
 msgid "Skin"
 msgstr "スキン"
 
-#, php-format
-msgid "Choose skin for shortcodes.<br /><a href=\"%s\" target=\"_blank\">Learn how to create custom skin</a><br /><a href=\"%s\" target=\"_blank\"><b>Download more skins</b></a>"
-msgstr "ショートコードのスキンを選択してください。<br /><a href=\"%s\" target=\"_blank\">カスタムスキンの作成方法を学んでください。</a><br /><a href=\"%s\" target=\"_blank\"><b>スキンをダウンロード</b></a>"
-
 msgid "Custom CSS"
 msgstr "カスタムCSS"
 
 msgid "Hello, my name is Vladimir Anokhin, and I am developer of plugin <b>Shortcodes Ultimate</b>.<br>If you like this plugin, please write a few words about it at the wordpress.org or twitter. It will help other people find this useful plugin more quickly.<br><b>Thank you!</b>"
-msgstr "こんにちは、私の名前はVladimir Anokhin、私はプラグイン<b>Shortcodes Ultimate</b>の開発者がです。<br>もし良ければ、このプラグインをwordpress.orgやTwitterで話題にしてください。それは他の人がより迅速に、この便利なプラグインを見つけやすくなります。ありがとうございました！"
+msgstr "こんにちは、私の名前はVladimir Anokhin、私はプラグイン<b>Shortcodes Ultimate</b>の開発者です。<br>もし良ければ、このプラグインをwordpress.orgやTwitterで話題にしてください。それは他の人がより迅速に、この便利なプラグインを見つけやすくなります。ありがとうございました！"
 
 msgid "Rate plugin"
 msgstr "プラグインを評価"
 
 msgid "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
-msgstr "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
+msgstr ""
 
 msgid "Tweet"
-msgstr "Tweet"
+msgstr ""
 
 msgid "No, thanks"
 msgstr "何もしない"
@@ -1496,7 +1426,7 @@ msgid "How does it works"
 msgstr "仕組み"
 
 msgid "More videos"
-msgstr "その他のビデオ"
+msgstr "その他の動画"
 
 msgid "Shortcodes Ultimate Tutorial"
 msgstr "Shortcodes Ultimateのチュートリアル"
@@ -1508,7 +1438,7 @@ msgid "How to create Carousel"
 msgstr "カルーセルの作製方法"
 
 msgid "How to create image gallery"
-msgstr "イメージギャラリーの作製方法"
+msgstr "画像ギャラリーの作製方法"
 
 msgid "Save changes"
 msgstr "変更を保存"
@@ -1559,28 +1489,28 @@ msgid "Posts not found"
 msgstr "投稿が見つかりません。"
 
 msgid "Is this column centered on the page"
-msgstr "この列はページの中央に配置される"
+msgstr "この列はページの中央に配置されます"
 
 msgid "0 - Do not hide controls"
-msgstr "0 - コントロールを非表示にしないでください"
+msgstr "0 - コントロールを隠さない"
 
 msgid "0 - Hide controls"
-msgstr "0 - 非表示のコントロール"
+msgstr "0 - コントロールを隠す"
 
 msgid "1 - Hide all controls on mouse out"
-msgstr "1 - マウスの上のすべてのコントロールを隠す"
+msgstr "1 - マウスアウトですべてのコントロールを隠す"
 
 msgid "1 - Show controls"
-msgstr "1 - 表示コントロール"
+msgstr "1 - コントロールを表示"
 
 msgid "2 - Hide progress bar on mouse out"
-msgstr "2 - うちマウスのプログレスバーを隠す"
+msgstr "2 - マウスアウトでプログレスバーを隠す"
 
 msgid "2 - Show controls when playback is started"
-msgstr "2 - 再生が開始されたときに表示する制御を"
+msgstr "2 - 再生開始時にコントロールを表示"
 
 msgid "Abstract"
-msgstr "抽象的な"
+msgstr "抽象的"
 
 msgid "Accordions, spoilers, different styles, anchors"
 msgstr "アコーディオン、スポイラー、異なるスタイル、アンカー"
@@ -1607,13 +1537,13 @@ msgid "Animation delay (seconds)"
 msgstr "アニメーションの遅延 (秒)"
 
 msgid "Animation duration (seconds)"
-msgstr "アニメーション時間 (秒)"
+msgstr "アニメーションの時間 (秒)"
 
 msgid "Animations"
 msgstr "アニメーション"
 
 msgid "Arrow circle 2"
-msgstr "矢印サークル 2"
+msgstr "矢印円 2"
 
 msgid "Attachment page"
 msgstr "添付ファイルのページ"
@@ -1646,10 +1576,10 @@ msgid "Cache"
 msgstr "キャッシュ"
 
 msgid "Caret"
-msgstr "キャレット"
+msgstr "カーソル"
 
 msgid "Caret square"
-msgstr "キャレット広場"
+msgstr "正方形のカーソル"
 
 msgid "Category"
 msgstr "カテゴリ"
@@ -1664,7 +1594,7 @@ msgid "Chevron circle"
 msgstr "シェブロンサークル"
 
 msgid "Choose images source. You can use images from Media library or retrieve it from posts (thumbnails) posted under specified blog category. You can also pick any custom taxonomy"
-msgstr "画像ソースを選択します。メディアライブラリからの画像を使用したり、指定されたブログのカテゴリの下に投稿記事(サムネイル)からそれを取り出すことができます。また、任意のカスタム分類を選ぶことができます"
+msgstr "画像ソースを選択します。メディアライブラリからの画像を使用したり、指定されたブログのカテゴリの下に投稿記事(サムネイル)からそれを取り出すことができます。また、任意のカスタムタクソノミーを選ぶことができます"
 
 msgid "Choose style for this tabs"
 msgstr "このタブのスタイルを選択"
@@ -1688,10 +1618,10 @@ msgid "Dotted"
 msgstr "点線"
 
 msgid "Double"
-msgstr "ダブル"
+msgstr "二重"
 
 msgid "Duration"
-msgstr "期間"
+msgstr "持続期間"
 
 msgid "Examples"
 msgstr "例"
@@ -1730,10 +1660,10 @@ msgid "Icons for spoiler"
 msgstr "スポイラーのアイコン"
 
 msgid "If you set the parameter value to NO, then the player will not display information like the video title and uploader before the video starts playing."
-msgstr "'いいえ'にパラメータ値を設定した場合、プレイヤーは、ビデオの再生を開始する前にビデオのタイトルとアップローダーのような情報が表示されません。"
+msgstr "'いいえ'にパラメータ値を設定した場合、プレイヤーは動画の再生を開始する前に動画のタイトルとアップローダーのような情報が表示しません。"
 
 msgid "Image height"
-msgstr "像高"
+msgstr "画像の高さ"
 
 msgid "Image placeholder with random image"
 msgstr "ランダムな画像による画像プレースホールダー"
@@ -1751,10 +1681,10 @@ msgid "Learn more"
 msgstr "詳細はこちら"
 
 msgid "Light theme"
-msgstr "光テーマ"
+msgstr "明るいテーマ"
 
 msgid "Links"
-msgstr "リンクス"
+msgstr "リンク"
 
 msgid "Maker"
 msgstr "メーカー"
@@ -1763,7 +1693,7 @@ msgid "Margin"
 msgstr "マージン"
 
 msgid "Media elements, YouTube, Vimeo, Screenr and self-hosted videos, audio player"
-msgstr "メディア要素は、YouTube、Vimeo、ScreenRと自己ホスト型ビデオ、オーディオプレーヤー"
+msgstr "メディア要素、YouTube、Vimeo、ScreenR、自己ホスト型動画、オーディオプレーヤー"
 
 msgid "Media library"
 msgstr "メディアライブラリー"
@@ -1772,7 +1702,7 @@ msgid "Nature"
 msgstr "自然"
 
 msgid "Nested shortcodes, shortcodes inside of attributes"
-msgstr "入れ子になったショートコード、ショート コードの属性の内部"
+msgstr "入れ子になったショートコード、ショートコードの属性の内部"
 
 msgid "New window"
 msgstr "新しいウィンドウ"
@@ -1781,10 +1711,10 @@ msgid "Night life"
 msgstr "ナイトライフ"
 
 msgid "Original image"
-msgstr "原画像"
+msgstr "元画像"
 
 msgid "Other WordPress Plugins"
-msgstr "他のWordPressのプラグイン"
+msgstr "他のWordPressプラグイン"
 
 msgid "People"
 msgstr "人"
@@ -1802,10 +1732,10 @@ msgid "Plus circle"
 msgstr "プラスサークル"
 
 msgid "Plus square 1"
-msgstr "プラス広場 1"
+msgstr "プラスサークル 1"
 
 msgid "Plus square 2"
-msgstr "プラス広場 2"
+msgstr "プラスサークル 2"
 
 msgid "Post permalink"
 msgstr "投稿パーマリンク"
@@ -1841,16 +1771,16 @@ msgid "Select the theme for this image"
 msgstr "この画像のテーマを選択"
 
 msgid "Select which links will be used for images in this gallery"
-msgstr "リンクはこのギャラリーで画像に使用される選択"
+msgstr "このギャラリー内の画像のリンクを使用するか選択します。"
 
 msgid "Set of additional skins for Shrtcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes"
-msgstr "Shrtcodes Ultimateの他のスキンのセットです。Accordeons/スポイラー、タブ、およびいくつかの他のショートのためのスキンが含まれます。"
+msgstr "Shrtcodes Ultimateの他のスキンのセットです。アコーディオン/スポイラー、タブ、およびいくつかの他のショートのためのスキンが含まれます。"
 
 msgid "Setting of YES will cause the player to play the initial video again and again"
-msgstr "'はい'を設定するとプレイヤーは何度も最初のビデオを再生します。"
+msgstr "'はい'に設定するとプレイヤーは何度も最初の動画を再生します。"
 
 msgid "Setting this parameter to NO prevents the fullscreen button from displaying"
-msgstr "このパラメーターを'いいえ'に設定するとフルスクリーンのボタンを表示できなくなります。"
+msgstr "このパラメーターを'いいえ'に設定するとフルスクリーンのボタンを表示しません。"
 
 msgid "Shortcodes"
 msgstr "ショートコード"
@@ -1898,22 +1828,22 @@ msgid "This button is not clickable"
 msgstr "このボタンはクリックできません"
 
 msgid "This parameter determines what HTML tag will be used for animation wrapper. Turn this option to YES and animated element will be wrapped in SPAN instead of DIV. Useful for inline animations, like buttons"
-msgstr "このパラメーターは、どのような HTMLタグをアニメーション ラッパーに使用されますを決定します。'はい' にこのオプションをオンにし、インライン アニメーション、ボタンなどのアニメーション要素部役に立つのではなくスパンでラップされます。"
+msgstr "このパラメータは、HTMLタグがアニメーションラッパーに使用されるかを決定します。 'はい'でこのオプションをオンにするとアニメーションの要素ではなく、DIVのSPANでラップされます。インラインのアニメーションはボタンのように役立ちます。"
 
 msgid "This parameter indicates whether the embedded player will display player controls (like a play button or volume control) within a dark or light control bar"
-msgstr "このパラメーターは、埋め込み型プレーヤー プレーヤー コントロール (再生ボタンまたはボリューム コントロール)のような暗いまたは明るいコントロール バー内に表示するかを示す"
+msgstr "このパラメーターは、埋め込み型プレーヤーのプレーヤーコントロール (再生ボタンまたはボリューム コントロール) に暗いか明るいどちらのコントロールバーを表示するかを示します"
 
 msgid "This parameter indicates whether the player should show related videos when playback of the initial video ends"
-msgstr "このパラメータは、初期のビデオの再生が終了したときにプレイヤーが関連動画を表示するかどうかを示す"
+msgstr "このパラメータは、初期の動画の再生が終了したときにプレイヤーが関連動画を表示するかどうかを示します"
 
 msgid "This parameter indicates whether the video controls will automatically hide after a video begins playing"
-msgstr "このパラメータは、ビデオの再生が開始した後にビデオコントロールを自動的に非表示にするかどうかを示す"
+msgstr "このパラメータは、動画の再生が開始した後に動画コントロールを自動的に非表示にするかどうかを示します"
 
 msgid "This parameter indicates whether the video player controls will display"
-msgstr "このパラメータは、ビデオプレーヤーのコントロールが表示するかどうかを示す"
+msgstr "このパラメータは、動画プレーヤーのコントロールを表示するかどうかを示します"
 
 msgid "This parameter lets you use a YouTube player that does not show a YouTube logo. Set the parameter value to YES to prevent the YouTube logo from displaying in the control bar. Note that a small YouTube text label will still display in the upper-right corner of a paused video when the user's mouse pointer hovers over the player"
-msgstr "このパラメータを使用すると、YouTubeのロゴを表示しないYouTubeのプレーヤーを使用することができます。コントロールバーに表示からYouTubeのロゴを防ぐために、'はい'にパラメータ値を設定します。小さなYouTubeのテキストラベルがまだポーズビデオの右上隅に表示されることに注意したときにプレーヤーの上にユーザーのマウスポインタを示す"
+msgstr "このパラメータを使用すると、YouTubeのロゴを表示しないYouTubeプレーヤーを使用することができます。コントロールバーからYouTubeのロゴを非表示にするにはパラメータ値を'はい'に設定します。ユーザーのマウスポインタをプレイヤー上に置いたときに、小さなYouTubeのテキストラベルが動画の右上に表示されることに注意してください。"
 
 msgid "Transport"
 msgstr "トランスポート"
@@ -1922,7 +1852,7 @@ msgid "Unlimited buttons"
 msgstr "アンリミテッドボタン"
 
 msgid "Value is a comma-separated list of video IDs to play. If you specify a value, the first video that plays will be the VIDEO_ID specified in the URL path, and the videos specified in the playlist parameter will play thereafter"
-msgstr "再生するビデオIDのカンマ区切りリストの値です。値を指定した場合は、果たしていることを最初のビデオは、URLパスに指定VIDEO_IDとなり、プレイリストのパラメータで指定したビデオが、その後再生されます"
+msgstr "再生する動画IDのカンマ区切りリストの値です。値を指定した場合は、再生される最初の動画は、URLパスで指定されたVIDEO_IDとなり、プレイリストパラメータで指定された動画は、その後再生されます。"
 
 msgid "What"
 msgstr ""
@@ -1937,7 +1867,7 @@ msgid "YouTube Advanced"
 msgstr "高度なYouTube"
 
 msgid "YouTube video player with advanced settings"
-msgstr "YouTubeのビデオプレーヤーの高度な設定"
+msgstr "YouTubeの動画プレーヤーの高度な設定"
 
 msgid "Add-ons"
 msgstr "アドオン"
@@ -1970,7 +1900,7 @@ msgid "Dummy text"
 msgstr "ダミーテキスト"
 
 msgid "Example code does not found, please check it later"
-msgstr "サンプルコードが見つからない場合は、後でそれを確認してください"
+msgstr "サンプルコードが見つからない場合は、後で確認してください"
 
 msgid "Generated text will be cached. Be careful with this option. If you disable it and insert many dummy_text shortcodes the page load time will be highly increased"
 msgstr "生成されたテキストにキャッシュされます。このオプションに注意してください。それを無効にすると、多くのdummy_text ショートコードを挿入した場合、ページの読み込み時間は非常に増加します"
@@ -1982,7 +1912,7 @@ msgid "Open links in"
 msgstr "リンクを開く"
 
 msgid "option type %s is not callable"
-msgstr "オプションタイプ %sは呼び出すことはできません"
+msgstr "オプションタイプ %s は呼び出すことはできません"
 
 msgid "Paragraphs"
 msgstr "段落"
@@ -2018,7 +1948,7 @@ msgid "New preset"
 msgstr "新しいプリセット"
 
 msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
-msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像コンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube動画 (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像 (image)<br /><b%value>http://example.com/</b> - 任意のWebページ (iframe)<br /><b%value>#contact-form</b> - 任意のHTMLコンテンツ (inline)"
+msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像のコンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例: <br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube動画 (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像<br /><b%value>http://example.com/</b> - 任意のWebページ (iframe)<br /><b%value>#contact-form</b> - 任意のHTMLコンテンツ (inline)"
 
 msgid "Presets"
 msgstr "プリセット"
@@ -2037,3 +1967,267 @@ msgstr "この接頭辞は、このプラグインのすべてのショートコ
 
 msgid "Choose global skin for shortcodes"
 msgstr "ショートコードのグローバルスキンを選択してください"
+
+msgid "1 new add-on for Shortcodes Ultimate"
+msgstr "Shortcodes Ultimateの1つの新しいアドオン"
+
+msgid "4.6.0"
+msgstr "4.6.0"
+
+msgid "Activation key"
+msgstr "アクティベーションキー"
+
+msgid "Add images"
+msgstr "画像を追加"
+
+msgid "Add selected files"
+msgstr "選択したファイルを追加"
+
+msgid "Advanced JavaScript code for onClick action"
+msgstr "onClickアクションのための高度なJavaScriptコード"
+
+msgid "After"
+msgstr "後"
+
+msgid "Anchor"
+msgstr "アンカー"
+
+msgid "Auto"
+msgstr "自動"
+
+msgid "Before"
+msgstr "前"
+
+msgid "Blur"
+msgstr "ぼかし"
+
+msgid "Button text shadow"
+msgstr "ボタンのテキストの影"
+
+msgid "Choose file"
+msgstr "ファイルを選択してください"
+
+msgid "Choose files"
+msgstr "ファイルを選択"
+
+msgid "Comment count"
+msgstr "コメント数"
+
+msgid "Comment status"
+msgstr "コメントステータス"
+
+msgid "Data"
+msgstr "データ"
+
+msgid "Display name"
+msgstr "表示名"
+
+msgid "Email"
+msgstr "Eメール"
+
+msgid "Field"
+msgstr "フィールド"
+
+msgid "Filter"
+msgstr "フィルター"
+
+msgid "Filtered post content"
+msgstr "フィルタ処理後のコンテンツ"
+
+msgid "GUID"
+msgstr "GUID"
+
+msgid "Horizontal offset"
+msgstr "水平オフセット"
+
+msgid "http://gndev.info/"
+msgstr "http://gndev.info/"
+
+msgid "http://gndev.info/shortcodes-ultimate/"
+msgstr "http://gndev.info/shortcodes-ultimate/"
+
+msgid "Icon color"
+msgstr "アイコンの色"
+
+msgid "Icon picker"
+msgstr "アイコンピッカー"
+
+msgid "Key"
+msgstr "キー"
+
+msgid "Last used settings"
+msgstr "最後に使用した設定"
+
+msgid "Login"
+msgstr "ログイン"
+
+msgid "Media manager"
+msgstr "メディアマネージャ"
+
+msgid "Meta"
+msgstr "メタ"
+
+msgid "Meta key name"
+msgstr "Metaキー名"
+
+msgid "New Shortcodes"
+msgstr "新しいショートコード"
+
+msgid "Nice name"
+msgstr "素晴らしい名前"
+
+msgid "onClick"
+msgstr "onClick"
+
+msgid "Parallax sections, responsive content slider, pricing tables, vector icons, testimonials, progress bars and even more"
+msgstr "視差のセクション、レスポンジブコンテンツスライダー、価格表、ベクトルアイコン、紹介文、プログレスバー　更にもっと..."
+
+msgid "password field is not allowed"
+msgstr "パスワードフィールドは許可されていません"
+
+msgid "Ping status"
+msgstr "Pingのステータス"
+
+msgid "please specify meta key name"
+msgstr "メタキー名を指定してください"
+
+msgid "please specify template name"
+msgstr "テンプレート名を指定してください"
+
+msgid "Post content"
+msgstr "投稿コンテンツ"
+
+msgid "Post data"
+msgstr "投稿データ"
+
+msgid "Post data field name"
+msgstr "投稿データのフィールド名"
+
+msgid "Post date"
+msgstr "投稿日"
+
+msgid "Post excerpt"
+msgstr "投稿の抜粋"
+
+msgid "post ID is incorrect"
+msgstr "投稿IDが正しくありません。"
+
+msgid "Post meta"
+msgstr "投稿メタ"
+
+msgid "Post mime type"
+msgstr 投稿"MIMEタイプ"
+
+msgid "Post modified"
+msgstr "投稿修正"
+
+msgid "Post name"
+msgstr "投稿名"
+
+msgid "Post type"
+msgstr "投稿タイプ"
+
+msgid "Registered"
+msgstr "登録日"
+
+msgid "Round"
+msgstr "ラウンド"
+
+msgid "Status"
+msgstr "ステータス"
+
+msgid "Tab title"
+msgstr "タブのタイトル"
+
+msgid "Template name"
+msgstr "テンプレート名"
+
+msgid "Theme template"
+msgstr "テーマのテンプレート"
+
+msgid "This color will be applied to the selected icon. Does not works with uploaded icons"
+msgstr "この色は選択されたアイコンに適用されます。アップロードされたアイコンでは動作しません。"
+
+msgid "This content will be shown after the value"
+msgstr "このコンテンツは値の後に表示されます"
+
+msgid "This content will be shown before the value"
+msgstr "このコンテンツは値の前に表示されます"
+
+msgid "This text will be shown if data is not found"
+msgstr "データが見つからない場合、このテキストが表示されます"
+
+msgid "URL"
+msgstr "URL"
+
+msgid "Use template file name (with optional .php extension). If you need to use templates from theme sub-folder, use relative path. Example values: %s, %s, %s"
+msgstr "テンプレートファイル名を使用します。(オプション .phpの拡張子を持つ) テーマのサブフォルダからテンプレートを使用する必要がある場合は相対パスを使用します。値の例: %s, %s, %s"
+
+msgid "User"
+msgstr "ユーザー"
+
+msgid "User data"
+msgstr "ユーザーデータ"
+
+msgid "User data field name"
+msgstr "ユーザーデータフィールド名"
+
+msgid "User ID"
+msgstr "ユーザーID"
+
+msgid "user ID is incorrect"
+msgstr "ユーザーIDが正しくありません。"
+
+msgid "Vertical offset"
+msgstr "垂直オフセット"
+
+msgid "You can apply custom filter to the retrieved value. Enter here function name. Your function must accept one argument and return modified value. Example function: "
+msgstr "取得した値にカスタムフィルタを適用することができます。ここで関数名を入力してください。関数は1つの引数を受け入れて変更された値を返す必要があります。関数の例: "
+
+msgid "You can specify custom post ID. Leave this field empty to use an ID of the current post. Current post ID may not work in Live Preview mode"
+msgstr "カスタムの投稿IDを指定することができます。現在の投稿のIDを使用してこのフィールドを空にします。現在の投稿IDはライブプレビューモードでは動作しない場合があります"
+
+msgid "You can specify custom user ID. Leave this field empty to use an ID of the current user"
+msgstr "カスタムのユーザーIDを指定することができます。現在のユーザーIDを使用するようにこのフィールドを空にします"
+
+msgid "You can upload custom icon for this list or pick a built-in icon"
+msgstr "このリストのカスタムアイコンをアップロードするか、組み込みのアイコンを選ぶことができます"
+
+msgid "You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url"
+msgstr "ページのURL内のハッシュとそれにアクセスするには、このスポイラーに一意のアンカーを使用することができます。例えば: <b%value>こんにちは</b>をここに入力してhttp://example.com/page-urlのようなURLを使用します"
+
+msgid "You can use unique anchor for this tab to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url"
+msgstr "ページのURL内のハッシュとそれにアクセスするには、このタブに一意のアンカーを使用することができます。例えば: <b%value>こんにちは</b>をここに入力してhttp://example.com/page-urlのようなURLを使用します"
+
+msgid "<table>\n<tr>\n\\t<td>Table</td>\n\\t<td>Table</td>\n</tr>\n<tr>\n\\t<td>Table</td>\n\\t<td>Table</td>\n</tr>\n</table>"
+msgstr "<table>\n<tr>\n\\t<td>表</td>\n\\t<td>表</td>\n</tr>\n<tr>\n\\t<td>表</td>\n\\t<td>表</td>\n</tr>\n</table>"
+
+msgid "Insert"
+msgstr "挿入"
+
+msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>"
+msgstr "ここにURLやCSSセレクタを挿入します。iframe対応のURLと画像コンテンツタイプを使用しています。インラインコンテンツタイプのCSSセレクタを使用。値の例: <br /><b%value> http://www.youtube.com/watch?v=XXXXXXXXX<br /></b> - YouTubeの動画 (iframe)<br /><b%value> http://example.com/wp-content/uploads/image.jpg</b> - <b%value>http://example<br />アップロード画像 。<br /><b%value>http://example.com/</b> - 任意のウェブページ (iframe)<br /><b%value>"
+
+msgid "Maximum number of image source posts (for recent posts, category and custom taxonomy)"
+msgstr "画像ソース内の記事の最大数 (最近の投稿、カテゴリとカスタムタクソノミーのため)"
+
+msgid "Player width. You can specify width in percents and player will be responsive. Example values: <b%value>200px</b>, <b%value>100&"
+msgstr "プレイヤーの幅。パーセントで幅を指定することができ、プレーヤーがレスポンシブになります。値の例: <b%value>200px</b>、<b%value>100&"
+
+msgid "Post"
+msgstr "投稿"
+
+msgid "Set of additional skins for Shortcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes"
+msgstr "Shortcodes Ultimateのための追加のスキンのセット。アコーディオン/スポイラー、タブや他のいくつかのショートコードのスキンが含まれています"
+
+msgid "Shortcodes Ultimate - must have WordPress plugin "
+msgstr "Shortcodes Ultimate - WordPressのプラグインを持っている必要があります"
+
+msgid "Square"
+msgstr "正方形"
+
+msgid "Text shadow"
+msgstr "テキストの影"
+
+msgid "You can upload custom icon for this button or pick a built-in icon"
+msgstr "このボタンのカスタムアイコンをアップロードするか、組み込みのアイコンを選ぶことができます"

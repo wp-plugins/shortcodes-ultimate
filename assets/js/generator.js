@@ -18,6 +18,20 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		// Save the target
 		window.su_generator_target = $(this).data('target');
+		// Visual Composer
+		if ($('#wpb_visual_composer').is(':visible')) {
+			$('body').addClass('su-generator-priority-mode');
+			window.su_generator_target = 'wpb_tinymce_content';
+		}
+		// Elegant Themes page builder
+		else if ($('.et_pb_modal_settings_container').is(':visible')) {
+			$('body').addClass('su-generator-priority-mode');
+			window.su_generator_target = 'et_pb_content_new';
+		}
+		// SiteOrigin page builder
+		else if ($('.panels-admin-dialog').is(':visible')) {
+			$('body').addClass('su-generator-priority-mode');
+		}
 		// Get open shortcode
 		var shortcode = $(this).data('shortcode');
 		// Open magnificPopup
@@ -626,14 +640,6 @@ jQuery(document).ready(function ($) {
 	$('#su-generator').on('click', '.su-generator-insert', function (e) {
 		// Prepare data
 		var shortcode = parse();
-		if (typeof window.su_generator_target !== 'undefined' && window.su_generator_target !== 'content') {
-			// Prepare target
-			var $target = $('#' + window.su_generator_target);
-			// Insert into target
-			$target.val($target.val() + shortcode);
-		}
-		// Insert into editor
-		else window.wp.media.editor.insert(shortcode);
 		// Save current settings to presets
 		add_preset('last_used', su_generator.last_used);
 		// Close popup
@@ -642,6 +648,25 @@ jQuery(document).ready(function ($) {
 		$result.text(shortcode);
 		// Prevent default action
 		e.preventDefault();
+		// Save original activeeditor
+		window.su_wpActiveEditor = window.wpActiveEditor;
+		// Set new active editor
+		window.wpActiveEditor = window.su_generator_target;
+		// Insert shortcode
+		window.wp.media.editor.insert(shortcode);
+		// Restore previous editor
+		window.wpActiveEditor = window.su_wpActiveEditor;
+		// Check for target content editor
+		// if (typeof window.su_generator_target === 'undefined') return;
+		// Insert into default content editor
+		// else if (window.su_generator_target === 'content') window.wp.media.editor.insert(shortcode);
+		// Insert into ET page builder (text box)
+		// else if (window.su_generator_target === 'et_pb_content_new') window.wp.media.editor.insert(shortcode);
+		// Insert into textarea
+		// else {
+		// var $target = $('textarea#' + window.su_generator_target);
+		// if ($target.length > 0) $target.val($target.val() + shortcode);
+		// }
 	});
 
 	// Preview shortcode
