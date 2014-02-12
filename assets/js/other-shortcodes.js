@@ -1,5 +1,8 @@
 jQuery(document).ready(function ($) {
 
+	// Check for jQuery version
+	// if (parseInt(jQuery.fn.jquery.replace('.', '')) < 170) alert('Shortcodes Ultimate: Your theme uses an outdated version of jQuery. Some shortcodes may not work properly. Required version - 1.7.0');
+
 	// Spoiler
 	$('body:not(.su-other-shortcodes-loaded)').on('click', '.su-spoiler-title', function (e) {
 		var $title = $(this),

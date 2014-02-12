@@ -30,8 +30,11 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Special widget
 * Rich API
 
-= What people are saying (reviews) =
+= What people are saying (blog posts/tutorials) =
 * [40+ Reasons Shortcodes Ultimate Is A Must Have Plugin](http://www.the-best-web-hosting-service.com/blog/2014/01/ultimateshortcodesreview/)
+* [Show Me the Shortcode](http://thewpchick.com/show-shortcode/) + Video
+* [Shortcodes Ultimate: Ultimatize your written content](http://wisdmlabs.com/blog/how-to-style-wordpress-themes-with-shortcodes-ultimate/)
+* [Add 40+ New Layout Features To WordPress with Shortcodes Ultimate](http://www.makeuseof.com/tag/add-40-new-layout-features-wordpress-shortcodes-ultimate/)
 * [Обзор плагина Shortcodes Ultimate](http://rad-dom.ru/shortcodes-ultimate/) (Ru)
 * [Shortcodes Ultimate Plugin Review](http://kevindankowebdesign.com/shortcodes-ultimate-plugin-review/)
 * [Shortcodes Ultimate — плагин неограниченных возможностей](http://altacademic.ru/shortcodes-ultimate/) (Ru)
@@ -103,8 +106,15 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.6.2 =
+* Font-Awesome is now loaded from bootstrap CDN. [Technical details](http://stackoverflow.com/questions/20032426/fontawesome-doesnt-display-in-firefox).
+* New review - [Shortcodes Ultimate: Ultimatize your written content](http://wisdmlabs.com/blog/how-to-style-wordpress-themes-with-shortcodes-ultimate/)
+* New review - [Add 40+ New Layout Features To WordPress with Shortcodes Ultimate](http://www.makeuseof.com/tag/add-40-new-layout-features-wordpress-shortcodes-ultimate/)
+* New review - [Show Me the Shortcode](http://thewpchick.com/show-shortcode/) + Video
+* Updated readme.txt
+
 = 4.6.1 =
-* Compatibility with recent version of [SiteOrigin page builder](http://wordpress.org/plugins/siteorigin-panels/)
+* Compatibility with recent version of [SiteOrigin page builder](siteorigin.com/page-builder/) - it's free!
 * Compatibility with recent version of [Visual Composer](http://vc.wpbakery.com/)
 * Compatibility with recent version of [Elegant Themes page builder](http://www.elegantthemes.com/gallery/elegant-builder/)
 
