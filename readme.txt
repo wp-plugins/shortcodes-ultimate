@@ -106,6 +106,11 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.6.3 =
+* Updated settings pages capabilities
+* Added some hooks
+* Updated .pot file
+
 = 4.6.2 =
 * Font-Awesome is now loaded from bootstrap CDN. [Technical details](http://stackoverflow.com/questions/20032426/fontawesome-doesnt-display-in-firefox).
 * New review - [Shortcodes Ultimate: Ultimatize your written content](http://wisdmlabs.com/blog/how-to-style-wordpress-themes-with-shortcodes-ultimate/)

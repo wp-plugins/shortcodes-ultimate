@@ -29,7 +29,7 @@ class Shortcodes_Ultimate {
 		$admin->add_menu( array(
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => apply_filters( 'su/menu/shortcodes', __( 'Shortcodes', 'su' ) ),
-				'capability'  => 'edit_others_posts',
+				'capability'  => 'manage_options',
 				'slug'        => 'shortcodes-ultimate',
 				'icon_url'    => plugins_url( 'assets/images/icon.png', SU_PLUGIN_FILE ),
 				'position'    => '80.11',
@@ -103,7 +103,7 @@ class Shortcodes_Ultimate {
 				'parent_slug' => 'shortcodes-ultimate',
 				'page_title'  => __( 'Settings', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
 				'menu_title'  => apply_filters( 'su/menu/settings', __( 'Settings', 'su' ) ),
-				'capability'  => 'edit_others_posts',
+				'capability'  => 'manage_options',
 				'slug'        => 'shortcodes-ultimate',
 				'options'     => array()
 			) );

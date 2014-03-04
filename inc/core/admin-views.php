@@ -69,6 +69,7 @@ class Su_Admin_Views {
 			<a href="<?php echo su_skin_url( 'players-shortcodes.css' ); ?>">players-shortcodes.css</a>
 			<a href="<?php echo su_skin_url( 'other-shortcodes.css' ); ?>">other-shortcodes.css</a>
 		</div>
+		<?php do_action( 'su/admin/css/originals/after' ); ?>
 	</div>
 	<div class="su-custom-css-vars">
 		<p><strong><?php _e( 'You can use next variables in your custom CSS', $config['textdomain'] ); ?></strong></p>
