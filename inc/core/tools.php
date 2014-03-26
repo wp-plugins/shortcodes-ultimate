@@ -589,6 +589,12 @@ class Su_Tools {
 		add_action( 'su/update',                  array( __CLASS__, 'reset_examples' ) );
 		add_action( 'su/activation',              array( __CLASS__, 'reset_examples' ) );
 		add_action( 'sunrise/page/before',        array( __CLASS__, 'reset_examples' ) );
+
+		add_filter( 'attachment_fields_to_edit',  array( __CLASS__, 'slide_link_input' ), null, 2 );
+		add_filter( 'attachment_fields_to_save',  array( __CLASS__, 'slide_link_save' ), null, 2 );
+
+		add_action( 'load-users.php',             array( __CLASS__, 'reset_users_cache' ) );
+		add_action( 'load-user-edit.php',         array( __CLASS__, 'reset_users_cache' ) );
 	}
 
 	public static function select( $args ) {
@@ -652,9 +658,22 @@ class Su_Tools {
 	}
 
 	public static function get_users() {
-		$users = array();
-		foreach ( (array) get_users() as $user ) $users[$user->ID] = $user->data->display_name;
-		return $users;
+		// Get data from cache
+		if ( SU_ENABLE_CACHE ) $users = get_transient( 'su/users_cache' );
+		// Query users
+		if ( !$users ) $users = get_users();
+		// Cache results
+		set_transient( 'su/users_cache', $users );
+		// Prepare data array
+		$data = array();
+		// Loop through users
+		foreach ( $users as $user ) $data[$user->data->ID] = $user->data->display_name;
+		// Return data
+		return $data;
+	}
+
+	public static function reset_users_cache() {
+		if ( $_GET['update'] === 'del' || $_GET['update'] === 'add' || $_GET['updated'] === '1' ) delete_transient( 'su/users_cache' );
 	}
 
 	public static function get_taxonomies() {
@@ -666,8 +685,8 @@ class Su_Tools {
 	public static function get_terms( $tax = 'category', $key = 'id' ) {
 		$terms = array();
 		if ( $key === 'id' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
-		elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
-		return $terms;
+			elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
+				return $terms;
 	}
 
 	public static function get_slides( $args ) {
@@ -729,7 +748,6 @@ class Su_Tools {
 		}
 		// Query posts
 		$query = new WP_Query( $query );
-		// print_r($query);
 		// Loop through posts
 		if ( is_array( $query->posts ) ) foreach ( $query->posts as $post ) {
 				// Get post thumbnail ID
@@ -741,7 +759,8 @@ class Su_Tools {
 					'link'  => '',
 					'title' => get_the_title( $post->ID )
 				);
-				if ( $args['link'] === 'image' ) $slide['link'] = $slide['image'];
+				if ( $args['link'] === 'image' || $args['link'] === 'lightbox' ) $slide['link'] = $slide['image'];
+				elseif ( $args['link'] === 'custom' ) $slide['link'] = get_post_meta( $post->ID, 'su_slide_link', true );
 				elseif ( $args['link'] === 'post' ) $slide['link'] = get_permalink( $post->ID );
 				elseif ( $args['link'] === 'attachment' ) $slide['link'] = get_attachment_link( $thumb );
 				$slides[] = $slide;
@@ -865,6 +884,22 @@ class Su_Tools {
 
 	public static function access_check() {
 		return current_user_can( 'edit_posts' );
+	}
+
+	public static function slide_link_input( $form_fields, $post ) {
+		$form_fields['su_slide_link'] = array(
+			'label' => __( 'Slide link', 'su' ),
+			'input' => 'text',
+			'value' => get_post_meta( $post->ID, 'su_slide_link', true ),
+			'helps' => sprintf( '<strong>%s</strong><br>%s', __( 'Shortcodes Ultimate', 'su' ), __( 'Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes', 'su' ) )
+		);
+		return $form_fields;
+	}
+
+	public static function slide_link_save( $post, $attachment ) {
+		if ( isset( $attachment['su_slide_link'] ) )
+			update_post_meta( $post['ID'], 'su_slide_link', $attachment['su_slide_link'] );
+		return $post;
 	}
 }
 

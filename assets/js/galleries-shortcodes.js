@@ -60,4 +60,28 @@ jQuery(document).ready(function ($) {
 			$swiper.swipePrev();
 		});
 	});
+	// Lightbox for galleries (slider, carousel, custom_gallery)
+	$('.su-lightbox-gallery').each(function () {
+		$(this).magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			mainClass: 'mfp-img-mobile',
+			gallery: {
+				enabled: true,
+				navigateByImgClick: true,
+				preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+				tPrev: su_magnific_popup.prev,
+				tNext: su_magnific_popup.next,
+				tCounter: su_magnific_popup.counter
+			},
+			image: {
+				tError: su_magnific_popup.error,
+				titleSrc: function (item) {
+					return item.el.children('img').attr('alt');
+				}
+			},
+			tClose: su_magnific_popup.close,
+			tLoading: su_magnific_popup.loading
+		});
+	});
 });

@@ -305,7 +305,7 @@ jQuery(document).ready(function ($) {
 					$add_media.click(function (e) {
 						e.preventDefault();
 						if (typeof (frame) !== 'undefined') frame.close();
-						frame = wp.media.frames.customHeader = wp.media({
+						frame = wp.media.frames.su_media_frame_1 = wp.media({
 							title: su_generator.isp_media_title,
 							library: {
 								type: 'image'
@@ -322,8 +322,7 @@ jQuery(document).ready(function ($) {
 								$images.append('<span data-id="' + this.id + '" title="' + this.title + '"><img src="' + this.url + '" alt="" /><i class="fa fa-times"></i></span>');
 							});
 							update();
-						});
-						frame.open();
+						}).open();
 					});
 					// Sort images
 					$images.sortable({
@@ -383,7 +382,7 @@ jQuery(document).ready(function ($) {
 						// If the frame already exists, reopen it
 						if (typeof (file) !== 'undefined') file.close();
 						// Create WP media frame.
-						file = wp.media.frames.customHeader = wp.media({
+						file = wp.media.frames.su_media_frame_2 = wp.media({
 							// Title of media manager frame
 							title: su_generator.upload_title,
 							button: {

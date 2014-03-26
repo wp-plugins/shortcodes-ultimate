@@ -60,7 +60,20 @@ jQuery(document).ready(function ($) {
 			else {
 				var type = $(this).data('mfp-type');
 				$(this).magnificPopup({
-					type: type
+					type: type,
+					tClose: su_magnific_popup.close,
+					tLoading: su_magnific_popup.loading,
+					gallery: {
+						tPrev: su_magnific_popup.prev,
+						tNext: su_magnific_popup.next,
+						tCounter: su_magnific_popup.counter
+					},
+					image: {
+						tError: su_magnific_popup.error
+					},
+					ajax: {
+						tError: su_magnific_popup.error
+					}
 				}).magnificPopup('open');
 			}
 		});

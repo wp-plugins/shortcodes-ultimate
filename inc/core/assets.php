@@ -50,7 +50,7 @@ class Su_Assets {
 		wp_register_style( 'owl-carousel', plugins_url( 'assets/css/owl-carousel.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
 		wp_register_style( 'owl-carousel-transitions', plugins_url( 'assets/css/owl-carousel-transitions.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
 		// Font Awesome
-		wp_register_style( 'font-awesome', 'http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', false, '4.0.3', 'all' );
+		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', false, '4.0.3', 'all' );
 		// Animate.css
 		wp_register_style( 'animate', plugins_url( 'assets/css/animate.css', SU_PLUGIN_FILE ), false, '1.0.0', 'all' );
 		// InView
@@ -63,6 +63,14 @@ class Su_Assets {
 		// Magnific Popup
 		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', SU_PLUGIN_FILE ), false, '0.9.7', 'all' );
 		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', SU_PLUGIN_FILE ), array( 'jquery' ), '0.9.7', true );
+		wp_localize_script( 'magnific-popup', 'su_magnific_popup', array(
+				'close'   => __( 'Close (Esc)', 'su' ),
+				'loading' => __( 'Loading...', 'su' ),
+				'prev'    => __( 'Previous (Left arrow key)', 'su' ),
+				'next'    => __( 'Next (Right arrow key)', 'su' ),
+				'counter' => sprintf( __( '%s of %s', 'su' ), '%curr%', '%total%' ),
+				'error'   => sprintf( __( 'Failed to load this link. %sOpen link%s.', 'su' ), '<a href="%url%" target="_blank"><u>', '</u></a>' )
+			) );
 		// Ace
 		wp_register_script( 'ace', plugins_url( 'assets/js/ace/ace.js', SU_PLUGIN_FILE ), false, '1.1.01', true );
 		// Swiper

@@ -906,6 +906,8 @@ class Su_Shortcodes {
 			$mousewheel = ( $atts['mousewheel'] === 'yes' ) ? 'true' : 'false';
 			// Prepare width and height
 			$size = ( $atts['responsive'] === 'yes' ) ? 'width:100%' : 'width:' . intval( $atts['width'] ) . 'px;height:' . intval( $atts['height'] ) . 'px';
+			// Add lightbox class
+			if ( $atts['link'] === 'lightbox' ) $atts['class'] .= ' su-lightbox-gallery';
 			// Open slider
 			$return .= '<div id="' . $id . '" class="su-slider' . $centered . ' su-slider-pages-' . $atts['pages'] . ' su-slider-responsive-' . $atts['responsive'] . su_ecssc( $atts ) . '" style="' . $size . '" data-autoplay="' . $atts['autoplay'] . '" data-speed="' . $atts['speed'] . '" data-mousewheel="' . $mousewheel . '"><div class="su-slider-slides">';
 			// Create slides
@@ -936,6 +938,11 @@ class Su_Shortcodes {
 			$return .= '</div>';
 			// Close slider
 			$return .= '</div>';
+			// Add lightbox assets
+			if ( $atts['link'] === 'lightbox' ) {
+				su_query_asset( 'css', 'magnific-popup' );
+				su_query_asset( 'js', 'magnific-popup' );
+			}
 			su_query_asset( 'css', 'su-galleries-shortcodes' );
 			su_query_asset( 'js', 'jquery' );
 			su_query_asset( 'js', 'swiper' );
@@ -982,6 +989,8 @@ class Su_Shortcodes {
 			$mousewheel = ( $atts['mousewheel'] === 'yes' ) ? 'true' : 'false';
 			// Prepare width and height
 			$size = ( $atts['responsive'] === 'yes' ) ? 'width:100%' : 'width:' . intval( $atts['width'] ) . 'px;height:' . intval( $atts['height'] ) . 'px';
+			// Add lightbox class
+			if ( $atts['link'] === 'lightbox' ) $atts['class'] .= ' su-lightbox-gallery';
 			// Open slider
 			$return .= '<div id="' . $id . '" class="su-carousel' . $centered . ' su-carousel-pages-' . $atts['pages'] . ' su-carousel-responsive-' . $atts['responsive'] . su_ecssc( $atts ) . '" style="' . $size . '" data-autoplay="' . $atts['autoplay'] . '" data-speed="' . $atts['speed'] . '" data-mousewheel="' . $mousewheel . '" data-items="' . $atts['items'] . '" data-scroll="' . $atts['scroll'] . '"><div class="su-carousel-slides">';
 			// Create slides
@@ -1012,6 +1021,11 @@ class Su_Shortcodes {
 			$return .= '</div>';
 			// Close slider
 			$return .= '</div>';
+			// Add lightbox assets
+			if ( $atts['link'] === 'lightbox' ) {
+				su_query_asset( 'css', 'magnific-popup' );
+				su_query_asset( 'js', 'magnific-popup' );
+			}
 			su_query_asset( 'css', 'su-galleries-shortcodes' );
 			su_query_asset( 'js', 'jquery' );
 			su_query_asset( 'js', 'swiper' );
@@ -1040,6 +1054,8 @@ class Su_Shortcodes {
 		if ( count( $slides ) ) {
 			// Prepare links target
 			$atts['target'] = ( $atts['target'] === 'yes' || $atts['target'] === 'blank' ) ? ' target="_blank"' : '';
+			// Add lightbox class
+			if ( $atts['link'] === 'lightbox' ) $atts['class'] .= ' su-lightbox-gallery';
 			// Open gallery
 			$return = '<div class="su-custom-gallery su-custom-gallery-title-' . $atts['title'] . su_ecssc( $atts ) . '">';
 			// Create slides
@@ -1061,6 +1077,13 @@ class Su_Shortcodes {
 			$return .= '<div class="su-clear"></div>';
 			// Close gallery
 			$return .= '</div>';
+			// Add lightbox assets
+			if ( $atts['link'] === 'lightbox' ) {
+				su_query_asset( 'css', 'magnific-popup' );
+				su_query_asset( 'js', 'jquery' );
+				su_query_asset( 'js', 'magnific-popup' );
+				su_query_asset( 'js', 'su-galleries-shortcodes' );
+			}
 			su_query_asset( 'css', 'su-galleries-shortcodes' );
 		}
 		// Slides not found

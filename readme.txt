@@ -106,24 +106,13 @@ Upgrade normally
 
 == Changelog ==
 
-= 4.6.3 =
-* Updated settings pages capabilities
-* Added some hooks
-* Updated .pot file
+= 4.7.0 =
+* Long-awaited feature: slider, carousel and custom_gallery links can now be open with lightbox
+* Long-awaited feature: custom links in slider, carousel and custom_gallery shortcodes
+* Fixed https bug in FontAwesome enqueue
+* Fixed bug with multiple users queries - [forum topic](http://wordpress.org/support/topic/plugin-making-700-sql-calls)
 
-= 4.6.2 =
-* Font-Awesome is now loaded from bootstrap CDN. [Technical details](http://stackoverflow.com/questions/20032426/fontawesome-doesnt-display-in-firefox).
-* New review - [Shortcodes Ultimate: Ultimatize your written content](http://wisdmlabs.com/blog/how-to-style-wordpress-themes-with-shortcodes-ultimate/)
-* New review - [Add 40+ New Layout Features To WordPress with Shortcodes Ultimate](http://www.makeuseof.com/tag/add-40-new-layout-features-wordpress-shortcodes-ultimate/)
-* New review - [Show Me the Shortcode](http://thewpchick.com/show-shortcode/) + Video
-* Updated readme.txt
-
-= 4.6.1 =
-* Compatibility with recent version of [SiteOrigin page builder](siteorigin.com/page-builder/) - it's free!
-* Compatibility with recent version of [Visual Composer](http://vc.wpbakery.com/)
-* Compatibility with recent version of [Elegant Themes page builder](http://www.elegantthemes.com/gallery/elegant-builder/)
-
-= 4.6.0 =
+= 4.6 =
 * Auto-save for shortcodes settings. Now you don't need to adjust it again and again
 * New premium add-on - [Extra Shortcodes](http://gndev.info/shortcodes-ultimate/extra/)
 * Minor UX improvements
@@ -131,6 +120,17 @@ Upgrade normally
 * Fixed bug with tax_term IDs in [posts] shortcode, [forum topic](http://wordpress.org/support/topic/posts-tax_term-category-number)
 * Fixed bug with service title, [forum topic](http://wordpress.org/support/topic/service-shortcode-not-wrapping-properly-on-mobile-browser)
 * Fixed bug with animations names in shortcode generator, [forum topic](http://wordpress.org/support/topic/animations-2)
+* Updated settings pages capabilities
+* Added some hooks
+* Updated .pot file
+* Font-Awesome is now loaded from bootstrap CDN. [Technical details](http://stackoverflow.com/questions/20032426/fontawesome-doesnt-display-in-firefox).
+* New review - [Shortcodes Ultimate: Ultimatize your written content](http://wisdmlabs.com/blog/how-to-style-wordpress-themes-with-shortcodes-ultimate/)
+* New review - [Add 40+ New Layout Features To WordPress with Shortcodes Ultimate](http://www.makeuseof.com/tag/add-40-new-layout-features-wordpress-shortcodes-ultimate/)
+* New review - [Show Me the Shortcode](http://thewpchick.com/show-shortcode/) + Video
+* Updated readme.txt
+* Compatibility with recent version of [SiteOrigin page builder](siteorigin.com/page-builder/) - it's free!
+* Compatibility with recent version of [Visual Composer](http://vc.wpbakery.com/)
+* Compatibility with recent version of [Elegant Themes page builder](http://www.elegantthemes.com/gallery/elegant-builder/)
 
 = 4.5 =
 * Updated some examples

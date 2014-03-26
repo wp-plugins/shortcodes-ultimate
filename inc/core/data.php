@@ -1740,6 +1740,8 @@ class Su_Data {
 							'values' => array(
 								'none'       => __( 'None', 'su' ),
 								'image'      => __( 'Full-size image', 'su' ),
+								'lightbox'   => __( 'Lightbox', 'su' ),
+								'custom'     => __( 'Slide link (added in media editor)', 'su' ),
 								'attachment' => __( 'Attachment page', 'su' ),
 								'post'       => __( 'Post permalink', 'su' )
 							),
@@ -1856,7 +1858,9 @@ class Su_Data {
 							'type' => 'select',
 							'values' => array(
 								'none'       => __( 'None', 'su' ),
-								'image'      => __( 'Original image', 'su' ),
+								'image'      => __( 'Full-size image', 'su' ),
+								'lightbox'   => __( 'Lightbox', 'su' ),
+								'custom'     => __( 'Slide link (added in media editor)', 'su' ),
 								'attachment' => __( 'Attachment page', 'su' ),
 								'post'       => __( 'Post permalink', 'su' )
 							),
@@ -1992,7 +1996,9 @@ class Su_Data {
 							'type' => 'select',
 							'values' => array(
 								'none'       => __( 'None', 'su' ),
-								'image'      => __( 'Original image', 'su' ),
+								'image'      => __( 'Full-size image', 'su' ),
+								'lightbox'   => __( 'Lightbox', 'su' ),
+								'custom'     => __( 'Slide link (added in media editor)', 'su' ),
 								'attachment' => __( 'Attachment page', 'su' ),
 								'post'       => __( 'Post permalink', 'su' )
 							),
