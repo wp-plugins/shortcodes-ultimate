@@ -216,6 +216,7 @@ class Su_Data {
 					),
 					'content' => __( "[%prefix_tab title=\"Title 1\"]Content 1[/%prefix_tab]\n[%prefix_tab title=\"Title 2\"]Content 2[/%prefix_tab]\n[%prefix_tab title=\"Title 3\"]Content 3[/%prefix_tab]", 'su' ),
 					'desc' => __( 'Tabs container', 'su' ),
+					'example' => 'tabs',
 					'icon' => 'list-alt'
 				),
 				// tab
@@ -248,6 +249,7 @@ class Su_Data {
 					),
 					'content' => __( 'Tab content', 'su' ),
 					'desc' => __( 'Single tab', 'su' ),
+					'example' => 'tabs',
 					'icon' => 'list-alt'
 				),
 				// spoiler
@@ -311,6 +313,8 @@ class Su_Data {
 					),
 					'content' => __( 'Hidden content', 'su' ),
 					'desc' => __( 'Spoiler with hidden content', 'su' ),
+					'note' => __( 'Did you know that you can wrap multiple spoilers with [accordion] shortcode to create accordion effect?', 'su' ),
+					'example' => 'spoilers',
 					'icon' => 'list-ul'
 				),
 				// accordion
@@ -327,6 +331,8 @@ class Su_Data {
 					),
 					'content' => __( "[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]\n[%prefix_spoiler]Content[/%prefix_spoiler]", 'su' ),
 					'desc' => __( 'Accordion with spoilers', 'su' ),
+					'note' => __( 'Did you know that you can wrap multiple spoilers with [accordion] shortcode to create accordion effect?', 'su' ),
+					'example' => 'spoilers',
 					'icon' => 'list'
 				),
 				// divider
@@ -618,6 +624,8 @@ class Su_Data {
 					),
 					'content' => __( 'Column content', 'su' ),
 					'desc' => __( 'Flexible and responsive columns', 'su' ),
+					'note' => __( 'Did you know that you need to wrap columns with [row] shortcode?', 'su' ),
+					'example' => 'columns',
 					'icon' => 'columns'
 				),
 				// list
@@ -767,6 +775,7 @@ class Su_Data {
 					),
 					'content' => __( 'Button text', 'su' ),
 					'desc' => __( 'Styled button', 'su' ),
+					'example' => 'buttons',
 					'icon' => 'heart'
 				),
 				// service
@@ -1104,6 +1113,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'YouTube video', 'su' ),
+					'example' => 'media',
 					'icon' => 'youtube-play'
 				),
 				// youtube_advanced
@@ -1215,6 +1225,12 @@ class Su_Data {
 							'name' => __( 'Theme', 'su' ),
 							'desc' => __( 'This parameter indicates whether the embedded player will display player controls (like a play button or volume control) within a dark or light control bar', 'su' )
 						),
+						'https' => array(
+							'type' => 'bool',
+							'default' => 'no',
+							'name' => __( 'Force HTTPS', 'su' ),
+							'desc' => __( 'Use HTTPS in player iframe', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -1222,6 +1238,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'YouTube video player with advanced settings', 'su' ),
+					'example' => 'media',
 					'icon' => 'youtube-play'
 				),
 				// vimeo
@@ -1272,6 +1289,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Vimeo video', 'su' ),
+					'example' => 'media',
 					'icon' => 'youtube-play'
 				),
 				// screenr
@@ -1282,7 +1300,8 @@ class Su_Data {
 					'atts' => array(
 						'url' => array(
 							'default' => '',
-							'name' => __( 'Url', 'su' ), 'desc' => __( 'Url of Screenr page with video', 'su' )
+							'name' => __( 'Url', 'su' ),
+							'desc' => __( 'Url of Screenr page with video', 'su' )
 						),
 						'width' => array(
 							'type' => 'slider',
@@ -1315,6 +1334,105 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Screenr video', 'su' ),
+					'icon' => 'youtube-play'
+				),
+				// dailymotion
+				'dailymotion' => array(
+					'name' => __( 'Dailymotion', 'su' ),
+					'type' => 'single',
+					'group' => 'media',
+					'atts' => array(
+						'url' => array(
+							'default' => '',
+							'name' => __( 'Url', 'su' ),
+							'desc' => __( 'Url of Dailymotion page with video', 'su' )
+						),
+						'width' => array(
+							'type' => 'slider',
+							'min' => 200,
+							'max' => 1600,
+							'step' => 20,
+							'default' => 600,
+							'name' => __( 'Width', 'su' ),
+							'desc' => __( 'Player width', 'su' )
+						),
+						'height' => array(
+							'type' => 'slider',
+							'min' => 200,
+							'max' => 1600,
+							'step' => 20,
+							'default' => 400,
+							'name' => __( 'Height', 'su' ),
+							'desc' => __( 'Player height', 'su' )
+						),
+						'responsive' => array(
+							'type' => 'bool',
+							'default' => 'yes',
+							'name' => __( 'Responsive', 'su' ),
+							'desc' => __( 'Ignore width and height parameters and make player responsive', 'su' )
+						),
+						'autoplay' => array(
+							'type' => 'bool',
+							'default' => 'no',
+							'name' => __( 'Autoplay', 'su' ),
+							'desc' => __( 'Start the playback of the video automatically after the player load. May not work on some mobile OS versions', 'su' )
+						),
+						'background' => array(
+							'type' => 'color',
+							'default' => '#FFC300',
+							'name' => __( 'Background color', 'su' ),
+							'desc' => __( 'HTML color of the background of controls elements', 'su' )
+						),
+						'foreground' => array(
+							'type' => 'color',
+							'default' => '#F7FFFD',
+							'name' => __( 'Foreground color', 'su' ),
+							'desc' => __( 'HTML color of the foreground of controls elements', 'su' )
+						),
+						'highlight' => array(
+							'type' => 'color',
+							'default' => '#171D1B',
+							'name' => __( 'Highlight color', 'su' ),
+							'desc' => __( 'HTML color of the controls elements\' highlights', 'su' )
+						),
+						'logo' => array(
+							'type' => 'bool',
+							'default' => 'yes',
+							'name' => __( 'Show logo', 'su' ),
+							'desc' => __( 'Allows to hide or show the Dailymotion logo', 'su' )
+						),
+						'quality' => array(
+							'type' => 'select',
+							'values' => array(
+								'240'  => '240',
+								'380'  => '380',
+								'480'  => '480',
+								'720'  => '720',
+								'1080' => '1080'
+							),
+							'default' => '380',
+							'name' => __( 'Quality', 'su' ),
+							'desc' => __( 'Determines the quality that must be played by default if available', 'su' )
+						),
+						'related' => array(
+							'type' => 'bool',
+							'default' => 'yes',
+							'name' => __( 'Show related videos', 'su' ),
+							'desc' => __( 'Show related videos at the end of the video', 'su' )
+						),
+						'info' => array(
+							'type' => 'bool',
+							'default' => 'yes',
+							'name' => __( 'Show video info', 'su' ),
+							'desc' => __( 'Show videos info (title/author) on the start screen', 'su' )
+						),
+						'class' => array(
+							'default' => '',
+							'name' => __( 'Class', 'su' ),
+							'desc' => __( 'Extra CSS class', 'su' )
+						)
+					),
+					'desc' => __( 'Dailymotion video', 'su' ),
 					'icon' => 'youtube-play'
 				),
 				// audio
@@ -1354,6 +1472,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Custom audio player', 'su' ),
+					'example' => 'media',
 					'icon' => 'play-circle'
 				),
 				// video
@@ -1423,6 +1542,7 @@ class Su_Data {
 						)
 					),
 					'desc' => __( 'Custom video player', 'su' ),
+					'example' => 'media',
 					'icon' => 'play-circle'
 				),
 				// table
@@ -2326,6 +2446,7 @@ class Su_Data {
 					),
 					'content' => __( 'Animated content', 'su' ),
 					'desc' => __( 'Wrapper for animation. Any nested element will be animated', 'su' ),
+					'example' => 'animations',
 					'icon' => 'bolt'
 				),
 				// meta

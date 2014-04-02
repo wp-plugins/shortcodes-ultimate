@@ -36,6 +36,12 @@
 .su-screenr { margin: 0 0 1.5em 0 }
 .su-screenr iframe { border: none !important }
 
+/*		Dailymotion
+---------------------------------------------------------------*/
+
+.su-dailymotion { margin: 0 0 1.5em 0 }
+.su-dailymotion iframe { border: none !important }
+
 /*		Document
 ---------------------------------------------------------------*/
 

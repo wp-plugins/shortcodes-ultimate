@@ -55,50 +55,55 @@ jQuery(document).ready(function ($) {
 	});
 
 	var examples_timer = 0,
+		open = $('#su_open_example').val(),
 		$example_window = $('#su-examples-window'),
 		$example_preview = $('#su-examples-preview');
 	$('.su-examples-group-title, .su-examples-item').each(function () {
 		var $item = $(this),
 			delay = 200;
-		if ($item.hasClass('su-examples-item')) $item.on('mousedown', function (e) {
-			var code = $(this).data('code'),
-				id = $(this).data('id');
-			$item.magnificPopup({
-				type: 'inline',
-				alignTop: true,
-				callbacks: {
-					close: function () {
-						$example_preview.html('');
+		if ($item.hasClass('su-examples-item')) {
+			$item.on('click', function (e) {
+				var code = $(this).data('code'),
+					id = $(this).data('id');
+				$item.magnificPopup({
+					type: 'inline',
+					alignTop: true,
+					callbacks: {
+						close: function () {
+							$example_preview.html('');
+						}
 					}
-				}
+				});
+				var su_example_preview = $.ajax({
+					url: ajaxurl,
+					type: 'get',
+					dataType: 'html',
+					data: {
+						action: 'su_example_preview',
+						code: code,
+						id: id
+					},
+					beforeSend: function () {
+						if (typeof su_example_preview === 'object') su_example_preview.abort();
+						$example_window.addClass('su-ajax');
+						$item.magnificPopup('open');
+					},
+					success: function (data) {
+						$example_preview.html(data);
+						$example_window.removeClass('su-ajax');
+					}
+				});
+				e.preventDefault();
 			});
-			var su_example_preview = $.ajax({
-				url: ajaxurl,
-				type: 'get',
-				dataType: 'html',
-				data: {
-					action: 'su_example_preview',
-					code: code,
-					id: id
-				},
-				beforeSend: function () {
-					if (typeof su_example_preview === 'object') su_example_preview.abort();
-					$example_window.addClass('su-ajax');
-					$item.magnificPopup('open');
-				},
-				success: function (data) {
-					$example_preview.html(data);
-					$example_window.removeClass('su-ajax');
-				}
-			});
-			e.preventDefault();
-		});
+			// Open preselected example
+			if ($item.data('id') === open) $item.trigger('click');
+		}
 		examples_timer = examples_timer + delay;
 		window.setTimeout(function () {
 			$item.addClass('animated fadeInDown').css('visibility', 'visible');
 		}, examples_timer);
 	});
-	$('#su-examples-window').on('mousedown', '.su-examples-get-code', function (e) {
+	$('#su-examples-window').on('click', '.su-examples-get-code', function (e) {
 		$(this).hide();
 		$(this).parent('.su-examples-code').children('textarea').slideDown(300);
 		e.preventDefault();

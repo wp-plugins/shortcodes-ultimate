@@ -146,6 +146,13 @@ class Su_Generator {
 			$return = '<div id="su-generator-breadcrumbs">';
 			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="javascript:void(0);" class="su-generator-home" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
 			$return .= '</div>';
+			// Shortcode note
+			if ( isset( $shortcode['note'] ) || isset( $shortcode['example'] ) ) {
+				$return .= '<div class="su-generator-note"><i class="fa fa-info-circle"></i><div class="su-generator-note-content">';
+				if ( isset( $shortcode['note'] ) ) $return .= wpautop( $shortcode['note'] );
+				if ( isset( $shortcode['example'] ) ) $return .= wpautop( '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-examples&example=' . $shortcode['example'] ) . '" target="_blank">' . __( 'Examples of use', 'su' ) . ' &rarr;</a>' );
+				$return .= '</div></div>';
+			}
 			// Shortcode has atts
 			if ( count( $shortcode['atts'] ) && $shortcode['atts'] ) {
 				// Loop through shortcode parameters

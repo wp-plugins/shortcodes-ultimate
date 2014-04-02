@@ -15,7 +15,7 @@ class Su_Shortcodes {
 			), $atts, 'heading' );
 		su_query_asset( 'css', 'su-content-shortcodes' );
 		do_action( 'su/shortcode/heading', $atts );
-		return '<div class="su-heading su-heading-style-' . $atts['style'] . ' su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' . intVal( $atts['size'] ) . 'px;margin-bottom:' . $atts['margin'] . 'px"><div class="su-heading-inner">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-heading su-heading-style-' . $atts['style'] . ' su-heading-align-' . $atts['align'] . su_ecssc( $atts ) . '" style="font-size:' . intval( $atts['size'] ) . 'px;margin-bottom:' . $atts['margin'] . 'px"><div class="su-heading-inner">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	public static function tabs( $atts = null, $content = null ) {
@@ -582,6 +582,7 @@ class Su_Shortcodes {
 				'url'            => false,
 				'width'          => 600,
 				'height'         => 400,
+				'responsive'     => 'yes',
 				'autohide'       => 'alt',
 				'autoplay'       => 'no',
 				'controls'       => 'yes',
@@ -592,7 +593,7 @@ class Su_Shortcodes {
 				'rel'            => 'yes',
 				'showinfo'       => 'yes',
 				'theme'          => 'dark',
-				'responsive'     => 'yes',
+				'https'          => 'no',
 				'class'          => ''
 			), $atts, 'youtube_advanced' );
 		if ( !$atts['url'] ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
@@ -601,14 +602,16 @@ class Su_Shortcodes {
 		// Check that url is specified
 		if ( !$id ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		// Prepare params
-		foreach( array( 'autohide', 'autoplay', 'controls', 'fs', 'loop', 'modestbranding', 'playlist', 'rel', 'showinfo', 'theme' ) as $param ) $params[$param] = str_replace( array( 'no', 'yes', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
+		foreach ( array( 'autohide', 'autoplay', 'controls', 'fs', 'loop', 'modestbranding', 'playlist', 'rel', 'showinfo', 'theme' ) as $param ) $params[$param] = str_replace( array( 'no', 'yes', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
 		// Correct loop
 		if ( $params['loop'] === '1' && $params['playlist'] === '' ) $params['playlist'] = $id;
+		// Prepare protocol
+		$protocol = ( $atts['https'] === 'yes' ) ? 'https' : 'http';
 		// Prepare player parameters
 		$params = http_build_query( $params );
 		// Create player
 		$return[] = '<div class="su-youtube su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '">';
-		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="' . $protocol . '://www.youtube.com/embed/' . $id . '?' . $params . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		su_query_asset( 'css', 'su-media-shortcodes' );
 		// Return result
@@ -661,8 +664,43 @@ class Su_Shortcodes {
 		if ( !$id ) return '<p class="su-error">Screenr: ' . __( 'please specify correct url', 'su' ) . '</p>';
 		// Create player
 		$return[] = '<div class="su-screenr su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '">';
-		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] .
-			'" src="http://screenr.com/embed/' . $id . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://screenr.com/embed/' . $id . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '</div>';
+		su_query_asset( 'css', 'su-media-shortcodes' );
+		// Return result
+		return implode( '', $return );
+	}
+
+	public static function dailymotion( $atts = null, $content = null ) {
+		// Prepare data
+		$return = array();
+		$atts = shortcode_atts( array(
+				'url'        => false,
+				'width'      => 600,
+				'height'     => 400,
+				'responsive' => 'yes',
+				'autoplay'   => 'no',
+				'background' => '#FFC300',
+				'foreground' => '#F7FFFD',
+				'highlight'  => '#171D1B',
+				'logo'       => 'yes',
+				'quality'    => '380',
+				'related'    => 'yes',
+				'info'       => 'yes',
+				'class'      => ''
+			), $atts, 'dailymotion' );
+		if ( !$atts['url'] ) return '<p class="su-error">Dailymotion: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		$atts['url'] = su_scattr( $atts['url'] );
+		$id = strtok( basename( $atts['url'] ), '_' );
+		// Check that url is specified
+		if ( !$id ) return '<p class="su-error">Dailymotion: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		// Prepare params
+		$params = array();
+		foreach ( array( 'autoplay', 'background', 'foreground', 'highlight', 'logo', 'quality', 'related', 'info' ) as $param )
+			$params[] = $param . '=' . str_replace( array( 'yes', 'no', '#' ), array( '1', '0', '' ), $atts[$param] );
+		// Create player
+		$return[] = '<div class="su-dailymotion su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '">';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://www.dailymotion.com/embed/video/' . $id . '?' . implode( '&', $params ) . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		su_query_asset( 'css', 'su-media-shortcodes' );
 		// Return result

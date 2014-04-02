@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-25 00:47+0400\n"
-"PO-Revision-Date: 2014-03-25 00:47+0400\n"
+"POT-Creation-Date: 2014-04-02 21:13+0400\n"
+"PO-Revision-Date: 2014-04-02 21:20+0400\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -132,11 +132,11 @@ msgstr "url папки с текущей темой"
 msgid "plugin url"
 msgstr "url папки этого плагина"
 
-#: inc/core/admin-views.php:115
+#: inc/core/admin-views.php:117
 msgid "New Shortcodes"
 msgstr "Новые Шорткоды"
 
-#: inc/core/admin-views.php:116
+#: inc/core/admin-views.php:118
 msgid ""
 "Parallax sections, responsive content slider, pricing tables, vector icons, "
 "testimonials, progress bars and even more"
@@ -144,11 +144,11 @@ msgstr ""
 "Секции с параллакс эффектом, адаптивный слайдер контента, тарифные таблицы, "
 "векторные иконки, отзывы, прогресс бары и даже больше"
 
-#: inc/core/admin-views.php:121
+#: inc/core/admin-views.php:123
 msgid "Maker"
 msgstr "Maker"
 
-#: inc/core/admin-views.php:122
+#: inc/core/admin-views.php:124
 msgid ""
 "This add-on allows you to create custom shortcodes. You can easily create "
 "any shortcode with different parameters or even override default shortcodes"
@@ -156,11 +156,11 @@ msgstr ""
 "Это дополнение позволит вам создавать собственные шорткоды. Вы можете с "
 "легкостью создать новый шорткод или даже перезаписать оригинальный"
 
-#: inc/core/admin-views.php:127
+#: inc/core/admin-views.php:129
 msgid "Skins"
 msgstr "Скины"
 
-#: inc/core/admin-views.php:128
+#: inc/core/admin-views.php:130
 msgid ""
 "Set of additional skins for Shortcodes Ultimate. It includes skins for "
 "accordeons/spoilers, tabs and some other shortcodes"
@@ -168,15 +168,15 @@ msgstr ""
 "Набор дополнительных скинов для шорткодов плагина. Набор включает в себя "
 "скины для аккордеонов/спойлеров, вкладок и некоторых других шорткодов"
 
-#: inc/core/admin-views.php:134
+#: inc/core/admin-views.php:136
 msgid "Shortcodes Ultimate Add-ons"
 msgstr "Дополнения для Shortcodes Ultimate"
 
-#: inc/core/admin-views.php:137 inc/core/admin-views.php:144
+#: inc/core/admin-views.php:139 inc/core/admin-views.php:146
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: inc/core/admin-views.php:141
+#: inc/core/admin-views.php:143
 msgid "Other WordPress Plugins"
 msgstr "Другие плагины для WordPress"
 
@@ -262,11 +262,11 @@ msgstr "1 новое дополнение для плагина Шорткоды
 msgid "All"
 msgstr "Все"
 
-#: inc/core/data.php:18 inc/core/generator.php:170
+#: inc/core/data.php:18 inc/core/generator.php:177
 msgid "Content"
 msgstr "Содержимое"
 
-#: inc/core/data.php:19 inc/core/data.php:817
+#: inc/core/data.php:19 inc/core/data.php:826
 msgid "Box"
 msgstr "Блок"
 
@@ -274,7 +274,7 @@ msgstr "Блок"
 msgid "Media"
 msgstr "Медиа"
 
-#: inc/core/data.php:21 inc/core/data.php:1976
+#: inc/core/data.php:21 inc/core/data.php:2096
 msgid "Gallery"
 msgstr "Галерея"
 
@@ -286,8 +286,8 @@ msgstr "Данные"
 msgid "Other"
 msgstr "Другое"
 
-#: inc/core/data.php:32 inc/core/data.php:1741 inc/core/data.php:1860
-#: inc/core/data.php:1998 inc/core/data.php:2142
+#: inc/core/data.php:32 inc/core/data.php:1861 inc/core/data.php:1980
+#: inc/core/data.php:2118 inc/core/data.php:2262
 msgid "None"
 msgstr "Нет"
 
@@ -362,16 +362,16 @@ msgstr "Вложенные шорткоды, шорткоды в атрибут�
 msgid "Heading"
 msgstr "Заголовок"
 
-#: inc/core/data.php:136 inc/core/data.php:190 inc/core/data.php:272
-#: inc/core/data.php:420 inc/core/data.php:450 inc/core/data.php:511
-#: inc/core/data.php:676 inc/core/data.php:829 inc/core/data.php:993
-#: inc/core/data.php:2344 inc/core/data.php:2396 inc/core/data.php:2459
+#: inc/core/data.php:136 inc/core/data.php:190 inc/core/data.php:274
+#: inc/core/data.php:426 inc/core/data.php:456 inc/core/data.php:517
+#: inc/core/data.php:684 inc/core/data.php:838 inc/core/data.php:1002
+#: inc/core/data.php:2465 inc/core/data.php:2517 inc/core/data.php:2580
 msgid "Default"
 msgstr "По умолчанию"
 
-#: inc/core/data.php:139 inc/core/data.php:193 inc/core/data.php:277
-#: inc/core/data.php:453 inc/core/data.php:517 inc/core/data.php:686
-#: inc/core/data.php:836 inc/core/data.php:963
+#: inc/core/data.php:139 inc/core/data.php:193 inc/core/data.php:279
+#: inc/core/data.php:459 inc/core/data.php:523 inc/core/data.php:694
+#: inc/core/data.php:845 inc/core/data.php:972
 msgid "Style"
 msgstr "Стиль"
 
@@ -379,13 +379,13 @@ msgstr "Стиль"
 msgid "Choose style for this heading"
 msgstr "Выберите стиль для этого заголовка"
 
-#: inc/core/data.php:140 inc/core/data.php:194 inc/core/data.php:278
-#: inc/core/data.php:454
+#: inc/core/data.php:140 inc/core/data.php:194 inc/core/data.php:280
+#: inc/core/data.php:460
 msgid "Install additional styles"
 msgstr "Установить дополнительные стили"
 
-#: inc/core/data.php:148 inc/core/data.php:525 inc/core/data.php:604
-#: inc/core/data.php:707
+#: inc/core/data.php:148 inc/core/data.php:531 inc/core/data.php:610
+#: inc/core/data.php:715
 msgid "Size"
 msgstr "Размер"
 
@@ -393,22 +393,22 @@ msgstr "Размер"
 msgid "Select heading size (pixels)"
 msgstr "Выберите размер заголовка (в пикселях)"
 
-#: inc/core/data.php:154 inc/core/data.php:486 inc/core/data.php:547
-#: inc/core/data.php:971
+#: inc/core/data.php:154 inc/core/data.php:492 inc/core/data.php:553
+#: inc/core/data.php:980
 msgid "Left"
 msgstr "Слева"
 
-#: inc/core/data.php:155 inc/core/data.php:548 inc/core/data.php:1792
-#: inc/core/data.php:1930
+#: inc/core/data.php:155 inc/core/data.php:554 inc/core/data.php:1912
+#: inc/core/data.php:2050
 msgid "Center"
 msgstr "По центру"
 
-#: inc/core/data.php:156 inc/core/data.php:487 inc/core/data.php:549
-#: inc/core/data.php:972
+#: inc/core/data.php:156 inc/core/data.php:493 inc/core/data.php:555
+#: inc/core/data.php:981
 msgid "Right"
 msgstr "Справа"
 
-#: inc/core/data.php:159 inc/core/data.php:490 inc/core/data.php:552
+#: inc/core/data.php:159 inc/core/data.php:496 inc/core/data.php:558
 msgid "Align"
 msgstr "Выравнивание"
 
@@ -424,39 +424,41 @@ msgstr "Отступ"
 msgid "Bottom margin (pixels)"
 msgstr "Отступ снизу (в пикселях)"
 
-#: inc/core/data.php:173 inc/core/data.php:213 inc/core/data.php:245
-#: inc/core/data.php:308 inc/core/data.php:324 inc/core/data.php:351
-#: inc/core/data.php:375 inc/core/data.php:403 inc/core/data.php:433
-#: inc/core/data.php:469 inc/core/data.php:494 inc/core/data.php:530
-#: inc/core/data.php:557 inc/core/data.php:573 inc/core/data.php:615
-#: inc/core/data.php:643 inc/core/data.php:764 inc/core/data.php:807
-#: inc/core/data.php:863 inc/core/data.php:900 inc/core/data.php:932
-#: inc/core/data.php:1034 inc/core/data.php:1050 inc/core/data.php:1102
-#: inc/core/data.php:1220 inc/core/data.php:1270 inc/core/data.php:1313
-#: inc/core/data.php:1352 inc/core/data.php:1421 inc/core/data.php:1442
-#: inc/core/data.php:1473 inc/core/data.php:1506 inc/core/data.php:1522
-#: inc/core/data.php:1552 inc/core/data.php:1572 inc/core/data.php:1599
-#: inc/core/data.php:1620 inc/core/data.php:1665 inc/core/data.php:1710
-#: inc/core/data.php:1829 inc/core/data.php:1967 inc/core/data.php:2048
-#: inc/core/data.php:2222 inc/core/data.php:2277 inc/core/data.php:2323
+#: inc/core/data.php:173 inc/core/data.php:213 inc/core/data.php:246
+#: inc/core/data.php:310 inc/core/data.php:328 inc/core/data.php:357
+#: inc/core/data.php:381 inc/core/data.php:409 inc/core/data.php:439
+#: inc/core/data.php:475 inc/core/data.php:500 inc/core/data.php:536
+#: inc/core/data.php:563 inc/core/data.php:579 inc/core/data.php:621
+#: inc/core/data.php:651 inc/core/data.php:772 inc/core/data.php:816
+#: inc/core/data.php:872 inc/core/data.php:909 inc/core/data.php:941
+#: inc/core/data.php:1043 inc/core/data.php:1059 inc/core/data.php:1111
+#: inc/core/data.php:1236 inc/core/data.php:1287 inc/core/data.php:1332
+#: inc/core/data.php:1431 inc/core/data.php:1470 inc/core/data.php:1540
+#: inc/core/data.php:1562 inc/core/data.php:1593 inc/core/data.php:1626
+#: inc/core/data.php:1642 inc/core/data.php:1672 inc/core/data.php:1692
+#: inc/core/data.php:1719 inc/core/data.php:1740 inc/core/data.php:1785
+#: inc/core/data.php:1830 inc/core/data.php:1949 inc/core/data.php:2087
+#: inc/core/data.php:2168 inc/core/data.php:2342 inc/core/data.php:2397
+#: inc/core/data.php:2443
 msgid "Class"
 msgstr "Класс"
 
-#: inc/core/data.php:174 inc/core/data.php:214 inc/core/data.php:246
-#: inc/core/data.php:309 inc/core/data.php:325 inc/core/data.php:352
-#: inc/core/data.php:376 inc/core/data.php:404 inc/core/data.php:434
-#: inc/core/data.php:470 inc/core/data.php:495 inc/core/data.php:531
-#: inc/core/data.php:558 inc/core/data.php:574 inc/core/data.php:616
-#: inc/core/data.php:644 inc/core/data.php:765 inc/core/data.php:808
-#: inc/core/data.php:864 inc/core/data.php:901 inc/core/data.php:933
-#: inc/core/data.php:1035 inc/core/data.php:1051 inc/core/data.php:1103
-#: inc/core/data.php:1221 inc/core/data.php:1271 inc/core/data.php:1314
-#: inc/core/data.php:1353 inc/core/data.php:1422 inc/core/data.php:1443
-#: inc/core/data.php:1474 inc/core/data.php:1507 inc/core/data.php:1523
-#: inc/core/data.php:1553 inc/core/data.php:1573 inc/core/data.php:1600
-#: inc/core/data.php:1621 inc/core/data.php:1666 inc/core/data.php:1711
-#: inc/core/data.php:1830 inc/core/data.php:1968 inc/core/data.php:2049
-#: inc/core/data.php:2223 inc/core/data.php:2278 inc/core/data.php:2324
+#: inc/core/data.php:174 inc/core/data.php:214 inc/core/data.php:247
+#: inc/core/data.php:311 inc/core/data.php:329 inc/core/data.php:358
+#: inc/core/data.php:382 inc/core/data.php:410 inc/core/data.php:440
+#: inc/core/data.php:476 inc/core/data.php:501 inc/core/data.php:537
+#: inc/core/data.php:564 inc/core/data.php:580 inc/core/data.php:622
+#: inc/core/data.php:652 inc/core/data.php:773 inc/core/data.php:817
+#: inc/core/data.php:873 inc/core/data.php:910 inc/core/data.php:942
+#: inc/core/data.php:1044 inc/core/data.php:1060 inc/core/data.php:1112
+#: inc/core/data.php:1237 inc/core/data.php:1288 inc/core/data.php:1333
+#: inc/core/data.php:1432 inc/core/data.php:1471 inc/core/data.php:1541
+#: inc/core/data.php:1563 inc/core/data.php:1594 inc/core/data.php:1627
+#: inc/core/data.php:1643 inc/core/data.php:1673 inc/core/data.php:1693
+#: inc/core/data.php:1720 inc/core/data.php:1741 inc/core/data.php:1786
+#: inc/core/data.php:1831 inc/core/data.php:1950 inc/core/data.php:2088
+#: inc/core/data.php:2169 inc/core/data.php:2343 inc/core/data.php:2398
+#: inc/core/data.php:2444
 msgid "Extra CSS class"
 msgstr "Дополнительный CSS класс"
 
@@ -506,36 +508,36 @@ msgstr ""
 msgid "Tabs container"
 msgstr "Контейнер вкладок"
 
-#: inc/core/data.php:223
+#: inc/core/data.php:224
 msgid "Tab"
 msgstr "Вкладка"
 
-#: inc/core/data.php:228
+#: inc/core/data.php:229
 msgid "Tab name"
 msgstr "Имя вкладки"
 
-#: inc/core/data.php:229 inc/core/data.php:261 inc/core/data.php:781
-#: inc/core/data.php:824 inc/core/data.php:1380
+#: inc/core/data.php:230 inc/core/data.php:263 inc/core/data.php:790
+#: inc/core/data.php:833 inc/core/data.php:1499
 msgid "Title"
 msgstr "Заголовок"
 
-#: inc/core/data.php:230
+#: inc/core/data.php:231
 msgid "Enter tab name"
 msgstr "Введите имя вкладки"
 
-#: inc/core/data.php:235
+#: inc/core/data.php:236
 msgid "Disabled"
 msgstr "Отключено"
 
-#: inc/core/data.php:236
+#: inc/core/data.php:237
 msgid "Is this tab disabled"
 msgstr "Эта вкладка отключена"
 
-#: inc/core/data.php:240 inc/core/data.php:303
+#: inc/core/data.php:241 inc/core/data.php:305
 msgid "Anchor"
 msgstr "Якорь"
 
-#: inc/core/data.php:241
+#: inc/core/data.php:242
 msgid ""
 "You can use unique anchor for this tab to access it with hash in page url. "
 "For example: type here <b%value>Hello</b> and then use url like http://"
@@ -546,108 +548,108 @@ msgstr ""
 "используйте ссылку вида http://example.com/page-utl#Hello. Эта вкладка будет "
 "активирована и страница будет прокручена к ней"
 
-#: inc/core/data.php:249
+#: inc/core/data.php:250
 msgid "Tab content"
 msgstr "Содержимое вкладки"
 
-#: inc/core/data.php:250
+#: inc/core/data.php:251
 msgid "Single tab"
 msgstr "Одиночная вкладка"
 
-#: inc/core/data.php:255
+#: inc/core/data.php:257
 msgid "Spoiler"
 msgstr "Спойлер"
 
-#: inc/core/data.php:260 inc/core/shortcodes.php:72
+#: inc/core/data.php:262 inc/core/shortcodes.php:72
 msgid "Spoiler title"
 msgstr "Скрытый текст"
 
-#: inc/core/data.php:261
+#: inc/core/data.php:263
 msgid "Text in spoiler title"
 msgstr "Текст для заголовка спойлера"
 
-#: inc/core/data.php:266
+#: inc/core/data.php:268
 msgid "Open"
 msgstr "Открыт"
 
-#: inc/core/data.php:267
+#: inc/core/data.php:269
 msgid "Is spoiler content visible by default"
 msgstr "Виден ли контент спойлера по умолчанию"
 
-#: inc/core/data.php:273
+#: inc/core/data.php:275
 msgid "Fancy"
 msgstr "Стильный"
 
-#: inc/core/data.php:274 inc/core/data.php:514
+#: inc/core/data.php:276 inc/core/data.php:520
 msgid "Simple"
 msgstr "Простой"
 
-#: inc/core/data.php:278
+#: inc/core/data.php:280
 msgid "Choose style for this spoiler"
 msgstr "Выберите стиль для этого спойлера"
 
-#: inc/core/data.php:283
+#: inc/core/data.php:285
 msgid "Plus"
 msgstr "Плюс"
 
-#: inc/core/data.php:284
+#: inc/core/data.php:286
 msgid "Plus circle"
 msgstr "Плюс в круге"
 
-#: inc/core/data.php:285
+#: inc/core/data.php:287
 msgid "Plus square 1"
 msgstr "Плюс в квадрате 1"
 
-#: inc/core/data.php:286
+#: inc/core/data.php:288
 msgid "Plus square 2"
 msgstr "Плюс в квадрате 2"
 
-#: inc/core/data.php:287
+#: inc/core/data.php:289
 msgid "Arrow"
 msgstr "Стрелка"
 
-#: inc/core/data.php:288
+#: inc/core/data.php:290
 msgid "Arrow circle 1"
 msgstr "Стрелка в круге 1"
 
-#: inc/core/data.php:289
+#: inc/core/data.php:291
 msgid "Arrow circle 2"
 msgstr "Стрелка в круге 2"
 
-#: inc/core/data.php:290
+#: inc/core/data.php:292
 msgid "Chevron"
 msgstr "Уголок"
 
-#: inc/core/data.php:291
+#: inc/core/data.php:293
 msgid "Chevron circle"
 msgstr "Уголок в круге"
 
-#: inc/core/data.php:292
+#: inc/core/data.php:294
 msgid "Caret"
 msgstr "Треугольник"
 
-#: inc/core/data.php:293
+#: inc/core/data.php:295
 msgid "Caret square"
 msgstr "Треугольник в квадрате"
 
-#: inc/core/data.php:294
+#: inc/core/data.php:296
 msgid "Folder 1"
 msgstr "Папка 1"
 
-#: inc/core/data.php:295
+#: inc/core/data.php:297
 msgid "Folder 2"
 msgstr "Папка 2"
 
-#: inc/core/data.php:298 inc/core/data.php:632 inc/core/data.php:737
-#: inc/core/data.php:787
+#: inc/core/data.php:300 inc/core/data.php:640 inc/core/data.php:745
+#: inc/core/data.php:796
 msgid "Icon"
 msgstr "Иконка"
 
-#: inc/core/data.php:299
+#: inc/core/data.php:301
 msgid "Icons for spoiler"
 msgstr "Иконка для спойлера"
 
-#: inc/core/data.php:304
+#: inc/core/data.php:306
 msgid ""
 "You can use unique anchor for this spoiler to access it with hash in page "
 "url. For example: type here <b%value>Hello</b> and then use url like http://"
@@ -658,19 +660,27 @@ msgstr ""
 "используйте ссылку вида http://example.com/page-utl#Hello. Этот спойлер "
 "будет открыт и страница будет прокручена к нему"
 
-#: inc/core/data.php:312
+#: inc/core/data.php:314
 msgid "Hidden content"
 msgstr "Скрытое содержимое"
 
-#: inc/core/data.php:313
+#: inc/core/data.php:315
 msgid "Spoiler with hidden content"
 msgstr "Спойлер со скрытым содержимым"
 
-#: inc/core/data.php:318
+#: inc/core/data.php:316 inc/core/data.php:334
+msgid ""
+"Did you know that you can wrap multiple spoilers with [accordion] shortcode "
+"to create accordion effect?"
+msgstr ""
+"Знаете ли вы что вы можете обернуть несколько спойлеров в шорткод "
+"[accordion] чтобы создать эффект аккордеона?"
+
+#: inc/core/data.php:322
 msgid "Accordion"
 msgstr "Аккордеон"
 
-#: inc/core/data.php:328
+#: inc/core/data.php:332
 msgid ""
 "[%prefix_spoiler]Content[/%prefix_spoiler]\n"
 "[%prefix_spoiler]Content[/%prefix_spoiler]\n"
@@ -680,194 +690,195 @@ msgstr ""
 "[%prefix_spoiler]Скрытый текст[/%prefix_spoiler]\n"
 "[%prefix_spoiler]Скрытый текст[/%prefix_spoiler]"
 
-#: inc/core/data.php:329
+#: inc/core/data.php:333
 msgid "Accordion with spoilers"
 msgstr "Аккордеон со спойлерами"
 
-#: inc/core/data.php:334
+#: inc/core/data.php:340
 msgid "Divider"
 msgstr "Разделитель"
 
-#: inc/core/data.php:341
+#: inc/core/data.php:347
 msgid "Show TOP link"
 msgstr "Показать ссылку ВВЕРХ"
 
-#: inc/core/data.php:342
+#: inc/core/data.php:348
 msgid "Show link to top of the page or not"
 msgstr "Показывать ссылку ВВЕРХ или нет"
 
-#: inc/core/data.php:346 inc/core/shortcodes.php:99
+#: inc/core/data.php:352 inc/core/shortcodes.php:99
 msgid "Go to top"
 msgstr "Вверх"
 
-#: inc/core/data.php:347
+#: inc/core/data.php:353
 msgid "Link text"
 msgstr "Текст ссылки"
 
-#: inc/core/data.php:347
+#: inc/core/data.php:353
 msgid "Text for the GO TOP link"
 msgstr "Текст ссылки ВВЕРХ"
 
-#: inc/core/data.php:355
+#: inc/core/data.php:361
 msgid "Content divider with optional TOP link"
 msgstr "Разделитель текста со ссылкой ВВЕРХ"
 
-#: inc/core/data.php:360
+#: inc/core/data.php:366
 msgid "Spacer"
 msgstr "Пробел"
 
-#: inc/core/data.php:370 inc/core/data.php:1085 inc/core/data.php:1141
-#: inc/core/data.php:1253 inc/core/data.php:1302 inc/core/data.php:1398
-#: inc/core/data.php:1654 inc/core/data.php:1693 inc/core/data.php:1776
-#: inc/core/data.php:1896 inc/core/data.php:2033 inc/core/data.php:2250
+#: inc/core/data.php:376 inc/core/data.php:1094 inc/core/data.php:1151
+#: inc/core/data.php:1270 inc/core/data.php:1321 inc/core/data.php:1365
+#: inc/core/data.php:1517 inc/core/data.php:1774 inc/core/data.php:1813
+#: inc/core/data.php:1896 inc/core/data.php:2016 inc/core/data.php:2153
+#: inc/core/data.php:2370
 msgid "Height"
 msgstr "Высота"
 
-#: inc/core/data.php:371
+#: inc/core/data.php:377
 msgid "Height of the spacer in pixels"
 msgstr "Высота пробела в пикселях"
 
-#: inc/core/data.php:379
+#: inc/core/data.php:385
 msgid "Empty space with adjustable height"
 msgstr "Пробел с настраиваемой высотой"
 
-#: inc/core/data.php:384
+#: inc/core/data.php:390
 msgid "Highlight"
 msgstr "Выделитель"
 
-#: inc/core/data.php:392 inc/core/data.php:692 inc/core/data.php:881
+#: inc/core/data.php:398 inc/core/data.php:700 inc/core/data.php:890
 msgid "Background"
 msgstr "Фон"
 
-#: inc/core/data.php:393
+#: inc/core/data.php:399
 msgid "Highlighted text background color"
 msgstr "Цвет фона выделяемого текста"
 
-#: inc/core/data.php:399 inc/core/data.php:698 inc/core/data.php:887
+#: inc/core/data.php:405 inc/core/data.php:706 inc/core/data.php:896
 msgid "Text color"
 msgstr "Цвет текста"
 
-#: inc/core/data.php:399
+#: inc/core/data.php:405
 msgid "Highlighted text color"
 msgstr "Цвет выделяемого текста"
 
-#: inc/core/data.php:407 inc/core/data.php:408
+#: inc/core/data.php:413 inc/core/data.php:414
 msgid "Highlighted text"
 msgstr "Подсвеченный текст"
 
-#: inc/core/data.php:413 inc/core/data.php:437 inc/vendor/sunrise.php:409
+#: inc/core/data.php:419 inc/core/data.php:443 inc/vendor/sunrise.php:409
 msgid "Label"
 msgstr "Ярлык"
 
-#: inc/core/data.php:421
+#: inc/core/data.php:427
 msgid "Success"
 msgstr "Успех"
 
-#: inc/core/data.php:422
+#: inc/core/data.php:428
 msgid "Warning"
 msgstr "Внимание"
 
-#: inc/core/data.php:423
+#: inc/core/data.php:429
 msgid "Important"
 msgstr "Важно"
 
-#: inc/core/data.php:424
+#: inc/core/data.php:430
 msgid "Black"
 msgstr "Черный"
 
-#: inc/core/data.php:425
+#: inc/core/data.php:431
 msgid "Info"
 msgstr "Инфо"
 
-#: inc/core/data.php:428
+#: inc/core/data.php:434
 msgid "Type"
 msgstr "Тип"
 
-#: inc/core/data.php:429
+#: inc/core/data.php:435
 msgid "Style of the label"
 msgstr "Стиль ярлыка"
 
-#: inc/core/data.php:438
+#: inc/core/data.php:444
 msgid "Styled label"
 msgstr "Стильный ярлык"
 
-#: inc/core/data.php:443 inc/core/data.php:473
+#: inc/core/data.php:449 inc/core/data.php:479
 msgid "Quote"
 msgstr "Цитата"
 
-#: inc/core/data.php:454
+#: inc/core/data.php:460
 msgid "Choose style for this quote"
 msgstr "Выберите стиль для этой цитаты"
 
-#: inc/core/data.php:458
+#: inc/core/data.php:464
 msgid "Cite"
 msgstr "Автор"
 
-#: inc/core/data.php:459
+#: inc/core/data.php:465
 msgid "Quote author name"
 msgstr "Имя автора цитаты"
 
-#: inc/core/data.php:464
+#: inc/core/data.php:470
 msgid "Cite url"
 msgstr "Ссылка автора"
 
-#: inc/core/data.php:465
+#: inc/core/data.php:471
 msgid "Url of the quote author. Leave empty to disable link"
 msgstr "Ссылка автора цитаты. Оставьте пустым, чтобы отключить ссылку"
 
-#: inc/core/data.php:474
+#: inc/core/data.php:480
 msgid "Blockquote alternative"
 msgstr "Альтернатива цитаты"
 
-#: inc/core/data.php:479 inc/core/data.php:498 inc/core/data.php:499
+#: inc/core/data.php:485 inc/core/data.php:504 inc/core/data.php:505
 msgid "Pullquote"
 msgstr "Цитата с обтеканием"
 
-#: inc/core/data.php:490
+#: inc/core/data.php:496
 msgid "Pullquote alignment (float)"
 msgstr "Выравнивание цитаты (обтекание)"
 
-#: inc/core/data.php:504 inc/core/data.php:535
+#: inc/core/data.php:510 inc/core/data.php:541
 msgid "Dropcap"
 msgstr "Буквица"
 
-#: inc/core/data.php:512 inc/core/data.php:677
+#: inc/core/data.php:518 inc/core/data.php:685
 msgid "Flat"
 msgstr "Плоский"
 
-#: inc/core/data.php:513
+#: inc/core/data.php:519
 msgid "Light"
 msgstr "Светлый"
 
-#: inc/core/data.php:517
+#: inc/core/data.php:523
 msgid "Dropcap style preset"
 msgstr "Стиль буквицы"
 
-#: inc/core/data.php:526
+#: inc/core/data.php:532
 msgid "Choose dropcap size"
 msgstr "Выберите размер буквицы"
 
-#: inc/core/data.php:534
+#: inc/core/data.php:540
 msgid "D"
 msgstr "D"
 
-#: inc/core/data.php:540
+#: inc/core/data.php:546
 msgid "Frame"
 msgstr "Рамка"
 
-#: inc/core/data.php:553
+#: inc/core/data.php:559
 msgid "Frame alignment"
 msgstr "Выравнивание рамки"
 
-#: inc/core/data.php:562
+#: inc/core/data.php:568
 msgid "Styled image frame"
 msgstr "Стильный рамка изображения"
 
-#: inc/core/data.php:567
+#: inc/core/data.php:573
 msgid "Row"
 msgstr "Колонки"
 
-#: inc/core/data.php:577
+#: inc/core/data.php:583
 msgid ""
 "[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n"
 "[%prefix_column size=\"1/3\"]Content[/%prefix_column]\n"
@@ -877,96 +888,100 @@ msgstr ""
 "[%prefix_column size=\"1/3\"]Содержимое колонки[/%prefix_column]\n"
 "[%prefix_column size=\"1/3\"]Содержимое колонки[/%prefix_column]"
 
-#: inc/core/data.php:578
+#: inc/core/data.php:584
 msgid "Row for flexible columns"
 msgstr "Контейнер с резиновыми колонками"
 
-#: inc/core/data.php:583
+#: inc/core/data.php:589
 msgid "Column"
 msgstr "Колонка"
 
-#: inc/core/data.php:590
+#: inc/core/data.php:596
 msgid "Full width"
 msgstr "Во всю ширину"
 
-#: inc/core/data.php:591
+#: inc/core/data.php:597
 msgid "One half"
 msgstr "Одна вторая"
 
-#: inc/core/data.php:592
+#: inc/core/data.php:598
 msgid "One third"
 msgstr "Одна третья"
 
-#: inc/core/data.php:593
+#: inc/core/data.php:599
 msgid "Two third"
 msgstr "Две трети"
 
-#: inc/core/data.php:594
+#: inc/core/data.php:600
 msgid "One fourth"
 msgstr "Одна четвертая"
 
-#: inc/core/data.php:595
+#: inc/core/data.php:601
 msgid "Three fourth"
 msgstr "Три четвертых"
 
-#: inc/core/data.php:596
+#: inc/core/data.php:602
 msgid "One fifth"
 msgstr "Одна пятая"
 
-#: inc/core/data.php:597
+#: inc/core/data.php:603
 msgid "Two fifth"
 msgstr "Две пятых"
 
-#: inc/core/data.php:598
+#: inc/core/data.php:604
 msgid "Three fifth"
 msgstr "Три пятых"
 
-#: inc/core/data.php:599
+#: inc/core/data.php:605
 msgid "Four fifth"
 msgstr "Четыре пятых"
 
-#: inc/core/data.php:600
+#: inc/core/data.php:606
 msgid "One sixth"
 msgstr "Одна шестая"
 
-#: inc/core/data.php:601
+#: inc/core/data.php:607
 msgid "Five sixth"
 msgstr "Пять шестых"
 
-#: inc/core/data.php:605
+#: inc/core/data.php:611
 msgid "Select column width. This width will be calculated depend page width"
 msgstr ""
 "Выберите ширину колнки. Эта ширина будет рассчитана на основе ширины страницы"
 
-#: inc/core/data.php:610 inc/core/data.php:718
+#: inc/core/data.php:616 inc/core/data.php:726
 msgid "Centered"
 msgstr "По центру"
 
-#: inc/core/data.php:611
+#: inc/core/data.php:617
 msgid "Is this column centered on the page"
 msgstr "Колонка выровнена по центру страницы"
 
-#: inc/core/data.php:619
+#: inc/core/data.php:625
 msgid "Column content"
 msgstr "Содержимое колонки"
 
-#: inc/core/data.php:620
+#: inc/core/data.php:626
 msgid "Flexible and responsive columns"
 msgstr "Резновые колонки"
 
-#: inc/core/data.php:625
+#: inc/core/data.php:627
+msgid "Did you know that you need to wrap columns with [row] shortcode?"
+msgstr "Знаете ли вы что несколько колонок нужно оборачивать в шорткод [row]?"
+
+#: inc/core/data.php:633
 msgid "List"
 msgstr "Список"
 
-#: inc/core/data.php:633
+#: inc/core/data.php:641
 msgid "You can upload custom icon for this list or pick a built-in icon"
 msgstr "Вы можете загрузить свою иконку для этого списка или выбрать из списка"
 
-#: inc/core/data.php:638 inc/core/data.php:743 inc/core/data.php:793
+#: inc/core/data.php:646 inc/core/data.php:751 inc/core/data.php:802
 msgid "Icon color"
 msgstr "Цвет иконки"
 
-#: inc/core/data.php:639 inc/core/data.php:744 inc/core/data.php:794
+#: inc/core/data.php:647 inc/core/data.php:752 inc/core/data.php:803
 msgid ""
 "This color will be applied to the selected icon. Does not works with "
 "uploaded icons"
@@ -974,7 +989,7 @@ msgstr ""
 "Этот цвет будет применен только к иконке выбранной из списка. Не работает "
 "для загруженных иконок"
 
-#: inc/core/data.php:647
+#: inc/core/data.php:655
 msgid ""
 "<ul>\n"
 "<li>List item</li>\n"
@@ -988,276 +1003,276 @@ msgstr ""
 "<li>Элемент списка</li>\n"
 "</ul>"
 
-#: inc/core/data.php:648
+#: inc/core/data.php:656
 msgid "Styled unordered list"
 msgstr "Стильный неупорядоченный список"
 
-#: inc/core/data.php:653
+#: inc/core/data.php:661
 msgid "Button"
 msgstr "Кнопка"
 
-#: inc/core/data.php:660
+#: inc/core/data.php:668
 msgid "Link"
 msgstr "Ссылка"
 
-#: inc/core/data.php:661
+#: inc/core/data.php:669
 msgid "Button link"
 msgstr "Ссылка кнопки"
 
-#: inc/core/data.php:666 inc/core/data.php:1464
+#: inc/core/data.php:674 inc/core/data.php:1584
 msgid "Same tab"
 msgstr "Та же вкладка"
 
-#: inc/core/data.php:667 inc/core/data.php:1465
+#: inc/core/data.php:675 inc/core/data.php:1585
 msgid "New tab"
 msgstr "Новая вкладка"
 
-#: inc/core/data.php:670 inc/core/data.php:1468
+#: inc/core/data.php:678 inc/core/data.php:1588
 msgid "Target"
 msgstr "Цель"
 
-#: inc/core/data.php:671
+#: inc/core/data.php:679
 msgid "Button link target"
 msgstr "Цель ссылки кнопки"
 
-#: inc/core/data.php:678 inc/core/data.php:830
+#: inc/core/data.php:686 inc/core/data.php:839
 msgid "Soft"
 msgstr "Мягкий"
 
-#: inc/core/data.php:679 inc/core/data.php:831
+#: inc/core/data.php:687 inc/core/data.php:840
 msgid "Glass"
 msgstr "Стекло"
 
-#: inc/core/data.php:680 inc/core/data.php:832
+#: inc/core/data.php:688 inc/core/data.php:841
 msgid "Bubbles"
 msgstr "Пузыри"
 
-#: inc/core/data.php:681 inc/core/data.php:833
+#: inc/core/data.php:689 inc/core/data.php:842
 msgid "Noise"
 msgstr "Шум"
 
-#: inc/core/data.php:682
+#: inc/core/data.php:690
 msgid "Stroked"
 msgstr "Прошитый"
 
-#: inc/core/data.php:683
+#: inc/core/data.php:691
 msgid "3D"
 msgstr "3D"
 
-#: inc/core/data.php:686
+#: inc/core/data.php:694
 msgid "Button background style preset"
 msgstr "Стиль фона кнопки"
 
-#: inc/core/data.php:692
+#: inc/core/data.php:700
 msgid "Button background color"
 msgstr "Цвет фона кнопки"
 
-#: inc/core/data.php:699
+#: inc/core/data.php:707
 msgid "Button text color"
 msgstr "Цвет текста кнопки"
 
-#: inc/core/data.php:708
+#: inc/core/data.php:716
 msgid "Button size"
 msgstr "Размер кнопки"
 
-#: inc/core/data.php:713
+#: inc/core/data.php:721
 msgid "Fluid"
 msgstr "Резиновая"
 
-#: inc/core/data.php:713
+#: inc/core/data.php:721
 msgid "Fluid buttons has 100% width"
 msgstr "Резиновые кнопки имеют ширину 100%"
 
-#: inc/core/data.php:718
+#: inc/core/data.php:726
 msgid "Is button centered on the page"
 msgstr "Кнопка выровнена по центру страницы"
 
-#: inc/core/data.php:723
+#: inc/core/data.php:731
 msgid "Auto"
 msgstr "Авто"
 
-#: inc/core/data.php:724
+#: inc/core/data.php:732
 msgid "Round"
 msgstr "Круглый"
 
-#: inc/core/data.php:725
+#: inc/core/data.php:733
 msgid "Square"
 msgstr "Квадратный"
 
-#: inc/core/data.php:731 inc/core/data.php:858 inc/core/data.php:896
+#: inc/core/data.php:739 inc/core/data.php:867 inc/core/data.php:905
 msgid "Radius"
 msgstr "Радиус"
 
-#: inc/core/data.php:732
+#: inc/core/data.php:740
 msgid "Radius of button corners. Auto-radius calculation based on button size"
 msgstr ""
 "Радиус углов кнопки. Значени auto рассчитывается на основе размера кнопки"
 
-#: inc/core/data.php:738
+#: inc/core/data.php:746
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr "Вы можете загрузить свою иконку для этой кнопки или выбрать из списка"
 
-#: inc/core/data.php:749
+#: inc/core/data.php:757
 msgid "Text shadow"
 msgstr "Тень текста"
 
-#: inc/core/data.php:750
+#: inc/core/data.php:758
 msgid "Button text shadow"
 msgstr "Тень текста на кнопке"
 
-#: inc/core/data.php:754
+#: inc/core/data.php:762
 msgid "Description"
 msgstr "Описание"
 
-#: inc/core/data.php:755
+#: inc/core/data.php:763
 msgid ""
 "Small description under button text. This option is incompatible with icon."
 msgstr ""
 "Небольшое описание под текстом кнопки. Это описание не совместимо с иконками "
 "кнопок."
 
-#: inc/core/data.php:759
+#: inc/core/data.php:767
 msgid "onClick"
 msgstr "onClick"
 
-#: inc/core/data.php:760
+#: inc/core/data.php:768
 msgid "Advanced JavaScript code for onClick action"
 msgstr "JavaScript код для атрибута onClick"
 
-#: inc/core/data.php:768
+#: inc/core/data.php:776
 msgid "Button text"
 msgstr "Текст кнопки"
 
-#: inc/core/data.php:769
+#: inc/core/data.php:777
 msgid "Styled button"
 msgstr "Стильная кнопка"
 
-#: inc/core/data.php:774
+#: inc/core/data.php:783
 msgid "Service"
 msgstr "Услуга"
 
-#: inc/core/data.php:780 inc/core/shortcodes.php:430
+#: inc/core/data.php:789 inc/core/shortcodes.php:430
 msgid "Service title"
 msgstr "Название услуги"
 
-#: inc/core/data.php:782
+#: inc/core/data.php:791
 msgid "Service name"
 msgstr "Название услуги"
 
-#: inc/core/data.php:788
+#: inc/core/data.php:797
 msgid "You can upload custom icon for this box"
 msgstr "Вы можете загрузить свою иконку для этого блока"
 
-#: inc/core/data.php:802
+#: inc/core/data.php:811
 msgid "Icon size"
 msgstr "Размер иконки"
 
-#: inc/core/data.php:803
+#: inc/core/data.php:812
 msgid "Size of the uploaded icon in pixels"
 msgstr "Размер загруженной иконки в пикселях"
 
-#: inc/core/data.php:811
+#: inc/core/data.php:820
 msgid "Service description"
 msgstr "Описание услуги"
 
-#: inc/core/data.php:812
+#: inc/core/data.php:821
 msgid "Service box with title"
 msgstr "Блок услуга с заголовком"
 
-#: inc/core/data.php:823
+#: inc/core/data.php:832
 msgid "Box title"
 msgstr "Заголовок блока"
 
-#: inc/core/data.php:824
+#: inc/core/data.php:833
 msgid "Text for the box title"
 msgstr "Текст для заголовка блока"
 
-#: inc/core/data.php:837
+#: inc/core/data.php:846
 msgid "Box style preset"
 msgstr "Стиль блока"
 
-#: inc/core/data.php:843 inc/core/generator-views.php:99
+#: inc/core/data.php:852 inc/core/generator-views.php:99
 msgid "Color"
 msgstr "Цвет"
 
-#: inc/core/data.php:844
+#: inc/core/data.php:853
 msgid "Color for the box title and borders"
 msgstr "Цвет заголовка блока и его рамки"
 
-#: inc/core/data.php:850
+#: inc/core/data.php:859
 msgid "Title text color"
 msgstr "Цвет текста заголовка"
 
-#: inc/core/data.php:850
+#: inc/core/data.php:859
 msgid "Color for the box title text"
 msgstr "Цвет текста в заголовке блока"
 
-#: inc/core/data.php:859
+#: inc/core/data.php:868
 msgid "Box corners radius"
 msgstr "Радиус углов"
 
-#: inc/core/data.php:867
+#: inc/core/data.php:876
 msgid "Box content"
 msgstr "Содержимое блока"
 
-#: inc/core/data.php:868
+#: inc/core/data.php:877
 msgid "Colored box with caption"
 msgstr "Цветной блок с заголовком"
 
-#: inc/core/data.php:873
+#: inc/core/data.php:882
 msgid "Note"
 msgstr "Заметка"
 
-#: inc/core/data.php:881
+#: inc/core/data.php:890
 msgid "Note background color"
 msgstr "Цвет фона заметки"
 
-#: inc/core/data.php:888
+#: inc/core/data.php:897
 msgid "Note text color"
 msgstr "Цвет текста заметки"
 
-#: inc/core/data.php:896
+#: inc/core/data.php:905
 msgid "Note corners radius"
 msgstr "Радиус углов"
 
-#: inc/core/data.php:904
+#: inc/core/data.php:913
 msgid "Note text"
 msgstr "Текст заметки"
 
-#: inc/core/data.php:905
+#: inc/core/data.php:914
 msgid "Colored box"
 msgstr "Цветной блок"
 
-#: inc/core/data.php:910 inc/core/data.php:1743 inc/core/data.php:1862
-#: inc/core/data.php:2000
+#: inc/core/data.php:919 inc/core/data.php:1863 inc/core/data.php:1982
+#: inc/core/data.php:2120
 msgid "Lightbox"
 msgstr "Лайтбокс"
 
-#: inc/core/data.php:917
+#: inc/core/data.php:926
 msgid "Iframe"
 msgstr "Фрейм (iframe)"
 
-#: inc/core/data.php:918
+#: inc/core/data.php:927
 msgid "Image"
 msgstr "Изображение"
 
-#: inc/core/data.php:919
+#: inc/core/data.php:928
 msgid "Inline (html content)"
 msgstr "HTML элемент"
 
-#: inc/core/data.php:922
+#: inc/core/data.php:931
 msgid "Content type"
 msgstr "Тип содержимого"
 
-#: inc/core/data.php:923
+#: inc/core/data.php:932
 msgid "Select type of the lightbox window content"
 msgstr "Выберите тип содержимого в окне лайтбокса"
 
-#: inc/core/data.php:927
+#: inc/core/data.php:936
 msgid "Content source"
 msgstr "Источник содержимого"
 
-#: inc/core/data.php:928
+#: inc/core/data.php:937
 msgid ""
 "Insert here URL or CSS selector. Use URL for Iframe and Image content types. "
 "Use CSS selector for Inline content type.<br />Example values:<br /><b"
@@ -1274,102 +1289,102 @@ msgstr ""
 "%value>http://example.com/</b> - любая веб-страница (фрейм)<br /><b"
 "%value>#contact-form</b> - любой HTML элемент (html элемент)"
 
-#: inc/core/data.php:936
+#: inc/core/data.php:945
 msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
 msgstr ""
 "[%prefix_button] Нажмите здесь чтобы посмотреть видео [/%prefix_button]"
 
-#: inc/core/data.php:937
+#: inc/core/data.php:946
 msgid "Lightbox window with custom content"
 msgstr "Лайтбокс с произвольным содержимым"
 
-#: inc/core/data.php:942
+#: inc/core/data.php:951
 msgid "Tooltip"
 msgstr "Подсказка"
 
-#: inc/core/data.php:949
+#: inc/core/data.php:958
 msgid "Basic: Light"
 msgstr "Базовый: Светлый"
 
-#: inc/core/data.php:950
+#: inc/core/data.php:959
 msgid "Basic: Dark"
 msgstr "Базовый: Темный"
 
-#: inc/core/data.php:951
+#: inc/core/data.php:960
 msgid "Basic: Yellow"
 msgstr "Базовый: Желтый"
 
-#: inc/core/data.php:952
+#: inc/core/data.php:961
 msgid "Basic: Green"
 msgstr "Базовый: Зеленый"
 
-#: inc/core/data.php:953
+#: inc/core/data.php:962
 msgid "Basic: Red"
 msgstr "Базовый: Красный"
 
-#: inc/core/data.php:954
+#: inc/core/data.php:963
 msgid "Basic: Blue"
 msgstr "Базовый: Голубой"
 
-#: inc/core/data.php:955
+#: inc/core/data.php:964
 msgid "Youtube"
 msgstr "Youtube"
 
-#: inc/core/data.php:956
+#: inc/core/data.php:965
 msgid "Tipsy"
 msgstr "Tipsy"
 
-#: inc/core/data.php:957
+#: inc/core/data.php:966
 msgid "Bootstrap"
 msgstr "Bootstrap"
 
-#: inc/core/data.php:958
+#: inc/core/data.php:967
 msgid "jTools"
 msgstr "jTools"
 
-#: inc/core/data.php:959
+#: inc/core/data.php:968
 msgid "Tipped"
 msgstr "Tipped"
 
-#: inc/core/data.php:960
+#: inc/core/data.php:969
 msgid "Cluetip"
 msgstr "Cluetip"
 
-#: inc/core/data.php:964
+#: inc/core/data.php:973
 msgid "Tooltip window style"
 msgstr "Стиль окна подсказки"
 
-#: inc/core/data.php:969
+#: inc/core/data.php:978
 msgid "Top"
 msgstr "Сверху"
 
-#: inc/core/data.php:970
+#: inc/core/data.php:979
 msgid "Bottom"
 msgstr "Снизу"
 
-#: inc/core/data.php:975
+#: inc/core/data.php:984
 msgid "Position"
 msgstr "Положение"
 
-#: inc/core/data.php:976
+#: inc/core/data.php:985
 msgid "Tooltip position"
 msgstr "Положение всплывающей подсказки"
 
-#: inc/core/data.php:981
+#: inc/core/data.php:990
 msgid "Shadow"
 msgstr "Тень"
 
-#: inc/core/data.php:982
+#: inc/core/data.php:991
 msgid ""
 "Add shadow to tooltip. This option is only works with basic styes, e.g. "
 "blue, green etc."
 msgstr "Добавить тень окну подсказки. Тень работает только для базовых стилей."
 
-#: inc/core/data.php:987
+#: inc/core/data.php:996
 msgid "Rounded corners"
 msgstr "Скругление"
 
-#: inc/core/data.php:988
+#: inc/core/data.php:997
 msgid ""
 "Use rounded for tooltip. This option is only works with basic styes, e.g. "
 "blue, green etc."
@@ -1377,152 +1392,154 @@ msgstr ""
 "Добавить скругленные уголки окну подсказки. Скругление работает только для "
 "базовых стилей."
 
-#: inc/core/data.php:1002
+#: inc/core/data.php:1011
 msgid "Font size"
 msgstr "Размер шрифта"
 
-#: inc/core/data.php:1003
+#: inc/core/data.php:1012
 msgid "Tooltip font size"
 msgstr "Размер шрифта подсказки"
 
-#: inc/core/data.php:1007
+#: inc/core/data.php:1016
 msgid "Tooltip title"
 msgstr "Заголовок подсказки"
 
-#: inc/core/data.php:1008
+#: inc/core/data.php:1017
 msgid ""
 "Enter title for tooltip window. Leave this field empty to hide the title"
 msgstr ""
 "Укажите заголовок окна подсказки. Оставьте поле пустым, чтобы скрыть "
 "заголовок"
 
-#: inc/core/data.php:1011 inc/core/shortcodes.php:508
+#: inc/core/data.php:1020 inc/core/shortcodes.php:508
 msgid "Tooltip text"
 msgstr "Текст подсказки"
 
-#: inc/core/data.php:1012
+#: inc/core/data.php:1021
 msgid "Tooltip content"
 msgstr "Содержимое подсказки"
 
-#: inc/core/data.php:1013
+#: inc/core/data.php:1022
 msgid "Enter tooltip content here"
 msgstr "Введите сюда содержимое подсказки"
 
-#: inc/core/data.php:1018
+#: inc/core/data.php:1027
 msgid "Show and hide on mouse hover"
 msgstr "Показать и скрыть при наведении мыши"
 
-#: inc/core/data.php:1019
+#: inc/core/data.php:1028
 msgid "Show and hide by mouse click"
 msgstr "Показать и скрыть по клику мыши"
 
-#: inc/core/data.php:1020
+#: inc/core/data.php:1029
 msgid "Always visible"
 msgstr "Всегда видима"
 
-#: inc/core/data.php:1023
+#: inc/core/data.php:1032
 msgid "Behavior"
 msgstr "Поведение"
 
-#: inc/core/data.php:1024
+#: inc/core/data.php:1033
 msgid "Select tooltip behavior"
 msgstr "Выберите поведение подсказки"
 
-#: inc/core/data.php:1029
+#: inc/core/data.php:1038
 msgid "Close button"
 msgstr "Кнопка закрыть"
 
-#: inc/core/data.php:1030
+#: inc/core/data.php:1039
 msgid "Show close button"
 msgstr "Показывать кнопку закрыть"
 
-#: inc/core/data.php:1038
+#: inc/core/data.php:1047
 msgid "[%prefix_button] Hover me to open tooltip [/%prefix_button]"
 msgstr ""
 "[%prefix_button] Наведите мышку чтобы увидеть подсказку [/%prefix_button]"
 
-#: inc/core/data.php:1039
+#: inc/core/data.php:1048
 msgid "Tooltip window with custom content"
 msgstr "Всплывающая подсказка с произвольным содержимым"
 
-#: inc/core/data.php:1044
+#: inc/core/data.php:1053
 msgid "Private"
 msgstr "Заметка для авторов"
 
-#: inc/core/data.php:1054
+#: inc/core/data.php:1063
 msgid "Private note text"
 msgstr "Текст приватной заметки"
 
-#: inc/core/data.php:1055
+#: inc/core/data.php:1064
 msgid "Private note for post authors"
 msgstr "Приватный текст для других авторов"
 
-#: inc/core/data.php:1060
+#: inc/core/data.php:1069
 msgid "YouTube"
 msgstr "YouTube"
 
-#: inc/core/data.php:1067 inc/core/data.php:1118 inc/core/data.php:1236
-#: inc/core/data.php:1285 inc/core/data.php:1539 inc/core/data.php:1636
+#: inc/core/data.php:1076 inc/core/data.php:1128 inc/core/data.php:1253
+#: inc/core/data.php:1303 inc/core/data.php:1347 inc/core/data.php:1659
+#: inc/core/data.php:1756
 msgid "Url"
 msgstr "Ссылка"
 
-#: inc/core/data.php:1068 inc/core/data.php:1119
+#: inc/core/data.php:1077 inc/core/data.php:1129
 msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
 msgstr ""
 "Ссылка на страницу YouTube с видео. Пример: http://youtube.com/watch?v=XXXXXX"
 
-#: inc/core/data.php:1076 inc/core/data.php:1132 inc/core/data.php:1244
-#: inc/core/data.php:1293 inc/core/data.php:1335 inc/core/data.php:1389
-#: inc/core/data.php:1645 inc/core/data.php:1684 inc/core/data.php:1768
-#: inc/core/data.php:1887 inc/core/data.php:2025 inc/core/data.php:2241
+#: inc/core/data.php:1085 inc/core/data.php:1142 inc/core/data.php:1261
+#: inc/core/data.php:1312 inc/core/data.php:1356 inc/core/data.php:1453
+#: inc/core/data.php:1508 inc/core/data.php:1765 inc/core/data.php:1804
+#: inc/core/data.php:1888 inc/core/data.php:2007 inc/core/data.php:2145
+#: inc/core/data.php:2361
 msgid "Width"
 msgstr "Ширина"
 
-#: inc/core/data.php:1077 inc/core/data.php:1133 inc/core/data.php:1245
-#: inc/core/data.php:1294 inc/core/data.php:1390
+#: inc/core/data.php:1086 inc/core/data.php:1143 inc/core/data.php:1262
+#: inc/core/data.php:1313 inc/core/data.php:1357 inc/core/data.php:1509
 msgid "Player width"
 msgstr "Ширина плеера"
 
-#: inc/core/data.php:1086 inc/core/data.php:1142 inc/core/data.php:1254
-#: inc/core/data.php:1303 inc/core/data.php:1399
+#: inc/core/data.php:1095 inc/core/data.php:1152 inc/core/data.php:1271
+#: inc/core/data.php:1322 inc/core/data.php:1366 inc/core/data.php:1518
 msgid "Player height"
 msgstr "Высота плеера"
 
-#: inc/core/data.php:1091 inc/core/data.php:1147 inc/core/data.php:1259
-#: inc/core/data.php:1308 inc/core/data.php:1660 inc/core/data.php:1699
-#: inc/core/data.php:1781 inc/core/data.php:1902
+#: inc/core/data.php:1100 inc/core/data.php:1157 inc/core/data.php:1276
+#: inc/core/data.php:1327 inc/core/data.php:1371 inc/core/data.php:1780
+#: inc/core/data.php:1819 inc/core/data.php:1901 inc/core/data.php:2022
 msgid "Responsive"
 msgstr "Отзывчивость (responsive)"
 
-#: inc/core/data.php:1092 inc/core/data.php:1148 inc/core/data.php:1260
-#: inc/core/data.php:1309
+#: inc/core/data.php:1101 inc/core/data.php:1158 inc/core/data.php:1277
+#: inc/core/data.php:1328 inc/core/data.php:1372
 msgid "Ignore width and height parameters and make player responsive"
 msgstr ""
 "Игнорировать значения ширины и высоты и сделать проигрыватель отзывчивым"
 
-#: inc/core/data.php:1097 inc/core/data.php:1181 inc/core/data.php:1265
-#: inc/core/data.php:1341 inc/core/data.php:1410 inc/core/data.php:1816
-#: inc/core/data.php:1954
+#: inc/core/data.php:1106 inc/core/data.php:1191 inc/core/data.php:1282
+#: inc/core/data.php:1377 inc/core/data.php:1459 inc/core/data.php:1529
+#: inc/core/data.php:1936 inc/core/data.php:2074
 msgid "Autoplay"
 msgstr "Автовоспроизведение"
 
-#: inc/core/data.php:1098 inc/core/data.php:1182 inc/core/data.php:1266
+#: inc/core/data.php:1107 inc/core/data.php:1192 inc/core/data.php:1283
 msgid "Play video automatically when page is loaded"
 msgstr "Воспроизвести видео автоматически при открытии страницы"
 
-#: inc/core/data.php:1106
+#: inc/core/data.php:1115
 msgid "YouTube video"
 msgstr "Видео YouTube"
 
-#: inc/core/data.php:1111
+#: inc/core/data.php:1121
 msgid "YouTube Advanced"
 msgstr "YouTube продвинутый"
 
-#: inc/core/data.php:1123
+#: inc/core/data.php:1133
 msgid "Playlist"
 msgstr "Плейлист"
 
-#: inc/core/data.php:1124
+#: inc/core/data.php:1134
 msgid ""
 "Value is a comma-separated list of video IDs to play. If you specify a "
 "value, the first video that plays will be the VIDEO_ID specified in the URL "
@@ -1532,44 +1549,44 @@ msgstr ""
 "значение, то первым будет проиграно видео из параметра URL, а указанные "
 "здесь видео будут проиграны после него"
 
-#: inc/core/data.php:1153
+#: inc/core/data.php:1163
 msgid "0 - Hide controls"
 msgstr "0 - Спрятать панель"
 
-#: inc/core/data.php:1154
+#: inc/core/data.php:1164
 msgid "1 - Show controls"
 msgstr "1 - Показать панель"
 
-#: inc/core/data.php:1155
+#: inc/core/data.php:1165
 msgid "2 - Show controls when playback is started"
 msgstr "2 - Показать панель при начале воспроизведения"
 
-#: inc/core/data.php:1158 inc/core/data.php:1404
+#: inc/core/data.php:1168 inc/core/data.php:1523
 msgid "Controls"
 msgstr "Элементы управления"
 
-#: inc/core/data.php:1159
+#: inc/core/data.php:1169
 msgid "This parameter indicates whether the video player controls will display"
 msgstr ""
 "Этот параметр определяет как показывать панель управления воспроизведением"
 
-#: inc/core/data.php:1164
+#: inc/core/data.php:1174
 msgid "0 - Do not hide controls"
 msgstr "0 - Не прятать панель"
 
-#: inc/core/data.php:1165
+#: inc/core/data.php:1175
 msgid "1 - Hide all controls on mouse out"
 msgstr "1 - Спрятать панель при уходе мыши"
 
-#: inc/core/data.php:1166
+#: inc/core/data.php:1176
 msgid "2 - Hide progress bar on mouse out"
 msgstr "2 - Спрятать полосу прокрутки при уходе мыши"
 
-#: inc/core/data.php:1169
+#: inc/core/data.php:1179
 msgid "Autohide"
 msgstr "Авто-скрытие"
 
-#: inc/core/data.php:1170
+#: inc/core/data.php:1180
 msgid ""
 "This parameter indicates whether the video controls will automatically hide "
 "after a video begins playing"
@@ -1577,11 +1594,11 @@ msgstr ""
 "Этот параметр определяет как скрывать панель управления воспроизведением во "
 "время проигрывания ролика"
 
-#: inc/core/data.php:1175
+#: inc/core/data.php:1185
 msgid "Show title bar"
 msgstr "Показывать заголовок"
 
-#: inc/core/data.php:1176
+#: inc/core/data.php:1186
 msgid ""
 "If you set the parameter value to NO, then the player will not display "
 "information like the video title and uploader before the video starts "
@@ -1590,21 +1607,21 @@ msgstr ""
 "Если вы установите параметр на НЕТ, то в плеере не будет показан заголовок с "
 "названием видео и имя автора видео"
 
-#: inc/core/data.php:1187 inc/core/data.php:1347 inc/core/data.php:1416
+#: inc/core/data.php:1197 inc/core/data.php:1465 inc/core/data.php:1535
 msgid "Loop"
 msgstr "Повтор"
 
-#: inc/core/data.php:1188
+#: inc/core/data.php:1198
 msgid ""
 "Setting of YES will cause the player to play the initial video again and "
 "again"
 msgstr "Видео будет снова проиграно по окнчании воспроизведения"
 
-#: inc/core/data.php:1193
+#: inc/core/data.php:1203
 msgid "Related videos"
 msgstr "Похожие видео"
 
-#: inc/core/data.php:1194
+#: inc/core/data.php:1204
 msgid ""
 "This parameter indicates whether the player should show related videos when "
 "playback of the initial video ends"
@@ -1612,17 +1629,17 @@ msgstr ""
 "Этот параметр позволяет отключать показ похожих видео по окончании "
 "воспроизведения"
 
-#: inc/core/data.php:1199
+#: inc/core/data.php:1209
 msgid "Show full-screen button"
 msgstr "Показывать кнопку полноэкранного режима"
 
-#: inc/core/data.php:1200
+#: inc/core/data.php:1210
 msgid ""
 "Setting this parameter to NO prevents the fullscreen button from displaying"
 msgstr ""
 "Установка этого параметра на НЕТ скроет кнопку перехода в полноэкранный режим"
 
-#: inc/core/data.php:1206
+#: inc/core/data.php:1216
 msgid ""
 "This parameter lets you use a YouTube player that does not show a YouTube "
 "logo. Set the parameter value to YES to prevent the YouTube logo from "
@@ -1634,66 +1651,150 @@ msgstr ""
 "управления воспроизведением. Вместо он будет показан либо в панели заголовка "
 "видео, либо как полупрозрачный над видео"
 
-#: inc/core/data.php:1211
+#: inc/core/data.php:1221
 msgid "Dark theme"
 msgstr "Темная тема"
 
-#: inc/core/data.php:1212
+#: inc/core/data.php:1222
 msgid "Light theme"
 msgstr "Светлая тема"
 
-#: inc/core/data.php:1215 inc/core/data.php:2272
+#: inc/core/data.php:1225 inc/core/data.php:2392
 msgid "Theme"
 msgstr "Тема"
 
-#: inc/core/data.php:1216
+#: inc/core/data.php:1226
 msgid ""
 "This parameter indicates whether the embedded player will display player "
 "controls (like a play button or volume control) within a dark or light "
 "control bar"
 msgstr "Выберите тему для проигрывателя"
 
-#: inc/core/data.php:1224
+#: inc/core/data.php:1231
+msgid "Force HTTPS"
+msgstr "Принудительный HTTPS"
+
+#: inc/core/data.php:1232
+msgid "Use HTTPS in player iframe"
+msgstr "Использовать протокол HTTPS во фрейме проигрывателя"
+
+#: inc/core/data.php:1240
 msgid "YouTube video player with advanced settings"
 msgstr "YouTube видео плеер с расширенными настройками"
 
-#: inc/core/data.php:1229
+#: inc/core/data.php:1246
 msgid "Vimeo"
 msgstr "Vimeo"
 
-#: inc/core/data.php:1236
+#: inc/core/data.php:1253
 msgid "Url of Vimeo page with video"
 msgstr "Ссылка на страницу Vimeo с видео"
 
-#: inc/core/data.php:1274
+#: inc/core/data.php:1291
 msgid "Vimeo video"
 msgstr "Видео Vimeo"
 
-#: inc/core/data.php:1279
+#: inc/core/data.php:1297
 msgid "Screenr"
 msgstr "Screenr"
 
-#: inc/core/data.php:1285
+#: inc/core/data.php:1304
 msgid "Url of Screenr page with video"
 msgstr "Ссылка на страницу Screenr с видео"
 
-#: inc/core/data.php:1317
+#: inc/core/data.php:1336
 msgid "Screenr video"
 msgstr "Видео Screenr"
 
-#: inc/core/data.php:1322
+#: inc/core/data.php:1341
+msgid "Dailymotion"
+msgstr "Dailymotion"
+
+#: inc/core/data.php:1348
+msgid "Url of Dailymotion page with video"
+msgstr "Ссылка на страницу Dailymotion с видео"
+
+#: inc/core/data.php:1378
+msgid ""
+"Start the playback of the video automatically after the player load. May not "
+"work on some mobile OS versions"
+msgstr ""
+"Автоматически начать воспроизведение видео. Может не работать на некоторых "
+"моильных ОС"
+
+#: inc/core/data.php:1383
+msgid "Background color"
+msgstr "Цвет фона"
+
+#: inc/core/data.php:1384
+msgid "HTML color of the background of controls elements"
+msgstr "HTML цвет фона элементов управления"
+
+#: inc/core/data.php:1389
+msgid "Foreground color"
+msgstr "Цвет переднего плана"
+
+#: inc/core/data.php:1390
+msgid "HTML color of the foreground of controls elements"
+msgstr "HTML цвет передней части элементов управления"
+
+#: inc/core/data.php:1395
+msgid "Highlight color"
+msgstr "Цвет подсветки"
+
+#: inc/core/data.php:1396
+msgid "HTML color of the controls elements' highlights"
+msgstr "HTML цвет подсветки элементов управления"
+
+#: inc/core/data.php:1401
+msgid "Show logo"
+msgstr "Показать логотип"
+
+#: inc/core/data.php:1402
+msgid "Allows to hide or show the Dailymotion logo"
+msgstr "Показать или нет лого Dailymotion"
+
+#: inc/core/data.php:1414
+msgid "Quality"
+msgstr "Качество"
+
+#: inc/core/data.php:1415
+msgid "Determines the quality that must be played by default if available"
+msgstr "Определите качество, которое нужно воспроизвести, если доступно"
+
+#: inc/core/data.php:1420
+msgid "Show related videos"
+msgstr "Показать похожие видео"
+
+#: inc/core/data.php:1421
+msgid "Show related videos at the end of the video"
+msgstr "Показать похожие видео в конце воспроизведения"
+
+#: inc/core/data.php:1426
+msgid "Show video info"
+msgstr "Показывать инфо видео"
+
+#: inc/core/data.php:1427
+msgid "Show videos info (title/author) on the start screen"
+msgstr "Показать информацию о видео (заголовок/автор) на начальном экране"
+
+#: inc/core/data.php:1435
+msgid "Dailymotion video"
+msgstr "Видео Dailymotion"
+
+#: inc/core/data.php:1440
 msgid "Audio"
 msgstr "Аудио"
 
-#: inc/core/data.php:1329 inc/core/data.php:1368
+#: inc/core/data.php:1447 inc/core/data.php:1487
 msgid "File"
 msgstr "Файл"
 
-#: inc/core/data.php:1330
+#: inc/core/data.php:1448
 msgid "Audio file url. Supported formats: mp3, ogg"
 msgstr "Ссылка на аудио-файл. Поддерживаемые форматы: mp3, ogg"
 
-#: inc/core/data.php:1336
+#: inc/core/data.php:1454
 msgid ""
 "Player width. You can specify width in percents and player will be "
 "responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
@@ -1702,63 +1803,63 @@ msgstr ""
 "отзывчивым (responsive). Примеры значений: <b%value>200px</b>, <b"
 "%value>100&#37;</b>"
 
-#: inc/core/data.php:1342 inc/core/data.php:1411
+#: inc/core/data.php:1460 inc/core/data.php:1530
 msgid "Play file automatically when page is loaded"
 msgstr "Воспроизводить файл автоматически при открытии страницы"
 
-#: inc/core/data.php:1348 inc/core/data.php:1417
+#: inc/core/data.php:1466 inc/core/data.php:1536
 msgid "Repeat when playback is ended"
 msgstr "Повторять, когда воспроизведение окночено"
 
-#: inc/core/data.php:1356
+#: inc/core/data.php:1474
 msgid "Custom audio player"
 msgstr "Настраиваемый аудио-плеер"
 
-#: inc/core/data.php:1361
+#: inc/core/data.php:1480
 msgid "Video"
 msgstr "Видео"
 
-#: inc/core/data.php:1369
+#: inc/core/data.php:1488
 msgid "Url to mp4/flv video-file"
 msgstr "Ссылка на mp4/flv видео-файл"
 
-#: inc/core/data.php:1374
+#: inc/core/data.php:1493
 msgid "Poster"
 msgstr "Постер"
 
-#: inc/core/data.php:1375
+#: inc/core/data.php:1494
 msgid "Url to poster image, that will be shown before playback"
 msgstr ""
 "Ссылка на изображение постера. Изображение будет показано перед началом "
 "воспроизведения"
 
-#: inc/core/data.php:1381
+#: inc/core/data.php:1500
 msgid "Player title"
 msgstr "Заголовок плеера"
 
-#: inc/core/data.php:1405
+#: inc/core/data.php:1524
 msgid "Show player controls (play/pause etc.) or not"
 msgstr ""
 "Показывать элементы управления плеером (воспроизведение/пауза и т.д.) или нет"
 
-#: inc/core/data.php:1425
+#: inc/core/data.php:1544
 msgid "Custom video player"
 msgstr "Настраиваемый видео-плеер"
 
-#: inc/core/data.php:1430
+#: inc/core/data.php:1550
 msgid "Table"
 msgstr "Таблица"
 
-#: inc/core/data.php:1437
+#: inc/core/data.php:1557
 msgid "CSV file"
 msgstr "CSV файл"
 
-#: inc/core/data.php:1438
+#: inc/core/data.php:1558
 msgid "Upload CSV file if you want to create HTML-table from file"
 msgstr ""
 "Если вы хотите создать HTML-таблицу из CSV-файла, то загрузите его в это поле"
 
-#: inc/core/data.php:1446
+#: inc/core/data.php:1566
 msgid ""
 "<table>\n"
 "<tr>\n"
@@ -1782,231 +1883,231 @@ msgstr ""
 "</tr>\n"
 "</table>"
 
-#: inc/core/data.php:1447
+#: inc/core/data.php:1567
 msgid "Styled table from HTML or CSV file"
 msgstr "Стильная таблица из HTML или CSV файла"
 
-#: inc/core/data.php:1452
+#: inc/core/data.php:1572
 msgid "Permalink"
 msgstr "Постоянная ссылка"
 
-#: inc/core/data.php:1458 inc/core/data.php:2381
+#: inc/core/data.php:1578 inc/core/data.php:2502
 msgid "ID"
 msgstr "ID"
 
-#: inc/core/data.php:1459
+#: inc/core/data.php:1579
 msgid "Post or page ID"
 msgstr "ID записи или страницы"
 
-#: inc/core/data.php:1469
+#: inc/core/data.php:1589
 msgid "Link target. blank - link will be opened in new window/tab"
 msgstr ""
 "Цель ссылки. blank - означает что ссылка будет открыта в новом окне или "
 "вкладке"
 
-#: inc/core/data.php:1478
+#: inc/core/data.php:1598
 msgid "Permalink to specified post/page"
 msgstr "Постоянная ссылка на страницу"
 
-#: inc/core/data.php:1483
+#: inc/core/data.php:1603
 msgid "Members"
 msgstr "Участники"
 
-#: inc/core/data.php:1488 inc/core/shortcodes.php:756
+#: inc/core/data.php:1608 inc/core/shortcodes.php:794
 msgid "This content is for registered users only. Please %login%."
 msgstr ""
 "Это содержимое только для авторизованых пользователей. Пожалуйста %login%."
 
-#: inc/core/data.php:1489
+#: inc/core/data.php:1609
 msgid "Message"
 msgstr "Сообщение"
 
-#: inc/core/data.php:1489
+#: inc/core/data.php:1609
 msgid "Message for not logged users"
 msgstr "Собщение для неавторизованных"
 
-#: inc/core/data.php:1494
+#: inc/core/data.php:1614
 msgid "Box color"
 msgstr "Цвет блока"
 
-#: inc/core/data.php:1494
+#: inc/core/data.php:1614
 msgid "This color will applied only to box for not logged users"
 msgstr ""
 "Этот цвет будет применен только к блоку для не авторизованных посетителей"
 
-#: inc/core/data.php:1497 inc/core/shortcodes.php:759
+#: inc/core/data.php:1617 inc/core/shortcodes.php:797
 msgid "login"
 msgstr "войдите"
 
-#: inc/core/data.php:1498
+#: inc/core/data.php:1618
 msgid "Login link text"
 msgstr "Текст ссылки войти"
 
-#: inc/core/data.php:1498
+#: inc/core/data.php:1618
 msgid "Text for the login link"
 msgstr "Текст ссылки ВОЙТИ"
 
-#: inc/core/data.php:1502
+#: inc/core/data.php:1622
 msgid "Login link url"
 msgstr "Адрес ссылки войти"
 
-#: inc/core/data.php:1510
+#: inc/core/data.php:1630
 msgid "Content for logged members"
 msgstr "Содержимое для авторизованых пользователей"
 
-#: inc/core/data.php:1511
+#: inc/core/data.php:1631
 msgid "Content for logged in members only"
 msgstr "Ссодержимое для авторизованых"
 
-#: inc/core/data.php:1516
+#: inc/core/data.php:1636
 msgid "Guests"
 msgstr "Гости"
 
-#: inc/core/data.php:1526
+#: inc/core/data.php:1646
 msgid "Content for guests"
 msgstr "Содержимое для гостей"
 
-#: inc/core/data.php:1527
+#: inc/core/data.php:1647
 msgid "Content for guests only"
 msgstr "Ссодержимое только для гостей"
 
-#: inc/core/data.php:1532
+#: inc/core/data.php:1652
 msgid "RSS Feed"
 msgstr "RSS лента"
 
-#: inc/core/data.php:1540
+#: inc/core/data.php:1660
 msgid "Url to RSS-feed"
 msgstr "Ссылка на RSS-ленту"
 
-#: inc/core/data.php:1548 inc/core/data.php:1735 inc/core/data.php:1854
-#: inc/core/data.php:1992
+#: inc/core/data.php:1668 inc/core/data.php:1855 inc/core/data.php:1974
+#: inc/core/data.php:2112
 msgid "Limit"
 msgstr "Лимит"
 
-#: inc/core/data.php:1548
+#: inc/core/data.php:1668
 msgid "Number of items to show"
 msgstr "Количество элементов для отображения"
 
-#: inc/core/data.php:1556
+#: inc/core/data.php:1676
 msgid "Feed grabber"
 msgstr "Граббер новостных лент"
 
-#: inc/core/data.php:1561
+#: inc/core/data.php:1681
 msgid "Menu"
 msgstr "Меню"
 
-#: inc/core/data.php:1568
+#: inc/core/data.php:1688
 msgid "Menu name"
 msgstr "Имя меню"
 
-#: inc/core/data.php:1568
+#: inc/core/data.php:1688
 msgid "Custom menu name. Ex: Main menu"
 msgstr "Имя произвольного меню. Например: Главное меню"
 
-#: inc/core/data.php:1576
+#: inc/core/data.php:1696
 msgid "Custom menu by name"
 msgstr "Произвольное меню"
 
-#: inc/core/data.php:1581
+#: inc/core/data.php:1701
 msgid "Sub pages"
 msgstr "Подстраницы"
 
-#: inc/core/data.php:1588 inc/core/data.php:1615
+#: inc/core/data.php:1708 inc/core/data.php:1735
 msgid "Depth"
 msgstr "Глубина"
 
-#: inc/core/data.php:1589
+#: inc/core/data.php:1709
 msgid "Max depth level of children pages"
 msgstr "Максимальная глубина дочерних страниц"
 
-#: inc/core/data.php:1594
+#: inc/core/data.php:1714
 msgid "Parent ID"
 msgstr "ID родителя"
 
-#: inc/core/data.php:1595
+#: inc/core/data.php:1715
 msgid "ID of the parent page. Leave blank to use current page"
 msgstr ""
 "ID родительской страницы. Оставьте пустым, чтобы использовать текущую "
 "страницу"
 
-#: inc/core/data.php:1603
+#: inc/core/data.php:1723
 msgid "List of sub pages"
 msgstr "Список дочерних страниц"
 
-#: inc/core/data.php:1608
+#: inc/core/data.php:1728
 msgid "Siblings"
 msgstr "Соседние страницы"
 
-#: inc/core/data.php:1616
+#: inc/core/data.php:1736
 msgid "Max depth level"
 msgstr "Максимальный уровень вложенности"
 
-#: inc/core/data.php:1624
+#: inc/core/data.php:1744
 msgid "List of cureent page siblings"
 msgstr "Список страниц, соседних с текущей"
 
-#: inc/core/data.php:1629
+#: inc/core/data.php:1749
 msgid "Document"
 msgstr "Документ"
 
-#: inc/core/data.php:1637
+#: inc/core/data.php:1757
 msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
 msgstr ""
 "Ссылка на загруженный документ. Поддерживаемые форматы: doc, xls, pdf и т.д."
 
-#: inc/core/data.php:1646
+#: inc/core/data.php:1766
 msgid "Viewer width"
 msgstr "Ширина просмотрщика"
 
-#: inc/core/data.php:1655
+#: inc/core/data.php:1775
 msgid "Viewer height"
 msgstr "Высота просмотрщика"
 
-#: inc/core/data.php:1661
+#: inc/core/data.php:1781
 msgid "Ignore width and height parameters and make viewer responsive"
 msgstr "Игнорировать значения ширины и высоты и сделать просмотрщик отзывчивым"
 
-#: inc/core/data.php:1669
+#: inc/core/data.php:1789
 msgid "Document viewer by Google"
 msgstr "Просмотрщик документов от Google"
 
-#: inc/core/data.php:1674
+#: inc/core/data.php:1794
 msgid "Gmap"
 msgstr "Google карта"
 
-#: inc/core/data.php:1685
+#: inc/core/data.php:1805
 msgid "Map width"
 msgstr "Ширина карты"
 
-#: inc/core/data.php:1694
+#: inc/core/data.php:1814
 msgid "Map height"
 msgstr "Высота карты"
 
-#: inc/core/data.php:1700
+#: inc/core/data.php:1820
 msgid "Ignore width and height parameters and make map responsive"
 msgstr "Игнорировать значения ширины и высоты и сделать карту отзывчивой"
 
-#: inc/core/data.php:1705
+#: inc/core/data.php:1825
 msgid "Marker"
 msgstr "Маркер"
 
-#: inc/core/data.php:1706
+#: inc/core/data.php:1826
 msgid "Address for the marker. You can type it in any language"
 msgstr "Адрес маркера. Вы можете ввести адрес на русском языке"
 
-#: inc/core/data.php:1714
+#: inc/core/data.php:1834
 msgid "Maps by Google"
 msgstr "Карты от Google"
 
-#: inc/core/data.php:1719
+#: inc/core/data.php:1839
 msgid "Slider"
 msgstr "Слайдер"
 
-#: inc/core/data.php:1726 inc/core/data.php:1845 inc/core/data.php:1983
+#: inc/core/data.php:1846 inc/core/data.php:1965 inc/core/data.php:2103
 msgid "Source"
 msgstr "Источник"
 
-#: inc/core/data.php:1727 inc/core/data.php:1846 inc/core/data.php:1984
+#: inc/core/data.php:1847 inc/core/data.php:1966 inc/core/data.php:2104
 msgid ""
 "Choose images source. You can use images from Media library or retrieve it "
 "from posts (thumbnails) posted under specified blog category. You can also "
@@ -2017,7 +2118,7 @@ msgstr ""
 "опубликованных в выбранной категории. Вы также можете выбрать произвольную "
 "таксономию и её рубрики"
 
-#: inc/core/data.php:1736 inc/core/data.php:1855 inc/core/data.php:1993
+#: inc/core/data.php:1856 inc/core/data.php:1975 inc/core/data.php:2113
 msgid ""
 "Maximum number of image source posts (for recent posts, category and custom "
 "taxonomy)"
@@ -2025,203 +2126,203 @@ msgstr ""
 "Максимальное кол-во записей с изображениями (для последних записей, "
 "категорий и произвольных таксономий)"
 
-#: inc/core/data.php:1742 inc/core/data.php:1861 inc/core/data.php:1999
+#: inc/core/data.php:1862 inc/core/data.php:1981 inc/core/data.php:2119
 msgid "Full-size image"
 msgstr "Полноразмерное изображение"
 
-#: inc/core/data.php:1744 inc/core/data.php:1863 inc/core/data.php:2001
+#: inc/core/data.php:1864 inc/core/data.php:1983 inc/core/data.php:2121
 msgid "Slide link (added in media editor)"
 msgstr "Ссылка слайда (добавленная в медиа редакторе)"
 
-#: inc/core/data.php:1745 inc/core/data.php:1864 inc/core/data.php:2002
+#: inc/core/data.php:1865 inc/core/data.php:1984 inc/core/data.php:2122
 msgid "Attachment page"
 msgstr "Страница медиа-файла"
 
-#: inc/core/data.php:1746 inc/core/data.php:1865 inc/core/data.php:2003
+#: inc/core/data.php:1866 inc/core/data.php:1985 inc/core/data.php:2123
 msgid "Post permalink"
 msgstr "Ссылка записи"
 
-#: inc/core/data.php:1749 inc/core/data.php:1868 inc/core/data.php:2006
+#: inc/core/data.php:1869 inc/core/data.php:1988 inc/core/data.php:2126
 msgid "Links"
 msgstr "Ссылки"
 
-#: inc/core/data.php:1750 inc/core/data.php:1869 inc/core/data.php:2007
+#: inc/core/data.php:1870 inc/core/data.php:1989 inc/core/data.php:2127
 msgid "Select which links will be used for images in this gallery"
 msgstr "Выберите какие ссылки использовать для элементов этой галереи"
 
-#: inc/core/data.php:1755 inc/core/data.php:1874 inc/core/data.php:2012
+#: inc/core/data.php:1875 inc/core/data.php:1994 inc/core/data.php:2132
 msgid "Same window"
 msgstr "То же окно"
 
-#: inc/core/data.php:1756 inc/core/data.php:1875 inc/core/data.php:2013
+#: inc/core/data.php:1876 inc/core/data.php:1995 inc/core/data.php:2133
 msgid "New window"
 msgstr "Новое окно"
 
-#: inc/core/data.php:1759 inc/core/data.php:1878 inc/core/data.php:2016
+#: inc/core/data.php:1879 inc/core/data.php:1998 inc/core/data.php:2136
 msgid "Links target"
 msgstr "Цель ссылок"
 
-#: inc/core/data.php:1760 inc/core/data.php:1879 inc/core/data.php:2017
+#: inc/core/data.php:1880 inc/core/data.php:1999 inc/core/data.php:2137
 msgid "Open links in"
 msgstr "Открывать ссылки в"
 
-#: inc/core/data.php:1768
+#: inc/core/data.php:1888
 msgid "Slider width (in pixels)"
 msgstr "Ширина слайдера (в пикселях)"
 
-#: inc/core/data.php:1776
+#: inc/core/data.php:1896
 msgid "Slider height (in pixels)"
 msgstr "Высота слайдера (в пикселях)"
 
-#: inc/core/data.php:1782
+#: inc/core/data.php:1902
 msgid "Ignore width and height parameters and make slider responsive"
 msgstr "Игнорировать значения ширины и высоты и сделать слайдер отзывчивым"
 
-#: inc/core/data.php:1787 inc/core/data.php:1925 inc/core/data.php:2043
+#: inc/core/data.php:1907 inc/core/data.php:2045 inc/core/data.php:2163
 msgid "Show titles"
 msgstr "Показывать заголовки"
 
-#: inc/core/data.php:1787
+#: inc/core/data.php:1907
 msgid "Display slide titles"
 msgstr "Отображать заголовки слайдов"
 
-#: inc/core/data.php:1792
+#: inc/core/data.php:1912
 msgid "Is slider centered on the page"
 msgstr "Слайдер выровнен по центру страницы"
 
-#: inc/core/data.php:1797 inc/core/data.php:1935
+#: inc/core/data.php:1917 inc/core/data.php:2055
 msgid "Arrows"
 msgstr "Стрелки"
 
-#: inc/core/data.php:1797 inc/core/data.php:1935
+#: inc/core/data.php:1917 inc/core/data.php:2055
 msgid "Show left and right arrows"
 msgstr "Показывать стрелки влево/вправо"
 
-#: inc/core/data.php:1802 inc/core/data.php:1940
+#: inc/core/data.php:1922 inc/core/data.php:2060
 msgid "Pagination"
 msgstr "Страницы"
 
-#: inc/core/data.php:1803 inc/core/data.php:1941
+#: inc/core/data.php:1923 inc/core/data.php:2061
 msgid "Show pagination"
 msgstr "Показывать страницы"
 
-#: inc/core/data.php:1807 inc/core/data.php:1945
+#: inc/core/data.php:1927 inc/core/data.php:2065
 msgid "Mouse wheel control"
 msgstr "Управление колесом мыши"
 
-#: inc/core/data.php:1808
+#: inc/core/data.php:1928
 msgid "Allow to change slides with mouse wheel"
 msgstr "Разрешить перелистывание слайдов колесом мышки"
 
-#: inc/core/data.php:1817
+#: inc/core/data.php:1937
 msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
 msgstr ""
 "Укажите интервал между автоматической сменой слайдов. Задайте 0, чтобы "
 "отключить автовоспроизведение"
 
-#: inc/core/data.php:1825 inc/core/data.php:1963
+#: inc/core/data.php:1945 inc/core/data.php:2083
 msgid "Speed"
 msgstr "Скорость"
 
-#: inc/core/data.php:1825 inc/core/data.php:1963
+#: inc/core/data.php:1945 inc/core/data.php:2083
 msgid "Specify animation speed"
 msgstr "Укажите скорость анимации"
 
-#: inc/core/data.php:1833
+#: inc/core/data.php:1953
 msgid "Customizable image slider"
 msgstr "Настраиваемый слайдер изображений"
 
-#: inc/core/data.php:1838
+#: inc/core/data.php:1958
 msgid "Carousel"
 msgstr "Карусель"
 
-#: inc/core/data.php:1888
+#: inc/core/data.php:2008
 msgid "Carousel width (in pixels)"
 msgstr "Ширина карусели (в пикселях)"
 
-#: inc/core/data.php:1897
+#: inc/core/data.php:2017
 msgid "Carousel height (in pixels)"
 msgstr "Высота карусели (в пикселях)"
 
-#: inc/core/data.php:1903
+#: inc/core/data.php:2023
 msgid "Ignore width and height parameters and make carousel responsive"
 msgstr "Игнорировать значения ширины и высоты и сделать карусель отзывчивой"
 
-#: inc/core/data.php:1911
+#: inc/core/data.php:2031
 msgid "Items to show"
 msgstr "Количество элементов для отображения"
 
-#: inc/core/data.php:1912
+#: inc/core/data.php:2032
 msgid "How much carousel items is visible"
 msgstr "Сколько элементов карусели видны постоянно"
 
-#: inc/core/data.php:1919
+#: inc/core/data.php:2039
 msgid "Scroll number"
 msgstr "Кол-во прокручиваемых"
 
-#: inc/core/data.php:1920
+#: inc/core/data.php:2040
 msgid "How much items are scrolled in one transition"
 msgstr "Сколько элементов карусели прокручивается за один переход"
 
-#: inc/core/data.php:1925
+#: inc/core/data.php:2045
 msgid "Display titles for each item"
 msgstr "Показывать заголовки для каждого элемента карусели"
 
-#: inc/core/data.php:1930
+#: inc/core/data.php:2050
 msgid "Is carousel centered on the page"
 msgstr "Карусель выровнена по центру страницы"
 
-#: inc/core/data.php:1946
+#: inc/core/data.php:2066
 msgid "Allow to rotate carousel with mouse wheel"
 msgstr "Разрешить прокрутку карусели колесом мыши"
 
-#: inc/core/data.php:1955
+#: inc/core/data.php:2075
 msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
 msgstr ""
 "Укажите интервал между автоматической анимацией. Задайте 0, чтобы отключить "
 "автовоспроизведение"
 
-#: inc/core/data.php:1971
+#: inc/core/data.php:2091
 msgid "Customizable image carousel"
 msgstr "Настраиваемая карусель изображений"
 
-#: inc/core/data.php:2025
+#: inc/core/data.php:2145
 msgid "Single item width (in pixels)"
 msgstr "Ширина одного изображения (в пикселях)"
 
-#: inc/core/data.php:2033
+#: inc/core/data.php:2153
 msgid "Single item height (in pixels)"
 msgstr "Высота одного изображения (в пикселях)"
 
-#: inc/core/data.php:2038
+#: inc/core/data.php:2158
 msgid "Never"
 msgstr "Никогда"
 
-#: inc/core/data.php:2039
+#: inc/core/data.php:2159
 msgid "On mouse over"
 msgstr "При наведении мыши"
 
-#: inc/core/data.php:2040
+#: inc/core/data.php:2160
 msgid "Always"
 msgstr "Всегда"
 
-#: inc/core/data.php:2044
+#: inc/core/data.php:2164
 msgid "Title display mode"
 msgstr "Режим отображения заголовков"
 
-#: inc/core/data.php:2052
+#: inc/core/data.php:2172
 msgid "Customizable image gallery"
 msgstr "Настраиваемая галерея изображений"
 
-#: inc/core/data.php:2057
+#: inc/core/data.php:2177
 msgid "Posts"
 msgstr "Записи"
 
-#: inc/core/data.php:2062 inc/core/data.php:2488
+#: inc/core/data.php:2182 inc/core/data.php:2609
 msgid "Template"
 msgstr "Шаблон"
 
-#: inc/core/data.php:2063
+#: inc/core/data.php:2183
 msgid ""
 "<b>Do not change this field value if you do not understand description below."
 "</b><br/>Relative path to the template file. Default templates is placed "
@@ -2244,55 +2345,55 @@ msgstr ""
 "одиночной записи или страницы<br/><b%value>templates/list-loop.php</b> - "
 "маркированный список с заголовками постов"
 
-#: inc/core/data.php:2067
+#: inc/core/data.php:2187
 msgid "Post ID's"
 msgstr "ID постов"
 
-#: inc/core/data.php:2068
+#: inc/core/data.php:2188
 msgid "Enter comma separated ID's of the posts that you want to show"
 msgstr "Введите ID постов, которые хотите отобразить, разделенные запятыми"
 
-#: inc/core/data.php:2076
+#: inc/core/data.php:2196
 msgid "Posts per page"
 msgstr "Кол-во записей"
 
-#: inc/core/data.php:2077
+#: inc/core/data.php:2197
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr ""
 "Укажите число записей, которое хотите отобразить. Введите -1 чтобы "
 "отобразить все найденные записи"
 
-#: inc/core/data.php:2084
+#: inc/core/data.php:2204
 msgid "Post types"
 msgstr "Типы постов"
 
-#: inc/core/data.php:2085
+#: inc/core/data.php:2205
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr ""
 "Выберите типы постов. Удерживайте клавишу Ctrl чтобы выбрать несколько типов"
 
-#: inc/core/data.php:2091 inc/core/generator-views.php:123
+#: inc/core/data.php:2211 inc/core/generator-views.php:123
 msgid "Taxonomy"
 msgstr "Таксономия"
 
-#: inc/core/data.php:2092
+#: inc/core/data.php:2212
 msgid "Select taxonomy to show posts from"
 msgstr "Выберите таксономию, чтобы посмотреть её категории и выбрать их"
 
-#: inc/core/data.php:2099
+#: inc/core/data.php:2219
 msgid "Terms"
 msgstr "Категории (terms)"
 
-#: inc/core/data.php:2100
+#: inc/core/data.php:2220
 msgid "Select terms to show posts from"
 msgstr "Выберите категории, из которых нужно показать записи"
 
-#: inc/core/data.php:2105
+#: inc/core/data.php:2225
 msgid "Taxonomy term operator"
 msgstr "Оператор выбора категорий"
 
-#: inc/core/data.php:2106
+#: inc/core/data.php:2226
 msgid ""
 "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
 "that is does not have any of selected terms<br/>AND - posts that have all "
@@ -2302,203 +2403,203 @@ msgstr ""
 "будут показаны записи, которые НЕ имеют ни одной из выбранных категорий<br/"
 ">AND - будут показаны записи, имеющие ТОЛЬКО выбранные категории"
 
-#: inc/core/data.php:2113
+#: inc/core/data.php:2233
 msgid "Authors"
 msgstr "Авторы"
 
-#: inc/core/data.php:2114
+#: inc/core/data.php:2234
 msgid "Choose the authors whose posts you want to show"
 msgstr "Выберите авторов, чьи записи хотите показать"
 
-#: inc/core/data.php:2118
+#: inc/core/data.php:2238
 msgid "Meta key"
 msgstr "Произвольное поле"
 
-#: inc/core/data.php:2119
+#: inc/core/data.php:2239
 msgid "Enter meta key name to show posts that have this key"
 msgstr ""
 "Введите оригинальное имя произвольного поля, чтобы показать все записи у "
 "которых это поле задано"
 
-#: inc/core/data.php:2126
+#: inc/core/data.php:2246
 msgid "Offset"
 msgstr "Смещение (offset)"
 
-#: inc/core/data.php:2127
+#: inc/core/data.php:2247
 msgid "Specify offset to start posts loop not from first post"
 msgstr ""
 "Укажите кол-во записей, которые будут пропущены и не показаны. Например, "
 "если указать 2, то будут показаны записи начиная со третьей"
 
-#: inc/core/data.php:2132
+#: inc/core/data.php:2252
 msgid "Descending"
 msgstr "По убыванию"
 
-#: inc/core/data.php:2133
+#: inc/core/data.php:2253
 msgid "Ascending"
 msgstr "По возрастанию"
 
-#: inc/core/data.php:2136
+#: inc/core/data.php:2256
 msgid "Order"
 msgstr "Порядок"
 
-#: inc/core/data.php:2137
+#: inc/core/data.php:2257
 msgid "Posts order"
 msgstr "Порядок сортировки записей"
 
-#: inc/core/data.php:2143 inc/core/data.php:2359 inc/core/data.php:2432
-#: inc/core/data.php:2474
+#: inc/core/data.php:2263 inc/core/data.php:2480 inc/core/data.php:2553
+#: inc/core/data.php:2595
 msgid "Post ID"
 msgstr "ID записи"
 
-#: inc/core/data.php:2144 inc/core/data.php:2433
+#: inc/core/data.php:2264 inc/core/data.php:2554
 msgid "Post author"
 msgstr "Автор записи"
 
-#: inc/core/data.php:2145 inc/core/data.php:2437
+#: inc/core/data.php:2265 inc/core/data.php:2558
 msgid "Post title"
 msgstr "Заголовок записи"
 
-#: inc/core/data.php:2146
+#: inc/core/data.php:2266
 msgid "Post slug"
 msgstr "Ссылка записи (slug)"
 
-#: inc/core/data.php:2147
+#: inc/core/data.php:2267
 msgid "Date"
 msgstr "Дата"
 
-#: inc/core/data.php:2147
+#: inc/core/data.php:2267
 msgid "Last modified date"
 msgstr "Дата изменения"
 
-#: inc/core/data.php:2148 inc/core/data.php:2158 inc/core/data.php:2446
+#: inc/core/data.php:2268 inc/core/data.php:2278 inc/core/data.php:2567
 msgid "Post parent"
 msgstr "Родитель"
 
-#: inc/core/data.php:2149
+#: inc/core/data.php:2269
 msgid "Random"
 msgstr "Случайно"
 
-#: inc/core/data.php:2149
+#: inc/core/data.php:2269
 msgid "Comments number"
 msgstr "Кол-во комментариев"
 
-#: inc/core/data.php:2150 inc/core/data.php:2448
+#: inc/core/data.php:2270 inc/core/data.php:2569
 msgid "Menu order"
 msgstr "Порядок меню"
 
-#: inc/core/data.php:2150
+#: inc/core/data.php:2270
 msgid "Meta key values"
 msgstr "Значение произвольного поля"
 
-#: inc/core/data.php:2153
+#: inc/core/data.php:2273
 msgid "Order by"
 msgstr "Сортировать по"
 
-#: inc/core/data.php:2154
+#: inc/core/data.php:2274
 msgid "Order posts by"
 msgstr "Сортировать записи по следующему признаку"
 
-#: inc/core/data.php:2159
+#: inc/core/data.php:2279
 msgid "Show childrens of entered post (enter post ID)"
 msgstr "Отобразить потомков введенной записи/страницы (нужно вводить ID)"
 
-#: inc/core/data.php:2164
+#: inc/core/data.php:2284
 msgid "Published"
 msgstr "Опубликован"
 
-#: inc/core/data.php:2165
+#: inc/core/data.php:2285
 msgid "Pending"
 msgstr "Ожидает"
 
-#: inc/core/data.php:2166
+#: inc/core/data.php:2286
 msgid "Draft"
 msgstr "Черновик"
 
-#: inc/core/data.php:2167
+#: inc/core/data.php:2287
 msgid "Auto-draft"
 msgstr "Авто-черновик"
 
-#: inc/core/data.php:2168
+#: inc/core/data.php:2288
 msgid "Future post"
 msgstr "Запланирован"
 
-#: inc/core/data.php:2169
+#: inc/core/data.php:2289
 msgid "Private post"
 msgstr "Приватная запись"
 
-#: inc/core/data.php:2170
+#: inc/core/data.php:2290
 msgid "Inherit"
 msgstr "Вложенный"
 
-#: inc/core/data.php:2171
+#: inc/core/data.php:2291
 msgid "Trashed"
 msgstr "В корзине"
 
-#: inc/core/data.php:2172 inc/core/data.php:2256
+#: inc/core/data.php:2292 inc/core/data.php:2376
 msgid "Any"
 msgstr "Любой"
 
-#: inc/core/data.php:2175 inc/core/data.php:2439
+#: inc/core/data.php:2295 inc/core/data.php:2560
 msgid "Post status"
 msgstr "Статус записи"
 
-#: inc/core/data.php:2176
+#: inc/core/data.php:2296
 msgid "Show only posts with selected status"
 msgstr "Показать только записи с выбранным статусом"
 
-#: inc/core/data.php:2181
+#: inc/core/data.php:2301
 msgid "Ignore sticky"
 msgstr "Игнорировать прикрепленные"
 
-#: inc/core/data.php:2182
+#: inc/core/data.php:2302
 msgid "Select Yes to ignore posts that is sticked"
 msgstr "Выберите Да, чтобы не показывать прикрепленные (прилепленные) записи"
 
-#: inc/core/data.php:2185
+#: inc/core/data.php:2305
 msgid "Custom posts query with customizable template"
 msgstr "Произвольный запрос записей/страниц с настраиваемым шаблоном"
 
-#: inc/core/data.php:2190
+#: inc/core/data.php:2310
 msgid "Dummy text"
 msgstr "Текст рыба"
 
-#: inc/core/data.php:2197
+#: inc/core/data.php:2317
 msgid "Paragraphs"
 msgstr "Параграфы"
 
-#: inc/core/data.php:2198
+#: inc/core/data.php:2318
 msgid "Words"
 msgstr "Слова"
 
-#: inc/core/data.php:2199
+#: inc/core/data.php:2319
 msgid "Bytes"
 msgstr "Байты"
 
-#: inc/core/data.php:2202
+#: inc/core/data.php:2322
 msgid "What"
 msgstr "Что"
 
-#: inc/core/data.php:2203
+#: inc/core/data.php:2323
 msgid "What to generate"
 msgstr "Что генерировать"
 
-#: inc/core/data.php:2211
+#: inc/core/data.php:2331
 msgid "Amount"
 msgstr "Количество"
 
-#: inc/core/data.php:2212
+#: inc/core/data.php:2332
 msgid ""
 "How many items (paragraphs or words) to generate. Minimum words amount is 5"
 msgstr ""
 "Какое количество (параграфов или слов) генерировать. Минимальное количество "
 "слов - 5"
 
-#: inc/core/data.php:2217
+#: inc/core/data.php:2337
 msgid "Cache"
 msgstr "Кеш"
 
-#: inc/core/data.php:2218
+#: inc/core/data.php:2338
 msgid ""
 "Generated text will be cached. Be careful with this option. If you disable "
 "it and insert many dummy_text shortcodes the page load time will be highly "
@@ -2508,111 +2609,111 @@ msgstr ""
 "вы отключите её и вставите много таких шорткодов на странице, то время "
 "загрузки страницы может сильно возрости"
 
-#: inc/core/data.php:2226
+#: inc/core/data.php:2346
 msgid "Text placeholder"
 msgstr "Текст болванка"
 
-#: inc/core/data.php:2231 inc/core/shortcodes.php:1264
+#: inc/core/data.php:2351 inc/core/shortcodes.php:1302
 msgid "Dummy image"
 msgstr "Изображение болванка"
 
-#: inc/core/data.php:2242
+#: inc/core/data.php:2362
 msgid "Image width"
 msgstr "Ширина изображения"
 
-#: inc/core/data.php:2251
+#: inc/core/data.php:2371
 msgid "Image height"
 msgstr "Высота изображения"
 
-#: inc/core/data.php:2257
+#: inc/core/data.php:2377
 msgid "Abstract"
 msgstr "Абстрактное"
 
-#: inc/core/data.php:2258
+#: inc/core/data.php:2378
 msgid "Animals"
 msgstr "Животные"
 
-#: inc/core/data.php:2259
+#: inc/core/data.php:2379
 msgid "Business"
 msgstr "Бизнес"
 
-#: inc/core/data.php:2260
+#: inc/core/data.php:2380
 msgid "Cats"
 msgstr "Котэ"
 
-#: inc/core/data.php:2261
+#: inc/core/data.php:2381
 msgid "City"
 msgstr "Город"
 
-#: inc/core/data.php:2262
+#: inc/core/data.php:2382
 msgid "Food"
 msgstr "Еда"
 
-#: inc/core/data.php:2263
+#: inc/core/data.php:2383
 msgid "Night life"
 msgstr "Ночная жизнь"
 
-#: inc/core/data.php:2264
+#: inc/core/data.php:2384
 msgid "Fashion"
 msgstr "Мода"
 
-#: inc/core/data.php:2265
+#: inc/core/data.php:2385
 msgid "People"
 msgstr "Люди"
 
-#: inc/core/data.php:2266
+#: inc/core/data.php:2386
 msgid "Nature"
 msgstr "Природа"
 
-#: inc/core/data.php:2267
+#: inc/core/data.php:2387
 msgid "Sports"
 msgstr "Спорт"
 
-#: inc/core/data.php:2268
+#: inc/core/data.php:2388
 msgid "Technics"
 msgstr "Техника"
 
-#: inc/core/data.php:2269
+#: inc/core/data.php:2389
 msgid "Transport"
 msgstr "Транспорт"
 
-#: inc/core/data.php:2273
+#: inc/core/data.php:2393
 msgid "Select the theme for this image"
 msgstr "Выберите тему изображений"
 
-#: inc/core/data.php:2281
+#: inc/core/data.php:2401
 msgid "Image placeholder with random image"
 msgstr "Изображение болванка со случайным изображением"
 
-#: inc/core/data.php:2286 inc/core/data.php:2294
+#: inc/core/data.php:2406 inc/core/data.php:2414
 msgid "Animation"
 msgstr "Анимация"
 
-#: inc/core/data.php:2295
+#: inc/core/data.php:2415
 msgid "Select animation type"
 msgstr "Выберите тип анимации"
 
-#: inc/core/data.php:2303
+#: inc/core/data.php:2423
 msgid "Duration"
 msgstr "Продолжительность"
 
-#: inc/core/data.php:2304
+#: inc/core/data.php:2424
 msgid "Animation duration (seconds)"
 msgstr "Продолжительность анимации (секунды)"
 
-#: inc/core/data.php:2312
+#: inc/core/data.php:2432
 msgid "Delay"
 msgstr "Задержка"
 
-#: inc/core/data.php:2313
+#: inc/core/data.php:2433
 msgid "Animation delay (seconds)"
 msgstr "Задержка перед началом анимации (секунды)"
 
-#: inc/core/data.php:2318
+#: inc/core/data.php:2438
 msgid "Inline"
 msgstr "Строковый"
 
-#: inc/core/data.php:2319
+#: inc/core/data.php:2439
 msgid ""
 "This parameter determines what HTML tag will be used for animation wrapper. "
 "Turn this option to YES and animated element will be wrapped in SPAN instead "
@@ -2622,49 +2723,49 @@ msgstr ""
 "Переключите этот параметр на ДА и будет использован тег span вместо div. "
 "Данная опция полезна для анимации строковых жлементов, например кнопок"
 
-#: inc/core/data.php:2327
+#: inc/core/data.php:2447
 msgid "Animated content"
 msgstr "Анимированное содержимое"
 
-#: inc/core/data.php:2328
+#: inc/core/data.php:2448
 msgid "Wrapper for animation. Any nested element will be animated"
 msgstr ""
 "Контейнер для анимации. Любой элемент помещенный в этот контейнер будет "
 "анимирован"
 
-#: inc/core/data.php:2333
+#: inc/core/data.php:2454
 msgid "Meta"
 msgstr "Мета"
 
-#: inc/core/data.php:2339
+#: inc/core/data.php:2460
 msgid "Key"
 msgstr "Ключ"
 
-#: inc/core/data.php:2340
+#: inc/core/data.php:2461
 msgid "Meta key name"
 msgstr "Имя произвольного поля"
 
-#: inc/core/data.php:2345 inc/core/data.php:2397 inc/core/data.php:2460
+#: inc/core/data.php:2466 inc/core/data.php:2518 inc/core/data.php:2581
 msgid "This text will be shown if data is not found"
 msgstr "Этот текст будет показан если не будет найдено запрошенное значение"
 
-#: inc/core/data.php:2349 inc/core/data.php:2401 inc/core/data.php:2464
+#: inc/core/data.php:2470 inc/core/data.php:2522 inc/core/data.php:2585
 msgid "Before"
 msgstr "Перед"
 
-#: inc/core/data.php:2350 inc/core/data.php:2402 inc/core/data.php:2465
+#: inc/core/data.php:2471 inc/core/data.php:2523 inc/core/data.php:2586
 msgid "This content will be shown before the value"
 msgstr "Этот текст будет показан перед результатом"
 
-#: inc/core/data.php:2354 inc/core/data.php:2406 inc/core/data.php:2469
+#: inc/core/data.php:2475 inc/core/data.php:2527 inc/core/data.php:2590
 msgid "After"
 msgstr "После"
 
-#: inc/core/data.php:2355 inc/core/data.php:2407 inc/core/data.php:2470
+#: inc/core/data.php:2476 inc/core/data.php:2528 inc/core/data.php:2591
 msgid "This content will be shown after the value"
 msgstr "Этот текст будет показан после результата"
 
-#: inc/core/data.php:2360 inc/core/data.php:2475
+#: inc/core/data.php:2481 inc/core/data.php:2596
 msgid ""
 "You can specify custom post ID. Leave this field empty to use an ID of the "
 "current post. Current post ID may not work in Live Preview mode"
@@ -2673,11 +2774,11 @@ msgstr ""
 "использовать ID текущей записи. ID текущей записи может не работать в режиме "
 "предпросмотра"
 
-#: inc/core/data.php:2364 inc/core/data.php:2416 inc/core/data.php:2479
+#: inc/core/data.php:2485 inc/core/data.php:2537 inc/core/data.php:2600
 msgid "Filter"
 msgstr "Фильтр"
 
-#: inc/core/data.php:2365 inc/core/data.php:2417 inc/core/data.php:2480
+#: inc/core/data.php:2486 inc/core/data.php:2538 inc/core/data.php:2601
 msgid ""
 "You can apply custom filter to the retrieved value. Enter here function "
 "name. Your function must accept one argument and return modified value. "
@@ -2687,59 +2788,59 @@ msgstr ""
 "здесь имя функции. Ваша функция должна принимать один аргумент и возвращать "
 "измененное значение. Пример функции: "
 
-#: inc/core/data.php:2368
+#: inc/core/data.php:2489
 msgid "Post meta"
 msgstr "Произвольное поле"
 
-#: inc/core/data.php:2373
+#: inc/core/data.php:2494
 msgid "User"
 msgstr "Пользователь"
 
-#: inc/core/data.php:2380
+#: inc/core/data.php:2501
 msgid "Display name"
 msgstr "Отображаемое имя"
 
-#: inc/core/data.php:2382
+#: inc/core/data.php:2503
 msgid "Login"
 msgstr "Логин"
 
-#: inc/core/data.php:2383
+#: inc/core/data.php:2504
 msgid "Nice name"
 msgstr "Красивое имя"
 
-#: inc/core/data.php:2384
+#: inc/core/data.php:2505
 msgid "Email"
 msgstr "Email"
 
-#: inc/core/data.php:2385
+#: inc/core/data.php:2506
 msgid "URL"
 msgstr "URL"
 
-#: inc/core/data.php:2386
+#: inc/core/data.php:2507
 msgid "Registered"
 msgstr "Зарегистрирован"
 
-#: inc/core/data.php:2387
+#: inc/core/data.php:2508
 msgid "Activation key"
 msgstr "Ключ активации"
 
-#: inc/core/data.php:2388
+#: inc/core/data.php:2509
 msgid "Status"
 msgstr "Статус"
 
-#: inc/core/data.php:2391 inc/core/data.php:2454
+#: inc/core/data.php:2512 inc/core/data.php:2575
 msgid "Field"
 msgstr "Поле"
 
-#: inc/core/data.php:2392
+#: inc/core/data.php:2513
 msgid "User data field name"
 msgstr "Имя поля с информацией о пользователе"
 
-#: inc/core/data.php:2411
+#: inc/core/data.php:2532
 msgid "User ID"
 msgstr "ID пользователя"
 
-#: inc/core/data.php:2412
+#: inc/core/data.php:2533
 msgid ""
 "You can specify custom user ID. Leave this field empty to use an ID of the "
 "current user"
@@ -2747,75 +2848,75 @@ msgstr ""
 "Вы можете указать ID любого пользователя. Оставьте это поле пустым, чтобы "
 "использовать ID текущего пользователя"
 
-#: inc/core/data.php:2420
+#: inc/core/data.php:2541
 msgid "User data"
 msgstr "Данные пользователя"
 
-#: inc/core/data.php:2425
+#: inc/core/data.php:2546
 msgid "Post"
 msgstr "Запись"
 
-#: inc/core/data.php:2434 inc/core/data.php:2435
+#: inc/core/data.php:2555 inc/core/data.php:2556
 msgid "Post date"
 msgstr "Дата записи"
 
-#: inc/core/data.php:2436
+#: inc/core/data.php:2557
 msgid "Post content"
 msgstr "Содержимое записи"
 
-#: inc/core/data.php:2438
+#: inc/core/data.php:2559
 msgid "Post excerpt"
 msgstr "Цитата записи"
 
-#: inc/core/data.php:2440
+#: inc/core/data.php:2561
 msgid "Comment status"
 msgstr "Статус комментариев"
 
-#: inc/core/data.php:2441
+#: inc/core/data.php:2562
 msgid "Ping status"
 msgstr "Статус пингов"
 
-#: inc/core/data.php:2442
+#: inc/core/data.php:2563
 msgid "Post name"
 msgstr "Имя записи"
 
-#: inc/core/data.php:2443 inc/core/data.php:2444
+#: inc/core/data.php:2564 inc/core/data.php:2565
 msgid "Post modified"
 msgstr "Дата изменения"
 
-#: inc/core/data.php:2445
+#: inc/core/data.php:2566
 msgid "Filtered post content"
 msgstr "Фильтрованное содержимое записи"
 
-#: inc/core/data.php:2447
+#: inc/core/data.php:2568
 msgid "GUID"
 msgstr "GUID"
 
-#: inc/core/data.php:2449
+#: inc/core/data.php:2570
 msgid "Post type"
 msgstr "Тип записи"
 
-#: inc/core/data.php:2450
+#: inc/core/data.php:2571
 msgid "Post mime type"
 msgstr "Типы файла записи (mime-type)"
 
-#: inc/core/data.php:2451
+#: inc/core/data.php:2572
 msgid "Comment count"
 msgstr "Количество комментариев"
 
-#: inc/core/data.php:2455
+#: inc/core/data.php:2576
 msgid "Post data field name"
 msgstr "Имя поля с информацией записи"
 
-#: inc/core/data.php:2483
+#: inc/core/data.php:2604
 msgid "Post data"
 msgstr "Данные записи"
 
-#: inc/core/data.php:2494
+#: inc/core/data.php:2615
 msgid "Template name"
 msgstr "Имя шаблона"
 
-#: inc/core/data.php:2495
+#: inc/core/data.php:2616
 #, php-format
 msgid ""
 "Use template file name (with optional .php extension). If you need to use "
@@ -2826,7 +2927,7 @@ msgstr ""
 "обязательно). Если нужно использовать шаблоны из под-папки темы, используйте "
 "относительный путь. Примеры значений: %s, %s, %s"
 
-#: inc/core/data.php:2498
+#: inc/core/data.php:2619
 msgid "Theme template"
 msgstr "Шаблон темы"
 
@@ -2988,32 +3089,36 @@ msgstr "Нажмите, чтобы вернуться к списку шортк
 msgid "All shortcodes"
 msgstr "Все шорткоды"
 
-#: inc/core/generator.php:163
+#: inc/core/generator.php:153
+msgid "Examples of use"
+msgstr "Примеры использования"
+
+#: inc/core/generator.php:170
 msgid "Click to set this value"
 msgstr "Нажмите чтобы установить это значение"
 
-#: inc/core/generator.php:187
+#: inc/core/generator.php:194
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:196 inc/core/tools.php:866
+#: inc/core/generator.php:203 inc/core/tools.php:882
 msgid "Access denied"
 msgstr "Доступ запрещен"
 
-#: inc/core/generator.php:231
+#: inc/core/generator.php:238
 msgid "Presets"
 msgstr "Шаблоны"
 
-#: inc/core/generator.php:234
+#: inc/core/generator.php:241
 msgid "Save current settings as preset"
 msgstr "Сохранить настройки как новый шаблон"
 
-#: inc/core/generator.php:263 inc/core/generator.php:266
+#: inc/core/generator.php:270 inc/core/generator.php:273
 msgid "Presets not found"
 msgstr "Шаблоны не найдены"
 
 #: inc/core/load.php:30 inc/core/load.php:104 inc/core/load.php:113
-#: inc/core/load.php:127 inc/core/load.php:139 inc/core/tools.php:878
+#: inc/core/load.php:127 inc/core/load.php:139 inc/core/tools.php:894
 #: inc/core/widget.php:14 inc/core/widget.php:40
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
@@ -3151,60 +3256,61 @@ msgid "please specify correct source"
 msgstr "пожалуйста укажите корректную ссылку"
 
 #: inc/core/shortcodes.php:561 inc/core/shortcodes.php:565
-#: inc/core/shortcodes.php:598 inc/core/shortcodes.php:602
-#: inc/core/shortcodes.php:629 inc/core/shortcodes.php:633
-#: inc/core/shortcodes.php:657 inc/core/shortcodes.php:661
-#: inc/core/shortcodes.php:681 inc/core/shortcodes.php:688
-#: inc/core/shortcodes.php:710 inc/core/shortcodes.php:715
+#: inc/core/shortcodes.php:599 inc/core/shortcodes.php:603
+#: inc/core/shortcodes.php:632 inc/core/shortcodes.php:636
+#: inc/core/shortcodes.php:660 inc/core/shortcodes.php:664
+#: inc/core/shortcodes.php:692 inc/core/shortcodes.php:696
+#: inc/core/shortcodes.php:719 inc/core/shortcodes.php:726
+#: inc/core/shortcodes.php:748 inc/core/shortcodes.php:753
 msgid "please specify correct url"
 msgstr "пожалуйста укажите корректную ссылку"
 
-#: inc/core/shortcodes.php:846
+#: inc/core/shortcodes.php:884
 msgid "This menu doesn't exists, or has no elements"
 msgstr "Такое меню не существует, или в нем нет ни одного элемента"
 
-#: inc/core/shortcodes.php:952 inc/core/shortcodes.php:1035
-#: inc/core/shortcodes.php:1090
+#: inc/core/shortcodes.php:990 inc/core/shortcodes.php:1073
+#: inc/core/shortcodes.php:1128
 msgid "images not found"
 msgstr "изображения не найдены"
 
-#: inc/core/shortcodes.php:1226
+#: inc/core/shortcodes.php:1264
 msgid "template not found"
 msgstr "шаблон не найден"
 
-#: inc/core/shortcodes.php:1304 inc/core/shortcodes.php:1354
+#: inc/core/shortcodes.php:1342 inc/core/shortcodes.php:1392
 msgid "post ID is incorrect"
 msgstr "ID записи указан неверно"
 
-#: inc/core/shortcodes.php:1306
+#: inc/core/shortcodes.php:1344
 msgid "please specify meta key name"
 msgstr "пожалуйста укажите имя ключа произвольного поля"
 
-#: inc/core/shortcodes.php:1327
+#: inc/core/shortcodes.php:1365
 msgid "password field is not allowed"
 msgstr "поле пароль запрещено"
 
-#: inc/core/shortcodes.php:1331
+#: inc/core/shortcodes.php:1369
 msgid "user ID is incorrect"
 msgstr "ID пользователя указан неверно"
 
-#: inc/core/shortcodes.php:1370
+#: inc/core/shortcodes.php:1408
 msgid "please specify template name"
 msgstr "пожалуйста укажите имя шаблона"
 
-#: inc/core/tools.php:785
+#: inc/core/tools.php:801
 msgid "Example code does not found, please check it later"
 msgstr "Код примера не найден, возвращайтесь позже"
 
-#: inc/core/tools.php:801
+#: inc/core/tools.php:817
 msgid "Get the code"
 msgstr "Получить код"
 
-#: inc/core/tools.php:875
+#: inc/core/tools.php:891
 msgid "Slide link"
 msgstr "Ссылка слайда"
 
-#: inc/core/tools.php:878
+#: inc/core/tools.php:894
 msgid ""
 "Use this field to add custom links to slides used with Slider, Carousel and "
 "Custom Gallery shortcodes"

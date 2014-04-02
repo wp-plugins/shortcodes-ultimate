@@ -94,6 +94,8 @@ class Su_Admin_Views {
 		$output = array();
 		$examples = Su_Data::examples();
 		$preview = '<div style="display:none"><div id="su-examples-window"><div id="su-examples-preview"></div></div></div>';
+		$open = ( isset( $_GET['example'] ) ) ? sanitize_text_field( $_GET['example'] ) : '';
+		$open = '<input id="su_open_example" type="hidden" name="su_open_example" value="' . $open . '" />';
 		foreach ( $examples as $group ) {
 			$items = array();
 			if ( isset( $group['items'] ) ) foreach ( $group['items'] as $item ) {
@@ -105,7 +107,7 @@ class Su_Admin_Views {
 		}
 		su_query_asset( 'css', array( 'magnific-popup', 'animate', 'font-awesome', 'su-options-page' ) );
 		su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
-		return '<div id="su-examples-screen">' . implode( '', $output ) . '</div>' . $preview;
+		return '<div id="su-examples-screen">' . implode( '', $output ) . '</div>' . $preview . $open;
 	}
 
 	public static function addons( $field, $config ) {
