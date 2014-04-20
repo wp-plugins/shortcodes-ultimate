@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Shortcodes Ultimate\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-02 21:21+0400\n"
-"PO-Revision-Date: 2014-04-02 21:21+0400\n"
+"POT-Creation-Date: 2014-04-20 15:14+0400\n"
+"PO-Revision-Date: 2014-04-20 15:14+0400\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "Language: su\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "A real swiss army knife for WordPress"
 msgstr ""
 
-#: inc/core/admin-views.php:11 inc/core/load.php:228
+#: inc/core/admin-views.php:11 inc/core/load.php:229
 msgid "Project homepage"
 msgstr ""
 
@@ -32,11 +32,11 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: inc/core/admin-views.php:13 inc/core/load.php:229
+#: inc/core/admin-views.php:13 inc/core/load.php:230
 msgid "Support forum"
 msgstr ""
 
-#: inc/core/admin-views.php:14 inc/core/load.php:230
+#: inc/core/admin-views.php:14 inc/core/load.php:231
 msgid "Changelog"
 msgstr ""
 
@@ -254,7 +254,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: inc/core/data.php:19 inc/core/data.php:826
+#: inc/core/data.php:19 inc/core/data.php:827
 msgid "Box"
 msgstr ""
 
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Media"
 msgstr ""
 
-#: inc/core/data.php:21 inc/core/data.php:2096
+#: inc/core/data.php:21 inc/core/data.php:2097
 msgid "Gallery"
 msgstr ""
 
@@ -274,8 +274,8 @@ msgstr ""
 msgid "Other"
 msgstr ""
 
-#: inc/core/data.php:32 inc/core/data.php:1861 inc/core/data.php:1980
-#: inc/core/data.php:2118 inc/core/data.php:2262
+#: inc/core/data.php:32 inc/core/data.php:1862 inc/core/data.php:1981
+#: inc/core/data.php:2119 inc/core/data.php:2263
 msgid "None"
 msgstr ""
 
@@ -350,14 +350,14 @@ msgstr ""
 
 #: inc/core/data.php:136 inc/core/data.php:190 inc/core/data.php:274
 #: inc/core/data.php:426 inc/core/data.php:456 inc/core/data.php:517
-#: inc/core/data.php:684 inc/core/data.php:838 inc/core/data.php:1002
-#: inc/core/data.php:2465 inc/core/data.php:2517 inc/core/data.php:2580
+#: inc/core/data.php:684 inc/core/data.php:839 inc/core/data.php:1003
+#: inc/core/data.php:2466 inc/core/data.php:2518 inc/core/data.php:2581
 msgid "Default"
 msgstr ""
 
 #: inc/core/data.php:139 inc/core/data.php:193 inc/core/data.php:279
-#: inc/core/data.php:459 inc/core/data.php:523 inc/core/data.php:694
-#: inc/core/data.php:845 inc/core/data.php:972
+#: inc/core/data.php:459 inc/core/data.php:523 inc/core/data.php:695
+#: inc/core/data.php:846 inc/core/data.php:973
 msgid "Style"
 msgstr ""
 
@@ -371,7 +371,7 @@ msgid "Install additional styles"
 msgstr ""
 
 #: inc/core/data.php:148 inc/core/data.php:531 inc/core/data.php:610
-#: inc/core/data.php:715
+#: inc/core/data.php:716
 msgid "Size"
 msgstr ""
 
@@ -380,17 +380,17 @@ msgid "Select heading size (pixels)"
 msgstr ""
 
 #: inc/core/data.php:154 inc/core/data.php:492 inc/core/data.php:553
-#: inc/core/data.php:980
+#: inc/core/data.php:981
 msgid "Left"
 msgstr ""
 
-#: inc/core/data.php:155 inc/core/data.php:554 inc/core/data.php:1912
-#: inc/core/data.php:2050
+#: inc/core/data.php:155 inc/core/data.php:554 inc/core/data.php:1913
+#: inc/core/data.php:2051
 msgid "Center"
 msgstr ""
 
 #: inc/core/data.php:156 inc/core/data.php:493 inc/core/data.php:555
-#: inc/core/data.php:981
+#: inc/core/data.php:982
 msgid "Right"
 msgstr ""
 
@@ -415,26 +415,7 @@ msgstr ""
 #: inc/core/data.php:381 inc/core/data.php:409 inc/core/data.php:439
 #: inc/core/data.php:475 inc/core/data.php:500 inc/core/data.php:536
 #: inc/core/data.php:563 inc/core/data.php:579 inc/core/data.php:621
-#: inc/core/data.php:651 inc/core/data.php:772 inc/core/data.php:816
-#: inc/core/data.php:872 inc/core/data.php:909 inc/core/data.php:941
-#: inc/core/data.php:1043 inc/core/data.php:1059 inc/core/data.php:1111
-#: inc/core/data.php:1236 inc/core/data.php:1287 inc/core/data.php:1332
-#: inc/core/data.php:1431 inc/core/data.php:1470 inc/core/data.php:1540
-#: inc/core/data.php:1562 inc/core/data.php:1593 inc/core/data.php:1626
-#: inc/core/data.php:1642 inc/core/data.php:1672 inc/core/data.php:1692
-#: inc/core/data.php:1719 inc/core/data.php:1740 inc/core/data.php:1785
-#: inc/core/data.php:1830 inc/core/data.php:1949 inc/core/data.php:2087
-#: inc/core/data.php:2168 inc/core/data.php:2342 inc/core/data.php:2397
-#: inc/core/data.php:2443
-msgid "Class"
-msgstr ""
-
-#: inc/core/data.php:174 inc/core/data.php:214 inc/core/data.php:247
-#: inc/core/data.php:311 inc/core/data.php:329 inc/core/data.php:358
-#: inc/core/data.php:382 inc/core/data.php:410 inc/core/data.php:440
-#: inc/core/data.php:476 inc/core/data.php:501 inc/core/data.php:537
-#: inc/core/data.php:564 inc/core/data.php:580 inc/core/data.php:622
-#: inc/core/data.php:652 inc/core/data.php:773 inc/core/data.php:817
+#: inc/core/data.php:651 inc/core/data.php:773 inc/core/data.php:817
 #: inc/core/data.php:873 inc/core/data.php:910 inc/core/data.php:942
 #: inc/core/data.php:1044 inc/core/data.php:1060 inc/core/data.php:1112
 #: inc/core/data.php:1237 inc/core/data.php:1288 inc/core/data.php:1333
@@ -445,6 +426,25 @@ msgstr ""
 #: inc/core/data.php:1831 inc/core/data.php:1950 inc/core/data.php:2088
 #: inc/core/data.php:2169 inc/core/data.php:2343 inc/core/data.php:2398
 #: inc/core/data.php:2444
+msgid "Class"
+msgstr ""
+
+#: inc/core/data.php:174 inc/core/data.php:214 inc/core/data.php:247
+#: inc/core/data.php:311 inc/core/data.php:329 inc/core/data.php:358
+#: inc/core/data.php:382 inc/core/data.php:410 inc/core/data.php:440
+#: inc/core/data.php:476 inc/core/data.php:501 inc/core/data.php:537
+#: inc/core/data.php:564 inc/core/data.php:580 inc/core/data.php:622
+#: inc/core/data.php:652 inc/core/data.php:774 inc/core/data.php:818
+#: inc/core/data.php:874 inc/core/data.php:911 inc/core/data.php:943
+#: inc/core/data.php:1045 inc/core/data.php:1061 inc/core/data.php:1113
+#: inc/core/data.php:1238 inc/core/data.php:1289 inc/core/data.php:1334
+#: inc/core/data.php:1433 inc/core/data.php:1472 inc/core/data.php:1542
+#: inc/core/data.php:1564 inc/core/data.php:1595 inc/core/data.php:1628
+#: inc/core/data.php:1644 inc/core/data.php:1674 inc/core/data.php:1694
+#: inc/core/data.php:1721 inc/core/data.php:1742 inc/core/data.php:1787
+#: inc/core/data.php:1832 inc/core/data.php:1951 inc/core/data.php:2089
+#: inc/core/data.php:2170 inc/core/data.php:2344 inc/core/data.php:2399
+#: inc/core/data.php:2445
 msgid "Extra CSS class"
 msgstr ""
 
@@ -499,8 +499,8 @@ msgstr ""
 msgid "Tab name"
 msgstr ""
 
-#: inc/core/data.php:230 inc/core/data.php:263 inc/core/data.php:790
-#: inc/core/data.php:833 inc/core/data.php:1499
+#: inc/core/data.php:230 inc/core/data.php:263 inc/core/data.php:791
+#: inc/core/data.php:834 inc/core/data.php:1500
 msgid "Title"
 msgstr ""
 
@@ -619,8 +619,8 @@ msgstr ""
 msgid "Folder 2"
 msgstr ""
 
-#: inc/core/data.php:300 inc/core/data.php:640 inc/core/data.php:745
-#: inc/core/data.php:796
+#: inc/core/data.php:300 inc/core/data.php:640 inc/core/data.php:746
+#: inc/core/data.php:797
 msgid "Icon"
 msgstr ""
 
@@ -696,11 +696,11 @@ msgstr ""
 msgid "Spacer"
 msgstr ""
 
-#: inc/core/data.php:376 inc/core/data.php:1094 inc/core/data.php:1151
-#: inc/core/data.php:1270 inc/core/data.php:1321 inc/core/data.php:1365
-#: inc/core/data.php:1517 inc/core/data.php:1774 inc/core/data.php:1813
-#: inc/core/data.php:1896 inc/core/data.php:2016 inc/core/data.php:2153
-#: inc/core/data.php:2370
+#: inc/core/data.php:376 inc/core/data.php:1095 inc/core/data.php:1152
+#: inc/core/data.php:1271 inc/core/data.php:1322 inc/core/data.php:1366
+#: inc/core/data.php:1518 inc/core/data.php:1775 inc/core/data.php:1814
+#: inc/core/data.php:1897 inc/core/data.php:2017 inc/core/data.php:2154
+#: inc/core/data.php:2371
 msgid "Height"
 msgstr ""
 
@@ -716,7 +716,7 @@ msgstr ""
 msgid "Highlight"
 msgstr ""
 
-#: inc/core/data.php:398 inc/core/data.php:700 inc/core/data.php:890
+#: inc/core/data.php:398 inc/core/data.php:701 inc/core/data.php:891
 msgid "Background"
 msgstr ""
 
@@ -724,7 +724,7 @@ msgstr ""
 msgid "Highlighted text background color"
 msgstr ""
 
-#: inc/core/data.php:405 inc/core/data.php:706 inc/core/data.php:896
+#: inc/core/data.php:405 inc/core/data.php:707 inc/core/data.php:897
 msgid "Text color"
 msgstr ""
 
@@ -915,7 +915,7 @@ msgstr ""
 msgid "Select column width. This width will be calculated depend page width"
 msgstr ""
 
-#: inc/core/data.php:616 inc/core/data.php:726
+#: inc/core/data.php:616 inc/core/data.php:727
 msgid "Centered"
 msgstr ""
 
@@ -943,11 +943,11 @@ msgstr ""
 msgid "You can upload custom icon for this list or pick a built-in icon"
 msgstr ""
 
-#: inc/core/data.php:646 inc/core/data.php:751 inc/core/data.php:802
+#: inc/core/data.php:646 inc/core/data.php:752 inc/core/data.php:803
 msgid "Icon color"
 msgstr ""
 
-#: inc/core/data.php:647 inc/core/data.php:752 inc/core/data.php:803
+#: inc/core/data.php:647 inc/core/data.php:753 inc/core/data.php:804
 msgid ""
 "This color will be applied to the selected icon. Does not works with "
 "uploaded icons"
@@ -978,15 +978,15 @@ msgstr ""
 msgid "Button link"
 msgstr ""
 
-#: inc/core/data.php:674 inc/core/data.php:1584
+#: inc/core/data.php:674 inc/core/data.php:1585
 msgid "Same tab"
 msgstr ""
 
-#: inc/core/data.php:675 inc/core/data.php:1585
+#: inc/core/data.php:675 inc/core/data.php:1586
 msgid "New tab"
 msgstr ""
 
-#: inc/core/data.php:678 inc/core/data.php:1588
+#: inc/core/data.php:678 inc/core/data.php:1589
 msgid "Target"
 msgstr ""
 
@@ -994,241 +994,245 @@ msgstr ""
 msgid "Button link target"
 msgstr ""
 
-#: inc/core/data.php:686 inc/core/data.php:839
-msgid "Soft"
+#: inc/core/data.php:686
+msgid "Ghost"
 msgstr ""
 
 #: inc/core/data.php:687 inc/core/data.php:840
-msgid "Glass"
+msgid "Soft"
 msgstr ""
 
 #: inc/core/data.php:688 inc/core/data.php:841
-msgid "Bubbles"
+msgid "Glass"
 msgstr ""
 
 #: inc/core/data.php:689 inc/core/data.php:842
+msgid "Bubbles"
+msgstr ""
+
+#: inc/core/data.php:690 inc/core/data.php:843
 msgid "Noise"
 msgstr ""
 
-#: inc/core/data.php:690
+#: inc/core/data.php:691
 msgid "Stroked"
 msgstr ""
 
-#: inc/core/data.php:691
+#: inc/core/data.php:692
 msgid "3D"
 msgstr ""
 
-#: inc/core/data.php:694
+#: inc/core/data.php:695
 msgid "Button background style preset"
 msgstr ""
 
-#: inc/core/data.php:700
+#: inc/core/data.php:701
 msgid "Button background color"
 msgstr ""
 
-#: inc/core/data.php:707
+#: inc/core/data.php:708
 msgid "Button text color"
 msgstr ""
 
-#: inc/core/data.php:716
+#: inc/core/data.php:717
 msgid "Button size"
 msgstr ""
 
-#: inc/core/data.php:721
+#: inc/core/data.php:722
 msgid "Fluid"
 msgstr ""
 
-#: inc/core/data.php:721
+#: inc/core/data.php:722
 msgid "Fluid buttons has 100% width"
 msgstr ""
 
-#: inc/core/data.php:726
+#: inc/core/data.php:727
 msgid "Is button centered on the page"
 msgstr ""
 
-#: inc/core/data.php:731
+#: inc/core/data.php:732
 msgid "Auto"
 msgstr ""
 
-#: inc/core/data.php:732
+#: inc/core/data.php:733
 msgid "Round"
 msgstr ""
 
-#: inc/core/data.php:733
+#: inc/core/data.php:734
 msgid "Square"
 msgstr ""
 
-#: inc/core/data.php:739 inc/core/data.php:867 inc/core/data.php:905
+#: inc/core/data.php:740 inc/core/data.php:868 inc/core/data.php:906
 msgid "Radius"
 msgstr ""
 
-#: inc/core/data.php:740
+#: inc/core/data.php:741
 msgid "Radius of button corners. Auto-radius calculation based on button size"
 msgstr ""
 
-#: inc/core/data.php:746
+#: inc/core/data.php:747
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr ""
 
-#: inc/core/data.php:757
+#: inc/core/data.php:758
 msgid "Text shadow"
 msgstr ""
 
-#: inc/core/data.php:758
+#: inc/core/data.php:759
 msgid "Button text shadow"
 msgstr ""
 
-#: inc/core/data.php:762
+#: inc/core/data.php:763
 msgid "Description"
 msgstr ""
 
-#: inc/core/data.php:763
+#: inc/core/data.php:764
 msgid ""
 "Small description under button text. This option is incompatible with icon."
 msgstr ""
 
-#: inc/core/data.php:767
+#: inc/core/data.php:768
 msgid "onClick"
 msgstr ""
 
-#: inc/core/data.php:768
+#: inc/core/data.php:769
 msgid "Advanced JavaScript code for onClick action"
 msgstr ""
 
-#: inc/core/data.php:776
+#: inc/core/data.php:777
 msgid "Button text"
 msgstr ""
 
-#: inc/core/data.php:777
+#: inc/core/data.php:778
 msgid "Styled button"
 msgstr ""
 
-#: inc/core/data.php:783
+#: inc/core/data.php:784
 msgid "Service"
 msgstr ""
 
-#: inc/core/data.php:789 inc/core/shortcodes.php:430
+#: inc/core/data.php:790 inc/core/shortcodes.php:430
 msgid "Service title"
 msgstr ""
 
-#: inc/core/data.php:791
+#: inc/core/data.php:792
 msgid "Service name"
 msgstr ""
 
-#: inc/core/data.php:797
+#: inc/core/data.php:798
 msgid "You can upload custom icon for this box"
 msgstr ""
 
-#: inc/core/data.php:811
+#: inc/core/data.php:812
 msgid "Icon size"
 msgstr ""
 
-#: inc/core/data.php:812
+#: inc/core/data.php:813
 msgid "Size of the uploaded icon in pixels"
 msgstr ""
 
-#: inc/core/data.php:820
+#: inc/core/data.php:821
 msgid "Service description"
 msgstr ""
 
-#: inc/core/data.php:821
+#: inc/core/data.php:822
 msgid "Service box with title"
 msgstr ""
 
-#: inc/core/data.php:832
+#: inc/core/data.php:833
 msgid "Box title"
 msgstr ""
 
-#: inc/core/data.php:833
+#: inc/core/data.php:834
 msgid "Text for the box title"
 msgstr ""
 
-#: inc/core/data.php:846
+#: inc/core/data.php:847
 msgid "Box style preset"
 msgstr ""
 
-#: inc/core/data.php:852 inc/core/generator-views.php:99
+#: inc/core/data.php:853 inc/core/generator-views.php:99
 msgid "Color"
 msgstr ""
 
-#: inc/core/data.php:853
+#: inc/core/data.php:854
 msgid "Color for the box title and borders"
 msgstr ""
 
-#: inc/core/data.php:859
+#: inc/core/data.php:860
 msgid "Title text color"
 msgstr ""
 
-#: inc/core/data.php:859
+#: inc/core/data.php:860
 msgid "Color for the box title text"
 msgstr ""
 
-#: inc/core/data.php:868
+#: inc/core/data.php:869
 msgid "Box corners radius"
 msgstr ""
 
-#: inc/core/data.php:876
+#: inc/core/data.php:877
 msgid "Box content"
 msgstr ""
 
-#: inc/core/data.php:877
+#: inc/core/data.php:878
 msgid "Colored box with caption"
 msgstr ""
 
-#: inc/core/data.php:882
+#: inc/core/data.php:883
 msgid "Note"
 msgstr ""
 
-#: inc/core/data.php:890
+#: inc/core/data.php:891
 msgid "Note background color"
 msgstr ""
 
-#: inc/core/data.php:897
+#: inc/core/data.php:898
 msgid "Note text color"
 msgstr ""
 
-#: inc/core/data.php:905
+#: inc/core/data.php:906
 msgid "Note corners radius"
 msgstr ""
 
-#: inc/core/data.php:913
+#: inc/core/data.php:914
 msgid "Note text"
 msgstr ""
 
-#: inc/core/data.php:914
+#: inc/core/data.php:915
 msgid "Colored box"
 msgstr ""
 
-#: inc/core/data.php:919 inc/core/data.php:1863 inc/core/data.php:1982
-#: inc/core/data.php:2120
+#: inc/core/data.php:920 inc/core/data.php:1864 inc/core/data.php:1983
+#: inc/core/data.php:2121
 msgid "Lightbox"
 msgstr ""
 
-#: inc/core/data.php:926
+#: inc/core/data.php:927
 msgid "Iframe"
 msgstr ""
 
-#: inc/core/data.php:927
+#: inc/core/data.php:928
 msgid "Image"
 msgstr ""
 
-#: inc/core/data.php:928
+#: inc/core/data.php:929
 msgid "Inline (html content)"
 msgstr ""
 
-#: inc/core/data.php:931
+#: inc/core/data.php:932
 msgid "Content type"
 msgstr ""
 
-#: inc/core/data.php:932
+#: inc/core/data.php:933
 msgid "Select type of the lightbox window content"
 msgstr ""
 
-#: inc/core/data.php:936
+#: inc/core/data.php:937
 msgid "Content source"
 msgstr ""
 
-#: inc/core/data.php:937
+#: inc/core/data.php:938
 msgid ""
 "Insert here URL or CSS selector. Use URL for Iframe and Image content types. "
 "Use CSS selector for Inline content type.<br />Example values:<br /><b"
@@ -1238,338 +1242,338 @@ msgid ""
 "(iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
 msgstr ""
 
-#: inc/core/data.php:945
+#: inc/core/data.php:946
 msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
 msgstr ""
 
-#: inc/core/data.php:946
+#: inc/core/data.php:947
 msgid "Lightbox window with custom content"
 msgstr ""
 
-#: inc/core/data.php:951
+#: inc/core/data.php:952
 msgid "Tooltip"
 msgstr ""
 
-#: inc/core/data.php:958
+#: inc/core/data.php:959
 msgid "Basic: Light"
 msgstr ""
 
-#: inc/core/data.php:959
+#: inc/core/data.php:960
 msgid "Basic: Dark"
 msgstr ""
 
-#: inc/core/data.php:960
+#: inc/core/data.php:961
 msgid "Basic: Yellow"
 msgstr ""
 
-#: inc/core/data.php:961
+#: inc/core/data.php:962
 msgid "Basic: Green"
 msgstr ""
 
-#: inc/core/data.php:962
+#: inc/core/data.php:963
 msgid "Basic: Red"
 msgstr ""
 
-#: inc/core/data.php:963
+#: inc/core/data.php:964
 msgid "Basic: Blue"
 msgstr ""
 
-#: inc/core/data.php:964
+#: inc/core/data.php:965
 msgid "Youtube"
 msgstr ""
 
-#: inc/core/data.php:965
+#: inc/core/data.php:966
 msgid "Tipsy"
 msgstr ""
 
-#: inc/core/data.php:966
+#: inc/core/data.php:967
 msgid "Bootstrap"
 msgstr ""
 
-#: inc/core/data.php:967
+#: inc/core/data.php:968
 msgid "jTools"
 msgstr ""
 
-#: inc/core/data.php:968
+#: inc/core/data.php:969
 msgid "Tipped"
 msgstr ""
 
-#: inc/core/data.php:969
+#: inc/core/data.php:970
 msgid "Cluetip"
 msgstr ""
 
-#: inc/core/data.php:973
+#: inc/core/data.php:974
 msgid "Tooltip window style"
 msgstr ""
 
-#: inc/core/data.php:978
+#: inc/core/data.php:979
 msgid "Top"
 msgstr ""
 
-#: inc/core/data.php:979
+#: inc/core/data.php:980
 msgid "Bottom"
 msgstr ""
 
-#: inc/core/data.php:984
+#: inc/core/data.php:985
 msgid "Position"
 msgstr ""
 
-#: inc/core/data.php:985
+#: inc/core/data.php:986
 msgid "Tooltip position"
 msgstr ""
 
-#: inc/core/data.php:990
+#: inc/core/data.php:991
 msgid "Shadow"
 msgstr ""
 
-#: inc/core/data.php:991
+#: inc/core/data.php:992
 msgid ""
 "Add shadow to tooltip. This option is only works with basic styes, e.g. "
 "blue, green etc."
 msgstr ""
 
-#: inc/core/data.php:996
+#: inc/core/data.php:997
 msgid "Rounded corners"
 msgstr ""
 
-#: inc/core/data.php:997
+#: inc/core/data.php:998
 msgid ""
 "Use rounded for tooltip. This option is only works with basic styes, e.g. "
 "blue, green etc."
 msgstr ""
 
-#: inc/core/data.php:1011
+#: inc/core/data.php:1012
 msgid "Font size"
 msgstr ""
 
-#: inc/core/data.php:1012
+#: inc/core/data.php:1013
 msgid "Tooltip font size"
 msgstr ""
 
-#: inc/core/data.php:1016
+#: inc/core/data.php:1017
 msgid "Tooltip title"
 msgstr ""
 
-#: inc/core/data.php:1017
+#: inc/core/data.php:1018
 msgid ""
 "Enter title for tooltip window. Leave this field empty to hide the title"
 msgstr ""
 
-#: inc/core/data.php:1020 inc/core/shortcodes.php:508
+#: inc/core/data.php:1021 inc/core/shortcodes.php:508
 msgid "Tooltip text"
 msgstr ""
 
-#: inc/core/data.php:1021
+#: inc/core/data.php:1022
 msgid "Tooltip content"
 msgstr ""
 
-#: inc/core/data.php:1022
+#: inc/core/data.php:1023
 msgid "Enter tooltip content here"
 msgstr ""
 
-#: inc/core/data.php:1027
+#: inc/core/data.php:1028
 msgid "Show and hide on mouse hover"
 msgstr ""
 
-#: inc/core/data.php:1028
+#: inc/core/data.php:1029
 msgid "Show and hide by mouse click"
 msgstr ""
 
-#: inc/core/data.php:1029
+#: inc/core/data.php:1030
 msgid "Always visible"
 msgstr ""
 
-#: inc/core/data.php:1032
+#: inc/core/data.php:1033
 msgid "Behavior"
 msgstr ""
 
-#: inc/core/data.php:1033
+#: inc/core/data.php:1034
 msgid "Select tooltip behavior"
 msgstr ""
 
-#: inc/core/data.php:1038
+#: inc/core/data.php:1039
 msgid "Close button"
 msgstr ""
 
-#: inc/core/data.php:1039
+#: inc/core/data.php:1040
 msgid "Show close button"
 msgstr ""
 
-#: inc/core/data.php:1047
+#: inc/core/data.php:1048
 msgid "[%prefix_button] Hover me to open tooltip [/%prefix_button]"
 msgstr ""
 
-#: inc/core/data.php:1048
+#: inc/core/data.php:1049
 msgid "Tooltip window with custom content"
 msgstr ""
 
-#: inc/core/data.php:1053
+#: inc/core/data.php:1054
 msgid "Private"
 msgstr ""
 
-#: inc/core/data.php:1063
+#: inc/core/data.php:1064
 msgid "Private note text"
 msgstr ""
 
-#: inc/core/data.php:1064
+#: inc/core/data.php:1065
 msgid "Private note for post authors"
 msgstr ""
 
-#: inc/core/data.php:1069
+#: inc/core/data.php:1070
 msgid "YouTube"
 msgstr ""
 
-#: inc/core/data.php:1076 inc/core/data.php:1128 inc/core/data.php:1253
-#: inc/core/data.php:1303 inc/core/data.php:1347 inc/core/data.php:1659
-#: inc/core/data.php:1756
+#: inc/core/data.php:1077 inc/core/data.php:1129 inc/core/data.php:1254
+#: inc/core/data.php:1304 inc/core/data.php:1348 inc/core/data.php:1660
+#: inc/core/data.php:1757
 msgid "Url"
 msgstr ""
 
-#: inc/core/data.php:1077 inc/core/data.php:1129
+#: inc/core/data.php:1078 inc/core/data.php:1130
 msgid "Url of YouTube page with video. Ex: http://youtube.com/watch?v=XXXXXX"
 msgstr ""
 
-#: inc/core/data.php:1085 inc/core/data.php:1142 inc/core/data.php:1261
-#: inc/core/data.php:1312 inc/core/data.php:1356 inc/core/data.php:1453
-#: inc/core/data.php:1508 inc/core/data.php:1765 inc/core/data.php:1804
-#: inc/core/data.php:1888 inc/core/data.php:2007 inc/core/data.php:2145
-#: inc/core/data.php:2361
+#: inc/core/data.php:1086 inc/core/data.php:1143 inc/core/data.php:1262
+#: inc/core/data.php:1313 inc/core/data.php:1357 inc/core/data.php:1454
+#: inc/core/data.php:1509 inc/core/data.php:1766 inc/core/data.php:1805
+#: inc/core/data.php:1889 inc/core/data.php:2008 inc/core/data.php:2146
+#: inc/core/data.php:2362
 msgid "Width"
 msgstr ""
 
-#: inc/core/data.php:1086 inc/core/data.php:1143 inc/core/data.php:1262
-#: inc/core/data.php:1313 inc/core/data.php:1357 inc/core/data.php:1509
+#: inc/core/data.php:1087 inc/core/data.php:1144 inc/core/data.php:1263
+#: inc/core/data.php:1314 inc/core/data.php:1358 inc/core/data.php:1510
 msgid "Player width"
 msgstr ""
 
-#: inc/core/data.php:1095 inc/core/data.php:1152 inc/core/data.php:1271
-#: inc/core/data.php:1322 inc/core/data.php:1366 inc/core/data.php:1518
+#: inc/core/data.php:1096 inc/core/data.php:1153 inc/core/data.php:1272
+#: inc/core/data.php:1323 inc/core/data.php:1367 inc/core/data.php:1519
 msgid "Player height"
 msgstr ""
 
-#: inc/core/data.php:1100 inc/core/data.php:1157 inc/core/data.php:1276
-#: inc/core/data.php:1327 inc/core/data.php:1371 inc/core/data.php:1780
-#: inc/core/data.php:1819 inc/core/data.php:1901 inc/core/data.php:2022
+#: inc/core/data.php:1101 inc/core/data.php:1158 inc/core/data.php:1277
+#: inc/core/data.php:1328 inc/core/data.php:1372 inc/core/data.php:1781
+#: inc/core/data.php:1820 inc/core/data.php:1902 inc/core/data.php:2023
 msgid "Responsive"
 msgstr ""
 
-#: inc/core/data.php:1101 inc/core/data.php:1158 inc/core/data.php:1277
-#: inc/core/data.php:1328 inc/core/data.php:1372
+#: inc/core/data.php:1102 inc/core/data.php:1159 inc/core/data.php:1278
+#: inc/core/data.php:1329 inc/core/data.php:1373
 msgid "Ignore width and height parameters and make player responsive"
 msgstr ""
 
-#: inc/core/data.php:1106 inc/core/data.php:1191 inc/core/data.php:1282
-#: inc/core/data.php:1377 inc/core/data.php:1459 inc/core/data.php:1529
-#: inc/core/data.php:1936 inc/core/data.php:2074
+#: inc/core/data.php:1107 inc/core/data.php:1192 inc/core/data.php:1283
+#: inc/core/data.php:1378 inc/core/data.php:1460 inc/core/data.php:1530
+#: inc/core/data.php:1937 inc/core/data.php:2075
 msgid "Autoplay"
 msgstr ""
 
-#: inc/core/data.php:1107 inc/core/data.php:1192 inc/core/data.php:1283
+#: inc/core/data.php:1108 inc/core/data.php:1193 inc/core/data.php:1284
 msgid "Play video automatically when page is loaded"
 msgstr ""
 
-#: inc/core/data.php:1115
+#: inc/core/data.php:1116
 msgid "YouTube video"
 msgstr ""
 
-#: inc/core/data.php:1121
+#: inc/core/data.php:1122
 msgid "YouTube Advanced"
 msgstr ""
 
-#: inc/core/data.php:1133
+#: inc/core/data.php:1134
 msgid "Playlist"
 msgstr ""
 
-#: inc/core/data.php:1134
+#: inc/core/data.php:1135
 msgid ""
 "Value is a comma-separated list of video IDs to play. If you specify a "
 "value, the first video that plays will be the VIDEO_ID specified in the URL "
 "path, and the videos specified in the playlist parameter will play thereafter"
 msgstr ""
 
-#: inc/core/data.php:1163
+#: inc/core/data.php:1164
 msgid "0 - Hide controls"
 msgstr ""
 
-#: inc/core/data.php:1164
+#: inc/core/data.php:1165
 msgid "1 - Show controls"
 msgstr ""
 
-#: inc/core/data.php:1165
+#: inc/core/data.php:1166
 msgid "2 - Show controls when playback is started"
 msgstr ""
 
-#: inc/core/data.php:1168 inc/core/data.php:1523
+#: inc/core/data.php:1169 inc/core/data.php:1524
 msgid "Controls"
 msgstr ""
 
-#: inc/core/data.php:1169
+#: inc/core/data.php:1170
 msgid "This parameter indicates whether the video player controls will display"
 msgstr ""
 
-#: inc/core/data.php:1174
+#: inc/core/data.php:1175
 msgid "0 - Do not hide controls"
 msgstr ""
 
-#: inc/core/data.php:1175
+#: inc/core/data.php:1176
 msgid "1 - Hide all controls on mouse out"
 msgstr ""
 
-#: inc/core/data.php:1176
+#: inc/core/data.php:1177
 msgid "2 - Hide progress bar on mouse out"
 msgstr ""
 
-#: inc/core/data.php:1179
+#: inc/core/data.php:1180
 msgid "Autohide"
 msgstr ""
 
-#: inc/core/data.php:1180
+#: inc/core/data.php:1181
 msgid ""
 "This parameter indicates whether the video controls will automatically hide "
 "after a video begins playing"
 msgstr ""
 
-#: inc/core/data.php:1185
+#: inc/core/data.php:1186
 msgid "Show title bar"
 msgstr ""
 
-#: inc/core/data.php:1186
+#: inc/core/data.php:1187
 msgid ""
 "If you set the parameter value to NO, then the player will not display "
 "information like the video title and uploader before the video starts "
 "playing."
 msgstr ""
 
-#: inc/core/data.php:1197 inc/core/data.php:1465 inc/core/data.php:1535
+#: inc/core/data.php:1198 inc/core/data.php:1466 inc/core/data.php:1536
 msgid "Loop"
 msgstr ""
 
-#: inc/core/data.php:1198
+#: inc/core/data.php:1199
 msgid ""
 "Setting of YES will cause the player to play the initial video again and "
 "again"
 msgstr ""
 
-#: inc/core/data.php:1203
+#: inc/core/data.php:1204
 msgid "Related videos"
 msgstr ""
 
-#: inc/core/data.php:1204
+#: inc/core/data.php:1205
 msgid ""
 "This parameter indicates whether the player should show related videos when "
 "playback of the initial video ends"
 msgstr ""
 
-#: inc/core/data.php:1209
+#: inc/core/data.php:1210
 msgid "Show full-screen button"
 msgstr ""
 
-#: inc/core/data.php:1210
+#: inc/core/data.php:1211
 msgid ""
 "Setting this parameter to NO prevents the fullscreen button from displaying"
 msgstr ""
 
-#: inc/core/data.php:1216
+#: inc/core/data.php:1217
 msgid ""
 "This parameter lets you use a YouTube player that does not show a YouTube "
 "logo. Set the parameter value to YES to prevent the YouTube logo from "
@@ -1578,206 +1582,206 @@ msgid ""
 "mouse pointer hovers over the player"
 msgstr ""
 
-#: inc/core/data.php:1221
+#: inc/core/data.php:1222
 msgid "Dark theme"
 msgstr ""
 
-#: inc/core/data.php:1222
+#: inc/core/data.php:1223
 msgid "Light theme"
 msgstr ""
 
-#: inc/core/data.php:1225 inc/core/data.php:2392
+#: inc/core/data.php:1226 inc/core/data.php:2393
 msgid "Theme"
 msgstr ""
 
-#: inc/core/data.php:1226
+#: inc/core/data.php:1227
 msgid ""
 "This parameter indicates whether the embedded player will display player "
 "controls (like a play button or volume control) within a dark or light "
 "control bar"
 msgstr ""
 
-#: inc/core/data.php:1231
+#: inc/core/data.php:1232
 msgid "Force HTTPS"
 msgstr ""
 
-#: inc/core/data.php:1232
+#: inc/core/data.php:1233
 msgid "Use HTTPS in player iframe"
 msgstr ""
 
-#: inc/core/data.php:1240
+#: inc/core/data.php:1241
 msgid "YouTube video player with advanced settings"
 msgstr ""
 
-#: inc/core/data.php:1246
+#: inc/core/data.php:1247
 msgid "Vimeo"
 msgstr ""
 
-#: inc/core/data.php:1253
+#: inc/core/data.php:1254
 msgid "Url of Vimeo page with video"
 msgstr ""
 
-#: inc/core/data.php:1291
+#: inc/core/data.php:1292
 msgid "Vimeo video"
 msgstr ""
 
-#: inc/core/data.php:1297
+#: inc/core/data.php:1298
 msgid "Screenr"
 msgstr ""
 
-#: inc/core/data.php:1304
+#: inc/core/data.php:1305
 msgid "Url of Screenr page with video"
 msgstr ""
 
-#: inc/core/data.php:1336
+#: inc/core/data.php:1337
 msgid "Screenr video"
 msgstr ""
 
-#: inc/core/data.php:1341
+#: inc/core/data.php:1342
 msgid "Dailymotion"
 msgstr ""
 
-#: inc/core/data.php:1348
+#: inc/core/data.php:1349
 msgid "Url of Dailymotion page with video"
 msgstr ""
 
-#: inc/core/data.php:1378
+#: inc/core/data.php:1379
 msgid ""
 "Start the playback of the video automatically after the player load. May not "
 "work on some mobile OS versions"
 msgstr ""
 
-#: inc/core/data.php:1383
+#: inc/core/data.php:1384
 msgid "Background color"
 msgstr ""
 
-#: inc/core/data.php:1384
+#: inc/core/data.php:1385
 msgid "HTML color of the background of controls elements"
 msgstr ""
 
-#: inc/core/data.php:1389
+#: inc/core/data.php:1390
 msgid "Foreground color"
 msgstr ""
 
-#: inc/core/data.php:1390
+#: inc/core/data.php:1391
 msgid "HTML color of the foreground of controls elements"
 msgstr ""
 
-#: inc/core/data.php:1395
+#: inc/core/data.php:1396
 msgid "Highlight color"
 msgstr ""
 
-#: inc/core/data.php:1396
+#: inc/core/data.php:1397
 msgid "HTML color of the controls elements' highlights"
 msgstr ""
 
-#: inc/core/data.php:1401
+#: inc/core/data.php:1402
 msgid "Show logo"
 msgstr ""
 
-#: inc/core/data.php:1402
+#: inc/core/data.php:1403
 msgid "Allows to hide or show the Dailymotion logo"
 msgstr ""
 
-#: inc/core/data.php:1414
+#: inc/core/data.php:1415
 msgid "Quality"
 msgstr ""
 
-#: inc/core/data.php:1415
+#: inc/core/data.php:1416
 msgid "Determines the quality that must be played by default if available"
 msgstr ""
 
-#: inc/core/data.php:1420
+#: inc/core/data.php:1421
 msgid "Show related videos"
 msgstr ""
 
-#: inc/core/data.php:1421
+#: inc/core/data.php:1422
 msgid "Show related videos at the end of the video"
 msgstr ""
 
-#: inc/core/data.php:1426
+#: inc/core/data.php:1427
 msgid "Show video info"
 msgstr ""
 
-#: inc/core/data.php:1427
+#: inc/core/data.php:1428
 msgid "Show videos info (title/author) on the start screen"
 msgstr ""
 
-#: inc/core/data.php:1435
+#: inc/core/data.php:1436
 msgid "Dailymotion video"
 msgstr ""
 
-#: inc/core/data.php:1440
+#: inc/core/data.php:1441
 msgid "Audio"
 msgstr ""
 
-#: inc/core/data.php:1447 inc/core/data.php:1487
+#: inc/core/data.php:1448 inc/core/data.php:1488
 msgid "File"
 msgstr ""
 
-#: inc/core/data.php:1448
+#: inc/core/data.php:1449
 msgid "Audio file url. Supported formats: mp3, ogg"
 msgstr ""
 
-#: inc/core/data.php:1454
+#: inc/core/data.php:1455
 msgid ""
 "Player width. You can specify width in percents and player will be "
 "responsive. Example values: <b%value>200px</b>, <b%value>100&#37;</b>"
 msgstr ""
 
-#: inc/core/data.php:1460 inc/core/data.php:1530
+#: inc/core/data.php:1461 inc/core/data.php:1531
 msgid "Play file automatically when page is loaded"
 msgstr ""
 
-#: inc/core/data.php:1466 inc/core/data.php:1536
+#: inc/core/data.php:1467 inc/core/data.php:1537
 msgid "Repeat when playback is ended"
 msgstr ""
 
-#: inc/core/data.php:1474
+#: inc/core/data.php:1475
 msgid "Custom audio player"
 msgstr ""
 
-#: inc/core/data.php:1480
+#: inc/core/data.php:1481
 msgid "Video"
 msgstr ""
 
-#: inc/core/data.php:1488
+#: inc/core/data.php:1489
 msgid "Url to mp4/flv video-file"
 msgstr ""
 
-#: inc/core/data.php:1493
+#: inc/core/data.php:1494
 msgid "Poster"
 msgstr ""
 
-#: inc/core/data.php:1494
+#: inc/core/data.php:1495
 msgid "Url to poster image, that will be shown before playback"
 msgstr ""
 
-#: inc/core/data.php:1500
+#: inc/core/data.php:1501
 msgid "Player title"
 msgstr ""
 
-#: inc/core/data.php:1524
+#: inc/core/data.php:1525
 msgid "Show player controls (play/pause etc.) or not"
 msgstr ""
 
-#: inc/core/data.php:1544
+#: inc/core/data.php:1545
 msgid "Custom video player"
 msgstr ""
 
-#: inc/core/data.php:1550
+#: inc/core/data.php:1551
 msgid "Table"
 msgstr ""
 
-#: inc/core/data.php:1557
+#: inc/core/data.php:1558
 msgid "CSV file"
 msgstr ""
 
-#: inc/core/data.php:1558
+#: inc/core/data.php:1559
 msgid "Upload CSV file if you want to create HTML-table from file"
 msgstr ""
 
-#: inc/core/data.php:1566
+#: inc/core/data.php:1567
 msgid ""
 "<table>\n"
 "<tr>\n"
@@ -1791,429 +1795,429 @@ msgid ""
 "</table>"
 msgstr ""
 
-#: inc/core/data.php:1567
+#: inc/core/data.php:1568
 msgid "Styled table from HTML or CSV file"
 msgstr ""
 
-#: inc/core/data.php:1572
+#: inc/core/data.php:1573
 msgid "Permalink"
 msgstr ""
 
-#: inc/core/data.php:1578 inc/core/data.php:2502
+#: inc/core/data.php:1579 inc/core/data.php:2503
 msgid "ID"
 msgstr ""
 
-#: inc/core/data.php:1579
+#: inc/core/data.php:1580
 msgid "Post or page ID"
 msgstr ""
 
-#: inc/core/data.php:1589
+#: inc/core/data.php:1590
 msgid "Link target. blank - link will be opened in new window/tab"
 msgstr ""
 
-#: inc/core/data.php:1598
+#: inc/core/data.php:1599
 msgid "Permalink to specified post/page"
 msgstr ""
 
-#: inc/core/data.php:1603
+#: inc/core/data.php:1604
 msgid "Members"
 msgstr ""
 
-#: inc/core/data.php:1608 inc/core/shortcodes.php:794
+#: inc/core/data.php:1609 inc/core/shortcodes.php:794
 msgid "This content is for registered users only. Please %login%."
 msgstr ""
 
-#: inc/core/data.php:1609
+#: inc/core/data.php:1610
 msgid "Message"
 msgstr ""
 
-#: inc/core/data.php:1609
+#: inc/core/data.php:1610
 msgid "Message for not logged users"
 msgstr ""
 
-#: inc/core/data.php:1614
+#: inc/core/data.php:1615
 msgid "Box color"
 msgstr ""
 
-#: inc/core/data.php:1614
+#: inc/core/data.php:1615
 msgid "This color will applied only to box for not logged users"
 msgstr ""
 
-#: inc/core/data.php:1617 inc/core/shortcodes.php:797
+#: inc/core/data.php:1618 inc/core/shortcodes.php:797
 msgid "login"
 msgstr ""
 
-#: inc/core/data.php:1618
+#: inc/core/data.php:1619
 msgid "Login link text"
 msgstr ""
 
-#: inc/core/data.php:1618
+#: inc/core/data.php:1619
 msgid "Text for the login link"
 msgstr ""
 
-#: inc/core/data.php:1622
+#: inc/core/data.php:1623
 msgid "Login link url"
 msgstr ""
 
-#: inc/core/data.php:1630
+#: inc/core/data.php:1631
 msgid "Content for logged members"
 msgstr ""
 
-#: inc/core/data.php:1631
+#: inc/core/data.php:1632
 msgid "Content for logged in members only"
 msgstr ""
 
-#: inc/core/data.php:1636
+#: inc/core/data.php:1637
 msgid "Guests"
 msgstr ""
 
-#: inc/core/data.php:1646
+#: inc/core/data.php:1647
 msgid "Content for guests"
 msgstr ""
 
-#: inc/core/data.php:1647
+#: inc/core/data.php:1648
 msgid "Content for guests only"
 msgstr ""
 
-#: inc/core/data.php:1652
+#: inc/core/data.php:1653
 msgid "RSS Feed"
 msgstr ""
 
-#: inc/core/data.php:1660
+#: inc/core/data.php:1661
 msgid "Url to RSS-feed"
 msgstr ""
 
-#: inc/core/data.php:1668 inc/core/data.php:1855 inc/core/data.php:1974
-#: inc/core/data.php:2112
+#: inc/core/data.php:1669 inc/core/data.php:1856 inc/core/data.php:1975
+#: inc/core/data.php:2113
 msgid "Limit"
 msgstr ""
 
-#: inc/core/data.php:1668
+#: inc/core/data.php:1669
 msgid "Number of items to show"
 msgstr ""
 
-#: inc/core/data.php:1676
+#: inc/core/data.php:1677
 msgid "Feed grabber"
 msgstr ""
 
-#: inc/core/data.php:1681
+#: inc/core/data.php:1682
 msgid "Menu"
 msgstr ""
 
-#: inc/core/data.php:1688
+#: inc/core/data.php:1689
 msgid "Menu name"
 msgstr ""
 
-#: inc/core/data.php:1688
+#: inc/core/data.php:1689
 msgid "Custom menu name. Ex: Main menu"
 msgstr ""
 
-#: inc/core/data.php:1696
+#: inc/core/data.php:1697
 msgid "Custom menu by name"
 msgstr ""
 
-#: inc/core/data.php:1701
+#: inc/core/data.php:1702
 msgid "Sub pages"
 msgstr ""
 
-#: inc/core/data.php:1708 inc/core/data.php:1735
+#: inc/core/data.php:1709 inc/core/data.php:1736
 msgid "Depth"
 msgstr ""
 
-#: inc/core/data.php:1709
+#: inc/core/data.php:1710
 msgid "Max depth level of children pages"
 msgstr ""
 
-#: inc/core/data.php:1714
+#: inc/core/data.php:1715
 msgid "Parent ID"
 msgstr ""
 
-#: inc/core/data.php:1715
+#: inc/core/data.php:1716
 msgid "ID of the parent page. Leave blank to use current page"
 msgstr ""
 
-#: inc/core/data.php:1723
+#: inc/core/data.php:1724
 msgid "List of sub pages"
 msgstr ""
 
-#: inc/core/data.php:1728
+#: inc/core/data.php:1729
 msgid "Siblings"
 msgstr ""
 
-#: inc/core/data.php:1736
+#: inc/core/data.php:1737
 msgid "Max depth level"
 msgstr ""
 
-#: inc/core/data.php:1744
+#: inc/core/data.php:1745
 msgid "List of cureent page siblings"
 msgstr ""
 
-#: inc/core/data.php:1749
+#: inc/core/data.php:1750
 msgid "Document"
 msgstr ""
 
-#: inc/core/data.php:1757
+#: inc/core/data.php:1758
 msgid "Url to uploaded document. Supported formats: doc, xls, pdf etc."
 msgstr ""
 
-#: inc/core/data.php:1766
+#: inc/core/data.php:1767
 msgid "Viewer width"
 msgstr ""
 
-#: inc/core/data.php:1775
+#: inc/core/data.php:1776
 msgid "Viewer height"
 msgstr ""
 
-#: inc/core/data.php:1781
+#: inc/core/data.php:1782
 msgid "Ignore width and height parameters and make viewer responsive"
 msgstr ""
 
-#: inc/core/data.php:1789
+#: inc/core/data.php:1790
 msgid "Document viewer by Google"
 msgstr ""
 
-#: inc/core/data.php:1794
+#: inc/core/data.php:1795
 msgid "Gmap"
 msgstr ""
 
-#: inc/core/data.php:1805
+#: inc/core/data.php:1806
 msgid "Map width"
 msgstr ""
 
-#: inc/core/data.php:1814
+#: inc/core/data.php:1815
 msgid "Map height"
 msgstr ""
 
-#: inc/core/data.php:1820
+#: inc/core/data.php:1821
 msgid "Ignore width and height parameters and make map responsive"
 msgstr ""
 
-#: inc/core/data.php:1825
+#: inc/core/data.php:1826
 msgid "Marker"
 msgstr ""
 
-#: inc/core/data.php:1826
+#: inc/core/data.php:1827
 msgid "Address for the marker. You can type it in any language"
 msgstr ""
 
-#: inc/core/data.php:1834
+#: inc/core/data.php:1835
 msgid "Maps by Google"
 msgstr ""
 
-#: inc/core/data.php:1839
+#: inc/core/data.php:1840
 msgid "Slider"
 msgstr ""
 
-#: inc/core/data.php:1846 inc/core/data.php:1965 inc/core/data.php:2103
+#: inc/core/data.php:1847 inc/core/data.php:1966 inc/core/data.php:2104
 msgid "Source"
 msgstr ""
 
-#: inc/core/data.php:1847 inc/core/data.php:1966 inc/core/data.php:2104
+#: inc/core/data.php:1848 inc/core/data.php:1967 inc/core/data.php:2105
 msgid ""
 "Choose images source. You can use images from Media library or retrieve it "
 "from posts (thumbnails) posted under specified blog category. You can also "
 "pick any custom taxonomy"
 msgstr ""
 
-#: inc/core/data.php:1856 inc/core/data.php:1975 inc/core/data.php:2113
+#: inc/core/data.php:1857 inc/core/data.php:1976 inc/core/data.php:2114
 msgid ""
 "Maximum number of image source posts (for recent posts, category and custom "
 "taxonomy)"
 msgstr ""
 
-#: inc/core/data.php:1862 inc/core/data.php:1981 inc/core/data.php:2119
+#: inc/core/data.php:1863 inc/core/data.php:1982 inc/core/data.php:2120
 msgid "Full-size image"
 msgstr ""
 
-#: inc/core/data.php:1864 inc/core/data.php:1983 inc/core/data.php:2121
+#: inc/core/data.php:1865 inc/core/data.php:1984 inc/core/data.php:2122
 msgid "Slide link (added in media editor)"
 msgstr ""
 
-#: inc/core/data.php:1865 inc/core/data.php:1984 inc/core/data.php:2122
+#: inc/core/data.php:1866 inc/core/data.php:1985 inc/core/data.php:2123
 msgid "Attachment page"
 msgstr ""
 
-#: inc/core/data.php:1866 inc/core/data.php:1985 inc/core/data.php:2123
+#: inc/core/data.php:1867 inc/core/data.php:1986 inc/core/data.php:2124
 msgid "Post permalink"
 msgstr ""
 
-#: inc/core/data.php:1869 inc/core/data.php:1988 inc/core/data.php:2126
+#: inc/core/data.php:1870 inc/core/data.php:1989 inc/core/data.php:2127
 msgid "Links"
 msgstr ""
 
-#: inc/core/data.php:1870 inc/core/data.php:1989 inc/core/data.php:2127
+#: inc/core/data.php:1871 inc/core/data.php:1990 inc/core/data.php:2128
 msgid "Select which links will be used for images in this gallery"
 msgstr ""
 
-#: inc/core/data.php:1875 inc/core/data.php:1994 inc/core/data.php:2132
+#: inc/core/data.php:1876 inc/core/data.php:1995 inc/core/data.php:2133
 msgid "Same window"
 msgstr ""
 
-#: inc/core/data.php:1876 inc/core/data.php:1995 inc/core/data.php:2133
+#: inc/core/data.php:1877 inc/core/data.php:1996 inc/core/data.php:2134
 msgid "New window"
 msgstr ""
 
-#: inc/core/data.php:1879 inc/core/data.php:1998 inc/core/data.php:2136
+#: inc/core/data.php:1880 inc/core/data.php:1999 inc/core/data.php:2137
 msgid "Links target"
 msgstr ""
 
-#: inc/core/data.php:1880 inc/core/data.php:1999 inc/core/data.php:2137
+#: inc/core/data.php:1881 inc/core/data.php:2000 inc/core/data.php:2138
 msgid "Open links in"
 msgstr ""
 
-#: inc/core/data.php:1888
+#: inc/core/data.php:1889
 msgid "Slider width (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:1896
+#: inc/core/data.php:1897
 msgid "Slider height (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:1902
+#: inc/core/data.php:1903
 msgid "Ignore width and height parameters and make slider responsive"
 msgstr ""
 
-#: inc/core/data.php:1907 inc/core/data.php:2045 inc/core/data.php:2163
+#: inc/core/data.php:1908 inc/core/data.php:2046 inc/core/data.php:2164
 msgid "Show titles"
 msgstr ""
 
-#: inc/core/data.php:1907
+#: inc/core/data.php:1908
 msgid "Display slide titles"
 msgstr ""
 
-#: inc/core/data.php:1912
+#: inc/core/data.php:1913
 msgid "Is slider centered on the page"
 msgstr ""
 
-#: inc/core/data.php:1917 inc/core/data.php:2055
+#: inc/core/data.php:1918 inc/core/data.php:2056
 msgid "Arrows"
 msgstr ""
 
-#: inc/core/data.php:1917 inc/core/data.php:2055
+#: inc/core/data.php:1918 inc/core/data.php:2056
 msgid "Show left and right arrows"
 msgstr ""
 
-#: inc/core/data.php:1922 inc/core/data.php:2060
+#: inc/core/data.php:1923 inc/core/data.php:2061
 msgid "Pagination"
 msgstr ""
 
-#: inc/core/data.php:1923 inc/core/data.php:2061
+#: inc/core/data.php:1924 inc/core/data.php:2062
 msgid "Show pagination"
 msgstr ""
 
-#: inc/core/data.php:1927 inc/core/data.php:2065
+#: inc/core/data.php:1928 inc/core/data.php:2066
 msgid "Mouse wheel control"
 msgstr ""
 
-#: inc/core/data.php:1928
+#: inc/core/data.php:1929
 msgid "Allow to change slides with mouse wheel"
 msgstr ""
 
-#: inc/core/data.php:1937
+#: inc/core/data.php:1938
 msgid "Choose interval between slide animations. Set to 0 to disable autoplay"
 msgstr ""
 
-#: inc/core/data.php:1945 inc/core/data.php:2083
+#: inc/core/data.php:1946 inc/core/data.php:2084
 msgid "Speed"
 msgstr ""
 
-#: inc/core/data.php:1945 inc/core/data.php:2083
+#: inc/core/data.php:1946 inc/core/data.php:2084
 msgid "Specify animation speed"
 msgstr ""
 
-#: inc/core/data.php:1953
+#: inc/core/data.php:1954
 msgid "Customizable image slider"
 msgstr ""
 
-#: inc/core/data.php:1958
+#: inc/core/data.php:1959
 msgid "Carousel"
 msgstr ""
 
-#: inc/core/data.php:2008
+#: inc/core/data.php:2009
 msgid "Carousel width (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:2017
+#: inc/core/data.php:2018
 msgid "Carousel height (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:2023
+#: inc/core/data.php:2024
 msgid "Ignore width and height parameters and make carousel responsive"
 msgstr ""
 
-#: inc/core/data.php:2031
+#: inc/core/data.php:2032
 msgid "Items to show"
 msgstr ""
 
-#: inc/core/data.php:2032
+#: inc/core/data.php:2033
 msgid "How much carousel items is visible"
 msgstr ""
 
-#: inc/core/data.php:2039
+#: inc/core/data.php:2040
 msgid "Scroll number"
 msgstr ""
 
-#: inc/core/data.php:2040
+#: inc/core/data.php:2041
 msgid "How much items are scrolled in one transition"
 msgstr ""
 
-#: inc/core/data.php:2045
+#: inc/core/data.php:2046
 msgid "Display titles for each item"
 msgstr ""
 
-#: inc/core/data.php:2050
+#: inc/core/data.php:2051
 msgid "Is carousel centered on the page"
 msgstr ""
 
-#: inc/core/data.php:2066
+#: inc/core/data.php:2067
 msgid "Allow to rotate carousel with mouse wheel"
 msgstr ""
 
-#: inc/core/data.php:2075
+#: inc/core/data.php:2076
 msgid "Choose interval between auto animations. Set to 0 to disable autoplay"
 msgstr ""
 
-#: inc/core/data.php:2091
+#: inc/core/data.php:2092
 msgid "Customizable image carousel"
 msgstr ""
 
-#: inc/core/data.php:2145
+#: inc/core/data.php:2146
 msgid "Single item width (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:2153
+#: inc/core/data.php:2154
 msgid "Single item height (in pixels)"
 msgstr ""
 
-#: inc/core/data.php:2158
+#: inc/core/data.php:2159
 msgid "Never"
 msgstr ""
 
-#: inc/core/data.php:2159
+#: inc/core/data.php:2160
 msgid "On mouse over"
 msgstr ""
 
-#: inc/core/data.php:2160
+#: inc/core/data.php:2161
 msgid "Always"
 msgstr ""
 
-#: inc/core/data.php:2164
+#: inc/core/data.php:2165
 msgid "Title display mode"
 msgstr ""
 
-#: inc/core/data.php:2172
+#: inc/core/data.php:2173
 msgid "Customizable image gallery"
 msgstr ""
 
-#: inc/core/data.php:2177
+#: inc/core/data.php:2178
 msgid "Posts"
 msgstr ""
 
-#: inc/core/data.php:2182 inc/core/data.php:2609
+#: inc/core/data.php:2183 inc/core/data.php:2610
 msgid "Template"
 msgstr ""
 
-#: inc/core/data.php:2183
+#: inc/core/data.php:2184
 msgid ""
 "<b>Do not change this field value if you do not understand description below."
 "</b><br/>Relative path to the template file. Default templates is placed "
@@ -2226,550 +2230,550 @@ msgid ""
 "%value>templates/list-loop.php</b> - unordered list with posts titles"
 msgstr ""
 
-#: inc/core/data.php:2187
+#: inc/core/data.php:2188
 msgid "Post ID's"
 msgstr ""
 
-#: inc/core/data.php:2188
+#: inc/core/data.php:2189
 msgid "Enter comma separated ID's of the posts that you want to show"
 msgstr ""
 
-#: inc/core/data.php:2196
+#: inc/core/data.php:2197
 msgid "Posts per page"
 msgstr ""
 
-#: inc/core/data.php:2197
+#: inc/core/data.php:2198
 msgid ""
 "Specify number of posts that you want to show. Enter -1 to get all posts"
 msgstr ""
 
-#: inc/core/data.php:2204
+#: inc/core/data.php:2205
 msgid "Post types"
 msgstr ""
 
-#: inc/core/data.php:2205
+#: inc/core/data.php:2206
 msgid "Select post types. Hold Ctrl key to select multiple post types"
 msgstr ""
 
-#: inc/core/data.php:2211 inc/core/generator-views.php:123
+#: inc/core/data.php:2212 inc/core/generator-views.php:123
 msgid "Taxonomy"
 msgstr ""
 
-#: inc/core/data.php:2212
+#: inc/core/data.php:2213
 msgid "Select taxonomy to show posts from"
 msgstr ""
 
-#: inc/core/data.php:2219
+#: inc/core/data.php:2220
 msgid "Terms"
 msgstr ""
 
-#: inc/core/data.php:2220
+#: inc/core/data.php:2221
 msgid "Select terms to show posts from"
 msgstr ""
 
-#: inc/core/data.php:2225
+#: inc/core/data.php:2226
 msgid "Taxonomy term operator"
 msgstr ""
 
-#: inc/core/data.php:2226
+#: inc/core/data.php:2227
 msgid ""
 "IN - posts that have any of selected categories terms<br/>NOT IN - posts "
 "that is does not have any of selected terms<br/>AND - posts that have all "
 "selected terms"
 msgstr ""
 
-#: inc/core/data.php:2233
+#: inc/core/data.php:2234
 msgid "Authors"
 msgstr ""
 
-#: inc/core/data.php:2234
+#: inc/core/data.php:2235
 msgid "Choose the authors whose posts you want to show"
 msgstr ""
 
-#: inc/core/data.php:2238
+#: inc/core/data.php:2239
 msgid "Meta key"
 msgstr ""
 
-#: inc/core/data.php:2239
+#: inc/core/data.php:2240
 msgid "Enter meta key name to show posts that have this key"
 msgstr ""
 
-#: inc/core/data.php:2246
+#: inc/core/data.php:2247
 msgid "Offset"
 msgstr ""
 
-#: inc/core/data.php:2247
+#: inc/core/data.php:2248
 msgid "Specify offset to start posts loop not from first post"
 msgstr ""
 
-#: inc/core/data.php:2252
+#: inc/core/data.php:2253
 msgid "Descending"
 msgstr ""
 
-#: inc/core/data.php:2253
+#: inc/core/data.php:2254
 msgid "Ascending"
 msgstr ""
 
-#: inc/core/data.php:2256
+#: inc/core/data.php:2257
 msgid "Order"
 msgstr ""
 
-#: inc/core/data.php:2257
+#: inc/core/data.php:2258
 msgid "Posts order"
 msgstr ""
 
-#: inc/core/data.php:2263 inc/core/data.php:2480 inc/core/data.php:2553
-#: inc/core/data.php:2595
+#: inc/core/data.php:2264 inc/core/data.php:2481 inc/core/data.php:2554
+#: inc/core/data.php:2596
 msgid "Post ID"
 msgstr ""
 
-#: inc/core/data.php:2264 inc/core/data.php:2554
+#: inc/core/data.php:2265 inc/core/data.php:2555
 msgid "Post author"
 msgstr ""
 
-#: inc/core/data.php:2265 inc/core/data.php:2558
+#: inc/core/data.php:2266 inc/core/data.php:2559
 msgid "Post title"
 msgstr ""
 
-#: inc/core/data.php:2266
+#: inc/core/data.php:2267
 msgid "Post slug"
 msgstr ""
 
-#: inc/core/data.php:2267
+#: inc/core/data.php:2268
 msgid "Date"
 msgstr ""
 
-#: inc/core/data.php:2267
+#: inc/core/data.php:2268
 msgid "Last modified date"
 msgstr ""
 
-#: inc/core/data.php:2268 inc/core/data.php:2278 inc/core/data.php:2567
+#: inc/core/data.php:2269 inc/core/data.php:2279 inc/core/data.php:2568
 msgid "Post parent"
 msgstr ""
 
-#: inc/core/data.php:2269
+#: inc/core/data.php:2270
 msgid "Random"
 msgstr ""
 
-#: inc/core/data.php:2269
+#: inc/core/data.php:2270
 msgid "Comments number"
 msgstr ""
 
-#: inc/core/data.php:2270 inc/core/data.php:2569
+#: inc/core/data.php:2271 inc/core/data.php:2570
 msgid "Menu order"
 msgstr ""
 
-#: inc/core/data.php:2270
+#: inc/core/data.php:2271
 msgid "Meta key values"
 msgstr ""
 
-#: inc/core/data.php:2273
+#: inc/core/data.php:2274
 msgid "Order by"
 msgstr ""
 
-#: inc/core/data.php:2274
+#: inc/core/data.php:2275
 msgid "Order posts by"
 msgstr ""
 
-#: inc/core/data.php:2279
+#: inc/core/data.php:2280
 msgid "Show childrens of entered post (enter post ID)"
 msgstr ""
 
-#: inc/core/data.php:2284
+#: inc/core/data.php:2285
 msgid "Published"
 msgstr ""
 
-#: inc/core/data.php:2285
+#: inc/core/data.php:2286
 msgid "Pending"
 msgstr ""
 
-#: inc/core/data.php:2286
+#: inc/core/data.php:2287
 msgid "Draft"
 msgstr ""
 
-#: inc/core/data.php:2287
+#: inc/core/data.php:2288
 msgid "Auto-draft"
 msgstr ""
 
-#: inc/core/data.php:2288
+#: inc/core/data.php:2289
 msgid "Future post"
 msgstr ""
 
-#: inc/core/data.php:2289
+#: inc/core/data.php:2290
 msgid "Private post"
 msgstr ""
 
-#: inc/core/data.php:2290
+#: inc/core/data.php:2291
 msgid "Inherit"
 msgstr ""
 
-#: inc/core/data.php:2291
+#: inc/core/data.php:2292
 msgid "Trashed"
 msgstr ""
 
-#: inc/core/data.php:2292 inc/core/data.php:2376
+#: inc/core/data.php:2293 inc/core/data.php:2377
 msgid "Any"
 msgstr ""
 
-#: inc/core/data.php:2295 inc/core/data.php:2560
+#: inc/core/data.php:2296 inc/core/data.php:2561
 msgid "Post status"
 msgstr ""
 
-#: inc/core/data.php:2296
+#: inc/core/data.php:2297
 msgid "Show only posts with selected status"
 msgstr ""
 
-#: inc/core/data.php:2301
+#: inc/core/data.php:2302
 msgid "Ignore sticky"
 msgstr ""
 
-#: inc/core/data.php:2302
+#: inc/core/data.php:2303
 msgid "Select Yes to ignore posts that is sticked"
 msgstr ""
 
-#: inc/core/data.php:2305
+#: inc/core/data.php:2306
 msgid "Custom posts query with customizable template"
 msgstr ""
 
-#: inc/core/data.php:2310
+#: inc/core/data.php:2311
 msgid "Dummy text"
 msgstr ""
 
-#: inc/core/data.php:2317
+#: inc/core/data.php:2318
 msgid "Paragraphs"
 msgstr ""
 
-#: inc/core/data.php:2318
+#: inc/core/data.php:2319
 msgid "Words"
 msgstr ""
 
-#: inc/core/data.php:2319
+#: inc/core/data.php:2320
 msgid "Bytes"
 msgstr ""
 
-#: inc/core/data.php:2322
+#: inc/core/data.php:2323
 msgid "What"
 msgstr ""
 
-#: inc/core/data.php:2323
+#: inc/core/data.php:2324
 msgid "What to generate"
 msgstr ""
 
-#: inc/core/data.php:2331
+#: inc/core/data.php:2332
 msgid "Amount"
 msgstr ""
 
-#: inc/core/data.php:2332
+#: inc/core/data.php:2333
 msgid ""
 "How many items (paragraphs or words) to generate. Minimum words amount is 5"
 msgstr ""
 
-#: inc/core/data.php:2337
+#: inc/core/data.php:2338
 msgid "Cache"
 msgstr ""
 
-#: inc/core/data.php:2338
+#: inc/core/data.php:2339
 msgid ""
 "Generated text will be cached. Be careful with this option. If you disable "
 "it and insert many dummy_text shortcodes the page load time will be highly "
 "increased"
 msgstr ""
 
-#: inc/core/data.php:2346
+#: inc/core/data.php:2347
 msgid "Text placeholder"
 msgstr ""
 
-#: inc/core/data.php:2351 inc/core/shortcodes.php:1302
+#: inc/core/data.php:2352 inc/core/shortcodes.php:1302
 msgid "Dummy image"
 msgstr ""
 
-#: inc/core/data.php:2362
+#: inc/core/data.php:2363
 msgid "Image width"
 msgstr ""
 
-#: inc/core/data.php:2371
+#: inc/core/data.php:2372
 msgid "Image height"
 msgstr ""
 
-#: inc/core/data.php:2377
+#: inc/core/data.php:2378
 msgid "Abstract"
 msgstr ""
 
-#: inc/core/data.php:2378
+#: inc/core/data.php:2379
 msgid "Animals"
 msgstr ""
 
-#: inc/core/data.php:2379
+#: inc/core/data.php:2380
 msgid "Business"
 msgstr ""
 
-#: inc/core/data.php:2380
+#: inc/core/data.php:2381
 msgid "Cats"
 msgstr ""
 
-#: inc/core/data.php:2381
+#: inc/core/data.php:2382
 msgid "City"
 msgstr ""
 
-#: inc/core/data.php:2382
+#: inc/core/data.php:2383
 msgid "Food"
 msgstr ""
 
-#: inc/core/data.php:2383
+#: inc/core/data.php:2384
 msgid "Night life"
 msgstr ""
 
-#: inc/core/data.php:2384
+#: inc/core/data.php:2385
 msgid "Fashion"
 msgstr ""
 
-#: inc/core/data.php:2385
+#: inc/core/data.php:2386
 msgid "People"
 msgstr ""
 
-#: inc/core/data.php:2386
+#: inc/core/data.php:2387
 msgid "Nature"
 msgstr ""
 
-#: inc/core/data.php:2387
+#: inc/core/data.php:2388
 msgid "Sports"
 msgstr ""
 
-#: inc/core/data.php:2388
+#: inc/core/data.php:2389
 msgid "Technics"
 msgstr ""
 
-#: inc/core/data.php:2389
+#: inc/core/data.php:2390
 msgid "Transport"
 msgstr ""
 
-#: inc/core/data.php:2393
+#: inc/core/data.php:2394
 msgid "Select the theme for this image"
 msgstr ""
 
-#: inc/core/data.php:2401
+#: inc/core/data.php:2402
 msgid "Image placeholder with random image"
 msgstr ""
 
-#: inc/core/data.php:2406 inc/core/data.php:2414
+#: inc/core/data.php:2407 inc/core/data.php:2415
 msgid "Animation"
 msgstr ""
 
-#: inc/core/data.php:2415
+#: inc/core/data.php:2416
 msgid "Select animation type"
 msgstr ""
 
-#: inc/core/data.php:2423
+#: inc/core/data.php:2424
 msgid "Duration"
 msgstr ""
 
-#: inc/core/data.php:2424
+#: inc/core/data.php:2425
 msgid "Animation duration (seconds)"
 msgstr ""
 
-#: inc/core/data.php:2432
+#: inc/core/data.php:2433
 msgid "Delay"
 msgstr ""
 
-#: inc/core/data.php:2433
+#: inc/core/data.php:2434
 msgid "Animation delay (seconds)"
 msgstr ""
 
-#: inc/core/data.php:2438
+#: inc/core/data.php:2439
 msgid "Inline"
 msgstr ""
 
-#: inc/core/data.php:2439
+#: inc/core/data.php:2440
 msgid ""
 "This parameter determines what HTML tag will be used for animation wrapper. "
 "Turn this option to YES and animated element will be wrapped in SPAN instead "
 "of DIV. Useful for inline animations, like buttons"
 msgstr ""
 
-#: inc/core/data.php:2447
+#: inc/core/data.php:2448
 msgid "Animated content"
 msgstr ""
 
-#: inc/core/data.php:2448
+#: inc/core/data.php:2449
 msgid "Wrapper for animation. Any nested element will be animated"
 msgstr ""
 
-#: inc/core/data.php:2454
+#: inc/core/data.php:2455
 msgid "Meta"
 msgstr ""
 
-#: inc/core/data.php:2460
+#: inc/core/data.php:2461
 msgid "Key"
 msgstr ""
 
-#: inc/core/data.php:2461
+#: inc/core/data.php:2462
 msgid "Meta key name"
 msgstr ""
 
-#: inc/core/data.php:2466 inc/core/data.php:2518 inc/core/data.php:2581
+#: inc/core/data.php:2467 inc/core/data.php:2519 inc/core/data.php:2582
 msgid "This text will be shown if data is not found"
 msgstr ""
 
-#: inc/core/data.php:2470 inc/core/data.php:2522 inc/core/data.php:2585
+#: inc/core/data.php:2471 inc/core/data.php:2523 inc/core/data.php:2586
 msgid "Before"
 msgstr ""
 
-#: inc/core/data.php:2471 inc/core/data.php:2523 inc/core/data.php:2586
+#: inc/core/data.php:2472 inc/core/data.php:2524 inc/core/data.php:2587
 msgid "This content will be shown before the value"
 msgstr ""
 
-#: inc/core/data.php:2475 inc/core/data.php:2527 inc/core/data.php:2590
+#: inc/core/data.php:2476 inc/core/data.php:2528 inc/core/data.php:2591
 msgid "After"
 msgstr ""
 
-#: inc/core/data.php:2476 inc/core/data.php:2528 inc/core/data.php:2591
+#: inc/core/data.php:2477 inc/core/data.php:2529 inc/core/data.php:2592
 msgid "This content will be shown after the value"
 msgstr ""
 
-#: inc/core/data.php:2481 inc/core/data.php:2596
+#: inc/core/data.php:2482 inc/core/data.php:2597
 msgid ""
 "You can specify custom post ID. Leave this field empty to use an ID of the "
 "current post. Current post ID may not work in Live Preview mode"
 msgstr ""
 
-#: inc/core/data.php:2485 inc/core/data.php:2537 inc/core/data.php:2600
+#: inc/core/data.php:2486 inc/core/data.php:2538 inc/core/data.php:2601
 msgid "Filter"
 msgstr ""
 
-#: inc/core/data.php:2486 inc/core/data.php:2538 inc/core/data.php:2601
+#: inc/core/data.php:2487 inc/core/data.php:2539 inc/core/data.php:2602
 msgid ""
 "You can apply custom filter to the retrieved value. Enter here function "
 "name. Your function must accept one argument and return modified value. "
 "Example function: "
 msgstr ""
 
-#: inc/core/data.php:2489
+#: inc/core/data.php:2490
 msgid "Post meta"
 msgstr ""
 
-#: inc/core/data.php:2494
+#: inc/core/data.php:2495
 msgid "User"
 msgstr ""
 
-#: inc/core/data.php:2501
+#: inc/core/data.php:2502
 msgid "Display name"
 msgstr ""
 
-#: inc/core/data.php:2503
+#: inc/core/data.php:2504
 msgid "Login"
 msgstr ""
 
-#: inc/core/data.php:2504
+#: inc/core/data.php:2505
 msgid "Nice name"
 msgstr ""
 
-#: inc/core/data.php:2505
+#: inc/core/data.php:2506
 msgid "Email"
 msgstr ""
 
-#: inc/core/data.php:2506
+#: inc/core/data.php:2507
 msgid "URL"
 msgstr ""
 
-#: inc/core/data.php:2507
+#: inc/core/data.php:2508
 msgid "Registered"
 msgstr ""
 
-#: inc/core/data.php:2508
+#: inc/core/data.php:2509
 msgid "Activation key"
 msgstr ""
 
-#: inc/core/data.php:2509
+#: inc/core/data.php:2510
 msgid "Status"
 msgstr ""
 
-#: inc/core/data.php:2512 inc/core/data.php:2575
+#: inc/core/data.php:2513 inc/core/data.php:2576
 msgid "Field"
 msgstr ""
 
-#: inc/core/data.php:2513
+#: inc/core/data.php:2514
 msgid "User data field name"
 msgstr ""
 
-#: inc/core/data.php:2532
+#: inc/core/data.php:2533
 msgid "User ID"
 msgstr ""
 
-#: inc/core/data.php:2533
+#: inc/core/data.php:2534
 msgid ""
 "You can specify custom user ID. Leave this field empty to use an ID of the "
 "current user"
 msgstr ""
 
-#: inc/core/data.php:2541
+#: inc/core/data.php:2542
 msgid "User data"
 msgstr ""
 
-#: inc/core/data.php:2546
+#: inc/core/data.php:2547
 msgid "Post"
 msgstr ""
 
-#: inc/core/data.php:2555 inc/core/data.php:2556
+#: inc/core/data.php:2556 inc/core/data.php:2557
 msgid "Post date"
 msgstr ""
 
-#: inc/core/data.php:2557
+#: inc/core/data.php:2558
 msgid "Post content"
 msgstr ""
 
-#: inc/core/data.php:2559
+#: inc/core/data.php:2560
 msgid "Post excerpt"
 msgstr ""
 
-#: inc/core/data.php:2561
+#: inc/core/data.php:2562
 msgid "Comment status"
 msgstr ""
 
-#: inc/core/data.php:2562
+#: inc/core/data.php:2563
 msgid "Ping status"
 msgstr ""
 
-#: inc/core/data.php:2563
+#: inc/core/data.php:2564
 msgid "Post name"
 msgstr ""
 
-#: inc/core/data.php:2564 inc/core/data.php:2565
+#: inc/core/data.php:2565 inc/core/data.php:2566
 msgid "Post modified"
 msgstr ""
 
-#: inc/core/data.php:2566
+#: inc/core/data.php:2567
 msgid "Filtered post content"
 msgstr ""
 
-#: inc/core/data.php:2568
+#: inc/core/data.php:2569
 msgid "GUID"
 msgstr ""
 
-#: inc/core/data.php:2570
+#: inc/core/data.php:2571
 msgid "Post type"
 msgstr ""
 
-#: inc/core/data.php:2571
+#: inc/core/data.php:2572
 msgid "Post mime type"
 msgstr ""
 
-#: inc/core/data.php:2572
+#: inc/core/data.php:2573
 msgid "Comment count"
 msgstr ""
 
-#: inc/core/data.php:2576
+#: inc/core/data.php:2577
 msgid "Post data field name"
 msgstr ""
 
-#: inc/core/data.php:2604
+#: inc/core/data.php:2605
 msgid "Post data"
 msgstr ""
 
-#: inc/core/data.php:2615
+#: inc/core/data.php:2616
 msgid "Template name"
 msgstr ""
 
-#: inc/core/data.php:2616
+#: inc/core/data.php:2617
 #, php-format
 msgid ""
 "Use template file name (with optional .php extension). If you need to use "
@@ -2777,7 +2781,7 @@ msgid ""
 "%s"
 msgstr ""
 
-#: inc/core/data.php:2619
+#: inc/core/data.php:2620
 msgid "Theme template"
 msgstr ""
 
@@ -2945,7 +2949,7 @@ msgstr ""
 msgid "Preview"
 msgstr ""
 
-#: inc/core/generator.php:203 inc/core/tools.php:882
+#: inc/core/generator.php:203 inc/core/tools.php:883
 msgid "Access denied"
 msgstr ""
 
@@ -2962,7 +2966,7 @@ msgid "Presets not found"
 msgstr ""
 
 #: inc/core/load.php:30 inc/core/load.php:104 inc/core/load.php:113
-#: inc/core/load.php:127 inc/core/load.php:139 inc/core/tools.php:894
+#: inc/core/load.php:127 inc/core/load.php:139 inc/core/tools.php:895
 #: inc/core/widget.php:14 inc/core/widget.php:40
 msgid "Shortcodes Ultimate"
 msgstr ""
@@ -3029,7 +3033,7 @@ msgstr ""
 msgid "Custom CSS"
 msgstr ""
 
-#: inc/core/load.php:113 inc/core/load.php:114
+#: inc/core/load.php:113 inc/core/load.php:114 inc/core/load.php:217
 msgid "Examples"
 msgstr ""
 
@@ -3045,7 +3049,7 @@ msgstr ""
 msgid "Supercharge your WordPress theme with mega pack of shortcodes"
 msgstr ""
 
-#: inc/core/load.php:217
+#: inc/core/load.php:218
 msgid "Where to start?"
 msgstr ""
 
@@ -3123,19 +3127,19 @@ msgstr ""
 msgid "please specify template name"
 msgstr ""
 
-#: inc/core/tools.php:801
+#: inc/core/tools.php:802
 msgid "Example code does not found, please check it later"
 msgstr ""
 
-#: inc/core/tools.php:817
+#: inc/core/tools.php:818
 msgid "Get the code"
 msgstr ""
 
-#: inc/core/tools.php:891
+#: inc/core/tools.php:892
 msgid "Slide link"
 msgstr ""
 
-#: inc/core/tools.php:894
+#: inc/core/tools.php:895
 msgid ""
 "Use this field to add custom links to slides used with Slider, Carousel and "
 "Custom Gallery shortcodes"

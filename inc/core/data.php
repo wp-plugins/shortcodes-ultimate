@@ -683,6 +683,7 @@ class Su_Data {
 							'values' => array(
 								'default' => __( 'Default', 'su' ),
 								'flat' => __( 'Flat', 'su' ),
+								'ghost' => __( 'Ghost', 'su' ),
 								'soft' => __( 'Soft', 'su' ),
 								'glass' => __( 'Glass', 'su' ),
 								'bubbles' => __( 'Bubbles', 'su' ),

@@ -622,10 +622,9 @@
 	color: #fff;
 }
 
-/* Compatibility for Visual Composer, Elegant Themes and SiteOrigin page builders */
-body.su-generator-priority-mode .mfp-bg { z-index: 90001 !important; }
-body.su-generator-priority-mode .mfp-wrap { z-index: 90002 !important; }
-body.su-generator-priority-mode .mfp-preloader { z-index: 90003 !important; }
-body.su-generator-priority-mode .mfp-content { z-index: 90004 !important; }
-body.su-generator-priority-mode button.mfp-close,
-body.su-generator-priority-mode button.mfp-arrow { z-index: 90005 !important; }
+body.su-mfp-shown .mfp-bg { z-index: 10000 !important; }
+body.su-mfp-shown .mfp-wrap { z-index: 10001 !important; }
+body.su-mfp-shown .mfp-preloader { z-index: 10002 !important; }
+body.su-mfp-shown .mfp-content { z-index: 10003 !important; }
+body.su-mfp-shown button.mfp-close,
+body.su-mfp-shown button.mfp-arrow { z-index: 10004 !important; }

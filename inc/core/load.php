@@ -214,6 +214,7 @@ class Shortcodes_Ultimate {
 	 * Add plugin actions links
 	 */
 	public static function actions_links( $links ) {
+		$links[] = '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-examples' ) . '">' . __( 'Examples', 'su' ) . '</a>';
 		$links[] = '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate' ) . '#tab-0">' . __( 'Where to start?', 'su' ) . '</a>';
 		return $links;
 	}

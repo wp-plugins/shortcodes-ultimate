@@ -673,7 +673,8 @@ class Su_Tools {
 	}
 
 	public static function reset_users_cache() {
-		if ( $_GET['update'] === 'del' || $_GET['update'] === 'add' || $_GET['updated'] === '1' ) delete_transient( 'su/users_cache' );
+		if ( ( isset( $_GET['update'] ) || isset( $_GET['updated'] ) ) )
+			if ( $_GET['update'] === 'del' || $_GET['update'] === 'add' || $_GET['updated'] === '1' ) delete_transient( 'su/users_cache' );
 	}
 
 	public static function get_taxonomies() {

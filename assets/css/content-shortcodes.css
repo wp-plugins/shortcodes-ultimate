@@ -296,6 +296,12 @@
 .su-button-style-flat span { border: none }
 .su-button-style-flat span { position: relative }
 .su-button-style-flat:hover span { top: 1px }
+.su-button-style-ghost { background: transparent !important; }
+.su-button-style-ghost span {
+	border-width: 3px;
+	border-style: solid;
+}
+.su-button-style-ghost:hover span { border-color: inherit !important; }
 .su-button-style-soft span { background: 0 -20px url('../images/styles/style-soft.png') repeat-x }
 .su-button-style-soft:hover span { background: 0 0 url('../images/styles/style-soft.png') repeat-x }
 .su-button-style-glass span { background: 0 50% url('../images/styles/style-glass.png') repeat-x }

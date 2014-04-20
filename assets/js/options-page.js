@@ -4,13 +4,33 @@ jQuery(document).ready(function ($) {
 	// ########## About screen ##########
 
 	$('.su-demo-video').magnificPopup({
-		type: 'iframe'
+		type: 'iframe',
+		callbacks: {
+			open: function () {
+				// Change z-index
+				$('body').addClass('su-mfp-shown');
+			},
+			close: function () {
+				// Change z-index
+				$('body').removeClass('su-mfp-shown');
+			}
+		}
 	});
 
 	// ########## Custom CSS screen ##########
 
 	$('.su-custom-css-originals a').magnificPopup({
-		type: 'iframe'
+		type: 'iframe',
+		callbacks: {
+			open: function () {
+				// Change z-index
+				$('body').addClass('su-mfp-shown');
+			},
+			close: function () {
+				// Change z-index
+				$('body').removeClass('su-mfp-shown');
+			}
+		}
 	});
 
 	// Enable ACE editor
@@ -69,7 +89,13 @@ jQuery(document).ready(function ($) {
 					type: 'inline',
 					alignTop: true,
 					callbacks: {
+						open: function () {
+							// Change z-index
+							$('body').addClass('su-mfp-shown');
+						},
 						close: function () {
+							// Change z-index
+							$('body').removeClass('su-mfp-shown');
 							$example_preview.html('');
 						}
 					}

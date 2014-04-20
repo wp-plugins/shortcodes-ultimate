@@ -255,3 +255,10 @@ body.toplevel_page_shortcodes-ultimate .mfp-iframe-scaler iframe { background: #
 	background: #FFFFE0;
 	font-family: Monaco, Consolas, monospace;
 }
+
+body.su-mfp-shown .mfp-bg { z-index: 10000 !important; }
+body.su-mfp-shown .mfp-wrap { z-index: 10001 !important; }
+body.su-mfp-shown .mfp-preloader { z-index: 10002 !important; }
+body.su-mfp-shown .mfp-content { z-index: 10003 !important; }
+body.su-mfp-shown button.mfp-close,
+body.su-mfp-shown button.mfp-arrow { z-index: 10004 !important; }

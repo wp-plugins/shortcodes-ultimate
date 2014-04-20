@@ -106,13 +106,17 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.7.2 =
+* New Ghost style for [button]
+* Minor UI fixes (for WP 3.9+)
+
 = 4.7.1 =
-* Slovak language
 * New shortcode [dailymotion]
 * YouTube (advanced) can now use https protocol
 * Additional help notes in Shortcode Generator
+* Slovak language
 
-= 4.7.0 =
+= 4.7 =
 * Long-awaited feature: slider, carousel and custom_gallery links can now be open with lightbox
 * Long-awaited feature: custom links in slider, carousel and custom_gallery shortcodes
 * Fixed https bug in FontAwesome enqueue
