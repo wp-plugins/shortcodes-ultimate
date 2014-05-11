@@ -622,9 +622,9 @@
 	color: #fff;
 }
 
-body.su-mfp-shown .mfp-bg { z-index: 10000 !important; }
-body.su-mfp-shown .mfp-wrap { z-index: 10001 !important; }
-body.su-mfp-shown .mfp-preloader { z-index: 10002 !important; }
-body.su-mfp-shown .mfp-content { z-index: 10003 !important; }
+body.su-mfp-shown .mfp-bg { z-index: 100000 !important; }
+body.su-mfp-shown .mfp-wrap { z-index: 100001 !important; }
+body.su-mfp-shown .mfp-preloader { z-index: 100002 !important; }
+body.su-mfp-shown .mfp-content { z-index: 100003 !important; }
 body.su-mfp-shown button.mfp-close,
-body.su-mfp-shown button.mfp-arrow { z-index: 10004 !important; }
+body.su-mfp-shown button.mfp-arrow { z-index: 100004 !important; }

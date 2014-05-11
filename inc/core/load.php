@@ -121,6 +121,20 @@ class Shortcodes_Ultimate {
 					)
 				)
 			) );
+		// Cheatsheet submenu
+		$admin->add_submenu( array(
+				'parent_slug' => 'shortcodes-ultimate',
+				'page_title'  => __( 'Cheatsheet', 'su' ) . ' &lsaquo; ' . __( 'Shortcodes Ultimate', 'su' ),
+				'menu_title'  => apply_filters( 'su/menu/examples', __( 'Cheatsheet', 'su' ) ),
+				'capability'  => 'edit_others_posts',
+				'slug'        => 'shortcodes-ultimate-cheatsheet',
+				'options'     => array(
+					array(
+						'type' => 'cheatsheet',
+						'callback' => array( 'Su_Admin_Views', 'cheatsheet' )
+					)
+				)
+			) );
 		// Add-ons submenu
 		$admin->add_submenu( array(
 				'parent_slug' => 'shortcodes-ultimate',

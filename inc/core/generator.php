@@ -35,9 +35,11 @@ class Su_Generator {
 	public static function button( $args = array() ) {
 		// Check access
 		if ( !self::access_check() ) return;
+		// Prepare button target
+		$target = is_string( $args ) ? $args : 'content';
 		// Prepare args
 		$args = wp_parse_args( $args, array(
-				'target'    => 'content',
+				'target'    => $target,
 				'text'      => __( 'Insert shortcode', 'su' ),
 				'class'     => 'button',
 				'icon'      => plugins_url( 'assets/images/icon.png', SU_PLUGIN_FILE ),

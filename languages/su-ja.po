@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shortcodes Ultimate\n"
+"Project-Id-Version: Shortcodes Ultimate v4.7.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-01 17:50+0300\n"
-"PO-Revision-Date: 2014-01-29 13:44+0900\n"
+"PO-Revision-Date: 2014-04-25 20:41+0900\n"
 "Last-Translator: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "Language-Team: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -12,7 +12,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 1.6.4\n"
 "Language: ja\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -439,9 +439,6 @@ msgstr "ボタンコーナーの半径。ボタンサイズに基づいて半径
 msgid "Icon"
 msgstr "アイコン"
 
-msgid "You can upload custom icon for this button. Try to begin with <a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">these free high-quality icons</a>. Download archive, unpack icons and upload in this field"
-msgstr "このボタンのカスタムアイコンをアップロード可能。<a href=\"http://webdesign.tutsplus.com/freebies/icons-freebies/exclusive-freebie-50-crisp-web-app-icons/\" target=\"_blank\">無料で高品質なアイコン</a>"
-
 msgid "None"
 msgstr "なし"
 
@@ -450,12 +447,6 @@ msgstr "上"
 
 msgid "Bottom"
 msgstr "下"
-
-msgid "Text shadow position"
-msgstr "テキストの影の位置"
-
-msgid "Position of button text shadow"
-msgstr "ボタンテキストの影の位置"
 
 msgid "Description"
 msgstr "説明"
@@ -558,9 +549,6 @@ msgstr "Lightboxのウィンドウタイプを選択"
 
 msgid "Content source"
 msgstr "コンテンツソース"
-
-msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
-msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像コンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例: <br /><b%value>http://www.youtube.com/watch?v=NbE8INOjTKM</b> - YouTubeの動画 (インラインフレーム)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像<br /><b%value>http://example.com/</b> - 任意のWebページ (インラインフレーム)<br />#コンタクトフォーム - 任意のHTMLコンテンツ (インライン)"
 
 msgid "[%prefix_button] Click Here to Watch the Video [/%prefix_button]"
 msgstr "[%prefix_button] ここをクリックして動画を再生 [/%prefix_button]"
@@ -1261,9 +1249,6 @@ msgstr "はい"
 msgid "No"
 msgstr "いいえ"
 
-msgid "Max upload file size"
-msgstr "アップロードファイルの最大サイズ"
-
 msgid "Please wait"
 msgstr "しばらくお待ちください"
 
@@ -1349,9 +1334,6 @@ msgstr "こんにちは、私の名前はVladimir Anokhin、私はプラグイ�
 
 msgid "Rate plugin"
 msgstr "プラグインを評価"
-
-msgid "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
-msgstr ""
 
 msgid "Tweet"
 msgstr ""
@@ -1710,9 +1692,6 @@ msgstr "新しいウィンドウ"
 msgid "Night life"
 msgstr "ナイトライフ"
 
-msgid "Original image"
-msgstr "元画像"
-
 msgid "Other WordPress Plugins"
 msgstr "他のWordPressプラグイン"
 
@@ -1772,9 +1751,6 @@ msgstr "この画像のテーマを選択"
 
 msgid "Select which links will be used for images in this gallery"
 msgstr "このギャラリー内の画像のリンクを使用するか選択します。"
-
-msgid "Set of additional skins for Shrtcodes Ultimate. It includes skins for accordeons/spoilers, tabs and some other shortcodes"
-msgstr "Shrtcodes Ultimateの他のスキンのセットです。アコーディオン/スポイラー、タブ、およびいくつかの他のショートのためのスキンが含まれます。"
 
 msgid "Setting of YES will cause the player to play the initial video again and again"
 msgstr "'はい'に設定するとプレイヤーは何度も最初の動画を再生します。"
@@ -1971,8 +1947,8 @@ msgstr "ショートコードのグローバルスキンを選択してくださ
 msgid "1 new add-on for Shortcodes Ultimate"
 msgstr "Shortcodes Ultimateの1つの新しいアドオン"
 
-msgid "4.6.0"
-msgstr "4.6.0"
+msgid "4.7.2"
+msgstr "4.7.2"
 
 msgid "Activation key"
 msgstr "アクティベーションキー"
@@ -2116,7 +2092,7 @@ msgid "Post meta"
 msgstr "投稿メタ"
 
 msgid "Post mime type"
-msgstr 投稿"MIMEタイプ"
+msgstr "投稿MIMEタイプ"
 
 msgid "Post modified"
 msgstr "投稿修正"
@@ -2193,26 +2169,14 @@ msgstr "カスタムのユーザーIDを指定することができます。現�
 msgid "You can upload custom icon for this list or pick a built-in icon"
 msgstr "このリストのカスタムアイコンをアップロードするか、組み込みのアイコンを選ぶことができます"
 
-msgid "You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url"
-msgstr "ページのURL内のハッシュとそれにアクセスするには、このスポイラーに一意のアンカーを使用することができます。例えば: <b%value>こんにちは</b>をここに入力してhttp://example.com/page-urlのようなURLを使用します"
-
-msgid "You can use unique anchor for this tab to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url"
-msgstr "ページのURL内のハッシュとそれにアクセスするには、このタブに一意のアンカーを使用することができます。例えば: <b%value>こんにちは</b>をここに入力してhttp://example.com/page-urlのようなURLを使用します"
-
 msgid "<table>\n<tr>\n\\t<td>Table</td>\n\\t<td>Table</td>\n</tr>\n<tr>\n\\t<td>Table</td>\n\\t<td>Table</td>\n</tr>\n</table>"
 msgstr "<table>\n<tr>\n\\t<td>表</td>\n\\t<td>表</td>\n</tr>\n<tr>\n\\t<td>表</td>\n\\t<td>表</td>\n</tr>\n</table>"
 
 msgid "Insert"
 msgstr "挿入"
 
-msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>"
-msgstr "ここにURLやCSSセレクタを挿入します。iframe対応のURLと画像コンテンツタイプを使用しています。インラインコンテンツタイプのCSSセレクタを使用。値の例: <br /><b%value> http://www.youtube.com/watch?v=XXXXXXXXX<br /></b> - YouTubeの動画 (iframe)<br /><b%value> http://example.com/wp-content/uploads/image.jpg</b> - <b%value>http://example<br />アップロード画像 。<br /><b%value>http://example.com/</b> - 任意のウェブページ (iframe)<br /><b%value>"
-
 msgid "Maximum number of image source posts (for recent posts, category and custom taxonomy)"
 msgstr "画像ソース内の記事の最大数 (最近の投稿、カテゴリとカスタムタクソノミーのため)"
-
-msgid "Player width. You can specify width in percents and player will be responsive. Example values: <b%value>200px</b>, <b%value>100&"
-msgstr "プレイヤーの幅。パーセントで幅を指定することができ、プレーヤーがレスポンシブになります。値の例: <b%value>200px</b>、<b%value>100&"
 
 msgid "Post"
 msgstr "投稿"
@@ -2231,3 +2195,112 @@ msgstr "テキストの影"
 
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr "このボタンのカスタムアイコンをアップロードするか、組み込みのアイコンを選ぶことができます"
+
+# ################
+msgid "Start the playback of the video automatically after the player load. May not work on some mobile OS versions"
+msgstr "自動的にプレーヤーの読込後に動画の再生を開始します。一部のモバイルOSのバージョンでは動作しない場合があります"
+
+msgid "%s of %s"
+msgstr "%s of %s"
+
+msgid "Allows to hide or show the Dailymotion logo"
+msgstr "Dailymotionのロゴを表示したり非表示にする"
+
+msgid "Background color"
+msgstr "背景色"
+
+msgid "Close (Esc)"
+msgstr "閉じる (Esc)"
+
+msgid "Dailymotion"
+msgstr "Dailymotion"
+
+msgid "Dailymotion video"
+msgstr "Dailymotion 動画"
+
+msgid "Determines the quality that must be played by default if available"
+msgstr "デフォルトで演奏しなければならない場合の品質を指定"
+
+msgid "Did you know that you can wrap multiple spoilers with [accordion] shortcode to create accordion effect?"
+msgstr "アコーディオン効果を作成する[accordion]ショートコードで複数のスポイラーをラップできることを知っていますか？"
+
+msgid "Did you know that you need to wrap columns with [row] shortcode?"
+msgstr "[row]ショートコードを持つ列をラップする必要があることを知っていますか？"
+
+msgid "Examples of use"
+msgstr "使用例"
+
+msgid "Failed to load this link. %sOpen link%s."
+msgstr "このリンクの読み込みに失敗しました。 %sリンクを開く%s"
+
+msgid "Force HTTPS"
+msgstr "強制HTTPS"
+
+msgid "Foreground color"
+msgstr "表示文字色"
+
+msgid "Ghost"
+msgstr "ゴースト"
+
+msgid "Highlight color"
+msgstr "ハイライトカラー"
+
+msgid "HTML color of the background of controls elements"
+msgstr "HTMLコントロール要素の背景色"
+
+msgid "HTML color of the controls elements' highlights"
+msgstr "HTMLコントロール要素のハイライト色"
+
+msgid "HTML color of the foreground of controls elements"
+msgstr "HTMLコントロール要素の前景色"
+
+msgid "Loading..."
+msgstr "読み込み中..."
+
+msgid "Next (Right arrow key)"
+msgstr "次 (右矢印キー)"
+
+msgid "Previous (Left arrow key)"
+msgstr "前 (左矢印キー)"
+
+msgid "Quality"
+msgstr "品質"
+
+msgid "Show logo"
+msgstr "ロゴの表示"
+
+msgid "Show related videos"
+msgstr "関連動画を表示"
+
+msgid "Show related videos at the end of the video"
+msgstr "動画の最後に関連動画を表示する"
+
+msgid "Show video info"
+msgstr "動画情報を表示"
+
+msgid "Show videos info (title/author) on the start screen"
+msgstr "スタート画面で動画情報(タイトル/作者)を表示する"
+
+msgid "Slide link"
+msgstr "スライドリンク"
+
+msgid "Slide link (added in media editor)"
+msgstr "スライドリンク (メディアエディタで追加)"
+
+msgid "Url of Dailymotion page with video"
+msgstr "Dailymotionの動画ページのURL"
+
+msgid "Use HTTPS in player iframe"
+msgstr "プレーヤーのiframeでHTTPSを使用"
+
+msgid "Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes"
+msgstr "スライダー、カルーセル、カスタムギャラリーのショートコードでスライドにカスタムリンクを追加するには、このフィールドを使用します。"
+
+msgid "Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate"
+msgstr "Shortcodes Ultimate - #shortcodesultimate WordPressプラグインが必要"
+
+msgid "You can use unique anchor for this tab to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This tab will be activated and scrolled in"
+msgstr "このタブのユニークなアンカーを使用するには、ページURLのハッシュにアクセスします。例: <b%value>Hello</b>とここに入力し、http://example.com/page-url#HelloのようなURLを使用します。このタブがアクティブになりにスクロールします。"
+
+msgid "You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This spoiler will be open and scrolled in"
+msgstr "このスポイラーのためのユニークなアンカーを使用してページURLのハッシュにアクセスできます。例: <b%value>Hello</b>とここに入力し、http://example.com/page-url#HelloのようなURLを使用します。このスポイラーがアクティブになりにスクロールします。"

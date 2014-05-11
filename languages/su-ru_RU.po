@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-20 15:13+0400\n"
-"PO-Revision-Date: 2014-04-20 15:14+0400\n"
+"POT-Creation-Date: 2014-05-11 14:11+0400\n"
+"PO-Revision-Date: 2014-05-11 14:11+0400\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -24,7 +24,7 @@ msgstr "Добро пожаловать в Shortcodes Ultimate"
 msgid "A real swiss army knife for WordPress"
 msgstr "Настоящий швейцарский армейский нож для WordPress"
 
-#: inc/core/admin-views.php:11 inc/core/load.php:229
+#: inc/core/admin-views.php:11 inc/core/load.php:243
 msgid "Project homepage"
 msgstr "Страница проекта"
 
@@ -32,11 +32,11 @@ msgstr "Страница проекта"
 msgid "Documentation"
 msgstr "Документация"
 
-#: inc/core/admin-views.php:13 inc/core/load.php:230
+#: inc/core/admin-views.php:13 inc/core/load.php:244
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: inc/core/admin-views.php:14 inc/core/load.php:231
+#: inc/core/admin-views.php:14 inc/core/load.php:245
 msgid "Changelog"
 msgstr "Список изменений"
 
@@ -132,11 +132,66 @@ msgstr "url папки с текущей темой"
 msgid "plugin url"
 msgstr "url папки этого плагина"
 
-#: inc/core/admin-views.php:117
+#: inc/core/admin-views.php:115
+msgid "Printable version"
+msgstr "Версия для печати"
+
+#: inc/core/admin-views.php:115 inc/core/load.php:30 inc/core/load.php:104
+#: inc/core/load.php:113 inc/core/load.php:127 inc/core/load.php:141
+#: inc/core/load.php:153 inc/core/tools.php:895 inc/core/widget.php:14
+#: inc/core/widget.php:40
+msgid "Shortcodes Ultimate"
+msgstr "Шорткоды"
+
+#: inc/core/admin-views.php:115 inc/core/load.php:127 inc/core/load.php:128
+msgid "Cheatsheet"
+msgstr "Шпаргалка"
+
+#: inc/core/admin-views.php:115
+msgid "Back to Dashboard"
+msgstr "Вернуться в Панель управления"
+
+#: inc/core/admin-views.php:119
+msgid "Shortcode"
+msgstr "Шорткод"
+
+#: inc/core/admin-views.php:119
+msgid "Attributes"
+msgstr "Аттрибуты"
+
+#: inc/core/admin-views.php:119
+msgid "Example code"
+msgstr "Пример кода"
+
+#: inc/core/admin-views.php:127
+msgid "full list"
+msgstr "полный список"
+
+#: inc/core/admin-views.php:132
+msgid "Default value"
+msgstr "Значение по умолчанию"
+
+#: inc/core/admin-views.php:154
+msgid "#RGB and rgba() colors"
+msgstr "#RGB и rgba() цвета"
+
+#: inc/core/admin-views.php:162
+msgid "Any text value"
+msgstr "Любое текстовое значение"
+
+#: inc/core/admin-views.php:164
+msgid "Any custom CSS classes"
+msgstr "Любой произвольный CSS класс"
+
+#: inc/core/admin-views.php:166
+msgid "Possible values"
+msgstr "Возможные значения"
+
+#: inc/core/admin-views.php:198
 msgid "New Shortcodes"
 msgstr "Новые Шорткоды"
 
-#: inc/core/admin-views.php:118
+#: inc/core/admin-views.php:199
 msgid ""
 "Parallax sections, responsive content slider, pricing tables, vector icons, "
 "testimonials, progress bars and even more"
@@ -144,11 +199,11 @@ msgstr ""
 "Секции с параллакс эффектом, адаптивный слайдер контента, тарифные таблицы, "
 "векторные иконки, отзывы, прогресс бары и даже больше"
 
-#: inc/core/admin-views.php:123
+#: inc/core/admin-views.php:204
 msgid "Maker"
 msgstr "Maker"
 
-#: inc/core/admin-views.php:124
+#: inc/core/admin-views.php:205
 msgid ""
 "This add-on allows you to create custom shortcodes. You can easily create "
 "any shortcode with different parameters or even override default shortcodes"
@@ -156,11 +211,11 @@ msgstr ""
 "Это дополнение позволит вам создавать собственные шорткоды. Вы можете с "
 "легкостью создать новый шорткод или даже перезаписать оригинальный"
 
-#: inc/core/admin-views.php:129
+#: inc/core/admin-views.php:210
 msgid "Skins"
 msgstr "Скины"
 
-#: inc/core/admin-views.php:130
+#: inc/core/admin-views.php:211
 msgid ""
 "Set of additional skins for Shortcodes Ultimate. It includes skins for "
 "accordeons/spoilers, tabs and some other shortcodes"
@@ -168,15 +223,15 @@ msgstr ""
 "Набор дополнительных скинов для шорткодов плагина. Набор включает в себя "
 "скины для аккордеонов/спойлеров, вкладок и некоторых других шорткодов"
 
-#: inc/core/admin-views.php:136
+#: inc/core/admin-views.php:217
 msgid "Shortcodes Ultimate Add-ons"
 msgstr "Дополнения для Shortcodes Ultimate"
 
-#: inc/core/admin-views.php:139 inc/core/admin-views.php:146
+#: inc/core/admin-views.php:220 inc/core/admin-views.php:227
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: inc/core/admin-views.php:143
+#: inc/core/admin-views.php:224
 msgid "Other WordPress Plugins"
 msgstr "Другие плагины для WordPress"
 
@@ -218,35 +273,35 @@ msgstr "Добавить выбранные файлы"
 msgid "This button is not clickable"
 msgstr "Эта кнопка не нажимается"
 
-#: inc/core/assets.php:92 inc/vendor/sunrise.php:178
+#: inc/core/assets.php:94 inc/vendor/sunrise.php:178
 msgid "Choose file"
 msgstr "Выбор файла"
 
-#: inc/core/assets.php:93
+#: inc/core/assets.php:95
 msgid "Insert"
 msgstr "Вставить"
 
-#: inc/core/assets.php:94
+#: inc/core/assets.php:96
 msgid "Select images"
 msgstr "Выберите изображения"
 
-#: inc/core/assets.php:95
+#: inc/core/assets.php:97
 msgid "Add selected images"
 msgstr "Добавить выбранные изображения"
 
-#: inc/core/assets.php:96
+#: inc/core/assets.php:98
 msgid "Please enter a name for new preset"
 msgstr "Пожалуйста введите имя для нового шаблона"
 
-#: inc/core/assets.php:97
+#: inc/core/assets.php:99
 msgid "New preset"
 msgstr "Новый шаблон"
 
-#: inc/core/assets.php:98
+#: inc/core/assets.php:100
 msgid "Last used settings"
 msgstr "Последние настройки"
 
-#: inc/core/assets.php:111
+#: inc/core/assets.php:113
 msgid ""
 "This shortcode doesn't work in live preview. Please insert it into editor "
 "and preview on the site."
@@ -262,7 +317,7 @@ msgstr "1 новое дополнение для плагина Шорткоды
 msgid "All"
 msgstr "Все"
 
-#: inc/core/data.php:18 inc/core/generator.php:177
+#: inc/core/data.php:18 inc/core/generator.php:179
 msgid "Content"
 msgstr "Содержимое"
 
@@ -2617,7 +2672,7 @@ msgstr ""
 msgid "Text placeholder"
 msgstr "Текст болванка"
 
-#: inc/core/data.php:2352 inc/core/shortcodes.php:1302
+#: inc/core/data.php:2352 inc/core/shortcodes.php:1305
 msgid "Dummy image"
 msgstr "Изображение болванка"
 
@@ -3048,84 +3103,78 @@ msgstr ""
 "Выберите таксономию и её категории.<br>Вы можете выбрать несколько категорий "
 "удерживая клавишу Ctrl (Cmd)"
 
-#: inc/core/generator.php:41 inc/core/generator.php:142
+#: inc/core/generator.php:43 inc/core/generator.php:144
 msgid "Insert shortcode"
 msgstr "Вставить шорткод"
 
-#: inc/core/generator.php:84 inc/core/load.php:30 inc/core/load.php:51
+#: inc/core/generator.php:86 inc/core/load.php:30 inc/core/load.php:51
 #: inc/core/load.php:104 inc/core/load.php:105
 msgid "Settings"
 msgstr "Настройки"
 
-#: inc/core/generator.php:84
+#: inc/core/generator.php:86
 msgid "Plugin settings"
 msgstr "Настройки плагина"
 
-#: inc/core/generator.php:85
+#: inc/core/generator.php:87
 msgid "Plugin homepage"
 msgstr "Сайт плагина"
 
-#: inc/core/generator.php:86
+#: inc/core/generator.php:88
 msgid "Support forums"
 msgstr "Форум поддержки"
 
-#: inc/core/generator.php:93
+#: inc/core/generator.php:95
 msgid "Search for shortcodes"
 msgstr "Поиск шорткода"
 
-#: inc/core/generator.php:95
+#: inc/core/generator.php:97
 msgid "Filter by type"
 msgstr "Фильтр"
 
-#: inc/core/generator.php:130
+#: inc/core/generator.php:132
 msgid "Shortcode not specified"
 msgstr "Не выбран шорткод"
 
-#: inc/core/generator.php:143
+#: inc/core/generator.php:145
 msgid "Live preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:147
+#: inc/core/generator.php:149
 msgid "Click to return to the shortcodes list"
 msgstr "Нажмите, чтобы вернуться к списку шорткодов"
 
-#: inc/core/generator.php:147
+#: inc/core/generator.php:149
 msgid "All shortcodes"
 msgstr "Все шорткоды"
 
-#: inc/core/generator.php:153
+#: inc/core/generator.php:155
 msgid "Examples of use"
 msgstr "Примеры использования"
 
-#: inc/core/generator.php:170
+#: inc/core/generator.php:172
 msgid "Click to set this value"
 msgstr "Нажмите чтобы установить это значение"
 
-#: inc/core/generator.php:194
+#: inc/core/generator.php:196
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:203 inc/core/tools.php:883
+#: inc/core/generator.php:205 inc/core/tools.php:883
 msgid "Access denied"
 msgstr "Доступ запрещен"
 
-#: inc/core/generator.php:238
+#: inc/core/generator.php:240
 msgid "Presets"
 msgstr "Шаблоны"
 
-#: inc/core/generator.php:241
+#: inc/core/generator.php:243
 msgid "Save current settings as preset"
 msgstr "Сохранить настройки как новый шаблон"
 
-#: inc/core/generator.php:270 inc/core/generator.php:273
+#: inc/core/generator.php:272 inc/core/generator.php:275
 msgid "Presets not found"
 msgstr "Шаблоны не найдены"
-
-#: inc/core/load.php:30 inc/core/load.php:104 inc/core/load.php:113
-#: inc/core/load.php:127 inc/core/load.php:139 inc/core/tools.php:895
-#: inc/core/widget.php:14 inc/core/widget.php:40
-msgid "Shortcodes Ultimate"
-msgstr "Шорткоды"
 
 #: inc/core/load.php:31
 msgid "Shortcodes"
@@ -3199,23 +3248,23 @@ msgstr "Выберите глобальный скин для шорткодов
 msgid "Custom CSS"
 msgstr "Произвольный CSS"
 
-#: inc/core/load.php:113 inc/core/load.php:114 inc/core/load.php:217
+#: inc/core/load.php:113 inc/core/load.php:114 inc/core/load.php:231
 msgid "Examples"
 msgstr "Примеры"
 
-#: inc/core/load.php:127 inc/core/load.php:128
+#: inc/core/load.php:141 inc/core/load.php:142
 msgid "Add-ons"
 msgstr "Дополнения"
 
-#: inc/core/load.php:140 inc/core/vote.php:42
+#: inc/core/load.php:154 inc/core/vote.php:42
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: inc/core/load.php:141
+#: inc/core/load.php:155
 msgid "Supercharge your WordPress theme with mega pack of shortcodes"
 msgstr "Суперзарядка для вашей WordPress-темы с помощью мега набора шорткодов"
 
-#: inc/core/load.php:218
+#: inc/core/load.php:232
 msgid "Where to start?"
 msgstr "С чего начать?"
 
@@ -3269,36 +3318,36 @@ msgstr "пожалуйста укажите корректную ссылку"
 msgid "please specify correct url"
 msgstr "пожалуйста укажите корректную ссылку"
 
-#: inc/core/shortcodes.php:884
+#: inc/core/shortcodes.php:887
 msgid "This menu doesn't exists, or has no elements"
 msgstr "Такое меню не существует, или в нем нет ни одного элемента"
 
-#: inc/core/shortcodes.php:990 inc/core/shortcodes.php:1073
-#: inc/core/shortcodes.php:1128
+#: inc/core/shortcodes.php:993 inc/core/shortcodes.php:1076
+#: inc/core/shortcodes.php:1131
 msgid "images not found"
 msgstr "изображения не найдены"
 
-#: inc/core/shortcodes.php:1264
+#: inc/core/shortcodes.php:1267
 msgid "template not found"
 msgstr "шаблон не найден"
 
-#: inc/core/shortcodes.php:1342 inc/core/shortcodes.php:1392
+#: inc/core/shortcodes.php:1345 inc/core/shortcodes.php:1395
 msgid "post ID is incorrect"
 msgstr "ID записи указан неверно"
 
-#: inc/core/shortcodes.php:1344
+#: inc/core/shortcodes.php:1347
 msgid "please specify meta key name"
 msgstr "пожалуйста укажите имя ключа произвольного поля"
 
-#: inc/core/shortcodes.php:1365
+#: inc/core/shortcodes.php:1368
 msgid "password field is not allowed"
 msgstr "поле пароль запрещено"
 
-#: inc/core/shortcodes.php:1369
+#: inc/core/shortcodes.php:1372
 msgid "user ID is incorrect"
 msgstr "ID пользователя указан неверно"
 
-#: inc/core/shortcodes.php:1408
+#: inc/core/shortcodes.php:1411
 msgid "please specify template name"
 msgstr "пожалуйста укажите имя шаблона"
 

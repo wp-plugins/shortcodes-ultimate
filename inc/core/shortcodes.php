@@ -84,7 +84,7 @@ class Su_Shortcodes {
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'su-other-shortcodes' );
 		do_action( 'su/shortcode/spoiler', $atts );
-		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . ' su-spoiler-icon-' . $atts['icon'] . su_ecssc( $atts ) . '"' . $atts['anchor'] . '><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content su-clearfix">' . su_do_shortcode( $content, 's' ) . '</div></div>';
+		return '<div class="su-spoiler su-spoiler-style-' . $atts['style'] . ' su-spoiler-icon-' . $atts['icon'] . su_ecssc( $atts ) . '"' . $atts['anchor'] . '><div class="su-spoiler-title"><span class="su-spoiler-icon"></span>' . su_scattr( $atts['title'] ) . '</div><div class="su-spoiler-content su-clearfix" style="display:none">' . su_do_shortcode( $content, 's' ) . '</div></div>';
 	}
 
 	public static function accordion( $atts = null, $content = null ) {
@@ -869,13 +869,16 @@ class Su_Shortcodes {
 	}
 
 	public static function menu( $atts = null, $content = null ) {
-		$atts = shortcode_atts( array( 'name' => false, 'class' => '' ), $atts, 'menu' );
+		$atts = shortcode_atts( array(
+			'name' => false,
+			'class' => ''
+		), $atts, 'menu' );
 		$return = wp_nav_menu( array(
 				'echo'        => false,
 				'menu'        => $atts['name'],
 				'container'   => false,
 				'fallback_cb' => array( __CLASS__, 'menu_fb' ),
-				'class'       => $atts['class']
+				'items_wrap'  => '<ul id="%1$s" class="%2$s' . su_ecssc( $atts ) . '">%3$s</ul>'
 			) );
 		return ( $atts['name'] ) ? $return : false;
 	}

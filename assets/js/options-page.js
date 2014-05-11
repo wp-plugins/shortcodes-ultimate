@@ -134,4 +134,10 @@ jQuery(document).ready(function ($) {
 		$(this).parent('.su-examples-code').children('textarea').slideDown(300);
 		e.preventDefault();
 	});
+
+	// ########## Cheatsheet screen ##########
+	$('.su-cheatsheet-switch').on('click', function (e) {
+		$('body').toggleClass('su-print-cheatsheet');
+		e.preventDefault();
+	});
 });

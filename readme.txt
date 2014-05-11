@@ -62,6 +62,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Gr, [Kleanthis Manolopoulos](mailto:akis_manolopoulos_at_hotmail_dot_com)
 * Ja, [Stranger](#)
 * Sk, [Patrik Žec (PATWIST)](http://patwist.com/)
+* Cz, [Punc00](http://nuze.cz/)
 
 Have a translation? [Contact me](http://gndev.info/feedback/)
 
@@ -106,21 +107,26 @@ Upgrade normally
 
 == Changelog ==
 
-= 4.7.2 =
-* New Ghost style for [button]
-* Minor UI fixes (for WP 3.9+)
-
-= 4.7.1 =
-* New shortcode [dailymotion]
-* YouTube (advanced) can now use https protocol
-* Additional help notes in Shortcode Generator
-* Slovak language
+= 4.8.0 =
+* Minor UI fixes (compatibility with page builders)
+* Czech translation by [Punc00](http://nuze.cz/)
+* Added: full compatibility with multiple editors on same page - [fourm topic](http://wordpress.org/support/topic/enhance-compatibility-with-other-plugins)
+* Fixed: extra CSS class for [menu] - [forum topic](http://wordpress.org/support/topic/extra-css-class-not-working-on-menu-shortcode-video-included)
+* Fixed: Swiper click event, Swiper has been updated - [forum topic](http://wordpress.org/support/topic/carousel-links-not-working)
+* Fixed: [spoiler]'s content is now hidden until the page is loaded
+* New dashboard page: Cheatsheet
 
 = 4.7 =
 * Long-awaited feature: slider, carousel and custom_gallery links can now be open with lightbox
 * Long-awaited feature: custom links in slider, carousel and custom_gallery shortcodes
 * Fixed https bug in FontAwesome enqueue
 * Fixed bug with multiple users queries - [forum topic](http://wordpress.org/support/topic/plugin-making-700-sql-calls)
+* New Ghost style for [button]
+* Minor UI fixes (for WP 3.9+)
+* New shortcode [dailymotion]
+* YouTube (advanced) can now use https protocol
+* Additional help notes in Shortcode Generator
+* Slovak language
 
 = 4.6 =
 * Auto-save for shortcodes settings. Now you don't need to adjust it again and again
