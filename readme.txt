@@ -107,6 +107,10 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.8.1 =
+* Minor [spoiler] fix, for hidden spoiler content
+* Updated Japanese translation
+
 = 4.8.0 =
 * Minor UI fixes (compatibility with page builders)
 * Czech translation by [Punc00](http://nuze.cz/)

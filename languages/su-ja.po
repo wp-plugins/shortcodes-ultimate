@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shortcodes Ultimate v4.7.2\n"
+"Project-Id-Version: Shortcodes Ultimate v4.8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-01 17:50+0300\n"
 "PO-Revision-Date: 2014-04-25 20:41+0900\n"
@@ -345,9 +345,6 @@ msgstr "列の柔軟性とレスポンシブ"
 
 msgid "List"
 msgstr "リスト"
-
-msgid "Star"
-msgstr "星"
 
 msgid "Arrow"
 msgstr "矢印"
@@ -780,9 +777,6 @@ msgstr "CSVファイル"
 
 msgid "Upload CSV file if you want to create HTML-table from file"
 msgstr "ファイルからHTMLテーブルを作成する場合は、CSVファイルをアップロードします"
-
-msgid "<table>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n<tr>\n\t<td>Table</td>\n\t<td>Table</td>\n</tr>\n</table>"
-msgstr "<Table>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n<tr>\n\t<td>テーブル</td>\n\t<td>テーブル</td>\n</tr>\n</Table>"
 
 msgid "Styled table from HTML or CSV file"
 msgstr "HTMLまたはCSVファイルからスタイルテーブル"
@@ -1930,7 +1924,7 @@ msgid "Presets"
 msgstr "プリセット"
 
 msgid "Save current settings as preset"
-msgstr "現在の設定をプリセットとして保存します"
+msgstr "現在の設定をプリセットとして保存"
 
 msgid "Presets not found"
 msgstr "プリセットが見つかりません"
@@ -1947,8 +1941,8 @@ msgstr "ショートコードのグローバルスキンを選択してくださ
 msgid "1 new add-on for Shortcodes Ultimate"
 msgstr "Shortcodes Ultimateの1つの新しいアドオン"
 
-msgid "4.7.2"
-msgstr "4.7.2"
+msgid "4.8.0"
+msgstr "4.8.0"
 
 msgid "Activation key"
 msgstr "アクティベーションキー"
@@ -2196,7 +2190,6 @@ msgstr "テキストの影"
 msgid "You can upload custom icon for this button or pick a built-in icon"
 msgstr "このボタンのカスタムアイコンをアップロードするか、組み込みのアイコンを選ぶことができます"
 
-# ################
 msgid "Start the playback of the video automatically after the player load. May not work on some mobile OS versions"
 msgstr "自動的にプレーヤーの読込後に動画の再生を開始します。一部のモバイルOSのバージョンでは動作しない場合があります"
 
@@ -2213,10 +2206,10 @@ msgid "Close (Esc)"
 msgstr "閉じる (Esc)"
 
 msgid "Dailymotion"
-msgstr "Dailymotion"
+msgstr "デイリーモーション"
 
 msgid "Dailymotion video"
-msgstr "Dailymotion 動画"
+msgstr "デイリーモーション 動画"
 
 msgid "Determines the quality that must be played by default if available"
 msgstr "デフォルトで演奏しなければならない場合の品質を指定"
@@ -2304,3 +2297,45 @@ msgstr "このタブのユニークなアンカーを使用するには、ペー
 
 msgid "You can use unique anchor for this spoiler to access it with hash in page url. For example: type here <b%value>Hello</b> and then use url like http://example.com/page-url#Hello. This spoiler will be open and scrolled in"
 msgstr "このスポイラーのためのユニークなアンカーを使用してページURLのハッシュにアクセスできます。例: <b%value>Hello</b>とここに入力し、http://example.com/page-url#HelloのようなURLを使用します。このスポイラーがアクティブになりにスクロールします。"
+
+msgid "#RGB and rgba() colors"
+msgstr "#RGBとrgba()カラー"
+
+msgid "Add-ons bundle"
+msgstr "バンドルアドオン"
+
+msgid "Any custom CSS classes"
+msgstr "任意のカスタムCSSクラス"
+
+msgid "Any text value"
+msgstr "任意のテキスト値"
+
+msgid "Attributes"
+msgstr "属性"
+
+msgid "Back to Dashboard"
+msgstr "ダッシュボードへ戻る"
+
+msgid "Cheatsheet"
+msgstr "チートシート"
+
+msgid "Default value"
+msgstr "デフォルト値"
+
+msgid "Example code"
+msgstr "サンプルコード"
+
+msgid "full list"
+msgstr "全リスト"
+
+msgid "Get all three add-ons with huge discount!"
+msgstr "大幅値引きで3つのアドオンを入手！"
+
+msgid "Possible values"
+msgstr "可能な値"
+
+msgid "Printable version"
+msgstr "印刷用バージョン"
+
+msgid "Shortcode"
+msgstr "ショートコード"
