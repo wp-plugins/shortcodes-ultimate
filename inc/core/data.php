@@ -2620,6 +2620,88 @@ class Su_Data {
 					'desc' => __( 'Theme template', 'su' ),
 					'icon' => 'puzzle-piece'
 				),
+				// qrcode
+				'qrcode' => array(
+					'name' => __( 'QR code', 'su' ),
+					'type' => 'single',
+					'group' => 'content',
+					'atts' => array(
+						'data' => array(
+							'default' => '',
+							'name' => __( 'Data', 'su' ),
+							'desc' => __( 'The text to store within the QR code. You can use here any text or even URL', 'su' )
+						),
+						'title' => array(
+							'default' => '',
+							'name' => __( 'Title', 'su' ),
+							'desc' => __( 'Enter here short description. This text will be used in alt attribute of QR code', 'su' )
+						),
+						'size' => array(
+							'type' => 'slider',
+							'min' => 10,
+							'max' => 1000,
+							'step' => 10,
+							'default' => 200,
+							'name' => __( 'Size', 'su' ),
+							'desc' => __( 'Image width and height (in pixels)', 'su' )
+						),
+						'margin' => array(
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 50,
+							'step' => 5,
+							'default' => 0,
+							'name' => __( 'Margin', 'su' ),
+							'desc' => __( 'Thickness of a margin (in pixels)', 'su' )
+						),
+						'align' => array(
+							'type' => 'select',
+							'values' => array(
+								'none' => __( 'None', 'su' ),
+								'left' => __( 'Left', 'su' ),
+								'center' => __( 'Center', 'su' ),
+								'right' => __( 'Right', 'su' ),
+							),
+							'default' => 'none',
+							'name' => __( 'Align', 'su' ),
+							'desc' => __( 'Choose image alignment', 'su' )
+						),
+						'link' => array(
+							'default' => '',
+							'name' => __( 'Link', 'su' ),
+							'desc' => __( 'You can make this QR code clickable. Enter here the URL', 'su' )
+						),
+						'target' => array(
+							'type' => 'select',
+							'values' => array(
+								'self' => __( 'Open link in same window/tab', 'su' ),
+								'blank' => __( 'Open link in new window/tab', 'su' ),
+							),
+							'default' => 'blank',
+							'name' => __( 'Link target', 'su' ),
+							'desc' => __( 'Select link target', 'su' )
+						),
+						'color' => array(
+							'type' => 'color',
+							'default' => '#000000',
+							'name' => __( 'Primary color', 'su' ),
+							'desc' => __( 'Pick a primary color', 'su' )
+						),
+						'background' => array(
+							'type' => 'color',
+							'default' => '#ffffff',
+							'name' => __( 'Background color', 'su' ),
+							'desc' => __( 'Pick a background color', 'su' )
+						),
+						'class' => array(
+							'default' => '',
+							'name' => __( 'Class', 'su' ),
+							'desc' => __( 'Extra CSS class', 'su' )
+						)
+					),
+					'desc' => __( 'Advanced QR code generator', 'su' ),
+					'icon' => 'qrcode'
+				),
 			) );
 		// Return result
 		return ( is_string( $shortcode ) ) ? $shortcodes[sanitize_text_field( $shortcode )] : $shortcodes;

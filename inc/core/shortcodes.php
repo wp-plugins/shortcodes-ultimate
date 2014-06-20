@@ -1322,7 +1322,7 @@ class Su_Shortcodes {
 			$style['duration'][] = $vendor . 'animation-duration:' . $atts['duration'] . 's';
 			$style['delay'][] = $vendor . 'animation-delay:' . $atts['delay'] . 's';
 		}
-		$return = '<' . $tag . ' class="su-animate ' . $atts['type'] . su_ecssc( $atts ) . '" style="visibility:hidden;' . implode( ';', $style['duration'] ) . ';' . implode( ';', $style['delay'] ) . '" data-animation="' . $atts['type'] . '">' . do_shortcode( $content ) . '</' . $tag . '>';
+		$return = '<' . $tag . ' class="su-animate ' . $atts['type'] . su_ecssc( $atts ) . '" style="visibility:hidden;' . implode( ';', $style['duration'] ) . ';' . implode( ';', $style['delay'] ) . '" data-animation="' . $atts['type'] . '" data-delay="' . ( $atts['delay'] * 1000 ) . '">' . do_shortcode( $content ) . '</' . $tag . '>';
 		su_query_asset( 'css', 'animate' );
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'inview' );
@@ -1416,6 +1416,33 @@ class Su_Shortcodes {
 		ob_end_clean();
 		// Return result
 		return $output;
+	}
+
+	public static function qrcode( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+				'data' => '',
+				'title' => '',
+				'size' => 200,
+				'margin' => 0,
+				'align' => 'none',
+				'link' => '',
+				'target' => 'blank',
+				'color' => '#000000',
+				'background' => '#ffffff',
+				'class' => ''
+			), $atts, 'qrcode' );
+		// Check the data
+		if ( !$atts['data'] ) return 'QR code: ' . __( 'please specify the data', 'su' );
+		// Prepare link
+		$href = ( $atts['link'] ) ? ' href="' . $atts['link'] . '"' : '';
+		// Prepare clickable class
+		if ( $atts['link'] ) $atts['class'] .= ' su-qrcode-clickable';
+		// Prepare title
+		$atts['title'] = esc_attr( $atts['title'] );
+		// Query assets
+		su_query_asset( 'css', 'su-content-shortcodes' );
+		// Return result
+		return '<span class="su-qrcode su-qrcode-align-' . $atts['align'] . su_ecssc( $atts ) . '"><a' . $href . ' target="_' . $atts['target'] . '" title="' . $atts['title'] . '"><img src="https://api.qrserver.com/v1/create-qr-code/?data=' . urlencode( $atts['data'] ) . '&size=' . $atts['size'] . 'x' . $atts['size'] . '&format=png&margin=' . $atts['margin'] . '&color=' . su_hex2rgb( $atts['color'] ) . '&bgcolor=' . su_hex2rgb( $atts['background'] ) . '" alt="' . $atts['title'] . '" /></a></span>';
 	}
 
 }

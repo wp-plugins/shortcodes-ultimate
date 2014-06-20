@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-05-11 14:11+0400\n"
-"PO-Revision-Date: 2014-05-11 14:11+0400\n"
+"POT-Creation-Date: 2014-06-17 23:48+0400\n"
+"PO-Revision-Date: 2014-06-17 23:54+0400\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -66,7 +66,7 @@ msgstr "Интернационален"
 
 #: inc/core/admin-views.php:25
 msgid "Documented API"
-msgstr "Доментированный API"
+msgstr "Документированный API"
 
 #: inc/core/admin-views.php:29
 msgid "What is a shortcode?"
@@ -138,7 +138,7 @@ msgstr "Версия для печати"
 
 #: inc/core/admin-views.php:115 inc/core/load.php:30 inc/core/load.php:104
 #: inc/core/load.php:113 inc/core/load.php:127 inc/core/load.php:141
-#: inc/core/load.php:153 inc/core/tools.php:895 inc/core/widget.php:14
+#: inc/core/load.php:153 inc/core/tools.php:912 inc/core/widget.php:14
 #: inc/core/widget.php:40
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
@@ -187,11 +187,11 @@ msgstr "Любой произвольный CSS класс"
 msgid "Possible values"
 msgstr "Возможные значения"
 
-#: inc/core/admin-views.php:198
+#: inc/core/admin-views.php:196
 msgid "New Shortcodes"
 msgstr "Новые Шорткоды"
 
-#: inc/core/admin-views.php:199
+#: inc/core/admin-views.php:197
 msgid ""
 "Parallax sections, responsive content slider, pricing tables, vector icons, "
 "testimonials, progress bars and even more"
@@ -199,11 +199,11 @@ msgstr ""
 "Секции с параллакс эффектом, адаптивный слайдер контента, тарифные таблицы, "
 "векторные иконки, отзывы, прогресс бары и даже больше"
 
-#: inc/core/admin-views.php:204
+#: inc/core/admin-views.php:202
 msgid "Maker"
 msgstr "Maker"
 
-#: inc/core/admin-views.php:205
+#: inc/core/admin-views.php:203
 msgid ""
 "This add-on allows you to create custom shortcodes. You can easily create "
 "any shortcode with different parameters or even override default shortcodes"
@@ -211,11 +211,11 @@ msgstr ""
 "Это дополнение позволит вам создавать собственные шорткоды. Вы можете с "
 "легкостью создать новый шорткод или даже перезаписать оригинальный"
 
-#: inc/core/admin-views.php:210
+#: inc/core/admin-views.php:208
 msgid "Skins"
 msgstr "Скины"
 
-#: inc/core/admin-views.php:211
+#: inc/core/admin-views.php:209
 msgid ""
 "Set of additional skins for Shortcodes Ultimate. It includes skins for "
 "accordeons/spoilers, tabs and some other shortcodes"
@@ -223,15 +223,23 @@ msgstr ""
 "Набор дополнительных скинов для шорткодов плагина. Набор включает в себя "
 "скины для аккордеонов/спойлеров, вкладок и некоторых других шорткодов"
 
-#: inc/core/admin-views.php:217
+#: inc/core/admin-views.php:214
+msgid "Add-ons bundle"
+msgstr "Набор дополнений"
+
+#: inc/core/admin-views.php:215
+msgid "Get all three add-ons with huge discount!"
+msgstr "Получите все три дополнения с большой скидкой"
+
+#: inc/core/admin-views.php:221
 msgid "Shortcodes Ultimate Add-ons"
 msgstr "Дополнения для Shortcodes Ultimate"
 
-#: inc/core/admin-views.php:220 inc/core/admin-views.php:227
+#: inc/core/admin-views.php:224 inc/core/admin-views.php:231
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: inc/core/admin-views.php:224
+#: inc/core/admin-views.php:228
 msgid "Other WordPress Plugins"
 msgstr "Другие плагины для WordPress"
 
@@ -309,7 +317,7 @@ msgstr ""
 "Этот шорткод не работает в режиме предпросмотра. Пожалуйста вставьте шорткод "
 "в редактор и посмотрите результат на странице записи."
 
-#: inc/core/counters.php:29
+#: inc/core/counters.php:45
 msgid "1 new add-on for Shortcodes Ultimate"
 msgstr "1 новое дополнение для плагина Шорткоды"
 
@@ -333,7 +341,7 @@ msgstr "Медиа"
 msgid "Gallery"
 msgstr "Галерея"
 
-#: inc/core/data.php:22
+#: inc/core/data.php:22 inc/core/data.php:2631
 msgid "Data"
 msgstr "Данные"
 
@@ -342,7 +350,7 @@ msgid "Other"
 msgstr "Другое"
 
 #: inc/core/data.php:32 inc/core/data.php:1862 inc/core/data.php:1981
-#: inc/core/data.php:2119 inc/core/data.php:2263
+#: inc/core/data.php:2119 inc/core/data.php:2263 inc/core/data.php:2660
 msgid "None"
 msgstr "Нет"
 
@@ -440,7 +448,7 @@ msgid "Install additional styles"
 msgstr "Установить дополнительные стили"
 
 #: inc/core/data.php:148 inc/core/data.php:531 inc/core/data.php:610
-#: inc/core/data.php:716
+#: inc/core/data.php:716 inc/core/data.php:2645
 msgid "Size"
 msgstr "Размер"
 
@@ -449,21 +457,22 @@ msgid "Select heading size (pixels)"
 msgstr "Выберите размер заголовка (в пикселях)"
 
 #: inc/core/data.php:154 inc/core/data.php:492 inc/core/data.php:553
-#: inc/core/data.php:981
+#: inc/core/data.php:981 inc/core/data.php:2661
 msgid "Left"
 msgstr "Слева"
 
 #: inc/core/data.php:155 inc/core/data.php:554 inc/core/data.php:1913
-#: inc/core/data.php:2051
+#: inc/core/data.php:2051 inc/core/data.php:2662
 msgid "Center"
 msgstr "По центру"
 
 #: inc/core/data.php:156 inc/core/data.php:493 inc/core/data.php:555
-#: inc/core/data.php:982
+#: inc/core/data.php:982 inc/core/data.php:2663
 msgid "Right"
 msgstr "Справа"
 
 #: inc/core/data.php:159 inc/core/data.php:496 inc/core/data.php:558
+#: inc/core/data.php:2666
 msgid "Align"
 msgstr "Выравнивание"
 
@@ -471,7 +480,7 @@ msgstr "Выравнивание"
 msgid "Heading text alignment"
 msgstr "Выравнивание текста в заголовке"
 
-#: inc/core/data.php:168
+#: inc/core/data.php:168 inc/core/data.php:2654
 msgid "Margin"
 msgstr "Отступ"
 
@@ -494,7 +503,7 @@ msgstr "Отступ снизу (в пикселях)"
 #: inc/core/data.php:1720 inc/core/data.php:1741 inc/core/data.php:1786
 #: inc/core/data.php:1831 inc/core/data.php:1950 inc/core/data.php:2088
 #: inc/core/data.php:2169 inc/core/data.php:2343 inc/core/data.php:2398
-#: inc/core/data.php:2444
+#: inc/core/data.php:2444 inc/core/data.php:2698
 msgid "Class"
 msgstr "Класс"
 
@@ -513,7 +522,7 @@ msgstr "Класс"
 #: inc/core/data.php:1721 inc/core/data.php:1742 inc/core/data.php:1787
 #: inc/core/data.php:1832 inc/core/data.php:1951 inc/core/data.php:2089
 #: inc/core/data.php:2170 inc/core/data.php:2344 inc/core/data.php:2399
-#: inc/core/data.php:2445
+#: inc/core/data.php:2445 inc/core/data.php:2699
 msgid "Extra CSS class"
 msgstr "Дополнительный CSS класс"
 
@@ -572,7 +581,7 @@ msgid "Tab name"
 msgstr "Имя вкладки"
 
 #: inc/core/data.php:230 inc/core/data.php:263 inc/core/data.php:791
-#: inc/core/data.php:834 inc/core/data.php:1500
+#: inc/core/data.php:834 inc/core/data.php:1500 inc/core/data.php:2636
 msgid "Title"
 msgstr "Заголовок"
 
@@ -1066,7 +1075,7 @@ msgstr "Стильный неупорядоченный список"
 msgid "Button"
 msgstr "Кнопка"
 
-#: inc/core/data.php:668
+#: inc/core/data.php:668 inc/core/data.php:2671
 msgid "Link"
 msgstr "Ссылка"
 
@@ -1781,7 +1790,7 @@ msgstr ""
 "Автоматически начать воспроизведение видео. Может не работать на некоторых "
 "моильных ОС"
 
-#: inc/core/data.php:1384
+#: inc/core/data.php:1384 inc/core/data.php:2693
 msgid "Background color"
 msgstr "Цвет фона"
 
@@ -2990,6 +2999,72 @@ msgstr ""
 msgid "Theme template"
 msgstr "Шаблон темы"
 
+#: inc/core/data.php:2625
+msgid "QR code"
+msgstr "QR код"
+
+#: inc/core/data.php:2632
+msgid ""
+"The text to store within the QR code. You can use here any text or even URL"
+msgstr ""
+"Текст закодированный в QR коде. Можно использовать любой текст или даже "
+"ссылку"
+
+#: inc/core/data.php:2637
+msgid ""
+"Enter here short description. This text will be used in alt attribute of QR "
+"code"
+msgstr ""
+"Введите сюда краткое описание. Этот текст будет использован для аттрибута alt"
+
+#: inc/core/data.php:2646
+msgid "Image width and height (in pixels)"
+msgstr "Ширина и высота изображения (в пикселях)"
+
+#: inc/core/data.php:2655
+msgid "Thickness of a margin (in pixels)"
+msgstr "Толщина внешнего отступа (в пикселях)"
+
+#: inc/core/data.php:2667
+msgid "Choose image alignment"
+msgstr "Выберите выравнивание изображения"
+
+#: inc/core/data.php:2672
+msgid "You can make this QR code clickable. Enter here the URL"
+msgstr "Вы можете сделать этот QR код кликабельным. Введите сюда ссылку"
+
+#: inc/core/data.php:2677
+msgid "Open link in same window/tab"
+msgstr "Открывать ссылку в том же окне/вкладке"
+
+#: inc/core/data.php:2678
+msgid "Open link in new window/tab"
+msgstr "Открывать ссылку в новом окне/вкладке"
+
+#: inc/core/data.php:2681
+msgid "Link target"
+msgstr "Цель ссылки"
+
+#: inc/core/data.php:2682
+msgid "Select link target"
+msgstr "Выберите цель ссылки"
+
+#: inc/core/data.php:2687
+msgid "Primary color"
+msgstr "Основной цвет"
+
+#: inc/core/data.php:2688
+msgid "Pick a primary color"
+msgstr "Выберите основной цвет"
+
+#: inc/core/data.php:2694
+msgid "Pick a background color"
+msgstr "Выберите цвет фона"
+
+#: inc/core/data.php:2702
+msgid "Advanced QR code generator"
+msgstr "Продвинутый генератор QR кодов"
+
 #: inc/core/generator-views.php:45
 msgid "Yes"
 msgstr "Да"
@@ -3160,7 +3235,7 @@ msgstr "Нажмите чтобы установить это значение"
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:205 inc/core/tools.php:883
+#: inc/core/generator.php:205 inc/core/tools.php:900
 msgid "Access denied"
 msgstr "Доступ запрещен"
 
@@ -3351,19 +3426,23 @@ msgstr "ID пользователя указан неверно"
 msgid "please specify template name"
 msgstr "пожалуйста укажите имя шаблона"
 
-#: inc/core/tools.php:802
+#: inc/core/shortcodes.php:1435
+msgid "please specify the data"
+msgstr "пожалуйста введите данные"
+
+#: inc/core/tools.php:819
 msgid "Example code does not found, please check it later"
 msgstr "Код примера не найден, возвращайтесь позже"
 
-#: inc/core/tools.php:818
+#: inc/core/tools.php:835
 msgid "Get the code"
 msgstr "Получить код"
 
-#: inc/core/tools.php:892
+#: inc/core/tools.php:909
 msgid "Slide link"
 msgstr "Ссылка слайда"
 
-#: inc/core/tools.php:895
+#: inc/core/tools.php:912
 msgid ""
 "Use this field to add custom links to slides used with Slider, Carousel and "
 "Custom Gallery shortcodes"

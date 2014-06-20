@@ -31,7 +31,7 @@ class Shortcodes_Ultimate {
 				'menu_title'  => apply_filters( 'su/menu/shortcodes', __( 'Shortcodes', 'su' ) ),
 				'capability'  => 'manage_options',
 				'slug'        => 'shortcodes-ultimate',
-				'icon_url'    => plugins_url( 'assets/images/icon.png', SU_PLUGIN_FILE ),
+				'icon_url'    => 'dashicons-editor-code',
 				'position'    => '80.11',
 				'options'     => array(
 					array(

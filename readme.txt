@@ -1,5 +1,5 @@
 === Shortcodes Ultimate ===
-Contributors: gn_themes
+Contributors: madfork, gn_themes
 License: GPL
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
 Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
@@ -23,12 +23,15 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 
 = Features =
 * Shortcode Generator
-* 40+ amazing shortcodes
+* 50+ amazing shortcodes
 * Modern responsive design
 * Power of CSS3
 * Custom CSS editor with syntax highlight
 * Special widget
 * Rich API
+
+= Demo video =
+[youtube http://www.youtube.com/watch?v=h5hlJb0mSSY]
 
 = What people are saying (blog posts/tutorials) =
 * [40+ Reasons Shortcodes Ultimate Is A Must Have Plugin](http://www.the-best-web-hosting-service.com/blog/2014/01/ultimateshortcodesreview/)
@@ -43,9 +46,6 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Video: [Shortcodes Ultimate Tutorial](http://www.youtube.com/watch?v=IjmaXz-b55I)
 * Video: [How to use special widget](http://www.youtube.com/watch?v=YU3Zu6C5ZfA)
 * Video: [How to create image gallery](http://www.youtube.com/watch?v=kCWyO2F7jTw)
-
-= Demo video =
-[youtube http://www.youtube.com/watch?v=DR2c266yWEA]
 
 = Requirements =
 * WordPress 3.5+
@@ -107,11 +107,15 @@ Upgrade normally
 
 == Changelog ==
 
-= 4.8.1 =
-* Minor [spoiler] fix, for hidden spoiler content
-* Updated Japanese translation
+= 4.9.0 =
+* New shortcode [qrcode] allows you to generate colorful and responsive QR codes!
+* Improved shortcode serach. Just type shortcode name and hit Enter
+* Updated Animate.css (animations library)
+* Updated ACE editor (custom CSS editor)
+* Responsive CSS for [tabs]
+* Highly decreased plugin size
 
-= 4.8.0 =
+= 4.8 =
 * Minor UI fixes (compatibility with page builders)
 * Czech translation by [Punc00](http://nuze.cz/)
 * Added: full compatibility with multiple editors on same page - [fourm topic](http://wordpress.org/support/topic/enhance-compatibility-with-other-plugins)
@@ -119,6 +123,8 @@ Upgrade normally
 * Fixed: Swiper click event, Swiper has been updated - [forum topic](http://wordpress.org/support/topic/carousel-links-not-working)
 * Fixed: [spoiler]'s content is now hidden until the page is loaded
 * New dashboard page: Cheatsheet
+* Minor [spoiler] fix, for hidden spoiler content
+* Updated Japanese translation
 
 = 4.7 =
 * Long-awaited feature: slider, carousel and custom_gallery links can now be open with lightbox

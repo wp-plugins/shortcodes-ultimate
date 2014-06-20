@@ -18,20 +18,6 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 		// Save the target
 		window.su_generator_target = $(this).data('target');
-		// // Visual Composer
-		// if ($('#wpb_visual_composer').is(':visible')) {
-		// 	// $('body').addClass('su-generator-priority-mode');
-		// 	window.su_generator_target = 'wpb_tinymce_content';
-		// }
-		// // Elegant Themes page builder
-		// else if ($('.et_pb_modal_settings_container').is(':visible')) {
-		// 	// $('body').addClass('su-generator-priority-mode');
-		// 	window.su_generator_target = 'et_pb_content_new';
-		// }
-		// // SiteOrigin page builder
-		// else if ($('.panels-admin-dialog').is(':visible')) {
-		// 	// $('body').addClass('su-generator-priority-mode');
-		// }
 		// Get open shortcode
 		var shortcode = $(this).data('shortcode');
 		// Open magnificPopup
@@ -81,7 +67,7 @@ jQuery(document).ready(function ($) {
 		// If filter All, show all choices
 		if (filter === 'all') $choice.css({
 			opacity: 1
-		});
+		}).removeClass('su-generator-choice-first');
 		// Else run search
 		else {
 			var regex = new RegExp(filter, 'gi');
@@ -96,7 +82,7 @@ jQuery(document).ready(function ($) {
 				// Show choice if matched
 				if (group.match(regex) !== null) $(this).css({
 					opacity: 1
-				});
+				}).removeClass('su-generator-choice-first');
 			});
 		}
 		e.preventDefault();
@@ -143,18 +129,25 @@ jQuery(document).ready(function ($) {
 			$choices.show();
 			$choice.css({
 				opacity: 1
-			});
+			}).removeClass('su-generator-choice-first');
 			// Show filters
 			$filter.show();
 		},
 		blur: function () {},
 		keyup: function (e) {
-			var val = $(this).val(),
+			var $first = $('.su-generator-choice-first:first'),
+				val = $(this).val(),
 				regex = new RegExp(val, 'gi');
+			// Hotkey action
+			if (e.keyCode === 13 && $first.length > 0) {
+				e.preventDefault();
+				$(this).val('').blur();
+				$first.trigger('click');
+			}
 			// Hide all choices
 			$choice.css({
 				opacity: 0.2
-			});
+			}).removeClass('su-generator-choice-first');
 			// Find searched choices and show
 			$choice.each(function () {
 				// Get shortcode name
@@ -163,18 +156,14 @@ jQuery(document).ready(function ($) {
 					desc = $(this).data('desc'),
 					group = $(this).data('group');
 				// Show choice if matched
-				if (id.match(regex) !== null) $(this).css({
-					opacity: 1
-				});
-				else if (name.match(regex) !== null) $(this).css({
-					opacity: 1
-				});
-				else if (desc.match(regex) !== null) $(this).css({
-					opacity: 1
-				});
-				else if (group.match(regex) !== null) $(this).css({
-					opacity: 1
-				});
+				if ((id + name + desc + group).match(regex) !== null) {
+					$(this).css({
+						opacity: 1
+}).removeClass('su-generator-choice-first');
+					if (val === id || val === name || val === name.toLowerCase()) {
+						$(this).addClass('su-generator-choice-first');
+					}
+				}
 			});
 		}
 	});
@@ -253,40 +242,40 @@ jQuery(document).ready(function ($) {
 						frame;
 					// Update hidden value
 					var update = function () {
-						var val = 'none',
-							ids = '',
-							source = $sources.val();
-						// Media library
-						if (source === 'media') {
-							var images = [];
-							$images.find('span').each(function (i) {
-								images[i] = $(this).data('id');
-							});
-							if (images.length > 0) ids = images.join(',');
+							var val = 'none',
+								ids = '',
+								source = $sources.val();
+							// Media library
+							if (source === 'media') {
+								var images = [];
+								$images.find('span').each(function (i) {
+									images[i] = $(this).data('id');
+								});
+								if (images.length > 0) ids = images.join(',');
+							}
+							// Category
+							else if (source === 'category') {
+								var categories = $cats.val() || [];
+								if (categories.length > 0) ids = categories.join(',');
+							}
+							// Taxonomy
+							else if (source === 'taxonomy') {
+								var tax = $taxes.val() || '',
+									terms = $terms.val() || [];
+								if (tax !== '0' && terms.length > 0) val = 'taxonomy: ' + tax + '/' + terms.join(',');
+							}
+							// Deselect
+							else if (source === '0') {
+								val = 'none';
+							}
+							// Other options
+							else {
+								val = source;
+							}
+							if (ids !== '') val = source + ': ' + ids;
+							$val.val(val).trigger('change');
 						}
-						// Category
-						else if (source === 'category') {
-							var categories = $cats.val() || [];
-							if (categories.length > 0) ids = categories.join(',');
-						}
-						// Taxonomy
-						else if (source === 'taxonomy') {
-							var tax = $taxes.val() || '',
-								terms = $terms.val() || [];
-							if (tax !== '0' && terms.length > 0) val = 'taxonomy: ' + tax + '/' + terms.join(',');
-						}
-						// Deselect
-						else if (source === '0') {
-							val = 'none';
-						}
-						// Other options
-						else {
-							val = source;
-						}
-						if (ids !== '') val = source + ': ' + ids;
-						$val.val(val).trigger('change');
-					}
-					// Switch source
+						// Switch source
 					$sources.on('change', function (e) {
 						var source = $(this).val();
 						e.preventDefault();

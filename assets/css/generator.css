@@ -134,6 +134,7 @@
 	line-height: 26px;
 }
 #su-generator-choices span:hover i { color: #fff; }
+.su-generator-choice-first { outline: 1px solid #09f; }
 
 /* Breadcrumbs */
 #su-generator-breadcrumbs {

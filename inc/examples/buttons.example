@@ -40,7 +40,7 @@
 
 [%su_button style="noise"] Click me [/%su_button] [%su_button style="bubbles"] Click me [/%su_button] [%su_button style="soft"] Click me [/%su_button]
 
-[%su_button style="stroked"] Click me [/%su_button] [%su_button style="3d"] Click me [/%su_button]
+[%su_button style="stroked"] Click me [/%su_button] [%su_button style="3d"] Click me [/%su_button] [%su_button style="ghost" color="#2D89EF"] Click me [/%su_button]
 
 -----
 

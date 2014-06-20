@@ -138,7 +138,10 @@ jQuery(document).ready(function ($) {
 	// Animate
 	$('.su-animate').each(function () {
 		$(this).one('inview', function (e) {
-			$(this).addClass('animated').css('visibility', 'visible');
+			var $this = $(this);
+			window.setTimeout(function () {
+				$this.addClass('animated').css('visibility', 'visible');
+			}, $this.data('delay'));
 		});
 	});
 
