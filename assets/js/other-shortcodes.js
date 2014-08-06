@@ -135,15 +135,54 @@ jQuery(document).ready(function ($) {
 		$tt.qtip(config);
 	});
 
-	// Animate
-	$('.su-animate').each(function () {
-		$(this).one('inview', function (e) {
-			var $this = $(this);
-			window.setTimeout(function () {
-				$this.addClass('animated').css('visibility', 'visible');
-			}, $this.data('delay'));
+	// Expand
+	$('.su-expand').each(function () {
+		var $this = $(this),
+			$content = $this.children('.su-expand-content'),
+			$more = $this.children('.su-expand-link-more'),
+			$less = $this.children('.su-expand-link-less'),
+			data = $this.data(),
+			col = 'su-expand-collapsed';
+
+		$more.on('click', function (e) {
+			$content.css('max-height', 'none');
+			$this.removeClass(col);
+		});
+		$less.on('click', function (e) {
+			$content.css('max-height', data.height + 'px');
+			$this.addClass(col);
 		});
 	});
+
+	// jQuery.support.transition
+	// to verify that CSS3 transition is supported (or any of its browser-specific implementations)
+	$.support.transition = (function () {
+		var thisBody = document.body || document.documentElement,
+			thisStyle = thisBody.style,
+			support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
+
+		return support;
+	})();
+
+	// Animations is supported
+	if ($.support.transition) {
+		// Animate
+		$('.su-animate').each(function () {
+			$(this).one('inview', function (e) {
+				var $this = $(this),
+					data = $this.data();
+				window.setTimeout(function () {
+					$this.addClass(data.animation);
+					$this.addClass('animated');
+					$this.css('visibility', 'visible');
+				}, data.delay * 1000);
+			});
+		});
+	}
+	// Animations isn't supported
+	else {
+		$('.su-animate').css('visibility', 'visible');
+	}
 
 	function tabs_height() {
 		$('.su-tabs-vertical').each(function () {

@@ -44,7 +44,7 @@
 #su-generator.su-generator-narrow { max-width: 500px; }
 
 /* Generator tools */
-#su-generator-tools { margin-bottom: 20px; }
+#su-generator-tools { margin: 0 20px 20px 0; }
 #su-generator-tools span {
 	display: inline-block;
 	width: 1px;
@@ -53,6 +53,16 @@
 	border-right: 1px dotted #555;
 	vertical-align: middle;
 }
+#su-generator-tools a.su-add-ons {
+	display: inline-block;
+	padding: 2px 7px;
+	background: #FF7654;
+	color: #fff;
+	text-decoration: none;
+	border: 1px solid #ff4d21;
+	border-radius: 3px;
+}
+#su-generator-tools a.su-add-ons:hover { background: #ff4d21; }
 
 /* Search box */
 #su-generator-search {
@@ -134,7 +144,10 @@
 	line-height: 26px;
 }
 #su-generator-choices span:hover i { color: #fff; }
-.su-generator-choice-first { outline: 1px solid #09f; }
+.su-generator-choice-first {
+	outline: 1px solid #09f;
+	box-shadow: 0 0 3px rgba(30,140,190,.8);
+}
 
 /* Breadcrumbs */
 #su-generator-breadcrumbs {

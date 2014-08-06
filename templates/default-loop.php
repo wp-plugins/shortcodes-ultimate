@@ -16,7 +16,7 @@
 					<div class="su-post-excerpt">
 						<?php the_excerpt(); ?>
 					</div>
-					<a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'su' ), __( '1 comment', 'su' ), __( '%n comments', 'su' ) ); ?></a>
+					<a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'su' ), __( '1 comment', 'su' ), '% comments' ); ?></a>
 				</div>
 
 				<?php

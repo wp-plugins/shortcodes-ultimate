@@ -95,13 +95,19 @@ class Su_Shortcodes {
 
 	public static function divider( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-				'top'   => 'yes',
-				'text'  => __( 'Go to top', 'su' ),
-				'class' => ''
+				'top'           => 'yes',
+				'text'          => __( 'Go to top', 'su' ),
+				'style'         => 'default',
+				'divider_color' => '#999999',
+				'link_color'    => '#999999',
+				'size'          => '3',
+				'margin'        => '15',
+				'class'         => ''
 			), $atts, 'divider' );
-		$top = ( $atts['top'] === 'yes' ) ? '<a href="#">' . su_scattr( $atts['text'] ) . '</a>' : '';
+		// Prepare TOP link
+		$top = ( $atts['top'] === 'yes' ) ? '<a href="#" style="color:' . $atts['link_color'] . '">' . su_scattr( $atts['text'] ) . '</a>' : '';
 		su_query_asset( 'css', 'su-content-shortcodes' );
-		return '<div class="su-divider' . su_ecssc( $atts ) . '">' . $top . '</div>';
+		return '<div class="su-divider su-divider-style-' . $atts['style'] . su_ecssc( $atts ) . '" style="margin:' . $atts['margin'] . 'px 0;border-width:' . $atts['size'] . 'px;border-color:' . $atts['divider_color'] . '">' . $top . '</div>';
 	}
 
 	public static function spacer( $atts = null, $content = null ) {
@@ -304,6 +310,7 @@ class Su_Shortcodes {
 				'text_shadow' => 'none',
 				'desc'        => '',
 				'onclick'     => '',
+				'rel'         => '',
 				'class'       => ''
 			), $atts, 'button' );
 
@@ -421,8 +428,10 @@ class Su_Shortcodes {
 		else $content = $icon . ' ' . $content;
 		// Prepare onclick action
 		$atts['onclick'] = ( $atts['onclick'] ) ? ' onClick="' . $atts['onclick'] . '"' : '';
+		// Prepare rel attribute
+		$atts['rel'] = ( $atts['rel'] ) ? ' rel="' . $atts['rel'] . '"' : '';
 		su_query_asset( 'css', 'su-content-shortcodes' );
-		return $before . '<a href="' . su_scattr( $atts['url'] ) . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"' . $atts['onclick'] . '><span style="' . implode( $span_css, ';' ) . '">' . do_shortcode( $content ) . $desc . '</span></a>' . $after;
+		return $before . '<a href="' . su_scattr( $atts['url'] ) . '" class="' . implode( $classes, ' ' ) . '" style="' . implode( $a_css, ';' ) . '" target="_' . $atts['target'] . '"' . $atts['onclick'] . $atts['rel'] . '><span style="' . implode( $span_css, ';' ) . '">' . do_shortcode( $content ) . $desc . '</span></a>' . $after;
 	}
 
 	public static function service( $atts = null, $content = null ) {
@@ -483,13 +492,38 @@ class Su_Shortcodes {
 		return '<div class="su-note' . su_ecssc( $atts ) . '" style="border-color:' . su_hex_shift( $atts['note_color'], 'darker', 10 ) . ';' . $radius . '"><div class="su-note-inner su-clearfix" style="background-color:' . $atts['note_color'] . ';border-color:' . su_hex_shift( $atts['note_color'], 'lighter', 80 ) . ';color:' . $atts['text_color'] . ';' . $radius . '">' . su_do_shortcode( $content, 'n' ) . '</div></div>';
 	}
 
+	public static function expand( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+				'more_text'  => __( 'Show more', 'su' ),
+				'less_text'  => __( 'Show less', 'su' ),
+				'height'     => '100',
+				'hide_less'  => 'no',
+				'text_color' => '#333333',
+				'link_color' => '#0088FF',
+				'link_style' => 'default',
+				'link_align' => 'left',
+				'more_icon'  => '',
+				'less_icon'  => '',
+				'class'      => ''
+			), $atts, 'expand' );
+		// Prepare more icon
+		$more_icon = ( $atts['more_icon'] ) ? Su_Tools::icon( $atts['more_icon'] ) : '';
+		$less_icon = ( $atts['less_icon'] ) ? Su_Tools::icon( $atts['less_icon'] ) : '';
+		if ( $more_icon || $less_icon ) su_query_asset( 'css', 'font-awesome' );
+		// Prepare less link
+		$less = ( $atts['hide_less'] !== 'yes' ) ? '<div class="su-expand-link su-expand-link-less" style="text-align:' . $atts['link_align'] . '"><a href="javascript:;" style="color:' . $atts['link_color'] . ';border-color:' . $atts['link_color'] . '">' . $less_icon . '<span style="border-color:' . $atts['link_color'] . '">' . $atts['less_text'] . '</span></a></div>' : '';
+		su_query_asset( 'css', 'su-box-shortcodes' );
+		su_query_asset( 'js', 'su-other-shortcodes' );
+		return '<div class="su-expand su-expand-collapsed su-expand-link-style-' . $atts['link_style'] . su_ecssc( $atts ) . '" data-height="' . $atts['height'] . '"><div class="su-expand-content" style="color:' . $atts['text_color'] . ';max-height:' . intval( $atts['height'] ) . 'px;overflow:hidden">' . do_shortcode( $content ) . '</div><div class="su-expand-link su-expand-link-more" style="text-align:' . $atts['link_align'] . '"><a href="javascript:;" style="color:' . $atts['link_color'] . ';border-color:' . $atts['link_color'] . '">' . $more_icon . '<span style="border-color:' . $atts['link_color'] . '">' . $atts['more_text'] . '</span></a></div>' . $less . '</div>';
+	}
+
 	public static function lightbox( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'src'   => false,
 				'type'  => 'iframe',
 				'class' => ''
 			), $atts, 'lightbox' );
-		if ( !$atts['src'] ) return '<p class="su-error">Lightbox: ' . __( 'please specify correct source', 'su' ) . '</p>';
+		if ( !$atts['src'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct source', 'su' ) );
 		su_query_asset( 'css', 'magnific-popup' );
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'magnific-popup' );
@@ -558,11 +592,11 @@ class Su_Shortcodes {
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts, 'youtube' );
-		if ( !$atts['url'] ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare autoplay
 		$autoplay = ( $atts['autoplay'] === 'yes' ) ? '?autoplay=1' : '';
 		// Create player
@@ -596,11 +630,11 @@ class Su_Shortcodes {
 				'https'          => 'no',
 				'class'          => ''
 			), $atts, 'youtube_advanced' );
-		if ( !$atts['url'] ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="su-error">YouTube: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare params
 		foreach ( array( 'autohide', 'autoplay', 'controls', 'fs', 'loop', 'modestbranding', 'playlist', 'rel', 'showinfo', 'theme' ) as $param ) $params[$param] = str_replace( array( 'no', 'yes', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
 		// Correct loop
@@ -629,11 +663,11 @@ class Su_Shortcodes {
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts, 'vimeo' );
-		if ( !$atts['url'] ) return '<p class="su-error">Vimeo: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*vimeo\.com(?:[\/\w]*\/videos?)?\/([0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="su-error">Vimeo: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare autoplay
 		$autoplay = ( $atts['autoplay'] === 'yes' ) ? '&amp;autoplay=1' : '';
 		// Create player
@@ -657,11 +691,11 @@ class Su_Shortcodes {
 				'responsive' => 'yes',
 				'class'      => ''
 			), $atts, 'screenr' );
-		if ( !$atts['url'] ) return '<p class="su-error">Screenr: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = ( preg_match( '~(?:<iframe [^>]*src=")?(?:https?:\/\/(?:[\w]+\.)*screenr\.com(?:[\/\w]*\/videos?)?\/([a-zA-Z0-9]+)[^\s]*)"?(?:[^>]*></iframe>)?(?:<p>.*</p>)?~ix', $atts['url'], $match ) ) ? $match[1] : false;
 		// Check that url is specified
-		if ( !$id ) return '<p class="su-error">Screenr: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Create player
 		$return[] = '<div class="su-screenr su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '">';
 		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="http://screenr.com/embed/' . $id . '" frameborder="0" allowfullscreen="true"></iframe>';
@@ -689,11 +723,11 @@ class Su_Shortcodes {
 				'info'       => 'yes',
 				'class'      => ''
 			), $atts, 'dailymotion' );
-		if ( !$atts['url'] ) return '<p class="su-error">Dailymotion: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		$id = strtok( basename( $atts['url'] ), '_' );
 		// Check that url is specified
-		if ( !$id ) return '<p class="su-error">Dailymotion: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare params
 		$params = array();
 		foreach ( array( 'autoplay', 'background', 'foreground', 'highlight', 'logo', 'quality', 'related', 'info' ) as $param )
@@ -716,14 +750,14 @@ class Su_Shortcodes {
 				'loop'     => 'no',
 				'class'    => ''
 			), $atts, 'audio' );
-		if ( !$atts['url'] ) return '<p class="su-error">Audio: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		// Generate unique ID
 		$id = uniqid( 'su_audio_player_' );
 		// Prepare width
 		$width = ( $atts['width'] !== 'auto' ) ? 'max-width:' . $atts['width'] : '';
 		// Check that url is specified
-		if ( !$atts['url'] ) return '<p class="su-error">Audio: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		su_query_asset( 'css', 'su-players-shortcodes' );
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'jplayer' );
@@ -745,12 +779,12 @@ class Su_Shortcodes {
 				'loop'     => 'no',
 				'class'    => ''
 			), $atts, 'video' );
-		if ( !$atts['url'] ) return '<p class="su-error">Video: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		$atts['url'] = su_scattr( $atts['url'] );
 		// Generate unique ID
 		$id = uniqid( 'su_video_player_' );
 		// Check that url is specified
-		if ( !$atts['url'] ) return '<p class="su-error">Video: ' . __( 'please specify correct url', 'su' ) . '</p>';
+		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare title
 		$title = ( $atts['title'] ) ? '<div class="jp-title">' . $atts['title'] . '</div>' : '';
 		su_query_asset( 'css', 'su-players-shortcodes' );
@@ -870,9 +904,9 @@ class Su_Shortcodes {
 
 	public static function menu( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
-			'name' => false,
-			'class' => ''
-		), $atts, 'menu' );
+				'name' => false,
+				'class' => ''
+			), $atts, 'menu' );
 		$return = wp_nav_menu( array(
 				'echo'        => false,
 				'menu'        => $atts['name'],
@@ -990,7 +1024,7 @@ class Su_Shortcodes {
 			su_query_asset( 'js', 'su-galleries-shortcodes' );
 		}
 		// Slides not found
-		else $return = '<p class="su-error">Slider: ' . __( 'images not found', 'su' ) . '</p>';
+		else $return = Su_Tools::error( __FUNCTION__, __( 'images not found', 'su' ) );
 		return $return;
 	}
 
@@ -1073,7 +1107,7 @@ class Su_Shortcodes {
 			su_query_asset( 'js', 'su-galleries-shortcodes' );
 		}
 		// Slides not found
-		else $return = '<p class="su-error">Carousel: ' . __( 'images not found', 'su' ) . '</p>';
+		else $return = Su_Tools::error( __FUNCTION__, __( 'images not found', 'su' ) );
 		return $return;
 	}
 
@@ -1128,7 +1162,7 @@ class Su_Shortcodes {
 			su_query_asset( 'css', 'su-galleries-shortcodes' );
 		}
 		// Slides not found
-		else $return = '<p class="su-error">Custom gallery: ' . __( 'images not found', 'su' ) . '</p>';
+		else $return = Su_Tools::error( __FUNCTION__, __( 'images not found', 'su' ) );
 		return $return;
 	}
 
@@ -1264,7 +1298,7 @@ class Su_Shortcodes {
 		// Search for template in plugin directory
 		elseif ( path_join( dirname( SU_PLUGIN_FILE ), $atts['template'] ) ) load_template( path_join( dirname( SU_PLUGIN_FILE ), $atts['template'] ), false );
 		// Template not found
-		else echo '<p class="su-error">Posts: ' . __( 'template not found', 'su' ) . '</p>';
+		else echo Su_Tools::error( __FUNCTION__, __( 'template not found', 'su' ) );
 		$output = ob_get_contents();
 		ob_end_clean();
 		// Return original posts
@@ -1314,15 +1348,8 @@ class Su_Shortcodes {
 				'class'     => ''
 			), $atts, 'animate' );
 		$tag = ( $atts['inline'] === 'yes' ) ? 'span' : 'div';
-		$style = array(
-			'duration' => array(),
-			'delay' => array()
-		);
-		foreach ( array( '-webkit-', '-moz-', '-ms-', '-o-', '' ) as $vendor ) {
-			$style['duration'][] = $vendor . 'animation-duration:' . $atts['duration'] . 's';
-			$style['delay'][] = $vendor . 'animation-delay:' . $atts['delay'] . 's';
-		}
-		$return = '<' . $tag . ' class="su-animate ' . $atts['type'] . su_ecssc( $atts ) . '" style="visibility:hidden;' . implode( ';', $style['duration'] ) . ';' . implode( ';', $style['delay'] ) . '" data-animation="' . $atts['type'] . '" data-delay="' . ( $atts['delay'] * 1000 ) . '">' . do_shortcode( $content ) . '</' . $tag . '>';
+		$time = '-webkit-animation-duration:' . $atts['duration'] . 's;-webkit-animation-delay:' . $atts['delay'] . 's;animation-duration:' . $atts['duration'] . 's;animation-delay:' . $atts['delay'] . 's;';
+		$return = '<' . $tag . ' class="su-animate' . su_ecssc( $atts ) . '" style="visibility:hidden;' . $time . '" data-animation="' . $atts['type'] . '" data-duration="' . $atts['duration'] . '" data-delay="' . $atts['delay'] . '">' . do_shortcode( $content ) . '</' . $tag . '>';
 		su_query_asset( 'css', 'animate' );
 		su_query_asset( 'js', 'jquery' );
 		su_query_asset( 'js', 'inview' );
@@ -1403,6 +1430,20 @@ class Su_Shortcodes {
 		return ( $post ) ? $atts['before'] . $post . $atts['after'] : '';
 	}
 
+	// public static function post_terms( $atts = null, $content = null ) {
+	//  $atts = shortcode_atts( array(
+	//    'post_id'  => '',
+	//    'taxonomy' => 'category',
+	//    'limit'    => '5',
+	//    'links'    => '',
+	//    'format'   => ''
+	//   ), $atts, 'post_terms' );
+	//  // Define current post ID
+	//  if ( !$atts['post_id'] ) $atts['post_id'] = get_the_ID();
+	//  // Check post ID
+	//  if ( !is_numeric( $atts['post_id'] ) || $atts['post_id'] < 1 ) return sprintf( '<p class="su-error">Post terms: %s</p>', __( 'post ID is incorrect', 'su' ) );
+	// }
+
 	public static function template( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'name' => ''
@@ -1443,6 +1484,85 @@ class Su_Shortcodes {
 		su_query_asset( 'css', 'su-content-shortcodes' );
 		// Return result
 		return '<span class="su-qrcode su-qrcode-align-' . $atts['align'] . su_ecssc( $atts ) . '"><a' . $href . ' target="_' . $atts['target'] . '" title="' . $atts['title'] . '"><img src="https://api.qrserver.com/v1/create-qr-code/?data=' . urlencode( $atts['data'] ) . '&size=' . $atts['size'] . 'x' . $atts['size'] . '&format=png&margin=' . $atts['margin'] . '&color=' . su_hex2rgb( $atts['color'] ) . '&bgcolor=' . su_hex2rgb( $atts['background'] ) . '" alt="' . $atts['title'] . '" /></a></span>';
+	}
+
+	public static function scheduler( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+				'time'       => 'all',
+				'days_week'  => 'all',
+				'days_month' => 'all',
+				'months'     => 'all',
+				'years'      => 'all',
+				'alt'        => ''
+			), $atts, 'scheduler' );
+		// Check time
+		if ( $atts['time'] !== 'all' ) {
+			// Get current time
+			$now = current_time( 'timestamp', 0 );
+			// Sanitize
+			$atts['time'] = preg_replace( "/[^0-9-,:]/", '', $atts['time'] );
+			// Loop time ranges
+			foreach( explode( ',', $atts['time'] ) as $range ) {
+				// Check for range symbol
+				if ( strpos( $range, '-' ) === false ) return Su_Tools::error( __FUNCTION__, sprintf( __( 'Incorrect time range (%s). Please use - (minus) symbol to specify time range. Example: 14:00 - 18:00', 'su' ), $range ) );
+				// Split begin/end time
+				$time = explode( '-', $range );
+				// Add minutes
+				if ( strpos( $time[0], ':' ) === false ) $time[0] .= ':00';
+				if ( strpos( $time[1], ':' ) === false ) $time[1] .= ':00';
+				// Parse begin/end time
+				$time[0] = strtotime( $time[0] );
+				$time[1] = strtotime( $time[1] );
+				// Check time
+				if ( $now < $time[0] || $now > $time[1] ) return $atts['alt'];
+			}
+		}
+		// Check day of the week
+		if ( $atts['days_week'] !== 'all' ) {
+			// Get current day of the week
+			$today = date( 'w', current_time( 'timestamp', 0 ) );
+			// Sanitize input
+			$atts['days_week'] = preg_replace( "/[^0-9-,]/", '', $atts['days_week'] );
+			// Parse days range
+			$days = Su_Tools::range( $atts['days_week'] );
+			// Check current day
+			if ( !in_array( $today, $days ) ) return $atts['alt'];
+		}
+		// Check day of the month
+		if ( $atts['days_month'] !== 'all' ) {
+			// Get current day of the month
+			$today = date( 'j', current_time( 'timestamp', 0 ) );
+			// Sanitize input
+			$atts['days_month'] = preg_replace( "/[^0-9-,]/", '', $atts['days_month'] );
+			// Parse days range
+			$days = Su_Tools::range( $atts['days_month'] );
+			// Check current day
+			if ( !in_array( $today, $days ) ) return $atts['alt'];
+		}
+		// Check month
+		if ( $atts['months'] !== 'all' ) {
+			// Get current month
+			$now = date( 'n', current_time( 'timestamp', 0 ) );
+			// Sanitize input
+			$atts['months'] = preg_replace( "/[^0-9-,]/", '', $atts['months'] );
+			// Parse months range
+			$months = Su_Tools::range( $atts['months'] );
+			// Check current month
+			if ( !in_array( $now, $months ) ) return $atts['alt'];
+		}
+		// Check year
+		if ( $atts['years'] !== 'all' ) {
+			// Get current year
+			$now = date( 'Y', current_time( 'timestamp', 0 ) );
+			// Sanitize input
+			$atts['years'] = preg_replace( "/[^0-9-,]/", '', $atts['years'] );
+			// Parse years range
+			$years = Su_Tools::range( $atts['years'] );
+			// Check current year
+			if ( !in_array( $now, $years ) ) return $atts['alt'];
+		}
+		// Return result (all check passed)
+		return do_shortcode( $content );
 	}
 
 }

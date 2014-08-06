@@ -87,6 +87,9 @@ class Su_Generator {
 					'<a href="http://gndev.info/shortcodes-ultimate/" target="_blank" title="' . __( 'Plugin homepage', 'su' ) . '">' . __( 'Plugin homepage', 'su' ) . '</a>',
 					'<a href="http://wordpress.org/support/plugin/shortcodes-ultimate/" target="_blank" title="' . __( 'Support forums', 'su' ) . '">' . __( 'Support forums', 'su' ) . '</a>'
 				) );
+
+			// Add add-ons links
+			if ( !defined( 'SUE_PLUGIN_FILE' ) || !defined( 'SUS_PLUGIN_FILE' ) || !defined( 'SUM_PLUGIN_FILE' ) ) $tools[] = '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-addons' ) . '" target="_blank" title="' . __( 'Add-ons', 'su' ) . '" class="su-add-ons">' . __( 'Add-ons', 'su' ) . '</a>';
 ?>
 		<div id="su-generator-wrap" style="display:none">
 			<div id="su-generator">

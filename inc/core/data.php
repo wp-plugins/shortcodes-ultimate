@@ -249,6 +249,7 @@ class Su_Data {
 					),
 					'content' => __( 'Tab content', 'su' ),
 					'desc' => __( 'Single tab', 'su' ),
+					'note' => __( 'Did you know that you need to wrap single tabs with [tabs] shortcode?', 'su' ),
 					'example' => 'tabs',
 					'icon' => 'list-alt'
 				),
@@ -351,6 +352,50 @@ class Su_Data {
 							'values' => array( ),
 							'default' => __( 'Go to top', 'su' ),
 							'name' => __( 'Link text', 'su' ), 'desc' => __( 'Text for the GO TOP link', 'su' )
+						),
+						'style' => array(
+							'type' => 'select',
+							'values' => array(
+								'default' => __( 'Default', 'su' ),
+								'dotted'  => __( 'Dotted', 'su' ),
+								'dashed'  => __( 'Dashed', 'su' ),
+								'double'  => __( 'Double', 'su' )
+							),
+							'default' => 'default',
+							'name' => __( 'Style', 'su' ),
+							'desc' => __( 'Choose style for this divider', 'su' )
+						),
+						'divider_color' => array(
+							'type' => 'color',
+							'values' => array( ),
+							'default' => '#999999',
+							'name' => __( 'Divider color', 'su' ),
+							'desc' => __( 'Pick the color for divider', 'su' )
+						),
+						'link_color' => array(
+							'type' => 'color',
+							'values' => array( ),
+							'default' => '#999999',
+							'name' => __( 'Link color', 'su' ),
+							'desc' => __( 'Pick the color for TOP link', 'su' )
+						),
+						'size' => array(
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 40,
+							'step' => 1,
+							'default' => 3,
+							'name' => __( 'Size', 'su' ),
+							'desc' => __( 'Height of the divider (in pixels)', 'su' )
+						),
+						'margin' => array(
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 200,
+							'step' => 5,
+							'default' => 15,
+							'name' => __( 'Margin', 'su' ),
+							'desc' => __( 'Adjust the top and bottom margins of this divider (in pixels)', 'su' )
 						),
 						'class' => array(
 							'default' => '',
@@ -768,6 +813,11 @@ class Su_Data {
 							'name' => __( 'onClick', 'su' ),
 							'desc' => __( 'Advanced JavaScript code for onClick action', 'su' )
 						),
+						'rel' => array(
+							'default' => '',
+							'name' => __( 'Rel attribute', 'su' ),
+							'desc' => __( 'Here you can add value for the rel attribute.<br>Example values: <b%value>nofollow</b>, <b%value>lightbox</b>', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
@@ -914,6 +964,97 @@ class Su_Data {
 					'content' => __( 'Note text', 'su' ),
 					'desc' => __( 'Colored box', 'su' ),
 					'icon' => 'list-alt'
+				),
+				// expand
+				'expand' => array(
+					'name' => __( 'Expand', 'su' ),
+					'type' => 'wrap',
+					'group' => 'box',
+					'atts' => array(
+						'more_text' => array(
+							'default' => __( 'Show more', 'su' ),
+							'name' => __( 'More text', 'su' ),
+							'desc' => __( 'Enter the text for more link', 'su' )
+						),
+						'less_text' => array(
+							'default' => __( 'Show less', 'su' ),
+							'name' => __( 'Less text', 'su' ),
+							'desc' => __( 'Enter the text for less link', 'su' )
+						),
+						'height' => array(
+							'type' => 'slider',
+							'min' => 0,
+							'max' => 1000,
+							'step' => 10,
+							'default' => 100,
+							'name' => __( 'Height', 'su' ),
+							'desc' => __( 'Height for collapsed state (in pixels)', 'su' )
+						),
+						'hide_less' => array(
+							'type' => 'bool',
+							'default' => 'no',
+							'name' => __( 'Hide less link', 'su' ),
+							'desc' => __( 'This option allows you to hide less link, when the text block has been expanded', 'su' )
+						),
+						'text_color' => array(
+							'type' => 'color',
+							'values' => array( ),
+							'default' => '#333333',
+							'name' => __( 'Text color', 'su' ),
+							'desc' => __( 'Pick the text color', 'su' )
+						),
+						'link_color' => array(
+							'type' => 'color',
+							'values' => array( ),
+							'default' => '#0088FF',
+							'name' => __( 'Link color', 'su' ),
+							'desc' => __( 'Pick the link color', 'su' )
+						),
+						'link_style' => array(
+							'type' => 'select',
+							'values' => array(
+								'default'    => __( 'Default', 'su' ),
+								'underlined' => __( 'Underlined', 'su' ),
+								'dotted'     => __( 'Dotted', 'su' ),
+								'dashed'     => __( 'Dashed', 'su' ),
+								'button'     => __( 'Button', 'su' ),
+							),
+							'default' => 'default',
+							'name' => __( 'Link style', 'su' ),
+							'desc' => __( 'Select the style for more/less link', 'su' )
+						),
+						'link_align' => array(
+							'type' => 'select',
+							'values' => array(
+								'left' => __( 'Left', 'su' ),
+								'center' => __( 'Center', 'su' ),
+								'right' => __( 'Right', 'su' ),
+							),
+							'default' => 'left',
+							'name' => __( 'Link align', 'su' ),
+							'desc' => __( 'Select link alignment', 'su' )
+						),
+						'more_icon' => array(
+							'type' => 'icon',
+							'default' => '',
+							'name' => __( 'More icon', 'su' ),
+							'desc' => __( 'Add an icon to the more link', 'su' )
+						),
+						'less_icon' => array(
+							'type' => 'icon',
+							'default' => '',
+							'name' => __( 'Less icon', 'su' ),
+							'desc' => __( 'Add an icon to the less link', 'su' )
+						),
+						'class' => array(
+							'default' => '',
+							'name' => __( 'Class', 'su' ),
+							'desc' => __( 'Extra CSS class', 'su' )
+						)
+					),
+					'content' => __( 'This text block can be expanded', 'su' ),
+					'desc' => __( 'Expandable text block', 'su' ),
+					'icon' => 'sort-amount-asc'
 				),
 				// lightbox
 				'lightbox' => array(
@@ -2226,13 +2367,18 @@ class Su_Data {
 							'default' => 'IN', 'name' => __( 'Taxonomy term operator', 'su' ),
 							'desc' => __( 'IN - posts that have any of selected categories terms<br/>NOT IN - posts that is does not have any of selected terms<br/>AND - posts that have all selected terms', 'su' )
 						),
+						// 'author' => array(
+						// 	'type' => 'select',
+						// 	'multiple' => true,
+						// 	'values' => Su_Tools::get_users(),
+						// 	'default' => 'default',
+						// 	'name' => __( 'Authors', 'su' ),
+						// 	'desc' => __( 'Choose the authors whose posts you want to show. Enter here comma-separated list of users (IDs). Example: 1,7,18', 'su' )
+						// ),
 						'author' => array(
-							'type' => 'select',
-							'multiple' => true,
-							'values' => Su_Tools::get_users(),
-							'default' => 'default',
+							'default' => '',
 							'name' => __( 'Authors', 'su' ),
-							'desc' => __( 'Choose the authors whose posts you want to show', 'su' )
+							'desc' => __( 'Enter here comma-separated list of author\'s IDs. Example: 1,7,18', 'su' )
 						),
 						'meta_key' => array(
 							'default' => '',
@@ -2605,6 +2751,39 @@ class Su_Data {
 					'desc' => __( 'Post data', 'su' ),
 					'icon' => 'info-circle'
 				),
+				// post_terms
+				// 'post_terms' => array(
+				// 	'name' => __( 'Post terms', 'su' ),
+				// 	'type' => 'single',
+				// 	'group' => 'data',
+				// 	'atts' => array(
+				// 		'post_id' => array(
+				// 			'default' => '',
+				// 			'name' => __( 'Post ID', 'su' ),
+				// 			'desc' => __( 'You can specify custom post ID. Leave this field empty to use an ID of the current post. Current post ID may not work in Live Preview mode', 'su' )
+				// 		),
+				// 		'links' => array(
+				// 			'type' => 'bool',
+				// 			'default' => 'yes',
+				// 			'name' => __( 'Show links', 'su' ),
+				// 			'desc' => __( 'Show terms names as hyperlinks', 'su' )
+				// 		),
+				// 		'format' => array(
+				// 			'type' => 'select',
+				// 			'values' => array(
+				// 				'text' => __( 'Terms separated by commas', 'su' ),
+				// 				'br' => __( 'Terms separated by new lines', 'su' ),
+				// 				'ul' => __( 'Unordered list', 'su' ),
+				// 				'ol' => __( 'Ordered list', 'su' ),
+				// 			),
+				// 			'default' => 'text',
+				// 			'name' => __( 'Format', 'su' ),
+				// 			'desc' => __( 'Choose how to output the terms', 'su' )
+				// 		),
+				// 	),
+				// 	'desc' => __( 'Terms list', 'su' ),
+				// 	'icon' => 'info-circle'
+				// ),
 				// template
 				'template' => array(
 					'name' => __( 'Template', 'su' ),
@@ -2701,6 +2880,48 @@ class Su_Data {
 					),
 					'desc' => __( 'Advanced QR code generator', 'su' ),
 					'icon' => 'qrcode'
+				),
+				// scheduler
+				'scheduler' => array(
+					'name' => __( 'Scheduler', 'su' ),
+					'type' => 'wrap',
+					'group' => 'other',
+					'atts' => array(
+						'time' => array(
+							'default' => '',
+							'name' => __( 'Time', 'su' ),
+							'desc' => sprintf( __( 'In this field you can specify one or more time ranges. Every day at this time the content of shortcode will be visible. %s %s %s - show content from 9:00 to 18:00 %s - show content from 9:00 to 13:00 and from 14:00 to 18:00 %s - example with minutes (content will be visible each day, 45 minutes) %s - example with seconds', 'su' ), '<br><br>', __( 'Examples (click to set)', 'su' ), '<br><b%value>9-18</b>', '<br><b%value>9-13, 14-18</b>', '<br><b%value>9:30-10:15</b>', '<br><b%value>9:00:00-17:59:59</b>' )
+						),
+						'days_week' => array(
+							'default' => '',
+							'name' => __( 'Days of the week', 'su' ),
+							'desc' => sprintf( __( 'In this field you can specify one or more days of the week. Every week at these days the content of shortcode will be visible. %s 0 - Sunday %s 1 - Monday %s 2 - Tuesday %s 3 - Wednesday %s 4 - Thursday %s 5 - Friday %s 6 - Saturday %s %s %s - show content from Monday to Friday %s - show content only at Sunday %s - show content at Sunday and from Wednesday to Friday', 'su' ), '<br><br>', '<br>', '<br>', '<br>', '<br>', '<br>', '<br>', '<br><br>', __( 'Examples (click to set)', 'su' ), '<br><b%value>1-5</b>', '<br><b%value>0</b>', '<br><b%value>0, 3-5</b>' )
+						),
+						'days_month' => array(
+							'default' => '',
+							'name' => __( 'Days of the month', 'su' ),
+							'desc' => sprintf( __( 'In this field you can specify one or more days of the month. Every month at these days the content of shortcode will be visible. %s %s %s - show content only at first day of month %s - show content from 1th to 5th %s - show content from 10th to 15th and from 20th to 25th', 'su' ), '<br><br>', __( 'Examples (click to set)', 'su' ), '<br><b%value>1</b>', '<br><b%value>1-5</b>', '<br><b%value>10-15, 20-25</b>' )
+						),
+						'months' => array(
+							'default' => '',
+							'name' => __( 'Months', 'su' ),
+							'desc' => sprintf( __( 'In this field you can specify the month or months in which the content will be visible. %s %s %s - show content only in January %s - show content from February to June %s - show content in January, March and from May to July', 'su' ), '<br><br>', __( 'Examples (click to set)', 'su' ), '<br><b%value>1</b>', '<br><b%value>2-6</b>', '<br><b%value>1, 3, 5-7</b>' )
+						),
+						'years' => array(
+							'default' => '',
+							'name' => __( 'Years', 'su' ),
+							'desc' => sprintf( __( 'In this field you can specify the year or years in which the content will be visible. %s %s %s - show content only in 2014 %s - show content from 2014 to 2016 %s - show content in 2014, 2018 and from 2020 to 2022', 'su' ), '<br><br>', __( 'Examples (click to set)', 'su' ), '<br><b%value>2014</b>', '<br><b%value>2014-2016</b>', '<br><b%value>2014, 2018, 2020-2022</b>' )
+						),
+						'alt' => array(
+							'default' => '',
+							'name' => __( 'Alternative text', 'su' ),
+							'desc' => __( 'In this field you can type the text which will be shown if content is not visible at the current moment', 'su' )
+						)
+					),
+					'content' => __( 'Scheduled content', 'su' ),
+					'desc' => __( 'Allows to show the content only at the specified time period', 'su' ),
+					'note' => __( 'This shortcode allows you to show content only at the specified time.', 'su' ) . '<br><br>' . __( 'Please pay special attention to the descriptions, which are located below each text field. It will save you a lot of time', 'su' ) . '<br><br>' . __( 'By default, the content of this shortcode will be visible all the time. By using fields below, you can add some limitations. For example, if you type 1-5 in the Days of the week field, content will be only shown from Monday to Friday. Using the same principles, you can limit content visibility from years to seconds.', 'su' ),
+					'icon' => 'clock-o'
 				),
 			) );
 		// Return result

@@ -24,20 +24,21 @@
 
 .su-divider {
 	clear: both;
-	position: relative;
-	height: 3px;
-	margin: 2.5em 0 1.5em 0;
-	background: #999;
+	border: none;
+	text-align: right;
+	line-height: 1;
 }
 .su-divider a {
-	position: absolute;
-	right: 0;
-	bottom: 5px;
 	display: inline-block;
-	color: #777;
 	font-size: 0.8em;
 	text-decoration: none;
+	outline: none;
+	padding-bottom: 5px;
 }
+.su-divider-style-default { border-bottom-style: solid; }
+.su-divider-style-dotted { border-bottom-style: dotted; }
+.su-divider-style-dashed { border-bottom-style: dashed; }
+.su-divider-style-double { border-bottom-style: double; }
 
 /*		Spacer
 ---------------------------------------------------------------*/

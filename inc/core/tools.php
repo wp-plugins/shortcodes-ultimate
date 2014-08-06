@@ -674,20 +674,20 @@ class Su_Tools {
 		return $types;
 	}
 
-	public static function get_users() {
-		// Get data from cache
-		$users = ( SU_ENABLE_CACHE ) ? get_transient( 'su/users_cache' ) : false;
-		// Query users
-		if ( !$users ) $users = get_users();
-		// Cache results
-		set_transient( 'su/users_cache', $users );
-		// Prepare data array
-		$data = array();
-		// Loop through users
-		foreach ( $users as $user ) $data[$user->data->ID] = $user->data->display_name;
-		// Return data
-		return $data;
-	}
+	// public static function get_users() {
+	// 	// Get data from cache
+	// 	$users = ( SU_ENABLE_CACHE ) ? get_transient( 'su/users_cache' ) : false;
+	// 	// Query users
+	// 	if ( !$users ) $users = get_users();
+	// 	// Cache results
+	// 	set_transient( 'su/users_cache', $users );
+	// 	// Prepare data array
+	// 	$data = array();
+	// 	// Loop through users
+	// 	foreach ( $users as $user ) $data[$user->data->ID] = $user->data->display_name;
+	// 	// Return data
+	// 	return $data;
+	// }
 
 	public static function reset_users_cache() {
 		if ( ( isset( $_GET['update'] ) || isset( $_GET['updated'] ) ) )
@@ -852,7 +852,7 @@ class Su_Tools {
 		}
 
 		public static function icon( $src = 'file' ) {
-			return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . $src . '"></i>';
+			return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . str_replace( 'icon: ', '', $src ) . '"></i>';
 		}
 
 		public static function get_icon( $args ) {
@@ -918,6 +918,47 @@ class Su_Tools {
 			if ( isset( $attachment['su_slide_link'] ) )
 				update_post_meta( $post['ID'], 'su_slide_link', $attachment['su_slide_link'] );
 			return $post;
+		}
+
+		public static function error( $prefix = false, $message = false ) {
+			if ( !$prefix && !$message ) return '';
+			$return = array( '<div class="su-error" style="padding:10px;border:1px solid #f03;color:#903;background:#fde">' );
+			if ( $prefix ) $return[] = '<strong>' . $prefix . '</strong><br/>';
+			$return[] = $message;
+			$return[] = '</div>';
+			return implode( '', $return );
+		}
+
+		/**
+		 * Range converter
+		 * Converts string range (like 1, 5-7, 10) into array (like [1]=>1, [5]=>5, [6]=>6, [7]=>7, [10]=>10)
+		 */
+		public static function range( $string = '' ) {
+			$numbers = array();
+			// Loop values
+			foreach( explode( ',', $string ) as $range ) {
+				// Detect range (min-max)
+				if ( strpos( $range, '-' ) !== false ) {
+					// Split min/max
+					$range = explode( '-', $range );
+					// Check min/max values
+					if ( !is_numeric( $range[0] ) ) $range[0] = 0;
+					if ( !is_numeric( $range[1] ) ) $range[1] = 0;
+					// Sort min/max values
+					sort( $range );
+					// List values from min to max
+					$range = range( $range[0], $range[1] );
+					// Add values to the array
+					foreach( $range as $value ) $numbers[$value] = $value;
+				}
+				// Single value
+				else {
+					// Add day to the array
+					$numbers[$range] = $range;
+				}
+			}
+			// Return array with numbers
+			return $numbers;
 		}
 	}
 
