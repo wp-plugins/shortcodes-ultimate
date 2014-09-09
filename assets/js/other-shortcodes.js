@@ -1,8 +1,5 @@
 jQuery(document).ready(function ($) {
 
-	// Check for jQuery version
-	// if (parseInt(jQuery.fn.jquery.replace('.', '')) < 170) alert('Shortcodes Ultimate: Your theme uses an outdated version of jQuery. Some shortcodes may not work properly. Required version - 1.7.0');
-
 	// Spoiler
 	$('body:not(.su-other-shortcodes-loaded)').on('click', '.su-spoiler-title', function (e) {
 		var $title = $(this),
@@ -20,6 +17,7 @@ jQuery(document).ready(function ($) {
 	// Tabs
 	$('body:not(.su-other-shortcodes-loaded)').on('click', '.su-tabs-nav span', function (e) {
 		var $tab = $(this),
+			data = $tab.data(),
 			index = $tab.index(),
 			is_disabled = $tab.hasClass('su-tabs-disabled'),
 			$tabs = $tab.parent('.su-tabs-nav').children('span'),
@@ -39,6 +37,11 @@ jQuery(document).ready(function ($) {
 		});
 		// Set height for vertical tabs
 		tabs_height();
+		// Open specified url
+		if (data.url !== '') {
+			if (data.target === 'self') window.location = data.url;
+			else if (data.target === 'blank') window.open(data.url);
+		}
 		e.preventDefault();
 	});
 
@@ -154,18 +157,16 @@ jQuery(document).ready(function ($) {
 		});
 	});
 
-	// jQuery.support.transition
-	// to verify that CSS3 transition is supported (or any of its browser-specific implementations)
-	$.support.transition = (function () {
+	function is_transition_supported() {
 		var thisBody = document.body || document.documentElement,
 			thisStyle = thisBody.style,
 			support = thisStyle.transition !== undefined || thisStyle.WebkitTransition !== undefined || thisStyle.MozTransition !== undefined || thisStyle.MsTransition !== undefined || thisStyle.OTransition !== undefined;
 
 		return support;
-	})();
+	}
 
 	// Animations is supported
-	if ($.support.transition) {
+	if (is_transition_supported()) {
 		// Animate
 		$('.su-animate').each(function () {
 			$(this).one('inview', function (e) {

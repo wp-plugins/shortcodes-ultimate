@@ -50,7 +50,7 @@ class Su_Assets {
 		wp_register_style( 'owl-carousel', plugins_url( 'assets/css/owl-carousel.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
 		wp_register_style( 'owl-carousel-transitions', plugins_url( 'assets/css/owl-carousel-transitions.css', SU_PLUGIN_FILE ), false, '1.3.2', 'all' );
 		// Font Awesome
-		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css', false, '4.0.3', 'all' );
+		wp_register_style( 'font-awesome', '//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', false, '4.1.0', 'all' );
 		// Animate.css
 		wp_register_style( 'animate', plugins_url( 'assets/css/animate.css', SU_PLUGIN_FILE ), false, '3.1.1', 'all' );
 		// InView
@@ -61,8 +61,8 @@ class Su_Assets {
 		// jsRender
 		wp_register_script( 'jsrender', plugins_url( 'assets/js/jsrender.js', SU_PLUGIN_FILE ), array( 'jquery' ), '1.0.0-beta', true );
 		// Magnific Popup
-		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', SU_PLUGIN_FILE ), false, '0.9.7', 'all' );
-		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', SU_PLUGIN_FILE ), array( 'jquery' ), '0.9.7', true );
+		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', SU_PLUGIN_FILE ), false, '0.9.9', 'all' );
+		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', SU_PLUGIN_FILE ), array( 'jquery' ), '0.9.9', true );
 		wp_localize_script( 'magnific-popup', 'su_magnific_popup', array(
 				'close'   => __( 'Close (Esc)', 'su' ),
 				'loading' => __( 'Loading...', 'su' ),

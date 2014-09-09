@@ -636,9 +636,9 @@
 	color: #fff;
 }
 
-body.su-mfp-shown .mfp-bg { z-index: 100000 !important; }
-body.su-mfp-shown .mfp-wrap { z-index: 100001 !important; }
-body.su-mfp-shown .mfp-preloader { z-index: 100002 !important; }
-body.su-mfp-shown .mfp-content { z-index: 100003 !important; }
+body.su-mfp-shown .mfp-bg { z-index: 101000 !important; }
+body.su-mfp-shown .mfp-wrap { z-index: 101001 !important; }
+body.su-mfp-shown .mfp-preloader { z-index: 101002 !important; }
+body.su-mfp-shown .mfp-content { z-index: 101003 !important; }
 body.su-mfp-shown button.mfp-close,
-body.su-mfp-shown button.mfp-arrow { z-index: 100004 !important; }
+body.su-mfp-shown button.mfp-arrow { z-index: 101004 !important; }

@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shortcodes Ultimate v4.9.0\n"
+"Project-Id-Version: Shortcodes Ultimate v4.9.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-01 17:50+0300\n"
-"PO-Revision-Date: 2014-06-21 09:28+0900\n"
+"PO-Revision-Date: 2014-08-07 15:40+0900\n"
 "Last-Translator: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "Language-Team: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -134,7 +134,7 @@ msgid "Open"
 msgstr "開く"
 
 msgid "Is spoiler content visible by default"
-msgstr "スポイラーの内容はデフォルトで表示されている"
+msgstr "スポイラーのコンテンツはデフォルトで表示される"
 
 msgid "Fancy"
 msgstr "ファンシー"
@@ -146,7 +146,7 @@ msgid "Hidden content"
 msgstr "非表示のコンテンツ"
 
 msgid "Spoiler with hidden content"
-msgstr "内容が非表示のスポイラー"
+msgstr "コンテンツが非表示のスポイラー"
 
 msgid "Accordion"
 msgstr "アコーディオン"
@@ -338,7 +338,7 @@ msgid "Select column width. This width will be calculated depend page width"
 msgstr "列幅を選択。この幅はページ幅に依存して計算されます"
 
 msgid "Column content"
-msgstr "列の内容"
+msgstr "列のコンテンツ"
 
 msgid "Flexible and responsive columns"
 msgstr "列の柔軟性とレスポンシブ"
@@ -506,7 +506,7 @@ msgid "Box corners radius"
 msgstr "ボックスコーナー半径"
 
 msgid "Box content"
-msgstr "ボックスの内容"
+msgstr "ボックスのコンテンツ"
 
 msgid "Colored box with caption"
 msgstr "カラーボックスの見出し"
@@ -779,7 +779,7 @@ msgid "Upload CSV file if you want to create HTML-table from file"
 msgstr "ファイルからHTMLテーブルを作成する場合は、CSVファイルをアップロードします"
 
 msgid "Styled table from HTML or CSV file"
-msgstr "HTMLまたはCSVファイルからスタイルテーブル"
+msgstr "HTMLまたはCSVファイルからテーブルを作成"
 
 msgid "Permalink"
 msgstr "パーマリンク"
@@ -830,7 +830,7 @@ msgid "Content for logged members"
 msgstr "ログインメンバー向けコンテンツ"
 
 msgid "Content for logged in members only"
-msgstr "ログインメンバーのみの内容"
+msgstr "ログインメンバーのみのコンテンツ"
 
 msgid "Guests"
 msgstr "ゲスト"
@@ -1095,9 +1095,6 @@ msgstr "IN - 選択したカテゴリの条件のいずれかを持っている�
 
 msgid "Authors"
 msgstr "投稿者"
-
-msgid "Choose the authors whose posts you want to show"
-msgstr "表示したい投稿者を選択"
 
 msgid "Meta key"
 msgstr "Metaキー"
@@ -1934,13 +1931,13 @@ msgid "This prefix will be added to all shortcodes by this plugin. For example, 
 msgstr "この接頭辞は、このプラグインのすべてのショートコードに追加されます。例えば、ここに%sと入力し%sと%sのようなショートコードを取得します。<br />注意: このオプションは既に挿入済みのショートコードに影響を与えていませんが、この値を変更する場合、古いショートコードを破壊します。"
 
 msgid "Choose global skin for shortcodes"
-msgstr "ショートコードのグローバルスキンを選択してください"
+msgstr "ショートコードのグローバルスキンを選択"
 
 msgid "1 new add-on for Shortcodes Ultimate"
 msgstr "Shortcodes Ultimateの1つの新しいアドオン"
 
-msgid "4.9.0"
-msgstr "4.9.0"
+msgid "4.9.1"
+msgstr "4.9.1"
 
 msgid "Activation key"
 msgstr "アクティベーションキー"
@@ -1973,7 +1970,7 @@ msgid "Button text shadow"
 msgstr "ボタンのテキストの影"
 
 msgid "Choose file"
-msgstr "ファイルを選択してください"
+msgstr "ファイルを選択"
 
 msgid "Choose files"
 msgstr "ファイルを選択"
@@ -2382,3 +2379,165 @@ msgstr " マージンの厚み (ピクセル単位)"
 
 msgid "You can make this QR code clickable. Enter here the URL"
 msgstr "このQRコードをクリック可能にすることができます。URLを入力してください。"
+
+msgid "Add an icon to the less link"
+msgstr "小さいリンクにアイコンを追加"
+
+msgid "Add an icon to the more link"
+msgstr "続きを表示のリンクにアイコンを追加"
+
+msgid "Adjust the top and bottom margins of this divider (in pixels)"
+msgstr "このデバイダーの上下の余白を調整 (ピクセル)"
+
+msgid "Allows to show the content only at the specified time period"
+msgstr "指定した期間にコンテンツを表示することができます"
+
+msgid "Alternative text"
+msgstr "代替テキスト"
+
+msgid "By default, the content of this shortcode will be visible all the time. By using fields below, you can add some limitations. For example, if you type 1-5 in the Days of the week field, content will be only shown from Monday to Friday. Using the same principles, you can limit content visibility from years to seconds."
+msgstr "デフォルトでこのショートコードのコンテンツは、すべての時間で表示します。以下のフィールドを使用して、いくつかの制限を追加できます。たとえばフィールドに1-5と入力した場合、コンテンツは月曜日から金曜日まで表示します。同じ原理を使用して秒から年までコンテンツの可視性を制限できます。"
+
+msgid "Choose style for this divider"
+msgstr "このデバイダーのスタイルを選択"
+
+msgid "Days of the month"
+msgstr "月の日数"
+
+msgid "Days of the week"
+msgstr "曜日"
+
+msgid "Did you know that you need to wrap single tabs with [tabs] shortcode?"
+msgstr "[タブ]ショートコードを持つ単一のタブをラップする必要があることをご存知ですか？"
+
+msgid "Divider color"
+msgstr "デバイダーの色"
+
+msgid "Enter here comma-separated list of author's IDs. Example: 1,7,18"
+msgstr "投稿者IDをカンマ区切りで入力。例: 1,7,18"
+
+msgid "Enter the text for less link"
+msgstr "小さいリンク用のテキストを入力"
+
+msgid "Enter the text for more link"
+msgstr "続きを表示リンク用のテキストを入力"
+
+msgid "Examples (click to set)"
+msgstr "例 (クリックで設定)"
+
+msgid "Expand"
+msgstr "拡大"
+
+msgid "Expandable text block"
+msgstr "拡張可能なテキストブロック"
+
+msgid "Height for collapsed state (in pixels)"
+msgstr "折り畳んだ状態の高さ (ピクセル)"
+
+msgid "Height of the divider (in pixels)"
+msgstr "デバイダーの高さ (ピクセル)"
+
+msgid "Here you can add value for the rel attribute.<br>Example values: <b%value>nofollow</b>, <b%value>lightbox</b>"
+msgstr "ここでは、rel属性に値を追加することができます。<br>値の例: <b%value>nofollow</b>、<b%value>lightbox</b>"
+
+msgid "Hide less link"
+msgstr "小さいリンクを非表示にする"
+
+msgid "In this field you can specify one or more days of the month. Every month at these days the content of shortcode will be visible. %s %s %s - show content only at first day of month %s - show content from 1th to 5th %s - show content from 10th to 15th and from 20th to 25th"
+msgstr "このフィールドでその月の1日または複数の日を指定できます。これらの日に毎月ショートコードのコンテンツを表示します。 %s %s %s - 月の最初の日のみコンテンツを表示 %s - 1日～5日までコンテンツを表示 %s - 10日～15日と20日～25日までコンテンツを表示"
+
+msgid "In this field you can specify one or more days of the week. Every week at these days the content of shortcode will be visible. %s 0 - Sunday %s 1 - Monday %s 2 - Tuesday %s 3 - Wednesday %s 4 - Thursday %s 5 - Friday %s 6 - Saturday %s %s %s - show content from Monday to Friday %s - show content only at Sunday %s - show content at Sunday and from Wednesday to Friday"
+msgstr "このフィールドで1つ以上の曜日を指定できます。これらの日に毎週ショートコードのコンテンツを表示します。 %s 0 - 日曜日 %s 1 - 月曜日 %s 2 - 火曜日 %s 3 - 水曜日 %s 4 - 木曜日 %s 5 - 金曜日 %s 6 - 土曜日 %s %s %s - 月曜日から金曜日までコンテンツを表示 %s - 日曜日のみコンテンツを表示 %s - 日曜日と水曜日から金曜日までコンテンツを表示"
+
+msgid "In this field you can specify one or more time ranges. Every day at this time the content of shortcode will be visible. %s %s %s - show content from 9:00 to 18:00 %s - show content from 9:00 to 13:00 and from 14:00 to 18:00 %s - example with minutes (content will be visible each day, 45 minutes) %s - example with seconds"
+msgstr "このフィールドで1つ以上の時間範囲を指定することができます。これらの時間に毎日ショートコードのコンテンツを表示します。 %s %s %s - 9:00～18:00までコンテンツを表示 %s - 9:00～13:00と14:00～18:00までコンテンツを表示 %s - 分の例 (コンテンツを毎日45分間表示) %s - 秒の例"
+
+msgid "In this field you can specify the month or months in which the content will be visible. %s %s %s - show content only in January %s - show content from February to June %s - show content in January, March and from May to July"
+msgstr "このフィールドではコンテンツを表示する月を指定することができます。 %s %s %s - 1月のみコンテンツを表示 %s - 2月～6月までコンテンツを表示 %s - 1月、3月と5月～7月までコンテンツを表示"
+
+msgid "In this field you can specify the year or years in which the content will be visible. %s %s %s - show content only in 2014 %s - show content from 2014 to 2016 %s - show content in 2014, 2018 and from 2020 to 2022"
+msgstr "このフィールドではコンテンツを表示する年を指定することができます。%s %s %s - 2014年のみコンテンツを表示 %s - 2014年～2016年までコンテンツを表示 %s - 2014年、 2018年と2020年～2022年までコンテンツを表示"
+
+msgid "In this field you can type the text which will be shown if content is not visible at the current moment"
+msgstr "コンテンツが現在、表示されていない場合、このフィールドで表示するテキストを入力します"
+
+msgid "Incorrect time range (%s). Please use - (minus) symbol to specify time range. Example: 14:00 - 18:00"
+msgstr "時間の範囲が誤っています (%s)。時間の範囲を指定するには、(マイナス)記号を - 使用してください。例: 14:00 - 18:00"
+
+msgid "Less icon"
+msgstr "小さいアイコン"
+
+msgid "Less text"
+msgstr "小さいテキスト"
+
+msgid "Link align"
+msgstr "リンクの位置"
+
+msgid "Link color"
+msgstr "リンク色"
+
+msgid "Link style"
+msgstr "リンクのスタイル"
+
+msgid "Months"
+msgstr "月間"
+
+msgid "More icon"
+msgstr "詳細アイコン"
+
+msgid "More text"
+msgstr "複数のテキスト"
+
+msgid "Pick the color for divider"
+msgstr "デバイダーの色を選択"
+
+msgid "Pick the color for TOP link"
+msgstr "トップリンクの色を選択"
+
+msgid "Pick the link color"
+msgstr "リンクの色を選択"
+
+msgid "Pick the text color"
+msgstr "テキストの色を選択"
+
+msgid "Please pay special attention to the descriptions, which are located below each text field. It will save you a lot of time"
+msgstr "各テキストフィールドの下の説明に注意してください。それらは時間を節約します。"
+
+msgid "Rel attribute"
+msgstr "rel属性"
+
+msgid "Scheduled content"
+msgstr "スケジュールされたコンテンツ"
+
+msgid "Scheduler"
+msgstr "スケジューラ"
+
+msgid "Select link alignment"
+msgstr "リンクの位置を選択"
+
+msgid "Select the style for more/less link"
+msgstr "リンクのスタイルを選択"
+
+msgid "Show less"
+msgstr "小さい表示"
+
+msgid "Show more"
+msgstr "続きを表示"
+
+msgid "This option allows you to hide less link, when the text block has been expanded"
+msgstr "テキストブロックを拡張した場合、このオプションを使用すると小さいリンクを非表示にします。"
+
+msgid "This shortcode allows you to show content only at the specified time."
+msgstr "このショートコードは指定した時間コンテンツを表示します。"
+
+msgid "This text block can be expanded"
+msgstr "このテキストブロックを拡大できます"
+
+msgid "Time"
+msgstr "時間"
+
+msgid "Underlined"
+msgstr "下線"
+
+msgid "Years"
+msgstr "年"

@@ -504,6 +504,28 @@
 	vertical-align: middle;
 }
 
+/*		Lightbox content
+---------------------------------------------------------------*/
+
+.su-lightbox-content {
+	position: relative;
+	margin: 0 auto;
+}
+.mfp-content .su-lightbox-content,
+#su-generator .su-lightbox-content { display: block !important; }
+.su-lightbox-content-preview {
+	width: 100%;
+	min-height: 300px;
+	background: #444;
+	overflow: hidden;
+}
+.su-lightbox-content h1,
+.su-lightbox-content h2,
+.su-lightbox-content h3,
+.su-lightbox-content h4,
+.su-lightbox-content h5,
+.su-lightbox-content h6 { color: inherit; }
+
 /*		Common margin resets for box elements
 ---------------------------------------------------------------*/
 
@@ -513,7 +535,8 @@
 .su-service-content > *:first-child,
 .su-box-content > *:first-child,
 .su-note-inner > *:first-child,
-.su-expand-content > *:first-child { margin-top: 0; }
+.su-expand-content > *:first-child,
+.su-lightbox-content > *:first-child { margin-top: 0; }
 .su-column-inner > *:last-child,
 .su-tabs-pane > *:last-child,
 .su-accordion > *:last-child,
@@ -521,4 +544,5 @@
 .su-service-content > *:last-child,
 .su-box-content > *:last-child,
 .su-note-inner > *:last-child,
-.su-expand-content > *:last-child { margin-bottom: 0; }
+.su-expand-content > *:last-child,
+.su-lightbox-content > *:last-child { margin-bottom: 0; }

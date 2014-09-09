@@ -1,4 +1,15 @@
 jQuery(document).ready(function ($) {
+	// Prepare items arrays for lightbox
+	$('.su-lightbox-gallery').each(function () {
+		var slides = [];
+		$(this).find('.su-slider-slide, .su-carousel-slide, .su-custom-gallery-slide').each(function (i) {
+			$(this).attr('data-index', i);
+			slides.push({
+				src: $(this).children('a').attr('href')
+			});
+		});
+		$(this).data('slides', slides);
+	});
 	// Enable sliders
 	$('.su-slider').each(function () {
 		// Prepare data
@@ -60,28 +71,24 @@ jQuery(document).ready(function ($) {
 			$swiper.swipePrev();
 		});
 	});
-	// Lightbox for galleries (slider, carousel, custom_gallery)
-	$('.su-lightbox-gallery').each(function () {
-		$(this).magnificPopup({
-			delegate: 'a',
+	// Enable lightbox
+	$('.su-lightbox-gallery').on('click', '.su-slider-slide, .su-carousel-slide, .su-custom-gallery-slide', function (e) {
+		e.preventDefault();
+		var slides = $(this).parents('.su-lightbox-gallery').data('slides');
+		$.magnificPopup.open({
+			items: slides,
 			type: 'image',
 			mainClass: 'mfp-img-mobile',
 			gallery: {
 				enabled: true,
 				navigateByImgClick: true,
-				preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+				preload: [0, 1],
 				tPrev: su_magnific_popup.prev,
 				tNext: su_magnific_popup.next,
 				tCounter: su_magnific_popup.counter
 			},
-			image: {
-				tError: su_magnific_popup.error,
-				titleSrc: function (item) {
-					return item.el.children('img').attr('alt');
-				}
-			},
 			tClose: su_magnific_popup.close,
 			tLoading: su_magnific_popup.loading
-		});
+		}, $(this).data('index'));
 	});
 });

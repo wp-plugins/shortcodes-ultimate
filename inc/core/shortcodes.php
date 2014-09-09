@@ -32,7 +32,7 @@ class Su_Shortcodes {
 		if ( is_array( self::$tabs ) ) {
 			if ( self::$tab_count < $atts['active'] ) $atts['active'] = self::$tab_count;
 			foreach ( self::$tabs as $tab ) {
-				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '"' . $tab['anchor'] . '>' . su_scattr( $tab['title'] ) . '</span>';
+				$tabs[] = '<span class="' . su_ecssc( $tab ) . $tab['disabled'] . '"' . $tab['anchor'] . $tab['url'] . $tab['target'] . '>' . su_scattr( $tab['title'] ) . '</span>';
 				$panes[] = '<div class="su-tabs-pane su-clearfix' . su_ecssc( $tab ) . '">' . $tab['content'] . '</div>';
 			}
 			$atts['vertical'] = ( $atts['vertical'] === 'yes' ) ? ' su-tabs-vertical' : '';
@@ -52,16 +52,20 @@ class Su_Shortcodes {
 		$atts = shortcode_atts( array(
 				'title'    => __( 'Tab title', 'su' ),
 				'disabled' => 'no',
-				'anchor' => '',
+				'anchor'   => '',
+				'url'      => '',
+				'target'   => 'blank',
 				'class'    => ''
 			), $atts, 'tab' );
 		$x = self::$tab_count;
 		self::$tabs[$x] = array(
-			'title' => $atts['title'],
-			'content' => do_shortcode( $content ),
+			'title'    => $atts['title'],
+			'content'  => do_shortcode( $content ),
 			'disabled' => ( $atts['disabled'] === 'yes' ) ? ' su-tabs-disabled' : '',
-			'anchor' => ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( ' ', '', trim( sanitize_text_field( $atts['anchor'] ) ) ) . '"' : '',
-			'class' => $atts['class']
+			'anchor'   => ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( array( ' ', '#' ), '', sanitize_text_field( $atts['anchor'] ) ) . '"' : '',
+			'url'      => ' data-url="' . $atts['url'] . '"',
+			'target'   => ' data-target="' . $atts['target'] . '"',
+			'class'    => $atts['class']
 		);
 		self::$tab_count++;
 		do_action( 'su/shortcode/tab', $atts );
@@ -77,7 +81,7 @@ class Su_Shortcodes {
 				'class'  => ''
 			), $atts, 'spoiler' );
 		$atts['style'] = str_replace( array( '1', '2' ), array( 'default', 'fancy' ), $atts['style'] );
-		$atts['anchor'] = ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( ' ', '', trim( sanitize_text_field( $atts['anchor'] ) ) ) . '"' : '';
+		$atts['anchor'] = ( $atts['anchor'] ) ? ' data-anchor="' . str_replace( array( ' ', '#' ), '', sanitize_text_field( $atts['anchor'] ) ) . '"' : '';
 		if ( $atts['open'] !== 'yes' ) $atts['class'] .= ' su-spoiler-closed';
 		su_query_asset( 'css', 'font-awesome' );
 		su_query_asset( 'css', 'su-box-shortcodes' );
@@ -531,6 +535,25 @@ class Su_Shortcodes {
 		return '<span class="su-lightbox' . su_ecssc( $atts ) . '" data-mfp-src="' . su_scattr( $atts['src'] ) . '" data-mfp-type="' . $atts['type'] . '">' . do_shortcode( $content ) . '</span>';
 	}
 
+	public static function lightbox_content( $atts = null, $content = null ) {
+		$atts = shortcode_atts( array(
+				'id'         => '',
+				'width'      => '50%',
+				'margin'     => '40',
+				'padding'    => '40',
+				'text_align' => 'center',
+				'background' => '#FFFFFF',
+				'color'      => '#333333',
+				'shadow'     => '0px 0px 15px #333333',
+				'class'      => ''
+			), $atts, 'lightbox_content' );
+		su_query_asset( 'css', 'su-box-shortcodes' );
+		if ( !$atts['id'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct ID for this block. You should use same ID as in the Content source field (when inserting lightbox shortcode)', 'su' ) );
+		$return = '<div class="su-lightbox-content ' . su_ecssc( $atts ) . '" id="' . trim( $atts['id'], '#' ) . '" style="display:none;width:' . $atts['width'] . ';margin-top:' . $atts['margin'] . 'px;margin-bottom:' . $atts['margin'] . 'px;padding:' . $atts['padding'] . 'px;background-color:' . $atts['background'] . ';color:' . $atts['color'] . ';box-shadow:' . $atts['shadow'] . ';text-align:' . $atts['text_align'] . '">' . do_shortcode( $content ) . '</div>';
+		if ( did_action( 'su/generator/preview/before' ) ) return '<div class="su-lightbox-content-preview">' . $return . '</div>';
+		else return $return;
+	}
+
 	public static function tooltip( $atts = null, $content = null ) {
 		$atts = shortcode_atts( array(
 				'style'        => 'yellow',
@@ -628,6 +651,7 @@ class Su_Shortcodes {
 				'showinfo'       => 'yes',
 				'theme'          => 'dark',
 				'https'          => 'no',
+				'wmode'          => '',
 				'class'          => ''
 			), $atts, 'youtube_advanced' );
 		if ( !$atts['url'] ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
@@ -636,7 +660,7 @@ class Su_Shortcodes {
 		// Check that url is specified
 		if ( !$id ) return Su_Tools::error( __FUNCTION__, __( 'please specify correct url', 'su' ) );
 		// Prepare params
-		foreach ( array( 'autohide', 'autoplay', 'controls', 'fs', 'loop', 'modestbranding', 'playlist', 'rel', 'showinfo', 'theme' ) as $param ) $params[$param] = str_replace( array( 'no', 'yes', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
+		foreach ( array( 'autohide', 'autoplay', 'controls', 'fs', 'loop', 'modestbranding', 'playlist', 'rel', 'showinfo', 'theme', 'wmode' ) as $param ) $params[$param] = str_replace( array( 'no', 'yes', 'alt' ), array( '0', '1', '2' ), $atts[$param] );
 		// Correct loop
 		if ( $params['loop'] === '1' && $params['playlist'] === '' ) $params['playlist'] = $id;
 		// Prepare protocol
@@ -1005,8 +1029,7 @@ class Su_Shortcodes {
 			// Open nav section
 			$return .= '<div class="su-slider-nav">';
 			// Append direction nav
-			if ( $atts['arrows'] === 'yes'
-			) $return .= '<div class="su-slider-direction"><span class="su-slider-prev"></span><span class="su-slider-next"></span></div>';
+			if ( $atts['arrows'] === 'yes' ) $return .= '<div class="su-slider-direction"><span class="su-slider-prev"></span><span class="su-slider-next"></span></div>';
 			// Append pagination nav
 			$return .= '<div class="su-slider-pagination"></div>';
 			// Close nav section
