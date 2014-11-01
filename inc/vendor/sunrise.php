@@ -380,6 +380,15 @@ if ( !class_exists( 'Sunrise4_Views' ) ) {
 			return '<tr><th scope="row"><label for="sunrise-field-' . $field['id'] . '">' . $field['name'] . '</label></th><td><input type="text" value="' . get_option( $config['prefix'] . $field['id'] ) . '" name="sunrise[' . $field['id'] . ']" id="sunrise-field-' . $field['id'] . '" class="regular-text" /><p class="description">' . $field['desc'] . '</p></td></tr>';
 		}
 
+		public static function hidden( $field, $config ) {
+			$field = wp_parse_args( $field, array(
+					'name'  => __( 'Text field', $config['textdomain'] ),
+					'id'    => '',
+					'desc'  => ''
+				) );
+			return '<input type="hidden" value="' . get_option( $config['prefix'] . $field['id'] ) . '" name="sunrise[' . $field['id'] . ']" id="sunrise-field-' . $field['id'] . '" />';
+		}
+
 		public static function number( $field, $config ) {
 			$field = wp_parse_args( $field, array(
 					'name'  => __( 'Text field', $config['textdomain'] ),

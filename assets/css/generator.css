@@ -53,12 +53,12 @@
 	border-right: 1px dotted #555;
 	vertical-align: middle;
 }
+#su-generator-tools a { text-decoration: none; }
 #su-generator-tools a.su-add-ons {
 	display: inline-block;
 	padding: 2px 7px;
 	background: #FF7654;
 	color: #fff;
-	text-decoration: none;
 	border: 1px solid #ff4d21;
 	border-radius: 3px;
 }

@@ -88,126 +88,75 @@ function su_hex_shift( $supplied_hex, $shift_method, $percentage = 50 ) {
 	$shift_method = strtolower( trim( $shift_method ) );
 	// Check Factor
 	if ( !is_numeric( $percentage ) || ( $percentage = ( int ) $percentage ) < 0 || $percentage > 100
-		) trigger_error( "Invalid factor", E_USER_NOTICE );
+	) trigger_error( "Invalid factor", E_USER_NOTICE );
 	// Check shift method
-		foreach ( array( $valid_shift_down_args, $valid_shift_up_args ) as $options ) {
-			foreach ( $options as $method ) {
-				if ( $method == $shift_method ) {
-					$valid_shift_option = !$valid_shift_option;
-					$shift_method = ( $current_set === 1 ) ? '+' : '-';
-					break 2;
-				}
+	foreach ( array( $valid_shift_down_args, $valid_shift_up_args ) as $options ) {
+		foreach ( $options as $method ) {
+			if ( $method == $shift_method ) {
+				$valid_shift_option = !$valid_shift_option;
+				$shift_method = ( $current_set === 1 ) ? '+' : '-';
+				break 2;
 			}
-			++$current_set;
 		}
-		if ( !$valid_shift_option ) trigger_error( "Invalid shift method", E_USER_NOTICE );
+		++$current_set;
+	}
+	if ( !$valid_shift_option ) trigger_error( "Invalid shift method", E_USER_NOTICE );
 	// Check Hex string
-		switch ( strlen( $supplied_hex = ( str_replace( '#', '', trim( $supplied_hex ) ) ) ) ) {
-			case 3:
-			if ( preg_match( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', $supplied_hex ) ) {
-				$supplied_hex = preg_replace( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', '\\1\\1\\2\\2\\3\\3',
-					$supplied_hex );
-			}
-			else {
-				trigger_error( "Invalid hex color value", E_USER_NOTICE );
-			}
-			break;
-			case 6:
-			if ( !preg_match( '/^[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i', $supplied_hex ) ) {
-				trigger_error( "Invalid hex color value", E_USER_NOTICE );
-			}
-			break;
-			default:
-			trigger_error( "Invalid hex color length", E_USER_NOTICE );
+	switch ( strlen( $supplied_hex = ( str_replace( '#', '', trim( $supplied_hex ) ) ) ) ) {
+	case 3:
+		if ( preg_match( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', $supplied_hex ) ) {
+			$supplied_hex = preg_replace( '/^([0-9a-f])([0-9a-f])([0-9a-f])/i', '\\1\\1\\2\\2\\3\\3',
+				$supplied_hex );
 		}
+		else {
+			trigger_error( "Invalid hex color value", E_USER_NOTICE );
+		}
+		break;
+	case 6:
+		if ( !preg_match( '/^[0-9a-f]{2}[0-9a-f]{2}[0-9a-f]{2}$/i', $supplied_hex ) ) {
+			trigger_error( "Invalid hex color value", E_USER_NOTICE );
+		}
+		break;
+	default:
+		trigger_error( "Invalid hex color length", E_USER_NOTICE );
+	}
 	// Start shifting
-		$RGB_values['R'] = hexdec( $supplied_hex{0} . $supplied_hex{1} );
-		$RGB_values['G'] = hexdec( $supplied_hex{2} . $supplied_hex{3} );
-		$RGB_values['B'] = hexdec( $supplied_hex{4} . $supplied_hex{5} );
-		foreach ( $RGB_values as $c => $v ) {
-			switch ( $shift_method ) {
-				case '-':
-				$amount = round( ( ( 255 - $v ) / 100 ) * $percentage ) + $v;
-				break;
-				case '+':
-				$amount = $v - round( ( $v / 100 ) * $percentage );
-				break;
-				default:
-				trigger_error( "Oops. Unexpected shift method", E_USER_NOTICE );
-			}
-			$shifted_hex_value .= $current_value = ( strlen( $decimal_to_hex = dechex( $amount ) ) < 2 ) ?
+	$RGB_values['R'] = hexdec( $supplied_hex{0} . $supplied_hex{1} );
+	$RGB_values['G'] = hexdec( $supplied_hex{2} . $supplied_hex{3} );
+	$RGB_values['B'] = hexdec( $supplied_hex{4} . $supplied_hex{5} );
+	foreach ( $RGB_values as $c => $v ) {
+		switch ( $shift_method ) {
+		case '-':
+			$amount = round( ( ( 255 - $v ) / 100 ) * $percentage ) + $v;
+			break;
+		case '+':
+			$amount = $v - round( ( $v / 100 ) * $percentage );
+			break;
+		default:
+			trigger_error( "Oops. Unexpected shift method", E_USER_NOTICE );
+		}
+		$shifted_hex_value .= $current_value = ( strlen( $decimal_to_hex = dechex( $amount ) ) < 2 ) ?
 			'0' . $decimal_to_hex : $decimal_to_hex;
-		}
-		return '#' . $shifted_hex_value;
 	}
+	return '#' . $shifted_hex_value;
+}
 
-	function su_hex2rgb( $colour, $delimiter = '-' ) {
-		if ( $colour[0] == '#' ) {
-			$colour = substr( $colour, 1 );
-		}
-		if ( strlen( $colour ) == 6 ) {
-			list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
-		} elseif ( strlen( $colour ) == 3 ) {
-			list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
-		} else {
-			return false;
-		}
-		$r = hexdec( $r );
-		$g = hexdec( $g );
-		$b = hexdec( $b );
-		return implode( $delimiter, array( $r, $g, $b ) ); //array( 'red' => $r, 'green' => $g, 'blue' => $b );
+function su_hex2rgb( $colour, $delimiter = '-' ) {
+	if ( $colour[0] == '#' ) {
+		$colour = substr( $colour, 1 );
 	}
-
-/**
- * Apply all custom formatting options of plugin
- */
-// function su_apply_formatting() {
-//  // Enable shortcodes in text widgets
-//  add_filter( 'widget_text', 'do_shortcode' );
-//  // Enable shortcodes in category descriptions
-//  add_filter( 'category_description', 'do_shortcode' );
-//  // Enable auto-formatting
-//  if ( get_option( 'su_option_custom-formatting' ) === 'on' ) {
-//   // Disable WordPress native content formatters
-//   remove_filter( 'the_content', 'wpautop' );
-//   remove_filter( 'the_content', 'wptexturize' );
-//   // Apply custom formatter function
-//   add_filter( 'the_content', 'su_custom_formatter', 99 );
-//   add_filter( 'widget_text', 'su_custom_formatter', 99 );
-//   add_filter( 'category_description', 'su_custom_formatter', 99 );
-//  }
-//  // Fix for large posts, http://core.trac.wordpress.org/ticket/8553
-//  @ini_set( 'pcre.backtrack_limit', 500000 );
-// }
-
-// add_action( 'init', 'su_apply_formatting' );
-
-/**
- * Custom formatter function
- *
- * @param string  $content
- *
- * @return string Formatted content with clean shortcodes content
- */
-// function su_custom_formatter( $content ) {
-//  // Prepare variables
-//  $new_content = '';
-//  // Matches the contents and the open and closing tags
-//  $pattern_full = '{(\[raw\].*?\[/raw\])}is';
-//  // Matches just the contents
-//  $pattern_contents = '{\[raw\](.*?)\[/raw\]}is';
-//  // Divide content into pieces
-//  $pieces = preg_split( $pattern_full, $content, -1, PREG_SPLIT_DELIM_CAPTURE );
-//  // Loop over pieces
-//  foreach ( $pieces as $piece ) {
-//   // Look for presence of the shortcode, Append to content (no formatting)
-//   if ( preg_match( $pattern_contents, $piece, $matches ) ) $new_content .= $matches[1];
-//   // Format and append to content
-//   else $new_content .= wptexturize( wpautop( $piece ) );
-//  }
-//  // Return formatted content
-//  return $new_content;
-// }
+	if ( strlen( $colour ) == 6 ) {
+		list( $r, $g, $b ) = array( $colour[0] . $colour[1], $colour[2] . $colour[3], $colour[4] . $colour[5] );
+	} elseif ( strlen( $colour ) == 3 ) {
+		list( $r, $g, $b ) = array( $colour[0] . $colour[0], $colour[1] . $colour[1], $colour[2] . $colour[2] );
+	} else {
+		return false;
+	}
+	$r = hexdec( $r );
+	$g = hexdec( $g );
+	$b = hexdec( $b );
+	return implode( $delimiter, array( $r, $g, $b ) ); //array( 'red' => $r, 'green' => $g, 'blue' => $b );
+}
 
 /**
  * Apply all custom formatting options of plugin
@@ -239,7 +188,7 @@ function su_clean_shortcodes( $content ) {
 		'<p>[' => '[',
 		']</p>' => ']',
 		']<br />' => ']'
-		);
+	);
 	$content = strtr( $content, $array );
 	return $content;
 }
@@ -282,6 +231,32 @@ function su_cmpt() {
  */
 function su_ecssc( $atts ) {
 	return ( $atts['class'] ) ? ' ' . trim( $atts['class'] ) : '';
+}
+
+/**
+ * Helper to check add-on is activated
+ *
+ * @return bool
+ */
+function su_addon_active( $addons ) {
+	// Prepare add-ons paths
+	$paths = array(
+		'maker' => 'shortcodes-ultimate-maker/shortcodes-ultimate-maker.php',
+		'skins' => 'shortcodes-ultimate-skins/shortcodes-ultimate-skins.php',
+		'extra' => 'shortcodes-ultimate-extra/shortcodes-ultimate-extra.php',
+	);
+	// Convert string into array
+	if ( is_string( $addons ) ) $addons = array( $addons );
+	// Loop addons
+	foreach ( $addons as $addon ) {
+		if ( !is_plugin_active( $paths[$addon] ) ) return false;
+	}
+	return true;
+}
+
+function su_skins_link() {
+	if ( su_addon_active( 'skins' ) ) return sprintf( '<br><strong>%s</strong><br><strong>%s</strong>', __( 'Additional skins successfully installed', 'su' ), __( 'Open dropdown to choose one of new styles', 'su' ) );
+	else return sprintf( '<br><a href="http://gndev.info/sus" target="_blank">%s &rarr;</a>', __( 'Get more styles', 'su' ) );
 }
 
 /**
@@ -355,9 +330,9 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 					$src_x = round( ( $orig_width - ( $orig_width / $cmp_x * $cmp_y ) ) / 2 );
 				}
 				else if ( $cmp_y > $cmp_x ) {
-					$src_h = round( $orig_height / $cmp_y * $cmp_x );
-					$src_y = round( ( $orig_height - ( $orig_height / $cmp_y * $cmp_x ) ) / 2 );
-				}
+						$src_h = round( $orig_height / $cmp_y * $cmp_x );
+						$src_y = round( ( $orig_height - ( $orig_height / $cmp_y * $cmp_x ) ) / 2 );
+					}
 			}
 
 			// Time to crop the image!
@@ -381,7 +356,7 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 				'width' => $resized_width,
 				'height' => $resized_height,
 				'type' => $resized_type
-				);
+			);
 		}
 		else {
 			$image_array = array(
@@ -389,7 +364,7 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 				'width' => $dest_width,
 				'height' => $dest_height,
 				'type' => $ext
-				);
+			);
 		}
 		// Return image array
 		return $image_array;
@@ -483,9 +458,9 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 					$src_x = round( ( $orig_width - ( $orig_width / $cmp_x * $cmp_y ) ) / 2 );
 				}
 				else if ( $cmp_y > $cmp_x ) {
-					$src_h = round( $orig_height / $cmp_y * $cmp_x );
-					$src_y = round( ( $orig_height - ( $orig_height / $cmp_y * $cmp_x ) ) / 2 );
-				}
+						$src_h = round( $orig_height / $cmp_y * $cmp_x );
+						$src_y = round( ( $orig_height - ( $orig_height / $cmp_y * $cmp_x ) ) / 2 );
+					}
 
 				// Create the resampled image
 				imagecopyresampled( $new_image, $image, 0, 0, $src_x, $src_y, $dest_width, $dest_height, $src_w, $src_h );
@@ -548,7 +523,7 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 				'width' => $resized_width,
 				'height' => $resized_height,
 				'type' => $resized_type
-				);
+			);
 		}
 		else {
 			$image_array = array(
@@ -556,7 +531,7 @@ function su_image_resize( $url, $width = NULL, $height = NULL, $crop = true, $re
 				'width' => $dest_width,
 				'height' => $dest_height,
 				'type' => $ext
-				);
+			);
 		}
 
 		return $image_array;
@@ -609,26 +584,23 @@ class Su_Tools {
 
 		add_filter( 'attachment_fields_to_edit',  array( __CLASS__, 'slide_link_input' ), null, 2 );
 		add_filter( 'attachment_fields_to_save',  array( __CLASS__, 'slide_link_save' ), null, 2 );
-
-		add_action( 'load-users.php',             array( __CLASS__, 'reset_users_cache' ) );
-		add_action( 'load-user-edit.php',         array( __CLASS__, 'reset_users_cache' ) );
 	}
 
 	public static function select( $args ) {
 		$args = wp_parse_args( $args, array(
-			'id'       => '',
-			'name'     => '',
-			'class'    => '',
-			'multiple' => '',
-			'size'     => '',
-			'disabled' => '',
-			'selected' => '',
-			'none'     => '',
-			'options'  => array(),
-			'style' => '',
+				'id'       => '',
+				'name'     => '',
+				'class'    => '',
+				'multiple' => '',
+				'size'     => '',
+				'disabled' => '',
+				'selected' => '',
+				'none'     => '',
+				'options'  => array(),
+				'style' => '',
 				'format'   => 'keyval', // keyval/idtext
 				'noselect' => '' // return options without <select> tag
-				) );
+			) );
 		$options = array();
 		if ( !is_array( $args['options'] ) ) $args['options'] = array();
 		if ( $args['id'] ) $args['id'] = ' id="' . $args['id'] . '"';
@@ -646,17 +618,17 @@ class Su_Tools {
 		//   id => text
 		// );
 		if ( $args['format'] === 'keyval' ) foreach ( $args['options'] as $id => $text ) {
-			$options[] = '<option value="' . (string) $id . '">' . (string) $text . '</option>';
-		}
+				$options[] = '<option value="' . (string) $id . '">' . (string) $text . '</option>';
+			}
 		// idtext loop
 		// $args['options'] = array(
 		//   array( id => id, text => text ),
 		//   array( id => id, text => text )
 		// );
 		elseif ( $args['format'] === 'idtext' ) foreach ( $args['options'] as $option ) {
-			if ( isset( $option['id'] ) && isset( $option['text'] ) )
-				$options[] = '<option value="' . (string) $option['id'] . '">' . (string) $option['text'] . '</option>';
-		}
+				if ( isset( $option['id'] ) && isset( $option['text'] ) )
+					$options[] = '<option value="' . (string) $option['id'] . '">' . (string) $option['text'] . '</option>';
+			}
 		$options = implode( '', $options );
 		$options = str_replace( 'value="' . $args['selected'] . '"', 'value="' . $args['selected'] . '" selected="selected"', $options );
 		return ( $args['noselect'] ) ? $options : '<select' . $args['id'] . $args['name'] . $args['class'] . $args['multiple'] . $args['size'] . $args['disabled'] . $args['style'] . '>' . $options . '</select>';
@@ -674,26 +646,6 @@ class Su_Tools {
 		return $types;
 	}
 
-	// public static function get_users() {
-	// 	// Get data from cache
-	// 	$users = ( SU_ENABLE_CACHE ) ? get_transient( 'su/users_cache' ) : false;
-	// 	// Query users
-	// 	if ( !$users ) $users = get_users();
-	// 	// Cache results
-	// 	set_transient( 'su/users_cache', $users );
-	// 	// Prepare data array
-	// 	$data = array();
-	// 	// Loop through users
-	// 	foreach ( $users as $user ) $data[$user->data->ID] = $user->data->display_name;
-	// 	// Return data
-	// 	return $data;
-	// }
-
-	public static function reset_users_cache() {
-		if ( ( isset( $_GET['update'] ) || isset( $_GET['updated'] ) ) )
-			if ( $_GET['update'] === 'del' || $_GET['update'] === 'add' || $_GET['updated'] === '1' ) delete_transient( 'su/users_cache' );
-	}
-
 	public static function get_taxonomies() {
 		$taxes = array();
 		foreach ( (array) get_taxonomies( '', 'objects' ) as $tax ) $taxes[$tax->name] = $tax->label;
@@ -703,17 +655,17 @@ class Su_Tools {
 	public static function get_terms( $tax = 'category', $key = 'id' ) {
 		$terms = array();
 		if ( $key === 'id' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->term_id] = $term->name;
-		elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
-		return $terms;
+			elseif ( $key === 'slug' ) foreach ( (array) get_terms( $tax, array( 'hide_empty' => false ) ) as $term ) $terms[$term->slug] = $term->name;
+				return $terms;
 	}
 
 	public static function get_slides( $args ) {
 		$args = wp_parse_args( $args, array(
-			'source'  => 'none',
-			'limit'   => 20,
-			'gallery' => null,
-			'type'    => '',
-			'link'    => 'none'
+				'source'  => 'none',
+				'limit'   => 20,
+				'gallery' => null,
+				'type'    => '',
+				'link'    => 'none'
 			) );
 		// Get deprecated galleries if needed
 		if ( $args['gallery'] !== null || ( $args['source'] === 'none' && get_option( 'su_option_galleries-432' ) ) ) return self::get_slides_432( $args );
@@ -725,49 +677,49 @@ class Su_Tools {
 				$args['source'] = array(
 					'type' => $type,
 					'val'  => (string) trim( str_replace( array( $type . ':', ' ' ), '', $args['source'] ), ',' )
-					);
+				);
 				break;
 			}
 		// Source is not parsed correctly, return empty array
-			if ( !is_array( $args['source'] ) ) return $slides;
+		if ( !is_array( $args['source'] ) ) return $slides;
 		// Default posts query
-			$query = array( 'posts_per_page' => $args['limit'] );
+		$query = array( 'posts_per_page' => $args['limit'] );
 		// Source: media
-			if ( $args['source']['type'] === 'media' ) {
-				$query['post_type'] = 'attachment';
-				$query['post_status'] = 'any';
+		if ( $args['source']['type'] === 'media' ) {
+			$query['post_type'] = 'attachment';
+			$query['post_status'] = 'any';
+			$query['post__in'] = (array) explode( ',', $args['source']['val'] );
+			$query['orderby'] = 'post__in';
+		}
+		// Source: posts
+		if ( $args['source']['type'] === 'posts' ) {
+			if ( $args['source']['val'] !== 'recent' ) {
 				$query['post__in'] = (array) explode( ',', $args['source']['val'] );
 				$query['orderby'] = 'post__in';
 			}
-		// Source: posts
-			if ( $args['source']['type'] === 'posts' ) {
-				if ( $args['source']['val'] !== 'recent' ) {
-					$query['post__in'] = (array) explode( ',', $args['source']['val'] );
-					$query['orderby'] = 'post__in';
-				}
-			}
+		}
 		// Source: category
-			elseif ( $args['source']['type'] === 'category' ) {
-				$query['category__in'] = (array) explode( ',', $args['source']['val'] );
-			}
+		elseif ( $args['source']['type'] === 'category' ) {
+			$query['category__in'] = (array) explode( ',', $args['source']['val'] );
+		}
 		// Source: taxonomy
-			elseif ( $args['source']['type'] === 'taxonomy' ) {
+		elseif ( $args['source']['type'] === 'taxonomy' ) {
 			// Parse taxonomy name and terms ids
-				$args['source']['val'] = explode( '/', $args['source']['val'] );
+			$args['source']['val'] = explode( '/', $args['source']['val'] );
 			// Taxonomy parsed incorrectly, return empty array
-				if ( !is_array( $args['source']['val'] ) || count( $args['source']['val'] ) !== 2 ) return $slides;
-				$query['tax_query'] = array(
-					array(
-						'taxonomy' => $args['source']['val'][0],
-						'field' => 'id',
-						'terms' => (array) explode( ',', $args['source']['val'][1] )
-						)
-					);
-			}
+			if ( !is_array( $args['source']['val'] ) || count( $args['source']['val'] ) !== 2 ) return $slides;
+			$query['tax_query'] = array(
+				array(
+					'taxonomy' => $args['source']['val'][0],
+					'field' => 'id',
+					'terms' => (array) explode( ',', $args['source']['val'][1] )
+				)
+			);
+		}
 		// Query posts
-			$query = new WP_Query( $query );
+		$query = new WP_Query( $query );
 		// Loop through posts
-			if ( is_array( $query->posts ) ) foreach ( $query->posts as $post ) {
+		if ( is_array( $query->posts ) ) foreach ( $query->posts as $post ) {
 				// Get post thumbnail ID
 				$thumb = ( $args['source']['type'] === 'media' ) ? $post->ID : get_post_thumbnail_id( $post->ID );
 				// Thumbnail isn't set, go to next post
@@ -776,7 +728,7 @@ class Su_Tools {
 					'image' => wp_get_attachment_url( $thumb ),
 					'link'  => '',
 					'title' => get_the_title( $post->ID )
-					);
+				);
 				if ( $args['link'] === 'image' || $args['link'] === 'lightbox' ) $slide['link'] = $slide['image'];
 				elseif ( $args['link'] === 'custom' ) $slide['link'] = get_post_meta( $post->ID, 'su_slide_link', true );
 				elseif ( $args['link'] === 'post' ) $slide['link'] = get_permalink( $post->ID );
@@ -784,185 +736,185 @@ class Su_Tools {
 				$slides[] = $slide;
 			}
 		// Return slides
-			return $slides;
-		}
+		return $slides;
+	}
 
-		public static function get_slides_432( $args ) {
-			$args = wp_parse_args( $args, array(
+	public static function get_slides_432( $args ) {
+		$args = wp_parse_args( $args, array(
 				'gallery' => 1
-				) );
-			$slides = array();
-			$args['gallery'] = ( $args['gallery'] === null ) ? 0 : $args['gallery'] - 1;
-			$galleries = get_option( 'su_option_galleries-432' );
+			) );
+		$slides = array();
+		$args['gallery'] = ( $args['gallery'] === null ) ? 0 : $args['gallery'] - 1;
+		$galleries = get_option( 'su_option_galleries-432' );
 		// No galleries found
-			if ( !is_array( $galleries ) ) return $slides;
+		if ( !is_array( $galleries ) ) return $slides;
 		// If galleries found loop through them
-			if ( isset( $galleries[$args['gallery']] ) ) $slides = $galleries[$args['gallery']]['items'];
+		if ( isset( $galleries[$args['gallery']] ) ) $slides = $galleries[$args['gallery']]['items'];
 		// Return slides
-			return $slides;
-		}
+		return $slides;
+	}
 
-		public static function example() {
+	public static function example() {
 		// Check authentication
-			self::access();
+		self::access();
 		// Check incoming data
-			if ( !isset( $_REQUEST['code'] ) || !isset( $_REQUEST['id'] ) ) return;
+		if ( !isset( $_REQUEST['code'] ) || !isset( $_REQUEST['id'] ) ) return;
 		// Check for cache
-			$output = get_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ) );
-			if ( $output && SU_ENABLE_CACHE ) echo $output;
+		$output = get_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ) );
+		if ( $output && SU_ENABLE_CACHE ) echo $output;
 		// Cache not found
-			else {
-				ob_start();
+		else {
+			ob_start();
 			// Prepare data
-				$code = file_get_contents( sanitize_text_field( $_REQUEST['code'] ) );
+			$code = file_get_contents( sanitize_text_field( $_REQUEST['code'] ) );
 			// Check for code
-				if ( !$code ) die( '<p class="su-examples-error">' . __( 'Example code does not found, please check it later', 'su' ) . '</p>' );
+			if ( !$code ) die( '<p class="su-examples-error">' . __( 'Example code does not found, please check it later', 'su' ) . '</p>' );
 			// Clean-up the code
-				$code = str_replace( array( "\t", '%su_' ), array( '  ', su_cmpt() ), $code );
+			$code = str_replace( array( "\t", '%su_' ), array( '  ', su_cmpt() ), $code );
 			// Split code
-				$chunks = explode( '-----', $code );
+			$chunks = explode( '-----', $code );
 			// Show snippets
-				do_action( 'su/examples/preview/before' );
-				foreach ( $chunks as $chunk ) {
+			do_action( 'su/examples/preview/before' );
+			foreach ( $chunks as $chunk ) {
 				// Clean-up new lines
-					$chunk = trim( $chunk, "\n\r" );
+				$chunk = trim( $chunk, "\n\r" );
 				// Calc textarea rows
-					$rows = substr_count( $chunk, "\n" );
-					$rows = ( $rows < 4 ) ? '4' : (string) ( $rows + 1 );
-					$rows = ( $rows > 20 ) ? '20' : (string) ( $rows + 1 );
-					echo wpautop( do_shortcode( $chunk ) );
-					echo '<div style="clear:both"></div>';
-					echo '<div class="su-examples-code"><span class="su-examples-get-code button"><i class="fa fa-code"></i>&nbsp;&nbsp;' . __( 'Get the code', 'su' ) . '</span><textarea rows="' . $rows . '">' . esc_textarea( $chunk ) . '</textarea></div>';
-				}
-				do_action( 'su/examples/preview/after' );
-				$output = ob_get_contents();
-				ob_end_clean();
-				set_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ), $output );
-				echo $output;
+				$rows = substr_count( $chunk, "\n" );
+				$rows = ( $rows < 4 ) ? '4' : (string) ( $rows + 1 );
+				$rows = ( $rows > 20 ) ? '20' : (string) ( $rows + 1 );
+				echo wpautop( do_shortcode( $chunk ) );
+				echo '<div style="clear:both"></div>';
+				echo '<div class="su-examples-code"><span class="su-examples-get-code button"><i class="fa fa-code"></i>&nbsp;&nbsp;' . __( 'Get the code', 'su' ) . '</span><textarea rows="' . $rows . '">' . esc_textarea( $chunk ) . '</textarea></div>';
 			}
-			die();
+			do_action( 'su/examples/preview/after' );
+			$output = ob_get_contents();
+			ob_end_clean();
+			set_transient( 'su/examples/render/' . sanitize_key( $_REQUEST['id'] ), $output );
+			echo $output;
 		}
+		die();
+	}
 
-		public static function reset_examples() {
-			foreach ( (array) Su_Data::examples() as $example ) foreach ( (array) $example['items'] as $item ) delete_transient( 'su/examples/render/' . $item['id'] );
-		}
+	public static function reset_examples() {
+		foreach ( (array) Su_Data::examples() as $example ) foreach ( (array) $example['items'] as $item ) delete_transient( 'su/examples/render/' . $item['id'] );
+	}
 
-		public static function do_attr( $value ) {
-			return do_shortcode( str_replace( array( '{', '}' ), array( '[', ']' ), $value ) );
-		}
+	public static function do_attr( $value ) {
+		return do_shortcode( str_replace( array( '{', '}' ), array( '[', ']' ), $value ) );
+	}
 
-		public static function icon( $src = 'file' ) {
-			return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . str_replace( 'icon: ', '', $src ) . '"></i>';
-		}
+	public static function icon( $src = 'file' ) {
+		return ( strpos( $src, '/' ) !== false ) ? '<img src="' . $src . '" alt="" />' : '<i class="fa fa-' . str_replace( 'icon: ', '', $src ) . '"></i>';
+	}
 
-		public static function get_icon( $args ) {
-			$args = wp_parse_args( $args, array(
+	public static function get_icon( $args ) {
+		$args = wp_parse_args( $args, array(
 				'icon' => '',
 				'size' => '',
 				'color' => '',
 				'style' => ''
-				) );
+			) );
 		// Check for icon param
-			if ( !$args['icon'] ) return;
+		if ( !$args['icon'] ) return;
 		// Add trailing ; to the style param
-			if ( $args['style'] ) $args['style'] = rtrim( $args['style'], ';' ) . ';';
+		if ( $args['style'] ) $args['style'] = rtrim( $args['style'], ';' ) . ';';
 		// Font Awesome icon
-			if ( strpos( $args['icon'], 'icon:' ) !== false ) {
+		if ( strpos( $args['icon'], 'icon:' ) !== false ) {
 			// Add size
-				if ( $args['size'] ) $args['style'] .= 'font-size:' . $args['size'] . 'px;';
+			if ( $args['size'] ) $args['style'] .= 'font-size:' . $args['size'] . 'px;';
 			// Add color
-				if ( $args['color'] ) $args['style'] .= 'color:' . $args['color'] . ';';
+			if ( $args['color'] ) $args['style'] .= 'color:' . $args['color'] . ';';
 			// Query font-awesome stylesheet
-				su_query_asset( 'css', 'font-awesome' );
+			su_query_asset( 'css', 'font-awesome' );
 			// Return icon
-				return '<i class="fa fa-' . trim( str_replace( 'icon:', '', $args['icon'] ) ) . '" style="' . $args['style'] . '"></i>';
-			}
+			return '<i class="fa fa-' . trim( str_replace( 'icon:', '', $args['icon'] ) ) . '" style="' . $args['style'] . '"></i>';
+		}
 		// Image icon
-			elseif ( strpos( $args['icon'], '/' ) !== false ) {
+		elseif ( strpos( $args['icon'], '/' ) !== false ) {
 			// Add size
-				if ( $args['size'] ) $args['style'] .= 'width:' . $args['size'] . 'px;height:' . $args['size'] . 'px;';
+			if ( $args['size'] ) $args['style'] .= 'width:' . $args['size'] . 'px;height:' . $args['size'] . 'px;';
 			// Return icon
-				return '<img src="' . $args['icon'] . '" alt="" style="' . $args['style'] . '" />';
-			}
+			return '<img src="' . $args['icon'] . '" alt="" style="' . $args['style'] . '" />';
+		}
 		// Icon is not detected
-			return false;
-		}
-
-		public static function icons() {
-			$icons = array();
-			if ( is_callable( array( 'Su_Data', 'icons' ) ) ) foreach ( (array) Su_Data::icons() as $icon ) {
-				$icons[] = '<i class="fa fa-' . $icon . '" title="' . $icon . '"></i>';
-			}
-			return implode( '', $icons );
-		}
-
-		public static function access() {
-			if ( !self::access_check() ) wp_die( __( 'Access denied', 'su' ) );
-		}
-
-		public static function access_check() {
-			return current_user_can( 'edit_posts' );
-		}
-
-		public static function slide_link_input( $form_fields, $post ) {
-			$form_fields['su_slide_link'] = array(
-				'label' => __( 'Slide link', 'su' ),
-				'input' => 'text',
-				'value' => get_post_meta( $post->ID, 'su_slide_link', true ),
-				'helps' => sprintf( '<strong>%s</strong><br>%s', __( 'Shortcodes Ultimate', 'su' ), __( 'Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes', 'su' ) )
-				);
-			return $form_fields;
-		}
-
-		public static function slide_link_save( $post, $attachment ) {
-			if ( isset( $attachment['su_slide_link'] ) )
-				update_post_meta( $post['ID'], 'su_slide_link', $attachment['su_slide_link'] );
-			return $post;
-		}
-
-		public static function error( $prefix = false, $message = false ) {
-			if ( !$prefix && !$message ) return '';
-			$return = array( '<div class="su-error" style="padding:10px;border:1px solid #f03;color:#903;background:#fde">' );
-			if ( $prefix ) $return[] = '<strong>' . $prefix . '</strong><br/>';
-			$return[] = $message;
-			$return[] = '</div>';
-			return implode( '', $return );
-		}
-
-		/**
-		 * Range converter
-		 * Converts string range (like 1, 5-7, 10) into array (like [1]=>1, [5]=>5, [6]=>6, [7]=>7, [10]=>10)
-		 */
-		public static function range( $string = '' ) {
-			$numbers = array();
-			// Loop values
-			foreach( explode( ',', $string ) as $range ) {
-				// Detect range (min-max)
-				if ( strpos( $range, '-' ) !== false ) {
-					// Split min/max
-					$range = explode( '-', $range );
-					// Check min/max values
-					if ( !is_numeric( $range[0] ) ) $range[0] = 0;
-					if ( !is_numeric( $range[1] ) ) $range[1] = 0;
-					// Sort min/max values
-					sort( $range );
-					// List values from min to max
-					$range = range( $range[0], $range[1] );
-					// Add values to the array
-					foreach( $range as $value ) $numbers[$value] = $value;
-				}
-				// Single value
-				else {
-					// Add day to the array
-					$numbers[$range] = $range;
-				}
-			}
-			// Return array with numbers
-			return $numbers;
-		}
+		return false;
 	}
 
-	new Su_Tools;
+	public static function icons() {
+		$icons = array();
+		if ( is_callable( array( 'Su_Data', 'icons' ) ) ) foreach ( (array) Su_Data::icons() as $icon ) {
+				$icons[] = '<i class="fa fa-' . $icon . '" title="' . $icon . '"></i>';
+			}
+		return implode( '', $icons );
+	}
+
+	public static function access() {
+		if ( !self::access_check() ) wp_die( __( 'Access denied', 'su' ) );
+	}
+
+	public static function access_check() {
+		return current_user_can( 'edit_posts' );
+	}
+
+	public static function slide_link_input( $form_fields, $post ) {
+		$form_fields['su_slide_link'] = array(
+			'label' => __( 'Slide link', 'su' ),
+			'input' => 'text',
+			'value' => get_post_meta( $post->ID, 'su_slide_link', true ),
+			'helps' => sprintf( '<strong>%s</strong><br>%s', __( 'Shortcodes Ultimate', 'su' ), __( 'Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes', 'su' ) )
+		);
+		return $form_fields;
+	}
+
+	public static function slide_link_save( $post, $attachment ) {
+		if ( isset( $attachment['su_slide_link'] ) )
+			update_post_meta( $post['ID'], 'su_slide_link', $attachment['su_slide_link'] );
+		return $post;
+	}
+
+	public static function error( $prefix = false, $message = false ) {
+		if ( !$prefix && !$message ) return '';
+		$return = array( '<div class="su-error" style="padding:10px;border:1px solid #f03;color:#903;background:#fde">' );
+		if ( $prefix ) $return[] = '<strong>' . $prefix . '</strong><br/>';
+		$return[] = $message;
+		$return[] = '</div>';
+		return implode( '', $return );
+	}
+
+	/**
+	 * Range converter
+	 * Converts string range (like 1, 5-7, 10) into array (like [1]=>1, [5]=>5, [6]=>6, [7]=>7, [10]=>10)
+	 */
+	public static function range( $string = '' ) {
+		$numbers = array();
+		// Loop values
+		foreach ( explode( ',', $string ) as $range ) {
+			// Detect range (min-max)
+			if ( strpos( $range, '-' ) !== false ) {
+				// Split min/max
+				$range = explode( '-', $range );
+				// Check min/max values
+				if ( !is_numeric( $range[0] ) ) $range[0] = 0;
+				if ( !is_numeric( $range[1] ) ) $range[1] = 0;
+				// Sort min/max values
+				sort( $range );
+				// List values from min to max
+				$range = range( $range[0], $range[1] );
+				// Add values to the array
+				foreach ( $range as $value ) $numbers[$value] = $value;
+			}
+			// Single value
+			else {
+				// Add day to the array
+				$numbers[$range] = $range;
+			}
+		}
+		// Return array with numbers
+		return $numbers;
+	}
+}
+
+new Su_Tools;
 
 /**
  * Shortcut for Su_Tools::decode_shortcode()

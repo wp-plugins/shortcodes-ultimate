@@ -696,9 +696,7 @@ class Su_Shortcodes {
 		$autoplay = ( $atts['autoplay'] === 'yes' ) ? '&amp;autoplay=1' : '';
 		// Create player
 		$return[] = '<div class="su-vimeo su-responsive-media-' . $atts['responsive'] . su_ecssc( $atts ) . '">';
-		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] .
-			'" src="http://player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' .
-			$autoplay . '" frameborder="0" allowfullscreen="true"></iframe>';
+		$return[] = '<iframe width="' . $atts['width'] . '" height="' . $atts['height'] . '" src="//player.vimeo.com/video/' . $id . '?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff' . $autoplay . '" frameborder="0" allowfullscreen="true"></iframe>';
 		$return[] = '</div>';
 		su_query_asset( 'css', 'su-media-shortcodes' );
 		// Return result

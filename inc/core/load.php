@@ -74,7 +74,7 @@ class Shortcodes_Ultimate {
 						'default' => 'su_'
 					),
 					array(
-						'type'    => 'text',
+						'type'    => 'hidden',
 						'id'      => 'skin',
 						'name'    => __( 'Skin', 'su' ),
 						'desc'    => __( 'Choose global skin for shortcodes', 'su' ),

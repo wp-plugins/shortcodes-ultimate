@@ -74,8 +74,7 @@ jQuery(document).ready(function ($) {
 		e.preventDefault();
 	});
 
-	var examples_timer = 0,
-		open = $('#su_open_example').val(),
+	var open = $('#su_open_example').val(),
 		$example_window = $('#su-examples-window'),
 		$example_preview = $('#su-examples-preview');
 	$('.su-examples-group-title, .su-examples-item').each(function () {
@@ -124,10 +123,6 @@ jQuery(document).ready(function ($) {
 			// Open preselected example
 			if ($item.data('id') === open) $item.trigger('click');
 		}
-		examples_timer = examples_timer + delay;
-		window.setTimeout(function () {
-			$item.addClass('animated fadeInDown').css('visibility', 'visible');
-		}, examples_timer);
 	});
 	$('#su-examples-window').on('click', '.su-examples-get-code', function (e) {
 		$(this).hide();

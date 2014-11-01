@@ -137,7 +137,7 @@ class Su_Data {
 							),
 							'default' => 'default',
 							'name' => __( 'Style', 'su' ),
-							'desc' => sprintf( '%s. <a href="http://gndev.info/shortcodes-ultimate/skins/" target="_blank">%s</a>', __( 'Choose style for this heading', 'su' ), __( 'Install additional styles', 'su' ) )
+							'desc' => __( 'Choose style for this heading', 'su' ) . '%su_skins_link%'
 						),
 						'size' => array(
 							'type' => 'slider',
@@ -191,7 +191,7 @@ class Su_Data {
 							),
 							'default' => 'default',
 							'name' => __( 'Style', 'su' ),
-							'desc' => sprintf( '%s. <a href="http://gndev.info/shortcodes-ultimate/skins/" target="_blank">%s</a>', __( 'Choose style for this tabs', 'su' ), __( 'Install additional styles', 'su' ) )
+							'desc' => __( 'Choose style for this tabs', 'su' ) . '%su_skins_link%'
 						),
 						'active' => array(
 							'type' => 'number',
@@ -293,7 +293,7 @@ class Su_Data {
 							),
 							'default' => 'default',
 							'name' => __( 'Style', 'su' ),
-							'desc' => sprintf( '%s. <a href="http://gndev.info/shortcodes-ultimate/skins/" target="_blank">%s</a>', __( 'Choose style for this spoiler', 'su' ), __( 'Install additional styles', 'su' ) )
+							'desc' => __( 'Choose style for this spoiler', 'su' ) . '%su_skins_link%'
 						),
 						'icon' => array(
 							'type' => 'select',
@@ -517,7 +517,7 @@ class Su_Data {
 							),
 							'default' => 'default',
 							'name' => __( 'Style', 'su' ),
-							'desc' => sprintf( '%s. <a href="http://gndev.info/shortcodes-ultimate/skins/" target="_blank">%s</a>', __( 'Choose style for this quote', 'su' ), __( 'Install additional styles', 'su' ) )
+							'desc' => __( 'Choose style for this quote', 'su' ) . '%su_skins_link%'
 						),
 						'cite' => array(
 							'default' => '',

@@ -15,7 +15,7 @@ jQuery(document).ready(function ($) {
 		// Add active class to current tab
 		$(this).addClass('nav-tab-active');
 		// Show current pane
-		$('.sunrise-pane:eq(' + $(this).index() + ')').fadeIn(300);
+		$('.sunrise-pane:eq(' + $(this).index() + ')').show();
 		// Save tab to cookies
 		createCookie(pagenow + '_last_tab', $(this).index(), 365);
 	});

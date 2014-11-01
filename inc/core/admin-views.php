@@ -60,7 +60,7 @@ class Su_Admin_Views {
 ?>
 <div id="su-custom-css-screen">
 	<div class="su-custom-css-originals">
-		<p><strong><?php _e( 'You can overview the original styles to override it', $config['textdomain'] ); ?></strong></p>
+		<p><strong><?php _e( 'You can overview the original styles to overwrite it', $config['textdomain'] ); ?></strong></p>
 		<div class="sunrise-inline-menu">
 			<a href="<?php echo su_skin_url( 'content-shortcodes.css' ); ?>">content-shortcodes.css</a>
 			<a href="<?php echo su_skin_url( 'box-shortcodes.css' ); ?>">box-shortcodes.css</a>
@@ -101,11 +101,11 @@ class Su_Admin_Views {
 			if ( isset( $group['items'] ) ) foreach ( $group['items'] as $item ) {
 					$code = ( isset( $item['code'] ) ) ? $item['code'] : plugins_url( 'inc/examples/' . $item['id'] . '.example', SU_PLUGIN_FILE );
 					$id = ( isset( $item['id'] ) ) ? $item['id'] : '';
-					$items[] = '<div class="su-examples-item" data-code="' . $code . '" data-id="' . $id . '" data-mfp-src="#su-examples-window" style="visibility:hidden"><i class="fa fa-' . $item['icon'] . '"></i> ' . $item['name'] . '</div>';
+					$items[] = '<div class="su-examples-item" data-code="' . $code . '" data-id="' . $id . '" data-mfp-src="#su-examples-window"><i class="fa fa-' . $item['icon'] . '"></i> ' . $item['name'] . '</div>';
 				}
-			$output[] = '<div class="su-examples-group su-clearfix"><h2 class="su-examples-group-title" style="visibility:hidden">' . $group['title'] . '</h2>' . implode( '', $items ) . '</div>';
+			$output[] = '<div class="su-examples-group su-clearfix"><h2 class="su-examples-group-title">' . $group['title'] . '</h2>' . implode( '', $items ) . '</div>';
 		}
-		su_query_asset( 'css', array( 'magnific-popup', 'animate', 'font-awesome', 'su-options-page' ) );
+		su_query_asset( 'css', array( 'magnific-popup', 'font-awesome', 'su-options-page' ) );
 		su_query_asset( 'js', array( 'jquery', 'magnific-popup', 'su-options-page' ) );
 		return '<div id="su-examples-screen">' . implode( '', $output ) . '</div>' . $preview . $open;
 	}
@@ -130,6 +130,8 @@ class Su_Admin_Views {
 				foreach ( $shortcode['atts'] as $id => $data ) {
 					// Prepare default value
 					$default = ( isset( $data['default'] ) && $data['default'] !== '' ) ? '<p><em>' . __( 'Default value', 'su' ) . ':</em> ' . $data['default'] . '</p>' : '';
+					// Check type is set
+					if ( empty( $data['type'] ) ) $data['type'] = 'text';
 					// Switch attribute types
 					switch ( $data['type'] ) {
 						// Select
@@ -169,10 +171,12 @@ class Su_Admin_Views {
 				}
 			// Prepare example code
 			$example = '[%prefix_' . $name . ' ' . implode( ' ', $example ) . ']';
+			// Prepare content value
+			if ( empty( $shortcode['content'] ) ) $shortcode['content'] = '';
 			// Add wrapping code
 			if ( $shortcode['type'] === 'wrap' ) $example .= esc_textarea( $shortcode['content'] ) . '[/%prefix_' . $name . ']';
 			// Change compatibility prefix
-			$example = str_replace( '%prefix_', su_cmpt(), $example );
+			$example = str_replace( array( '%prefix_', '__' ), su_cmpt(), $example );
 			// Shortcode
 			$table[] = '<td>' . '<span class="su-shortcode-icon">' . Su_Tools::icon( $icon ) . '</span>' . $shortcode['name'] . '<br/><em class="su-shortcode-desc">' . $shortcode['desc'] . '</em></td>';
 			// Attributes
