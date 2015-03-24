@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shortcodes Ultimate v4.9.1\n"
+"Project-Id-Version: Shortcodes Ultimate v4.9.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2013-10-01 17:50+0300\n"
-"PO-Revision-Date: 2014-08-07 15:40+0900\n"
+"PO-Revision-Date: 2014-11-03 00:31+0900\n"
 "Last-Translator: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "Language-Team: stranger-jp <wordpress.stranger.jp@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -1289,7 +1289,7 @@ msgid "Support forum"
 msgstr "サポートフォーラム"
 
 msgid "Changelog"
-msgstr "変更履歴"
+msgstr "更新履歴"
 
 msgid "About"
 msgstr "About"
@@ -1870,9 +1870,6 @@ msgstr "サンプルコードが見つからない場合は、後で確認して
 msgid "Generated text will be cached. Be careful with this option. If you disable it and insert many dummy_text shortcodes the page load time will be highly increased"
 msgstr "生成されたテキストにキャッシュされます。このオプションに注意してください。それを無効にすると、多くのdummy_text ショートコードを挿入した場合、ページの読み込み時間は非常に増加します"
 
-msgid "Install additional styles"
-msgstr "追加のスタイルをインストール"
-
 msgid "Open links in"
 msgstr "リンクを開く"
 
@@ -1900,9 +1897,6 @@ msgstr "選択したファイルを使用します。"
 msgid "Words"
 msgstr "言葉"
 
-msgid "You can overview the original styles to override it"
-msgstr "概要元のスタイルを上書きすることができます。"
-
 msgid "please specify correct source"
 msgstr "正しいソースを指定してください"
 
@@ -1911,9 +1905,6 @@ msgstr "新しいプリセット名を入力してください"
 
 msgid "New preset"
 msgstr "新しいプリセット"
-
-msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#contact-form</b> - any HTML content (inline)"
-msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像のコンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例: <br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube動画 (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像<br /><b%value>http://example.com/</b> - 任意のWebページ (iframe)<br /><b%value>#contact-form</b> - 任意のHTMLコンテンツ (inline)"
 
 msgid "Presets"
 msgstr "プリセット"
@@ -1936,8 +1927,8 @@ msgstr "ショートコードのグローバルスキンを選択"
 msgid "1 new add-on for Shortcodes Ultimate"
 msgstr "Shortcodes Ultimateの1つの新しいアドオン"
 
-msgid "4.9.1"
-msgstr "4.9.1"
+msgid "4.9.3"
+msgstr "4.9.3"
 
 msgid "Activation key"
 msgstr "アクティベーションキー"
@@ -2541,3 +2532,69 @@ msgstr "下線"
 
 msgid "Years"
 msgstr "年"
+
+msgid "Insert here URL or CSS selector. Use URL for Iframe and Image content types. Use CSS selector for Inline content type.<br />Example values:<br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube video (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - uploaded image (image)<br /><b%value>http://example.com/</b> - any web page (iframe)<br /><b%value>#my-custom-popup</b> - any HTML content (inline)"
+msgstr "ここにURLまたはCSSセレクタを挿入します。インラインフレームと画像のコンテンツタイプのURLを使用してください。インラインコンテンツタイプのCSSセレクターを使用してください。<br />値の例: <br /><b%value>http://www.youtube.com/watch?v=XXXXXXXXX</b> - YouTube動画 (iframe)<br /><b%value>http://example.com/wp-content/uploads/image.jpg</b> - アップロードされた画像<br /><b%value>http://example.com/</b> - 任意のWebページ (iframe)<br /><b%value>#my-custom-popup</b> - 任意のHTMLコンテンツ (inline)"
+
+msgid "You can overview the original styles to overwrite it"
+msgstr "概要元のスタイルを上書きすることができます。"
+
+msgid "Additional skins successfully installed"
+msgstr "追加のスキンを正常にインストールしました。"
+
+msgid "Adjust the margin for inline content (in pixels)"
+msgstr "インラインコンテンツのマージンを調整 (ピクセル単位)"
+
+msgid "Adjust the padding for inline content (in pixels)"
+msgstr "インラインコンテンツのパディングを調整 (ピクセル単位)"
+
+msgid "Adjust the shadow for content box"
+msgstr "コンテンツボックスの影を調整"
+
+msgid "Adjust the width for inline content (in pixels or percents). %s Example values: %s, %s, %s"
+msgstr "インラインコンテンツの幅を調整 (ピクセルまたはパーセント) %s 値の例: %s, %s, %s "
+
+msgid "Choose how to open the custom tab link"
+msgstr "カスタムタブのリンクを開く方法を選択"
+
+msgid "Enter here the ID from Content source field. %s Example value: %s"
+msgstr "コンテンツソースフィールドからIDを入力。 %s 値の例: %s"
+
+msgid "Get more styles"
+msgstr "より多くのスタイルを取得"
+
+msgid "Here you can specify wmode value for the embed URL. %s Example values: %s, %s"
+msgstr "埋め込みURLのWMode値を指定が可能。%s 値の例: %s, %s"
+
+msgid "Inline content"
+msgstr "インラインコンテンツ"
+
+msgid "Inline content for lightbox"
+msgstr "lightboxのインラインコンテンツ"
+
+msgid "Lightbox content"
+msgstr "lightboxのコンテンツ"
+
+msgid "Open dropdown to choose one of new styles"
+msgstr "新しいスタイルを選択するにはドロップダウンして開く"
+
+msgid "Padding"
+msgstr "パディング"
+
+msgid "Pick a text color"
+msgstr "テキストの色を選択"
+
+msgid "please specify correct ID for this block. You should use same ID as in the Content source field (when inserting lightbox shortcode)"
+msgstr "このブロックの正しいIDを指定してください。コンテンツソースフィールドと同じIDを使用する必要があります。 (lightboxショートコードを挿入するとき)"
+
+msgid "Select the text alignment"
+msgstr "テキストの配置を選択"
+
+msgid "Text alignment"
+msgstr "テキストアラインメント"
+
+msgid "WMode"
+msgstr "WMode"
+
+msgid "You can link this tab to any webpage. Enter here full URL to switch this tab into link"
+msgstr "このタブは任意のwebページにリンクできます。ここリンクにこのタブを切り替えるにはURLを入力してください。"

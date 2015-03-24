@@ -757,6 +757,8 @@ class Su_Tools {
 	public static function example() {
 		// Check authentication
 		self::access();
+		// Check nonce
+		if ( !isset( $_REQUEST['nonce'] ) || !wp_verify_nonce( $_REQUEST['nonce'], 'su_examples_nonce' ) ) return;
 		// Check incoming data
 		if ( !isset( $_REQUEST['code'] ) || !isset( $_REQUEST['id'] ) ) return;
 		// Check for cache

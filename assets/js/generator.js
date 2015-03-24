@@ -159,7 +159,7 @@ jQuery(document).ready(function ($) {
 				if ((id + name + desc + group).match(regex) !== null) {
 					$(this).css({
 						opacity: 1
-}).removeClass('su-generator-choice-first');
+					}).removeClass('su-generator-choice-first');
 					if (val === id || val === name || val === name.toLowerCase()) {
 						$(this).addClass('su-generator-choice-first');
 					}

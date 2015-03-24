@@ -166,7 +166,6 @@ class Shortcodes_Ultimate {
 	 */
 	public static function activation() {
 		self::timestamp();
-		self::skins_dir();
 		update_option( 'su_option_version', SU_PLUGIN_VERSION );
 		do_action( 'su/activation' );
 	}
@@ -213,15 +212,6 @@ class Shortcodes_Ultimate {
 	 */
 	public static function timestamp() {
 		if ( !get_option( 'su_installed' ) ) update_option( 'su_installed', time() );
-	}
-
-	/**
-	 * Create directory /wp-content/uploads/shortcodes-ultimate-skins/ on activation
-	 */
-	public static function skins_dir() {
-		$upload_dir = wp_upload_dir();
-		$path = trailingslashit( path_join( $upload_dir['basedir'], 'shortcodes-ultimate-skins' ) );
-		if ( !file_exists( $path ) ) mkdir( $path, 0755 );
 	}
 
 	/**

@@ -158,6 +158,7 @@ if ( !class_exists( 'Sunrise4' ) ) {
 			echo '<form action="" method="post" id="sunrise-form">';
 			echo call_user_func( array( $this->config['views_class'], 'options_page_panes' ), $options, $this->config );
 			echo '<input type="hidden" name="sunrise_action" value="save" />';
+			echo '<input type="hidden" name="sunrise_nonce" value="' . wp_create_nonce( 'sunrise_nonce' ) . '" />';
 			do_action( 'sunrise/page/form' );
 			echo '</form></div>';
 			// Hook after page output
@@ -232,6 +233,8 @@ if ( !class_exists( 'Sunrise4' ) ) {
 			$page = sanitize_key( $_GET['page'] );
 			// Check page
 			if ( !$this->is_sunrise() ) return;
+			// Check nonce
+			if ( !isset( $_REQUEST['sunrise_nonce'] ) || !wp_verify_nonce( $_REQUEST['sunrise_nonce'], 'sunrise_nonce' ) ) return;
 			// Submit hooks
 			do_action( 'sunrise/submit', $this );
 			do_action( 'sunrise/submit/' . $page, $this );

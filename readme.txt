@@ -107,6 +107,14 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.9.4 =
+* Updated: Japanese translation
+* Updated: Polish translation
+* Fixed: minor fixes in shortcode settings window
+* Fixed: [vulnerability](http://security.szurek.pl/private/shortcodes-ultimate-493-reflected-xss.html) of Examples preview. Added wp_nonce check. Thanks to [Kacper Szurek](http://security.szurek.pl/)
+* Fixed: vulnerability at Custom CSS page. Added wp_nonce check. Thanks to [Ryan Satterfield](https://planetzuda.com/)
+* Removed: skins directory creation
+
 = 4.9.3 =
 * Updated: owl-carousel.js
 * Added: minor UI improvements
