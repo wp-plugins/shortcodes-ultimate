@@ -248,7 +248,7 @@
 	padding: 0.5em 3em;
 	font-style: italic;
 }
-.su-quote-style-default.su-quote-has-cite { margin-bottom: 3em; }
+/*.su-quote-style-default.su-quote-has-cite { margin-bottom: 3em; }*/
 .su-quote-style-default:before,
 .su-quote-style-default:after {
 	position: absolute;
@@ -269,9 +269,8 @@
 	background-position: -20px 0;
 }
 .su-quote-style-default .su-quote-cite {
-	position: absolute;
-	right: 4em;
-	bottom: -1.5em;
+	display: block;
+	text-align: right;
 	font-style: normal;
 }
 .su-quote-style-default .su-quote-cite:before { content: "\2014\0000a0"; }

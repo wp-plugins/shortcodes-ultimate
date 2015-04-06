@@ -446,6 +446,8 @@ class Su_Shortcodes {
 				'size'        => 32,
 				'class'       => ''
 			), $atts, 'service' );
+		// RTL
+		$rtl = ( is_rtl() ) ? 'right' : 'left';
 		// Built-in icon
 		if ( strpos( $atts['icon'], 'icon:' ) !== false ) {
 			$atts['icon'] = '<i class="fa fa-' . trim( str_replace( 'icon:', '', $atts['icon'] ) ) . '" style="font-size:' . $atts['size'] . 'px;color:' . $atts['icon_color'] . '"></i>';
@@ -456,7 +458,7 @@ class Su_Shortcodes {
 			$atts['icon'] = '<img src="' . $atts['icon'] . '" width="' . $atts['size'] . '" height="' . $atts['size'] . '" alt="' . $atts['title'] . '" />';
 		}
 		su_query_asset( 'css', 'su-box-shortcodes' );
-		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding-left:' . round( $atts['size'] + 14 ) . 'px;min-height:' . $atts['size'] . 'px;line-height:' . $atts['size'] . 'px">' . $atts['icon'] . ' ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content su-clearfix" style="padding-left:' . round( $atts['size'] + 14 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
+		return '<div class="su-service' . su_ecssc( $atts ) . '"><div class="su-service-title" style="padding-' . $rtl . ':' . round( $atts['size'] + 14 ) . 'px;min-height:' . $atts['size'] . 'px;line-height:' . $atts['size'] . 'px">' . $atts['icon'] . ' ' . su_scattr( $atts['title'] ) . '</div><div class="su-service-content su-clearfix" style="padding-' . $rtl . ':' . round( $atts['size'] + 14 ) . 'px">' . do_shortcode( $content ) . '</div></div>';
 	}
 
 	public static function box( $atts = null, $content = null ) {

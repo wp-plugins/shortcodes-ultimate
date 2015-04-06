@@ -56,7 +56,9 @@ class Su_Generator {
 		// Request assets
 		wp_enqueue_media();
 		su_query_asset( 'css', array( 'simpleslider', 'farbtastic', 'magnific-popup', 'font-awesome', 'su-generator' ) );
-		su_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simpleslider', 'farbtastic', 'magnific-popup', 'su-generator' ) );
+		su_query_asset( 'js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-widget', 'jquery-ui-mouse', 'simpleslider', 'farbtastic', 'magnific-popup', 'jquery-hotkeys', 'su-generator' ) );
+		// Hook
+		do_action( 'su/button', $args );
 		// Print/return result
 		if ( $args['echo'] ) echo $button;
 		return $button;
@@ -96,6 +98,7 @@ class Su_Generator {
 				<div id="su-generator-header">
 					<div id="su-generator-tools"><?php echo implode( ' <span></span> ', $tools ); ?></div>
 					<input type="text" name="su_generator_search" id="su-generator-search" value="" placeholder="<?php _e( 'Search for shortcodes', 'su' ); ?>" />
+					<p id="su-generator-search-pro-tip"><?php printf( '<strong>%s:</strong> %s', __( 'Pro Tip', 'su' ), __( 'Hit enter to select highlighted shortcode, while searching' ) ) ?></p>
 					<div id="su-generator-filter">
 						<strong><?php _e( 'Filter by type', 'su' ); ?></strong>
 						<?php foreach ( (array) Su_Data::groups() as $group => $label ) echo '<a href="#" data-filter="' . $group . '">' . $label . '</a>'; ?>

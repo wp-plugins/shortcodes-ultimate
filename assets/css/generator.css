@@ -67,10 +67,17 @@
 /* Search box */
 #su-generator-search {
 	width: 100%;
-	margin-bottom: 30px;
+	margin-bottom: 5px;
 	padding: 10px 10px 10px 42px;
 	background: 5px 50% url('../images/search.png') no-repeat;
 	font-size: 1.3em;
+}
+#su-generator-search-pro-tip {
+	margin: 0 0 30px 0;
+	color: #999;
+	font-style: italic;
+	text-align: right;
+	font-size: 0.9em;
 }
 
 /* Filter box */

@@ -2,7 +2,7 @@
 Contributors: madfork, gn_themes
 License: GPL
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MMA2VA7JDXWDY
-Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons
+Tags: shortcode, shortcodes, short code, video, responsive, responsive video, youtube, vimeo, audio, mp3, tab, tabs, button, buttons, jquery, box, boxes, toggle, spoiler, column, columns, services, service, pullquote, list, lists, images, image, links, fancy, fancy link, fancy links, fancy buttons, jquery tabs, accordion, slider, plugin, admin, gallery, bloginfo, list pages, sub pages, navigation, siblings pages, children pages, permalink, permalinks, feed, document, member, members, guests, membership, documents, carousel, rss, touch, icon, icons, trl, right-to-left, multilingual, lang, international
 Requires at least: 3.5
 Tested up to: 5.0
 Stable tag: trunk
@@ -22,13 +22,17 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * __[Shortcode Creator](http://gndev.info/shortcodes-ultimate/maker/)__ - allows you to create your own custom shortcodes
 
 = Features =
-* Shortcode Generator
 * 50+ amazing shortcodes
-* Modern responsive design
-* Power of CSS3
-* Custom CSS editor with syntax highlight
-* Special widget
-* Rich API
+* Shortcode Generator
+* Modern design
+* Fully responsive
+* CSS3-powered
+* Custom CSS editor
+* Custom widget
+* Multilingual
+* RTL support
+* Works with any theme
+* Easily extendable
 
 = Demo video =
 [youtube http://www.youtube.com/watch?v=h5hlJb0mSSY]
@@ -70,10 +74,8 @@ Have a translation? [Contact me](http://gndev.info/feedback/)
 * Dmitry Semenov - [Magnific Popup jQuery plugin](http://dimsemenov.com/plugins/magnific-popup/)
 * Craig Thompson - [qTip jQuery plugin](http://qtip2.com/)
 * Vladimir Kharlampidi - [Swiper jQuery plugin](http://www.idangero.us/sliders/swiper/)
-* Designmodo - [Flat UI Free icons](http://designmodo.com/)
 * Dave Gandy - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 * James Smith - [Simple Slider jQuery plugin](http://loopj.com/jquery-simple-slider/)
-* Kevin Batdorf - [Liquid Slider jQuery plugin](http://liquidslider.com)
 
 
 == Installation ==
@@ -106,6 +108,16 @@ Upgrade normally
 
 
 == Changelog ==
+
+= 4.9.5 =
+* Added: basic RTL support
+* Fixed: JS error (blocking shortcodes settings) on WordPress 3.5
+* Fixed: minor improvement for slider/gallery posts query. [Forum topic](https://wordpress.org/support/topic/slider-code-suggestion)
+* Fixed: minor imrovements on [quote], fixed markup bug for long values in cite, thanks to [Anatoly Yumashev](http://systemo.biz/)
+* Added: completely redesigned search feature. Now it's like a Google, but for shortcodes =)
+* Added: Insert shortcode popup window hotkey. So now, you can open Insert shortcode window, choose shortcode and insert it with just one click
+* Updated: new demo video at plugin settings page (About tab)
+* Updated: new plugin's banner and icon
 
 = 4.9.4 =
 * Updated: Japanese translation

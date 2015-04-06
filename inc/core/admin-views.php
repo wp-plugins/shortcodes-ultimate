@@ -34,7 +34,7 @@ class Su_Admin_Views {
 	<div class="su-clearfix">
 		<div class="su-about-column">
 			<h3><?php _e( 'How does it works', 'su' ); ?></h3>
-			<a href="http://www.youtube.com/watch?v=DR2c266yWEA?autoplay=1&amp;showinfo=0&amp;rel=0&amp;theme=light#" target="_blank" class="su-demo-video"><img src="<?php echo plugins_url( 'assets/images/banners/how-it-works.jpg', SU_PLUGIN_FILE ); ?>" alt=""></a>
+			<a href="http://www.youtube.com/watch?v=lni-w2dtcQY?autoplay=1&amp;showinfo=0&amp;rel=0&amp;theme=light#" target="_blank" class="su-demo-video"><img src="<?php echo plugins_url( 'assets/images/banners/how-it-works.jpg', SU_PLUGIN_FILE ); ?>" alt=""></a>
 		</div>
 		<div class="su-about-column">
 			<h3><?php _e( 'More videos', 'su' ); ?></h3>

@@ -715,6 +715,7 @@ class Su_Tools {
 					'terms' => (array) explode( ',', $args['source']['val'][1] )
 				)
 			);
+			$query['post_type'] = 'any';
 		}
 		// Query posts
 		$query = new WP_Query( $query );

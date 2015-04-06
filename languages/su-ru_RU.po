@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gn_themes\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-09 21:23+0400\n"
-"PO-Revision-Date: 2014-09-09 21:31+0400\n"
+"POT-Creation-Date: 2015-04-06 06:07+0300\n"
+"PO-Revision-Date: 2015-04-06 06:11+0300\n"
 "Last-Translator: Vladimir Anokhin <ano.vladimir@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: utf-8\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.7.5\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: inc/core/admin-views.php:9
@@ -24,7 +24,7 @@ msgstr "Добро пожаловать в Shortcodes Ultimate"
 msgid "A real swiss army knife for WordPress"
 msgstr "Настоящий швейцарский армейский нож для WordPress"
 
-#: inc/core/admin-views.php:11 inc/core/load.php:243
+#: inc/core/admin-views.php:11 inc/core/load.php:240
 msgid "Project homepage"
 msgstr "Страница проекта"
 
@@ -32,11 +32,11 @@ msgstr "Страница проекта"
 msgid "Documentation"
 msgstr "Документация"
 
-#: inc/core/admin-views.php:13 inc/core/load.php:244
+#: inc/core/admin-views.php:13 inc/core/load.php:241
 msgid "Support forum"
 msgstr "Форум поддержки"
 
-#: inc/core/admin-views.php:14 inc/core/load.php:245
+#: inc/core/admin-views.php:14 inc/core/load.php:242
 msgid "Changelog"
 msgstr "Список изменений"
 
@@ -113,8 +113,8 @@ msgid "How to create image gallery"
 msgstr "Как создать галерею изображений"
 
 #: inc/core/admin-views.php:63
-msgid "You can overview the original styles to override it"
-msgstr "Вы можете посмотреть оригинальные стили, чтобы перезаписать их"
+msgid "You can overview the original styles to overwrite it"
+msgstr "Вы можете посмотреть оригинальные стили, чтобы переопределить их"
 
 #: inc/core/admin-views.php:75
 msgid "You can use next variables in your custom CSS"
@@ -132,66 +132,66 @@ msgstr "url папки с текущей темой"
 msgid "plugin url"
 msgstr "url папки этого плагина"
 
-#: inc/core/admin-views.php:115
+#: inc/core/admin-views.php:116
 msgid "Printable version"
 msgstr "Версия для печати"
 
-#: inc/core/admin-views.php:115 inc/core/load.php:30 inc/core/load.php:104
-#: inc/core/load.php:113 inc/core/load.php:127 inc/core/load.php:141
-#: inc/core/load.php:153 inc/core/tools.php:912 inc/core/widget.php:14
+#: inc/core/admin-views.php:116 inc/core/load.php:30 inc/core/load.php:111
+#: inc/core/load.php:120 inc/core/load.php:134 inc/core/load.php:148
+#: inc/core/load.php:160 inc/core/tools.php:867 inc/core/widget.php:14
 #: inc/core/widget.php:40
 msgid "Shortcodes Ultimate"
 msgstr "Шорткоды"
 
-#: inc/core/admin-views.php:115 inc/core/load.php:127 inc/core/load.php:128
+#: inc/core/admin-views.php:116 inc/core/load.php:134 inc/core/load.php:135
 msgid "Cheatsheet"
 msgstr "Шпаргалка"
 
-#: inc/core/admin-views.php:115
+#: inc/core/admin-views.php:116
 msgid "Back to Dashboard"
 msgstr "Вернуться в Панель управления"
 
-#: inc/core/admin-views.php:119
+#: inc/core/admin-views.php:120
 msgid "Shortcode"
 msgstr "Шорткод"
 
-#: inc/core/admin-views.php:119
+#: inc/core/admin-views.php:120
 msgid "Attributes"
 msgstr "Аттрибуты"
 
-#: inc/core/admin-views.php:119
+#: inc/core/admin-views.php:120
 msgid "Example code"
 msgstr "Пример кода"
 
-#: inc/core/admin-views.php:127
+#: inc/core/admin-views.php:128
 msgid "full list"
 msgstr "полный список"
 
-#: inc/core/admin-views.php:132
+#: inc/core/admin-views.php:133
 msgid "Default value"
 msgstr "Значение по умолчанию"
 
-#: inc/core/admin-views.php:154
+#: inc/core/admin-views.php:157
 msgid "#RGB and rgba() colors"
 msgstr "#RGB и rgba() цвета"
 
-#: inc/core/admin-views.php:162
+#: inc/core/admin-views.php:165
 msgid "Any text value"
 msgstr "Любое текстовое значение"
 
-#: inc/core/admin-views.php:164
+#: inc/core/admin-views.php:167
 msgid "Any custom CSS classes"
 msgstr "Любой произвольный CSS класс"
 
-#: inc/core/admin-views.php:166
+#: inc/core/admin-views.php:169
 msgid "Possible values"
 msgstr "Возможные значения"
 
-#: inc/core/admin-views.php:196
+#: inc/core/admin-views.php:201
 msgid "New Shortcodes"
 msgstr "Новые Шорткоды"
 
-#: inc/core/admin-views.php:197
+#: inc/core/admin-views.php:202
 msgid ""
 "Parallax sections, responsive content slider, pricing tables, vector icons, "
 "testimonials, progress bars and even more"
@@ -199,11 +199,11 @@ msgstr ""
 "Секции с параллакс эффектом, адаптивный слайдер контента, тарифные таблицы, "
 "векторные иконки, отзывы, прогресс бары и даже больше"
 
-#: inc/core/admin-views.php:202
+#: inc/core/admin-views.php:207
 msgid "Maker"
 msgstr "Maker"
 
-#: inc/core/admin-views.php:203
+#: inc/core/admin-views.php:208
 msgid ""
 "This add-on allows you to create custom shortcodes. You can easily create "
 "any shortcode with different parameters or even override default shortcodes"
@@ -211,11 +211,11 @@ msgstr ""
 "Это дополнение позволит вам создавать собственные шорткоды. Вы можете с "
 "легкостью создать новый шорткод или даже перезаписать оригинальный"
 
-#: inc/core/admin-views.php:208
+#: inc/core/admin-views.php:213
 msgid "Skins"
 msgstr "Скины"
 
-#: inc/core/admin-views.php:209
+#: inc/core/admin-views.php:214
 msgid ""
 "Set of additional skins for Shortcodes Ultimate. It includes skins for "
 "accordeons/spoilers, tabs and some other shortcodes"
@@ -223,93 +223,93 @@ msgstr ""
 "Набор дополнительных скинов для шорткодов плагина. Набор включает в себя "
 "скины для аккордеонов/спойлеров, вкладок и некоторых других шорткодов"
 
-#: inc/core/admin-views.php:214
+#: inc/core/admin-views.php:219
 msgid "Add-ons bundle"
 msgstr "Набор дополнений"
 
-#: inc/core/admin-views.php:215
+#: inc/core/admin-views.php:220
 msgid "Get all three add-ons with huge discount!"
 msgstr "Получите все три дополнения с большой скидкой"
 
-#: inc/core/admin-views.php:221
+#: inc/core/admin-views.php:226
 msgid "Shortcodes Ultimate Add-ons"
 msgstr "Дополнения для Shortcodes Ultimate"
 
-#: inc/core/admin-views.php:224 inc/core/admin-views.php:231
+#: inc/core/admin-views.php:229 inc/core/admin-views.php:236
 msgid "Learn more"
 msgstr "Узнать больше"
 
-#: inc/core/admin-views.php:228
+#: inc/core/admin-views.php:233
 msgid "Other WordPress Plugins"
 msgstr "Другие плагины для WordPress"
 
-#: inc/core/assets.php:67
+#: inc/core/assets.php:70
 msgid "Close (Esc)"
 msgstr "Закрыть (Esc)"
 
-#: inc/core/assets.php:68
+#: inc/core/assets.php:71
 msgid "Loading..."
 msgstr "Загрузка..."
 
-#: inc/core/assets.php:69
+#: inc/core/assets.php:72
 msgid "Previous (Left arrow key)"
 msgstr "Назад (Клавиша Влево)"
 
-#: inc/core/assets.php:70
+#: inc/core/assets.php:73
 msgid "Next (Right arrow key)"
 msgstr "Вперед (Клавиша Вправо)"
 
-#: inc/core/assets.php:71
+#: inc/core/assets.php:74
 #, php-format
 msgid "%s of %s"
 msgstr "%s из %s"
 
-#: inc/core/assets.php:72
+#: inc/core/assets.php:75
 #, php-format
 msgid "Failed to load this link. %sOpen link%s."
 msgstr "Ошибка загрузки ссылки. %sОткрыть ссылку%s."
 
-#: inc/core/assets.php:84
+#: inc/core/assets.php:87
 msgid "Choose files"
 msgstr "Выбор файлов"
 
-#: inc/core/assets.php:85
+#: inc/core/assets.php:88
 msgid "Add selected files"
 msgstr "Добавить выбранные файлы"
 
-#: inc/core/assets.php:86
+#: inc/core/assets.php:89
 msgid "This button is not clickable"
 msgstr "Эта кнопка не нажимается"
 
-#: inc/core/assets.php:94 inc/vendor/sunrise.php:178
+#: inc/core/assets.php:97 inc/vendor/sunrise.php:179
 msgid "Choose file"
 msgstr "Выбор файла"
 
-#: inc/core/assets.php:95
+#: inc/core/assets.php:98
 msgid "Insert"
 msgstr "Вставить"
 
-#: inc/core/assets.php:96
+#: inc/core/assets.php:99
 msgid "Select images"
 msgstr "Выберите изображения"
 
-#: inc/core/assets.php:97
+#: inc/core/assets.php:100
 msgid "Add selected images"
 msgstr "Добавить выбранные изображения"
 
-#: inc/core/assets.php:98
+#: inc/core/assets.php:101
 msgid "Please enter a name for new preset"
 msgstr "Пожалуйста введите имя для нового шаблона"
 
-#: inc/core/assets.php:99
+#: inc/core/assets.php:102
 msgid "New preset"
 msgstr "Новый шаблон"
 
-#: inc/core/assets.php:100
+#: inc/core/assets.php:103
 msgid "Last used settings"
 msgstr "Последние настройки"
 
-#: inc/core/assets.php:113
+#: inc/core/assets.php:120
 msgid ""
 "This shortcode doesn't work in live preview. Please insert it into editor "
 "and preview on the site."
@@ -325,7 +325,7 @@ msgstr "1 новое дополнение для плагина Шорткоды
 msgid "All"
 msgstr "Все"
 
-#: inc/core/data.php:18 inc/core/generator.php:182
+#: inc/core/data.php:18 inc/core/generator.php:187
 msgid "Content"
 msgstr "Содержимое"
 
@@ -442,11 +442,6 @@ msgstr "Стиль"
 #: inc/core/data.php:140
 msgid "Choose style for this heading"
 msgstr "Выберите стиль для этого заголовка"
-
-#: inc/core/data.php:140 inc/core/data.php:194 inc/core/data.php:296
-#: inc/core/data.php:520
-msgid "Install additional styles"
-msgstr "Установить дополнительные стили"
 
 #: inc/core/data.php:148 inc/core/data.php:403 inc/core/data.php:591
 #: inc/core/data.php:670 inc/core/data.php:776 inc/core/data.php:2923
@@ -900,7 +895,7 @@ msgstr "Цвет выделяемого текста"
 msgid "Highlighted text"
 msgstr "Подсвеченный текст"
 
-#: inc/core/data.php:479 inc/core/data.php:503 inc/vendor/sunrise.php:409
+#: inc/core/data.php:479 inc/core/data.php:503 inc/vendor/sunrise.php:421
 msgid "Label"
 msgstr "Ярлык"
 
@@ -1397,7 +1392,7 @@ msgstr "Цветной блок"
 msgid "Expand"
 msgstr "Развернуть"
 
-#: inc/core/data.php:990 inc/core/shortcodes.php:501
+#: inc/core/data.php:990 inc/core/shortcodes.php:503
 msgid "Show more"
 msgstr "Показать больше"
 
@@ -1409,7 +1404,7 @@ msgstr "Текст больше"
 msgid "Enter the text for more link"
 msgstr "Введите здесь текст для ссылки больше"
 
-#: inc/core/data.php:995 inc/core/shortcodes.php:502
+#: inc/core/data.php:995 inc/core/shortcodes.php:504
 msgid "Show less"
 msgstr "Показать меньше"
 
@@ -1729,7 +1724,7 @@ msgstr ""
 "Укажите заголовок окна подсказки. Оставьте поле пустым, чтобы скрыть "
 "заголовок"
 
-#: inc/core/data.php:1256 inc/core/shortcodes.php:565
+#: inc/core/data.php:1256 inc/core/shortcodes.php:567
 msgid "Tooltip text"
 msgstr "Текст подсказки"
 
@@ -3444,7 +3439,7 @@ msgid "No"
 msgstr "Нет"
 
 #: inc/core/generator-views.php:50 inc/core/generator-views.php:55
-#: inc/vendor/sunrise.php:440
+#: inc/vendor/sunrise.php:452
 msgid "Media manager"
 msgstr "Медиа менеджер"
 
@@ -3548,12 +3543,12 @@ msgstr ""
 "Выберите таксономию и её категории.<br>Вы можете выбрать несколько категорий "
 "удерживая клавишу Ctrl (Cmd)"
 
-#: inc/core/generator.php:43 inc/core/generator.php:147
+#: inc/core/generator.php:43 inc/core/generator.php:148
 msgid "Insert shortcode"
 msgstr "Вставить шорткод"
 
 #: inc/core/generator.php:86 inc/core/load.php:30 inc/core/load.php:51
-#: inc/core/load.php:104 inc/core/load.php:105
+#: inc/core/load.php:111 inc/core/load.php:112
 msgid "Settings"
 msgstr "Настройки"
 
@@ -3569,7 +3564,7 @@ msgstr "Сайт плагина"
 msgid "Support forums"
 msgstr "Форум поддержки"
 
-#: inc/core/generator.php:92 inc/core/load.php:141 inc/core/load.php:142
+#: inc/core/generator.php:92 inc/core/load.php:148 inc/core/load.php:149
 msgid "Add-ons"
 msgstr "Дополнения"
 
@@ -3577,51 +3572,59 @@ msgstr "Дополнения"
 msgid "Search for shortcodes"
 msgstr "Поиск шорткода"
 
-#: inc/core/generator.php:100
+#: inc/core/generator.php:99
+msgid "Pro Tip"
+msgstr "Совет"
+
+#: inc/core/generator.php:99
+msgid "Hit enter to select highlighted shortcode, while searching"
+msgstr "Нажмите Enter во время поиска, чтобы выбрать подсвеченный шорткод"
+
+#: inc/core/generator.php:101
 msgid "Filter by type"
 msgstr "Фильтр"
 
-#: inc/core/generator.php:135
+#: inc/core/generator.php:136
 msgid "Shortcode not specified"
 msgstr "Не выбран шорткод"
 
-#: inc/core/generator.php:148
+#: inc/core/generator.php:149
 msgid "Live preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:152
+#: inc/core/generator.php:153
 msgid "Click to return to the shortcodes list"
 msgstr "Нажмите, чтобы вернуться к списку шорткодов"
 
-#: inc/core/generator.php:152
+#: inc/core/generator.php:153
 msgid "All shortcodes"
 msgstr "Все шорткоды"
 
-#: inc/core/generator.php:158
+#: inc/core/generator.php:159
 msgid "Examples of use"
 msgstr "Примеры использования"
 
-#: inc/core/generator.php:175
+#: inc/core/generator.php:177
 msgid "Click to set this value"
 msgstr "Нажмите чтобы установить это значение"
 
-#: inc/core/generator.php:199
+#: inc/core/generator.php:205
 msgid "Preview"
 msgstr "Предпросмотр"
 
-#: inc/core/generator.php:208 inc/core/tools.php:900
+#: inc/core/generator.php:214 inc/core/tools.php:855
 msgid "Access denied"
 msgstr "Доступ запрещен"
 
-#: inc/core/generator.php:243
+#: inc/core/generator.php:249
 msgid "Presets"
 msgstr "Шаблоны"
 
-#: inc/core/generator.php:246
+#: inc/core/generator.php:252
 msgid "Save current settings as preset"
 msgstr "Сохранить настройки как новый шаблон"
 
-#: inc/core/generator.php:275 inc/core/generator.php:278
+#: inc/core/generator.php:281 inc/core/generator.php:284
 msgid "Presets not found"
 msgstr "Шаблоны не найдены"
 
@@ -3686,30 +3689,50 @@ msgstr ""
 "будут работать"
 
 #: inc/core/load.php:79
+msgid "Insert shortcode Hotkey"
+msgstr "Горячая клавиша"
+
+#: inc/core/load.php:80
+msgid ""
+"Here you can define custom hotkey for the Insert shortcode popup window. "
+"Leave this field empty to disable hotkey"
+msgstr ""
+"Здесь вы можете задать свою горячую клавишу для открытия окна Вставить "
+"шорткод. Оставьте это поле пустым, чтобы отключить горячую клавишу"
+
+#: inc/core/load.php:80
+msgid "Hotkey examples"
+msgstr "Примеры горячих клавиш"
+
+#: inc/core/load.php:80
+msgid "Additional notes"
+msgstr "Дополнительные заметки"
+
+#: inc/core/load.php:86
 msgid "Skin"
 msgstr "Скин"
 
-#: inc/core/load.php:80
+#: inc/core/load.php:87
 msgid "Choose global skin for shortcodes"
 msgstr "Выберите глобальный скин для шорткодов"
 
-#: inc/core/load.php:88
+#: inc/core/load.php:95
 msgid "Custom CSS"
 msgstr "Произвольный CSS"
 
-#: inc/core/load.php:113 inc/core/load.php:114 inc/core/load.php:231
+#: inc/core/load.php:120 inc/core/load.php:121 inc/core/load.php:228
 msgid "Examples"
 msgstr "Примеры"
 
-#: inc/core/load.php:154 inc/core/vote.php:42
+#: inc/core/load.php:161 inc/core/vote.php:42
 msgid "Vladimir Anokhin"
 msgstr "Владимир Анохин"
 
-#: inc/core/load.php:155
+#: inc/core/load.php:162
 msgid "Supercharge your WordPress theme with mega pack of shortcodes"
 msgstr "Суперзарядка для вашей WordPress-темы с помощью мега набора шорткодов"
 
-#: inc/core/load.php:232
+#: inc/core/load.php:229
 msgid "Where to start?"
 msgstr "С чего начать?"
 
@@ -3745,15 +3768,15 @@ msgstr ""
 msgid "Tab title"
 msgstr "Заголовок вкладкки"
 
-#: inc/core/shortcodes.php:464
+#: inc/core/shortcodes.php:466
 msgid "This is box title"
 msgstr "Заголовок блока"
 
-#: inc/core/shortcodes.php:530
+#: inc/core/shortcodes.php:532
 msgid "please specify correct source"
 msgstr "пожалуйста укажите корректную ссылку"
 
-#: inc/core/shortcodes.php:551
+#: inc/core/shortcodes.php:553
 msgid ""
 "please specify correct ID for this block. You should use same ID as in the "
 "Content source field (when inserting lightbox shortcode)"
@@ -3761,9 +3784,9 @@ msgstr ""
 "пожалуйста укажите корректный ID для этого блока. Вы должны использовать ID "
 "из поля Источник содержимого (вводится при вставке шорткода lightbox)"
 
-#: inc/core/shortcodes.php:618 inc/core/shortcodes.php:622
-#: inc/core/shortcodes.php:657 inc/core/shortcodes.php:661
-#: inc/core/shortcodes.php:690 inc/core/shortcodes.php:694
+#: inc/core/shortcodes.php:620 inc/core/shortcodes.php:624
+#: inc/core/shortcodes.php:659 inc/core/shortcodes.php:663
+#: inc/core/shortcodes.php:692 inc/core/shortcodes.php:696
 #: inc/core/shortcodes.php:718 inc/core/shortcodes.php:722
 #: inc/core/shortcodes.php:750 inc/core/shortcodes.php:754
 #: inc/core/shortcodes.php:777 inc/core/shortcodes.php:784
@@ -3817,19 +3840,31 @@ msgstr ""
 "Неверный временной промежуток (%s). Пожалуйста используйте символ - (минус) "
 "чтобы указать промежуток времени. Пример: 14:00 - 18:00"
 
-#: inc/core/tools.php:819
+#: inc/core/tools.php:258
+msgid "Additional skins successfully installed"
+msgstr "Дополнительные стили успешно установлены"
+
+#: inc/core/tools.php:258
+msgid "Open dropdown to choose one of new styles"
+msgstr "Откройте выпадающий список, чтобы выбрать один из новых стилей"
+
+#: inc/core/tools.php:259
+msgid "Get more styles"
+msgstr "Получить больше стилей"
+
+#: inc/core/tools.php:774
 msgid "Example code does not found, please check it later"
 msgstr "Код примера не найден, возвращайтесь позже"
 
-#: inc/core/tools.php:835
+#: inc/core/tools.php:790
 msgid "Get the code"
 msgstr "Получить код"
 
-#: inc/core/tools.php:909
+#: inc/core/tools.php:864
 msgid "Slide link"
 msgstr "Ссылка слайда"
 
-#: inc/core/tools.php:912
+#: inc/core/tools.php:867
 msgid ""
 "Use this field to add custom links to slides used with Slider, Carousel and "
 "Custom Gallery shortcodes"
@@ -3887,23 +3922,23 @@ msgstr "Заголовок:"
 msgid "Plugin Settings"
 msgstr "Настройки плагина"
 
-#: inc/vendor/sunrise.php:179
+#: inc/vendor/sunrise.php:180
 msgid "Use selected file"
 msgstr "Использовать выбранный файл"
 
-#: inc/vendor/sunrise.php:369
+#: inc/vendor/sunrise.php:372
 msgid "Save changes"
 msgstr "Сохранить изменения"
 
-#: inc/vendor/sunrise.php:369
+#: inc/vendor/sunrise.php:372
 msgid "Saving"
 msgstr "Сохранение"
 
-#: inc/vendor/sunrise.php:369
+#: inc/vendor/sunrise.php:372
 msgid "Saved"
 msgstr "Сохранено"
 
-#: inc/vendor/sunrise.php:369
+#: inc/vendor/sunrise.php:372
 msgid ""
 "This action will delete all your settings. Are you sure? This action cannot "
 "be undone!"
@@ -3911,46 +3946,46 @@ msgstr ""
 "Данное действие удалит все ваши настройки. Вы уверены? Это действие нельзя "
 "будет отменить!"
 
-#: inc/vendor/sunrise.php:369
+#: inc/vendor/sunrise.php:372
 msgid "Restore default settings"
 msgstr "Сбросить настройки"
 
-#: inc/vendor/sunrise.php:376 inc/vendor/sunrise.php:385
-#: inc/vendor/sunrise.php:435
+#: inc/vendor/sunrise.php:379 inc/vendor/sunrise.php:388
+#: inc/vendor/sunrise.php:397 inc/vendor/sunrise.php:447
 msgid "Text field"
 msgstr "Текстовое поле"
 
-#: inc/vendor/sunrise.php:397
+#: inc/vendor/sunrise.php:409
 msgid "Textarea field"
 msgstr "Текстовое поле"
 
-#: inc/vendor/sunrise.php:408 inc/vendor/sunrise.php:419
+#: inc/vendor/sunrise.php:420 inc/vendor/sunrise.php:431
 msgid "Checkbox"
 msgstr "Флажок"
 
-#: inc/vendor/sunrise.php:445
+#: inc/vendor/sunrise.php:457
 msgid "Color picker"
 msgstr "Пипетка"
 
-#: inc/vendor/sunrise.php:453
+#: inc/vendor/sunrise.php:465
 msgid "Pick a color"
 msgstr "Выберите цвет"
 
-#: inc/vendor/sunrise.php:477
+#: inc/vendor/sunrise.php:489
 msgid ""
 "For full functionality of this page it is reccomended to enable javascript."
 msgstr ""
 "Для полной функциональности этой страницы рекомендуется включить Javascript."
 
-#: inc/vendor/sunrise.php:478
+#: inc/vendor/sunrise.php:490
 msgid "Settings saved successfully"
 msgstr "Настройки успешно сохранены"
 
-#: inc/vendor/sunrise.php:479
+#: inc/vendor/sunrise.php:491
 msgid "Settings reseted successfully"
 msgstr "Настройки успешно сброшены"
 
-#: inc/vendor/sunrise.php:508
+#: inc/vendor/sunrise.php:520
 #, php-format
 msgid "option type %s is not callable"
 msgstr "тип поля %s не может быть отображен"
@@ -3975,3 +4010,9 @@ msgstr "Записи не найдены"
 #: templates/single-post.php:17
 msgid "%n comments"
 msgstr "%n комментариев"
+
+#~ msgid "You can overview the original styles to override it"
+#~ msgstr "Вы можете посмотреть оригинальные стили, чтобы перезаписать их"
+
+#~ msgid "Install additional styles"
+#~ msgstr "Установить дополнительные стили"
