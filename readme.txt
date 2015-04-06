@@ -110,7 +110,7 @@ Upgrade normally
 == Changelog ==
 
 = 4.9.6 =
-* Fixed: Quick fix for disabled custom css since previous update
+* Fixed: Quick fix for disabled custom css since previous update, [forum topic](https://wordpress.org/support/topic/after-updating-the-plugin-does-not-work-arbitrary-css)
 
 = 4.9.5 =
 * Added: basic RTL support
