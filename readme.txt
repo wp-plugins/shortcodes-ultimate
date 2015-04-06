@@ -109,6 +109,9 @@ Upgrade normally
 
 == Changelog ==
 
+= 4.9.6 =
+* Fixed: Quick fix for disabled custom css since previous update
+
 = 4.9.5 =
 * Added: basic RTL support
 * Fixed: JS error (blocking shortcodes settings) on WordPress 3.5

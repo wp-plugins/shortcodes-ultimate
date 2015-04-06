@@ -32,7 +32,7 @@ class Su_Assets {
 		add_action( 'su/generator/preview/after',  array( __CLASS__, 'custom_css' ), 99 );
 		add_action( 'su/examples/preview/after',   array( __CLASS__, 'custom_css' ), 99 );
 		// RTL support
-		add_action( 'su/assets/custom_css',        array( __CLASS__, 'rtl_shortcodes' ) );
+		add_action( 'su/assets/custom_css/after',        array( __CLASS__, 'rtl_shortcodes' ) );
 		// Custom TinyMCE CSS and JS
 		// add_filter( 'mce_css',                     array( __CLASS__, 'mce_css' ) );
 		// add_filter( 'mce_external_plugins',        array( __CLASS__, 'mce_js' ) );
@@ -158,7 +158,7 @@ class Su_Assets {
 		// Print CSS if exists
 		if ( $custom_css ) echo "\n\n<!-- Shortcodes Ultimate custom CSS - begin -->\n<style type='text/css'>\n" . stripslashes( str_replace( array( '%theme_url%', '%home_url%', '%plugin_url%' ), array( trailingslashit( get_stylesheet_directory_uri() ), trailingslashit( get_option( 'home' ) ), trailingslashit( plugins_url( '', SU_PLUGIN_FILE ) ) ), $custom_css ) ) . "\n</style>\n<!-- Shortcodes Ultimate custom CSS - end -->\n\n";
 		// Hook
-		do_action( 'su/assets/custom_css' );
+		do_action( 'su/assets/custom_css/after' );
 	}
 
 	/**
