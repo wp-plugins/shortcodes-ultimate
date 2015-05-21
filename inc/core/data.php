@@ -833,6 +833,11 @@ class Su_Data {
 							'name' => __( 'Rel attribute', 'su' ),
 							'desc' => __( 'Here you can add value for the rel attribute.<br>Example values: <b%value>nofollow</b>, <b%value>lightbox</b>', 'su' )
 						),
+						'title' => array(
+							'default' => '',
+							'name' => __( 'Title attribute', 'su' ),
+							'desc' => __( 'Here you can add value for the title attribute', 'su' )
+						),
 						'class' => array(
 							'default' => '',
 							'name' => __( 'Class', 'su' ),
