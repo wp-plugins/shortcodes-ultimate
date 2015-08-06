@@ -67,6 +67,7 @@ With this plugin you can easily create tabs, buttons, boxes, different sliders, 
 * Ja, [Stranger](#)
 * Sk, [Patrik Žec (PATWIST)](http://patwist.com/)
 * Cz, [Punc00](http://nuze.cz/)
+* Se, [Javier Marcilla](http://ninjaseo.es/)
 
 Have a translation? [Contact me](http://gndev.info/feedback/)
 
@@ -108,6 +109,12 @@ Upgrade normally
 
 
 == Changelog ==
+
+= 4.9.8 =
+* Added: Spanish translation
+* Updated: Font Awesome updated to 4.4.0
+* Fixed: buttons line-height on narrow screens
+* Fixed: nested spoilers
 
 = 4.9.7 =
 * Added: [document] is now compatible with https
@@ -480,4 +487,3 @@ Upgrade normally
 
 = 1.0 =
 * Initial release
-
