@@ -12,11 +12,11 @@
 						<a class="su-post-thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
 					<?php endif; ?>
 					<h2 class="su-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<div class="su-post-meta"><?php _e( 'Posted', 'su' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?></div>
+					<div class="su-post-meta"><?php _e( 'Posted', 'shortcodes-ultimate' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?></div>
 					<div class="su-post-excerpt">
 						<?php the_excerpt(); ?>
 					</div>
-					<a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'su' ), __( '1 comment', 'su' ), '% comments' ); ?></a>
+					<a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'shortcodes-ultimate' ), __( '1 comment', 'shortcodes-ultimate' ), '% comments' ); ?></a>
 				</div>
 
 				<?php
@@ -24,7 +24,7 @@
 		}
 		// Posts not found
 		else {
-			echo '<h4>' . __( 'Posts not found', 'su' ) . '</h4>';
+			echo '<h4>' . __( 'Posts not found', 'shortcodes-ultimate' ) . '</h4>';
 		}
 	?>
 </div>

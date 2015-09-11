@@ -4,14 +4,14 @@ class Su_Widget extends WP_Widget {
 	function __construct() {
 		$widget_ops = array(
 			'classname'   => 'shortcodes-ultimate',
-			'description' => __( 'Special Shortcodes Ultimate widget', 'su' )
+			'description' => __( 'Shortcodes Ultimate widget', 'shortcodes-ultimate' )
 		);
 		$control_ops = array(
 			'width'   => 300,
 			'height'  => 350,
 			'id_base' => 'shortcodes-ultimate'
 		);
-		$this->WP_Widget( 'shortcodes-ultimate', __( 'Shortcodes Ultimate', 'su' ), $widget_ops, $control_ops );
+		parent::__construct( 'shortcodes-ultimate', __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), $widget_ops, $control_ops );
 	}
 
 	public static function register() {
@@ -37,13 +37,13 @@ class Su_Widget extends WP_Widget {
 
 	function form( $instance ) {
 		$defaults = array(
-			'title'   => __( 'Shortcodes Ultimate', 'su' ),
+			'title'   => __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ),
 			'content' => ''
 		);
 		$instance = wp_parse_args( ( array ) $instance, $defaults );
 ?>
 				<p>
-					<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'su' ); ?></label>
+					<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:', 'shortcodes-ultimate' ); ?></label>
 					<input type="text" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo $instance['title']; ?>" class="widefat" />
 				</p>
 				<p>

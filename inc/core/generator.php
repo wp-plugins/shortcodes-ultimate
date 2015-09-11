@@ -40,7 +40,7 @@ class Su_Generator {
 		// Prepare args
 		$args = wp_parse_args( $args, array(
 				'target'    => $target,
-				'text'      => __( 'Insert shortcode', 'su' ),
+				'text'      => __( 'Insert shortcode', 'shortcodes-ultimate' ),
 				'class'     => 'button',
 				'icon'      => plugins_url( 'assets/images/icon.png', SU_PLUGIN_FILE ),
 				'echo'      => true,
@@ -85,22 +85,22 @@ class Su_Generator {
 		else {
 			ob_start();
 			$tools = apply_filters( 'su/generator/tools', array(
-					'<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate' ) . '#tab-1" target="_blank" title="' . __( 'Settings', 'su' ) . '">' . __( 'Plugin settings', 'su' ) . '</a>',
-					'<a href="http://gndev.info/shortcodes-ultimate/" target="_blank" title="' . __( 'Plugin homepage', 'su' ) . '">' . __( 'Plugin homepage', 'su' ) . '</a>',
-					'<a href="http://wordpress.org/support/plugin/shortcodes-ultimate/" target="_blank" title="' . __( 'Support forums', 'su' ) . '">' . __( 'Support forums', 'su' ) . '</a>'
+					'<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate' ) . '#tab-1" target="_blank" title="' . __( 'Settings', 'shortcodes-ultimate' ) . '">' . __( 'Plugin settings', 'shortcodes-ultimate' ) . '</a>',
+					'<a href="http://gndev.info/shortcodes-ultimate/" target="_blank" title="' . __( 'Plugin homepage', 'shortcodes-ultimate' ) . '">' . __( 'Plugin homepage', 'shortcodes-ultimate' ) . '</a>',
+					'<a href="http://wordpress.org/support/plugin/shortcodes-ultimate/" target="_blank" title="' . __( 'Support forums', 'shortcodes-ultimate' ) . '">' . __( 'Support forums', 'shortcodes-ultimate' ) . '</a>'
 				) );
 
 			// Add add-ons links
-			if ( !su_addon_active( 'maker' ) || !su_addon_active( 'skins' ) || !su_addon_active( 'extra' ) ) $tools[] = '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-addons' ) . '" target="_blank" title="' . __( 'Add-ons', 'su' ) . '" class="su-add-ons">' . __( 'Add-ons', 'su' ) . '</a>';
+			if ( !su_addon_active( 'maker' ) || !su_addon_active( 'skins' ) || !su_addon_active( 'extra' ) ) $tools[] = '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-addons' ) . '" target="_blank" title="' . __( 'Add-ons', 'shortcodes-ultimate' ) . '" class="su-add-ons">' . __( 'Add-ons', 'shortcodes-ultimate' ) . '</a>';
 ?>
 		<div id="su-generator-wrap" style="display:none">
 			<div id="su-generator">
 				<div id="su-generator-header">
 					<div id="su-generator-tools"><?php echo implode( ' <span></span> ', $tools ); ?></div>
-					<input type="text" name="su_generator_search" id="su-generator-search" value="" placeholder="<?php _e( 'Search for shortcodes', 'su' ); ?>" />
-					<p id="su-generator-search-pro-tip"><?php printf( '<strong>%s:</strong> %s', __( 'Pro Tip', 'su' ), __( 'Hit enter to select highlighted shortcode, while searching' ) ) ?></p>
+					<input type="text" name="su_generator_search" id="su-generator-search" value="" placeholder="<?php _e( 'Search for shortcodes', 'shortcodes-ultimate' ); ?>" />
+					<p id="su-generator-search-pro-tip"><?php printf( '<strong>%s:</strong> %s', __( 'Pro Tip', 'shortcodes-ultimate' ), __( 'Hit enter to select highlighted shortcode, while searching' ) ) ?></p>
 					<div id="su-generator-filter">
-						<strong><?php _e( 'Filter by type', 'su' ); ?></strong>
+						<strong><?php _e( 'Filter by type', 'shortcodes-ultimate' ); ?></strong>
 						<?php foreach ( (array) Su_Data::groups() as $group => $label ) echo '<a href="#" data-filter="' . $group . '">' . $label . '</a>'; ?>
 					</div>
 					<div id="su-generator-choices" class="su-generator-clearfix">
@@ -135,7 +135,7 @@ class Su_Generator {
 	public static function settings() {
 		self::access();
 		// Param check
-		if ( empty( $_REQUEST['shortcode'] ) ) wp_die( __( 'Shortcode not specified', 'su' ) );
+		if ( empty( $_REQUEST['shortcode'] ) ) wp_die( __( 'Shortcode not specified', 'shortcodes-ultimate' ) );
 		// Get cache
 		$output = get_transient( 'su/generator/settings/' . sanitize_text_field( $_REQUEST['shortcode'] ) );
 		if ( $output && SU_ENABLE_CACHE ) echo $output;
@@ -147,18 +147,18 @@ class Su_Generator {
 			$skip = ( get_option( 'su_option_skip' ) === 'on' ) ? ' su-generator-skip' : '';
 			// Prepare actions
 			$actions = apply_filters( 'su/generator/actions', array(
-					'insert' => '<a href="javascript:void(0);" class="button button-primary button-large su-generator-insert"><i class="fa fa-check"></i> ' . __( 'Insert shortcode', 'su' ) . '</a>',
-					'preview' => '<a href="javascript:void(0);" class="button button-large su-generator-toggle-preview"><i class="fa fa-eye"></i> ' . __( 'Live preview', 'su' ) . '</a>'
+					'insert' => '<a href="javascript:void(0);" class="button button-primary button-large su-generator-insert"><i class="fa fa-check"></i> ' . __( 'Insert shortcode', 'shortcodes-ultimate' ) . '</a>',
+					'preview' => '<a href="javascript:void(0);" class="button button-large su-generator-toggle-preview"><i class="fa fa-eye"></i> ' . __( 'Live preview', 'shortcodes-ultimate' ) . '</a>'
 				) );
 			// Shortcode header
 			$return = '<div id="su-generator-breadcrumbs">';
-			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="javascript:void(0);" class="su-generator-home" title="' . __( 'Click to return to the shortcodes list', 'su' ) . '">' . __( 'All shortcodes', 'su' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
+			$return .= apply_filters( 'su/generator/breadcrumbs', '<a href="javascript:void(0);" class="su-generator-home" title="' . __( 'Click to return to the shortcodes list', 'shortcodes-ultimate' ) . '">' . __( 'All shortcodes', 'shortcodes-ultimate' ) . '</a> &rarr; <span>' . $shortcode['name'] . '</span> <small class="alignright">' . $shortcode['desc'] . '</small><div class="su-generator-clear"></div>' );
 			$return .= '</div>';
 			// Shortcode note
 			if ( isset( $shortcode['note'] ) || isset( $shortcode['example'] ) ) {
 				$return .= '<div class="su-generator-note"><i class="fa fa-info-circle"></i><div class="su-generator-note-content">';
 				if ( isset( $shortcode['note'] ) ) $return .= wpautop( $shortcode['note'] );
-				if ( isset( $shortcode['example'] ) ) $return .= wpautop( '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-examples&example=' . $shortcode['example'] ) . '" target="_blank">' . __( 'Examples of use', 'su' ) . ' &rarr;</a>' );
+				if ( isset( $shortcode['example'] ) ) $return .= wpautop( '<a href="' . admin_url( 'admin.php?page=shortcodes-ultimate-examples&example=' . $shortcode['example'] ) . '" target="_blank">' . __( 'Examples of use', 'shortcodes-ultimate' ) . ' &rarr;</a>' );
 				$return .= '</div></div>';
 			}
 			// Shortcode has atts
@@ -176,7 +176,7 @@ class Su_Generator {
 					if ( is_callable( array( 'Su_Generator_Views', $attr_info['type'] ) ) ) $return .= call_user_func( array( 'Su_Generator_Views', $attr_info['type'] ), $attr_name, $attr_info );
 					elseif ( isset( $attr_info['callback'] ) && is_callable( $attr_info['callback'] ) ) $return .= call_user_func( $attr_info['callback'], $attr_name, $attr_info );
 					if ( isset( $attr_info['desc'] ) ) $attr_info['desc'] = str_replace( '%su_skins_link%', su_skins_link(), $attr_info['desc'] );
-					if ( isset( $attr_info['desc'] ) ) $return .= '<div class="su-generator-attr-desc">' . str_replace( array( '<b%value>', '<b_>' ), '<b class="su-generator-set-value" title="' . __( 'Click to set this value', 'su' ) . '">', $attr_info['desc'] ) . '</div>';
+					if ( isset( $attr_info['desc'] ) ) $return .= '<div class="su-generator-attr-desc">' . str_replace( array( '<b%value>', '<b_>' ), '<b class="su-generator-set-value" title="' . __( 'Click to set this value', 'shortcodes-ultimate' ) . '">', $attr_info['desc'] ) . '</div>';
 					$return .= '</div>';
 				}
 			}
@@ -186,7 +186,7 @@ class Su_Generator {
 			else {
 				// Prepare shortcode content
 				$shortcode['content'] = ( isset( $shortcode['content'] ) ) ? $shortcode['content'] : '';
-				$return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'su' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="5">' . esc_attr( str_replace( array( '%prefix_', '__' ), su_cmpt(), $shortcode['content'] ) ) . '</textarea></div>';
+				$return .= '<div class="su-generator-attr-container"><h5>' . __( 'Content', 'shortcodes-ultimate' ) . '</h5><textarea name="su-generator-content" id="su-generator-content" rows="5">' . esc_attr( str_replace( array( '%prefix_', '__' ), su_cmpt(), $shortcode['content'] ) ) . '</textarea></div>';
 			}
 			$return .= '<div id="su-generator-preview"></div>';
 			$return .= '<div class="su-generator-actions su-generator-clearfix">' . implode( ' ', array_values( $actions ) ) . '</div>';
@@ -204,7 +204,7 @@ class Su_Generator {
 		self::access();
 		// Output results
 		do_action( 'su/generator/preview/before' );
-		echo '<h5>' . __( 'Preview', 'su' ) . '</h5>';
+		echo '<h5>' . __( 'Preview', 'shortcodes-ultimate' ) . '</h5>';
 		// echo '<hr />' . stripslashes( $_POST['shortcode'] ) . '<hr />'; // Uncomment for debug
 		echo do_shortcode( str_replace( '\"', '"', $_POST['shortcode'] ) );
 		echo '<div style="clear:both"></div>';
@@ -213,7 +213,7 @@ class Su_Generator {
 	}
 
 	public static function access() {
-		if ( !self::access_check() ) wp_die( __( 'Access denied', 'su' ) );
+		if ( !self::access_check() ) wp_die( __( 'Access denied', 'shortcodes-ultimate' ) );
 	}
 
 	public static function access_check() {
@@ -248,10 +248,10 @@ class Su_Generator {
 		ob_start();
 ?>
 <div class="su-generator-presets alignright" data-shortcode="<?php echo sanitize_key( $_REQUEST['shortcode'] ); ?>">
-	<a href="javascript:void(0);" class="button button-large su-gp-button"><i class="fa fa-bars"></i> <?php _e( 'Presets', 'su' ); ?></a>
+	<a href="javascript:void(0);" class="button button-large su-gp-button"><i class="fa fa-bars"></i> <?php _e( 'Presets', 'shortcodes-ultimate' ); ?></a>
 	<div class="su-gp-popup">
 		<div class="su-gp-head">
-			<a href="javascript:void(0);" class="button button-small button-primary su-gp-new"><?php _e( 'Save current settings as preset', 'su' ); ?></a>
+			<a href="javascript:void(0);" class="button button-small button-primary su-gp-new"><?php _e( 'Save current settings as preset', 'shortcodes-ultimate' ); ?></a>
 		</div>
 		<div class="su-gp-list">
 			<?php self::presets_list(); ?>
@@ -280,10 +280,10 @@ class Su_Generator {
 				echo '<span data-id="' . $preset['id'] . '"><em>' . stripslashes( $preset['name'] ) . '</em> <i class="fa fa-times"></i></span>';
 			}
 			// Hide default text
-			echo sprintf( '<b style="display:none">%s</b>', __( 'Presets not found', 'su' ) );
+			echo sprintf( '<b style="display:none">%s</b>', __( 'Presets not found', 'shortcodes-ultimate' ) );
 		}
 		// Presets doesn't found
-		else echo sprintf( '<b>%s</b>', __( 'Presets not found', 'su' ) );
+		else echo sprintf( '<b>%s</b>', __( 'Presets not found', 'shortcodes-ultimate' ) );
 	}
 
 	public static function ajax_add_preset() {

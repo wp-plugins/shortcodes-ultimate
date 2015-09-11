@@ -66,12 +66,12 @@ class Su_Assets {
 		wp_register_style( 'magnific-popup', plugins_url( 'assets/css/magnific-popup.css', SU_PLUGIN_FILE ), false, '0.9.9', 'all' );
 		wp_register_script( 'magnific-popup', plugins_url( 'assets/js/magnific-popup.js', SU_PLUGIN_FILE ), array( 'jquery' ), '0.9.9', true );
 		wp_localize_script( 'magnific-popup', 'su_magnific_popup', array(
-				'close'   => __( 'Close (Esc)', 'su' ),
-				'loading' => __( 'Loading...', 'su' ),
-				'prev'    => __( 'Previous (Left arrow key)', 'su' ),
-				'next'    => __( 'Next (Right arrow key)', 'su' ),
-				'counter' => sprintf( __( '%s of %s', 'su' ), '%curr%', '%total%' ),
-				'error'   => sprintf( __( 'Failed to load this link. %sOpen link%s.', 'su' ), '<a href="%url%" target="_blank"><u>', '</u></a>' )
+				'close'   => __( 'Close (Esc)', 'shortcodes-ultimate' ),
+				'loading' => __( 'Loading...', 'shortcodes-ultimate' ),
+				'prev'    => __( 'Previous (Left arrow key)', 'shortcodes-ultimate' ),
+				'next'    => __( 'Next (Right arrow key)', 'shortcodes-ultimate' ),
+				'counter' => sprintf( __( '%s of %s', 'shortcodes-ultimate' ), '%curr%', '%total%' ),
+				'error'   => sprintf( __( 'Failed to load this link. %sOpen link%s.', 'shortcodes-ultimate' ), '<a href="%url%" target="_blank"><u>', '</u></a>' )
 			) );
 		// Ace
 		wp_register_script( 'ace', plugins_url( 'assets/js/ace/ace.js', SU_PLUGIN_FILE ), false, '1.1.3', true );
@@ -83,9 +83,9 @@ class Su_Assets {
 		wp_register_style( 'su-options-page', plugins_url( 'assets/css/options-page.css', SU_PLUGIN_FILE ), false, SU_PLUGIN_VERSION, 'all' );
 		wp_register_script( 'su-options-page', plugins_url( 'assets/js/options-page.js', SU_PLUGIN_FILE ), array( 'magnific-popup', 'jquery-ui-sortable', 'ace', 'jsrender' ), SU_PLUGIN_VERSION, true );
 		wp_localize_script( 'su-options-page', 'su_options_page', array(
-				'upload_title'  => __( 'Choose files', 'su' ),
-				'upload_insert' => __( 'Add selected files', 'su' ),
-				'not_clickable' => __( 'This button is not clickable', 'su' )
+				'upload_title'  => __( 'Choose files', 'shortcodes-ultimate' ),
+				'upload_insert' => __( 'Add selected files', 'shortcodes-ultimate' ),
+				'not_clickable' => __( 'This button is not clickable', 'shortcodes-ultimate' )
 			) );
 		// Cheatsheet
 		wp_register_style( 'su-cheatsheet', plugins_url( 'assets/css/cheatsheet.css', SU_PLUGIN_FILE ), false, SU_PLUGIN_VERSION, 'all' );
@@ -93,13 +93,13 @@ class Su_Assets {
 		wp_register_style( 'su-generator', plugins_url( 'assets/css/generator.css', SU_PLUGIN_FILE ), array( 'farbtastic', 'magnific-popup' ), SU_PLUGIN_VERSION, 'all' );
 		wp_register_script( 'su-generator', plugins_url( 'assets/js/generator.js', SU_PLUGIN_FILE ), array( 'farbtastic', 'magnific-popup', 'qtip' ), SU_PLUGIN_VERSION, true );
 		wp_localize_script( 'su-generator', 'su_generator', array(
-				'upload_title'         => __( 'Choose file', 'su' ),
-				'upload_insert'        => __( 'Insert', 'su' ),
-				'isp_media_title'      => __( 'Select images', 'su' ),
-				'isp_media_insert'     => __( 'Add selected images', 'su' ),
-				'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'su' ),
-				'presets_prompt_value' => __( 'New preset', 'su' ),
-				'last_used'            => __( 'Last used settings', 'su' ),
+				'upload_title'         => __( 'Choose file', 'shortcodes-ultimate' ),
+				'upload_insert'        => __( 'Insert', 'shortcodes-ultimate' ),
+				'isp_media_title'      => __( 'Select images', 'shortcodes-ultimate' ),
+				'isp_media_insert'     => __( 'Add selected images', 'shortcodes-ultimate' ),
+				'presets_prompt_msg'   => __( 'Please enter a name for new preset', 'shortcodes-ultimate' ),
+				'presets_prompt_value' => __( 'New preset', 'shortcodes-ultimate' ),
+				'last_used'            => __( 'Last used settings', 'shortcodes-ultimate' ),
 				'hotkey'               => get_option( 'su_option_hotkey' )
 			) );
 		// Shortcodes stylesheets
@@ -116,7 +116,7 @@ class Su_Assets {
 		wp_register_script( 'su-galleries-shortcodes', plugins_url( 'assets/js/galleries-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery', 'swiper' ), SU_PLUGIN_VERSION, true );
 		wp_register_script( 'su-players-shortcodes', plugins_url( 'assets/js/players-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery', 'jplayer' ), SU_PLUGIN_VERSION, true );
 		wp_register_script( 'su-other-shortcodes', plugins_url( 'assets/js/other-shortcodes.js', SU_PLUGIN_FILE ), array( 'jquery' ), SU_PLUGIN_VERSION, true );
-		wp_localize_script( 'su-other-shortcodes', 'su_other_shortcodes', array( 'no_preview' => __( 'This shortcode doesn\'t work in live preview. Please insert it into editor and preview on the site.', 'su' ) ) );
+		wp_localize_script( 'su-other-shortcodes', 'su_other_shortcodes', array( 'no_preview' => __( 'This shortcode doesn\'t work in live preview. Please insert it into editor and preview on the site.', 'shortcodes-ultimate' ) ) );
 		// Hook to deregister assets or add custom
 		do_action( 'su/assets/register' );
 	}

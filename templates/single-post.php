@@ -14,7 +14,7 @@
 					?>
 					<div id="su-post-<?php the_ID(); ?>" class="su-post">
 						<h1 class="su-post-title"><?php the_title(); ?></h1>
-						<div class="su-post-meta"><?php _e( 'Posted', 'su' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?> | <a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'su' ), __( '1 comment', 'su' ), __( '%n comments', 'su' ) ); ?></a></div>
+						<div class="su-post-meta"><?php _e( 'Posted', 'shortcodes-ultimate' ); ?>: <?php the_time( get_option( 'date_format' ) ); ?> | <a href="<?php comments_link(); ?>" class="su-post-comments-link"><?php comments_number( __( '0 comments', 'shortcodes-ultimate' ), __( '1 comment', 'shortcodes-ultimate' ), __( '%n comments', 'shortcodes-ultimate' ) ); ?></a></div>
 						<div class="su-post-content">
 							<?php the_content(); ?>
 						</div>
@@ -25,7 +25,7 @@
 		}
 		// Posts not found
 		else {
-			echo '<h4>' . __( 'Posts not found', 'su' ) . '</h4>';
+			echo '<h4>' . __( 'Posts not found', 'shortcodes-ultimate' ) . '</h4>';
 		}
 	?>
 </div>

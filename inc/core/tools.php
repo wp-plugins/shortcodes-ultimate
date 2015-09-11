@@ -255,8 +255,8 @@ function su_addon_active( $addons ) {
 }
 
 function su_skins_link() {
-	if ( su_addon_active( 'skins' ) ) return sprintf( '<br><strong>%s</strong><br><strong>%s</strong>', __( 'Additional skins successfully installed', 'su' ), __( 'Open dropdown to choose one of new styles', 'su' ) );
-	else return sprintf( '<br><a href="http://gndev.info/sus" target="_blank">%s &rarr;</a>', __( 'Get more styles', 'su' ) );
+	if ( su_addon_active( 'skins' ) ) return sprintf( '<br><strong>%s</strong><br><strong>%s</strong>', __( 'Additional skins successfully installed', 'shortcodes-ultimate' ), __( 'Open dropdown to choose one of new styles', 'shortcodes-ultimate' ) );
+	else return sprintf( '<br><a href="http://gndev.info/sus" target="_blank">%s &rarr;</a>', __( 'Get more styles', 'shortcodes-ultimate' ) );
 }
 
 /**
@@ -771,7 +771,7 @@ class Su_Tools {
 			// Prepare data
 			$code = file_get_contents( sanitize_text_field( $_REQUEST['code'] ) );
 			// Check for code
-			if ( !$code ) die( '<p class="su-examples-error">' . __( 'Example code does not found, please check it later', 'su' ) . '</p>' );
+			if ( !$code ) die( '<p class="su-examples-error">' . __( 'Example code does not found, please check it later', 'shortcodes-ultimate' ) . '</p>' );
 			// Clean-up the code
 			$code = str_replace( array( "\t", '%su_' ), array( '  ', su_cmpt() ), $code );
 			// Split code
@@ -787,7 +787,7 @@ class Su_Tools {
 				$rows = ( $rows > 20 ) ? '20' : (string) ( $rows + 1 );
 				echo wpautop( do_shortcode( $chunk ) );
 				echo '<div style="clear:both"></div>';
-				echo '<div class="su-examples-code"><span class="su-examples-get-code button"><i class="fa fa-code"></i>&nbsp;&nbsp;' . __( 'Get the code', 'su' ) . '</span><textarea rows="' . $rows . '">' . esc_textarea( $chunk ) . '</textarea></div>';
+				echo '<div class="su-examples-code"><span class="su-examples-get-code button"><i class="fa fa-code"></i>&nbsp;&nbsp;' . __( 'Get the code', 'shortcodes-ultimate' ) . '</span><textarea rows="' . $rows . '">' . esc_textarea( $chunk ) . '</textarea></div>';
 			}
 			do_action( 'su/examples/preview/after' );
 			$output = ob_get_contents();
@@ -852,7 +852,7 @@ class Su_Tools {
 	}
 
 	public static function access() {
-		if ( !self::access_check() ) wp_die( __( 'Access denied', 'su' ) );
+		if ( !self::access_check() ) wp_die( __( 'Access denied', 'shortcodes-ultimate' ) );
 	}
 
 	public static function access_check() {
@@ -861,10 +861,10 @@ class Su_Tools {
 
 	public static function slide_link_input( $form_fields, $post ) {
 		$form_fields['su_slide_link'] = array(
-			'label' => __( 'Slide link', 'su' ),
+			'label' => __( 'Slide link', 'shortcodes-ultimate' ),
 			'input' => 'text',
 			'value' => get_post_meta( $post->ID, 'su_slide_link', true ),
-			'helps' => sprintf( '<strong>%s</strong><br>%s', __( 'Shortcodes Ultimate', 'su' ), __( 'Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes', 'su' ) )
+			'helps' => sprintf( '<strong>%s</strong><br>%s', __( 'Shortcodes Ultimate', 'shortcodes-ultimate' ), __( 'Use this field to add custom links to slides used with Slider, Carousel and Custom Gallery shortcodes', 'shortcodes-ultimate' ) )
 		);
 		return $form_fields;
 	}

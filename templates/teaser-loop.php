@@ -17,7 +17,7 @@
 		}
 		// Posts not found
 		else {
-			echo '<h4>' . __( 'Posts not found', 'su' ) . '</h4>';
+			echo '<h4>' . __( 'Posts not found', 'shortcodes-ultimate' ) . '</h4>';
 		}
 	?>
 </div>

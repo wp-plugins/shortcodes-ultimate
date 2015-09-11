@@ -5,7 +5,8 @@ jQuery(document).ready(function ($) {
 		$(this).find('.su-slider-slide, .su-carousel-slide, .su-custom-gallery-slide').each(function (i) {
 			$(this).attr('data-index', i);
 			slides.push({
-				src: $(this).children('a').attr('href')
+				src: $(this).children('a').attr('href'),
+				title: $(this).children('a').attr('title')
 			});
 		});
 		$(this).data('slides', slides);

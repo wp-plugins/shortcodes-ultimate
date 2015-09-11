@@ -39,15 +39,15 @@ class Su_Vote {
 ?>
 		<div class="su-vote" style="display:none">
 			<div class="su-vote-wrap">
-				<div class="su-vote-gravatar"><a href="http://profiles.wordpress.org/gn_themes" target="_blank"><img src="http://www.gravatar.com/avatar/54fda46c150e45d18d105b9185017aea.png" alt="<?php _e( 'Vladimir Anokhin', 'su' ); ?>" width="50" height="50"></a></div>
+				<div class="su-vote-gravatar"><a href="http://profiles.wordpress.org/gn_themes" target="_blank"><img src="http://www.gravatar.com/avatar/54fda46c150e45d18d105b9185017aea.png" alt="<?php _e( 'Vladimir Anokhin', 'shortcodes-ultimate' ); ?>" width="50" height="50"></a></div>
 				<div class="su-vote-message">
-					<p><?php _e( 'Hello, my name is Vladimir Anokhin, and I am developer of plugin <b>Shortcodes Ultimate</b>.<br>If you like this plugin, please write a few words about it at the wordpress.org or twitter. It will help other people find this useful plugin more quickly.<br><b>Thank you!</b>', 'su' ); ?></p>
+					<p><?php _e( 'Hello, my name is Vladimir Anokhin, and I am developer of plugin <b>Shortcodes Ultimate</b>.<br>If you like this plugin, please write a few words about it at the wordpress.org or twitter. It will help other people find this useful plugin more quickly.<br><b>Thank you!</b>', 'shortcodes-ultimate' ); ?></p>
 					<p>
-						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=yes" class="su-vote-action button button-small button-primary" data-action="http://wordpress.org/support/view/plugin-reviews/shortcodes-ultimate?rate=5#postform"><?php _e( 'Rate plugin', 'su' ); ?></a>
-						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=tweet" class="su-vote-action button button-small" data-action="http://twitter.com/share?url=http://bit.ly/1blZb7u&amp;text=<?php echo urlencode( __( 'Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate', 'su' ) ); ?>"><?php _e( 'Tweet', 'su' ); ?></a>
-						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=no" class="su-vote-action button button-small"><?php _e( 'No, thanks', 'su' ); ?></a>
-						<span><?php _e( 'or', 'su' ); ?></span>
-						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=later" class="su-vote-action button button-small"><?php _e( 'Remind me later', 'su' ); ?></a>
+						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=yes" class="su-vote-action button button-small button-primary" data-action="http://wordpress.org/support/view/plugin-reviews/shortcodes-ultimate?rate=5#postform"><?php _e( 'Rate plugin', 'shortcodes-ultimate' ); ?></a>
+						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=tweet" class="su-vote-action button button-small" data-action="http://twitter.com/share?url=http://bit.ly/1blZb7u&amp;text=<?php echo urlencode( __( 'Shortcodes Ultimate - must have WordPress plugin #shortcodesultimate', 'shortcodes-ultimate' ) ); ?>"><?php _e( 'Tweet', 'shortcodes-ultimate' ); ?></a>
+						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=no" class="su-vote-action button button-small"><?php _e( 'No, thanks', 'shortcodes-ultimate' ); ?></a>
+						<span><?php _e( 'or', 'shortcodes-ultimate' ); ?></span>
+						<a href="<?php echo admin_url( 'admin-ajax.php' ); ?>?action=su_vote&amp;vote=later" class="su-vote-action button button-small"><?php _e( 'Remind me later', 'shortcodes-ultimate' ); ?></a>
 					</p>
 				</div>
 				<div class="su-vote-clear"></div>

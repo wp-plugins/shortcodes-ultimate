@@ -13,7 +13,7 @@ if ( $posts->have_posts() ) {
 // Posts not found
 else {
 ?>
-<li><?php _e( 'Posts not found', 'su' ) ?></li>
+<li><?php _e( 'Posts not found', 'shortcodes-ultimate' ) ?></li>
 <?php
 }
 ?>

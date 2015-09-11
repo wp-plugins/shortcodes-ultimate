@@ -15,7 +15,7 @@ class Su_Counter_Extra_Addon {
 		return sprintf(
 			'%s <span class="update-plugins count-1" title="%s"><span class="update-count">%s</span></span>',
 			$title,
-			__( '1 new add-on for Shortcodes Ultimate', 'su' ),
+			__( '1 new add-on for Shortcodes Ultimate', 'shortcodes-ultimate' ),
 			'1'
 		);
 	}
@@ -42,7 +42,7 @@ class Su_Counter_Bundle {
 		return sprintf(
 			'%s <span class="update-plugins count-1" title="%s"><span class="update-count">%s</span></span>',
 			$title,
-			__( '1 new add-on for Shortcodes Ultimate', 'su' ),
+			__( '1 new add-on for Shortcodes Ultimate', 'shortcodes-ultimate' ),
 			'1'
 		);
 	}
